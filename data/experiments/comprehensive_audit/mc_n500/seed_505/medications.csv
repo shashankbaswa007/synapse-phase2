@@ -1,0 +1,545 @@
+medication_id,patient_id,encounter_id,condition_id,drug_name,drug_class,dosage,frequency,source,evidence_ids,status
+rx-632ecd4d,pat-0b909a1f,enc-6fee11e9,cond-pat-0b909a1f,Amlodipine,,5mg,Once Daily,internal_yaml,,Dispensed
+rx-e2794962,pat-08ba8a73,enc-6e830a13,cond-pat-08ba8a73,Amlodipine,,5mg,Once Daily,internal_yaml,,Dispensed
+rx-61c3c577,pat-05e47ac7,enc-edcd8628,cond-pat-05e47ac7,Amlodipine,,5mg,Once Daily,internal_yaml,,Dispensed
+rx-e10e418c,pat-852ef6dc,enc-6d18023d,cond-pat-852ef6dc,Amlodipine,,5mg,Once Daily,internal_yaml,,Dispensed
+rx-6058bda1,pat-01a36345,enc-ec627e52,cond-pat-01a36345,Amlodipine,,5mg,Once Daily,internal_yaml,,Dispensed
+rx-dfa339b6,pat-00385b6f,enc-eaf7767c,cond-pat-00385b6f,Amlodipine,,5mg,Once Daily,internal_yaml,,Dispensed
+rx-5eedb5cb,pat-7b41c002,enc-6a41f291,cond-pat-7b41c002,Amlodipine,,5mg,Once Daily,internal_yaml,,Dispensed
+rx-de3831e0,pat-fa8c3c17,enc-68d6eabb,cond-pat-fa8c3c17,Amlodipine,,5mg,Once Daily,internal_yaml,,Dispensed
+rx-5d82adf5,pat-f7b62c6b,enc-e82166d0,cond-pat-f7b62c6b,Amlodipine,,5mg,Once Daily,internal_yaml,,Dispensed
+rx-dccd2a0a,pat-7595a0aa,enc-676be2e5,cond-pat-7595a0aa,Amlodipine,,5mg,Once Daily,internal_yaml,,Dispensed
+rx-5c17a61f,pat-72bf90fe,enc-6600db0f,cond-pat-72bf90fe,Amlodipine,,5mg,Once Daily,internal_yaml,,Dispensed
+rx-db622234,pat-f20a0d13,enc-e54b5724,cond-pat-f20a0d13,Amlodipine,,5mg,Once Daily,internal_yaml,,Dispensed
+rx-5aac9e49,pat-f09f053d,enc-6495d339,cond-pat-f09f053d,Amlodipine,,5mg,Once Daily,internal_yaml,,Dispensed
+rx-d9f71a5e,pat-ef33fd67,enc-e3e04f4e,cond-pat-ef33fd67,Amlodipine,,5mg,Once Daily,internal_yaml,,Dispensed
+rx-59419673,pat-e3dbbeb7,enc-632acb63,cond-pat-e3dbbeb7,Amlodipine,,5mg,Once Daily,internal_yaml,,Dispensed
+rx-d88c1288,pat-63263acc,enc-e2754778,cond-pat-63263acc,Amlodipine,,5mg,Once Daily,internal_yaml,,Dispensed
+rx-57d68e9d,pat-e270b6e1,enc-61bfc38d,cond-pat-e270b6e1,Amlodipine,,5mg,Once Daily,internal_yaml,,Dispensed
+rx-d7210ab2,pat-d8838007,enc-e10a3fa2,cond-pat-d8838007,Amlodipine,,5mg,Once Daily,internal_yaml,,Dispensed
+rx-566b86c7,pat-57cdfc1c,enc-6054bbb7,cond-pat-57cdfc1c,Amlodipine,,5mg,Once Daily,internal_yaml,,Dispensed
+rx-d5b602dc,pat-5221dcc4,enc-5ee9b3e1,cond-pat-5221dcc4,Amlodipine,,5mg,Once Daily,internal_yaml,,Dispensed
+rx-55007ef1,pat-d16c58d9,enc-de342ff6,cond-pat-d16c58d9,Amlodipine,,5mg,Once Daily,internal_yaml,,Dispensed
+rx-d44afb06,pat-4f4bcd18,enc-5d7eac0b,cond-pat-4f4bcd18,Amlodipine,,5mg,Once Daily,internal_yaml,,Dispensed
+rx-5395771b,pat-4de0c542,enc-dcc92820,cond-pat-4de0c542,Amlodipine,,5mg,Once Daily,internal_yaml,,Dispensed
+rx-d2dff330,pat-455e963e,enc-5aa89c5f,cond-pat-455e963e,Amlodipine,,5mg,Once Daily,internal_yaml,,Dispensed
+rx-522a6f45,pat-43f38e68,enc-d9f31874,cond-pat-43f38e68,Amlodipine,,5mg,Once Daily,internal_yaml,,Dispensed
+rx-d174eb5a,pat-c067fad1,enc-593d9489,cond-pat-c067fad1,Amlodipine,,5mg,Once Daily,internal_yaml,,Dispensed
+rx-50bf676f,pat-373047e2,enc-d71d08c8,cond-pat-373047e2,Amlodipine,,5mg,Once Daily,internal_yaml,,Dispensed
+rx-d009e384,pat-2d431108,enc-d5b200f2,cond-pat-2d431108,Amlodipine,,5mg,Once Daily,internal_yaml,,Dispensed
+rx-4f545f99,pat-2bd80932,enc-d446f91c,cond-pat-2bd80932,Amlodipine,,5mg,Once Daily,internal_yaml,,Dispensed
+rx-ce9edbae,pat-ab228547,enc-53917531,cond-pat-ab228547,Amlodipine,,5mg,Once Daily,internal_yaml,,Dispensed
+rx-4de957c3,pat-2a6d015c,enc-d2dbf146,cond-pat-2a6d015c,Amlodipine,,5mg,Once Daily,internal_yaml,,Dispensed
+rx-cd33d3d8,pat-2901f986,enc-52266d5b,cond-pat-2901f986,Amlodipine,,5mg,Once Daily,internal_yaml,,Dispensed
+rx-4c7e4fed,pat-1da9bad6,enc-d170e970,cond-pat-1da9bad6,Amlodipine,,5mg,Once Daily,internal_yaml,,Dispensed
+rx-cbc8cc02,pat-1c3eb300,enc-d005e19a,cond-pat-1c3eb300,Amlodipine,,5mg,Once Daily,internal_yaml,,Dispensed
+rx-4b134817,pat-95dd0fbd,enc-4de555d9,cond-pat-95dd0fbd,Amlodipine,,5mg,Once Daily,internal_yaml,,Dispensed
+rx-ca5dc42c,pat-93070011,enc-cd2fd1ee,cond-pat-93070011,Amlodipine,,5mg,Once Daily,internal_yaml,,Dispensed
+rx-49a84041,pat-10e67450,enc-cbc4ca18,cond-pat-10e67450,Amlodipine,,5mg,Once Daily,internal_yaml,,Dispensed
+rx-c8f2bc56,pat-9030f065,enc-4b0f462d,cond-pat-9030f065,Amlodipine,,5mg,Once Daily,internal_yaml,,Dispensed
+rx-483d386b,pat-8919c937,enc-49a43e57,cond-pat-8919c937,Amlodipine,,5mg,Once Daily,internal_yaml,,Dispensed
+rx-c787b480,pat-8643b98b,enc-48393681,cond-pat-8643b98b,Amlodipine,,5mg,Once Daily,internal_yaml,,Dispensed
+rx-46d23095,pat-ffe21648,enc-46ce2eab,cond-pat-ffe21648,Amlodipine,,5mg,Once Daily,internal_yaml,,Dispensed
+rx-c61cacaa,pat-fd0c069c,enc-c618aac0,cond-pat-fd0c069c,Amlodipine,,5mg,Once Daily,internal_yaml,,Dispensed
+rx-456728bf,pat-7c5682b1,enc-456326d5,cond-pat-7c5682b1,Amlodipine,,5mg,Once Daily,internal_yaml,,Dispensed
+rx-c4b1a4d4,pat-fba0fec6,enc-c4ada2ea,cond-pat-fba0fec6,Amlodipine,,5mg,Once Daily,internal_yaml,,Dispensed
+rx-43fc20e9,pat-7aeb7adb,enc-43f81eff,cond-pat-7aeb7adb,Amlodipine,,5mg,Once Daily,internal_yaml,,Dispensed
+rx-c3469cfe,pat-79807305,enc-c3429b14,cond-pat-79807305,Amlodipine,,5mg,Once Daily,internal_yaml,,Dispensed
+rx-42911913,pat-76aa6359,enc-c1d7933e,cond-pat-76aa6359,Amlodipine,,5mg,Once Daily,internal_yaml,,Dispensed
+rx-c1db9528,pat-72694bd7,enc-c06c8b68,cond-pat-72694bd7,Amlodipine,,5mg,Once Daily,internal_yaml,,Dispensed
+rx-4126113d,pat-6e283455,enc-3fb7077d,cond-pat-6e283455,Amlodipine,,5mg,Once Daily,internal_yaml,,Dispensed
+rx-c0708d52,pat-6b5224a9,enc-bf018392,cond-pat-6b5224a9,Amlodipine,,5mg,Once Daily,internal_yaml,,Dispensed
+rx-3fbb0967,pat-69e71cd3,enc-3e4bffa7,cond-pat-69e71cd3,Amlodipine,,5mg,Once Daily,internal_yaml,,Dispensed
+rx-bf05857c,pat-e93198e8,enc-3ce0f7d1,cond-pat-e93198e8,Amlodipine,,5mg,Once Daily,internal_yaml,,Dispensed
+rx-3e500191,pat-e7c69112,enc-3b75effb,cond-pat-e7c69112,Amlodipine,,5mg,Once Daily,internal_yaml,,Dispensed
+rx-bd9a7da6,pat-e3857990,enc-bac06c10,cond-pat-e3857990,Amlodipine,,5mg,Once Daily,internal_yaml,,Dispensed
+rx-3ce4f9bb,pat-e21a71ba,enc-3a0ae825,cond-pat-e21a71ba,Amlodipine,,5mg,Once Daily,internal_yaml,,Dispensed
+rx-bc2f75d0,pat-6164edcf,enc-b955643a,cond-pat-6164edcf,Amlodipine,,5mg,Once Daily,internal_yaml,,Dispensed
+rx-3b79f1e5,pat-5ff9e5f9,enc-389fe04f,cond-pat-5ff9e5f9,Amlodipine,,5mg,Once Daily,internal_yaml,,Dispensed
+rx-bac46dfa,pat-5bb8ce77,enc-b7ea5c64,cond-pat-5bb8ce77,Amlodipine,,5mg,Once Daily,internal_yaml,,Dispensed
+rx-3a0eea0f,pat-58e2becb,enc-b67f548e,cond-pat-58e2becb,Amlodipine,,5mg,Once Daily,internal_yaml,,Dispensed
+rx-b9596624,pat-54a1a749,enc-35c9d0a3,cond-pat-54a1a749,Amlodipine,,5mg,Once Daily,internal_yaml,,Dispensed
+rx-38a3e239,pat-d3ec235e,enc-b5144cb8,cond-pat-d3ec235e,Amlodipine,,5mg,Once Daily,internal_yaml,,Dispensed
+rx-b7ee5e4e,pat-50608fc7,enc-345ec8cd,cond-pat-50608fc7,Amlodipine,,5mg,Once Daily,internal_yaml,,Dispensed
+rx-3738da63,pat-cfab0bdc,enc-b3a944e2,cond-pat-cfab0bdc,Amlodipine,,5mg,Once Daily,internal_yaml,,Dispensed
+rx-b6835678,pat-4ef587f1,enc-32f3c0f7,cond-pat-4ef587f1,Amlodipine,,5mg,Once Daily,internal_yaml,,Dispensed
+rx-35cdd28d,pat-c9feec84,enc-b0d33536,cond-pat-c9feec84,Amlodipine,,5mg,Once Daily,internal_yaml,,Dispensed
+rx-b5184ea2,pat-4232416b,enc-af682d60,cond-pat-4232416b,Amlodipine,,5mg,Once Daily,internal_yaml,,Dispensed
+rx-3462cab7,pat-c17cbd80,enc-2eb2a975,cond-pat-c17cbd80,Amlodipine,,5mg,Once Daily,internal_yaml,,Dispensed
+rx-b3ad46cc,pat-3b1b1a3d,enc-2d47a19f,cond-pat-3b1b1a3d,Amlodipine,,5mg,Once Daily,internal_yaml,,Dispensed
+rx-32f7c2e1,pat-ada24fcc,enc-2bdc99c9,cond-pat-ada24fcc,Amlodipine,,5mg,Once Daily,internal_yaml,,Dispensed
+rx-b2423ef6,pat-2ceccbe1,enc-ab2715de,cond-pat-2ceccbe1,Amlodipine,,5mg,Once Daily,internal_yaml,,Dispensed
+rx-318cbb0b,pat-a68b289e,enc-29068a1d,cond-pat-a68b289e,Amlodipine,,5mg,Once Daily,internal_yaml,,Dispensed
+rx-b0d73720,pat-a52020c8,enc-279b8247,cond-pat-a52020c8,Amlodipine,,5mg,Once Daily,internal_yaml,,Dispensed
+rx-3021b335,pat-22ff9507,enc-a6e5fe5c,cond-pat-22ff9507,Amlodipine,,5mg,Once Daily,internal_yaml,,Dispensed
+rx-af6c2f4a,pat-10902f29,enc-a57af686,cond-pat-10902f29,Amlodipine,,5mg,Once Daily,internal_yaml,,Dispensed
+rx-2eb6ab5f,pat-8e6fa368,enc-24c5729b,cond-pat-8e6fa368,Amlodipine,,5mg,Once Daily,internal_yaml,,Dispensed
+rx-ae012774,pat-0c4f17a7,enc-a40feeb0,cond-pat-0c4f17a7,Amlodipine,,5mg,Once Daily,internal_yaml,,Dispensed
+rx-2d4ba389,pat-0ae40fd1,enc-235a6ac5,cond-pat-0ae40fd1,Amlodipine,,5mg,Once Daily,internal_yaml,,Dispensed
+rx-ac961f9e,pat-88c38410,enc-a2a4e6da,cond-pat-88c38410,Amlodipine,,5mg,Once Daily,internal_yaml,,Dispensed
+rx-2be09bb3,pat-87587c3a,enc-21ef62ef,cond-pat-87587c3a,Amlodipine,,5mg,Once Daily,internal_yaml,,Dispensed
+rx-ab2b17c8,pat-84826c8e,enc-a139df04,cond-pat-84826c8e,Amlodipine,,5mg,Once Daily,internal_yaml,,Dispensed
+rx-2a7593dd,pat-792a2dde,enc-9e63cf58,cond-pat-792a2dde,Amlodipine,,5mg,Once Daily,internal_yaml,,Dispensed
+rx-a9c00ff2,pat-6f3cf704,enc-1dae4b6d,cond-pat-6f3cf704,Amlodipine,,5mg,Once Daily,internal_yaml,,Dispensed
+rx-290a8c07,pat-e7704beb,enc-1c434397,cond-pat-e7704beb,Amlodipine,,5mg,Once Daily,internal_yaml,,Dispensed
+rx-a855081c,pat-654fc02a,enc-9b8dbfac,cond-pat-654fc02a,Amlodipine,,5mg,Once Daily,internal_yaml,,Dispensed
+rx-279f8431,pat-63e4b854,enc-1ad83bc1,cond-pat-63e4b854,Amlodipine,,5mg,Once Daily,internal_yaml,,Dispensed
+rx-a6ea0046,pat-e1c42c93,enc-196d33eb,cond-pat-e1c42c93,Amlodipine,,5mg,Once Daily,internal_yaml,,Dispensed
+rx-26347c5b,pat-610ea8a8,enc-98b7b000,cond-pat-610ea8a8,Amlodipine,,5mg,Once Daily,internal_yaml,,Dispensed
+rx-a57ef870,pat-5fa3a0d2,enc-18022c15,cond-pat-5fa3a0d2,Amlodipine,,5mg,Once Daily,internal_yaml,,Dispensed
+rx-24c97485,pat-deee1ce7,enc-974ca82a,cond-pat-deee1ce7,Amlodipine,,5mg,Once Daily,internal_yaml,,Dispensed
+rx-a413f09a,pat-d66bede3,enc-1697243f,cond-pat-d66bede3,Amlodipine,,5mg,Once Daily,internal_yaml,,Dispensed
+rx-235e6caf,pat-52e05a4c,enc-9476987e,cond-pat-52e05a4c,Amlodipine,,5mg,Once Daily,internal_yaml,,Dispensed
+rx-a2a8e8c4,pat-cde9bedf,enc-930b90a8,cond-pat-cde9bedf,Amlodipine,,5mg,Once Daily,internal_yaml,,Dispensed
+rx-21f364d9,pat-4bc9331e,enc-12560cbd,cond-pat-4bc9331e,Amlodipine,,5mg,Once Daily,internal_yaml,,Dispensed
+rx-a13de0ee,pat-c9a8a75d,enc-91a088d2,cond-pat-c9a8a75d,Amlodipine,,5mg,Once Daily,internal_yaml,,Dispensed
+rx-20885d03,pat-48f32372,enc-10eb04e7,cond-pat-48f32372,Amlodipine,,5mg,Once Daily,internal_yaml,,Dispensed
+rx-9fd2d918,pat-c291802f,enc-0f7ffd11,cond-pat-c291802f,Amlodipine,,5mg,Once Daily,internal_yaml,,Dispensed
+rx-1f1d552d,pat-bce560d7,enc-8d5f7150,cond-pat-bce560d7,Amlodipine,,5mg,Once Daily,internal_yaml,,Dispensed
+rx-9e67d142,pat-3c2fdcec,enc-0ca9ed65,cond-pat-3c2fdcec,Amlodipine,,5mg,Once Daily,internal_yaml,,Dispensed
+rx-1db24d57,pat-b8a44955,enc-0b3ee58f,cond-pat-b8a44955,Amlodipine,,5mg,Once Daily,internal_yaml,,Dispensed
+rx-9cfcc96c,pat-37eec56a,enc-8a8961a4,cond-pat-37eec56a,Amlodipine,,5mg,Once Daily,internal_yaml,,Dispensed
+rx-1c474581,pat-3683bd94,enc-891e59ce,cond-pat-3683bd94,Amlodipine,,5mg,Once Daily,internal_yaml,,Dispensed
+rx-9b91c196,pat-3518b5be,enc-0868d5e3,cond-pat-3518b5be,Amlodipine,,5mg,Once Daily,internal_yaml,,Dispensed
+rx-1adc3dab,pat-3242a612,enc-87b351f8,cond-pat-3242a612,Amlodipine,,5mg,Once Daily,internal_yaml,,Dispensed
+rx-9a26b9c0,pat-abe102cf,enc-86484a22,cond-pat-abe102cf,Amlodipine,,5mg,Once Daily,internal_yaml,,Dispensed
+rx-197135d5,pat-0b909a1f,enc-6fee11e9,cond-pat-0b909a1f-2,Metformin,,500mg,Twice Daily,internal_yaml,,Dispensed
+rx-98bbb1ea,pat-08ba8a73,enc-6e830a13,cond-pat-08ba8a73-2,Metformin,,500mg,Twice Daily,internal_yaml,,Dispensed
+rx-18062dff,pat-00385b6f,enc-eaf7767c,cond-pat-00385b6f-2,Metformin,,500mg,Twice Daily,internal_yaml,,Dispensed
+rx-9750aa14,pat-fa8c3c17,enc-68d6eabb,cond-pat-fa8c3c17-2,Metformin,,500mg,Twice Daily,internal_yaml,,Dispensed
+rx-169b2629,pat-f37514e9,enc-e6b65efa,cond-pat-f37514e9,Metformin,,500mg,Twice Daily,internal_yaml,,Dispensed
+rx-95e5a23e,pat-d2d760af,enc-df9f37cc,cond-pat-d2d760af,Metformin,,500mg,Twice Daily,internal_yaml,,Dispensed
+rx-15301e53,pat-cbc03981,enc-5c13a435,cond-pat-cbc03981,Metformin,,500mg,Twice Daily,internal_yaml,,Dispensed
+rx-947a9a68,pat-c8ea29d5,enc-db5e204a,cond-pat-c8ea29d5,Metformin,,500mg,Twice Daily,internal_yaml,,Dispensed
+rx-13c5167d,pat-3b715f64,enc-d888109e,cond-pat-3b715f64,Metformin,,500mg,Twice Daily,internal_yaml,,Dispensed
+rx-930f9292,pat-389b4fb8,enc-57d28cb3,cond-pat-389b4fb8,Metformin,,500mg,Twice Daily,internal_yaml,,Dispensed
+rx-125a0ea7,pat-b67ac3f7,enc-566784dd,cond-pat-b67ac3f7,Metformin,,500mg,Twice Daily,internal_yaml,,Dispensed
+rx-91a48abc,pat-2bd80932,enc-d446f91c,cond-pat-2bd80932-2,Metformin,,500mg,Twice Daily,internal_yaml,,Dispensed
+rx-10ef06d1,pat-1c3eb300,enc-d005e19a,cond-pat-1c3eb300-2,Metformin,,500mg,Twice Daily,internal_yaml,,Dispensed
+rx-903982e6,pat-169293a8,enc-4f505daf,cond-pat-169293a8,Metformin,,500mg,Twice Daily,internal_yaml,,Dispensed
+rx-0f83fefb,pat-95dd0fbd,enc-4de555d9,cond-pat-95dd0fbd-2,Metformin,,500mg,Twice Daily,internal_yaml,,Dispensed
+rx-8ece7b10,pat-10e67450,enc-cbc4ca18,cond-pat-10e67450-2,Metformin,,500mg,Twice Daily,internal_yaml,,Dispensed
+rx-0e18f725,pat-8919c937,enc-49a43e57,cond-pat-8919c937-2,Metformin,,500mg,Twice Daily,internal_yaml,,Dispensed
+rx-8d63733a,pat-06f93d76,enc-c8eeba6c,cond-pat-06f93d76,Metformin,,500mg,Twice Daily,internal_yaml,,Dispensed
+rx-0cadef4f,pat-80979a33,enc-c783b296,cond-pat-80979a33,Metformin,,500mg,Twice Daily,internal_yaml,,Dispensed
+rx-8bf86b64,pat-76aa6359,enc-c1d7933e,cond-pat-76aa6359-2,Metformin,,500mg,Twice Daily,internal_yaml,,Dispensed
+rx-0b42e779,pat-72694bd7,enc-c06c8b68,cond-pat-72694bd7-2,Metformin,,500mg,Twice Daily,internal_yaml,,Dispensed
+rx-8a8d638e,pat-e93198e8,enc-3ce0f7d1,cond-pat-e93198e8-2,Metformin,,500mg,Twice Daily,internal_yaml,,Dispensed
+rx-09d7dfa3,pat-e7c69112,enc-3b75effb,cond-pat-e7c69112-2,Metformin,,500mg,Twice Daily,internal_yaml,,Dispensed
+rx-89225bb8,pat-58e2becb,enc-b67f548e,cond-pat-58e2becb-2,Metformin,,500mg,Twice Daily,internal_yaml,,Dispensed
+rx-086cd7cd,pat-4d8a801b,enc-b23e3d0c,cond-pat-4d8a801b,Metformin,,500mg,Twice Daily,internal_yaml,,Dispensed
+rx-87b753e2,pat-4ab4706f,enc-3188b921,cond-pat-4ab4706f,Metformin,,500mg,Twice Daily,internal_yaml,,Dispensed
+rx-0701cff7,pat-c5bdd502,enc-301db14b,cond-pat-c5bdd502,Metformin,,500mg,Twice Daily,internal_yaml,,Dispensed
+rx-864c4c0c,pat-c011b5aa,enc-adfd258a,cond-pat-c011b5aa,Metformin,,500mg,Twice Daily,internal_yaml,,Dispensed
+rx-0596c821,pat-b0785f78,enc-ac921db4,cond-pat-b0785f78,Metformin,,500mg,Twice Daily,internal_yaml,,Dispensed
+rx-84e14436,pat-2b81c40b,enc-2a7191f3,cond-pat-2b81c40b,Metformin,,500mg,Twice Daily,internal_yaml,,Dispensed
+rx-042bc04b,pat-aacc4020,enc-a9bc0e08,cond-pat-aacc4020,Metformin,,500mg,Twice Daily,internal_yaml,,Dispensed
+rx-83763c60,pat-a52020c8,enc-279b8247,cond-pat-a52020c8-2,Metformin,,500mg,Twice Daily,internal_yaml,,Dispensed
+rx-02c0b875,pat-14d146ab,enc-26307a71,cond-pat-14d146ab,Metformin,,500mg,Twice Daily,internal_yaml,,Dispensed
+rx-820b348a,pat-7c003d8a,enc-20845b19,cond-pat-7c003d8a,Metformin,,500mg,Twice Daily,internal_yaml,,Dispensed
+rx-0155b09f,pat-7a9535b4,enc-9fced72e,cond-pat-7a9535b4,Metformin,,500mg,Twice Daily,internal_yaml,,Dispensed
+rx-80a02cb4,pat-792a2dde,enc-9e63cf58,cond-pat-792a2dde-2,Metformin,,500mg,Twice Daily,internal_yaml,,Dispensed
+rx-ffeaa8c9,pat-e7704beb,enc-1c434397,cond-pat-e7704beb-2,Metformin,,500mg,Twice Daily,internal_yaml,,Dispensed
+rx-7f3524de,pat-e1c42c93,enc-196d33eb,cond-pat-e1c42c93-2,Metformin,,500mg,Twice Daily,internal_yaml,,Dispensed
+rx-fe7fa0f3,pat-d395de37,enc-95e1a054,cond-pat-d395de37,Metformin,,500mg,Twice Daily,internal_yaml,,Dispensed
+rx-7dca1d08,pat-52e05a4c,enc-9476987e,cond-pat-52e05a4c-2,Metformin,,500mg,Twice Daily,internal_yaml,,Dispensed
+rx-fd14991d,pat-cf54c6b5,enc-13c11493,cond-pat-cf54c6b5,Metformin,,500mg,Twice Daily,internal_yaml,,Dispensed
+rx-7c5f1532,pat-47881b9c,enc-903580fc,cond-pat-47881b9c,Metformin,,500mg,Twice Daily,internal_yaml,,Dispensed
+rx-fba99147,pat-4070f46e,enc-8eca7926,cond-pat-4070f46e,Metformin,,500mg,Twice Daily,internal_yaml,,Dispensed
+rx-7af40d5c,pat-be5068ad,enc-0e14f53b,cond-pat-be5068ad,Metformin,,500mg,Twice Daily,internal_yaml,,Dispensed
+rx-fa3e8971,pat-b8a44955,enc-0b3ee58f,cond-pat-b8a44955-2,Metformin,,500mg,Twice Daily,internal_yaml,,Dispensed
+rx-79890586,pat-3683bd94,enc-891e59ce,cond-pat-3683bd94-2,Metformin,,500mg,Twice Daily,internal_yaml,,Dispensed
+rx-f8d3819b,pat-b18d2227,enc-06fdce0d,cond-pat-b18d2227,Metformin,,500mg,Twice Daily,internal_yaml,,Dispensed
+rx-781dfdb0,pat-0a259249,enc-0592c637,cond-pat-0a259249,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-f76879c5,pat-88050688,enc-84dd424c,cond-pat-88050688,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-76b2f5da,pat-047972f1,enc-0427be61,cond-pat-047972f1,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-f5fd71ef,pat-83c3ef06,enc-83723a76,cond-pat-83c3ef06,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-7547ee04,pat-7b41c002,enc-02bcb68b,cond-pat-7b41c002-2,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-f4926a19,pat-fa8c3c17,enc-820732a0,cond-pat-fa8c3c17-3,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-73dce62e,pat-79d6b82c,enc-0151aeb5,cond-pat-79d6b82c,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-f3276243,pat-72bf90fe,enc-809c2aca,cond-pat-72bf90fe-2,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-7271de58,pat-ef33fd67,enc-ffe6a6df,cond-pat-ef33fd67-2,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-f1bc5a6d,pat-e987de0f,enc-7f3122f4,cond-pat-e987de0f,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-7106d682,pat-e546c68d,enc-fe7b9f09,cond-pat-e546c68d,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-f0515297,pat-e3dbbeb7,enc-7dc61b1e,cond-pat-e3dbbeb7-2,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-6f9bceac,pat-61bb32f6,enc-fd109733,cond-pat-61bb32f6,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-eee64ac1,pat-5ee5234a,enc-7c5b1348,cond-pat-5ee5234a,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-6e30c6d6,pat-5d7a1b74,enc-fba58f5d,cond-pat-5d7a1b74,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-ed7b42eb,pat-d8838007,enc-7af00b72,cond-pat-d8838007-2,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-6cc5bf00,pat-54f7ec70,enc-fa3a8787,cond-pat-54f7ec70,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-ec103b15,pat-d4426885,enc-7985039c,cond-pat-d4426885,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-6b5ab72a,pat-538ce49a,enc-f8cf7fb1,cond-pat-538ce49a,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-eaa5333f,pat-4f4bcd18,enc-7819fbc6,cond-pat-4f4bcd18-2,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-69efaf54,pat-499fadc0,enc-f76477db,cond-pat-499fadc0,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-e93a2b69,pat-46c99e14,enc-76aef3f0,cond-pat-46c99e14,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-6884a77e,pat-43f38e68,enc-f5f97005,cond-pat-43f38e68-2,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-e7cf2393,pat-411d7ebc,enc-7543ec1a,cond-pat-411d7ebc,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-67199fa8,pat-3b715f64,enc-f48e682f,cond-pat-3b715f64-2,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-e6641bbd,pat-babbdb79,enc-73d8e444,cond-pat-babbdb79,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-65ae97d2,pat-35c5400c,enc-f3236059,cond-pat-35c5400c,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-e4f913e7,pat-2d431108,enc-726ddc6e,cond-pat-2d431108-2,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-64438ffc,pat-a9b77d71,enc-f1b85883,cond-pat-a9b77d71,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-e38e0c11,pat-262be9da,enc-7102d498,cond-pat-262be9da,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-62d88826,pat-9e5f3ec1,enc-f04d50ad,cond-pat-9e5f3ec1,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-e223043b,pat-1c3eb300,enc-6f97ccc2,cond-pat-1c3eb300-3,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-616d8050,pat-9b892f15,enc-eee248d7,cond-pat-9b892f15,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-e0b7fc65,pat-98b31f69,enc-6e2cc4ec,cond-pat-98b31f69,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-6002787a,pat-97481793,enc-ed774101,cond-pat-97481793,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-df4cf48f,pat-84d8b1b5,enc-6cc1bd16,cond-pat-84d8b1b5,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-5e9770a4,pat-ffe21648,enc-ec0c392b,cond-pat-ffe21648-2,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-dde1ecb9,pat-f489d798,enc-6b56b540,cond-pat-f489d798,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-5d2c68ce,pat-e93198e8,enc-eaa13155,cond-pat-e93198e8-3,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-dc76e4e3,pat-643afd7b,enc-69ebad6a,cond-pat-643afd7b,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-5bc160f8,pat-e3857990,enc-e936297f,cond-pat-e3857990-2,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-db0bdd0d,pat-6164edcf,enc-6880a594,cond-pat-6164edcf-2,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-5a565922,pat-5e8ede23,enc-e7cb21a9,cond-pat-5e8ede23,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-d9a0d537,pat-dc6e5262,enc-67159dbe,cond-pat-dc6e5262,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-58eb514c,pat-5777b6f5,enc-e66019d3,cond-pat-5777b6f5,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-d835cd61,pat-d6c2330a,enc-65aa95e8,cond-pat-d6c2330a,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-57804976,pat-d2811b88,enc-e4f511fd,cond-pat-d2811b88,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-d6cac58b,pat-51cb979d,enc-643f8e12,cond-pat-51cb979d,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-561541a0,pat-cfab0bdc,enc-e38a0a27,cond-pat-cfab0bdc-2,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-d55fbdb5,pat-4d8a801b,enc-62d4863c,cond-pat-4d8a801b-2,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-54aa39ca,pat-45085117,enc-e21f0251,cond-pat-45085117,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-d3f4b5df,pat-b6247ed0,enc-61697e66,cond-pat-b6247ed0,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-533f31f4,pat-3403f30f,enc-e0b3fa7b,cond-pat-3403f30f,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-d289ae09,pat-25d5a4b3,enc-5ffe7690,cond-pat-25d5a4b3,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-51d42a1e,pat-21948d31,enc-df48f2a5,cond-pat-21948d31,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-d11ea633,pat-9f740170,enc-5e936eba,cond-pat-9f740170,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-50692248,pat-1ebe7d85,enc-ddddeacf,cond-pat-1ebe7d85,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-cfb39e5d,pat-9e08f99a,enc-5d2866e4,cond-pat-9e08f99a,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-4efe1a72,pat-9b32e9ee,enc-dc72e2f9,cond-pat-9b32e9ee,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-ce489687,pat-17a75657,enc-5bbd5f0e,cond-pat-17a75657,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-4d93129c,pat-0c4f17a7,enc-db07db23,cond-pat-0c4f17a7-2,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-ccdd8eb1,pat-06a2f84f,enc-5a525738,cond-pat-06a2f84f,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-4c280ac6,pat-fcb5c175,enc-d99cd34d,cond-pat-fcb5c175,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-cb7286db,pat-792a2dde,enc-58e74f62,cond-pat-792a2dde-3,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-4abd02f0,pat-76541e32,enc-d831cb77,cond-pat-76541e32,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-ca077f05,pat-f15d82c5,enc-577c478c,cond-pat-f15d82c5,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-4951fb1a,pat-70a7feda,enc-d6c6c3a1,cond-pat-70a7feda,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-c89c772f,pat-6f3cf704,enc-56113fb6,cond-pat-6f3cf704-2,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-47e6f344,pat-ee877319,enc-d55bbbcb,cond-pat-ee877319,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-c7316f59,pat-ed1c6b43,enc-54a637e0,cond-pat-ed1c6b43,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-467beb6e,pat-6c66e758,enc-d3f0b3f5,cond-pat-6c66e758,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-c5c66783,pat-e6054415,enc-533b300a,cond-pat-e6054415,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-4510e398,pat-e49a3c3f,enc-d285ac1f,cond-pat-e49a3c3f,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-c45b5fad,pat-6279b07e,enc-51d02834,cond-pat-6279b07e,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-43a5dbc2,pat-5e3898fc,enc-d11aa449,cond-pat-5e3898fc,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-c2f057d7,pat-59f7817a,enc-5065205e,cond-pat-59f7817a,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-423ad3ec,pat-588c79a4,enc-cfaf9c73,cond-pat-588c79a4,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-c1855001,pat-cf54c6b5,enc-4efa1888,cond-pat-cf54c6b5-2,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-40cfcc16,pat-4347041a,enc-ce44949d,cond-pat-4347041a,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-c01a482b,pat-37eec56a,enc-4d8f10b2,cond-pat-37eec56a-2,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-3f64c440,pat-2f6c9666,enc-ccd98cc7,cond-pat-2f6c9666,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-beaf4055,pat-abe102cf,enc-4c2408dc,cond-pat-abe102cf-2,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-3df9bc6a,pat-8db125e0,enc-c72d6d6f,cond-pat-8db125e0,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-bd44387f,pat-80eddf5a,enc-450ce1ae,cond-pat-80eddf5a,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-3c8eb494,pat-fbf743ed,enc-43a1d9d8,cond-pat-fbf743ed,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-bbd930a9,pat-f4e01cbf,enc-4236d202,cond-pat-f4e01cbf,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-3b23acbe,pat-f20a0d13,enc-40cbca2c,cond-pat-f20a0d13-2,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-ba6e28d3,pat-e81cd639,enc-c0164641,cond-pat-e81cd639,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-39b8a4e8,pat-63263acc,enc-3f60c256,cond-pat-63263acc-2,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-b90320fd,pat-50b6d4ee,enc-3df5ba80,cond-pat-50b6d4ee,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-384d9d12,pat-4c75bd6c,enc-bd403695,cond-pat-4c75bd6c,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-b7981927,pat-c4a91253,enc-3b1faad4,cond-pat-c4a91253,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-36e2953c,pat-c1d302a7,enc-ba6a26e9,cond-pat-c1d302a7,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-b62d1151,pat-301920b4,enc-b794173d,cond-pat-301920b4,Amlodipine,,5mg,Once Daily,internal_yaml,,Dispensed
+rx-35778d66,pat-301920b4,enc-b794173d,cond-pat-301920b4-2,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-b4c2097b,pat-af639cc9,enc-36de9352,cond-pat-af639cc9,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-340c8590,pat-2796f1b0,enc-35738b7c,cond-pat-2796f1b0,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-b35701a5,pat-a6e16dc5,enc-4ab90106,cond-pat-a6e16dc5,Amlodipine,,5mg,Once Daily,internal_yaml,,Dispensed
+rx-32a17dba,pat-24c0e204,enc-b4be0791,cond-pat-24c0e204,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-b1ebf9cf,pat-9fca4697,enc-340883a6,cond-pat-9fca4697,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-313675e4,pat-1da9bad6,enc-b352ffbb,cond-pat-1da9bad6-2,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-b080f1f9,pat-1968a354,enc-b1e7f7e5,cond-pat-1968a354,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-2fcb6e0e,pat-15278bd2,enc-2fc76c24,cond-pat-15278bd2,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-af15ea23,pat-8ec5e88f,enc-2e5c644e,cond-pat-8ec5e88f,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-2e606638,pat-87aec161,enc-2cf15c78,cond-pat-87aec161,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-adaae24d,pat-04232dca,enc-2b8654a2,cond-pat-04232dca,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-2cf55e62,pat-73d453ad,enc-ca037d1b,cond-pat-73d453ad,Amlodipine,,5mg,Once Daily,internal_yaml,,Dispensed
+rx-ac3fda77,pat-f048c016,enc-28b044f6,cond-pat-f048c016,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-2b8a568c,pat-6f933c2b,enc-a7fac10b,cond-pat-6f933c2b,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-aad4d2a1,pat-ec07a894,enc-27453d20,cond-pat-ec07a894,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-2a1f4eb6,pat-69e71cd3,enc-a68fb935,cond-pat-69e71cd3-2,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-a969cacb,pat-e7c69112,enc-246f2d74,cond-pat-e7c69112-3,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-28b446e0,pat-65a60551,enc-a3b9a989,cond-pat-65a60551,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-a7fec2f5,pat-5ff9e5f9,enc-2304259e,cond-pat-5ff9e5f9-2,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-27493f0a,pat-db034a8c,enc-a24ea1b3,cond-pat-db034a8c,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-a693bb1f,pat-560caf1f,enc-a0e399dd,cond-pat-560caf1f,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-25de3734,pat-c9feec84,enc-1ec30e1c,cond-pat-c9feec84-2,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-a528b349,pat-c893e4ae,enc-9e0d8a31,cond-pat-c893e4ae,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-24732f5e,pat-439d4941,enc-9ca2825b,cond-pat-439d4941,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-a3bdab73,pat-4232416b,enc-1becfe70,cond-pat-4232416b-2,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-23082788,pat-bbd09e28,enc-1a81f69a,cond-pat-bbd09e28,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-a252a39d,pat-3b1b1a3d,enc-99cc72af,cond-pat-3b1b1a3d-2,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-219d1fb2,pat-b78f86a6,enc-1916eec4,cond-pat-b78f86a6,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-a0e79bc7,pat-a24a111c,enc-958b5b2d,cond-pat-a24a111c,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-203217dc,pat-1d5375af,enc-14d5d742,cond-pat-1d5375af,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-9f7c93f1,pat-1be86dd9,enc-94205357,cond-pat-1be86dd9,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-1ec71006,pat-19125e2d,enc-136acf6c,cond-pat-19125e2d,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-9e118c1b,pat-96f1d26c,enc-92b54b81,cond-pat-96f1d26c,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-1d5c0830,pat-92b0baea,enc-914a43ab,cond-pat-92b0baea,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-9ca68445,pat-0537f079,enc-1094bfc0,cond-pat-0537f079,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-1bf1005a,pat-831764b8,enc-494df930,cond-pat-831764b8,Amlodipine,,5mg,Once Daily,internal_yaml,,Dispensed
+rx-9b3b7c6f,pat-00f6d8f7,enc-8fdf3bd5,cond-pat-00f6d8f7,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-1a85f884,pat-ff8bd121,enc-0f29b7ea,cond-pat-ff8bd121,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-99d07499,pat-7c003d8a,enc-0dbeb014,cond-pat-7c003d8a-2,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-191af0ae,pat-f874a9f3,enc-8b9e2453,cond-pat-f874a9f3,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-98656cc3,pat-f709a21d,enc-0ae8a068,cond-pat-f709a21d,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-17afe8d8,pat-f59e9a47,enc-c8987545,cond-pat-f59e9a47,Amlodipine,,5mg,Once Daily,internal_yaml,,Dispensed
+rx-96fa64ed,pat-f4339271,enc-8a331c7d,cond-pat-f4339271,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-1644e102,pat-ebb1636d,enc-097d9892,cond-pat-ebb1636d,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-958f5d17,pat-6990d7ac,enc-88c814a7,cond-pat-6990d7ac,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-14d9d92c,pat-6825cfd6,enc-081290bc,cond-pat-6825cfd6,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-94245541,pat-63e4b854,enc-06a788e6,cond-pat-63e4b854-2,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-136ed156,pat-e32f3469,enc-85f204fb,cond-pat-e32f3469,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-92b94d6b,pat-610ea8a8,enc-8486fd25,cond-pat-610ea8a8-2,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-1203c980,pat-5fa3a0d2,enc-03d1793a,cond-pat-5fa3a0d2-2,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-914e4595,pat-deee1ce7,enc-831bf54f,cond-pat-deee1ce7-2,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-1098c1aa,pat-dc180d3b,enc-02667164,cond-pat-dc180d3b,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-8fe33dbf,pat-544b6222,enc-81b0ed79,cond-pat-544b6222,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-0f2db9d4,pat-d395de37,enc-8045e5a3,cond-pat-d395de37-2,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-8e7835e9,pat-52e05a4c,enc-7edaddcd,cond-pat-52e05a4c-3,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-0dc2b1fe,pat-d0bfce8b,enc-fe2559e2,cond-pat-d0bfce8b,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-8d0d2e13,pat-461d13c6,enc-47e2f15a,cond-pat-461d13c6,Amlodipine,,5mg,Once Daily,internal_yaml,,Dispensed
+rx-0c57aa28,pat-c5678fdb,enc-7c04ce21,cond-pat-c5678fdb,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-8ba2263d,pat-c3fc8805,enc-fb4f4a36,cond-pat-c3fc8805,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-0aeca252,pat-4070f46e,enc-f9e44260,cond-pat-4070f46e-2,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-8a371e67,pat-bce560d7,enc-f8793a8a,cond-pat-bce560d7-2,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-09819a7c,pat-b8a44955,enc-f70e32b4,cond-pat-b8a44955-3,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-88cc1691,pat-b5ce39a9,enc-f5a32ade,cond-pat-b5ce39a9,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-081692a6,pat-7e17cfae,enc-a7a47be4,cond-pat-7e17cfae,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-87610ebb,pat-7595a0aa,enc-26eef7f9,cond-pat-7595a0aa-2,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-06ab8ad0,pat-742a98d4,enc-a639740e,cond-pat-742a98d4,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-85f606e5,pat-71548928,enc-2583f023,cond-pat-71548928,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-054082fa,pat-e6b1ce63,enc-a4ce6c38,cond-pat-e6b1ce63,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-848aff0f,pat-d9ee87dd,enc-682a606d,cond-pat-d9ee87dd,Metformin,,500mg,Twice Daily,internal_yaml,,Dispensed
+rx-03d57b24,pat-593903f2,enc-2418e84d,cond-pat-593903f2,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-831ff739,pat-cd2b4157,enc-a3636462,cond-pat-cd2b4157,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-026a734e,pat-4b0ab596,enc-22ade077,cond-pat-4b0ab596,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-81b4ef63,pat-c8ea29d5,enc-a1f85c8c,cond-pat-c8ea29d5-2,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-00ff6b78,pat-455e963e,enc-2142d8a1,cond-pat-455e963e-2,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-8049e78d,pat-befcf2fb,enc-a08d54b6,cond-pat-befcf2fb,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-ff9463a2,pat-b239ac75,enc-1fd7d0cb,cond-pat-b239ac75,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-7ededfb7,pat-2eae18de,enc-9f224ce0,cond-pat-2eae18de,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-fe295bcc,pat-ac8d8d1d,enc-1e6cc8f5,cond-pat-ac8d8d1d,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-7d73d7e1,pat-a57665ef,enc-9db7450a,cond-pat-a57665ef,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-fcbe53f6,pat-207fca82,enc-1d01c11f,cond-pat-207fca82,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-7c08d00b,pat-9cf436eb,enc-9c4c3d34,cond-pat-9cf436eb,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-fb534c20,pat-17fd9b7e,enc-1b96b949,cond-pat-17fd9b7e,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-7a9dc835,pat-169293a8,enc-9ae1355e,cond-pat-169293a8-2,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-f9e8444a,pat-919bf83b,enc-1a2bb173,cond-pat-919bf83b,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-7932c05f,pat-8d5ae0b9,enc-99762d88,cond-pat-8d5ae0b9,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-f87d3c74,pat-8202a209,enc-18c0a99d,cond-pat-8202a209,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-77c7b889,pat-014d1e1e,enc-980b25b2,cond-pat-014d1e1e,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-f712349e,pat-7f2c925d,enc-1755a1c7,cond-pat-7f2c925d,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-765cb0b3,pat-fe770e72,enc-96a01ddc,cond-pat-fe770e72,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-f5a72cc8,pat-f75fe744,enc-52e4eae3,cond-pat-f75fe744,Metformin,,500mg,Twice Daily,internal_yaml,,Dispensed
+rx-74f1a8dd,pat-72694bd7,enc-15ea99f1,cond-pat-72694bd7-3,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-f43c24f2,pat-ea9ca0be,enc-95351606,cond-pat-ea9ca0be,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-7386a107,pat-e21a71ba,enc-147f921b,cond-pat-e21a71ba-2,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-f2d11d1c,pat-6164edcf,enc-cb183fca,cond-pat-6164edcf-3,Metformin,,500mg,Twice Daily,internal_yaml,,Dispensed
+rx-721b9931,pat-5bb8ce77,enc-93ca0e30,cond-pat-5bb8ce77-2,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-f1661546,pat-58e2becb,enc-13148a45,cond-pat-58e2becb-3,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-70b0915b,pat-d82d3ae0,enc-925f065a,cond-pat-d82d3ae0,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-effb0d70,pat-54a1a749,enc-11a9826f,cond-pat-54a1a749-2,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-6f458985,pat-49496899,enc-90f3fe84,cond-pat-49496899,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-ee90059a,pat-40c73995,enc-103e7a99,cond-pat-40c73995,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-6dda81af,pat-bd3ba5fe,enc-8f88f6ae,cond-pat-bd3ba5fe,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-ed24fdc4,pat-39b01267,enc-0ed372c3,cond-pat-39b01267,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-6c6f79d9,pat-b8fa8e7c,enc-8e1deed8,cond-pat-b8fa8e7c,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-ebb9f5ee,pat-b34e6f24,enc-0d686aed,cond-pat-b34e6f24,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-6b047203,pat-ac3747f6,enc-8cb2e702,cond-pat-ac3747f6,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-ea4eee18,pat-246a9cdd,enc-0bfd6317,cond-pat-246a9cdd,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-69996a2d,pat-99c7e218,enc-8b47df2c,cond-pat-99c7e218,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-e8e3e642,pat-941bc2c0,enc-0a925b41,cond-pat-941bc2c0,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-682e6257,pat-9145b314,enc-89dcd756,cond-pat-9145b314,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-e778de6c,pat-10902f29,enc-0927536b,cond-pat-10902f29-2,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-66c35a81,pat-8fdaab3e,enc-8871cf80,cond-pat-8fdaab3e,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-e60dd696,pat-8e6fa368,enc-07bc4b95,cond-pat-8e6fa368-2,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-655852ab,pat-0ae40fd1,enc-8706c7aa,cond-pat-0ae40fd1-2,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-e4a2cec0,pat-0537f079,enc-ba13e1c2,cond-pat-0537f079-2,Metformin,,500mg,Twice Daily,internal_yaml,,Dispensed
+rx-63ed4ad5,pat-ea465b97,enc-065143bf,cond-pat-ea465b97,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-e337c6ea,pat-e05924bd,enc-859bbfd4,cond-pat-e05924bd,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-628242ff,pat-d7d6f5b9,enc-04e63be9,cond-pat-d7d6f5b9,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-e1ccbf14,pat-572171ce,enc-8430b7fe,cond-pat-572171ce,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-61173b29,pat-d500e60d,enc-037b3413,cond-pat-d500e60d,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-e061b73e,pat-4a5e2b48,enc-82c5b028,cond-pat-4a5e2b48,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-5fac3353,pat-48f32372,enc-02102c3d,cond-pat-48f32372-2,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-def6af68,pat-47881b9c,enc-815aa852,cond-pat-47881b9c-2,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-5e412b7d,pat-44b20bf0,enc-00a52467,cond-pat-44b20bf0,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-dd8ba792,pat-3d9ae4c2,enc-7fefa07c,cond-pat-3d9ae4c2,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-5cd623a7,pat-3959cd40,enc-ff3a1c91,cond-pat-3959cd40,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-dc209fbc,pat-ad4c0aa5,enc-7e8498a6,cond-pat-ad4c0aa5,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-5b6b1bd1,pat-0cfba1f5,enc-fdcf14bb,cond-pat-0cfba1f5,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-dab597e6,pat-08ba8a73,enc-7d1990d0,cond-pat-08ba8a73-3,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-5a0013fb,pat-852ef6dc,enc-fc640ce5,cond-pat-852ef6dc-2,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-d94a9010,pat-8258e730,enc-7bae88fa,cond-pat-8258e730,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-58950c25,pat-01a36345,enc-faf9050f,cond-pat-01a36345-2,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-d7df883a,pat-f7b62c6b,enc-7a438124,cond-pat-f7b62c6b-2,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-572a044f,pat-6767524e,enc-f98dfd39,cond-pat-6767524e,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-d6748064,pat-de2f9f5f,enc-78d8794e,cond-pat-de2f9f5f,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-55befc79,pat-5aa40bc8,enc-f822f563,cond-pat-5aa40bc8,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-d509788e,pat-5662f446,enc-776d7178,cond-pat-5662f446,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-5453f4a3,pat-cbc03981,enc-f6b7ed8d,cond-pat-cbc03981-2,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-d39e70b8,pat-3e476f10,enc-760269a2,cond-pat-3e476f10,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-52e8eccd,pat-b950d3a3,enc-f54ce5b7,cond-pat-b950d3a3,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-d23368e2,pat-adf894f3,enc-f3e1dde1,cond-pat-adf894f3,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-517de4f7,pat-93070011,enc-f276d60b,cond-pat-93070011-2,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-d0c8610c,pat-0b3a54f8,enc-71c15220,cond-pat-0b3a54f8,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-5012dd21,pat-058e35a0,enc-f10bce35,cond-pat-058e35a0,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-cf5d5936,pat-f31ecfc2,enc-efa0c65f,cond-pat-f31ecfc2,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-4ea7d54b,pat-ed72b06a,enc-6eeb4274,cond-pat-ed72b06a,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-cdf25160,pat-6cbd2c7f,enc-ee35be89,cond-pat-6cbd2c7f,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-4d3ccd75,pat-df44620e,enc-6d803a9e,cond-pat-df44620e,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-cc87498a,pat-5d23d64d,enc-eccab6b3,cond-pat-5d23d64d,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-4bd1c59f,pat-d5572b34,enc-6c1532c8,cond-pat-d5572b34,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-cb1c41b4,pat-53369f73,enc-eb5faedd,cond-pat-53369f73,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-4a66bdc9,pat-4ab4706f,enc-6aaa2af2,cond-pat-4ab4706f-2,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-c9b139de,pat-c728dcd8,enc-e9f4a707,cond-pat-c728dcd8,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-48fbb5f3,pat-c011b5aa,enc-693f231c,cond-pat-c011b5aa-2,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-c8463208,pat-b1e3674e,enc-e8899f31,cond-pat-b1e3674e,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-4790ae1d,pat-a7f63074,enc-67d41b46,cond-pat-a7f63074,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-c6db2a32,pat-9c9df1c4,enc-e71e975b,cond-pat-9c9df1c4,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-4625a647,pat-9586ca96,enc-66691370,cond-pat-9586ca96,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-c570225c,pat-0dba1f7d,enc-e5b38f85,cond-pat-0dba1f7d,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-44ba9e71,pat-87587c3a,enc-64fe0b9a,cond-pat-87587c3a-2,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-c4051a86,pat-7ed64d36,enc-639303c4,cond-pat-7ed64d36,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-434f969b,pat-6dd1ef2e,enc-6227fbee,cond-pat-6dd1ef2e,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-c29a12b0,pat-654fc02a,enc-e1727803,cond-pat-654fc02a-2,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-41e48ec5,pat-daad0565,enc-60bcf418,cond-pat-daad0565,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-c12f0ada,pat-55b669f8,enc-e007702d,cond-pat-55b669f8,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-407986ef,pat-51755276,enc-5f51ec42,cond-pat-51755276,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-bfc40304,pat-c1267859,enc-5de6e46c,cond-pat-c1267859,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-3f0e7f19,pat-bfbb7083,enc-dd316081,cond-pat-bfbb7083,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-be58fb2e,pat-3f05ec98,enc-5c7bdc96,cond-pat-3f05ec98,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-3da37743,pat-be5068ad,enc-dbc658ab,cond-pat-be5068ad-2,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-bcedf358,pat-3683bd94,enc-5b10d4c0,cond-pat-3683bd94-3,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-3c386f6d,pat-0b909a1f,enc-8dc7a9b1,cond-pat-0b909a1f-3,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-bb82eb82,pat-00385b6f,enc-0d1225c6,cond-pat-00385b6f-3,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-3acd6797,pat-f64b2495,enc-8c5ca1db,cond-pat-f64b2495,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-ba17e3ac,pat-6fe98152,enc-0ba71df0,cond-pat-6fe98152,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-39625fc1,pat-68d25a24,enc-8af19a05,cond-pat-68d25a24,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-b8acdbd6,pat-60502b20,enc-0a3c161a,cond-pat-60502b20,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-37f757eb,pat-d5ad705b,enc-8986922f,cond-pat-d5ad705b,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-b741d400,pat-d16c58d9,enc-08d10e44,cond-pat-d16c58d9-2,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-368c5015,pat-ce96492d,enc-881b8a59,cond-pat-ce96492d,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-b5d6cc2a,pat-4834a5ea,enc-0766066e,cond-pat-4834a5ea,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-3521483f,pat-bc26e34f,enc-86b08283,cond-pat-bc26e34f,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-b46bc454,pat-a1354e6d,enc-05fafe98,cond-pat-a1354e6d,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-33b64069,pat-12517c26,enc-85457aad,cond-pat-12517c26,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-b300bc7e,pat-9030f065,enc-048ff6c2,cond-pat-9030f065-2,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-324b3893,pat-8919c937,enc-83da72d7,cond-pat-8919c937-3,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-b195b4a8,pat-06f93d76,enc-0324eeec,cond-pat-06f93d76-2,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-30e030bd,pat-836da9df,enc-826f6b01,cond-pat-836da9df,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-b02aacd2,pat-f75fe744,enc-01b9e716,cond-pat-f75fe744-2,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-2f7528e7,pat-eeddb840,enc-8104632b,cond-pat-eeddb840,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-aebfa4fc,pat-50608fc7,enc-004edf40,cond-pat-50608fc7-2,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-2e0a2111,pat-c5bdd502,enc-7f995b55,cond-pat-c5bdd502-2,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-ad549d26,pat-c17cbd80,enc-fee3d76a,cond-pat-c17cbd80-2,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-2c9f193b,pat-356efae5,enc-7e2e537f,cond-pat-356efae5,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-abe99550,pat-28abb45f,enc-fd78cf94,cond-pat-28abb45f,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-2b341165,pat-a52020c8,enc-7cc34ba9,cond-pat-a52020c8-3,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-aa7e8d7a,pat-13663ed5,enc-fc0dc7be,cond-pat-13663ed5,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-29c9098f,pat-11fb36ff,enc-7b5843d3,cond-pat-11fb36ff,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-a91385a4,pat-831764b8,enc-faa2bfe8,cond-pat-831764b8-2,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-285e01b9,pat-0261e0cd,enc-79ed3bfd,cond-pat-0261e0cd,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-a7a87dce,pat-74e9165c,enc-f937b812,cond-pat-74e9165c,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-26f2f9e3,pat-737e0e86,enc-78823427,cond-pat-737e0e86,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-a63d75f8,pat-5ccd9126,enc-f7ccb03c,cond-pat-5ccd9126,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-2587f20d,pat-4bc9331e,enc-77172c51,cond-pat-4bc9331e-2,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-a4d26e22,pat-c6d297b1,enc-f661a866,cond-pat-c6d297b1-2,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-241cea37,pat-3ac4d516,enc-75ac247b,cond-pat-3ac4d516,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-a367664c,pat-b18d2227,enc-f4f6a090,cond-pat-b18d2227-2,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-22b1e261,pat-b0221a51,enc-74411ca5,cond-pat-b0221a51,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-a1fc5e76,pat-2e018e90,enc-f38b98ba,cond-pat-2e018e90,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-2146da8b,pat-3fb276e6,enc-72d614cf,cond-pat-3fb276e6,Amlodipine,,5mg,Once Daily,internal_yaml,,Dispensed
+rx-a09156a0,pat-a57665ef,enc-f22090e4,cond-pat-a57665ef-2,Amlodipine,,5mg,Once Daily,internal_yaml,,Dispensed
+rx-1fdbd2b5,pat-6cbd2c7f,enc-716b0cf9,cond-pat-6cbd2c7f-2,Amlodipine,,5mg,Once Daily,internal_yaml,,Dispensed
+rx-9f264eca,pat-ec07a894,enc-f0b5890e,cond-pat-ec07a894-2,Amlodipine,,5mg,Once Daily,internal_yaml,,Dispensed
+rx-1e70cadf,pat-dc180d3b,enc-70000523,cond-pat-dc180d3b-2,Amlodipine,,5mg,Once Daily,internal_yaml,,Dispensed
+rx-9dbb46f4,pat-c6d297b1,enc-ef4a8138,cond-pat-c6d297b1,Amlodipine,,5mg,Once Daily,internal_yaml,,Dispensed
+rx-1d05c309,pat-6e7e797c,enc-6a53e5cb,cond-pat-6e7e797c,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-9c503f1e,pat-ec5dedbb,enc-e99e61e0,cond-pat-ec5dedbb,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-1b9abb33,pat-649142a2,enc-68e8ddf5,cond-pat-649142a2,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-9ae53748,pat-e270b6e1,enc-e8335a0a,cond-pat-e270b6e1-2,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-1a2fb35d,pat-dcc49789,enc-677dd61f,cond-pat-dcc49789,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-997a2f72,pat-d0015103,enc-e6c85234,cond-pat-d0015103,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-18c4ab87,pat-345a3836,enc-6612ce49,cond-pat-345a3836,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-980f279c,pat-b3a4b44b,enc-e55d4a5e,cond-pat-b3a4b44b,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-1759a3b1,pat-b0cea49f,enc-64a7c673,cond-pat-b0cea49f,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-96a41fc6,pat-2bd80932,enc-e3f24288,cond-pat-2bd80932-3,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-15ee9bdb,pat-8643b98b,enc-633cbe9d,cond-pat-8643b98b-2,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-953917f0,pat-02b825f4,enc-e2873ab2,cond-pat-02b825f4,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-14839405,pat-fd0c069c,enc-61d1b6c7,cond-pat-fd0c069c-2,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-93ce101a,pat-f1b3c7ec,enc-e11c32dc,cond-pat-f1b3c7ec,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-13188c2f,pat-70fe4401,enc-6066aef1,cond-pat-70fe4401,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-92630844,pat-6e283455,enc-dfb12b06,cond-pat-6e283455-2,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-11ad8459,pat-d11613b2,enc-5efba71b,cond-pat-d11613b2,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-90f8006e,pat-4ef587f1,enc-de462330,cond-pat-4ef587f1-2,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-10427c83,pat-c452cd2c,enc-5d909f45,cond-pat-c452cd2c,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-8f8cf898,pat-3c862213,enc-dcdb1b5a,cond-pat-3c862213,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-0ed774ad,pat-312de363,enc-5c25976f,cond-pat-312de363,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-8e21f0c2,pat-a961384a,enc-db701384,cond-pat-a961384a,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-0d6c6cd7,pat-a68b289e,enc-5aba8f99,cond-pat-a68b289e-2,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-8cb6e8ec,pat-88c38410,enc-da050bae,cond-pat-88c38410-2,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-0c016501,pat-fe20c94b,enc-594f87c3,cond-pat-fe20c94b,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-8b4be116,pat-7a9535b4,enc-d89a03d8,cond-pat-7a9535b4-2,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-0a965d2b,pat-cb13af33,enc-57e47fed,cond-pat-cb13af33,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-89e0d940,pat-c9a8a75d,enc-d72efc02,cond-pat-c9a8a75d-2,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-092b5555,pat-c291802f,enc-56797817,cond-pat-c291802f-2,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-8875d16a,pat-ba0f512b,enc-d5c3f42c,cond-pat-ba0f512b,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-07c04d7f,pat-3518b5be,enc-550e7041,cond-pat-3518b5be-2,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-870ac994,pat-3242a612,enc-d458ec56,cond-pat-3242a612-2,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-065545a9,pat-d5ad705b,enc-46e021e5,cond-pat-d5ad705b-2,Metformin,,500mg,Twice Daily,internal_yaml,,Dispensed
+rx-859fc1be,pat-b739417f,enc-8d71648a,cond-pat-b739417f,Metformin,,500mg,Twice Daily,internal_yaml,,Dispensed
+rx-04ea3dd3,pat-b2f829fd,enc-0b50d8c9,cond-pat-b2f829fd,Metformin,,500mg,Twice Daily,internal_yaml,,Dispensed
+rx-8434b9e8,pat-8699feb2,enc-89304d08,cond-pat-8699feb2,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-037f35fd,pat-05e47ac7,enc-087ac91d,cond-pat-05e47ac7-2,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-82c9b212,pat-f37514e9,enc-87c54532,cond-pat-f37514e9-2,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-02142e27,pat-eaf2e5e5,enc-070fc147,cond-pat-eaf2e5e5,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-815eaa3c,pat-e105af0b,enc-865a3d5c,cond-pat-e105af0b,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-00a92651,pat-c6141a29,enc-05a4b971,cond-pat-c6141a29,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-7ff3a266,pat-42888692,enc-84ef3586,cond-pat-42888692,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-ff3e1e7b,pat-b50fbc21,enc-0439b19b,cond-pat-b50fbc21,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-7e889a90,pat-1f14c2ac,enc-83842db0,cond-pat-1f14c2ac,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-fdd316a5,pat-0f7b6c7a,enc-02cea9c5,cond-pat-0f7b6c7a,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-7d1d92ba,pat-7dc18a87,enc-821925da,cond-pat-7dc18a87,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-fc680ecf,pat-76aa6359,enc-0163a1ef,cond-pat-76aa6359-3,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-7bb28ae4,pat-687c14fd,enc-80ae1e04,cond-pat-687c14fd,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-fafd06f9,pat-62cff5a5,enc-fff89a19,cond-pat-62cff5a5,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-7a47830e,pat-4c1f7845,enc-7f43162e,cond-pat-4c1f7845,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-f991ff23,pat-38450a91,enc-fe8d9243,cond-pat-38450a91,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-78dc7b38,pat-36da02bb,enc-7dd80e58,cond-pat-36da02bb,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-f826f74d,pat-aacc4020,enc-fd228a6d,cond-pat-aacc4020-2,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-77717362,pat-985cda42,enc-7c6d0682,cond-pat-985cda42,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-f6bbef77,pat-8d049b92,enc-fbb78297,cond-pat-8d049b92,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-76066b8c,pat-03cce8a3,enc-7b01feac,cond-pat-03cce8a3,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-f550e7a1,pat-5b628950,enc-fa4c7ac1,cond-pat-5b628950,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-749b63b6,pat-074f829d,enc-6fa9bffc,cond-pat-074f829d,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-f3e5dfcb,pat-786bb056,enc-eef43c11,cond-pat-786bb056,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-73305be0,pat-d7187831,enc-6e3eb826,cond-pat-d7187831,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-f27ad7f5,pat-5221dcc4,enc-ed89343b,cond-pat-5221dcc4-2,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-71c5540a,pat-c77f21ff,enc-6cd3b050,cond-pat-c77f21ff,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-f10fd01f,pat-c33e0a7d,enc-ec1e2c65,cond-pat-c33e0a7d,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-705a4c34,pat-c067fad1,enc-6b68a87a,cond-pat-c067fad1-2,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-efa4c849,pat-b7e5cbcd,enc-eab3248f,cond-pat-b7e5cbcd,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-6eef445e,pat-2901f986,enc-69fda0a4,cond-pat-2901f986-2,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-ee39c073,pat-10e67450,enc-e9481cb9,cond-pat-10e67450-3,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-6d843c88,pat-fa35f6f0,enc-689298ce,cond-pat-fa35f6f0,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-ecceb89d,pat-f8caef1a,enc-e7dd14e3,cond-pat-f8caef1a,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-6c1934b2,pat-e0af69e4,enc-672790f8,cond-pat-e0af69e4,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-eb63b0c7,pat-d3ec235e,enc-e6720d0d,cond-pat-d3ec235e-2,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-6aae2cdc,pat-cb69f45a,enc-65bc8922,cond-pat-cb69f45a,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-e9f8a8f1,pat-bea6add4,enc-e5070537,cond-pat-bea6add4,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-69432506,pat-3df129e9,enc-6451814c,cond-pat-3df129e9,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-e88da11b,pat-3298eb39,enc-e39bfd61,cond-pat-3298eb39,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-67d81d30,pat-2a16bc35,enc-62e67976,cond-pat-2a16bc35,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-e7229945,pat-22ff9507,enc-e230f58b,cond-pat-22ff9507-2,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-666d155a,pat-163c4e81,enc-617b71a0,cond-pat-163c4e81,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-e5b7916f,pat-84826c8e,enc-e0c5edb5,cond-pat-84826c8e-2,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-65020d84,pat-77bf2608,enc-601069ca,cond-pat-77bf2608,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-e44c8999,pat-721306b0,enc-df5ae5df,cond-pat-721306b0,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-639705ae,pat-d22ad661,enc-5ea561f4,cond-pat-d22ad661,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-e2e181c3,pat-3c2fdcec,enc-ddefde09,cond-pat-3c2fdcec-2,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-622bfdd8,pat-bb7a5901,enc-5d3a5a1e,cond-pat-bb7a5901,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed

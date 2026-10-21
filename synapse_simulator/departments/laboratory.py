@@ -2,11 +2,11 @@
 Laboratory Department Handler.
 """
 
-import uuid
 from typing import List
 from synapse_simulator.departments.base import BaseDepartmentHandler
 from synapse_simulator.core.event_queue import SimulationEvent
 from synapse_simulator.state.models import ActionRequest
+from synapse_simulator.core.ids import new_id
 
 
 class LaboratoryDepartmentHandler(BaseDepartmentHandler):
@@ -37,7 +37,7 @@ class LaboratoryDepartmentHandler(BaseDepartmentHandler):
 
             actions.append(
                 ActionRequest(
-                    action_id=f"act-lab-{uuid.uuid4().hex[:8]}",
+                    action_id=new_id("act-lab-", 8),
                     action_type="COLLECT_LAB_SAMPLE",
                     target_department="laboratory",
                     target_entity_table="laboratory.laboratory_orders",
@@ -93,7 +93,7 @@ class LaboratoryDepartmentHandler(BaseDepartmentHandler):
 
             actions.append(
                 ActionRequest(
-                    action_id=f"act-labres-{uuid.uuid4().hex[:8]}",
+                    action_id=new_id("act-labres-", 8),
                     action_type="COMPLETE_LAB_RESULT",
                     target_department="laboratory",
                     target_entity_table="laboratory.laboratory_orders",

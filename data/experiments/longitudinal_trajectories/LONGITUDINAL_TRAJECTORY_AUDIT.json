@@ -1,0 +1,614 @@
+{
+  "n100": {
+    "cohort_size": 100,
+    "seeds": [
+      42,
+      101,
+      202,
+      303,
+      404
+    ],
+    "runs": [
+      {
+        "seed": 42,
+        "cohort_size": 100,
+        "invariants_passed": true,
+        "elapsed_seconds": 0.32,
+        "metrics": {
+          "long_encounters_per_pt_year": 1.11,
+          "long_inter_encounter_interval_days": 141.0,
+          "long_crude_mortality_rate": 0.0208,
+          "long_deaths_count": 4,
+          "long_censored_pt_years": 192.29,
+          "long_treatment_intensification_rate": 0.7879,
+          "long_chronic_complication_rate": 0.0303,
+          "prev_htn_baseline": 39.06,
+          "prev_htn_period": 45.31,
+          "prev_t2d_adults": 9.38
+        },
+        "diagnostics": {
+          "cause_breakdown": {
+            "R99": 4
+          },
+          "htn_intensified_pct": 75.86,
+          "t2d_intensified_pct": 83.33,
+          "person_years_lost_to_death": 4.84
+        }
+      },
+      {
+        "seed": 101,
+        "cohort_size": 100,
+        "invariants_passed": true,
+        "elapsed_seconds": 0.29,
+        "metrics": {
+          "long_encounters_per_pt_year": 1.14,
+          "long_inter_encounter_interval_days": 124.4,
+          "long_crude_mortality_rate": 0.01541,
+          "long_deaths_count": 3,
+          "long_censored_pt_years": 194.74,
+          "long_treatment_intensification_rate": 0.8571,
+          "long_chronic_complication_rate": 0.0714,
+          "prev_htn_baseline": 30.0,
+          "prev_htn_period": 34.29,
+          "prev_t2d_adults": 12.86
+        },
+        "diagnostics": {
+          "cause_breakdown": {
+            "R99": 3
+          },
+          "htn_intensified_pct": 75.0,
+          "t2d_intensified_pct": 100.0,
+          "person_years_lost_to_death": 2.39
+        }
+      },
+      {
+        "seed": 202,
+        "cohort_size": 100,
+        "invariants_passed": true,
+        "elapsed_seconds": 0.29,
+        "metrics": {
+          "long_encounters_per_pt_year": 1.01,
+          "long_inter_encounter_interval_days": 121.0,
+          "long_crude_mortality_rate": 0.01539,
+          "long_deaths_count": 3,
+          "long_censored_pt_years": 194.97,
+          "long_treatment_intensification_rate": 0.9565,
+          "long_chronic_complication_rate": 0.0,
+          "prev_htn_baseline": 28.79,
+          "prev_htn_period": 28.79,
+          "prev_t2d_adults": 10.61
+        },
+        "diagnostics": {
+          "cause_breakdown": {
+            "R99": 3
+          },
+          "htn_intensified_pct": 94.74,
+          "t2d_intensified_pct": 100.0,
+          "person_years_lost_to_death": 2.16
+        }
+      },
+      {
+        "seed": 303,
+        "cohort_size": 100,
+        "invariants_passed": true,
+        "elapsed_seconds": 0.28,
+        "metrics": {
+          "long_encounters_per_pt_year": 0.97,
+          "long_inter_encounter_interval_days": 129.0,
+          "long_crude_mortality_rate": 0.01029,
+          "long_deaths_count": 2,
+          "long_censored_pt_years": 194.29,
+          "long_treatment_intensification_rate": 0.5769,
+          "long_chronic_complication_rate": 0.0,
+          "prev_htn_baseline": 32.31,
+          "prev_htn_period": 36.92,
+          "prev_t2d_adults": 7.69
+        },
+        "diagnostics": {
+          "cause_breakdown": {
+            "R99": 2
+          },
+          "htn_intensified_pct": 54.17,
+          "t2d_intensified_pct": 80.0,
+          "person_years_lost_to_death": 2.84
+        }
+      },
+      {
+        "seed": 404,
+        "cohort_size": 100,
+        "invariants_passed": true,
+        "elapsed_seconds": 0.29,
+        "metrics": {
+          "long_encounters_per_pt_year": 0.99,
+          "long_inter_encounter_interval_days": 119.6,
+          "long_crude_mortality_rate": 0.01027,
+          "long_deaths_count": 2,
+          "long_censored_pt_years": 194.79,
+          "long_treatment_intensification_rate": 0.7826,
+          "long_chronic_complication_rate": 0.087,
+          "prev_htn_baseline": 26.23,
+          "prev_htn_period": 29.51,
+          "prev_t2d_adults": 14.75
+        },
+        "diagnostics": {
+          "cause_breakdown": {
+            "R99": 2
+          },
+          "htn_intensified_pct": 61.11,
+          "t2d_intensified_pct": 100.0,
+          "person_years_lost_to_death": 2.34
+        }
+      }
+    ],
+    "summary": {
+      "long_encounters_per_pt_year": {
+        "mean": 1.044,
+        "std": 0.076,
+        "min": 0.97,
+        "max": 1.14
+      },
+      "long_inter_encounter_interval_days": {
+        "mean": 127.0,
+        "std": 8.6244,
+        "min": 119.6,
+        "max": 141.0
+      },
+      "long_crude_mortality_rate": {
+        "mean": 0.0144,
+        "std": 0.0044,
+        "min": 0.0103,
+        "max": 0.0208
+      },
+      "long_deaths_count": {
+        "mean": 2.8,
+        "std": 0.8367,
+        "min": 2,
+        "max": 4
+      },
+      "long_censored_pt_years": {
+        "mean": 194.216,
+        "std": 1.1054,
+        "min": 192.29,
+        "max": 194.97
+      },
+      "long_treatment_intensification_rate": {
+        "mean": 0.7922,
+        "std": 0.1393,
+        "min": 0.5769,
+        "max": 0.9565
+      },
+      "long_chronic_complication_rate": {
+        "mean": 0.0377,
+        "std": 0.0402,
+        "min": 0.0,
+        "max": 0.087
+      },
+      "prev_htn_baseline": {
+        "mean": 31.278,
+        "std": 4.8716,
+        "min": 26.23,
+        "max": 39.06
+      },
+      "prev_htn_period": {
+        "mean": 34.964,
+        "std": 6.693,
+        "min": 28.79,
+        "max": 45.31
+      },
+      "prev_t2d_adults": {
+        "mean": 11.058,
+        "std": 2.7945,
+        "min": 7.69,
+        "max": 14.75
+      }
+    }
+  },
+  "n250": {
+    "cohort_size": 250,
+    "seeds": [
+      42,
+      101,
+      202,
+      303,
+      404
+    ],
+    "runs": [
+      {
+        "seed": 42,
+        "cohort_size": 250,
+        "invariants_passed": true,
+        "elapsed_seconds": 0.55,
+        "metrics": {
+          "long_encounters_per_pt_year": 1.14,
+          "long_inter_encounter_interval_days": 134.2,
+          "long_crude_mortality_rate": 0.02074,
+          "long_deaths_count": 10,
+          "long_censored_pt_years": 482.15,
+          "long_treatment_intensification_rate": 0.7654,
+          "long_chronic_complication_rate": 0.0247,
+          "prev_htn_baseline": 36.14,
+          "prev_htn_period": 42.77,
+          "prev_t2d_adults": 11.45
+        },
+        "diagnostics": {
+          "cause_breakdown": {
+            "R99": 10
+          },
+          "htn_intensified_pct": 73.24,
+          "t2d_intensified_pct": 89.47,
+          "person_years_lost_to_death": 10.66
+        }
+      },
+      {
+        "seed": 101,
+        "cohort_size": 250,
+        "invariants_passed": true,
+        "elapsed_seconds": 0.55,
+        "metrics": {
+          "long_encounters_per_pt_year": 1.2,
+          "long_inter_encounter_interval_days": 127.9,
+          "long_crude_mortality_rate": 0.01647,
+          "long_deaths_count": 8,
+          "long_censored_pt_years": 485.71,
+          "long_treatment_intensification_rate": 0.8049,
+          "long_chronic_complication_rate": 0.0366,
+          "prev_htn_baseline": 36.93,
+          "prev_htn_period": 40.91,
+          "prev_t2d_adults": 13.07
+        },
+        "diagnostics": {
+          "cause_breakdown": {
+            "R99": 8
+          },
+          "htn_intensified_pct": 72.22,
+          "t2d_intensified_pct": 95.65,
+          "person_years_lost_to_death": 7.1
+        }
+      },
+      {
+        "seed": 202,
+        "cohort_size": 250,
+        "invariants_passed": true,
+        "elapsed_seconds": 0.53,
+        "metrics": {
+          "long_encounters_per_pt_year": 0.98,
+          "long_inter_encounter_interval_days": 127.1,
+          "long_crude_mortality_rate": 0.01859,
+          "long_deaths_count": 9,
+          "long_censored_pt_years": 484.12,
+          "long_treatment_intensification_rate": 0.8308,
+          "long_chronic_complication_rate": 0.0,
+          "prev_htn_baseline": 29.48,
+          "prev_htn_period": 31.79,
+          "prev_t2d_adults": 9.25
+        },
+        "diagnostics": {
+          "cause_breakdown": {
+            "R99": 9
+          },
+          "htn_intensified_pct": 80.0,
+          "t2d_intensified_pct": 93.75,
+          "person_years_lost_to_death": 8.69
+        }
+      },
+      {
+        "seed": 303,
+        "cohort_size": 250,
+        "invariants_passed": true,
+        "elapsed_seconds": 0.53,
+        "metrics": {
+          "long_encounters_per_pt_year": 1.03,
+          "long_inter_encounter_interval_days": 127.5,
+          "long_crude_mortality_rate": 0.01447,
+          "long_deaths_count": 7,
+          "long_censored_pt_years": 483.61,
+          "long_treatment_intensification_rate": 0.75,
+          "long_chronic_complication_rate": 0.0441,
+          "prev_htn_baseline": 31.55,
+          "prev_htn_period": 34.52,
+          "prev_t2d_adults": 10.12
+        },
+        "diagnostics": {
+          "cause_breakdown": {
+            "R99": 7
+          },
+          "htn_intensified_pct": 70.69,
+          "t2d_intensified_pct": 94.12,
+          "person_years_lost_to_death": 9.2
+        }
+      },
+      {
+        "seed": 404,
+        "cohort_size": 250,
+        "invariants_passed": true,
+        "elapsed_seconds": 0.56,
+        "metrics": {
+          "long_encounters_per_pt_year": 1.08,
+          "long_inter_encounter_interval_days": 116.6,
+          "long_crude_mortality_rate": 0.00613,
+          "long_deaths_count": 3,
+          "long_censored_pt_years": 489.12,
+          "long_treatment_intensification_rate": 0.8209,
+          "long_chronic_complication_rate": 0.0597,
+          "prev_htn_baseline": 30.82,
+          "prev_htn_period": 34.59,
+          "prev_t2d_adults": 15.09
+        },
+        "diagnostics": {
+          "cause_breakdown": {
+            "R99": 3
+          },
+          "htn_intensified_pct": 74.55,
+          "t2d_intensified_pct": 95.83,
+          "person_years_lost_to_death": 3.69
+        }
+      }
+    ],
+    "summary": {
+      "long_encounters_per_pt_year": {
+        "mean": 1.086,
+        "std": 0.0871,
+        "min": 0.98,
+        "max": 1.2
+      },
+      "long_inter_encounter_interval_days": {
+        "mean": 126.66,
+        "std": 6.3343,
+        "min": 116.6,
+        "max": 134.2
+      },
+      "long_crude_mortality_rate": {
+        "mean": 0.0153,
+        "std": 0.0056,
+        "min": 0.0061,
+        "max": 0.0207
+      },
+      "long_deaths_count": {
+        "mean": 7.4,
+        "std": 2.7019,
+        "min": 3,
+        "max": 10
+      },
+      "long_censored_pt_years": {
+        "mean": 484.942,
+        "std": 2.6594,
+        "min": 482.15,
+        "max": 489.12
+      },
+      "long_treatment_intensification_rate": {
+        "mean": 0.7944,
+        "std": 0.0352,
+        "min": 0.75,
+        "max": 0.8308
+      },
+      "long_chronic_complication_rate": {
+        "mean": 0.033,
+        "std": 0.0224,
+        "min": 0.0,
+        "max": 0.0597
+      },
+      "prev_htn_baseline": {
+        "mean": 32.984,
+        "std": 3.3372,
+        "min": 29.48,
+        "max": 36.93
+      },
+      "prev_htn_period": {
+        "mean": 36.916,
+        "std": 4.681,
+        "min": 31.79,
+        "max": 42.77
+      },
+      "prev_t2d_adults": {
+        "mean": 11.796,
+        "std": 2.339,
+        "min": 9.25,
+        "max": 15.09
+      }
+    }
+  },
+  "n500": {
+    "cohort_size": 500,
+    "seeds": [
+      42,
+      101,
+      202,
+      303,
+      404
+    ],
+    "runs": [
+      {
+        "seed": 42,
+        "cohort_size": 500,
+        "invariants_passed": true,
+        "elapsed_seconds": 0.98,
+        "metrics": {
+          "long_encounters_per_pt_year": 1.15,
+          "long_inter_encounter_interval_days": 132.2,
+          "long_crude_mortality_rate": 0.01965,
+          "long_deaths_count": 19,
+          "long_censored_pt_years": 966.84,
+          "long_treatment_intensification_rate": 0.7516,
+          "long_chronic_complication_rate": 0.0373,
+          "prev_htn_baseline": 35.19,
+          "prev_htn_period": 41.35,
+          "prev_t2d_adults": 11.44
+        },
+        "diagnostics": {
+          "cause_breakdown": {
+            "R99": 19
+          },
+          "htn_intensified_pct": 71.63,
+          "t2d_intensified_pct": 89.74,
+          "person_years_lost_to_death": 18.79
+        }
+      },
+      {
+        "seed": 101,
+        "cohort_size": 500,
+        "invariants_passed": true,
+        "elapsed_seconds": 1.0,
+        "metrics": {
+          "long_encounters_per_pt_year": 1.11,
+          "long_inter_encounter_interval_days": 127.6,
+          "long_crude_mortality_rate": 0.00921,
+          "long_deaths_count": 9,
+          "long_censored_pt_years": 976.78,
+          "long_treatment_intensification_rate": 0.8041,
+          "long_chronic_complication_rate": 0.0203,
+          "prev_htn_baseline": 34.76,
+          "prev_htn_period": 38.11,
+          "prev_t2d_adults": 12.8
+        },
+        "diagnostics": {
+          "cause_breakdown": {
+            "R99": 9
+          },
+          "htn_intensified_pct": 72.0,
+          "t2d_intensified_pct": 95.24,
+          "person_years_lost_to_death": 8.85
+        }
+      },
+      {
+        "seed": 202,
+        "cohort_size": 500,
+        "invariants_passed": true,
+        "elapsed_seconds": 0.98,
+        "metrics": {
+          "long_encounters_per_pt_year": 1.05,
+          "long_inter_encounter_interval_days": 123.0,
+          "long_crude_mortality_rate": 0.01436,
+          "long_deaths_count": 14,
+          "long_censored_pt_years": 975.1,
+          "long_treatment_intensification_rate": 0.812,
+          "long_chronic_complication_rate": 0.0075,
+          "prev_htn_baseline": 30.4,
+          "prev_htn_period": 32.52,
+          "prev_t2d_adults": 12.16
+        },
+        "diagnostics": {
+          "cause_breakdown": {
+            "R99": 14
+          },
+          "htn_intensified_pct": 77.57,
+          "t2d_intensified_pct": 92.5,
+          "person_years_lost_to_death": 10.53
+        }
+      },
+      {
+        "seed": 303,
+        "cohort_size": 500,
+        "invariants_passed": true,
+        "elapsed_seconds": 0.96,
+        "metrics": {
+          "long_encounters_per_pt_year": 1.15,
+          "long_inter_encounter_interval_days": 118.4,
+          "long_crude_mortality_rate": 0.01962,
+          "long_deaths_count": 19,
+          "long_censored_pt_years": 968.24,
+          "long_treatment_intensification_rate": 0.7551,
+          "long_chronic_complication_rate": 0.0408,
+          "prev_htn_baseline": 31.52,
+          "prev_htn_period": 34.38,
+          "prev_t2d_adults": 14.33
+        },
+        "diagnostics": {
+          "cause_breakdown": {
+            "R99": 19
+          },
+          "htn_intensified_pct": 65.83,
+          "t2d_intensified_pct": 92.0,
+          "person_years_lost_to_death": 17.39
+        }
+      },
+      {
+        "seed": 404,
+        "cohort_size": 500,
+        "invariants_passed": true,
+        "elapsed_seconds": 1.08,
+        "metrics": {
+          "long_encounters_per_pt_year": 1.08,
+          "long_inter_encounter_interval_days": 115.9,
+          "long_crude_mortality_rate": 0.00923,
+          "long_deaths_count": 9,
+          "long_censored_pt_years": 974.77,
+          "long_treatment_intensification_rate": 0.8258,
+          "long_chronic_complication_rate": 0.0379,
+          "prev_htn_baseline": 30.77,
+          "prev_htn_period": 34.46,
+          "prev_t2d_adults": 13.85
+        },
+        "diagnostics": {
+          "cause_breakdown": {
+            "R99": 9
+          },
+          "htn_intensified_pct": 74.11,
+          "t2d_intensified_pct": 95.56,
+          "person_years_lost_to_death": 10.86
+        }
+      }
+    ],
+    "summary": {
+      "long_encounters_per_pt_year": {
+        "mean": 1.108,
+        "std": 0.0438,
+        "min": 1.05,
+        "max": 1.15
+      },
+      "long_inter_encounter_interval_days": {
+        "mean": 123.42,
+        "std": 6.6424,
+        "min": 115.9,
+        "max": 132.2
+      },
+      "long_crude_mortality_rate": {
+        "mean": 0.0144,
+        "std": 0.0052,
+        "min": 0.0092,
+        "max": 0.0197
+      },
+      "long_deaths_count": {
+        "mean": 14.0,
+        "std": 5.0,
+        "min": 9,
+        "max": 19
+      },
+      "long_censored_pt_years": {
+        "mean": 972.346,
+        "std": 4.4804,
+        "min": 966.84,
+        "max": 976.78
+      },
+      "long_treatment_intensification_rate": {
+        "mean": 0.7897,
+        "std": 0.0341,
+        "min": 0.7516,
+        "max": 0.8258
+      },
+      "long_chronic_complication_rate": {
+        "mean": 0.0288,
+        "std": 0.0144,
+        "min": 0.0075,
+        "max": 0.0408
+      },
+      "prev_htn_baseline": {
+        "mean": 32.528,
+        "std": 2.275,
+        "min": 30.4,
+        "max": 35.19
+      },
+      "prev_htn_period": {
+        "mean": 36.164,
+        "std": 3.5372,
+        "min": 32.52,
+        "max": 41.35
+      },
+      "prev_t2d_adults": {
+        "mean": 12.916,
+        "std": 1.1869,
+        "min": 11.44,
+        "max": 14.33
+      }
+    }
+  }
+}

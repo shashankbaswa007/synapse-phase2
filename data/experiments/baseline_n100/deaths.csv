@@ -1,0 +1,2 @@
+death_id,patient_id,death_date,cause_code,cause_name,is_premature
+dth-c7a37dde,pat-07025401,2025-05-23T00:22:37,I21.9,Acute myocardial infarction,False

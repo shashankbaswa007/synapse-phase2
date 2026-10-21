@@ -2,11 +2,11 @@
 Pharmacy Department Handler.
 """
 
-import uuid
 from typing import List
 from synapse_simulator.departments.base import BaseDepartmentHandler
 from synapse_simulator.core.event_queue import SimulationEvent
 from synapse_simulator.state.models import ActionRequest
+from synapse_simulator.core.ids import new_id
 
 
 class PharmacyDepartmentHandler(BaseDepartmentHandler):
@@ -24,7 +24,7 @@ class PharmacyDepartmentHandler(BaseDepartmentHandler):
             # Issue prescription verification action
             actions.append(
                 ActionRequest(
-                    action_id=f"act-verify-{uuid.uuid4().hex[:8]}",
+                    action_id=new_id("act-verify-", 8),
                     action_type="VERIFY_PRESCRIPTION",
                     target_department="pharmacy",
                     target_entity_table="pharmacy.prescriptions",
@@ -41,7 +41,7 @@ class PharmacyDepartmentHandler(BaseDepartmentHandler):
             # Issue medicine dispense confirmation action
             actions.append(
                 ActionRequest(
-                    action_id=f"act-dispense-{uuid.uuid4().hex[:8]}",
+                    action_id=new_id("act-dispense-", 8),
                     action_type="CONFIRM_MEDICINE_DISPENSE",
                     target_department="pharmacy",
                     target_entity_table="pharmacy.prescriptions",
@@ -58,7 +58,7 @@ class PharmacyDepartmentHandler(BaseDepartmentHandler):
         elif event.event_type == "PrescriptionVerified":
             actions.append(
                 ActionRequest(
-                    action_id=f"act-dispense-{uuid.uuid4().hex[:8]}",
+                    action_id=new_id("act-dispense-", 8),
                     action_type="CONFIRM_MEDICINE_DISPENSE",
                     target_department="pharmacy",
                     target_entity_table="pharmacy.prescriptions",

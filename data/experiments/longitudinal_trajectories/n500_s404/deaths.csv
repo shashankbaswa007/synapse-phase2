@@ -1,0 +1,10 @@
+death_id,patient_id,death_date,cause_code,cause_name,is_premature
+dth-82b48bf2,pat-40c158f0,2024-02-05T00:00:00,R99,All-cause natural mortality (SRS Life Table),False
+dth-01ff0807,pat-4fae24d4,2024-02-05T00:00:00,R99,All-cause natural mortality (SRS Life Table),False
+dth-8149841c,pat-3512d519,2024-05-13T00:00:00,R99,All-cause natural mortality (SRS Life Table),True
+dth-00940031,pat-87529b95,2024-08-12T00:00:00,R99,All-cause natural mortality (SRS Life Table),False
+dth-7fde7c46,pat-d77acfed,2024-12-02T00:00:00,R99,All-cause natural mortality (SRS Life Table),False
+dth-ff28f85b,pat-d063a8bf,2024-12-09T00:00:00,R99,All-cause natural mortality (SRS Life Table),True
+dth-7e737470,pat-da50df99,2025-01-20T00:00:00,R99,All-cause natural mortality (SRS Life Table),False
+dth-fdbdf085,pat-2c90a615,2025-04-14T00:00:00,R99,All-cause natural mortality (SRS Life Table),False
+dth-7d086c9a,pat-eed7d79b,2025-07-07T00:00:00,R99,All-cause natural mortality (SRS Life Table),True

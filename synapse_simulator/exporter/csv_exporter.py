@@ -29,6 +29,7 @@ class CSVExporter:
         trace_log: Optional[List[Dict[str, Any]]] = None,
         metrics: Optional[Dict[str, Any]] = None,
         output_dir: Optional[Path] = None,
+        module_runner: Optional[Any] = None,
     ):
         self.state_manager = state_manager
         self.master_data = master_data
@@ -38,6 +39,7 @@ class CSVExporter:
         self.trace_log = trace_log or []
         self.metrics = metrics or {}
         self.output_dir = output_dir or Path("./output/phase2")
+        self.module_runner = module_runner
 
         # Subdirectories for CSV outputs
         self.dirs = {
@@ -747,18 +749,23 @@ class CSVExporter:
         # 3. conditions.csv
         consult_table = self.state_manager._store.get("clinical.consultations", {})
         cond_rows = []
-        patient_diagnosis_map = {}
+        patient_conditions: List[Dict[str, str]] = []
+        cond_idx_map: Dict[str, int] = {}
 
         for consult_id, consult in consult_table.items():
             pid = consult.get("patient_id")
-            diag_code = consult.get("diagnosis_code")
-            diag_name = consult.get("diagnosis_name")
+            diag_code = consult.get("diagnosis_code") or consult.get("condition_code")
+            diag_name = consult.get("diagnosis_name") or consult.get("condition_name")
             if pid and diag_code:
-                enc_id = get_patient_enc_id(pid)
-                cond_id = f"cond-{pid}"
-                patient_diagnosis_map[pid] = (diag_code, diag_name)
+                enc_id = consult.get("encounter_id") or get_patient_enc_id(pid)
+                cond_idx_map[pid] = cond_idx_map.get(pid, 0) + 1
+                cond_id = consult.get("condition_id") or (f"cond-{pid}" if cond_idx_map[pid] == 1 else f"cond-{pid}-{cond_idx_map[pid]}")
+                status = consult.get("status", "Active")
+                patient_conditions.append({
+                    "patient_id": pid, "condition_id": cond_id, "encounter_id": enc_id, "diagnosis_code": diag_code
+                })
                 cond_rows.append([
-                    cond_id, pid, enc_id, diag_code, diag_name, "Confirmed"
+                    cond_id, pid, enc_id, diag_code, diag_name, status
                 ])
 
         # Fallback to patient_contexts if consult_table was empty
@@ -767,9 +774,11 @@ class CSVExporter:
                 if pctx.diagnosis_code:
                     enc_id = get_patient_enc_id(pid)
                     cond_id = f"cond-{pid}"
-                    patient_diagnosis_map[pid] = (pctx.diagnosis_code, pctx.diagnosis_name)
+                    patient_conditions.append({
+                        "patient_id": pid, "condition_id": cond_id, "encounter_id": enc_id, "diagnosis_code": pctx.diagnosis_code
+                    })
                     cond_rows.append([
-                        cond_id, pid, enc_id, pctx.diagnosis_code, pctx.diagnosis_name or "Clinical Diagnosis", "Confirmed"
+                        cond_id, pid, enc_id, pctx.diagnosis_code, pctx.diagnosis_name or "Clinical Diagnosis", "Active"
                     ])
 
         # 4. symptoms.csv
@@ -778,16 +787,36 @@ class CSVExporter:
         kb = MedicalKnowledgeBase()
         kb.load(enable_pubmed=False)
 
-        for pid, (d_code, d_name) in patient_diagnosis_map.items():
+        sym_idx_map: Dict[str, int] = {}
+        for p_cond in patient_conditions:
+            pid = p_cond["patient_id"]
+            cond_id = p_cond["condition_id"]
+            enc_id = p_cond["encounter_id"]
+            d_code = p_cond["diagnosis_code"]
             diag_entry = kb.get_diagnosis_by_code(d_code)
             symptoms_list = diag_entry.symptoms if diag_entry else ["fatigue", "fever"]
-            enc_id = get_patient_enc_id(pid)
-            for idx, sym in enumerate(symptoms_list):
+            for sym in symptoms_list:
+                sym_idx_map[pid] = sym_idx_map.get(pid, 0) + 1
                 sym_rows.append([
-                    f"sym-{pid}-{idx+1}", pid, enc_id, f"cond-{pid}", sym
+                    f"sym-{pid}-{sym_idx_map[pid]}", pid, enc_id, cond_id, sym
                 ])
 
         # 5. medications.csv
+        valid_cond_ids = {r[0] for r in cond_rows}
+        first_cond_for_patient = {p_cond["patient_id"]: p_cond["condition_id"] for p_cond in patient_conditions}
+        enc_to_cond = {p_cond["encounter_id"]: p_cond["condition_id"] for p_cond in patient_conditions if p_cond.get("encounter_id")}
+        drug_indication_map = {
+            "metformin": "E11.9",
+            "glimepiride": "E11.9",
+            "insulin": "E11.9",
+            "amlodipine": "I10",
+            "telmisartan": "I10",
+            "losartan": "I10",
+            "atenolol": "I10",
+            "amoxicillin": "J06.9",
+            "azithromycin": "J06.9",
+            "paracetamol": "J06.9",
+        }
         rx_table = self.state_manager._store.get("pharmacy.prescriptions", {})
         med_rows = []
         for rx_id, rx in rx_table.items():
@@ -795,8 +824,31 @@ class CSVExporter:
             enc_id = rx.get("consultation_id") or rx.get("encounter_id") or get_patient_enc_id(pid)
             ev_ids = rx.get("evidence_ids", [])
             ev_str = ";".join(ev_ids) if isinstance(ev_ids, list) else str(ev_ids)
+            target_cond_id = rx.get("condition_id")
+            drug_name_lower = (rx.get("drug_name") or "").lower()
+            indicated_code = None
+            for d_key, c_code in drug_indication_map.items():
+                if d_key in drug_name_lower:
+                    indicated_code = c_code
+                    break
+
+            if not target_cond_id or target_cond_id not in valid_cond_ids:
+                if indicated_code:
+                    for p_cond in patient_conditions:
+                        if p_cond["patient_id"] == pid and p_cond["diagnosis_code"] == indicated_code:
+                            target_cond_id = p_cond["condition_id"]
+                            break
+                if not target_cond_id or target_cond_id not in valid_cond_ids:
+                    if enc_id in enc_to_cond:
+                        target_cond_id = enc_to_cond[enc_id]
+                    elif pid in first_cond_for_patient:
+                        target_cond_id = first_cond_for_patient[pid]
+                    elif f"cond-{pid}" in valid_cond_ids:
+                        target_cond_id = f"cond-{pid}"
+                    else:
+                        continue  # Avoid dangling FK in medications
             med_rows.append([
-                rx_id, pid, enc_id, f"cond-{pid}", rx.get("drug_name"), rx.get("drug_class", ""),
+                rx_id, pid, enc_id, target_cond_id, rx.get("drug_name"), rx.get("drug_class", ""),
                 rx.get("dosage", "500mg"), rx.get("frequency", "OD"), rx.get("source", "internal_yaml"),
                 ev_str, rx.get("status", "Issued")
             ])
@@ -1001,7 +1053,8 @@ class CSVExporter:
 
         # 12. generation_summary.csv
         summary_rows = [
-            ["generation_timestamp", datetime.now().isoformat()],
+            # Deterministic: simulation end time (wall-clock provenance lives in DATASET_MANIFEST.json)
+            ["generation_timestamp", self.metrics.get("final_simulation_time", "")],
             ["patient_count", len(patient_rows)],
             ["encounter_count", len(enc_rows)],
             ["condition_count", len(cond_rows)],
@@ -1023,6 +1076,74 @@ class CSVExporter:
             summary_rows
         )
         if p: exported["generation_summary.csv"] = p
+
+        # Additive Longitudinal Tables (Decision H)
+        # 13. patient_timeline.csv
+        timeline_rows = []
+        for idx, e in enumerate(self.committed_events):
+            t_pid = e.payload.get("patient_id") if e.payload else ""
+            if not t_pid:
+                t_pid = journey_patient_map.get(e.scenario_instance_id.split("-inst-")[0], "")
+            t_iso = e.timestamp.isoformat() if hasattr(e.timestamp, "isoformat") else str(e.timestamp)
+            timeline_rows.append([
+                f"tml-{idx+1}", t_pid, t_iso, e.event_type, e.entity_id, f"{e.event_type} on {e.entity_table}"
+            ])
+        p = self._write_csv(
+            s_dir / "patient_timeline.csv",
+            ["timeline_id", "patient_id", "timestamp", "event_type", "entity_id", "description"],
+            timeline_rows
+        )
+        if p: exported["patient_timeline.csv"] = p
+
+        # 14. observations.csv
+        obs_rows = []
+        if self.module_runner and hasattr(self.module_runner, "longitudinal_observations"):
+            for obs in self.module_runner.longitudinal_observations:
+                obs_t = obs["timestamp"].isoformat() if hasattr(obs["timestamp"], "isoformat") else str(obs["timestamp"])
+                obs_rows.append([
+                    obs["observation_id"], obs["patient_id"], obs["encounter_id"],
+                    obs_t, obs["observation_code"], obs["observation_name"],
+                    obs["value"], obs["unit"], obs["is_abnormal"]
+                ])
+        p = self._write_csv(
+            s_dir / "observations.csv",
+            ["observation_id", "patient_id", "encounter_id", "timestamp", "observation_code", "observation_name", "value", "unit", "is_abnormal"],
+            obs_rows
+        )
+        if p: exported["observations.csv"] = p
+
+        # 15. care_plans.csv
+        cp_rows = []
+        if self.module_runner and hasattr(self.module_runner, "longitudinal_care_plans"):
+            for cp in self.module_runner.longitudinal_care_plans:
+                st = cp["start_date"].isoformat() if hasattr(cp["start_date"], "isoformat") else str(cp["start_date"])
+                et = cp["end_date"].isoformat() if cp.get("end_date") and hasattr(cp["end_date"], "isoformat") else (str(cp["end_date"]) if cp.get("end_date") else "")
+                cp_rows.append([
+                    cp["care_plan_id"], cp["patient_id"], cp["encounter_id"],
+                    cp["plan_code"], cp["plan_name"], st, et, cp["status"]
+                ])
+        p = self._write_csv(
+            s_dir / "care_plans.csv",
+            ["care_plan_id", "patient_id", "encounter_id", "plan_code", "plan_name", "start_date", "end_date", "status"],
+            cp_rows
+        )
+        if p: exported["care_plans.csv"] = p
+
+        # 16. deaths.csv
+        death_rows = []
+        if self.module_runner and hasattr(self.module_runner, "longitudinal_deaths"):
+            for dth in self.module_runner.longitudinal_deaths:
+                dt_iso = dth["death_date"].isoformat() if hasattr(dth["death_date"], "isoformat") else str(dth["death_date"])
+                death_rows.append([
+                    dth["death_id"], dth["patient_id"], dt_iso,
+                    dth["cause_code"], dth["cause_name"], dth["is_premature"]
+                ])
+        p = self._write_csv(
+            s_dir / "deaths.csv",
+            ["death_id", "patient_id", "death_date", "cause_code", "cause_name", "is_premature"],
+            death_rows
+        )
+        if p: exported["deaths.csv"] = p
 
         return exported
 

@@ -3,7 +3,7 @@ Master Data Generator: Generates hospital reference data (departments, staff, ro
 Runs ONCE per simulation run. All patient journeys reference this shared master data.
 """
 
-import uuid
+from synapse_simulator.core.ids import new_id
 import random
 from typing import List, Optional
 from datetime import datetime, timedelta
@@ -187,7 +187,7 @@ class MasterDataGenerator:
         batches: List[InventorySnapshot] = []
         for inv_cfg in self.config.initial_inventory:
             batches.append(InventorySnapshot(
-                batch_id=f"batch-{inv_cfg.drug_name.lower().replace(' ', '_')}-{uuid.uuid4().hex[:6]}",
+                batch_id=new_id(f"batch-{inv_cfg.drug_name.lower().replace(' ', '_')}-", 6),
                 drug_name=inv_cfg.drug_name,
                 drug_class=inv_cfg.drug_class,
                 quantity_available=inv_cfg.batch_quantity,

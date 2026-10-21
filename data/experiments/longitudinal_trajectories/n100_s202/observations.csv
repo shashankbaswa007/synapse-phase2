@@ -1,0 +1,124 @@
+observation_id,patient_id,encounter_id,timestamp,observation_code,observation_name,value,unit,is_abnormal
+obs-05ea6b40,pat-ca7c56fb,enc-f6d23d63,2024-01-13T02:06:28,SBP,Systolic Blood Pressure,160.2,mmHg,False
+obs-8534e755,pat-c7a6474f,enc-761cb978,2024-01-10T05:01:50,SBP,Systolic Blood Pressure,151.0,mmHg,False
+obs-047f636a,pat-c63b3f79,enc-f567358d,2024-01-13T02:14:58,SBP,Systolic Blood Pressure,150.7,mmHg,False
+obs-83c9df7f,pat-bf24184b,enc-74b1b1a2,2024-01-11T23:13:37,HbA1c,Glycated Hemoglobin,7.5,%,False
+obs-03145b94,pat-3b9884b4,enc-f3fc2db7,2024-01-12T12:54:38,SBP,Systolic Blood Pressure,161.0,mmHg,False
+obs-825ed7a9,pat-b977f8f3,enc-7346a9cc,2024-01-10T18:54:24,SBP,Systolic Blood Pressure,145.4,mmHg,False
+obs-01a953be,pat-331655b0,enc-f29125e1,2024-01-14T03:36:02,SBP,Systolic Blood Pressure,156.3,mmHg,False
+obs-80f3cfd3,pat-b0f5c9ef,enc-71dba1f6,2024-01-08T21:32:05,SBP,Systolic Blood Pressure,150.7,mmHg,False
+obs-003e4be8,pat-af8ac219,enc-70709a20,2024-01-11T16:27:33,SBP,Systolic Blood Pressure,163.6,mmHg,False
+obs-7f88c7fd,pat-af8ac219,enc-70709a20,2024-01-14T17:30:12,HbA1c,Glycated Hemoglobin,9.1,%,False
+obs-fed34412,pat-a59d8b3f,enc-efbb1635,2024-01-13T04:37:05,SBP,Systolic Blood Pressure,165.9,mmHg,False
+obs-7e1dc027,pat-24e80754,enc-6f05924a,2024-01-13T23:39:17,SBP,Systolic Blood Pressure,150.8,mmHg,False
+obs-fd683c3c,pat-a4328369,enc-6d9a8a74,2024-01-12T22:59:14,SBP,Systolic Blood Pressure,145.0,mmHg,False
+obs-7cb2b851,pat-a4328369,enc-6d9a8a74,2024-01-08T05:20:41,HbA1c,Glycated Hemoglobin,9.4,%,False
+obs-fbfd3466,pat-a2c77b93,enc-ece50689,2024-01-09T14:53:09,SBP,Systolic Blood Pressure,163.5,mmHg,False
+obs-7b47b07b,pat-a15c73bd,enc-6c2f829e,2024-01-09T03:48:16,SBP,Systolic Blood Pressure,155.5,mmHg,False
+obs-fa922c90,pat-1f3be7fc,enc-eb79feb3,2024-01-12T23:53:45,SBP,Systolic Blood Pressure,167.9,mmHg,False
+obs-79dca8a5,pat-1c65d850,enc-6ac47ac8,2024-01-11T00:54:20,SBP,Systolic Blood Pressure,149.0,mmHg,False
+obs-f92724ba,pat-1afad07a,enc-695972f2,2024-01-13T09:20:48,SBP,Systolic Blood Pressure,147.6,mmHg,False
+obs-7871a0cf,pat-1afad07a,enc-695972f2,2024-01-08T01:48:27,HbA1c,Glycated Hemoglobin,8.0,%,False
+obs-f7bc1ce4,pat-9a454c8f,enc-e8a3ef07,2024-01-14T10:37:41,HbA1c,Glycated Hemoglobin,9.4,%,False
+obs-770698f9,pat-1824c0ce,enc-67ee6b1c,2024-01-11T07:42:06,SBP,Systolic Blood Pressure,147.5,mmHg,False
+obs-f651150e,pat-16b9b8f8,enc-e738e731,2024-01-10T00:39:18,HbA1c,Glycated Hemoglobin,8.5,%,False
+obs-759b9123,pat-8aabf65d,enc-66836346,2024-01-11T10:56:40,SBP,Systolic Blood Pressure,162.3,mmHg,False
+obs-f4e60d38,pat-088b6a9c,enc-e5cddf5b,2024-01-10T04:47:15,SBP,Systolic Blood Pressure,151.4,mmHg,False
+obs-7430894d,pat-bf24184b,enc-557f053e,2024-05-07T02:00:58,HbA1c,Glycated Hemoglobin,6.8,%,False
+obs-f37b0562,pat-af8ac219,enc-52a8f592,2024-05-12T14:18:00,HbA1c,Glycated Hemoglobin,7.4,%,False
+obs-72c58177,pat-a4328369,enc-4fd2e5e6,2024-05-08T15:26:12,HbA1c,Glycated Hemoglobin,7.2,%,False
+obs-f20ffd8c,pat-1afad07a,enc-cdb25a25,2024-05-12T12:57:50,HbA1c,Glycated Hemoglobin,6.5,%,False
+obs-715a79a1,pat-9a454c8f,enc-4cfcd63a,2024-05-10T10:10:17,HbA1c,Glycated Hemoglobin,6.7,%,False
+obs-f0a4f5b6,pat-16b9b8f8,enc-cc47524f,2024-05-08T13:15:50,HbA1c,Glycated Hemoglobin,8.2,%,False
+obs-6fef71cb,pat-905815b5,enc-4a26c68e,2024-08-02T03:08:26,HbA1c,Glycated Hemoglobin,7.5,%,False
+obs-ef39ede0,pat-ca7c56fb,enc-c97142a3,2024-08-07T06:44:57,SBP,Systolic Blood Pressure,156.2,mmHg,False
+obs-6e8469f5,pat-c7a6474f,enc-48bbbeb8,2024-08-08T04:59:20,SBP,Systolic Blood Pressure,139.9,mmHg,False
+obs-edcee60a,pat-c63b3f79,enc-c8063acd,2024-08-10T03:39:36,SBP,Systolic Blood Pressure,133.0,mmHg,False
+obs-6d19621f,pat-3b9884b4,enc-4750b6e2,2024-08-07T17:17:31,SBP,Systolic Blood Pressure,136.4,mmHg,False
+obs-ec63de34,pat-b977f8f3,enc-c69b32f7,2024-08-09T05:06:23,SBP,Systolic Blood Pressure,159.7,mmHg,False
+obs-6bae5a49,pat-331655b0,enc-45e5af0c,2024-08-08T04:13:07,SBP,Systolic Blood Pressure,136.2,mmHg,False
+obs-eaf8d65e,pat-b0f5c9ef,enc-c5302b21,2024-08-08T04:07:17,SBP,Systolic Blood Pressure,155.5,mmHg,False
+obs-6a435273,pat-af8ac219,enc-447aa736,2024-08-08T05:08:03,SBP,Systolic Blood Pressure,122.1,mmHg,False
+obs-e98dce88,pat-a59d8b3f,enc-c3c5234b,2024-08-08T18:57:10,SBP,Systolic Blood Pressure,148.4,mmHg,False
+obs-68d84a9d,pat-24e80754,enc-430f9f60,2024-08-05T02:45:36,SBP,Systolic Blood Pressure,140.8,mmHg,False
+obs-e822c6b2,pat-a4328369,enc-c25a1b75,2024-08-10T09:42:30,SBP,Systolic Blood Pressure,140.5,mmHg,False
+obs-676d42c7,pat-a2c77b93,enc-41a4978a,2024-08-10T15:31:02,SBP,Systolic Blood Pressure,147.9,mmHg,False
+obs-e6b7bedc,pat-a15c73bd,enc-c0ef139f,2024-08-10T14:21:31,SBP,Systolic Blood Pressure,139.2,mmHg,False
+obs-66023af1,pat-1f3be7fc,enc-40398fb4,2024-08-08T11:14:36,SBP,Systolic Blood Pressure,147.8,mmHg,False
+obs-e54cb706,pat-1c65d850,enc-bf840bc9,2024-08-05T15:13:09,SBP,Systolic Blood Pressure,162.6,mmHg,False
+obs-6497331b,pat-1afad07a,enc-3ece87de,2024-08-07T18:44:55,SBP,Systolic Blood Pressure,125.0,mmHg,False
+obs-e3e1af30,pat-1824c0ce,enc-be1903f3,2024-08-10T00:40:55,SBP,Systolic Blood Pressure,135.4,mmHg,False
+obs-632c2b45,pat-8aabf65d,enc-3d638008,2024-08-10T00:12:50,SBP,Systolic Blood Pressure,163.8,mmHg,False
+obs-e276a75a,pat-088b6a9c,enc-bcadfc1d,2024-08-08T00:46:21,SBP,Systolic Blood Pressure,129.9,mmHg,False
+obs-61c1236f,pat-bf24184b,enc-b42bcd19,2024-08-25T09:17:41,HbA1c,Glycated Hemoglobin,6.6,%,False
+obs-e10b9f84,pat-af8ac219,enc-3376492e,2024-08-24T17:55:55,HbA1c,Glycated Hemoglobin,9.0,%,False
+obs-60561b99,pat-1afad07a,enc-b2c0c543,2024-08-21T01:30:32,HbA1c,Glycated Hemoglobin,9.1,%,False
+obs-dfa097ae,pat-9a454c8f,enc-320b4158,2024-08-23T09:07:46,HbA1c,Glycated Hemoglobin,8.7,%,False
+obs-5eeb13c3,pat-16b9b8f8,enc-b155bd6d,2024-08-23T23:25:40,HbA1c,Glycated Hemoglobin,8.8,%,False
+obs-de358fd8,pat-a4328369,enc-30a03982,2024-08-27T07:25:47,HbA1c,Glycated Hemoglobin,7.3,%,False
+obs-5d800bed,pat-905815b5,enc-aba99e15,2024-11-26T23:30:38,HbA1c,Glycated Hemoglobin,8.7,%,False
+obs-dcca8802,pat-bf24184b,enc-2af41a2a,2024-12-04T16:30:46,HbA1c,Glycated Hemoglobin,7.7,%,False
+obs-5c150417,pat-af8ac219,enc-aa3e963f,2024-12-07T15:02:07,HbA1c,Glycated Hemoglobin,6.7,%,False
+obs-db5f802c,pat-1afad07a,enc-29891254,2024-12-04T03:50:47,HbA1c,Glycated Hemoglobin,7.2,%,False
+obs-5aa9fc41,pat-a4328369,enc-a8d38e69,2024-12-09T16:19:13,HbA1c,Glycated Hemoglobin,6.9,%,False
+obs-d9f47856,pat-9a454c8f,enc-281e0a7e,2024-12-09T05:06:30,HbA1c,Glycated Hemoglobin,7.0,%,False
+obs-593ef46b,pat-16b9b8f8,enc-a7688693,2024-12-10T19:40:08,HbA1c,Glycated Hemoglobin,6.8,%,False
+obs-d8897080,pat-3b9884b4,enc-26b302a8,2025-02-23T16:16:02,SBP,Systolic Blood Pressure,138.2,mmHg,False
+obs-57d3ec95,pat-b977f8f3,enc-a5fd7ebd,2025-02-19T08:48:56,SBP,Systolic Blood Pressure,164.6,mmHg,False
+obs-d71e68aa,pat-b0f5c9ef,enc-2547fad2,2025-02-19T02:32:07,SBP,Systolic Blood Pressure,131.0,mmHg,False
+obs-5668e4bf,pat-a59d8b3f,enc-a49276e7,2025-02-20T00:25:54,SBP,Systolic Blood Pressure,124.7,mmHg,False
+obs-d5b360d4,pat-24e80754,enc-23dcf2fc,2025-02-23T19:19:21,SBP,Systolic Blood Pressure,155.5,mmHg,False
+obs-54fddce9,pat-a4328369,enc-a3276f11,2025-02-18T02:13:28,SBP,Systolic Blood Pressure,149.7,mmHg,False
+obs-d44858fe,pat-1824c0ce,enc-2271eb26,2025-02-17T09:09:58,SBP,Systolic Blood Pressure,157.6,mmHg,False
+obs-5392d513,pat-ca7c56fb,enc-2106e350,2025-02-26T05:45:14,SBP,Systolic Blood Pressure,130.9,mmHg,False
+obs-d2dd5128,pat-c7a6474f,enc-1f9bdb7a,2025-02-26T02:05:49,SBP,Systolic Blood Pressure,134.6,mmHg,False
+obs-5227cd3d,pat-c63b3f79,enc-9ee6578f,2025-02-25T04:07:22,SBP,Systolic Blood Pressure,143.8,mmHg,False
+obs-d1724952,pat-331655b0,enc-9d7b4fb9,2025-03-02T22:45:20,SBP,Systolic Blood Pressure,126.2,mmHg,False
+obs-50bcc567,pat-af8ac219,enc-1b5ac3f8,2025-02-28T05:04:00,SBP,Systolic Blood Pressure,140.3,mmHg,False
+obs-d007417c,pat-a2c77b93,enc-19efbc22,2025-02-27T21:56:10,SBP,Systolic Blood Pressure,134.3,mmHg,False
+obs-4f51bd91,pat-a15c73bd,enc-993a3837,2025-02-28T02:35:41,SBP,Systolic Blood Pressure,127.9,mmHg,False
+obs-ce9c39a6,pat-1f3be7fc,enc-97cf3061,2025-02-25T06:28:39,SBP,Systolic Blood Pressure,128.6,mmHg,False
+obs-4de6b5bb,pat-1c65d850,enc-1719ac76,2025-03-02T02:52:22,SBP,Systolic Blood Pressure,152.1,mmHg,False
+obs-cd3131d0,pat-1afad07a,enc-9664288b,2025-03-01T20:33:31,SBP,Systolic Blood Pressure,160.4,mmHg,False
+obs-4c7bade5,pat-8aabf65d,enc-938e18df,2025-02-27T15:02:21,SBP,Systolic Blood Pressure,137.9,mmHg,False
+obs-cbc629fa,pat-088b6a9c,enc-116d8d1e,2025-02-24T22:43:13,SBP,Systolic Blood Pressure,138.3,mmHg,False
+obs-4b10a60f,pat-1afad07a,enc-10028548,2025-03-18T05:00:19,HbA1c,Glycated Hemoglobin,6.7,%,False
+obs-ca5b2224,pat-905815b5,enc-8f4d015d,2025-03-23T00:59:08,HbA1c,Glycated Hemoglobin,7.3,%,False
+obs-49a59e39,pat-bf24184b,enc-0e977d72,2025-03-26T20:43:23,HbA1c,Glycated Hemoglobin,6.5,%,False
+obs-c8f01a4e,pat-af8ac219,enc-8de1f987,2025-03-30T18:56:55,HbA1c,Glycated Hemoglobin,6.7,%,False
+obs-483a9663,pat-a4328369,enc-0d2c759c,2025-03-28T01:55:36,HbA1c,Glycated Hemoglobin,7.1,%,False
+obs-c7851278,pat-9a454c8f,enc-8c76f1b1,2025-03-29T08:03:21,HbA1c,Glycated Hemoglobin,6.8,%,False
+obs-46cf8e8d,pat-16b9b8f8,enc-0bc16dc6,2025-03-29T02:03:06,HbA1c,Glycated Hemoglobin,8.2,%,False
+obs-c61a0aa2,pat-1afad07a,enc-07805644,2025-07-03T16:47:48,HbA1c,Glycated Hemoglobin,8.1,%,False
+obs-456486b7,pat-905815b5,enc-86cad259,2025-07-03T18:45:05,HbA1c,Glycated Hemoglobin,8.7,%,False
+obs-c4af02cc,pat-bf24184b,enc-06154e6e,2025-07-07T00:55:07,HbA1c,Glycated Hemoglobin,7.3,%,False
+obs-43f97ee1,pat-af8ac219,enc-855fca83,2025-07-11T20:31:40,HbA1c,Glycated Hemoglobin,7.4,%,False
+obs-c343faf6,pat-a4328369,enc-04aa4698,2025-07-11T05:03:12,HbA1c,Glycated Hemoglobin,8.3,%,False
+obs-428e770b,pat-9a454c8f,enc-83f4c2ad,2025-07-09T02:56:33,HbA1c,Glycated Hemoglobin,6.7,%,False
+obs-c1d8f320,pat-16b9b8f8,enc-033f3ec2,2025-07-07T02:28:12,HbA1c,Glycated Hemoglobin,7.7,%,False
+obs-41236f35,pat-b977f8f3,enc-8289bad7,2025-09-07T11:20:01,SBP,Systolic Blood Pressure,160.7,mmHg,False
+obs-c06deb4a,pat-b0f5c9ef,enc-01d436ec,2025-09-06T06:43:44,SBP,Systolic Blood Pressure,129.5,mmHg,False
+obs-3fb8675f,pat-a59d8b3f,enc-811eb301,2025-09-06T16:26:44,SBP,Systolic Blood Pressure,128.8,mmHg,False
+obs-bf02e374,pat-ca7c56fb,enc-00692f16,2025-09-09T01:24:42,SBP,Systolic Blood Pressure,123.3,mmHg,False
+obs-3e4d5f89,pat-c7a6474f,enc-7fb3ab2b,2025-09-13T02:07:00,SBP,Systolic Blood Pressure,137.7,mmHg,False
+obs-bd97db9e,pat-c63b3f79,enc-fefe2740,2025-09-11T20:33:55,SBP,Systolic Blood Pressure,136.3,mmHg,False
+obs-3ce257b3,pat-3b9884b4,enc-7e48a355,2025-09-09T16:37:49,SBP,Systolic Blood Pressure,121.6,mmHg,False
+obs-bc2cd3c8,pat-331655b0,enc-fd931f6a,2025-09-12T00:50:35,SBP,Systolic Blood Pressure,154.4,mmHg,False
+obs-3b774fdd,pat-af8ac219,enc-7cdd9b7f,2025-09-12T02:35:57,SBP,Systolic Blood Pressure,155.6,mmHg,False
+obs-bac1cbf2,pat-24e80754,enc-7b7293a9,2025-09-10T03:32:33,SBP,Systolic Blood Pressure,142.5,mmHg,False
+obs-3a0c4807,pat-a4328369,enc-fabd0fbe,2025-09-14T09:28:58,SBP,Systolic Blood Pressure,160.9,mmHg,False
+obs-b956c41c,pat-a2c77b93,enc-7a078bd3,2025-09-14T07:31:47,SBP,Systolic Blood Pressure,122.5,mmHg,False
+obs-38a14031,pat-a15c73bd,enc-f95207e8,2025-09-09T12:10:47,SBP,Systolic Blood Pressure,127.9,mmHg,False
+obs-b7ebbc46,pat-1f3be7fc,enc-f7e70012,2025-09-13T00:40:09,SBP,Systolic Blood Pressure,141.8,mmHg,False
+obs-3736385b,pat-1c65d850,enc-77317c27,2025-09-09T19:43:45,SBP,Systolic Blood Pressure,145.0,mmHg,False
+obs-b680b470,pat-1afad07a,enc-f67bf83c,2025-09-13T12:58:05,SBP,Systolic Blood Pressure,134.2,mmHg,False
+obs-35cb3085,pat-1824c0ce,enc-75c67451,2025-09-11T19:50:00,SBP,Systolic Blood Pressure,131.2,mmHg,False
+obs-b515ac9a,pat-8aabf65d,enc-f3a5e890,2025-09-14T01:04:49,SBP,Systolic Blood Pressure,157.2,mmHg,False
+obs-346028af,pat-088b6a9c,enc-72f064a5,2025-09-11T06:59:02,SBP,Systolic Blood Pressure,160.4,mmHg,False
+obs-b3aaa4c4,pat-1afad07a,enc-f23ae0ba,2025-10-18T21:35:48,HbA1c,Glycated Hemoglobin,8.1,%,False
+obs-32f520d9,pat-905815b5,enc-71855ccf,2025-10-18T10:25:46,HbA1c,Glycated Hemoglobin,8.5,%,False
+obs-b23f9cee,pat-bf24184b,enc-f0cfd8e4,2025-10-26T05:22:49,HbA1c,Glycated Hemoglobin,7.1,%,False
+obs-318a1903,pat-af8ac219,enc-701a54f9,2025-10-22T05:38:33,HbA1c,Glycated Hemoglobin,6.6,%,False
+obs-b0d49518,pat-a4328369,enc-ef64d10e,2025-10-21T11:56:03,HbA1c,Glycated Hemoglobin,7.8,%,False
+obs-301f112d,pat-9a454c8f,enc-6eaf4d23,2025-10-24T00:05:47,HbA1c,Glycated Hemoglobin,7.1,%,False
+obs-af698d42,pat-16b9b8f8,enc-edf9c938,2025-10-23T00:41:02,HbA1c,Glycated Hemoglobin,7.6,%,False

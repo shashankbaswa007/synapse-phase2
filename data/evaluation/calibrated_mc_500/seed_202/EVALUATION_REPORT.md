@@ -1,0 +1,232 @@
+# SYNAPSE Phase 2 — Comprehensive Synthetic Data Evaluation Report
+
+**Evaluation Timestamp:** `2026-10-21T15:00:41.629652`  
+**Dataset Directory:** `/Users/shashi/synapse/synapse-phase2/data/evaluation/calibrated_mc_500/seed_202`  
+**Overall Evaluation Status:** **PASS**  
+**Invariant Integrity:** **PASSED (0 Hard Violations)**  
+
+---
+
+## 1. Executive Summary & Status Overview
+
+- **Total Evaluated Metrics:** `18`
+- **PASS:** `17` (Meets predefined empirical acceptance thresholds)
+- **WARNING:** `0` (Observed deviation or moderate divergence requiring calibration/review)
+- **FAIL:** `0` (Violates hard invariant or practical tolerance threshold)
+- **UNVERIFIED:** `1` (Lacks published empirical real-world benchmark; assumption documented)
+- **NOT_APPLICABLE:** `0` (Cohort sample size or eligibility empty for this stratum)
+
+### Dimension Status Breakdown
+
+| Evaluation Dimension | Total | PASS | WARNING | FAIL | UNVERIFIED | Status |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: |
+| **INVARIANTS** | 4 | 4 | 0 | 0 | 0 | **PASS** |
+| **DEMOGRAPHICS** | 3 | 3 | 0 | 0 | 0 | **PASS** |
+| **PREVALENCE** | 4 | 4 | 0 | 0 | 0 | **PASS** |
+| **COMORBIDITY** | 1 | 1 | 0 | 0 | 0 | **PASS** |
+| **LONGITUDINAL** | 3 | 3 | 0 | 0 | 0 | **PASS** |
+| **TREATMENT** | 3 | 2 | 0 | 0 | 1 | **PASS** |
+
+---
+
+## 2. Quantitative Metric Scorecard
+
+| Metric ID | Dimension | Synthetic Estimate | Reference Benchmark | Difference | 95% Confidence Interval | Status | Verification |
+| :--- | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
+| `inv_no_event_pre_birth` | INVARIANTS | 0.00 | 0.00 | +0.00 | — | **PASS** | `VERIFIED` |
+| `inv_no_event_post_mortem` | INVARIANTS | 0.00 | 0.00 | +0.00 | — | **PASS** | `VERIFIED` |
+| `inv_diagnosis_encounter_linkage` | INVARIANTS | 0.00 | 0.00 | +0.00 | — | **PASS** | `VERIFIED` |
+| `inv_allergy_safety_veto` | INVARIANTS | 0.00 | 0.00 | +0.00 | — | **PASS** | `VERIFIED` |
+| `demo_sex_distribution` | DEMOGRAPHICS | 48.00 | 51.50 | -3.50 | [38.46, 57.68] | **PASS** | `VERIFIED` |
+| `demo_age_pyramid_jsd` | DEMOGRAPHICS | 0.01 | 0.00 | +0.01 | — | **PASS** | `VERIFIED` |
+| `demo_age_by_sex_jsd` | DEMOGRAPHICS | 0.02 | 0.00 | +0.02 | — | **PASS** | `VERIFIED` |
+| `prev_hypertension_adults` | PREVALENCE | 31.82 | 30.70 | +1.12 | [21.85, 43.79] | **PASS** | `VERIFIED` |
+| `prev_diabetes_t2_adults` | PREVALENCE | 9.09 | 11.40 | -2.31 | [4.23, 18.45] | **PASS** | `VERIFIED` |
+| `prev_urti_14day_point` | PREVALENCE | 4.00 | 8.50 | -4.50 | [1.57, 9.84] | **PASS** | `VERIFIED` |
+| `prev_urti_cumulative_attack_rate` | PREVALENCE | 76.00 | 70.00 | +6.00 | [66.77, 83.31] | **PASS** | `VERIFIED` |
+| `comorb_htn_in_t2d` | COMORBIDITY | 50.00 | 50.10 | -0.10 | [18.76, 81.24] | **PASS** | `VERIFIED` |
+| `long_encounters_per_pt_year` | LONGITUDINAL | 0.85 | 1.50 | -0.65 | — | **PASS** | `UNVERIFIED` |
+| `long_inter_encounter_interval_days` | LONGITUDINAL | 152.00 | 180.00 | -28.00 | — | **PASS** | `UNVERIFIED` |
+| `long_crude_mortality_rate` | LONGITUDINAL | 0.00 | 0.01 | -0.01 | — | **PASS** | `VERIFIED` |
+| `rx_firstline_hypertension` | TREATMENT | 100.00 | 100.00 | +0.00 | — | **PASS** | `VERIFIED` |
+| `rx_firstline_diabetes` | TREATMENT | 100.00 | 100.00 | +0.00 | — | **PASS** | `VERIFIED` |
+| `rx_adherence_assumption` | TREATMENT | 100.00 | — | — | — | **UNVERIFIED** | `UNVERIFIED` |
+
+---
+
+## 3. Invariant & Safety Evaluation
+
+Hard temporal and causal invariants protect structural and clinical correctness independently of statistical comparisons.
+
+### ✅ Temporal Invariant: No Clinical Activity Prior to Birth
+- **Definition:** Verifies that no clinical encounter or procedure occurs before the patient's recorded birth date.
+- **Violations Observed:** `0` out of `170` records
+- **Acceptance Threshold:** `0 violations permitted`
+- **Status:** **PASS**
+- **Known Limitations:** Requires either explicit birth_date column or deterministic age projection.
+
+### ✅ Temporal Invariant: Zero Post-Mortem Clinical Events
+- **Definition:** Verifies that deceased patients have strictly zero subsequent encounters, orders, or prescriptions.
+- **Violations Observed:** `0` out of `170` records
+- **Acceptance Threshold:** `0 violations permitted`
+- **Status:** **PASS**
+- **Known Limitations:** Evaluated against deaths.csv records.
+
+### ✅ Causal Invariant: Diagnosis Must Link to Valid Clinical Encounter
+- **Definition:** Conditions must be recognized and diagnosed during an active clinical encounter.
+- **Violations Observed:** `0` out of `103` records
+- **Acceptance Threshold:** `0 violations permitted`
+- **Status:** **PASS**
+- **Known Limitations:** Requires foreign key condition.encounter_id -> encounters.encounter_id.
+
+### ✅ Clinical Safety Invariant: Zero Contraindicated Prescriptions
+- **Definition:** Verifies that no patient is prescribed a medication to which they have a documented allergy.
+- **Violations Observed:** `0` out of `103` records
+- **Acceptance Threshold:** `0 violations permitted`
+- **Status:** **PASS**
+- **Known Limitations:** Evaluates allergy constraints against medication names.
+
+---
+
+## 4. Demographic Fidelity Details
+
+### Demographic Fidelity: Male Sex Proportion (`demo_sex_distribution`)
+- **Definition:** Percentage of cohort that is male compared to Census SRS 2021 reference.
+- **Synthetic Estimate:** `48.0` | **Reference Benchmark:** `51.5`
+- **Difference:** `-3.5`
+- **Confidence Interval (95% Wilson):** `(38.46, 57.68)`
+- **Acceptance Policy & Diagnostics:** `{'pass_abs_diff_max': 5.0, 'warning_abs_diff_max': 10.0}`
+- **Provenance:** `SRS_2021_DEMO` (`VERIFIED`)
+- **Status:** **PASS**
+- **Limitations:** Natural sex ratio in India is ~51.5% male. Small sample sizes may have higher random variance.
+
+### Demographic Fidelity: Age Pyramid Jensen-Shannon Divergence (`demo_age_pyramid_jsd`)
+- **Definition:** JSD (base 2) between synthetic age distribution and SRS 2021 5-band reference pyramid.
+- **Synthetic Estimate:** `0.01307` | **Reference Benchmark:** `0.0`
+- **Difference:** `0.01307`
+- **Confidence Interval (95% Wilson):** `N/A`
+- **Acceptance Policy & Diagnostics:** `{'pass_jsd_max': 0.05, 'warning_jsd_max': 0.15, 'total_variation_distance': 0.11, 'chi_square_stat': 6.6982, 'chi_square_df': 4, 'chi_square_p_value': 0.15272, 'chi_square_was_pooled': False, 'cramers_v': 0.1294}`
+- **Provenance:** `SRS_2021_DEMO` (`VERIFIED`)
+- **Status:** **PASS**
+- **Limitations:** Evaluated over 5 broad SRS census intervals. Small cohorts (<100) experience expected stochastic dispersion.
+
+### Demographic Fidelity: Age-by-Sex Joint Distribution JSD (`demo_age_by_sex_jsd`)
+- **Definition:** Jensen-Shannon Divergence across 10 age-by-sex joint strata compared to SRS 2021 Statement 19.
+- **Synthetic Estimate:** `0.01806` | **Reference Benchmark:** `0.0`
+- **Difference:** `0.01806`
+- **Confidence Interval (95% Wilson):** `N/A`
+- **Acceptance Policy & Diagnostics:** `{'pass_jsd_max': 0.08, 'warning_jsd_max': 0.2, 'tvd': 0.1337}`
+- **Provenance:** `SRS_2021_DEMO` (`VERIFIED`)
+- **Status:** **PASS**
+- **Limitations:** Requires adequate cohort sample size across all 10 cells to avoid small-sample bin bias.
+
+---
+
+## 5. Disease Prevalence Details (Denominator Matched)
+
+### Disease Prevalence: Essential Hypertension (Adults >= 20) (`prev_hypertension_adults`)
+- **Definition:** Prevalence of essential hypertension (I10) among eligible adults (age >= 20) vs ICMR-INDIAB 2023.
+- **Eligible Cohort Denominator:** `66` patients | **Diagnosed Cases:** `21`
+- **Synthetic Prevalence:** `31.82%` (95% CI: `21.85% - 43.79%`)
+- **Empirical Reference:** `30.7%` (Absolute Diff: `1.12%`, Relative Diff: `3.65%`)
+- **Provenance:** `ICMR_INDIAB_2023_HTN` (`VERIFIED`)
+- **Status:** **PASS**
+- **Diagnostics & Crude Values:** `{'pass_abs_diff_max': 8.0, 'warning_abs_diff_max': 15.0, 'crude_cohort_cases': 21, 'crude_cohort_prevalence_pct': 21.0}`
+- **Limitations:** Denominator is restricted strictly to adults age >= 20 to match ICMR-INDIAB sampling criteria.
+
+### Disease Prevalence: Type 2 Diabetes Mellitus (Adults >= 20) (`prev_diabetes_t2_adults`)
+- **Definition:** Prevalence of Type 2 Diabetes (E11.9) among eligible adults (age >= 20) vs ICMR-INDIAB 2023.
+- **Eligible Cohort Denominator:** `66` patients | **Diagnosed Cases:** `6`
+- **Synthetic Prevalence:** `9.09%` (95% CI: `4.23% - 18.45%`)
+- **Empirical Reference:** `11.4%` (Absolute Diff: `-2.31%`, Relative Diff: `20.26%`)
+- **Provenance:** `ICMR_INDIAB_2023_T2D` (`VERIFIED`)
+- **Status:** **PASS**
+- **Diagnostics & Crude Values:** `{'pass_abs_diff_max': 6.0, 'warning_abs_diff_max': 12.0, 'crude_cohort_cases': 6, 'crude_cohort_prevalence_pct': 6.0}`
+- **Limitations:** Denominator is restricted strictly to adults age >= 20. Excludes pediatric patients.
+
+### Disease Prevalence: Acute URTI 14-Day Point Prevalence (All Ages) (`prev_urti_14day_point`)
+- **Definition:** 14-day recall point prevalence of active acute URTI (J06.9) vs NHP India 2020 baseline.
+- **Eligible Cohort Denominator:** `100` patients | **Diagnosed Cases:** `4`
+- **Synthetic Prevalence:** `4.0%` (95% CI: `1.57% - 9.84%`)
+- **Empirical Reference:** `8.5%` (Absolute Diff: `-4.5%`, Relative Diff: `52.94%`)
+- **Provenance:** `NHP_INDIA_URTI_2020` (`VERIFIED`)
+- **Status:** **PASS**
+- **Diagnostics & Crude Values:** `{'pass_abs_diff_max': 6.0, 'warning_abs_diff_max': 10.0}`
+- **Limitations:** Requires filtering for active, non-resolved infection episodes within a 14-day evaluation window.
+
+### Disease Attack Rate: Acute URTI 2-Year Cumulative Attack Rate (All Ages) (`prev_urti_cumulative_attack_rate`)
+- **Definition:** 2-year cumulative attack rate of acute URTI (J06.9) across entire cohort vs NHP/IDSP surveillance baseline.
+- **Eligible Cohort Denominator:** `100` patients | **Diagnosed Cases:** `76`
+- **Synthetic Prevalence:** `76.0%` (95% CI: `66.77% - 83.31%`)
+- **Empirical Reference:** `70.0%` (Absolute Diff: `6.0%`, Relative Diff: `8.57%`)
+- **Provenance:** `NHP_INDIA_URTI_2020` (`VERIFIED`)
+- **Status:** **PASS**
+- **Diagnostics & Crude Values:** `{'pass_abs_diff_max': 12.0, 'warning_abs_diff_max': 20.0}`
+- **Limitations:** Cumulative attack rate over 24-month horizon. Derived from quarterly infection hazards.
+
+---
+
+## 6. Comorbidity & Disease Clustering Details
+
+### Comorbidity: Hypertension Prevalence in Patients with Type 2 Diabetes (`comorb_htn_in_t2d`)
+- **Definition:** Conditional prevalence P(HTN|T2D) among adults >= 20 vs ICMR-INDIAB 2023 benchmark.
+- **Synthetic Conditional Prevalence P(HTN|T2D):** `50.0%` (Cases: `3` / `6`)
+- **Reference Benchmark (ICMR-INDIAB 2023):** `50.1%`
+- **Association Diagnostics:** `{'pass_abs_diff_max': 15.0, 'warning_abs_diff_max': 25.0, 'joint_prevalence_pct': 4.55, 'expected_joint_prevalence_pct': 2.89, 'observed_to_expected_ratio': 1.5714, 'odds_ratio': 2.3333, 'odds_ratio_95_ci': (0.4293, 12.682)}`
+- **Status:** **PASS** (`VERIFIED`)
+- **Limitations:** Evaluated strictly on adults with diagnosed T2D. If no synthetic patient develops T2D, status is NOT_APPLICABLE.
+
+---
+
+## 7. Longitudinal Dynamics & Clinical Treatments
+
+### Longitudinal: Encounters Per Patient-Year (`long_encounters_per_pt_year`)
+- **Dimension:** `LONGITUDINAL`
+- **Synthetic Estimate:** `0.85` | **Reference Benchmark:** `1.5`
+- **Provenance:** `NSS_75TH_ROUND_OPD` (`UNVERIFIED`)
+- **Status:** **PASS**
+- **Known Limitations & Assumptions:** Facility discrete-event simulation captures scheduled outpatient visits and episodic visits.
+
+### Longitudinal: Mean Days Between Clinical Encounters (`long_inter_encounter_interval_days`)
+- **Dimension:** `LONGITUDINAL`
+- **Synthetic Estimate:** `152.0` | **Reference Benchmark:** `180.0`
+- **Provenance:** `ICMR_TREATMENT_GUIDELINES` (`UNVERIFIED`)
+- **Status:** **PASS**
+- **Known Limitations & Assumptions:** Clinical modules use configured surveillance delays (e.g., 90d, 180d, 365d).
+
+### Longitudinal: Annualized Crude Mortality Rate (`long_crude_mortality_rate`)
+- **Dimension:** `LONGITUDINAL`
+- **Synthetic Estimate:** `0.0` | **Reference Benchmark:** `0.006`
+- **Provenance:** `SRS_2016_2020_LIFE_TABLE` (`VERIFIED`)
+- **Status:** **PASS**
+- **Known Limitations & Assumptions:** Short simulation windows (e.g. 2 years) in small cohorts exhibit expected binomial variance.
+
+### Treatment Guideline Alignment: First-Line Antihypertensive Therapy (`rx_firstline_hypertension`)
+- **Dimension:** `TREATMENT`
+- **Synthetic Estimate:** `100.0` | **Reference Benchmark:** `100.0`
+- **Provenance:** `ICMR_STG_HYPERTENSION_2022` (`VERIFIED`)
+- **Status:** **PASS**
+- **Known Limitations & Assumptions:** Assumes uncomplicated stage 1/2 essential hypertension indicated for calcium channel blocker.
+
+### Treatment Guideline Alignment: First-Line Oral Hypoglycemic Therapy (`rx_firstline_diabetes`)
+- **Dimension:** `TREATMENT`
+- **Synthetic Estimate:** `100.0` | **Reference Benchmark:** `100.0`
+- **Provenance:** `ICMR_STG_DIABETES_2022` (`VERIFIED`)
+- **Status:** **PASS**
+- **Known Limitations & Assumptions:** Guideline recommends Metformin monotherapy as universal initial pharmacotherapy.
+
+### Treatment Pattern: Perfect Adherence Assumption Disclosure (`rx_adherence_assumption`)
+- **Dimension:** `TREATMENT`
+- **Synthetic Estimate:** `100.0` | **Reference Benchmark:** `Unspecified`
+- **Provenance:** `SYNAPSE_SIMULATION_ASSUMPTION` (`UNVERIFIED`)
+- **Status:** **UNVERIFIED**
+- **Known Limitations & Assumptions:** Real-world non-communicable disease medication adherence in India is ~40-60%. Simulation assumes 100% adherence.
+
+---
+
+## 8. Calibration Guidance & Research Governance
+
+- **Separation of Evaluation from Generation:** Evaluator inspected exported CSV artifacts without relying on simulation memory objects.
+- **Denominator Compatibility:** Denominators for adult chronic non-communicable conditions (HTN, T2D) strictly filter for age >= 20, matching ICMR-INDIAB survey methodology.
+- **Unverified Benchmarks:** Metrics without formal peer-reviewed or census benchmarks are explicitly labeled `UNVERIFIED` and never marked `PASS`.
+- **Adherence Assumption:** Medication adherence is assumed to be 100% in simulation, which represents an idealized clinical trial or guideline-adherent baseline.

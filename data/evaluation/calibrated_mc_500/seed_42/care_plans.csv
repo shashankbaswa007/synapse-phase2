@@ -1,0 +1,3 @@
+care_plan_id,patient_id,encounter_id,plan_code,plan_name,start_date,end_date,status
+cp-a5569622,pat-9cfd4d76,enc-62b41a14,CP-DIAB-01,Diabetic Lifestyle and Dietary Management Protocol,2024-01-16T09:50:10,,Active
+cp-24a11237,pat-1530a25d,enc-df28867d,CP-DIAB-01,Diabetic Lifestyle and Dietary Management Protocol,2024-01-19T19:32:36,,Active

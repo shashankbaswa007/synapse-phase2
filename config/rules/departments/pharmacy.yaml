@@ -7,7 +7,7 @@
   priority: 90
   precedence_level: 80
   version: "1.0.0"
-  scenarios: ["SCEN-V1-03"]
+  scenarios: ["SCEN-V1-03", "*"]
   departments: ["pharmacy", "clinical"]
   entities_affected: ["pharmacy.prescriptions", "patient.allergies"]
   preconditions:

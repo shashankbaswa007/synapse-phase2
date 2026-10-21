@@ -1,0 +1,422 @@
+{
+  "cohort_size": 100,
+  "seed_count": 5,
+  "seeds": [
+    42,
+    101,
+    202,
+    303,
+    404
+  ],
+  "timestamp": "2026-10-21T14:19:59.922732",
+  "metrics_summary": {
+    "inv_no_event_pre_birth": {
+      "metric_name": "Temporal Invariant: No Clinical Activity Prior to Birth",
+      "seeds_evaluated": [
+        42,
+        101,
+        202,
+        303,
+        404
+      ],
+      "values": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "mean": 0.0,
+      "std_dev": 0.0,
+      "mc_standard_error": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "reference_estimate": 0.0,
+      "estimated_bias": 0.0
+    },
+    "inv_no_event_post_mortem": {
+      "metric_name": "Temporal Invariant: Zero Post-Mortem Clinical Events",
+      "seeds_evaluated": [
+        42,
+        101,
+        202,
+        303,
+        404
+      ],
+      "values": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "mean": 0.0,
+      "std_dev": 0.0,
+      "mc_standard_error": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "reference_estimate": 0.0,
+      "estimated_bias": 0.0
+    },
+    "inv_diagnosis_encounter_linkage": {
+      "metric_name": "Causal Invariant: Diagnosis Must Link to Valid Clinical Encounter",
+      "seeds_evaluated": [
+        42,
+        101,
+        202,
+        303,
+        404
+      ],
+      "values": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "mean": 0.0,
+      "std_dev": 0.0,
+      "mc_standard_error": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "reference_estimate": 0.0,
+      "estimated_bias": 0.0
+    },
+    "inv_allergy_safety_veto": {
+      "metric_name": "Clinical Safety Invariant: Zero Contraindicated Prescriptions",
+      "seeds_evaluated": [
+        42,
+        101,
+        202,
+        303,
+        404
+      ],
+      "values": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "mean": 0.0,
+      "std_dev": 0.0,
+      "mc_standard_error": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "reference_estimate": 0.0,
+      "estimated_bias": 0.0
+    },
+    "demo_sex_distribution": {
+      "metric_name": "Demographic Fidelity: Male Sex Proportion",
+      "seeds_evaluated": [
+        42,
+        101,
+        202,
+        303,
+        404
+      ],
+      "values": [
+        53.0,
+        54.0,
+        55.0,
+        48.0,
+        57.0
+      ],
+      "mean": 53.4,
+      "std_dev": 3.3615,
+      "mc_standard_error": 1.5033,
+      "min": 48.0,
+      "max": 57.0,
+      "reference_estimate": 51.5,
+      "estimated_bias": 1.9
+    },
+    "demo_age_pyramid_jsd": {
+      "metric_name": "Demographic Fidelity: Age Pyramid Jensen-Shannon Divergence",
+      "seeds_evaluated": [
+        42,
+        101,
+        202,
+        303,
+        404
+      ],
+      "values": [
+        0.0081,
+        0.0053,
+        0.0074,
+        0.0034,
+        0.0092
+      ],
+      "mean": 0.0067,
+      "std_dev": 0.0023,
+      "mc_standard_error": 0.001,
+      "min": 0.0034,
+      "max": 0.0092,
+      "reference_estimate": 0.0,
+      "estimated_bias": 0.0067
+    },
+    "demo_age_by_sex_jsd": {
+      "metric_name": "Demographic Fidelity: Age-by-Sex Joint Distribution JSD",
+      "seeds_evaluated": [
+        42,
+        101,
+        202,
+        303,
+        404
+      ],
+      "values": [
+        0.0173,
+        0.0198,
+        0.0131,
+        0.0097,
+        0.0169
+      ],
+      "mean": 0.0154,
+      "std_dev": 0.004,
+      "mc_standard_error": 0.0018,
+      "min": 0.0097,
+      "max": 0.0198,
+      "reference_estimate": 0.0,
+      "estimated_bias": 0.0154
+    },
+    "prev_hypertension_adults": {
+      "metric_name": "Disease Prevalence: Essential Hypertension (Adults >= 20)",
+      "seeds_evaluated": [
+        42,
+        101,
+        202,
+        303,
+        404
+      ],
+      "values": [
+        40.98,
+        40.91,
+        45.59,
+        47.83,
+        39.47
+      ],
+      "mean": 42.956,
+      "std_dev": 3.5685,
+      "mc_standard_error": 1.5959,
+      "min": 39.47,
+      "max": 47.83,
+      "reference_estimate": 30.7,
+      "estimated_bias": 12.256
+    },
+    "prev_diabetes_t2_adults": {
+      "metric_name": "Disease Prevalence: Type 2 Diabetes Mellitus (Adults >= 20)",
+      "seeds_evaluated": [
+        42,
+        101,
+        202,
+        303,
+        404
+      ],
+      "values": [
+        27.87,
+        31.82,
+        19.12,
+        23.19,
+        25.0
+      ],
+      "mean": 25.4,
+      "std_dev": 4.7906,
+      "mc_standard_error": 2.1424,
+      "min": 19.12,
+      "max": 31.82,
+      "reference_estimate": 11.4,
+      "estimated_bias": 14.0
+    },
+    "prev_urti_all_ages": {
+      "metric_name": "Disease Prevalence: Acute Upper Respiratory Tract Infection (All Ages)",
+      "seeds_evaluated": [
+        42,
+        101,
+        202,
+        303,
+        404
+      ],
+      "values": [
+        73.0,
+        75.0,
+        78.0,
+        73.0,
+        71.0
+      ],
+      "mean": 74.0,
+      "std_dev": 2.6458,
+      "mc_standard_error": 1.1832,
+      "min": 71.0,
+      "max": 78.0,
+      "reference_estimate": 8.5,
+      "estimated_bias": 65.5
+    },
+    "comorb_htn_in_t2d": {
+      "metric_name": "Comorbidity: Hypertension Prevalence in Patients with Type 2 Diabetes",
+      "seeds_evaluated": [
+        42,
+        101,
+        202,
+        303,
+        404
+      ],
+      "values": [
+        52.94,
+        52.38,
+        46.15,
+        62.5,
+        31.58
+      ],
+      "mean": 49.11,
+      "std_dev": 11.4096,
+      "mc_standard_error": 5.1025,
+      "min": 31.58,
+      "max": 62.5,
+      "reference_estimate": 50.1,
+      "estimated_bias": -0.99
+    },
+    "long_encounters_per_pt_year": {
+      "metric_name": "Longitudinal: Encounters Per Patient-Year",
+      "seeds_evaluated": [
+        42,
+        101,
+        202,
+        303,
+        404
+      ],
+      "values": [
+        0.93,
+        1.05,
+        0.96,
+        0.99,
+        1.02
+      ],
+      "mean": 0.99,
+      "std_dev": 0.0474,
+      "mc_standard_error": 0.0212,
+      "min": 0.93,
+      "max": 1.05,
+      "reference_estimate": 1.5,
+      "estimated_bias": -0.51
+    },
+    "long_inter_encounter_interval_days": {
+      "metric_name": "Longitudinal: Mean Days Between Clinical Encounters",
+      "seeds_evaluated": [
+        42,
+        101,
+        202,
+        303,
+        404
+      ],
+      "values": [
+        144.5,
+        140.7,
+        149.7,
+        159.3,
+        141.5
+      ],
+      "mean": 147.14,
+      "std_dev": 7.6595,
+      "mc_standard_error": 3.4254,
+      "min": 140.7,
+      "max": 159.3,
+      "reference_estimate": 180.0,
+      "estimated_bias": -32.86
+    },
+    "long_crude_mortality_rate": {
+      "metric_name": "Longitudinal: Annualized Crude Mortality Rate",
+      "seeds_evaluated": [
+        42,
+        101,
+        202,
+        303,
+        404
+      ],
+      "values": [
+        0.005,
+        0.005,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "mean": 0.002,
+      "std_dev": 0.0027,
+      "mc_standard_error": 0.0012,
+      "min": 0.0,
+      "max": 0.005,
+      "reference_estimate": 0.006,
+      "estimated_bias": -0.004
+    },
+    "rx_firstline_hypertension": {
+      "metric_name": "Treatment Guideline Alignment: First-Line Antihypertensive Therapy",
+      "seeds_evaluated": [
+        42,
+        101,
+        202,
+        303,
+        404
+      ],
+      "values": [
+        84.0,
+        85.19,
+        87.1,
+        93.94,
+        86.67
+      ],
+      "mean": 87.38,
+      "std_dev": 3.8677,
+      "mc_standard_error": 1.7297,
+      "min": 84.0,
+      "max": 93.94,
+      "reference_estimate": 100.0,
+      "estimated_bias": -12.62
+    },
+    "rx_firstline_diabetes": {
+      "metric_name": "Treatment Guideline Alignment: First-Line Oral Hypoglycemic Therapy",
+      "seeds_evaluated": [
+        42,
+        101,
+        202,
+        303,
+        404
+      ],
+      "values": [
+        94.12,
+        90.48,
+        100.0,
+        100.0,
+        94.74
+      ],
+      "mean": 95.868,
+      "std_dev": 4.1081,
+      "mc_standard_error": 1.8372,
+      "min": 90.48,
+      "max": 100.0,
+      "reference_estimate": 100.0,
+      "estimated_bias": -4.132
+    },
+    "rx_adherence_assumption": {
+      "metric_name": "Treatment Pattern: Perfect Adherence Assumption Disclosure",
+      "seeds_evaluated": [
+        42,
+        101,
+        202,
+        303,
+        404
+      ],
+      "values": [
+        100.0,
+        100.0,
+        100.0,
+        100.0,
+        100.0
+      ],
+      "mean": 100.0,
+      "std_dev": 0.0,
+      "mc_standard_error": 0.0,
+      "min": 100.0,
+      "max": 100.0,
+      "reference_estimate": null,
+      "estimated_bias": null
+    }
+  }
+}

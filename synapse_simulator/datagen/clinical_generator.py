@@ -3,13 +3,13 @@ Clinical Entity Generator: Context-aware generation of appointments, consultatio
 diagnoses, vitals, and prescriptions. Consumes PatientContext + MedicalKnowledgeBase.
 """
 
-import uuid
 import random
 from typing import Dict, Any, List, Optional, Tuple
 from datetime import datetime, timedelta
 
 from synapse_simulator.knowledge.loader import MedicalKnowledgeBase
 from synapse_simulator.knowledge.models import DiagnosisEntry, DrugTreatment
+from synapse_simulator.core.ids import new_id
 from synapse_simulator.datagen.models import (
     PatientContext,
     MasterDataSnapshot,
@@ -31,7 +31,7 @@ class ClinicalEntityGenerator:
         doctors = self.master_data.doctors
         if not doctors:
             return StaffProfile(
-                staff_id=f"doc-fallback-{uuid.uuid4().hex[:6]}",
+                staff_id=new_id("doc-fallback-", 6),
                 name="Dr. Fallback",
                 role="doctor",
                 department_id="DEPT-CLIN",

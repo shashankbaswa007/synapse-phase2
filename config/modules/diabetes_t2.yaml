@@ -1,0 +1,165 @@
+id: "mod-t2d-01"
+name: "Type 2 Diabetes Mellitus Pathway"
+version: "1.0.0"
+target_condition: "E11.9"
+description: "Metabolic progression from prediabetes to Type 2 Diabetes, HbA1c surveillance, lifestyle care planning, and oral hypoglycemic therapy."
+provenance_ids:
+  - "ICMR_INDIAB_2023_T2D"
+  - "CARRS_PROSPECTIVE_T2D"
+
+initial_state: "Initial"
+
+states:
+  Initial:
+    name: "Initial"
+    type: "Initial"
+    direct_transition: "T2DAgeCheck"
+
+  T2DAgeCheck:
+    name: "T2DAgeCheck"
+    type: "Guard"
+    guard_condition: "age >= 20"
+    distributed_transition:
+      - to: "PrediabetesOnset"
+        weight: 0.0149
+        provenance_id: "CARRS_PROSPECTIVE_T2D"
+      - to: "EuglycemicDelay"
+        weight: 0.9851
+
+  EuglycemicDelay:
+    name: "EuglycemicDelay"
+    type: "Delay"
+    delay_days: 365
+    direct_transition: "T2DAgeCheck"
+
+  PrediabetesOnset:
+    name: "PrediabetesOnset"
+    type: "SetAttribute"
+    attribute_name: "glycemic_status"
+    attribute_value: "impaired"
+    direct_transition: "PrediabetesProgressionDelay"
+
+  PrediabetesProgressionDelay:
+    name: "PrediabetesProgressionDelay"
+    type: "Delay"
+    delay_days: 180
+    direct_transition: "DiabetesOnset"
+
+  DiabetesOnset:
+    name: "DiabetesOnset"
+    type: "ConditionOnset"
+    condition_code: "E11.9"
+    condition_name: "Type 2 diabetes mellitus without complications"
+    direct_transition: "DiagnosticEncounter"
+
+  DiagnosticEncounter:
+    name: "DiagnosticEncounter"
+    type: "Encounter"
+    encounter_type: "outpatient"
+    encounter_reason: "Evaluation of Glycemic Control"
+    direct_transition: "RecordHbA1c"
+
+  RecordHbA1c:
+    name: "RecordHbA1c"
+    type: "Observation"
+    observation_code: "HbA1c"
+    observation_name: "Glycated Hemoglobin"
+    observation_unit: "%"
+    observation_min: 7.4
+    observation_max: 9.6
+    direct_transition: "InitiateDiabeticCarePlan"
+
+  InitiateDiabeticCarePlan:
+    name: "InitiateDiabeticCarePlan"
+    type: "CarePlanStart"
+    plan_code: "CP-DIAB-01"
+    plan_name: "Diabetic Lifestyle and Dietary Management Protocol"
+    direct_transition: "PrescribeMetformin"
+
+  PrescribeMetformin:
+    name: "PrescribeMetformin"
+    type: "MedicationOrder"
+    drug_code: "MET-500"
+    drug_name: "Metformin"
+    drug_class: "Biguanide"
+    dosage: "500mg"
+    frequency: "Twice Daily"
+    direct_transition: "QuarterlySurveillanceDelay"
+
+  QuarterlySurveillanceDelay:
+    name: "QuarterlySurveillanceDelay"
+    type: "Delay"
+    delay_days: 90
+    direct_transition: "DiabeticFollowUp"
+
+  DiabeticFollowUp:
+    name: "DiabeticFollowUp"
+    type: "Encounter"
+    encounter_type: "outpatient"
+    encounter_reason: "Quarterly Diabetic Review"
+    direct_transition: "MeasureFollowUpHbA1c"
+
+  MeasureFollowUpHbA1c:
+    name: "MeasureFollowUpHbA1c"
+    type: "Observation"
+    observation_code: "HbA1c"
+    observation_name: "Glycated Hemoglobin"
+    observation_unit: "%"
+    observation_min: 6.4
+    observation_max: 9.2
+    distributed_transition:
+      - to: "GlycemicControlled"
+        weight: 0.45
+      - to: "GlycemicUncontrolled"
+        weight: 0.55
+
+  GlycemicControlled:
+    name: "GlycemicControlled"
+    type: "Simple"
+    direct_transition: "QuarterlySurveillanceDelay"
+
+  GlycemicUncontrolled:
+    name: "GlycemicUncontrolled"
+    type: "Simple"
+    direct_transition: "EvaluateT2DTherapyStage"
+
+  EvaluateT2DTherapyStage:
+    name: "EvaluateT2DTherapyStage"
+    type: "Simple"
+    conditional_transition:
+      - to: "DiabeticComplicationEvaluation"
+        condition: "attribute('t2d_therapy_stage') == 'dual'"
+    default_transition: "PrescribeStepUpHypoglycemic"
+
+  PrescribeStepUpHypoglycemic:
+    name: "PrescribeStepUpHypoglycemic"
+    type: "MedicationOrder"
+    drug_code: "GLIM-1"
+    drug_name: "Glimepiride"
+    drug_class: "Sulfonylurea"
+    dosage: "1mg"
+    frequency: "Once Daily"
+    direct_transition: "SetDualHypoglycemicStage"
+
+  SetDualHypoglycemicStage:
+    name: "SetDualHypoglycemicStage"
+    type: "SetAttribute"
+    attribute_name: "t2d_therapy_stage"
+    attribute_value: "dual"
+    direct_transition: "DiabeticComplicationEvaluation"
+
+  DiabeticComplicationEvaluation:
+    name: "DiabeticComplicationEvaluation"
+    type: "Simple"
+    distributed_transition:
+      - to: "DiabeticNephropathyOnset"
+        weight: 0.010
+      - to: "QuarterlySurveillanceDelay"
+        weight: 0.990
+
+  DiabeticNephropathyOnset:
+    name: "DiabeticNephropathyOnset"
+    type: "ConditionOnset"
+    condition_code: "E11.2"
+    condition_name: "Type 2 diabetes mellitus with diabetic nephropathy"
+    direct_transition: "QuarterlySurveillanceDelay"

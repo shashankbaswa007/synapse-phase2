@@ -3,18 +3,19 @@ Priority Queue for Discrete Event Simulation with deterministic ordering.
 """
 
 import heapq
-import uuid
 import itertools
 from typing import Dict, Any, List, Optional
 from datetime import datetime
 from pydantic import BaseModel, Field
+from synapse_simulator.core.ids import new_id, next_sequence
 
-_evt_sequence_counter = itertools.count()
+def _next_sequence() -> int:
+    return next_sequence("event_queue")
 
 
 class SimulationEvent(BaseModel):
     """Event model managed by the simulation priority queue."""
-    event_id: str = Field(default_factory=lambda: f"evt-{uuid.uuid4().hex[:10]}")
+    event_id: str = Field(default_factory=lambda: new_id("evt-", 10))
     scheduled_at: datetime
     priority: int = 50
     event_type: str
@@ -25,7 +26,7 @@ class SimulationEvent(BaseModel):
     correlation_id: str
     causation_id: Optional[str] = None
     causation_depth: int = 0
-    sequence_number: int = Field(default_factory=lambda: next(_evt_sequence_counter))
+    sequence_number: int = Field(default_factory=_next_sequence)
     payload: Dict[str, Any] = Field(default_factory=dict)
     cancelled: bool = False
 

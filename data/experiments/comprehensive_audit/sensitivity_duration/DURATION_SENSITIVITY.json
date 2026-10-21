@@ -1,0 +1,287 @@
+{
+  "12_months": {
+    "observation_years": 1.002053388090349,
+    "metrics": {
+      "inv_no_event_pre_birth": {
+        "synthetic_estimate": 0.0,
+        "difference": 0.0,
+        "status": "PASS"
+      },
+      "inv_no_event_post_mortem": {
+        "synthetic_estimate": 0.0,
+        "difference": 0.0,
+        "status": "PASS"
+      },
+      "inv_diagnosis_encounter_linkage": {
+        "synthetic_estimate": 0.0,
+        "difference": 0.0,
+        "status": "PASS"
+      },
+      "inv_allergy_safety_veto": {
+        "synthetic_estimate": 0.0,
+        "difference": 0.0,
+        "status": "PASS"
+      },
+      "demo_sex_distribution": {
+        "synthetic_estimate": 52.0,
+        "difference": 0.5,
+        "status": "PASS"
+      },
+      "demo_age_pyramid_jsd": {
+        "synthetic_estimate": 0.00312,
+        "difference": 0.00312,
+        "status": "PASS"
+      },
+      "demo_age_by_sex_jsd": {
+        "synthetic_estimate": 0.00502,
+        "difference": 0.00502,
+        "status": "PASS"
+      },
+      "prev_hypertension_adults": {
+        "synthetic_estimate": 36.36,
+        "difference": 5.66,
+        "status": "PASS"
+      },
+      "prev_diabetes_t2_adults": {
+        "synthetic_estimate": 8.5,
+        "difference": -2.9,
+        "status": "PASS"
+      },
+      "prev_urti_14day_point": {
+        "synthetic_estimate": 0.0,
+        "difference": -8.5,
+        "status": "WARNING"
+      },
+      "prev_urti_cumulative_attack_rate": {
+        "synthetic_estimate": 50.2,
+        "difference": -19.8,
+        "status": "WARNING"
+      },
+      "comorb_htn_in_t2d": {
+        "synthetic_estimate": 51.72,
+        "difference": 1.62,
+        "status": "PASS"
+      },
+      "long_encounters_per_pt_year": {
+        "synthetic_estimate": 1.11,
+        "difference": -0.39,
+        "status": "PASS"
+      },
+      "long_inter_encounter_interval_days": {
+        "synthetic_estimate": 124.8,
+        "difference": -55.2,
+        "status": "PASS"
+      },
+      "long_crude_mortality_rate": {
+        "synthetic_estimate": 0.0,
+        "difference": -0.006,
+        "status": "PASS"
+      },
+      "rx_firstline_hypertension": {
+        "synthetic_estimate": 100.0,
+        "difference": 0.0,
+        "status": "PASS"
+      },
+      "rx_firstline_diabetes": {
+        "synthetic_estimate": 100.0,
+        "difference": 0.0,
+        "status": "PASS"
+      },
+      "rx_adherence_assumption": {
+        "synthetic_estimate": 100.0,
+        "difference": null,
+        "status": "UNVERIFIED"
+      }
+    }
+  },
+  "24_months": {
+    "observation_years": 2.001368925393566,
+    "metrics": {
+      "inv_no_event_pre_birth": {
+        "synthetic_estimate": 0.0,
+        "difference": 0.0,
+        "status": "PASS"
+      },
+      "inv_no_event_post_mortem": {
+        "synthetic_estimate": 0.0,
+        "difference": 0.0,
+        "status": "PASS"
+      },
+      "inv_diagnosis_encounter_linkage": {
+        "synthetic_estimate": 0.0,
+        "difference": 0.0,
+        "status": "PASS"
+      },
+      "inv_allergy_safety_veto": {
+        "synthetic_estimate": 0.0,
+        "difference": 0.0,
+        "status": "PASS"
+      },
+      "demo_sex_distribution": {
+        "synthetic_estimate": 52.0,
+        "difference": 0.5,
+        "status": "PASS"
+      },
+      "demo_age_pyramid_jsd": {
+        "synthetic_estimate": 0.00312,
+        "difference": 0.00312,
+        "status": "PASS"
+      },
+      "demo_age_by_sex_jsd": {
+        "synthetic_estimate": 0.00502,
+        "difference": 0.00502,
+        "status": "PASS"
+      },
+      "prev_hypertension_adults": {
+        "synthetic_estimate": 39.3,
+        "difference": 8.6,
+        "status": "WARNING"
+      },
+      "prev_diabetes_t2_adults": {
+        "synthetic_estimate": 9.09,
+        "difference": -2.31,
+        "status": "PASS"
+      },
+      "prev_urti_14day_point": {
+        "synthetic_estimate": 4.8,
+        "difference": -3.7,
+        "status": "PASS"
+      },
+      "prev_urti_cumulative_attack_rate": {
+        "synthetic_estimate": 74.2,
+        "difference": 4.2,
+        "status": "PASS"
+      },
+      "comorb_htn_in_t2d": {
+        "synthetic_estimate": 48.39,
+        "difference": -1.71,
+        "status": "PASS"
+      },
+      "long_encounters_per_pt_year": {
+        "synthetic_estimate": 0.94,
+        "difference": -0.56,
+        "status": "PASS"
+      },
+      "long_inter_encounter_interval_days": {
+        "synthetic_estimate": 147.5,
+        "difference": -32.5,
+        "status": "PASS"
+      },
+      "long_crude_mortality_rate": {
+        "synthetic_estimate": 0.002,
+        "difference": -0.004,
+        "status": "PASS"
+      },
+      "rx_firstline_hypertension": {
+        "synthetic_estimate": 100.0,
+        "difference": 0.0,
+        "status": "PASS"
+      },
+      "rx_firstline_diabetes": {
+        "synthetic_estimate": 100.0,
+        "difference": 0.0,
+        "status": "PASS"
+      },
+      "rx_adherence_assumption": {
+        "synthetic_estimate": 100.0,
+        "difference": null,
+        "status": "UNVERIFIED"
+      }
+    }
+  },
+  "36_months": {
+    "observation_years": 3.0006844626967832,
+    "metrics": {
+      "inv_no_event_pre_birth": {
+        "synthetic_estimate": 0.0,
+        "difference": 0.0,
+        "status": "PASS"
+      },
+      "inv_no_event_post_mortem": {
+        "synthetic_estimate": 0.0,
+        "difference": 0.0,
+        "status": "PASS"
+      },
+      "inv_diagnosis_encounter_linkage": {
+        "synthetic_estimate": 0.0,
+        "difference": 0.0,
+        "status": "PASS"
+      },
+      "inv_allergy_safety_veto": {
+        "synthetic_estimate": 0.0,
+        "difference": 0.0,
+        "status": "PASS"
+      },
+      "demo_sex_distribution": {
+        "synthetic_estimate": 52.0,
+        "difference": 0.5,
+        "status": "PASS"
+      },
+      "demo_age_pyramid_jsd": {
+        "synthetic_estimate": 0.00312,
+        "difference": 0.00312,
+        "status": "PASS"
+      },
+      "demo_age_by_sex_jsd": {
+        "synthetic_estimate": 0.00502,
+        "difference": 0.00502,
+        "status": "PASS"
+      },
+      "prev_hypertension_adults": {
+        "synthetic_estimate": 41.64,
+        "difference": 10.94,
+        "status": "WARNING"
+      },
+      "prev_diabetes_t2_adults": {
+        "synthetic_estimate": 10.56,
+        "difference": -0.84,
+        "status": "PASS"
+      },
+      "prev_urti_14day_point": {
+        "synthetic_estimate": 0.0,
+        "difference": -8.5,
+        "status": "WARNING"
+      },
+      "prev_urti_cumulative_attack_rate": {
+        "synthetic_estimate": 84.8,
+        "difference": 14.8,
+        "status": "WARNING"
+      },
+      "comorb_htn_in_t2d": {
+        "synthetic_estimate": 44.44,
+        "difference": -5.66,
+        "status": "PASS"
+      },
+      "long_encounters_per_pt_year": {
+        "synthetic_estimate": 0.86,
+        "difference": -0.64,
+        "status": "PASS"
+      },
+      "long_inter_encounter_interval_days": {
+        "synthetic_estimate": 163.3,
+        "difference": -16.7,
+        "status": "PASS"
+      },
+      "long_crude_mortality_rate": {
+        "synthetic_estimate": 0.00133,
+        "difference": -0.00467,
+        "status": "PASS"
+      },
+      "rx_firstline_hypertension": {
+        "synthetic_estimate": 100.0,
+        "difference": 0.0,
+        "status": "PASS"
+      },
+      "rx_firstline_diabetes": {
+        "synthetic_estimate": 100.0,
+        "difference": 0.0,
+        "status": "PASS"
+      },
+      "rx_adherence_assumption": {
+        "synthetic_estimate": 100.0,
+        "difference": null,
+        "status": "UNVERIFIED"
+      }
+    }
+  }
+}

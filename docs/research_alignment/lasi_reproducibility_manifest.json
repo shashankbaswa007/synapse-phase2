@@ -1,0 +1,104 @@
+{
+  "manifest_id": "SYNAPSE-LASI-MANIFEST-07",
+  "generated_at": "2026-10-21T19:00:00.000000",
+  "pipeline_version": "synapse-lasi-external-eval-v1.1.0",
+  "git_commit": "3e3ae1d28286e9106659f68aa053465ded9bb3c2",
+  "overall_evaluation_gate_status": "REFERENCE_DATA_PENDING",
+  "software_environment": {
+    "python_version": "3.11.5",
+    "pydantic_version": "2.12.4",
+    "pytest_version": "9.1.1",
+    "os_platform": "darwin"
+  },
+  "execution_distinction": {
+    "fixture_verification": "COMPLETED (Verified algorithms, mathematical bounds, and pipeline mechanics on synthetic sample fixture)",
+    "pipeline_execution_against_genuine_reference_data": "NOT_STARTED (Awaiting restricted microdata access and DUA approval)",
+    "completed_external_comparisons": "NONE (External validation cannot be certified until genuine microdata is ingested)"
+  },
+  "reference_dataset": {
+    "name": "Longitudinal Aging Study in India (LASI) Wave 1",
+    "access_pathway": "IIPS and Gateway to Global Aging Data (g2aging.org) DUA Registration",
+    "licensing_status": "Credentialed Academic Research DUA Required (No Direct Public Anonymous Download)",
+    "current_execution_mode": "SYNTHETIC_TEST_FIXTURE",
+    "file_path": "data/evaluation/fixtures/lasi_wave1_sample_fixture.csv",
+    "sha256": "f3e3b7a440cd743fb7b02c091bb4fe6ddefb96f907da0ce7a6875c6cd759d5a2",
+    "records_ingested": 50,
+    "valid_records": 50,
+    "duplicates_detected": 0,
+    "survey_weights_coverage_pct": 100.0,
+    "strata_present": true,
+    "psu_present": true,
+    "effective_sample_size": 49.92,
+    "weighting_design_effect": 1.0016
+  },
+  "synthetic_cohort": {
+    "dataset_directory": "data/evaluation/calibrated_mc_500/seed_42",
+    "random_seed": 42,
+    "total_patients": 100,
+    "older_adults_ge_45": 29,
+    "general_adults_ge_20": 64,
+    "file_hashes_sha256": {
+      "patients.csv": "4cdf23a56054ea732b87aae1d059199c1a0ec3a56160eaa4c3245492f82362b1",
+      "observations.csv": "c857f25c08419ddbbdd3b1669ea35d8bfd0fdea4f073d3d0808ff1c0536faf9b",
+      "conditions.csv": "786d39259baeba520ad3a7773f31dfe4bea4ba8232d1f69e1959946c6e03f6f9",
+      "medications.csv": "566dded8195435ba5f6bdb8ded75c4f88c5a1f6a104cafa7eb549a2af72dce61",
+      "encounters.csv": "e8472c9909dce50048a6d46de9ab7903881a8c3f387ee441fb49d32098936b04",
+      "deaths.csv": "be33fb312e90aa13a5a7539f35ef197ac0f3f5735b8251b9d9773468c241900f"
+    }
+  },
+  "population_specifications": {
+    "population_a": {
+      "name": "General Adults",
+      "eligibility": "Age >= 20.0 years at t0",
+      "comparability_vs_lasi": "NOT_COMPARABLE",
+      "notes": "LASI Wave 1 restricted to older adults (>= 45) and resident spouses. Prohibited from extrapolating to adults < 45."
+    },
+    "population_b": {
+      "name": "Older Adults",
+      "eligibility": "Age >= 45.0 years at t0",
+      "comparability_vs_lasi": "DIRECTLY_COMPARABLE",
+      "notes": "Direct alignment with LASI core survey sampling frame."
+    }
+  },
+  "sample_size_gates": {
+    "min_synthetic_continuous_n": 30,
+    "min_reference_continuous_n": 30,
+    "min_synthetic_prevalence_n": 20,
+    "min_reference_prevalence_n": 20,
+    "min_reference_effective_n": 25.0,
+    "min_stratum_n": 5
+  },
+  "standardization_and_adjustments": {
+    "standard_population": "Census of India SRS Older Adult Age-Sex Distribution (All 8 Strata)",
+    "strata_weights": {
+      "45-54_Male": 0.231,
+      "45-54_Female": 0.222,
+      "55-64_Male": 0.154,
+      "55-64_Female": 0.149,
+      "65-74_Male": 0.078,
+      "65-74_Female": 0.076,
+      "75+_Male": 0.043,
+      "75+_Female": 0.047
+    },
+    "blood_pressure_protocol": "Mean of 2nd and 3rd seated readings; single-reading fallbacks tracked by method; strict_protocol_bp supported",
+    "hba1c_assay_adjustment": "DISABLED_BY_DEFAULT: Capillary DBS preserved as reference; conversion to venous HPLC unverified for Indian LASI Wave 1"
+  },
+  "provisional_acceptance_thresholds": {
+    "sbp_wasserstein_max_mmHg": 4.0,
+    "sbp_ks_statistic_max": 0.08,
+    "hba1c_wasserstein_max_pct": 0.60,
+    "htn_prevalence_diff_max_pct": 6.0,
+    "t2d_prevalence_diff_max_pct": 5.0,
+    "provisional_status": "Provisional pending genuine microdata and expert consensus"
+  },
+  "calibration_leakage_audit": {
+    "veto_passed": true,
+    "lasi_data_used_in_calibration": false,
+    "calibration_sources_catalog": [
+      "Census of India SRS 2021 Life Tables (Actuarial Mortality)",
+      "ICMR-INDIAB National Metabolic Survey (Baseline Adult Prevalence)",
+      "CURES and CARRS Prospective Cohort Literature (Longitudinal Hazards)",
+      "Indian Guidelines on Hypertension (Step Therapy Logic)"
+    ]
+  }
+}

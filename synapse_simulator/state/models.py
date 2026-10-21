@@ -16,6 +16,7 @@ class PatientStatus(str, Enum):
     REGISTERED = "Registered"
     ACTIVE = "Active"
     ARCHIVED = "Archived"
+    DECEASED = "Deceased"
 
 
 class AppointmentStatus(str, Enum):
@@ -92,6 +93,7 @@ class ActionRequest(BaseModel):
     causation_id: Optional[str] = None
     requested_timestamp: datetime
     payload: Dict[str, Any] = Field(default_factory=dict)
+    extra_context: Dict[str, Any] = Field(default_factory=dict)
 
 
 # --------------------------------------------------------------------------

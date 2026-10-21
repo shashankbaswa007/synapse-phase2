@@ -1,0 +1,180 @@
+id: "mod-htn-01"
+name: "Essential Hypertension Pathway"
+version: "1.0.0"
+target_condition: "I10"
+description: "Longitudinal progression of primary essential hypertension, screening, BP observation, antihypertensive prescription, and cardiovascular risk."
+provenance_ids:
+  - "ICMR_INDIAB_2023_HTN"
+  - "CURES_CCDC_PROSPECTIVE_HTN"
+  - "SRS_2016_2020_LIFE_TABLE"
+
+initial_state: "Initial"
+
+states:
+  Initial:
+    name: "Initial"
+    type: "Initial"
+    direct_transition: "AgeCheck"
+
+  AgeCheck:
+    name: "AgeCheck"
+    type: "Guard"
+    guard_condition: "age >= 20"
+    distributed_transition:
+      - to: "HypertensionOnset"
+        weight: 0.0344
+        provenance_id: "CURES_CCDC_PROSPECTIVE_HTN"
+      - to: "NormotensiveDelay"
+        weight: 0.9656
+
+  NormotensiveDelay:
+    name: "NormotensiveDelay"
+    type: "Delay"
+    delay_days: 365
+    direct_transition: "AgeCheck"
+
+  HypertensionOnset:
+    name: "HypertensionOnset"
+    type: "ConditionOnset"
+    condition_code: "I10"
+    condition_name: "Essential (primary) hypertension"
+    direct_transition: "AsymptomaticDelay"
+
+  AsymptomaticDelay:
+    name: "AsymptomaticDelay"
+    type: "Delay"
+    delay_days: 90
+    direct_transition: "ScreeningEncounter"
+
+  ScreeningEncounter:
+    name: "ScreeningEncounter"
+    type: "Encounter"
+    encounter_type: "outpatient"
+    encounter_reason: "Routine Adult Health Screening"
+    direct_transition: "RecordBloodPressure"
+
+  RecordBloodPressure:
+    name: "RecordBloodPressure"
+    type: "Observation"
+    observation_code: "SBP"
+    observation_name: "Systolic Blood Pressure"
+    observation_unit: "mmHg"
+    observation_min: 145.0
+    observation_max: 168.0
+    paired_observation_code: "DBP"
+    paired_observation_name: "Diastolic Blood Pressure"
+    paired_observation_unit: "mmHg"
+    paired_observation_min: 90.0
+    paired_observation_max: 104.0
+    direct_transition: "InitiateHypertensionCarePlan"
+
+  InitiateHypertensionCarePlan:
+    name: "InitiateHypertensionCarePlan"
+    type: "CarePlanStart"
+    plan_code: "CP-HTN-01"
+    plan_name: "Hypertension Lifestyle and Salt Restriction Protocol"
+    direct_transition: "PrescribeAntihypertensive"
+
+  PrescribeAntihypertensive:
+    name: "PrescribeAntihypertensive"
+    type: "MedicationOrder"
+    drug_code: "AML-5"
+    drug_name: "Amlodipine"
+    drug_class: "Calcium-Channel-Blocker"
+    dosage: "5mg"
+    frequency: "Once Daily"
+    direct_transition: "MaintenanceDelay"
+
+  MaintenanceDelay:
+    name: "MaintenanceDelay"
+    type: "Delay"
+    delay_days: 180
+    direct_transition: "FollowUpEncounter"
+
+  FollowUpEncounter:
+    name: "FollowUpEncounter"
+    type: "Encounter"
+    encounter_type: "outpatient"
+    encounter_reason: "Hypertension Monitoring Follow-up"
+    direct_transition: "MeasureFollowUpBP"
+
+  MeasureFollowUpBP:
+    name: "MeasureFollowUpBP"
+    type: "Observation"
+    observation_code: "SBP"
+    observation_name: "Systolic Blood Pressure"
+    observation_unit: "mmHg"
+    observation_min: 120.0
+    observation_max: 165.0
+    paired_observation_code: "DBP"
+    paired_observation_name: "Diastolic Blood Pressure"
+    paired_observation_unit: "mmHg"
+    paired_observation_min: 75.0
+    paired_observation_max: 100.0
+    distributed_transition:
+      - to: "BPControlled"
+        weight: 0.60
+      - to: "BPUncontrolled"
+        weight: 0.40
+
+  BPControlled:
+    name: "BPControlled"
+    type: "Simple"
+    direct_transition: "MaintenanceDelay"
+
+  BPUncontrolled:
+    name: "BPUncontrolled"
+    type: "Simple"
+    direct_transition: "EvaluateHTNTherapyStage"
+
+  EvaluateHTNTherapyStage:
+    name: "EvaluateHTNTherapyStage"
+    type: "Simple"
+    conditional_transition:
+      - to: "ComplicationEvaluation"
+        condition: "attribute('htn_therapy_stage') == 'dual'"
+    default_transition: "PrescribeStepUpAntihypertensive"
+
+  PrescribeStepUpAntihypertensive:
+    name: "PrescribeStepUpAntihypertensive"
+    type: "MedicationOrder"
+    drug_code: "TEL-40"
+    drug_name: "Telmisartan"
+    drug_class: "Angiotensin-Receptor-Blocker"
+    dosage: "40mg"
+    frequency: "Once Daily"
+    direct_transition: "SetDualTherapyStage"
+
+  SetDualTherapyStage:
+    name: "SetDualTherapyStage"
+    type: "SetAttribute"
+    attribute_name: "htn_therapy_stage"
+    attribute_value: "dual"
+    direct_transition: "ComplicationEvaluation"
+
+  ComplicationEvaluation:
+    name: "ComplicationEvaluation"
+    type: "Simple"
+    direct_transition: "CheckRenalComplication"
+
+  CheckRenalComplication:
+    name: "CheckRenalComplication"
+    type: "Simple"
+    distributed_transition:
+      - to: "HypertensiveCKD_Onset"
+        weight: 0.015
+      - to: "MaintenanceDelay"
+        weight: 0.985
+
+  HypertensiveCKD_Onset:
+    name: "HypertensiveCKD_Onset"
+    type: "ConditionOnset"
+    condition_code: "I12.9"
+    condition_name: "Hypertensive chronic kidney disease"
+    direct_transition: "MaintenanceDelay"
+
+  CardiovascularDeath:
+    name: "CardiovascularDeath"
+    type: "Death"
+    death_cause_code: "I21.9"
+    death_cause_name: "Acute myocardial infarction"

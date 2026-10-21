@@ -2,11 +2,11 @@
 Clinical Department Handler.
 """
 
-import uuid
 from typing import List
 from synapse_simulator.departments.base import BaseDepartmentHandler
 from synapse_simulator.core.event_queue import SimulationEvent
 from synapse_simulator.state.models import ActionRequest
+from synapse_simulator.core.ids import new_id
 
 
 class ClinicalDepartmentHandler(BaseDepartmentHandler):
@@ -39,11 +39,11 @@ class ClinicalDepartmentHandler(BaseDepartmentHandler):
                 treatment, is_conflict = self.clinical_gen.select_medication(context, diagnosis, force_conflict=force_conflict)
 
                 apt_id = payload.get("appointment_id", "apt-001")
-                consult_id = f"cons-{apt_id[4:]}" if apt_id.startswith("apt-") else f"cons-{uuid.uuid4().hex[:8]}"
+                consult_id = f"cons-{apt_id[4:]}" if apt_id.startswith("apt-") else new_id("cons-", 8)
                 consult_data = self.clinical_gen.generate_consultation_data(context, consult_id, apt_id, diagnosis, vitals)
                 self.state_manager.set_entity_state("clinical.consultations", consult_id, consult_data)
 
-                rx_id = payload.get("prescription_id", f"rx-{uuid.uuid4().hex[:8]}")
+                rx_id = payload.get("prescription_id", new_id("rx-", 8))
                 rx_data = self.clinical_gen.generate_prescription_data(context, rx_id, consult_id, treatment, is_conflict)
                 self.state_manager.set_entity_state("pharmacy.prescriptions", rx_id, rx_data)
 
@@ -61,7 +61,7 @@ class ClinicalDepartmentHandler(BaseDepartmentHandler):
             # Generate action to start consultation
             actions.append(
                 ActionRequest(
-                    action_id=f"act-consult-{uuid.uuid4().hex[:8]}",
+                    action_id=new_id("act-consult-", 8),
                     action_type="START_DOCTOR_CONSULTATION",
                     target_department="clinical",
                     target_entity_table="clinical.appointments",

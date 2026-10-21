@@ -1,0 +1,16 @@
+metric_name,metric_value
+generation_timestamp,2025-12-21T00:00:00
+patient_count,250
+encounter_count,500
+condition_count,254
+symptom_count,952
+medication_count,308
+lab_count,0
+radiology_count,0
+invoice_count,0
+payment_count,0
+event_count,0
+journey_trace_count,0
+pubmed_knowledge_enabled,True
+random_seed,303
+validation_status,PASSED

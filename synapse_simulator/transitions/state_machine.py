@@ -38,11 +38,12 @@ class BaseStateMachine:
 class PatientStateMachine(BaseStateMachine):
     entity_name = "patient.patients"
     initial_state = PatientStatus.REGISTERED.value
-    terminal_states = {PatientStatus.ARCHIVED.value}
+    terminal_states = {PatientStatus.ARCHIVED.value, PatientStatus.DECEASED.value}
     valid_transitions = {
-        PatientStatus.REGISTERED.value: {PatientStatus.ACTIVE.value, PatientStatus.ARCHIVED.value},
-        PatientStatus.ACTIVE.value: {PatientStatus.ARCHIVED.value},
+        PatientStatus.REGISTERED.value: {PatientStatus.ACTIVE.value, PatientStatus.ARCHIVED.value, PatientStatus.DECEASED.value},
+        PatientStatus.ACTIVE.value: {PatientStatus.ARCHIVED.value, PatientStatus.DECEASED.value},
         PatientStatus.ARCHIVED.value: set(),
+        PatientStatus.DECEASED.value: set(),
     }
 
 

@@ -1,0 +1,7 @@
+death_id,patient_id,death_date,cause_code,cause_name,is_premature
+dth-c7a37dde,pat-8c6127cf,2024-07-27T06:55:35,I21.9,Acute myocardial infarction,False
+dth-46edf9f3,pat-35781170,2025-02-02T00:49:39,I21.9,Acute myocardial infarction,False
+dth-c6387608,pat-73872511,2025-01-28T20:53:44,I21.9,Acute myocardial infarction,False
+dth-4582f21d,pat-87c9cb26,2025-01-29T20:03:17,I21.9,Acute myocardial infarction,False
+dth-c4cd6e32,pat-c62f23ee,2025-08-04T03:44:49,I21.9,Acute myocardial infarction,False
+dth-4417ea47,pat-8f37377b,2025-11-27T12:11:55,I21.9,Acute myocardial infarction,False

@@ -1,0 +1,272 @@
+condition_id,patient_id,encounter_id,condition_code,condition_name,status
+cond-pat-c8f34060,pat-c8f34060,enc-6ca150ee,I10,Essential (primary) hypertension,Active
+cond-pat-46d2b49f,pat-46d2b49f,enc-ebebcd03,I10,Essential (primary) hypertension,Active
+cond-pat-c61d30b4,pat-c61d30b4,enc-6b364918,I10,Essential (primary) hypertension,Active
+cond-pat-c1dc1932,pat-c1dc1932,enc-ea80c52d,I10,Essential (primary) hypertension,Active
+cond-pat-bd9b01b0,pat-bd9b01b0,enc-69cb4142,I10,Essential (primary) hypertension,Active
+cond-pat-b0d7bb2a,pat-b0d7bb2a,enc-e915bd57,I10,Essential (primary) hypertension,Active
+cond-pat-3022373f,pat-3022373f,enc-6860396c,I10,Essential (primary) hypertension,Active
+cond-pat-2eb72f69,pat-2eb72f69,enc-e7aab581,I10,Essential (primary) hypertension,Active
+cond-pat-ae01ab7e,pat-ae01ab7e,enc-66f53196,I10,Essential (primary) hypertension,Active
+cond-pat-ac96a3a8,pat-ac96a3a8,enc-e63fadab,I10,Essential (primary) hypertension,Active
+cond-pat-2be11fbd,pat-2be11fbd,enc-658a29c0,I10,Essential (primary) hypertension,Active
+cond-pat-a6ea8450,pat-a6ea8450,enc-e4d4a5d5,I10,Essential (primary) hypertension,Active
+cond-pat-235ef0b9,pat-235ef0b9,enc-641f21ea,I10,Essential (primary) hypertension,Active
+cond-pat-9cfd4d76,pat-9cfd4d76,enc-e3699dff,I10,Essential (primary) hypertension,Active
+cond-pat-9cfd4d76-2,pat-9cfd4d76,enc-e3699dff,E11.9,Type 2 diabetes mellitus without complications,Active
+cond-pat-1c47c98b,pat-1c47c98b,enc-e1fe9629,I10,Essential (primary) hypertension,Active
+cond-pat-9b9245a0,pat-9b9245a0,enc-6149123e,I10,Essential (primary) hypertension,Active
+cond-pat-1971b9df,pat-1971b9df,enc-e0938e53,I10,Essential (primary) hypertension,Active
+cond-pat-169baa33,pat-169baa33,enc-5fde0a68,I10,Essential (primary) hypertension,Active
+cond-pat-1530a25d,pat-1530a25d,enc-df28867d,E11.9,Type 2 diabetes mellitus without complications,Active
+cond-pat-947b1e72,pat-947b1e72,enc-5e730292,I10,Essential (primary) hypertension,Active
+cond-pat-9310169c,pat-9310169c,enc-ddbd7ea7,I10,Essential (primary) hypertension,Active
+cond-pat-91a50ec6,pat-91a50ec6,enc-5d07fabc,I10,Essential (primary) hypertension,Active
+cond-pat-8d63f744,pat-8d63f744,enc-dc5276d1,I10,Essential (primary) hypertension,Active
+cond-pat-8922dfc2,pat-8922dfc2,enc-5b9cf2e6,I10,Essential (primary) hypertension,Active
+cond-pat-864cd016,pat-864cd016,enc-dae76efb,I10,Essential (primary) hypertension,Active
+cond-pat-05974c2b,pat-05974c2b,enc-5a31eb10,I10,Essential (primary) hypertension,Active
+cond-pat-820bb894,pat-820bb894,enc-d97c6725,I10,Essential (primary) hypertension,Active
+cond-pat-015634a9,pat-015634a9,enc-58c6e33a,I10,Essential (primary) hypertension,Active
+cond-pat-ffeb2cd3,pat-ffeb2cd3,enc-d8115f4f,I10,Essential (primary) hypertension,Active
+cond-pat-ffeb2cd3-2,pat-ffeb2cd3,enc-d8115f4f,E11.9,Type 2 diabetes mellitus without complications,Active
+cond-pat-fbaa1551,pat-fbaa1551,enc-d6a65779,I10,Essential (primary) hypertension,Active
+cond-pat-7af49166,pat-7af49166,enc-55f0d38e,I10,Essential (primary) hypertension,Active
+cond-pat-76b379e4,pat-76b379e4,enc-d53b4fa3,I10,Essential (primary) hypertension,Active
+cond-pat-f492ee23,pat-f492ee23,enc-5485cbb8,I10,Essential (primary) hypertension,Active
+cond-pat-73dd6a38,pat-73dd6a38,enc-d3d047cd,I10,Essential (primary) hypertension,Active
+cond-pat-f327e64d,pat-f327e64d,enc-531ac3e2,I10,Essential (primary) hypertension,Active
+cond-pat-6e314ae0,pat-6e314ae0,enc-d2653ff7,I10,Essential (primary) hypertension,Active
+cond-pat-ec10bf1f,pat-ec10bf1f,enc-51afbc0c,I10,Essential (primary) hypertension,Active
+cond-pat-e93aaf73,pat-e93aaf73,enc-d0fa3821,I10,Essential (primary) hypertension,Active
+cond-pat-e93aaf73-2,pat-e93aaf73,enc-d0fa3821,E11.9,Type 2 diabetes mellitus without complications,Active
+cond-pat-68852b88,pat-68852b88,enc-cf8f304b,I10,Essential (primary) hypertension,Active
+cond-pat-e7cfa79d,pat-e7cfa79d,enc-4ed9ac60,I10,Essential (primary) hypertension,Active
+cond-pat-62d90c30,pat-62d90c30,enc-ce242875,I10,Essential (primary) hypertension,Active
+cond-pat-5e97f4ae,pat-5e97f4ae,enc-4d6ea48a,I10,Essential (primary) hypertension,Active
+cond-pat-db0c6117,pat-db0c6117,enc-ccb9209f,I10,Essential (primary) hypertension,Active
+cond-pat-db0c6117-2,pat-db0c6117,enc-ccb9209f,E11.9,Type 2 diabetes mellitus without complications,Active
+cond-pat-d3f539e9,pat-d3f539e9,enc-cb4e18c9,I10,Essential (primary) hypertension,Active
+cond-pat-d3f539e9-2,pat-d3f539e9,enc-cb4e18c9,E11.9,Type 2 diabetes mellitus without complications,Active
+cond-pat-d11f2a3d,pat-d11f2a3d,enc-c9e310f3,I10,Essential (primary) hypertension,Active
+cond-pat-4c288ed0,pat-4c288ed0,enc-492d8d08,I10,Essential (primary) hypertension,Active
+cond-pat-cb730ae5,pat-cb730ae5,enc-c878091d,E11.9,Type 2 diabetes mellitus without complications,Active
+cond-pat-451167a2,pat-451167a2,enc-47c28532,E11.9,Type 2 diabetes mellitus without complications,Active
+cond-pat-c01acc35,pat-c01acc35,enc-c70d0147,I10,Essential (primary) hypertension,Active
+cond-pat-ba6eacdd,pat-ba6eacdd,enc-46577d5c,I10,Essential (primary) hypertension,Active
+cond-pat-ba6eacdd-2,pat-ba6eacdd,enc-46577d5c,E11.9,Type 2 diabetes mellitus without complications,Active
+cond-pat-384e211c,pat-384e211c,enc-44ec7586,E11.9,Type 2 diabetes mellitus without complications,Active
+cond-pat-36e31946,pat-36e31946,enc-c436f19b,I10,Essential (primary) hypertension,Active
+cond-pat-b62d955b,pat-b62d955b,enc-43816db0,I10,Essential (primary) hypertension,Active
+cond-pat-35781170,pat-35781170,enc-c2cbe9c5,I10,Essential (primary) hypertension,Active
+cond-pat-af166e2d,pat-af166e2d,enc-421665da,I10,Essential (primary) hypertension,Active
+cond-pat-adab6657,pat-adab6657,enc-c160e1ef,I10,Essential (primary) hypertension,Active
+cond-pat-2b8ada96,pat-2b8ada96,enc-40ab5e04,E11.9,Type 2 diabetes mellitus without complications,Active
+cond-pat-2a1fd2c0,pat-2a1fd2c0,enc-bff5da19,I10,Essential (primary) hypertension,Active
+cond-pat-2473b368,pat-2473b368,enc-3f40562e,I10,Essential (primary) hypertension,Active
+cond-pat-a3be2f7d,pat-a3be2f7d,enc-be8ad243,I10,Essential (primary) hypertension,Active
+cond-pat-a3be2f7d-2,pat-a3be2f7d,enc-be8ad243,E11.9,Type 2 diabetes mellitus without complications,Active
+cond-pat-2308ab92,pat-2308ab92,enc-bd1fca6d,I10,Essential (primary) hypertension,Active
+cond-pat-219da3bc,pat-219da3bc,enc-3c6a4682,I10,Essential (primary) hypertension,Active
+cond-pat-1bf18464,pat-1bf18464,enc-bbb4c297,I10,Essential (primary) hypertension,Active
+cond-pat-1bf18464-2,pat-1bf18464,enc-bbb4c297,E11.9,Type 2 diabetes mellitus without complications,Active
+cond-pat-99d0f8a3,pat-99d0f8a3,enc-ba49bac1,I10,Essential (primary) hypertension,Active
+cond-pat-4567acc9,pat-4567acc9,enc-399436d6,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-bd9b01b0-2,pat-bd9b01b0,enc-b8deb2eb,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-37395e6d,pat-37395e6d,enc-38292f00,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-2be11fbd-2,pat-2be11fbd,enc-b773ab15,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-26350065,pat-26350065,enc-36be272a,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-24c9f88f,pat-24c9f88f,enc-b608a33f,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-1806b209,pat-1806b209,enc-35531f54,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-97512e1e,pat-97512e1e,enc-b49d9b69,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-95e62648,pat-95e62648,enc-33e8177e,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-1530a25d-2,pat-1530a25d,enc-b3329393,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-903a06f0,pat-903a06f0,enc-327d0fa8,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-87b7d7ec,pat-87b7d7ec,enc-b1c78bbd,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-8376c06a,pat-8376c06a,enc-311207d2,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-f5fdf5f9,pat-f5fdf5f9,enc-b05c83e7,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-f1bcde77,pat-f1bcde77,enc-2fa6fffc,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-ec10bf1f-2,pat-ec10bf1f,enc-aef17c11,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-68852b88-2,pat-68852b88,enc-2e3bf826,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-65af1bdc,pat-65af1bdc,enc-ad86743b,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-6002fc84,pat-6002fc84,enc-2cd0f050,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-df4d7899,pat-df4d7899,enc-ac1b6c65,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-58ebd556,pat-58ebd556,enc-2b65e87a,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-5780cd80,pat-5780cd80,enc-aab0648f,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-d6cb4995,pat-d6cb4995,enc-29fae0a4,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-5069a652,pat-5069a652,enc-a9455cb9,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-43a65fcc,pat-43a65fcc,enc-288fd8ce,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-c185d40b,pat-c185d40b,enc-a7da54e3,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-384e211c-2,pat-384e211c,enc-2724d0f8,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-b7989d31,pat-b7989d31,enc-a66f4d0d,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-35781170-2,pat-35781170,enc-25b9c922,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-b4c28d85,pat-b4c28d85,enc-a5044537,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-b35785af,pat-b35785af,enc-244ec14c,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-b0817603,pat-b0817603,enc-a3993d61,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-2b8ada96-2,pat-2b8ada96,enc-22e3b976,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-a96a4ed5,pat-a96a4ed5,enc-a22e358b,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-a6943f29,pat-a6943f29,enc-2178b1a0,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-219da3bc-2,pat-219da3bc,enc-a0c32db5,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-a0e81fd1,pat-a0e81fd1,enc-200da9ca,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-9f7d17fb,pat-9f7d17fb,enc-9f5825df,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-9b3c0079,pat-9b3c0079,enc-1ea2a1f4,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-191b74b8,pat-191b74b8,enc-9ded1e09,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-b3adcad6,pat-b3adcad6,enc-1d379a1e,I10,Essential (primary) hypertension,Active
+cond-pat-b3adcad6-2,pat-b3adcad6,enc-1d379a1e,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-a13e64f8,pat-a13e64f8,enc-9c821633,I10,Essential (primary) hypertension,Active
+cond-pat-616e045a,pat-616e045a,enc-1bcc9248,I10,Essential (primary) hypertension,Active
+cond-pat-c8f34060-2,pat-c8f34060,enc-9b170e5d,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-46d2b49f-2,pat-46d2b49f,enc-1a618a72,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-c3472108,pat-c3472108,enc-99ac0687,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-3b7a75ef,pat-3b7a75ef,enc-18f6829c,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-b959ea2e,pat-b959ea2e,enc-9840feb1,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-b242c300,pat-b242c300,enc-96d5f6db,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-a9c093fc,pat-a9c093fc,enc-162072f0,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-290b1011,pat-290b1011,enc-956aef05,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-a8558c26,pat-a8558c26,enc-14b56b1a,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-a57f7c7a,pat-a57f7c7a,enc-93ffe72f,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-2088e10d,pat-2088e10d,enc-134a6344,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-9b9245a0-2,pat-9b9245a0,enc-11df5b6e,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-10ef8adb,pat-10ef8adb,enc-10745398,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-7c5f993c,pat-7c5f993c,enc-0f094bc2,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-f327e64d-2,pat-f327e64d,enc-8e53c7d7,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-72726262,pat-72726262,enc-0d9e43ec,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-e4f997f1,pat-e4f997f1,enc-0c333c16,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-64441406,pat-64441406,enc-8b7db82b,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-e0b8806f,pat-e0b8806f,enc-0ac83440,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-dc7768ed,pat-dc7768ed,enc-8a12b055,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-5bc1e502,pat-5bc1e502,enc-095d2c6a,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-533fb5fe,pat-533fb5fe,enc-873ca0a9,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-d11f2a3d-2,pat-d11f2a3d,enc-06871cbe,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-4c288ed0-2,pat-4c288ed0,enc-85d198d3,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-c5c6eb8d,pat-c5c6eb8d,enc-846690fd,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-423b57f6,pat-423b57f6,enc-82fb8927,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-beafc45f,pat-beafc45f,enc-0246053c,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-340d099a,pat-340d099a,enc-8025797b,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-3136f9ee,pat-3136f9ee,enc-ff6ff590,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-2a1fd2c0-2,pat-2a1fd2c0,enc-fe04edba,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-25debb3e,pat-25debb3e,enc-7d4f69cf,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-a3be2f7d-3,pat-a3be2f7d,enc-fc99e5e4,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-99d0f8a3-2,pat-99d0f8a3,enc-7a795a23,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-40d05020,pat-40d05020,enc-59dba5e9,E11.9,Type 2 diabetes mellitus without complications,Active
+cond-pat-3c8f389e,pat-3c8f389e,enc-58709e13,E11.9,Type 2 diabetes mellitus without complications,Active
+cond-pat-483dbc75,pat-483dbc75,enc-4e836739,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-c788388a,pat-c788388a,enc-cdcde34e,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-c4b228de,pat-c4b228de,enc-4d185f63,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-b7eee258,pat-b7eee258,enc-cc62db78,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-b683da82,pat-b683da82,enc-4bad578d,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-b518d2ac,pat-b518d2ac,enc-caf7d3a2,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-32f846eb,pat-32f846eb,enc-4a424fb7,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-21f3e8e3,pat-21f3e8e3,enc-c98ccbcc,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-1db2d161,pat-1db2d161,enc-48d747e1,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-125a92b1,pat-125a92b1,enc-c821c3f6,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-0b436b83,pat-0b436b83,enc-476c400b,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-84e1c840,pat-84e1c840,enc-c6b6bc20,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-02c13c7f,pat-02c13c7f,enc-46013835,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-015634a9-2,pat-015634a9,enc-c54bb44a,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-fd151d27,pat-fd151d27,enc-4496305f,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-781e81ba,pat-781e81ba,enc-c3e0ac74,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-671a23b2,pat-671a23b2,enc-432b2889,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-616e045a-2,pat-616e045a,enc-c275a49e,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-4d9396a6,pat-4d9396a6,enc-41c020b3,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-c89cfb39,pat-c89cfb39,enc-c10a9cc8,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-451167a2-2,pat-451167a2,enc-405518dd,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-b1ec7dd9,pat-b1ec7dd9,enc-bf9f94f2,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-adab6657-2,pat-adab6657,enc-3eea1107,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-28b4caea,pat-28b4caea,enc-be348d1c,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-a7ff46ff,pat-a7ff46ff,enc-3d7f0931,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-1a867c8e,pat-1a867c8e,enc-bcc98546,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-3ce57dc5,pat-3ce57dc5,enc-3c14015b,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-3a0f6e19,pat-3a0f6e19,enc-bb5e7d70,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-34634ec1,pat-34634ec1,enc-3aa8f985,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-b0d7bb2a-2,pat-b0d7bb2a,enc-393df1af,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-235ef0b9-2,pat-235ef0b9,enc-b8886dc4,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-a2a96cce,pat-a2a96cce,enc-37d2e9d9,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-9cfd4d76-3,pat-9cfd4d76,enc-3667e203,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-169baa33-2,pat-169baa33,enc-b5b25e18,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-947b1e72-2,pat-947b1e72,enc-34fcda2d,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-13c59a87,pat-13c59a87,enc-b4475642,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-9310169c-2,pat-9310169c,enc-3391d257,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-0f848305,pat-0f848305,enc-b2dc4e6c,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-8eceff1a,pat-8eceff1a,enc-3226ca81,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-0cae7359,pat-0cae7359,enc-b1714696,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-7af49166-2,pat-7af49166,enc-30bbc2ab,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-79898990,pat-79898990,enc-b0063ec0,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-76b379e4-2,pat-76b379e4,enc-2f50bad5,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-eee6cecb,pat-eee6cecb,enc-ae9b36ea,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-e93aaf73-3,pat-e93aaf73,enc-2de5b2ff,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-d56041bf,pat-d56041bf,enc-2c7aab29,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-c45be3b7,pat-c45be3b7,enc-abc5273e,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-c01acc35-2,pat-c01acc35,enc-2b0fa353,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-3f65484a,pat-3f65484a,enc-aa5a1f68,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-3b2430c8,pat-3b2430c8,enc-29a49b7d,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-ba6eacdd-3,pat-ba6eacdd,enc-a8ef1792,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-b903a507,pat-b903a507,enc-283993a7,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-b62d955b-2,pat-b62d955b,enc-a7840fbc,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-af166e2d-2,pat-af166e2d,enc-26ce8bd1,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-1ec79410,pat-1ec79410,enc-a61907e6,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-49a8c44b,pat-49a8c44b,enc-fad898e7,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-42919d1d,pat-42919d1d,enc-7a2314fc,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-c1dc1932-2,pat-c1dc1932,enc-f96d9111,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-2d4c2793,pat-2d4c2793,enc-78b80d26,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-ac96a3a8-2,pat-ac96a3a8,enc-f802893b,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-a41474a4,pat-a41474a4,enc-774d0550,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-9fd35d22,pat-9fd35d22,enc-f6978165,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-1c47c98b-2,pat-1c47c98b,enc-75e1fd7a,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-086d5bd7,pat-086d5bd7,enc-f52c798f,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-fa3f0d7b,pat-fa3f0d7b,enc-7476f5a4,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-f768fdcf,pat-f768fdcf,enc-f3c171b9,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-ed7bc6f5,pat-ed7bc6f5,enc-730bedce,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-5d2cecd8,pat-5d2cecd8,enc-f25669e3,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-d9a15941,pat-d9a15941,enc-71a0e5f8,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-54aabdd4,pat-54aabdd4,enc-f0eb620d,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-cb730ae5-2,pat-cb730ae5,enc-7035de22,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-ca08030f,pat-ca08030f,enc-ef805a37,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-3c8f389e-2,pat-3c8f389e,enc-6ecad64c,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-36e31946-2,pat-36e31946,enc-ee155261,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-a5293753,pat-a5293753,enc-6d5fce76,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-a25327a7,pat-a25327a7,enc-ecaa4a8b,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-9e121025,pat-9e121025,enc-6bf4c6a0,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-3a0f6e19-2,pat-3a0f6e19,enc-eb3f42b5,I10,Essential (primary) hypertension,Active
+cond-pat-7f35a8e8,pat-7f35a8e8,enc-6a89beca,I10,Essential (primary) hypertension,Active
+cond-pat-423b57f6-2,pat-423b57f6,enc-e9d43adf,I10,Essential (primary) hypertension,Active
+cond-pat-a7ff46ff-2,pat-a7ff46ff,enc-691eb6f4,I10,Essential (primary) hypertension,Active
+cond-pat-9ca7084f,pat-9ca7084f,enc-e8693309,I10,Essential (primary) hypertension,Active
+cond-pat-41269547,pat-41269547,enc-e593235d,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-38a46643,pat-38a46643,enc-64dd9f72,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-2a7617e7,pat-2a7617e7,enc-e4281b87,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-91a50ec6-2,pat-91a50ec6,enc-6372979c,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-8a8de798,pat-8a8de798,enc-e2bd13b1,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-864cd016-2,pat-864cd016,enc-62078fc6,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-042c4455,pat-042c4455,enc-e1520bdb,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-820bb894-2,pat-820bb894,enc-609c87f0,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-7f35a8e8-2,pat-7f35a8e8,enc-dfe70405,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-f492ee23-2,pat-f492ee23,enc-5f31801a,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-71075a8c,pat-71075a8c,enc-de7bfc2f,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-6b5b3b34,pat-6b5b3b34,enc-5dc67844,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-e6649fc7,pat-e6649fc7,enc-dd10f459,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-62d90c30-2,pat-62d90c30,enc-5c5b706e,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-c61d30b4-2,pat-c61d30b4,enc-b2860945,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-3fbb8d71,pat-3fbb8d71,enc-31d0855a,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-3e50859b,pat-3e50859b,enc-b11b016f,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-3022373f-2,pat-3022373f,enc-30657d84,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-a13e64f8-2,pat-a13e64f8,enc-afaff999,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-9e68554c,pat-9e68554c,enc-2efa75ae,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-eaa5b749,pat-eaa5b749,enc-ae44f1c3,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-d3f539e9-3,pat-d3f539e9,enc-2d8f6dd8,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-d28a3213,pat-d28a3213,enc-acd9e9ed,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-4efe9e7c,pat-4efe9e7c,enc-2c246602,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-3dfa4074,pat-3dfa4074,enc-ab6ee217,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-2cf5e26c,pat-2cf5e26c,enc-2ab95e2c,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-9ca7084f-2,pat-9ca7084f,enc-aa03da41,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-1bf18464-3,pat-1bf18464,enc-294e5656,J06.9,"Acute upper respiratory infection, unspecified",Resolved
+cond-pat-a6ea8450-2,pat-a6ea8450,enc-a2ecb313,J06.9,"Acute upper respiratory infection, unspecified",Active
+cond-pat-1adcc1b5,pat-1adcc1b5,enc-22372f28,J06.9,"Acute upper respiratory infection, unspecified",Active
+cond-pat-0e197b2f,pat-0e197b2f,enc-a181ab3d,J06.9,"Acute upper respiratory infection, unspecified",Active
+cond-pat-8922dfc2-2,pat-8922dfc2,enc-20cc2752,J06.9,"Acute upper respiratory infection, unspecified",Active
+cond-pat-7dcaa112,pat-7dcaa112,enc-a016a367,J06.9,"Acute upper respiratory infection, unspecified",Active
+cond-pat-73dd6a38-2,pat-73dd6a38,enc-1f611f7c,J06.9,"Acute upper respiratory infection, unspecified",Active
+cond-pat-e7cfa79d-2,pat-e7cfa79d,enc-9eab9b91,J06.9,"Acute upper respiratory infection, unspecified",Active
+cond-pat-e38e901b,pat-e38e901b,enc-1df617a6,J06.9,"Acute upper respiratory infection, unspecified",Active
+cond-pat-c2f0dbe1,pat-c2f0dbe1,enc-9d4093bb,J06.9,"Acute upper respiratory infection, unspecified",Active
+cond-pat-2fcbf218,pat-2fcbf218,enc-1c8b0fd0,J06.9,"Acute upper respiratory infection, unspecified",Active

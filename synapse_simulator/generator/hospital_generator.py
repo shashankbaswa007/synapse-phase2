@@ -3,7 +3,6 @@ Large-Scale Synthetic Hospital Simulator Engine with Stage 7 Workflow Integratio
 """
 
 import random
-import uuid
 from typing import Dict, Any, List, Optional
 from datetime import datetime, timedelta
 
@@ -41,6 +40,7 @@ from synapse_simulator.datagen.diagnostic_generator import DiagnosticGenerator
 from synapse_simulator.datagen.billing_generator import BillingGenerator
 from synapse_simulator.datagen.models import PatientContext
 from synapse_simulator.generator.factory import SimulationBootstrapFactory
+from synapse_simulator.core.ids import new_id
 
 
 class HospitalSimulator:
@@ -172,16 +172,16 @@ class HospitalSimulator:
             )
 
             # Pre-seed prescription entity in StateManager with selected treatment provenance
-            rx_id = getattr(scen_inst, "prescription_id", f"rx-{uuid.uuid4().hex[:6]}")
+            rx_id = getattr(scen_inst, "prescription_id", new_id("rx-", 6))
             rx_data = self.clinical_gen.generate_prescription_data(
                 patient_context, rx_id, enc_id, treatment, is_conflict
             )
             self.state_manager.set_entity_state("pharmacy.prescriptions", rx_id, rx_data)
 
             # Ensure lab, radiology, and invoice states have unique IDs and are associated with encounter_id and patient_id
-            lab_id = getattr(scen_inst, "lab_order_id", f"lab-{uuid.uuid4().hex[:8]}")
-            rad_id = getattr(scen_inst, "rad_order_id", f"rad-{uuid.uuid4().hex[:8]}")
-            inv_id = getattr(scen_inst, "invoice_id", f"inv-{uuid.uuid4().hex[:8]}")
+            lab_id = getattr(scen_inst, "lab_order_id", new_id("lab-", 8))
+            rad_id = getattr(scen_inst, "rad_order_id", new_id("rad-", 8))
+            inv_id = getattr(scen_inst, "invoice_id", new_id("inv-", 8))
 
             diag_entry = self.kb.get_diagnosis_by_code(patient_context.diagnosis_code)
             lab_options = diag_entry.lab_tests if (diag_entry and diag_entry.lab_tests) else ["CBC"]
@@ -255,7 +255,7 @@ class HospitalSimulator:
                     "clinical.appointments": scen_inst.appointment_id,
                     "clinical.encounters": enc_id,
                     "pharmacy.prescriptions": rx_id,
-                    "pharmacy.inventory_batches": getattr(scen_inst, "batch_id", f"batch-{uuid.uuid4().hex[:6]}"),
+                    "pharmacy.inventory_batches": getattr(scen_inst, "batch_id", new_id("batch-", 6)),
                     "laboratory.laboratory_orders": lab_id,
                     "radiology.radiology_orders": rad_id,
                     "finance.invoices": inv_id,

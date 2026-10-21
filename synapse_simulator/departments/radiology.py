@@ -2,11 +2,11 @@
 Radiology Department Handler.
 """
 
-import uuid
 from typing import List
 from synapse_simulator.departments.base import BaseDepartmentHandler
 from synapse_simulator.core.event_queue import SimulationEvent
 from synapse_simulator.state.models import ActionRequest
+from synapse_simulator.core.ids import new_id
 
 
 class RadiologyDepartmentHandler(BaseDepartmentHandler):
@@ -29,7 +29,7 @@ class RadiologyDepartmentHandler(BaseDepartmentHandler):
 
             actions.append(
                 ActionRequest(
-                    action_id=f"act-rad-{uuid.uuid4().hex[:8]}",
+                    action_id=new_id("act-rad-", 8),
                     action_type="ACQUIRE_RADIOLOGY_IMAGE",
                     target_department="radiology",
                     target_entity_table="radiology.radiology_orders",
@@ -86,7 +86,7 @@ class RadiologyDepartmentHandler(BaseDepartmentHandler):
 
             actions.append(
                 ActionRequest(
-                    action_id=f"act-radres-{uuid.uuid4().hex[:8]}",
+                    action_id=new_id("act-radres-", 8),
                     action_type="COMPLETE_RADIOLOGY_REPORT",
                     target_department="radiology",
                     target_entity_table="radiology.radiology_orders",

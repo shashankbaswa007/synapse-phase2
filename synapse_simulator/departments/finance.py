@@ -2,11 +2,11 @@
 Finance Department Handler.
 """
 
-import uuid
 from typing import List
 from synapse_simulator.departments.base import BaseDepartmentHandler
 from synapse_simulator.core.event_queue import SimulationEvent
 from synapse_simulator.state.models import ActionRequest
+from synapse_simulator.core.ids import new_id
 
 
 class FinanceDepartmentHandler(BaseDepartmentHandler):
@@ -23,7 +23,7 @@ class FinanceDepartmentHandler(BaseDepartmentHandler):
         if event.event_type == "ADD_INVOICE_LINE_ITEM" or event.event_type == "MedicineDispensed":
             actions.append(
                 ActionRequest(
-                    action_id=f"act-fin-{uuid.uuid4().hex[:8]}",
+                    action_id=new_id("act-fin-", 8),
                     action_type="GENERATE_INVOICE",
                     target_department="finance",
                     target_entity_table="finance.invoices",
@@ -45,7 +45,7 @@ class FinanceDepartmentHandler(BaseDepartmentHandler):
                 inv_id = "inv-001"
             actions.append(
                 ActionRequest(
-                    action_id=f"act-pay-{uuid.uuid4().hex[:8]}",
+                    action_id=new_id("act-pay-", 8),
                     action_type="PROCESS_PAYMENT",
                     target_department="finance",
                     target_entity_table="finance.invoices",

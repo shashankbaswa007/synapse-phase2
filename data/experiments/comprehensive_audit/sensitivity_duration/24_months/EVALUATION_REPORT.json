@@ -1,0 +1,468 @@
+{
+  "dataset_directory": "/Users/shashi/synapse/synapse-phase2/data/experiments/comprehensive_audit/sensitivity_duration/24_months",
+  "timestamp": "2026-10-21T15:38:48.191523",
+  "total_metrics": 18,
+  "passed_metrics": 16,
+  "warning_metrics": 1,
+  "failed_metrics": 0,
+  "unverified_metrics": 1,
+  "not_applicable_metrics": 0,
+  "overall_status": "WARNING",
+  "invariants_passed": true,
+  "metrics": [
+    {
+      "metric_id": "inv_no_event_pre_birth",
+      "metric_name": "Temporal Invariant: No Clinical Activity Prior to Birth",
+      "dimension": "INVARIANTS",
+      "definition": "Verifies that no clinical encounter or procedure occurs before the patient's recorded birth date.",
+      "numerator": 0,
+      "denominator": 945,
+      "synthetic_estimate": 0.0,
+      "reference_estimate": 0.0,
+      "difference": 0.0,
+      "relative_difference": 0.0,
+      "confidence_interval": null,
+      "acceptance_threshold": {
+        "allowed_violations": 0
+      },
+      "status": "PASS",
+      "provenance_id": "SYNAPSE_CORE_INVARIANT",
+      "verification_status": "VERIFIED",
+      "known_limitations": "Requires either explicit birth_date column or deterministic age projection."
+    },
+    {
+      "metric_id": "inv_no_event_post_mortem",
+      "metric_name": "Temporal Invariant: Zero Post-Mortem Clinical Events",
+      "dimension": "INVARIANTS",
+      "definition": "Verifies that deceased patients have strictly zero subsequent encounters, orders, or prescriptions.",
+      "numerator": 0,
+      "denominator": 945,
+      "synthetic_estimate": 0.0,
+      "reference_estimate": 0.0,
+      "difference": 0.0,
+      "relative_difference": 0.0,
+      "confidence_interval": null,
+      "acceptance_threshold": {
+        "allowed_violations": 0
+      },
+      "status": "PASS",
+      "provenance_id": "SYNAPSE_CORE_INVARIANT",
+      "verification_status": "VERIFIED",
+      "known_limitations": "Evaluated against deaths.csv records."
+    },
+    {
+      "metric_id": "inv_diagnosis_encounter_linkage",
+      "metric_name": "Causal Invariant: Diagnosis Must Link to Valid Clinical Encounter",
+      "dimension": "INVARIANTS",
+      "definition": "Conditions must be recognized and diagnosed during an active clinical encounter.",
+      "numerator": 0,
+      "denominator": 536,
+      "synthetic_estimate": 0.0,
+      "reference_estimate": 0.0,
+      "difference": 0.0,
+      "relative_difference": 0.0,
+      "confidence_interval": null,
+      "acceptance_threshold": {
+        "allowed_violations": 0
+      },
+      "status": "PASS",
+      "provenance_id": "SYNAPSE_CORE_INVARIANT",
+      "verification_status": "VERIFIED",
+      "known_limitations": "Requires foreign key condition.encounter_id -> encounters.encounter_id."
+    },
+    {
+      "metric_id": "inv_allergy_safety_veto",
+      "metric_name": "Clinical Safety Invariant: Zero Contraindicated Prescriptions",
+      "dimension": "INVARIANTS",
+      "definition": "Verifies that no patient is prescribed a medication to which they have a documented allergy.",
+      "numerator": 0,
+      "denominator": 536,
+      "synthetic_estimate": 0.0,
+      "reference_estimate": 0.0,
+      "difference": 0.0,
+      "relative_difference": 0.0,
+      "confidence_interval": null,
+      "acceptance_threshold": {
+        "allowed_violations": 0
+      },
+      "status": "PASS",
+      "provenance_id": "CLINICAL_SAFETY_MANDATE",
+      "verification_status": "VERIFIED",
+      "known_limitations": "Evaluates allergy constraints against medication names."
+    },
+    {
+      "metric_id": "demo_sex_distribution",
+      "metric_name": "Demographic Fidelity: Male Sex Proportion",
+      "dimension": "DEMOGRAPHICS",
+      "definition": "Percentage of cohort that is male compared to Census SRS 2021 reference.",
+      "numerator": 260,
+      "denominator": 500,
+      "synthetic_estimate": 52.0,
+      "reference_estimate": 51.5,
+      "difference": 0.5,
+      "relative_difference": 0.0097,
+      "confidence_interval": [
+        47.62,
+        56.35
+      ],
+      "acceptance_threshold": {
+        "pass_abs_diff_max": 5.0,
+        "warning_abs_diff_max": 10.0
+      },
+      "status": "PASS",
+      "provenance_id": "SRS_2021_DEMO",
+      "verification_status": "VERIFIED",
+      "known_limitations": "Natural sex ratio in India is ~51.5% male. Small sample sizes may have higher random variance."
+    },
+    {
+      "metric_id": "demo_age_pyramid_jsd",
+      "metric_name": "Demographic Fidelity: Age Pyramid Jensen-Shannon Divergence",
+      "dimension": "DEMOGRAPHICS",
+      "definition": "JSD (base 2) between synthetic age distribution and SRS 2021 5-band reference pyramid.",
+      "numerator": null,
+      "denominator": 500,
+      "synthetic_estimate": 0.00312,
+      "reference_estimate": 0.0,
+      "difference": 0.00312,
+      "relative_difference": null,
+      "confidence_interval": null,
+      "acceptance_threshold": {
+        "pass_jsd_max": 0.05,
+        "warning_jsd_max": 0.15,
+        "total_variation_distance": 0.048,
+        "chi_square_stat": 8.0286,
+        "chi_square_df": 4,
+        "chi_square_p_value": 0.09054,
+        "chi_square_was_pooled": false,
+        "cramers_v": 0.0634
+      },
+      "status": "PASS",
+      "provenance_id": "SRS_2021_DEMO",
+      "verification_status": "VERIFIED",
+      "known_limitations": "Evaluated over 5 broad SRS census intervals. Small cohorts (<100) experience expected stochastic dispersion."
+    },
+    {
+      "metric_id": "demo_age_by_sex_jsd",
+      "metric_name": "Demographic Fidelity: Age-by-Sex Joint Distribution JSD",
+      "dimension": "DEMOGRAPHICS",
+      "definition": "Jensen-Shannon Divergence across 10 age-by-sex joint strata compared to SRS 2021 Statement 19.",
+      "numerator": null,
+      "denominator": 500,
+      "synthetic_estimate": 0.00502,
+      "reference_estimate": 0.0,
+      "difference": 0.00502,
+      "relative_difference": null,
+      "confidence_interval": null,
+      "acceptance_threshold": {
+        "pass_jsd_max": 0.08,
+        "warning_jsd_max": 0.2,
+        "tvd": 0.0553
+      },
+      "status": "PASS",
+      "provenance_id": "SRS_2021_DEMO",
+      "verification_status": "VERIFIED",
+      "known_limitations": "Requires adequate cohort sample size across all 10 cells to avoid small-sample bin bias."
+    },
+    {
+      "metric_id": "prev_hypertension_adults",
+      "metric_name": "Disease Prevalence: Essential Hypertension (Adults >= 20)",
+      "dimension": "PREVALENCE",
+      "definition": "Prevalence of essential hypertension (I10) among eligible adults (age >= 20) vs ICMR-INDIAB 2023.",
+      "numerator": 134,
+      "denominator": 341,
+      "synthetic_estimate": 39.3,
+      "reference_estimate": 30.7,
+      "difference": 8.6,
+      "relative_difference": 0.2801,
+      "confidence_interval": [
+        34.26,
+        44.57
+      ],
+      "acceptance_threshold": {
+        "pass_abs_diff_max": 8.0,
+        "warning_abs_diff_max": 15.0,
+        "crude_cohort_cases": 134,
+        "crude_cohort_prevalence_pct": 26.8
+      },
+      "status": "WARNING",
+      "provenance_id": "ICMR_INDIAB_2023_HTN",
+      "verification_status": "VERIFIED",
+      "known_limitations": "Denominator is restricted strictly to adults age >= 20 to match ICMR-INDIAB sampling criteria."
+    },
+    {
+      "metric_id": "prev_diabetes_t2_adults",
+      "metric_name": "Disease Prevalence: Type 2 Diabetes Mellitus (Adults >= 20)",
+      "dimension": "PREVALENCE",
+      "definition": "Prevalence of Type 2 Diabetes (E11.9) among eligible adults (age >= 20) vs ICMR-INDIAB 2023.",
+      "numerator": 31,
+      "denominator": 341,
+      "synthetic_estimate": 9.09,
+      "reference_estimate": 11.4,
+      "difference": -2.31,
+      "relative_difference": 0.2026,
+      "confidence_interval": [
+        6.48,
+        12.61
+      ],
+      "acceptance_threshold": {
+        "pass_abs_diff_max": 6.0,
+        "warning_abs_diff_max": 12.0,
+        "crude_cohort_cases": 31,
+        "crude_cohort_prevalence_pct": 6.2
+      },
+      "status": "PASS",
+      "provenance_id": "ICMR_INDIAB_2023_T2D",
+      "verification_status": "VERIFIED",
+      "known_limitations": "Denominator is restricted strictly to adults age >= 20. Excludes pediatric patients."
+    },
+    {
+      "metric_id": "prev_urti_14day_point",
+      "metric_name": "Disease Prevalence: Acute URTI 14-Day Point Prevalence (All Ages)",
+      "dimension": "PREVALENCE",
+      "definition": "14-day recall point prevalence of active acute URTI (J06.9) vs NHP India 2020 baseline.",
+      "numerator": 24,
+      "denominator": 500,
+      "synthetic_estimate": 4.8,
+      "reference_estimate": 8.5,
+      "difference": -3.7,
+      "relative_difference": 0.4353,
+      "confidence_interval": [
+        3.25,
+        7.04
+      ],
+      "acceptance_threshold": {
+        "pass_abs_diff_max": 6.0,
+        "warning_abs_diff_max": 10.0
+      },
+      "status": "PASS",
+      "provenance_id": "NHP_INDIA_URTI_2020",
+      "verification_status": "VERIFIED",
+      "known_limitations": "Requires filtering for active, non-resolved infection episodes within a 14-day evaluation window."
+    },
+    {
+      "metric_id": "prev_urti_cumulative_attack_rate",
+      "metric_name": "Disease Attack Rate: Acute URTI 2-Year Cumulative Attack Rate (All Ages)",
+      "dimension": "PREVALENCE",
+      "definition": "2-year cumulative attack rate of acute URTI (J06.9) across entire cohort vs NHP/IDSP surveillance baseline.",
+      "numerator": 371,
+      "denominator": 500,
+      "synthetic_estimate": 74.2,
+      "reference_estimate": 70.0,
+      "difference": 4.2,
+      "relative_difference": 0.06,
+      "confidence_interval": [
+        70.19,
+        77.84
+      ],
+      "acceptance_threshold": {
+        "pass_abs_diff_max": 12.0,
+        "warning_abs_diff_max": 20.0
+      },
+      "status": "PASS",
+      "provenance_id": "NHP_INDIA_URTI_2020",
+      "verification_status": "VERIFIED",
+      "known_limitations": "Cumulative attack rate over 24-month horizon. Derived from quarterly infection hazards."
+    },
+    {
+      "metric_id": "comorb_htn_in_t2d",
+      "metric_name": "Comorbidity: Hypertension Prevalence in Patients with Type 2 Diabetes",
+      "dimension": "COMORBIDITY",
+      "definition": "Conditional prevalence P(HTN|T2D) among adults >= 20 vs ICMR-INDIAB 2023 benchmark.",
+      "numerator": 15,
+      "denominator": 31,
+      "synthetic_estimate": 48.39,
+      "reference_estimate": 50.1,
+      "difference": -1.71,
+      "relative_difference": 0.0341,
+      "confidence_interval": [
+        31.97,
+        65.16
+      ],
+      "acceptance_threshold": {
+        "pass_abs_diff_max": 15.0,
+        "warning_abs_diff_max": 25.0,
+        "joint_prevalence_pct": 4.4,
+        "expected_joint_prevalence_pct": 3.57,
+        "observed_to_expected_ratio": 1.2313,
+        "odds_ratio": 1.5047,
+        "odds_ratio_95_ci": [
+          0.7175,
+          3.1559
+        ]
+      },
+      "status": "PASS",
+      "provenance_id": "ICMR_INDIAB_2023_HTN",
+      "verification_status": "VERIFIED",
+      "known_limitations": "Evaluated strictly on adults with diagnosed T2D. If no synthetic patient develops T2D, status is NOT_APPLICABLE."
+    },
+    {
+      "metric_id": "long_encounters_per_pt_year",
+      "metric_name": "Longitudinal: Encounters Per Patient-Year",
+      "dimension": "LONGITUDINAL",
+      "definition": "Average number of clinical encounters generated per patient-year of observation.",
+      "numerator": 945,
+      "denominator": 1000,
+      "synthetic_estimate": 0.94,
+      "reference_estimate": 1.5,
+      "difference": -0.56,
+      "relative_difference": 0.3733,
+      "confidence_interval": null,
+      "acceptance_threshold": {
+        "plausible_range": [
+          0.2,
+          5.0
+        ]
+      },
+      "status": "PASS",
+      "provenance_id": "NSS_75TH_ROUND_OPD",
+      "verification_status": "UNVERIFIED",
+      "known_limitations": "Facility discrete-event simulation captures scheduled outpatient visits and episodic visits."
+    },
+    {
+      "metric_id": "long_inter_encounter_interval_days",
+      "metric_name": "Longitudinal: Mean Days Between Clinical Encounters",
+      "dimension": "LONGITUDINAL",
+      "definition": "Mean interval in days between consecutive clinical encounters for multi-visit patients.",
+      "numerator": 80080,
+      "denominator": 543,
+      "synthetic_estimate": 147.5,
+      "reference_estimate": 180.0,
+      "difference": -32.5,
+      "relative_difference": 0.1806,
+      "confidence_interval": null,
+      "acceptance_threshold": {
+        "median_days": 185.7,
+        "multi_visit_patient_count": 150
+      },
+      "status": "PASS",
+      "provenance_id": "ICMR_TREATMENT_GUIDELINES",
+      "verification_status": "UNVERIFIED",
+      "known_limitations": "Clinical modules use configured surveillance delays (e.g., 90d, 180d, 365d)."
+    },
+    {
+      "metric_id": "long_crude_mortality_rate",
+      "metric_name": "Longitudinal: Annualized Crude Mortality Rate",
+      "dimension": "LONGITUDINAL",
+      "definition": "Annual deaths per patient-year compared to Census SRS Abridged Life Table 2016-2020.",
+      "numerator": 2,
+      "denominator": 1000,
+      "synthetic_estimate": 0.002,
+      "reference_estimate": 0.006,
+      "difference": -0.004,
+      "relative_difference": 0.6667,
+      "confidence_interval": null,
+      "acceptance_threshold": {
+        "deaths_count": 2,
+        "patient_years": 1000.7
+      },
+      "status": "PASS",
+      "provenance_id": "SRS_2016_2020_LIFE_TABLE",
+      "verification_status": "VERIFIED",
+      "known_limitations": "Short simulation windows (e.g. 2 years) in small cohorts exhibit expected binomial variance."
+    },
+    {
+      "metric_id": "rx_firstline_hypertension",
+      "metric_name": "Treatment Guideline Alignment: First-Line Antihypertensive Therapy",
+      "dimension": "TREATMENT",
+      "definition": "Percentage of diagnosed hypertension cases prescribed first-line CCB (Amlodipine) or ARB.",
+      "numerator": 134,
+      "denominator": 134,
+      "synthetic_estimate": 100.0,
+      "reference_estimate": 100.0,
+      "difference": 0.0,
+      "relative_difference": 0.0,
+      "confidence_interval": null,
+      "acceptance_threshold": {
+        "min_conformance_pct": 80.0
+      },
+      "status": "PASS",
+      "provenance_id": "ICMR_STG_HYPERTENSION_2022",
+      "verification_status": "VERIFIED",
+      "known_limitations": "Assumes uncomplicated stage 1/2 essential hypertension indicated for calcium channel blocker."
+    },
+    {
+      "metric_id": "rx_firstline_diabetes",
+      "metric_name": "Treatment Guideline Alignment: First-Line Oral Hypoglycemic Therapy",
+      "dimension": "TREATMENT",
+      "definition": "Percentage of diagnosed Type 2 Diabetes cases prescribed first-line Biguanide (Metformin).",
+      "numerator": 31,
+      "denominator": 31,
+      "synthetic_estimate": 100.0,
+      "reference_estimate": 100.0,
+      "difference": 0.0,
+      "relative_difference": 0.0,
+      "confidence_interval": null,
+      "acceptance_threshold": {
+        "min_conformance_pct": 80.0
+      },
+      "status": "PASS",
+      "provenance_id": "ICMR_STG_DIABETES_2022",
+      "verification_status": "VERIFIED",
+      "known_limitations": "Guideline recommends Metformin monotherapy as universal initial pharmacotherapy."
+    },
+    {
+      "metric_id": "rx_adherence_assumption",
+      "metric_name": "Treatment Pattern: Perfect Adherence Assumption Disclosure",
+      "dimension": "TREATMENT",
+      "definition": "Formal disclosure documenting that simulated patient adherence to dispensed pharmacotherapy is 100%.",
+      "numerator": null,
+      "denominator": null,
+      "synthetic_estimate": 100.0,
+      "reference_estimate": null,
+      "difference": null,
+      "relative_difference": null,
+      "confidence_interval": null,
+      "acceptance_threshold": {
+        "assumed_adherence_percent": 100.0
+      },
+      "status": "UNVERIFIED",
+      "provenance_id": "SYNAPSE_SIMULATION_ASSUMPTION",
+      "verification_status": "UNVERIFIED",
+      "known_limitations": "Real-world non-communicable disease medication adherence in India is ~40-60%. Simulation assumes 100% adherence."
+    }
+  ],
+  "dimension_summaries": {
+    "INVARIANTS": {
+      "total": 4,
+      "pass": 4,
+      "warning": 0,
+      "fail": 0,
+      "unverified": 0
+    },
+    "DEMOGRAPHICS": {
+      "total": 3,
+      "pass": 3,
+      "warning": 0,
+      "fail": 0,
+      "unverified": 0
+    },
+    "PREVALENCE": {
+      "total": 4,
+      "pass": 3,
+      "warning": 1,
+      "fail": 0,
+      "unverified": 0
+    },
+    "COMORBIDITY": {
+      "total": 1,
+      "pass": 1,
+      "warning": 0,
+      "fail": 0,
+      "unverified": 0
+    },
+    "LONGITUDINAL": {
+      "total": 3,
+      "pass": 3,
+      "warning": 0,
+      "fail": 0,
+      "unverified": 0
+    },
+    "TREATMENT": {
+      "total": 3,
+      "pass": 2,
+      "warning": 0,
+      "fail": 0,
+      "unverified": 1
+    }
+  }
+}

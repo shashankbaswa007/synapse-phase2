@@ -1,0 +1,12 @@
+conditions.csv: condition_id,patient_id,encounter_id,condition_code,condition_name,status
+encounters.csv: encounter_id,patient_id,journey_id,doctor_id,start_time,end_time,status,chief_complaint
+events.csv: event_id,patient_id,encounter_id,event_type,source_department,timestamp,status
+generation_summary.csv: metric_name,metric_value
+invoices.csv: invoice_id,patient_id,encounter_id,total_amount,status,created_at
+journey_traces.csv: journey_id,patient_id,scenario_id,status,started_at,completed_at,step_count
+labs.csv: lab_id,patient_id,encounter_id,test_name,result,is_abnormal,completed_at,status
+medications.csv: medication_id,patient_id,encounter_id,condition_id,drug_name,drug_class,dosage,frequency,source,evidence_ids,status
+patients.csv: patient_id,name,age,gender,blood_group,insurance_type,status
+payments.csv: payment_id,invoice_id,patient_id,amount,payment_method,timestamp,status
+radiology.csv: radiology_id,patient_id,encounter_id,modality,findings,impression,is_abnormal,completed_at,status
+symptoms.csv: symptom_id,patient_id,encounter_id,condition_id,symptom_name

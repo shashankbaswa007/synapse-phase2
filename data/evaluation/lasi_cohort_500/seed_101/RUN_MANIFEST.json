@@ -1,0 +1,186 @@
+{
+  "manifest_version": "1.0.0",
+  "run_id": "lasi-eval-seed101-n2200-1792591287",
+  "timestamp": "2026-10-21T19:31:27.644722",
+  "git_commit": "3e3ae1d28286e9106659f68aa053465ded9bb3c2",
+  "simulation_parameters": {
+    "total_cohort_size": 2200,
+    "seed": 101,
+    "observation_window_days": 720,
+    "observation_start": "2024-01-01T00:00:00",
+    "observation_end": "2025-12-21T00:00:00",
+    "profile_path": "/Users/shashi/synapse/synapse-phase2/config/population/india_default_v1.yaml",
+    "modules_dir": "/Users/shashi/synapse/synapse-phase2/config/modules",
+    "background_mortality_enabled": true
+  },
+  "demographic_audit": {
+    "total_patients": 2200,
+    "older_adults_count": 553,
+    "older_adults_pct": 25.14,
+    "older_adults_female_count": 262,
+    "older_adults_male_count": 291,
+    "older_adults_female_pct": 47.38,
+    "age_distribution": {
+      "0-14": 553,
+      "15-24": 376,
+      "25-44": 718,
+      "45-64": 413,
+      "65+": 140
+    }
+  },
+  "performance_telemetry": {
+    "simulation_seconds": 3.129,
+    "export_seconds": 1.079,
+    "total_generation_seconds": 4.208,
+    "total_actions_emitted": 11366,
+    "exported_file_count": 16,
+    "peak_memory_mb": 77.36
+  },
+  "exported_file_hashes_sha256": {
+    "care_plans.csv": "b3f226aa0b6b4d63a6e5c15e4b9fda47e154427ffe99518ec75c857b8dc64a43",
+    "conditions.csv": "6dc298ba5724c2d814484ecc6662527905e27fea0b412cf7b1d56b9a93fe7150",
+    "deaths.csv": "cb4c9fdeefde6697e71accfaaea039c60de3be0cee90fa499fc0ed5b27f207ee",
+    "encounters.csv": "d36f22c3e80111c5bdfa3dcc2f655804a874b01e798b6c0a82e5003a9bb85cba",
+    "events.csv": "58eb926874781b99b4fa002c1cbe47498f36340ba43559ca875feff0c15a21b7",
+    "generation_summary.csv": "e8e509bf44545c684929a74a8b29eb23b82e54e882dba873da33fa53862679ee",
+    "invoices.csv": "2f1d4001b78adc830ebeae577cda24abbba11be044837c255ea11585a9731e5c",
+    "journey_traces.csv": "6825c4bb8ab95d39ded492a85098883c81bb402f1403c1e85e81ad8f3c23a245",
+    "labs.csv": "108d77b970776e6d88a1f1ee66dac849b339e92530a7eb3d827390e10dbb85b7",
+    "medications.csv": "c9efa250100df01a2fd06160124523e698d351258c436106e4b01f914bc03438",
+    "observations.csv": "61ba6f286e0168f1350faccd47d1fe0d6a24cb7483eabd3466070e894401d28a",
+    "patient_timeline.csv": "3a0e8d071740b76e0752769bea690e1004edb328f3932fc82b271cde3a26079c",
+    "patients.csv": "a855526404a79989d027597409cf1c435680a1b4a4bf3f8a5921f3a35e9cc2b0",
+    "payments.csv": "e425a99e5a69ec15905dd626bde52054bf874bfae7193b47ad676c2885980c12",
+    "radiology.csv": "2b71576fac1776a0e00aea80b1fb318952d93fb43db85b6cdedf3491b5bdbf5e",
+    "symptoms.csv": "c0cb054ba5b873d33cbcc685c649174402f8f9c94a1378222594ae44467e0e80"
+  },
+  "lasi_evaluation": {
+    "reference_file": "data/evaluation/fixtures/lasi_wave1_sample_fixture.csv",
+    "reference_file_sha256": "f3e3b7a440cd743fb7b02c091bb4fe6ddefb96f907da0ce7a6875c6cd759d5a2",
+    "reference_source_type": "SYNTHETIC_TEST_FIXTURE",
+    "overall_gate_status": "REFERENCE_DATA_PENDING",
+    "calibration_leakage_veto": true,
+    "metric_results": [
+      {
+        "metric_id": "lasi_demo_age_older_adult",
+        "metric_name": "Older Adult Age Distribution (Age >= 45)",
+        "population": "POPULATION_B_OLDER_ADULTS",
+        "synthetic_n": 553,
+        "reference_n": 50,
+        "reference_effective_n": 48.94,
+        "synthetic_estimate": 61.93,
+        "reference_estimate": 64.3,
+        "difference": -2.38,
+        "status": "PASS"
+      },
+      {
+        "metric_id": "lasi_demo_sex_female_pct",
+        "metric_name": "Proportion Female Among Older Adults (Age >= 45)",
+        "population": "POPULATION_B_OLDER_ADULTS",
+        "synthetic_n": 553,
+        "reference_n": 50,
+        "reference_effective_n": 48.94,
+        "synthetic_estimate": 47.38,
+        "reference_estimate": 54.0,
+        "difference": -6.62,
+        "status": "PASS"
+      },
+      {
+        "metric_id": "lasi_demo_pop_a_non_comparable",
+        "metric_name": "Population A General Adults (< 45) Comparability Check",
+        "population": "POPULATION_A_GENERAL_ADULTS",
+        "synthetic_n": 1451,
+        "reference_n": 50,
+        "reference_effective_n": null,
+        "synthetic_estimate": 43.1,
+        "reference_estimate": null,
+        "difference": null,
+        "status": "NOT_COMPARABLE"
+      },
+      {
+        "metric_id": "lasi_bp_sbp_distribution",
+        "metric_name": "Systolic Blood Pressure Continuous Distribution",
+        "population": "POPULATION_B_OLDER_ADULTS",
+        "synthetic_n": 751,
+        "reference_n": 50,
+        "reference_effective_n": 48.94,
+        "synthetic_estimate": 146.15,
+        "reference_estimate": 148.51,
+        "difference": -2.36,
+        "status": "PASS"
+      },
+      {
+        "metric_id": "lasi_bp_sbp_standardized_mean",
+        "metric_name": "Directly Standardized Mean SBP (Census SRS Standard)",
+        "population": "POPULATION_B_OLDER_ADULTS",
+        "synthetic_n": 751,
+        "reference_n": 50,
+        "reference_effective_n": 48.94,
+        "synthetic_estimate": 146.043,
+        "reference_estimate": 141.489,
+        "difference": 4.55,
+        "status": "PASS"
+      },
+      {
+        "metric_id": "lasi_bp_dbp_distribution",
+        "metric_name": "Diastolic Blood Pressure Continuous Distribution",
+        "population": "POPULATION_B_OLDER_ADULTS",
+        "synthetic_n": 0,
+        "reference_n": 50,
+        "reference_effective_n": 48.94,
+        "synthetic_estimate": 0.0,
+        "reference_estimate": 86.6,
+        "difference": null,
+        "status": "INSUFFICIENT_SAMPLE_SIZE"
+      },
+      {
+        "metric_id": "lasi_lab_hba1c_distribution",
+        "metric_name": "HbA1c Distribution Among Older Adults",
+        "population": "POPULATION_B_OLDER_ADULTS",
+        "synthetic_n": 478,
+        "reference_n": 49,
+        "reference_effective_n": null,
+        "synthetic_estimate": 7.91,
+        "reference_estimate": 7.14,
+        "difference": 0.78,
+        "status": "UNVERIFIED"
+      },
+      {
+        "metric_id": "lasi_lab_hba1c_clinical_categories",
+        "metric_name": "HbA1c Clinical Control Categories (<7%, 7-8%, >8%)",
+        "population": "POPULATION_B_OLDER_ADULTS",
+        "synthetic_n": 478,
+        "reference_n": 49,
+        "reference_effective_n": null,
+        "synthetic_estimate": 0.257,
+        "reference_estimate": 0.0,
+        "difference": 0.257,
+        "status": "UNVERIFIED"
+      },
+      {
+        "metric_id": "lasi_prev_htn_older_adult",
+        "metric_name": "Hypertension Prevalence Among Older Adults (Age >= 45)",
+        "population": "POPULATION_B_OLDER_ADULTS",
+        "synthetic_n": 553,
+        "reference_n": 50,
+        "reference_effective_n": 48.94,
+        "synthetic_estimate": 36.53,
+        "reference_estimate": 79.73,
+        "difference": -43.2,
+        "status": "WARNING"
+      },
+      {
+        "metric_id": "lasi_prev_t2d_older_adult",
+        "metric_name": "Type 2 Diabetes Prevalence Among Older Adults (Age >= 45)",
+        "population": "POPULATION_B_OLDER_ADULTS",
+        "synthetic_n": 553,
+        "reference_n": 50,
+        "reference_effective_n": 48.94,
+        "synthetic_estimate": 14.47,
+        "reference_estimate": 56.0,
+        "difference": -41.53,
+        "status": "WARNING"
+      }
+    ]
+  }
+}

@@ -66,7 +66,7 @@ class StateManager:
             patient_state=patient_state,
             entity_state=entity_state,
             resource_state=resource_state,
-            extra_context=proposed_action.payload,
+            extra_context={**proposed_action.payload, **getattr(proposed_action, "extra_context", {})},
         )
 
     def apply_decision(self, decision: DecisionResult) -> bool:

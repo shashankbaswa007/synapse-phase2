@@ -1,0 +1,73 @@
+id: "mod-urti-01"
+name: "Acute Upper Respiratory Tract Infection Pathway"
+version: "1.0.0"
+target_condition: "J06.9"
+description: "Acute self-limiting viral or bacterial respiratory infection, cough manifestation, outpatient presentation, antibiotic prescription, and episode resolution."
+provenance_ids:
+  - "NHP_INDIA_URTI_2020"
+
+initial_state: "Initial"
+
+states:
+  Initial:
+    name: "Initial"
+    type: "Initial"
+    distributed_transition:
+      - to: "AcuteInfectionOnset"
+        weight: 0.15
+        provenance_id: "NHP_INDIA_URTI_2020"
+      - to: "HealthyIntervalDelay"
+        weight: 0.85
+
+  HealthyIntervalDelay:
+    name: "HealthyIntervalDelay"
+    type: "Delay"
+    delay_days: 90
+    direct_transition: "Initial"
+
+  AcuteInfectionOnset:
+    name: "AcuteInfectionOnset"
+    type: "ConditionOnset"
+    condition_code: "J06.9"
+    condition_name: "Acute upper respiratory infection, unspecified"
+    direct_transition: "DevelopCoughSymptom"
+
+  DevelopCoughSymptom:
+    name: "DevelopCoughSymptom"
+    type: "Symptom"
+    symptom_name: "Cough"
+    symptom_severity: 0.7
+    direct_transition: "AcuteCareEncounter"
+
+  AcuteCareEncounter:
+    name: "AcuteCareEncounter"
+    type: "Encounter"
+    encounter_type: "outpatient"
+    encounter_reason: "Acute Respiratory Symptoms Consultation"
+    direct_transition: "PrescribeAntibiotic"
+
+  PrescribeAntibiotic:
+    name: "PrescribeAntibiotic"
+    type: "MedicationOrder"
+    drug_code: "AMOX-500"
+    drug_name: "Amoxicillin"
+    drug_class: "Beta-Lactam"
+    dosage: "500mg"
+    frequency: "Three Times Daily"
+    direct_transition: "InfectionResolutionDelay"
+
+  InfectionResolutionDelay:
+    name: "InfectionResolutionDelay"
+    type: "Delay"
+    delay_days: 10
+    direct_transition: "ResolveInfection"
+
+  ResolveInfection:
+    name: "ResolveInfection"
+    type: "ConditionEnd"
+    condition_code: "J06.9"
+    direct_transition: "EpisodeConcluded"
+
+  EpisodeConcluded:
+    name: "EpisodeConcluded"
+    type: "Terminal"

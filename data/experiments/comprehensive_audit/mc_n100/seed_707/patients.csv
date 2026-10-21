@@ -1,0 +1,101 @@
+patient_id,name,age,gender,blood_group,insurance_type,status
+pat-57895a2a,Derek Gray,35,Male,O+,General,Active
+pat-d6d3d63f,Debbie Knight,48,Female,O+,Private,Active
+pat-561e5254,Andrea Jones,38,Female,O+,Private,Active
+pat-d568ce69,Jonathan White,19,Male,O+,Corporate,Active
+pat-54b34a7e,Brian Kelly,99,Male,A+,Self-Pay,Active
+pat-d3fdc693,Pamela Duarte,35,Female,A+,General,Active
+pat-534842a8,Robert Thomas,64,Male,A+,General,Active
+pat-d292bebd,Jose Wagner,55,Male,B+,Government,Active
+pat-51dd3ad2,Ashley Garcia,15,Female,O+,Private,Active
+pat-d127b6e7,Herbert Castillo,14,Male,AB+,Corporate,Active
+pat-507232fc,Elizabeth Lopez,7,Female,O+,Corporate,Active
+pat-cfbcaf11,Tina Bullock,39,Female,A+,Government,Active
+pat-4f072b26,Anna Allen,40,Female,O+,General,Active
+pat-ce51a73b,Monica Daniel,38,Female,A+,Government,Active
+pat-4d9c2350,Ashley Benton,28,Female,B+,Private,Active
+pat-cce69f65,Shawn Quinn,20,Male,O+,General,Active
+pat-4c311b7a,Jason Brown,76,Male,A+,Corporate,Active
+pat-cb7b978f,Robert Hickman,44,Male,O+,Self-Pay,Active
+pat-4ac613a4,Corey Walls,2,Male,A+,Corporate,Active
+pat-ca108fb9,Nathan Meyer,24,Male,O+,General,Active
+pat-495b0bce,Phillip Fry,41,Male,O+,Corporate,Active
+pat-c8a587e3,Deborah Hobbs,36,Female,A+,Government,Active
+pat-47f003f8,Arthur Simmons,47,Male,B+,Government,Active
+pat-c73a800d,John Holt,55,Male,B+,General,Active
+pat-4684fc22,Cynthia Lee,53,Female,B+,General,Active
+pat-c5cf7837,Christopher Scott,16,Male,O+,General,Active
+pat-4519f44c,Laura Buchanan,10,Female,AB+,Government,Active
+pat-c4647061,Paul Branch,31,Male,A+,Self-Pay,Active
+pat-43aeec76,Deanna Alexander,9,Female,A+,General,Active
+pat-c2f9688b,Susan Roberson,17,Female,B+,Self-Pay,Active
+pat-4243e4a0,Bonnie Blevins,3,Female,O+,Private,Active
+pat-c18e60b5,Paul Payne,22,Male,O+,Government,Active
+pat-40d8dcca,Kevin Gates,43,Male,O+,General,Active
+pat-c02358df,Heidi Cunningham,10,Female,A+,General,Active
+pat-3f6dd4f4,Miranda Harmon,60,Female,A+,General,Active
+pat-beb85109,David Sanders,13,Male,A+,Government,Active
+pat-3e02cd1e,Ashley Young,33,Female,A+,General,Active
+pat-bd4d4933,Stephen Reeves,39,Male,O+,General,Active
+pat-3c97c548,Mark White,42,Male,B+,Self-Pay,Active
+pat-bbe2415d,Joshua Hodges,11,Male,A+,Corporate,Active
+pat-3b2cbd72,Maria Simmons,47,Female,O+,General,Active
+pat-ba773987,Joel Wilson,9,Male,A+,General,Active
+pat-39c1b59c,Cindy Hughes MD,0,Female,O+,General,Active
+pat-b90c31b1,Curtis James,64,Male,B+,Corporate,Active
+pat-3856adc6,Lisa Lawrence MD,20,Female,B+,Private,Active
+pat-b7a129db,Erin Mckinney,24,Female,A-,Self-Pay,Active
+pat-36eba5f0,Dr. Patricia Smith DVM,62,Female,O+,General,Active
+pat-b6362205,Madeline Price,0,Female,O+,Private,Active
+pat-35809e1a,Ricky Trujillo,19,Male,O+,General,Active
+pat-b4cb1a2f,Hannah Wyatt,37,Female,A+,Private,Active
+pat-34159644,Darrell Pollard,9,Male,A+,Corporate,Active
+pat-b3601259,Mr. Robert Holland DDS,18,Male,AB+,Government,Active
+pat-32aa8e6e,Dr. Elizabeth White,29,Female,A+,Private,Active
+pat-b1f50a83,Kelly Gibson,36,Female,A+,General,Active
+pat-313f8698,James Johnson,28,Male,B+,General,Active
+pat-b08a02ad,Justin Franklin,7,Male,AB+,General,Active
+pat-2fd47ec2,Cathy Palmer,39,Female,O+,Government,Active
+pat-af1efad7,Joseph Cox,41,Male,AB+,General,Active
+pat-2e6976ec,Daniel Hall,29,Male,A+,Government,Active
+pat-adb3f301,Alicia Murray,52,Female,B+,Government,Active
+pat-2cfe6f16,Michael Gay,12,Male,O+,Government,Active
+pat-ac48eb2b,Betty Smith,14,Female,A+,Private,Active
+pat-2b936740,Joseph Phillips MD,13,Male,A+,General,Active
+pat-aadde355,Mr. Peter Gonzales MD,24,Male,AB+,Private,Active
+pat-2a285f6a,Andrea Knox,14,Female,B+,General,Active
+pat-a972db7f,Brian Johnson,4,Male,A+,General,Active
+pat-28bd5794,David Levy,1,Male,A+,Corporate,Active
+pat-a807d3a9,Robert Reed,85,Male,A-,Private,Active
+pat-27524fbe,Richard Jackson,30,Male,O+,Private,Active
+pat-a69ccbd3,David Montes,44,Male,A+,Government,Active
+pat-25e747e8,Ashley Obrien,38,Female,O+,Government,Active
+pat-a531c3fd,Carl Moran,57,Male,O+,Corporate,Active
+pat-247c4012,Michael Sanders,34,Male,B+,Government,Active
+pat-a3c6bc27,Amy Figueroa,30,Female,A+,Private,Active
+pat-2311383c,Paul Meyer,40,Male,B+,Government,Active
+pat-a25bb451,Rita Weiss,79,Female,B+,Self-Pay,Active
+pat-21a63066,Heidi Haynes MD,9,Female,O+,Self-Pay,Active
+pat-a0f0ac7b,Ronnie Schaefer,19,Male,O+,General,Active
+pat-203b2890,Susan Wilson,44,Female,A+,Private,Active
+pat-9f85a4a5,Anthony Oconnor,58,Male,A+,Corporate,Active
+pat-1ed020ba,Ashley Rodriguez MD,41,Female,O-,General,Active
+pat-9e1a9ccf,Chris Roberts,41,Male,O+,Government,Active
+pat-1d6518e4,Jeffrey Taylor,54,Male,B+,Private,Active
+pat-9caf94f9,Anthony Horton,6,Male,O+,Corporate,Active
+pat-1bfa110e,Kristina Morgan,5,Female,B+,Private,Active
+pat-9b448d23,James Davila,63,Male,AB+,General,Active
+pat-1a8f0938,Steven Peters,28,Male,O+,Government,Active
+pat-99d9854d,Robert Davis,16,Male,B+,Government,Active
+pat-19240162,Victor Williams,34,Male,O+,Self-Pay,Active
+pat-986e7d77,Gary Miller,26,Male,A+,Self-Pay,Active
+pat-17b8f98c,Christopher Gonzalez,32,Male,B+,Government,Active
+pat-970375a1,Raven Smith,7,Female,O+,Private,Active
+pat-164df1b6,Jose Raymond,85,Male,B+,General,Active
+pat-95986dcb,Jordan Ortiz,8,Male,A+,Government,Active
+pat-14e2e9e0,John Rodriguez,54,Male,B+,General,Active
+pat-942d65f5,Tiffany Mckenzie,9,Female,O+,General,Active
+pat-1377e20a,Alan Alexander,28,Male,A+,Corporate,Active
+pat-92c25e1f,Latoya Mayo,6,Female,B+,Corporate,Active
+pat-120cda34,Caleb Page,6,Male,O-,General,Active
+pat-91575649,Troy Galvan,33,Male,O+,General,Active

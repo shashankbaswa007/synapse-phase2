@@ -1,0 +1,21 @@
+patient_id,name,age,gender,blood_group,insurance_type,status
+pat-49a8c44b,Jonathan Campbell,4,Male,O+,General,Active
+pat-c8f34060,Sheri Robinson,25,Female,A+,General,Active
+pat-483dbc75,Anthony Manning,12,Male,A+,Government,Active
+pat-c788388a,Marie Johnson,4,Female,O+,General,Active
+pat-46d2b49f,Timothy Thompson,48,Male,A+,General,Active
+pat-c61d30b4,Andrew Robertson,30,Male,B+,Corporate,Active
+pat-4567acc9,Melissa Clark,18,Female,O+,Government,Active
+pat-c4b228de,Amy Reid,8,Female,A+,General,Active
+pat-43fca4f3,Emily Walker,49,Female,O+,Corporate,Active
+pat-c3472108,Kristina Owen,42,Female,B+,Self-Pay,Active
+pat-42919d1d,Jennifer Caldwell,54,Female,A+,Government,Active
+pat-c1dc1932,Jonathan Green,54,Male,B+,General,Active
+pat-41269547,Crystal Adams,8,Female,AB-,Private,Active
+pat-c071115c,Eric King,23,Male,O+,General,Active
+pat-3fbb8d71,David Wang,47,Male,A+,Private,Active
+pat-bf060986,Darrell Wilkins,6,Male,B+,General,Active
+pat-3e50859b,Karen Bennett,3,Female,B+,Corporate,Active
+pat-bd9b01b0,Amanda Summers,8,Female,A+,General,Active
+pat-3ce57dc5,Samantha Schneider,0,Female,A+,Self-Pay,Active
+pat-bc2ff9da,Samuel Henderson,4,Male,AB+,Private,Active

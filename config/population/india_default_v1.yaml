@@ -1,0 +1,152 @@
+schema_version: "1.0.0"
+metadata:
+  id: "pop-in-default-v1"
+  name: "India National Representative Synthetic Baseline"
+  version: "1.0.0"
+  target_geography: "IN"
+  reference_year: 2021
+  description: "National demographic and epidemiological baseline calibrated to Census of India SRS 2021 and ICMR-INDIAB 2023."
+
+provenance_catalog:
+  SRS_2021_DEMO:
+    provenance_id: "SRS_2021_DEMO"
+    title: "Sample Registration System Statistical Report 2021"
+    publisher: "Office of the Registrar General & Census Commissioner, India"
+    year: 2021
+    source_type: "GOVERNMENT_CENSUS"
+    url_or_ref: "https://censusindia.gov.in/nada/index.php/catalog/44377"
+    geography: "IN"
+    is_assumption: false
+    notes: "Official population age-sex distribution for India."
+
+  ICMR_INDIAB_2023_HTN:
+    provenance_id: "ICMR_INDIAB_2023_HTN"
+    title: "Metabolic non-communicable disease health report of India: the ICMR-INDIAB national cross-sectional study (ICMR-INDIAB-17)"
+    publisher: "The Lancet Diabetes & Endocrinology"
+    year: 2023
+    source_type: "PEER_REVIEWED_STUDY"
+    url_or_ref: "Lancet Diabetes Endocrinol. 2023 Jul;11(7):474-489. doi: 10.1016/S2213-8587(23)00119-5"
+    geography: "IN"
+    sample_size: 113043
+    is_assumption: false
+    notes: "Weighted national prevalence of hypertension in adults >=20 years: 30.7%."
+
+  ICMR_INDIAB_2023_T2D:
+    provenance_id: "ICMR_INDIAB_2023_T2D"
+    title: "Metabolic non-communicable disease health report of India: the ICMR-INDIAB national cross-sectional study (ICMR-INDIAB-17)"
+    publisher: "The Lancet Diabetes & Endocrinology"
+    year: 2023
+    source_type: "PEER_REVIEWED_STUDY"
+    url_or_ref: "Lancet Diabetes Endocrinol. 2023 Jul;11(7):474-489. doi: 10.1016/S2213-8587(23)00119-5"
+    geography: "IN"
+    sample_size: 113043
+    is_assumption: false
+    notes: "Weighted national prevalence of diabetes in adults >=20 years: 11.4%."
+
+  NHP_INDIA_URTI_2020:
+    provenance_id: "NHP_INDIA_URTI_2020"
+    title: "National Health Portal India - Acute Respiratory Infections Baseline"
+    publisher: "Ministry of Health and Family Welfare, Government of India"
+    year: 2020
+    source_type: "GOVERNMENT_CENSUS"
+    url_or_ref: "https://www.nhp.gov.in/disease/respiratory/upper-respiratory-tract-infection"
+    geography: "IN"
+    is_assumption: false
+    notes: "Baseline episodic acute respiratory illness rate."
+
+  SRS_2016_2020_LIFE_TABLE:
+    provenance_id: "SRS_2016_2020_LIFE_TABLE"
+    title: "SRS Based Abridged Life Tables 2016-2020"
+    publisher: "Office of the Registrar General & Census Commissioner, India"
+    year: 2022
+    source_type: "GOVERNMENT_CENSUS"
+    url_or_ref: "Census of India SRS Life Table 2016-20"
+    geography: "IN"
+    is_assumption: false
+    notes: "Empirical age-stratified annual probability of death qx."
+
+demographics:
+  age_provenance_id: "SRS_2021_DEMO"
+  age_bands:
+    - min_age: 0
+      max_age: 14
+      weight: 0.252
+    - min_age: 15
+      max_age: 24
+      weight: 0.178
+    - min_age: 25
+      max_age: 44
+      weight: 0.312
+    - min_age: 45
+      max_age: 64
+      weight: 0.188
+    - min_age: 65
+      max_age: 100
+      weight: 0.070
+  sex_provenance_id: "SRS_2021_DEMO"
+  male_ratio: 0.515
+  female_ratio: 0.485
+
+prevalences:
+  - condition_code: "I10"
+    condition_name: "Essential (primary) hypertension"
+    provenance_id: "ICMR_INDIAB_2023_HTN"
+    min_age: 20
+    max_age: 100
+    prevalence_percent: 30.7
+    male_prevalence_percent: 32.5
+    female_prevalence_percent: 28.8
+    is_acute: false
+
+  - condition_code: "E11.9"
+    condition_name: "Type 2 diabetes mellitus without complications"
+    provenance_id: "ICMR_INDIAB_2023_T2D"
+    min_age: 20
+    max_age: 100
+    prevalence_percent: 11.4
+    male_prevalence_percent: 12.1
+    female_prevalence_percent: 10.7
+    is_acute: false
+
+  - condition_code: "J06.9"
+    condition_name: "Acute upper respiratory infection, unspecified"
+    provenance_id: "NHP_INDIA_URTI_2020"
+    min_age: 0
+    max_age: 100
+    prevalence_percent: 8.5
+    is_acute: true
+    annual_incidence_rate: 0.45
+
+mortality:
+  provenance_id: "SRS_2016_2020_LIFE_TABLE"
+  bands:
+    - min_age: 0
+      max_age: 4
+      qx_annual: 0.0072
+    - min_age: 5
+      max_age: 14
+      qx_annual: 0.0007
+    - min_age: 15
+      max_age: 24
+      qx_annual: 0.0012
+    - min_age: 25
+      max_age: 34
+      qx_annual: 0.0018
+    - min_age: 35
+      max_age: 44
+      qx_annual: 0.0031
+    - min_age: 45
+      max_age: 54
+      qx_annual: 0.0068
+    - min_age: 55
+      max_age: 64
+      qx_annual: 0.0162
+    - min_age: 65
+      max_age: 74
+      qx_annual: 0.0385
+    - min_age: 75
+      max_age: 84
+      qx_annual: 0.0890
+    - min_age: 85
+      max_age: 110
+      qx_annual: 0.1950

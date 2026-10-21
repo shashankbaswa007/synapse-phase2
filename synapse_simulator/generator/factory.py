@@ -7,6 +7,7 @@ import random
 from typing import Optional, Any, Dict
 from datetime import datetime
 
+from synapse_simulator.core.ids import reset as reset_ids
 from synapse_simulator.core.clock import SimulationClock
 from synapse_simulator.core.scheduler import FutureActionScheduler
 from synapse_simulator.core.event_queue import EventQueue
@@ -47,6 +48,8 @@ class SimulationBootstrapFactory:
     ) -> None:
         """Instantiate and wire simulation components into the simulator facade."""
         random.seed(random_seed)
+        # Deterministic identifiers + tie-break sequences: same seed -> same IDs
+        reset_ids(random_seed)
         sim.clock = SimulationClock(start_time or datetime(2026, 1, 1, 8, 0, 0))
         sim.scheduler = FutureActionScheduler()
         sim.event_queue = EventQueue()

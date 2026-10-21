@@ -26,6 +26,13 @@ class PatientContext(BaseModel):
     assigned_doctor_id: Optional[str] = None
     assigned_room_id: Optional[str] = None
     force_conflict: bool = False
+    # Longitudinal fields
+    birth_date: Optional[datetime] = None
+    death_date: Optional[datetime] = None
+    is_alive: bool = True
+    attributes: Dict[str, Any] = Field(default_factory=dict)
+    latent_conditions: Dict[str, Any] = Field(default_factory=dict)
+    baseline_conditions: Dict[str, Dict[str, Any]] = Field(default_factory=dict)
 
 
 class StaffProfile(BaseModel):

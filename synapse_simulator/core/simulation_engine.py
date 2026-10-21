@@ -2,7 +2,6 @@
 Stage 6 Simulation Engine: Time-Driven & Event-Driven Core Execution Engine.
 """
 
-import uuid
 import itertools
 from typing import Dict, Any, List, Optional, Tuple
 from datetime import datetime, timedelta
@@ -14,9 +13,10 @@ from synapse_simulator.core.dispatcher import EventDispatcher
 from synapse_simulator.state.state_manager import StateManager
 from synapse_simulator.rules.rule_engine import RuleEngine
 from synapse_simulator.engine.orchestrator import ExecutionPipeline, ExecutionResult
-from synapse_simulator.state.models import DomainEvent, DecisionStatus, ActionRequest
+from synapse_simulator.state.models import DomainEvent, DecisionStatus, ActionRequest, InputContext, DecisionResult
+from synapse_simulator.core.ids import new_id, next_sequence
 
-_domain_evt_counter = itertools.count()
+
 
 class SimulationEngine:
     """Core Time-Driven & Event-Driven Simulation Engine for Synapse Phase 2."""
@@ -129,6 +129,36 @@ class SimulationEngine:
         if not self.pipeline:
             raise RuntimeError("ExecutionPipeline is required to process scheduled actions")
 
+        pid = action.payload.get("patient_id")
+        if pid:
+            p_state = self.state_manager.get_entity_state("patient.patients", pid)
+            if p_state.get("status") == "Deceased" and action.action_type not in ["RECORD_DEATH", "RecordDeath"]:
+                ctx = InputContext(
+                    simulated_timestamp=self.clock.now(),
+                    scenario_id="SCEN",
+                    scenario_instance_id=action.scenario_instance_id,
+                    patient_journey_id=action.patient_journey_id,
+                    correlation_id=action.correlation_id,
+                    department_id=action.target_department,
+                    proposed_action=action,
+                )
+                decision = DecisionResult(
+                    status=DecisionStatus.BLOCKED,
+                    winning_rule_id="RULE-CORE-DECEASED-GUARD",
+                    winning_rule_priority=100,
+                    reason="Patient is deceased; clinical actions aborted",
+                )
+                return (
+                    ExecutionResult(
+                        success=False,
+                        context=ctx,
+                        decision=decision,
+                        state_applied=False,
+                        causation_depth=scheduled_action.causation_depth,
+                    ),
+                    None,
+                )
+
         result = self.pipeline.execute_action(
             action=action,
             simulated_timestamp=self.clock.now(),
@@ -138,12 +168,12 @@ class SimulationEngine:
             causation_depth=scheduled_action.causation_depth,
         )
 
-        seq_num = next(_domain_evt_counter)
+        seq_num = next_sequence("domain_event")
 
         if result.success and result.decision.status == DecisionStatus.ALLOWED:
             # 1. Create COMMITTED DomainEvent
             domain_event = DomainEvent(
-                event_id=f"evt-{uuid.uuid4().hex[:10]}",
+                event_id=new_id("evt-", 10),
                 event_type=result.emitted_events[0].event_type if result.emitted_events else f"{action.action_type}_Executed",
                 timestamp=self.clock.now(),
                 producer_domain=action.target_department,
@@ -173,8 +203,11 @@ class SimulationEngine:
             # Check if entity moved to terminal state, invalidate future pending actions for it
             entity_state = self.state_manager.get_entity_state(action.target_entity_table, action.target_entity_id)
             current_status = entity_state.get("status")
-            if current_status in ["Cancelled", "Completed", "Archived", "Cancelled_Replaced", "Depleted", "Expired"]:
+            if current_status in ["Cancelled", "Completed", "Archived", "Cancelled_Replaced", "Depleted", "Expired", "Deceased"]:
                 self.scheduler.invalidate_entity_actions(action.target_entity_table, action.target_entity_id)
+                if current_status == "Deceased":
+                    self.scheduler.invalidate_entity_actions("clinical.encounters", action.target_entity_id)
+                    self.scheduler.invalidate_entity_actions("pharmacy.prescriptions", action.target_entity_id)
 
             # Route emitted outbox events to downstream dispatcher
             for outbox_evt in result.emitted_events:
@@ -202,7 +235,7 @@ class SimulationEngine:
                 failure_event_type = "InventoryShortageDetected"
 
             domain_event = DomainEvent(
-                event_id=f"evt-err-{uuid.uuid4().hex[:10]}",
+                event_id=new_id("evt-err-", 10),
                 event_type=failure_event_type,
                 timestamp=self.clock.now(),
                 producer_domain=action.target_department,

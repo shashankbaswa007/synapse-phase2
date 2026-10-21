@@ -1,0 +1,16 @@
+care_plan_id,patient_id,encounter_id,plan_code,plan_name,start_date,end_date,status
+cp-a5569622,pat-9cfd4d76,enc-62b41a14,CP-DIAB-01,Diabetic Lifestyle and Dietary Management Protocol,2024-01-16T09:50:10,,Active
+cp-24a11237,pat-1530a25d,enc-df28867d,CP-DIAB-01,Diabetic Lifestyle and Dietary Management Protocol,2024-01-19T19:32:36,,Active
+cp-a3eb8e4c,pat-ffeb2cd3,enc-575bdb64,CP-DIAB-01,Diabetic Lifestyle and Dietary Management Protocol,2024-01-15T10:06:13,,Active
+cp-23360a61,pat-e93aaf73,enc-5044b436,CP-DIAB-01,Diabetic Lifestyle and Dietary Management Protocol,2024-01-16T21:10:14,,Active
+cp-a2808676,pat-db0c6117,enc-4c039cb4,CP-DIAB-01,Diabetic Lifestyle and Dietary Management Protocol,2024-01-15T02:58:23,,Active
+cp-21cb028b,pat-d3f539e9,enc-4a9894de,CP-DIAB-01,Diabetic Lifestyle and Dietary Management Protocol,2024-01-16T20:01:51,,Active
+cp-a1157ea0,pat-cb730ae5,enc-c878091d,CP-DIAB-01,Diabetic Lifestyle and Dietary Management Protocol,2024-01-16T11:35:43,,Active
+cp-205ffab5,pat-451167a2,enc-47c28532,CP-DIAB-01,Diabetic Lifestyle and Dietary Management Protocol,2024-01-21T21:08:37,,Active
+cp-9faa76ca,pat-ba6eacdd,enc-c5a1f971,CP-DIAB-01,Diabetic Lifestyle and Dietary Management Protocol,2024-01-15T19:51:25,,Active
+cp-1ef4f2df,pat-384e211c,enc-44ec7586,CP-DIAB-01,Diabetic Lifestyle and Dietary Management Protocol,2024-01-20T21:35:48,,Active
+cp-9e3f6ef4,pat-2b8ada96,enc-40ab5e04,CP-DIAB-01,Diabetic Lifestyle and Dietary Management Protocol,2024-01-16T02:22:50,,Active
+cp-1d89eb09,pat-a3be2f7d,enc-3dd54e58,CP-DIAB-01,Diabetic Lifestyle and Dietary Management Protocol,2024-01-21T08:41:28,,Active
+cp-9cd4671e,pat-1bf18464,enc-3aff3eac,CP-DIAB-01,Diabetic Lifestyle and Dietary Management Protocol,2024-01-21T15:14:02,,Active
+cp-1c1ee333,pat-40d05020,enc-59dba5e9,CP-DIAB-01,Diabetic Lifestyle and Dietary Management Protocol,2024-08-06T09:40:37,,Active
+cp-9b695f48,pat-3c8f389e,enc-58709e13,CP-DIAB-01,Diabetic Lifestyle and Dietary Management Protocol,2024-08-10T03:57:21,,Active

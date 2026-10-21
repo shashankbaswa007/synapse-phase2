@@ -1,0 +1,33 @@
+{
+  "manifest_version": "1.0.0",
+  "run_id": "exp-seed42-n500-1792577327",
+  "timestamp": "2026-10-21T15:38:47.205853",
+  "git_commit": "3e3ae1d28286e9106659f68aa053465ded9bb3c2",
+  "configuration": {
+    "cohort_size": 500,
+    "seed": 42,
+    "observation_start": "2024-01-01T00:00:00",
+    "observation_end": "2025-01-01T00:00:00",
+    "timestep_days": 7,
+    "profile_path": "/Users/shashi/synapse/synapse-phase2/config/population/india_default_v1.yaml",
+    "output_dir": "data/experiments/comprehensive_audit/sensitivity_duration/12_months"
+  },
+  "performance_telemetry": {
+    "simulation_seconds": 0.413,
+    "export_seconds": 0.184,
+    "total_generation_seconds": 0.597,
+    "total_actions_emitted": 1616,
+    "exported_file_count": 16,
+    "peak_memory_mb": 49.66,
+    "evaluation_seconds": 0.011
+  },
+  "evaluation_verdict": {
+    "overall_status": "WARNING",
+    "invariants_passed": true,
+    "total_metrics": 18,
+    "passed_metrics": 15,
+    "warning_metrics": 2,
+    "failed_metrics": 0,
+    "unverified_metrics": 1
+  }
+}

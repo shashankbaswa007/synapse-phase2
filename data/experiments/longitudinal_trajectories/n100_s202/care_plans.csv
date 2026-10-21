@@ -1,0 +1,27 @@
+care_plan_id,patient_id,encounter_id,plan_code,plan_name,start_date,end_date,status
+cp-22866075,pat-ca7c56fb,enc-f6d23d63,CP-HTN-01,Hypertension Lifestyle and Salt Restriction Protocol,2024-01-16T02:27:52,,Active
+cp-a1d0dc8a,pat-c7a6474f,enc-761cb978,CP-HTN-01,Hypertension Lifestyle and Salt Restriction Protocol,2024-01-19T17:15:51,,Active
+cp-211b589f,pat-c63b3f79,enc-f567358d,CP-HTN-01,Hypertension Lifestyle and Salt Restriction Protocol,2024-01-20T12:54:20,,Active
+cp-a065d4b4,pat-bf24184b,enc-74b1b1a2,CP-DIAB-01,Diabetic Lifestyle and Dietary Management Protocol,2024-01-17T21:12:58,,Active
+cp-1fb050c9,pat-3b9884b4,enc-f3fc2db7,CP-HTN-01,Hypertension Lifestyle and Salt Restriction Protocol,2024-01-21T13:46:14,,Active
+cp-9efaccde,pat-b977f8f3,enc-7346a9cc,CP-HTN-01,Hypertension Lifestyle and Salt Restriction Protocol,2024-01-15T04:38:55,,Active
+cp-1e4548f3,pat-331655b0,enc-f29125e1,CP-HTN-01,Hypertension Lifestyle and Salt Restriction Protocol,2024-01-20T16:19:29,,Active
+cp-9d8fc508,pat-b0f5c9ef,enc-71dba1f6,CP-HTN-01,Hypertension Lifestyle and Salt Restriction Protocol,2024-01-16T09:04:14,,Active
+cp-1cda411d,pat-af8ac219,enc-70709a20,CP-HTN-01,Hypertension Lifestyle and Salt Restriction Protocol,2024-01-21T23:55:55,,Active
+cp-9c24bd32,pat-af8ac219,enc-70709a20,CP-DIAB-01,Diabetic Lifestyle and Dietary Management Protocol,2024-01-19T09:25:07,,Active
+cp-1b6f3947,pat-a59d8b3f,enc-efbb1635,CP-HTN-01,Hypertension Lifestyle and Salt Restriction Protocol,2024-01-21T23:02:33,,Active
+cp-9ab9b55c,pat-24e80754,enc-6f05924a,CP-HTN-01,Hypertension Lifestyle and Salt Restriction Protocol,2024-01-16T18:16:32,,Active
+cp-1a043171,pat-a4328369,enc-6d9a8a74,CP-HTN-01,Hypertension Lifestyle and Salt Restriction Protocol,2024-01-18T06:46:53,,Active
+cp-994ead86,pat-a4328369,enc-6d9a8a74,CP-DIAB-01,Diabetic Lifestyle and Dietary Management Protocol,2024-01-17T12:44:04,,Active
+cp-1899299b,pat-a2c77b93,enc-ece50689,CP-HTN-01,Hypertension Lifestyle and Salt Restriction Protocol,2024-01-21T05:14:25,,Active
+cp-97e3a5b0,pat-a15c73bd,enc-6c2f829e,CP-HTN-01,Hypertension Lifestyle and Salt Restriction Protocol,2024-01-17T00:44:08,,Active
+cp-172e21c5,pat-1f3be7fc,enc-eb79feb3,CP-HTN-01,Hypertension Lifestyle and Salt Restriction Protocol,2024-01-16T22:32:06,,Active
+cp-96789dda,pat-1c65d850,enc-6ac47ac8,CP-HTN-01,Hypertension Lifestyle and Salt Restriction Protocol,2024-01-20T23:44:44,,Active
+cp-15c319ef,pat-1afad07a,enc-695972f2,CP-HTN-01,Hypertension Lifestyle and Salt Restriction Protocol,2024-01-17T04:55:27,,Active
+cp-950d9604,pat-1afad07a,enc-695972f2,CP-DIAB-01,Diabetic Lifestyle and Dietary Management Protocol,2024-01-16T13:20:21,,Active
+cp-14581219,pat-9a454c8f,enc-e8a3ef07,CP-DIAB-01,Diabetic Lifestyle and Dietary Management Protocol,2024-01-20T18:15:13,,Active
+cp-93a28e2e,pat-1824c0ce,enc-67ee6b1c,CP-HTN-01,Hypertension Lifestyle and Salt Restriction Protocol,2024-01-16T19:06:50,,Active
+cp-12ed0a43,pat-16b9b8f8,enc-e738e731,CP-DIAB-01,Diabetic Lifestyle and Dietary Management Protocol,2024-01-16T05:31:55,,Active
+cp-92378658,pat-8aabf65d,enc-66836346,CP-HTN-01,Hypertension Lifestyle and Salt Restriction Protocol,2024-01-16T14:41:00,,Active
+cp-1182026d,pat-088b6a9c,enc-e5cddf5b,CP-HTN-01,Hypertension Lifestyle and Salt Restriction Protocol,2024-01-17T23:21:41,,Active
+cp-90cc7e82,pat-905815b5,enc-4a26c68e,CP-DIAB-01,Diabetic Lifestyle and Dietary Management Protocol,2024-08-06T08:22:41,,Active

@@ -1,0 +1,22 @@
+medication_id,patient_id,encounter_id,condition_id,drug_name,drug_class,dosage,frequency,source,evidence_ids,status
+rx-90f3c0be,pat-4567acc9,enc-6ca150ee,cond-pat-4567acc9,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-103e3cd3,pat-bd9b01b0,enc-ebebcd03,cond-pat-bd9b01b0,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-8f88b8e8,pat-c61d30b4,enc-69cb4142,cond-pat-c61d30b4-3,Amlodipine,,5mg,Once Daily,internal_yaml,,Dispensed
+rx-0ed334fd,pat-c61d30b4,enc-69cb4142,cond-pat-c61d30b4-3,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-8e1db112,pat-42919d1d,enc-ea80c52d,cond-pat-42919d1d,Amlodipine,,5mg,Once Daily,internal_yaml,,Dispensed
+rx-0d682d27,pat-41269547,enc-e915bd57,cond-pat-41269547,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-8cb2a93c,pat-46d2b49f,enc-6860396c,cond-pat-46d2b49f,Metformin,,500mg,Twice Daily,internal_yaml,,Dispensed
+rx-0bfd2551,pat-c4b228de,enc-e7aab581,cond-pat-c4b228de,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-8b47a166,pat-c1dc1932,enc-658a29c0,cond-pat-c1dc1932,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-0a921d7b,pat-3ce57dc5,enc-e4d4a5d5,cond-pat-3ce57dc5,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-89dc9990,pat-49a8c44b,enc-e3699dff,cond-pat-49a8c44b,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-092715a5,pat-483dbc75,enc-62b41a14,cond-pat-483dbc75,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-887191ba,pat-c788388a,enc-e1fe9629,cond-pat-c788388a,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-07bc0dcf,pat-c8f34060,enc-6149123e,cond-pat-c8f34060,Amlodipine,,5mg,Once Daily,internal_yaml,,Dispensed
+rx-870689e4,pat-c3472108,enc-e0938e53,cond-pat-c3472108,Amlodipine,,5mg,Once Daily,internal_yaml,,Dispensed
+rx-065105f9,pat-3fbb8d71,enc-5fde0a68,cond-pat-3fbb8d71,Amlodipine,,5mg,Once Daily,internal_yaml,,Dispensed
+rx-859b820e,pat-c8f34060,enc-ddbd7ea7,cond-pat-c8f34060-2,Metformin,,500mg,Twice Daily,internal_yaml,,Dispensed
+rx-04e5fe23,pat-c61d30b4,enc-5d07fabc,cond-pat-c61d30b4-3,Metformin,,500mg,Twice Daily,internal_yaml,,Dispensed
+rx-84307a38,pat-3e50859b,enc-dc5276d1,cond-pat-3e50859b,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-037af64d,pat-c8f34060,enc-d6a65779,cond-pat-c8f34060-3,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed
+rx-82c57262,pat-42919d1d,enc-55f0d38e,cond-pat-42919d1d-2,Amoxicillin,,500mg,Three Times Daily,internal_yaml,,Dispensed

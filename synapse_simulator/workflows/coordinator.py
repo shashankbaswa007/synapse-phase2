@@ -2,7 +2,6 @@
 Workflow Coordinator: Orchestrates PatientJourney workflow execution step-by-step.
 """
 
-import uuid
 from typing import Dict, Any, List, Optional
 from datetime import datetime, timedelta
 
@@ -14,6 +13,7 @@ from synapse_simulator.workflows.model import (
 )
 from synapse_simulator.state.models import ActionRequest, DecisionResult, DecisionStatus, DomainEvent
 from synapse_simulator.core.scheduler import FutureActionScheduler
+from synapse_simulator.core.ids import new_id
 
 
 class WorkflowCoordinator:
@@ -47,11 +47,11 @@ class WorkflowCoordinator:
 
         # Build initial action request
         target_entity_id = journey.entity_references.get(
-            step.target_entity_table, f"ent-{uuid.uuid4().hex[:8]}"
+            step.target_entity_table, new_id("ent-", 8)
         )
 
         action = ActionRequest(
-            action_id=f"act-{uuid.uuid4().hex[:8]}",
+            action_id=new_id("act-", 8),
             action_type=step.action_type,
             target_department=step.target_department,
             target_entity_table=step.target_entity_table,
@@ -126,11 +126,11 @@ class WorkflowCoordinator:
                 if next_step:
                     journey.current_step_id = next_step_id
                     target_entity_id = journey.entity_references.get(
-                        next_step.target_entity_table, f"ent-{uuid.uuid4().hex[:8]}"
+                        next_step.target_entity_table, new_id("ent-", 8)
                     )
 
                     next_action = ActionRequest(
-                        action_id=f"act-{uuid.uuid4().hex[:8]}",
+                        action_id=new_id("act-", 8),
                         action_type=next_step.action_type,
                         target_department=next_step.target_department,
                         target_entity_table=next_step.target_entity_table,
@@ -168,11 +168,11 @@ class WorkflowCoordinator:
                 if fail_step:
                     journey.current_step_id = step.failure_step_id
                     target_entity_id = journey.entity_references.get(
-                        fail_step.target_entity_table, f"ent-{uuid.uuid4().hex[:8]}"
+                        fail_step.target_entity_table, new_id("ent-", 8)
                     )
 
                     recovery_action = ActionRequest(
-                        action_id=f"act-rec-{uuid.uuid4().hex[:8]}",
+                        action_id=new_id("act-rec-", 8),
                         action_type=fail_step.action_type,
                         target_department=fail_step.target_department,
                         target_entity_table=fail_step.target_entity_table,

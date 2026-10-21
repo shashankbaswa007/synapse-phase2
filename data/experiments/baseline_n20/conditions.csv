@@ -1,0 +1,22 @@
+condition_id,patient_id,encounter_id,condition_code,condition_name,status
+cond-pat-4567acc9,pat-4567acc9,enc-6ca150ee,J06.9,"Acute upper respiratory infection, unspecified",Confirmed
+cond-pat-bd9b01b0,pat-bd9b01b0,enc-ebebcd03,J06.9,"Acute upper respiratory infection, unspecified",Confirmed
+cond-pat-c61d30b4,pat-c61d30b4,enc-6b364918,I10,Essential (primary) hypertension,Confirmed
+cond-pat-c61d30b4-2,pat-c61d30b4,enc-6b364918,J06.9,"Acute upper respiratory infection, unspecified",Confirmed
+cond-pat-42919d1d,pat-42919d1d,enc-ea80c52d,I10,Essential (primary) hypertension,Confirmed
+cond-pat-41269547,pat-41269547,enc-e915bd57,J06.9,"Acute upper respiratory infection, unspecified",Confirmed
+cond-pat-46d2b49f,pat-46d2b49f,enc-6860396c,E11.9,Type 2 diabetes mellitus without complications,Confirmed
+cond-pat-c4b228de,pat-c4b228de,enc-e7aab581,J06.9,"Acute upper respiratory infection, unspecified",Confirmed
+cond-pat-c1dc1932,pat-c1dc1932,enc-658a29c0,J06.9,"Acute upper respiratory infection, unspecified",Confirmed
+cond-pat-3ce57dc5,pat-3ce57dc5,enc-e4d4a5d5,J06.9,"Acute upper respiratory infection, unspecified",Confirmed
+cond-pat-49a8c44b,pat-49a8c44b,enc-e3699dff,J06.9,"Acute upper respiratory infection, unspecified",Confirmed
+cond-pat-483dbc75,pat-483dbc75,enc-62b41a14,J06.9,"Acute upper respiratory infection, unspecified",Confirmed
+cond-pat-c788388a,pat-c788388a,enc-e1fe9629,J06.9,"Acute upper respiratory infection, unspecified",Confirmed
+cond-pat-c8f34060,pat-c8f34060,enc-6149123e,I10,Essential (primary) hypertension,Confirmed
+cond-pat-c3472108,pat-c3472108,enc-e0938e53,I10,Essential (primary) hypertension,Confirmed
+cond-pat-3fbb8d71,pat-3fbb8d71,enc-5fde0a68,I10,Essential (primary) hypertension,Confirmed
+cond-pat-c8f34060-2,pat-c8f34060,enc-ddbd7ea7,E11.9,Type 2 diabetes mellitus without complications,Confirmed
+cond-pat-c61d30b4-3,pat-c61d30b4,enc-5d07fabc,E11.9,Type 2 diabetes mellitus without complications,Confirmed
+cond-pat-3e50859b,pat-3e50859b,enc-dc5276d1,J06.9,"Acute upper respiratory infection, unspecified",Confirmed
+cond-pat-c8f34060-3,pat-c8f34060,enc-d8115f4f,J06.9,"Acute upper respiratory infection, unspecified",Confirmed
+cond-pat-42919d1d-2,pat-42919d1d,enc-55f0d38e,J06.9,"Acute upper respiratory infection, unspecified",Confirmed

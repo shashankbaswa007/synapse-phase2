@@ -1,0 +1,23 @@
+# git state at 2026-10-21T07:54:41Z
+3e3ae1d28286e9106659f68aa053465ded9bb3c2
+ M ../../../requirements.txt
+ M ../../../synapse_simulator/core/event_queue.py
+ M ../../../synapse_simulator/core/scheduler.py
+ M ../../../synapse_simulator/core/simulation_engine.py
+ M ../../../synapse_simulator/datagen/clinical_generator.py
+ M ../../../synapse_simulator/datagen/master_data.py
+ M ../../../synapse_simulator/datagen/patient_generator.py
+ M ../../../synapse_simulator/departments/clinical.py
+ M ../../../synapse_simulator/departments/finance.py
+ M ../../../synapse_simulator/departments/laboratory.py
+ M ../../../synapse_simulator/departments/pharmacy.py
+ M ../../../synapse_simulator/departments/radiology.py
+ M ../../../synapse_simulator/exporter/csv_exporter.py
+ M ../../../synapse_simulator/generator/factory.py
+ M ../../../synapse_simulator/generator/hospital_generator.py
+ M ../../../synapse_simulator/scenarios/base_scenario.py
+ M ../../../synapse_simulator/workflows/coordinator.py
+# untracked:
+?? ../
+?? ../../../synapse_simulator/core/ids.py
+?? ../../../tests/test_determinism.py

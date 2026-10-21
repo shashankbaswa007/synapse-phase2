@@ -9,10 +9,12 @@ from typing import Dict, List, Set, Optional
 from pydantic import BaseModel, Field
 
 from synapse_simulator.state.models import ActionRequest
+from synapse_simulator.core.ids import next_sequence
 
 
-# Atomic sequence counter for deterministic tie-breaking
-_sequence_counter = itertools.count()
+# Deterministic tie-break sequence (reset per simulator bootstrap via core.ids.reset)
+def _next_sequence() -> int:
+    return next_sequence("scheduler")
 
 
 class ScheduledFutureAction(BaseModel):
@@ -21,7 +23,7 @@ class ScheduledFutureAction(BaseModel):
     scheduled_at: datetime
     priority: int = 50
     causation_depth: int = 0
-    sequence_number: int = Field(default_factory=lambda: next(_sequence_counter))
+    sequence_number: int = Field(default_factory=_next_sequence)
     action_request: ActionRequest
     status: str = "PENDING"  # PENDING, EXECUTED, CANCELLED, INVALIDATED, EXPIRED
     target_entity_key: str

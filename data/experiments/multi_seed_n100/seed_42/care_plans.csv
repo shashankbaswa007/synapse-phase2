@@ -1,0 +1,18 @@
+care_plan_id,patient_id,encounter_id,plan_code,plan_name,start_date,end_date,status
+cp-a5569622,pat-46d2b49f,enc-cf8f304b,CP-DIAB-01,Diabetic Lifestyle and Dietary Management Protocol,2024-08-10T00:48:06,,Active
+cp-24a11237,pat-3a0f6e19,enc-4ed9ac60,CP-DIAB-01,Diabetic Lifestyle and Dietary Management Protocol,2024-08-09T22:58:00,,Active
+cp-a3eb8e4c,pat-af6cb354,enc-ce242875,CP-DIAB-01,Diabetic Lifestyle and Dietary Management Protocol,2024-08-08T22:20:01,,Active
+cp-23360a61,pat-290b1011,enc-4d6ea48a,CP-DIAB-01,Diabetic Lifestyle and Dietary Management Protocol,2024-08-10T01:54:09,,Active
+cp-a2808676,pat-26350065,enc-ccb9209f,CP-DIAB-01,Diabetic Lifestyle and Dietary Management Protocol,2024-08-07T11:56:38,,Active
+cp-21cb028b,pat-1adcc1b5,enc-4c039cb4,CP-DIAB-01,Diabetic Lifestyle and Dietary Management Protocol,2024-08-10T10:26:16,,Active
+cp-a1157ea0,pat-125a92b1,enc-cb4e18c9,CP-DIAB-01,Diabetic Lifestyle and Dietary Management Protocol,2024-08-09T05:16:18,,Active
+cp-205ffab5,pat-8d63f744,enc-4a9894de,CP-DIAB-01,Diabetic Lifestyle and Dietary Management Protocol,2024-08-05T01:59:44,,Active
+cp-9faa76ca,pat-c8f34060,enc-0d9e43ec,CP-DIAB-01,Diabetic Lifestyle and Dietary Management Protocol,2025-08-19T00:48:53,,Active
+cp-1ef4f2df,pat-c61d30b4,enc-8ce8c001,CP-DIAB-01,Diabetic Lifestyle and Dietary Management Protocol,2025-08-22T02:10:50,,Active
+cp-9e3f6ef4,pat-b0d7bb2a,enc-0c333c16,CP-DIAB-01,Diabetic Lifestyle and Dietary Management Protocol,2025-08-23T17:23:19,,Active
+cp-1d89eb09,pat-2be11fbd,enc-8b7db82b,CP-DIAB-01,Diabetic Lifestyle and Dietary Management Protocol,2025-08-20T06:51:55,,Active
+cp-9cd4671e,pat-a41474a4,enc-0ac83440,CP-DIAB-01,Diabetic Lifestyle and Dietary Management Protocol,2025-08-24T22:07:23,,Active
+cp-1c1ee333,pat-235ef0b9,enc-8a12b055,CP-DIAB-01,Diabetic Lifestyle and Dietary Management Protocol,2025-08-19T03:47:44,,Active
+cp-9b695f48,pat-169baa33,enc-095d2c6a,CP-DIAB-01,Diabetic Lifestyle and Dietary Management Protocol,2025-08-20T08:52:59,,Active
+cp-1ab3db5d,pat-09d863ad,enc-88a7a87f,CP-DIAB-01,Diabetic Lifestyle and Dietary Management Protocol,2025-08-20T15:04:37,,Active
+cp-99fe5772,pat-086d5bd7,enc-07f22494,CP-DIAB-01,Diabetic Lifestyle and Dietary Management Protocol,2025-08-22T19:44:36,,Active
