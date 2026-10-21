@@ -1,0 +1,24 @@
+{
+  "pmid": "31234511",
+  "title": "Atorvastatin and Rosuvastatin intensive lipid lowering therapy in hyperlipidemia",
+  "abstract": "Atorvastatin 10-20mg and Rosuvastatin 10mg produce significant LDL cholesterol reduction and plaque stabilization in hyperlipidemia.",
+  "publication_year": 2022,
+  "journal": "Circulation",
+  "authors": [
+    "Grundy SM",
+    "Stone NJ"
+  ],
+  "mesh_terms": [
+    "Hyperlipidemia",
+    "Atorvastatin",
+    "Rosuvastatin"
+  ],
+  "keywords": [
+    "hyperlipidemia",
+    "atorvastatin",
+    "rosuvastatin"
+  ],
+  "doi": null,
+  "retrieved_at": "2026-10-13T18:53:35.952585",
+  "query_topic": "Hyperlipidemia"
+}

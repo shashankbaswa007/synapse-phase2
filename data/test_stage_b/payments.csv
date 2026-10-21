@@ -1,0 +1,8 @@
+payment_id,invoice_id,patient_id,amount,payment_method,timestamp,status
+pay-inv-a4a014d0,inv-a4a014d0,pat-5c78cb6a,500.0,Insurance/Cash,2026-01-01T08:15:00,Success
+pay-inv-e96f1881,inv-e96f1881,pat-bb11e9ed,500.0,Insurance/Cash,2026-01-01T08:22:00,Success
+pay-inv-b141fc32,inv-b141fc32,pat-324df629,500.0,Insurance/Cash,2026-01-01T08:32:00,Success
+pay-inv-38e3a95c,inv-38e3a95c,pat-37f21d46,500.0,Insurance/Cash,2026-01-01T08:35:00,Success
+pay-inv-2703a847,inv-2703a847,pat-5a399525,500.0,Insurance/Cash,2026-01-01T08:42:00,Success
+pay-inv-8619fb98,inv-8619fb98,pat-6db5a4b3,500.0,Insurance/Cash,2026-01-01T08:52:00,Success
+pay-inv-775382e2,inv-775382e2,pat-d0581d2b,500.0,Insurance/Cash,2026-01-01T08:55:00,Success

@@ -1,0 +1,924 @@
+{
+  "timestamp": "2026-10-13T18:49:04.161625",
+  "dataset_directory": "C:\\AI\\synapse phase2\\data\\test_gate_100",
+  "files_present": {
+    "patients.csv": true,
+    "encounters.csv": true,
+    "conditions.csv": true,
+    "symptoms.csv": true,
+    "medications.csv": true,
+    "labs.csv": true,
+    "radiology.csv": true,
+    "invoices.csv": true,
+    "payments.csv": true,
+    "events.csv": true,
+    "journey_traces.csv": true,
+    "generation_summary.csv": true
+  },
+  "dataset_counts": {
+    "patients.csv": {
+      "exists": true,
+      "row_count": 100,
+      "column_count": 7,
+      "file_size_bytes": 5693,
+      "file_size_kb": 5.56
+    },
+    "encounters.csv": {
+      "exists": true,
+      "row_count": 100,
+      "column_count": 8,
+      "file_size_bytes": 11989,
+      "file_size_kb": 11.71
+    },
+    "conditions.csv": {
+      "exists": true,
+      "row_count": 100,
+      "column_count": 6,
+      "file_size_bytes": 9383,
+      "file_size_kb": 9.16
+    },
+    "symptoms.csv": {
+      "exists": true,
+      "row_count": 383,
+      "column_count": 5,
+      "file_size_bytes": 28395,
+      "file_size_kb": 27.73
+    },
+    "medications.csv": {
+      "exists": true,
+      "row_count": 100,
+      "column_count": 11,
+      "file_size_bytes": 13178,
+      "file_size_kb": 12.87
+    },
+    "labs.csv": {
+      "exists": true,
+      "row_count": 100,
+      "column_count": 8,
+      "file_size_bytes": 7956,
+      "file_size_kb": 7.77
+    },
+    "radiology.csv": {
+      "exists": true,
+      "row_count": 100,
+      "column_count": 9,
+      "file_size_bytes": 11250,
+      "file_size_kb": 10.99
+    },
+    "invoices.csv": {
+      "exists": true,
+      "row_count": 100,
+      "column_count": 6,
+      "file_size_bytes": 7167,
+      "file_size_kb": 7.0
+    },
+    "payments.csv": {
+      "exists": true,
+      "row_count": 100,
+      "column_count": 7,
+      "file_size_bytes": 9373,
+      "file_size_kb": 9.15
+    },
+    "events.csv": {
+      "exists": true,
+      "row_count": 575,
+      "column_count": 7,
+      "file_size_bytes": 58955,
+      "file_size_kb": 57.57
+    },
+    "journey_traces.csv": {
+      "exists": true,
+      "row_count": 100,
+      "column_count": 7,
+      "file_size_bytes": 8977,
+      "file_size_kb": 8.77
+    },
+    "generation_summary.csv": {
+      "exists": true,
+      "row_count": 15,
+      "column_count": 2,
+      "file_size_bytes": 366,
+      "file_size_kb": 0.36
+    }
+  },
+  "duplicate_id_audit": {
+    "patients.csv": {
+      "pk": "patient_id",
+      "total_rows": 100,
+      "unique_ids": 100,
+      "duplicate_ids": 0,
+      "status": "PASS"
+    },
+    "encounters.csv": {
+      "pk": "encounter_id",
+      "total_rows": 100,
+      "unique_ids": 100,
+      "duplicate_ids": 0,
+      "status": "PASS"
+    },
+    "conditions.csv": {
+      "pk": "condition_id",
+      "total_rows": 100,
+      "unique_ids": 100,
+      "duplicate_ids": 0,
+      "status": "PASS"
+    },
+    "symptoms.csv": {
+      "pk": "symptom_id",
+      "total_rows": 383,
+      "unique_ids": 383,
+      "duplicate_ids": 0,
+      "status": "PASS"
+    },
+    "medications.csv": {
+      "pk": "medication_id",
+      "total_rows": 100,
+      "unique_ids": 100,
+      "duplicate_ids": 0,
+      "status": "PASS"
+    },
+    "labs.csv": {
+      "pk": "lab_id",
+      "total_rows": 100,
+      "unique_ids": 100,
+      "duplicate_ids": 0,
+      "status": "PASS"
+    },
+    "radiology.csv": {
+      "pk": "radiology_id",
+      "total_rows": 100,
+      "unique_ids": 100,
+      "duplicate_ids": 0,
+      "status": "PASS"
+    },
+    "invoices.csv": {
+      "pk": "invoice_id",
+      "total_rows": 100,
+      "unique_ids": 100,
+      "duplicate_ids": 0,
+      "status": "PASS"
+    },
+    "payments.csv": {
+      "pk": "payment_id",
+      "total_rows": 100,
+      "unique_ids": 100,
+      "duplicate_ids": 0,
+      "status": "PASS"
+    },
+    "events.csv": {
+      "pk": "event_id",
+      "total_rows": 575,
+      "unique_ids": 575,
+      "duplicate_ids": 0,
+      "status": "PASS"
+    },
+    "journey_traces.csv": {
+      "pk": "journey_id",
+      "total_rows": 100,
+      "unique_ids": 100,
+      "duplicate_ids": 0,
+      "status": "PASS"
+    },
+    "generation_summary.csv": {
+      "pk": "metric_name",
+      "total_rows": 15,
+      "unique_ids": 15,
+      "duplicate_ids": 0,
+      "status": "PASS"
+    }
+  },
+  "referential_integrity_audit": {
+    "total_dangling_references": 0,
+    "foreign_key_checks": [
+      {
+        "source_file": "encounters",
+        "source_field": "patient_id",
+        "target_file": "patients",
+        "target_field": "patient_id",
+        "fk": "encounters.patient_id -> patients.patient_id",
+        "dangling": 0
+      },
+      {
+        "source_file": "conditions",
+        "source_field": "patient_id",
+        "target_file": "patients",
+        "target_field": "patient_id",
+        "fk": "conditions.patient_id -> patients.patient_id",
+        "dangling": 0
+      },
+      {
+        "source_file": "conditions",
+        "source_field": "encounter_id",
+        "target_file": "encounters",
+        "target_field": "encounter_id",
+        "fk": "conditions.encounter_id -> encounters.encounter_id",
+        "dangling": 0
+      },
+      {
+        "source_file": "symptoms",
+        "source_field": "patient_id",
+        "target_file": "patients",
+        "target_field": "patient_id",
+        "fk": "symptoms.patient_id -> patients.patient_id",
+        "dangling": 0
+      },
+      {
+        "source_file": "symptoms",
+        "source_field": "encounter_id",
+        "target_file": "encounters",
+        "target_field": "encounter_id",
+        "fk": "symptoms.encounter_id -> encounters.encounter_id",
+        "dangling": 0
+      },
+      {
+        "source_file": "symptoms",
+        "source_field": "condition_id",
+        "target_file": "conditions",
+        "target_field": "condition_id",
+        "fk": "symptoms.condition_id -> conditions.condition_id",
+        "dangling": 0
+      },
+      {
+        "source_file": "medications",
+        "source_field": "patient_id",
+        "target_file": "patients",
+        "target_field": "patient_id",
+        "fk": "medications.patient_id -> patients.patient_id",
+        "dangling": 0
+      },
+      {
+        "source_file": "medications",
+        "source_field": "encounter_id",
+        "target_file": "encounters",
+        "target_field": "encounter_id",
+        "fk": "medications.encounter_id -> encounters.encounter_id",
+        "dangling": 0
+      },
+      {
+        "source_file": "medications",
+        "source_field": "condition_id",
+        "target_file": "conditions",
+        "target_field": "condition_id",
+        "fk": "medications.condition_id -> conditions.condition_id",
+        "dangling": 0
+      },
+      {
+        "source_file": "labs",
+        "source_field": "patient_id",
+        "target_file": "patients",
+        "target_field": "patient_id",
+        "fk": "labs.patient_id -> patients.patient_id",
+        "dangling": 0
+      },
+      {
+        "source_file": "labs",
+        "source_field": "encounter_id",
+        "target_file": "encounters",
+        "target_field": "encounter_id",
+        "fk": "labs.encounter_id -> encounters.encounter_id",
+        "dangling": 0
+      },
+      {
+        "source_file": "radiology",
+        "source_field": "patient_id",
+        "target_file": "patients",
+        "target_field": "patient_id",
+        "fk": "radiology.patient_id -> patients.patient_id",
+        "dangling": 0
+      },
+      {
+        "source_file": "radiology",
+        "source_field": "encounter_id",
+        "target_file": "encounters",
+        "target_field": "encounter_id",
+        "fk": "radiology.encounter_id -> encounters.encounter_id",
+        "dangling": 0
+      },
+      {
+        "source_file": "invoices",
+        "source_field": "patient_id",
+        "target_file": "patients",
+        "target_field": "patient_id",
+        "fk": "invoices.patient_id -> patients.patient_id",
+        "dangling": 0
+      },
+      {
+        "source_file": "invoices",
+        "source_field": "encounter_id",
+        "target_file": "encounters",
+        "target_field": "encounter_id",
+        "fk": "invoices.encounter_id -> encounters.encounter_id",
+        "dangling": 0
+      },
+      {
+        "source_file": "payments",
+        "source_field": "invoice_id",
+        "target_file": "invoices",
+        "target_field": "invoice_id",
+        "fk": "payments.invoice_id -> invoices.invoice_id",
+        "dangling": 0
+      },
+      {
+        "source_file": "payments",
+        "source_field": "patient_id",
+        "target_file": "patients",
+        "target_field": "patient_id",
+        "fk": "payments.patient_id -> patients.patient_id",
+        "dangling": 0
+      },
+      {
+        "source_file": "events",
+        "source_field": "patient_id",
+        "target_file": "patients",
+        "target_field": "patient_id",
+        "fk": "events.patient_id -> patients.patient_id",
+        "dangling": 0
+      },
+      {
+        "source_file": "events",
+        "source_field": "encounter_id",
+        "target_file": "encounters",
+        "target_field": "encounter_id",
+        "fk": "events.encounter_id -> encounters.encounter_id",
+        "dangling": 0
+      },
+      {
+        "source_file": "journey_traces",
+        "source_field": "patient_id",
+        "target_file": "patients",
+        "target_field": "patient_id",
+        "fk": "journey_traces.patient_id -> patients.patient_id",
+        "dangling": 0
+      }
+    ],
+    "status": "PASS"
+  },
+  "null_required_audit": {
+    "total_required_nulls": 0,
+    "details": {
+      "patients.csv": {
+        "patient_id": {
+          "required": true,
+          "null_count": 0,
+          "status": "PASS"
+        },
+        "name": {
+          "required": true,
+          "null_count": 0,
+          "status": "PASS"
+        },
+        "age": {
+          "required": true,
+          "null_count": 0,
+          "status": "PASS"
+        },
+        "gender": {
+          "required": true,
+          "null_count": 0,
+          "status": "PASS"
+        },
+        "blood_group": {
+          "required": true,
+          "null_count": 0,
+          "status": "PASS"
+        },
+        "insurance_type": {
+          "required": true,
+          "null_count": 0,
+          "status": "PASS"
+        },
+        "status": {
+          "required": true,
+          "null_count": 0,
+          "status": "PASS"
+        }
+      },
+      "encounters.csv": {
+        "encounter_id": {
+          "required": true,
+          "null_count": 0,
+          "status": "PASS"
+        },
+        "patient_id": {
+          "required": true,
+          "null_count": 0,
+          "status": "PASS"
+        },
+        "journey_id": {
+          "required": true,
+          "null_count": 0,
+          "status": "PASS"
+        },
+        "doctor_id": {
+          "required": true,
+          "null_count": 0,
+          "status": "PASS"
+        },
+        "start_time": {
+          "required": true,
+          "null_count": 0,
+          "status": "PASS"
+        },
+        "end_time": {
+          "required": true,
+          "null_count": 0,
+          "status": "PASS"
+        },
+        "status": {
+          "required": true,
+          "null_count": 0,
+          "status": "PASS"
+        },
+        "chief_complaint": {
+          "required": true,
+          "null_count": 0,
+          "status": "PASS"
+        }
+      },
+      "conditions.csv": {
+        "condition_id": {
+          "required": true,
+          "null_count": 0,
+          "status": "PASS"
+        },
+        "patient_id": {
+          "required": true,
+          "null_count": 0,
+          "status": "PASS"
+        },
+        "encounter_id": {
+          "required": true,
+          "null_count": 0,
+          "status": "PASS"
+        },
+        "condition_code": {
+          "required": true,
+          "null_count": 0,
+          "status": "PASS"
+        },
+        "condition_name": {
+          "required": true,
+          "null_count": 0,
+          "status": "PASS"
+        },
+        "status": {
+          "required": true,
+          "null_count": 0,
+          "status": "PASS"
+        }
+      },
+      "symptoms.csv": {
+        "symptom_id": {
+          "required": true,
+          "null_count": 0,
+          "status": "PASS"
+        },
+        "patient_id": {
+          "required": true,
+          "null_count": 0,
+          "status": "PASS"
+        },
+        "encounter_id": {
+          "required": true,
+          "null_count": 0,
+          "status": "PASS"
+        },
+        "condition_id": {
+          "required": true,
+          "null_count": 0,
+          "status": "PASS"
+        },
+        "symptom_name": {
+          "required": true,
+          "null_count": 0,
+          "status": "PASS"
+        }
+      },
+      "medications.csv": {
+        "medication_id": {
+          "required": true,
+          "null_count": 0,
+          "status": "PASS"
+        },
+        "patient_id": {
+          "required": true,
+          "null_count": 0,
+          "status": "PASS"
+        },
+        "encounter_id": {
+          "required": true,
+          "null_count": 0,
+          "status": "PASS"
+        },
+        "condition_id": {
+          "required": true,
+          "null_count": 0,
+          "status": "PASS"
+        },
+        "drug_name": {
+          "required": true,
+          "null_count": 0,
+          "status": "PASS"
+        },
+        "dosage": {
+          "required": true,
+          "null_count": 0,
+          "status": "PASS"
+        },
+        "frequency": {
+          "required": true,
+          "null_count": 0,
+          "status": "PASS"
+        },
+        "source": {
+          "required": true,
+          "null_count": 0,
+          "status": "PASS"
+        },
+        "status": {
+          "required": true,
+          "null_count": 0,
+          "status": "PASS"
+        }
+      },
+      "labs.csv": {
+        "lab_id": {
+          "required": true,
+          "null_count": 0,
+          "status": "PASS"
+        },
+        "patient_id": {
+          "required": true,
+          "null_count": 0,
+          "status": "PASS"
+        },
+        "encounter_id": {
+          "required": true,
+          "null_count": 0,
+          "status": "PASS"
+        },
+        "test_name": {
+          "required": true,
+          "null_count": 0,
+          "status": "PASS"
+        },
+        "result": {
+          "required": true,
+          "null_count": 0,
+          "status": "PASS"
+        },
+        "is_abnormal": {
+          "required": true,
+          "null_count": 0,
+          "status": "PASS"
+        },
+        "status": {
+          "required": true,
+          "null_count": 0,
+          "status": "PASS"
+        }
+      },
+      "radiology.csv": {
+        "radiology_id": {
+          "required": true,
+          "null_count": 0,
+          "status": "PASS"
+        },
+        "patient_id": {
+          "required": true,
+          "null_count": 0,
+          "status": "PASS"
+        },
+        "encounter_id": {
+          "required": true,
+          "null_count": 0,
+          "status": "PASS"
+        },
+        "modality": {
+          "required": true,
+          "null_count": 0,
+          "status": "PASS"
+        },
+        "findings": {
+          "required": true,
+          "null_count": 0,
+          "status": "PASS"
+        },
+        "impression": {
+          "required": true,
+          "null_count": 0,
+          "status": "PASS"
+        },
+        "is_abnormal": {
+          "required": true,
+          "null_count": 0,
+          "status": "PASS"
+        },
+        "status": {
+          "required": true,
+          "null_count": 0,
+          "status": "PASS"
+        }
+      },
+      "invoices.csv": {
+        "invoice_id": {
+          "required": true,
+          "null_count": 0,
+          "status": "PASS"
+        },
+        "patient_id": {
+          "required": true,
+          "null_count": 0,
+          "status": "PASS"
+        },
+        "encounter_id": {
+          "required": true,
+          "null_count": 0,
+          "status": "PASS"
+        },
+        "total_amount": {
+          "required": true,
+          "null_count": 0,
+          "status": "PASS"
+        },
+        "status": {
+          "required": true,
+          "null_count": 0,
+          "status": "PASS"
+        },
+        "created_at": {
+          "required": true,
+          "null_count": 0,
+          "status": "PASS"
+        }
+      },
+      "payments.csv": {
+        "payment_id": {
+          "required": true,
+          "null_count": 0,
+          "status": "PASS"
+        },
+        "invoice_id": {
+          "required": true,
+          "null_count": 0,
+          "status": "PASS"
+        },
+        "patient_id": {
+          "required": true,
+          "null_count": 0,
+          "status": "PASS"
+        },
+        "amount": {
+          "required": true,
+          "null_count": 0,
+          "status": "PASS"
+        },
+        "payment_method": {
+          "required": true,
+          "null_count": 0,
+          "status": "PASS"
+        },
+        "timestamp": {
+          "required": true,
+          "null_count": 0,
+          "status": "PASS"
+        },
+        "status": {
+          "required": true,
+          "null_count": 0,
+          "status": "PASS"
+        }
+      },
+      "events.csv": {
+        "event_id": {
+          "required": true,
+          "null_count": 0,
+          "status": "PASS"
+        },
+        "event_type": {
+          "required": true,
+          "null_count": 0,
+          "status": "PASS"
+        },
+        "source_department": {
+          "required": true,
+          "null_count": 0,
+          "status": "PASS"
+        },
+        "timestamp": {
+          "required": true,
+          "null_count": 0,
+          "status": "PASS"
+        },
+        "status": {
+          "required": true,
+          "null_count": 0,
+          "status": "PASS"
+        }
+      },
+      "journey_traces.csv": {
+        "journey_id": {
+          "required": true,
+          "null_count": 0,
+          "status": "PASS"
+        },
+        "patient_id": {
+          "required": true,
+          "null_count": 0,
+          "status": "PASS"
+        },
+        "scenario_id": {
+          "required": true,
+          "null_count": 0,
+          "status": "PASS"
+        },
+        "status": {
+          "required": true,
+          "null_count": 0,
+          "status": "PASS"
+        },
+        "started_at": {
+          "required": true,
+          "null_count": 0,
+          "status": "PASS"
+        },
+        "completed_at": {
+          "required": true,
+          "null_count": 0,
+          "status": "PASS"
+        },
+        "step_count": {
+          "required": true,
+          "null_count": 0,
+          "status": "PASS"
+        }
+      },
+      "generation_summary.csv": {
+        "metric_name": {
+          "required": true,
+          "null_count": 0,
+          "status": "PASS"
+        },
+        "metric_value": {
+          "required": true,
+          "null_count": 0,
+          "status": "PASS"
+        }
+      }
+    },
+    "status": "PASS"
+  },
+  "temporal_audit": {
+    "invalid_encounter_durations": 0,
+    "invalid_temporal_relationships": 0,
+    "status": "PASS"
+  },
+  "clinical_safety_audit": {
+    "allergy_safety_violations": 0,
+    "rule_compliance": "100%",
+    "status": "PASS"
+  },
+  "provenance_audit": {
+    "pubmed_backed_treatment_records": 100,
+    "missing_evidence_ids": 0,
+    "invalid_evidence_references": 0,
+    "status": "PASS"
+  },
+  "patient_connectivity": {
+    "total_patients": 100,
+    "patients_with_encounters": 100,
+    "patients_with_conditions": 100,
+    "patients_with_symptoms": 100,
+    "patients_with_medications": 100,
+    "patients_with_labs": 100,
+    "patients_with_radiology": 100,
+    "patients_with_invoices": 100,
+    "patients_with_payments": 100,
+    "patients_with_events": 100
+  },
+  "scenario_distribution": {
+    "SCEN-V1-01": 25,
+    "SCEN-V1-02": 25,
+    "SCEN-V1-03": 25,
+    "SCEN-V1-04": 25
+  },
+  "overall_status": "PASS \u2014 DATASET READY FOR PHASE 3",
+  "critical_errors": [],
+  "invoice_lifecycle_audit": {
+    "total_invoices": 100,
+    "invoice_generated_events": 100,
+    "paid_invoices": 100,
+    "unpaid_invoices": 0,
+    "payments_count": 100,
+    "payment_processed_events": 100,
+    "invoices_during_encounter": 100,
+    "invoices_before_encounter": 0,
+    "invoices_after_encounter": 0,
+    "status_distribution": {
+      "Paid": 100
+    },
+    "lifecycle_violations_total": 0,
+    "status": "PASS"
+  },
+  "laboratory_lifecycle_audit": {
+    "total_orders": 100,
+    "completed_tests": 25,
+    "pending_tests": 75,
+    "samples_collected_events": 25,
+    "completed_events": 25,
+    "ordered_with_completed_at_violations": 0,
+    "completed_missing_completed_at_violations": 0,
+    "event_linkage_violations": 0,
+    "lifecycle_violations_total": 0,
+    "missing_completion_timestamps": 0,
+    "abnormal_results": 7,
+    "test_type_distribution": {
+      "CBC": 53,
+      "Complete Blood Count": 14,
+      "CRP": 10,
+      "C-Reactive Protein": 5,
+      "Urinalysis": 3,
+      "Fasting Blood Sugar": 1,
+      "Lipid Profile Panel": 4,
+      "Urine_Culture": 6,
+      "FBS": 1,
+      "Liver Function Panel": 1,
+      "Renal_Function": 1,
+      "HbA1c": 1
+    },
+    "status": "PASS"
+  },
+  "radiology_lifecycle_audit": {
+    "total_orders": 100,
+    "completed_studies": 25,
+    "pending_studies": 75,
+    "acquisition_events": 25,
+    "completed_events": 25,
+    "ordered_with_completed_at_violations": 0,
+    "completed_missing_completed_at_violations": 0,
+    "event_linkage_violations": 0,
+    "lifecycle_violations_total": 0,
+    "missing_completion_timestamps": 0,
+    "abnormal_studies": 1,
+    "modality_distribution": {
+      "Lumbar Spine X-Ray": 6,
+      "Chest X-Ray": 93,
+      "CT Head": 1
+    },
+    "status": "PASS"
+  },
+  "journey_encounter_audit": {
+    "journeys_completed": 100,
+    "encounters_closed": 100,
+    "mismatched_end_times": 0,
+    "scen_02_violations": 0,
+    "status": "PASS"
+  },
+  "medication_diversity_audit": {
+    "total_medication_records": 100,
+    "distinct_medications": 26,
+    "distinct_conditions": 15,
+    "top_medications": [
+      {
+        "drug_name": "Paracetamol",
+        "count": 18,
+        "percentage": 18.0
+      },
+      {
+        "drug_name": "Amoxicillin",
+        "count": 17,
+        "percentage": 17.0
+      },
+      {
+        "drug_name": "Cephalexin",
+        "count": 9,
+        "percentage": 9.0
+      },
+      {
+        "drug_name": "Azithromycin",
+        "count": 8,
+        "percentage": 8.0
+      },
+      {
+        "drug_name": "Omeprazole",
+        "count": 6,
+        "percentage": 6.0
+      }
+    ],
+    "status": "PASS"
+  },
+  "performance_metrics": {
+    "start_time": "2026-10-13T18:49:03.546674",
+    "end_time": "2026-10-13T18:49:04.166093",
+    "total_runtime_seconds": 0.62,
+    "simulation_runtime_seconds": 0.13,
+    "export_runtime_seconds": 0.07,
+    "total_events_processed": 1125,
+    "events_per_second": 8596.14,
+    "total_records_generated": 1873,
+    "records_per_second": 3023.83,
+    "total_output_size_bytes": 172682,
+    "total_output_size_mb": 0.16,
+    "patients_generated": 100
+  }
+}

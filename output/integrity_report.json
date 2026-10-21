@@ -1,0 +1,47 @@
+{
+  "metadata": {
+    "generated_at": "2026-08-28T11:48:15.873539",
+    "total_patients": 10,
+    "total_events": 126,
+    "total_documents": 27
+  },
+  "document_validation": {
+    "success": true,
+    "validated_count": 27,
+    "failed_count": 0,
+    "mismatches": []
+  },
+  "deep_data_audit": {
+    "identity_referential": {
+      "success": true,
+      "error_count": 0,
+      "errors": []
+    },
+    "temporal_sequencing": {
+      "success": true,
+      "error_count": 0,
+      "errors": []
+    },
+    "state_transitions": {
+      "success": true,
+      "error_count": 0,
+      "errors": []
+    },
+    "resource_constraints": {
+      "success": true,
+      "error_count": 0,
+      "errors": []
+    },
+    "rule_compliance": {
+      "success": true,
+      "error_count": 0,
+      "errors": []
+    },
+    "success": true
+  },
+  "cross_layer_checks": {
+    "success": true,
+    "errors": []
+  },
+  "success": true
+}

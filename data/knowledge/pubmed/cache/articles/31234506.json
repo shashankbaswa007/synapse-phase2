@@ -1,0 +1,26 @@
+{
+  "pmid": "31234506",
+  "title": "Amoxicillin-Clavulanate and Azithromycin regimens in community-acquired pneumonia",
+  "abstract": "Empiric treatment with amoxicillin-clavulanate or azithromycin yields high clinical cure rates in community-acquired pneumonia. Levofloxacin serves as an effective fluoroquinolone alternative.",
+  "publication_year": 2021,
+  "journal": "Chest",
+  "authors": [
+    "Mandell LA",
+    "Wunderink RG"
+  ],
+  "mesh_terms": [
+    "Pneumonia",
+    "Amoxicillin-Clavulanate",
+    "Azithromycin",
+    "Levofloxacin",
+    "Ceftriaxone"
+  ],
+  "keywords": [
+    "pneumonia",
+    "amoxicillin",
+    "azithromycin"
+  ],
+  "doi": null,
+  "retrieved_at": "2026-10-13T18:53:35.952559",
+  "query_topic": "Pneumonia"
+}

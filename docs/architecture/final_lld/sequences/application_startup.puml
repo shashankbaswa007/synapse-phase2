@@ -1,0 +1,28 @@
+@startuml application_startup
+title Sequence 1: Application Startup & Bootstrap Factory
+
+actor User
+participant CLI as "generate_synthetic_data.py"
+participant Sim as "HospitalSimulator"
+participant Factory as "SimulationBootstrapFactory"
+participant KB as "MedicalKnowledgeBase"
+participant RuleRepo as "RuleRepository"
+participant Engine as "SimulationEngine"
+
+User -> CLI : python generate_synthetic_data.py --patients 10000
+CLI -> Sim : HospitalSimulator(seed=42, enable_pubmed=True)
+Sim -> Factory : bootstrap(sim, seed=42, enable_pubmed=True)
+Factory -> Clock** : SimulationClock()
+Factory -> Sched** : FutureActionScheduler()
+Factory -> Queue** : EventQueue()
+Factory -> Disp** : EventDispatcher()
+Factory -> State** : StateManager()
+Factory -> RuleRepo** : RuleRepository()
+Factory -> RuleRepo : load_rules()
+Factory -> KB** : MedicalKnowledgeBase()
+Factory -> KB : load(enable_pubmed=True)
+Factory -> Engine** : SimulationEngine(...)
+Factory -> Factory : wire_department_handlers(sim)
+Factory --> Sim : initialization complete
+Sim --> CLI : HospitalSimulator ready
+@enduml

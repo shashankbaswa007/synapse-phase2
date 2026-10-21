@@ -1,0 +1,25 @@
+{
+  "document_id": "doc-ds-8c15d549",
+  "document_type": "DischargeSummary",
+  "patient_id": "pat-efcca740",
+  "patient_journey_id": "pj-8c15d549",
+  "scenario_id": "SCEN-V1-03",
+  "source_entity_table": "clinical.encounters",
+  "source_entity_id": "enc-8c15d549",
+  "source_action_id": "act-discharge",
+  "source_event_id": "evt-61a28d3b4d",
+  "created_at": "2026-01-01 10:57:00",
+  "document_version": "1.0.0",
+  "document_status": "FINAL",
+  "file_path": "C:\\AI\\synapse phase2\\output\\100_patients\\documents\\discharge_summaries\\doc-ds-8c15d549.md",
+  "checksum": "1df28c6b69e2adcd5a7bff39fd3e690da9b754025909f91cb380cd430197909d",
+  "metadata_payload": {
+    "discharge_summary_id": "doc-ds-8c15d549",
+    "safety_logs": [
+      "Drug-Allergy conflict blocked beta-lactam prescription verification.",
+      "Drug-Allergy conflict blocked beta-lactam prescription verification.",
+      "Drug-Allergy conflict blocked beta-lactam prescription verification."
+    ],
+    "outcome": "Discharged with safety hold clinical alert created"
+  }
+}

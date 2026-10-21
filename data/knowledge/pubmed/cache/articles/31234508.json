@@ -1,0 +1,26 @@
+{
+  "pmid": "31234508",
+  "title": "Sumatriptan and Naproxen fixed-dose combination for acute migraine treatment",
+  "abstract": "Sumatriptan 50mg combined with naproxen sodium achieves sustained headache relief in acute migraine attacks with aura. Common side effects include mild nausea and dizziness.",
+  "publication_year": 2021,
+  "journal": "Cephalalgia",
+  "authors": [
+    "Silberstein SD",
+    "Tfelt-Hansen P"
+  ],
+  "mesh_terms": [
+    "Migraine Disorders",
+    "Sumatriptan",
+    "Naproxen",
+    "Ibuprofen",
+    "Nausea"
+  ],
+  "keywords": [
+    "migraine",
+    "sumatriptan",
+    "naproxen"
+  ],
+  "doi": null,
+  "retrieved_at": "2026-10-13T18:53:35.952572",
+  "query_topic": "Migraine"
+}

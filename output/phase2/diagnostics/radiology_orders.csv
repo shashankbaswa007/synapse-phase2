@@ -1,0 +1,24 @@
+order_id,patient_id,consultation_id,doctor_id,modality,ordered_at,status
+rad-apt-7a,,enc-None,doc-001,Chest X-Ray,,Image-Acquired
+rad-apt-b2,,enc-None,doc-001,Chest X-Ray,,Image-Acquired
+rad-apt-8d,,enc-None,doc-001,Chest X-Ray,,Image-Acquired
+rad-apt-6b,,enc-None,doc-001,Chest X-Ray,,Image-Acquired
+rad-apt-29,,enc-None,doc-001,Chest X-Ray,,Image-Acquired
+rad-apt-d2,,enc-None,doc-001,Chest X-Ray,,Image-Acquired
+rad-apt-e2,,enc-None,doc-001,Chest X-Ray,,Image-Acquired
+rad-apt-86,,enc-None,doc-001,Chest X-Ray,,Image-Acquired
+rad-apt-f4,,enc-None,doc-001,Chest X-Ray,,Image-Acquired
+rad-apt-0e,,enc-None,doc-001,Chest X-Ray,,Image-Acquired
+rad-apt-20,,enc-None,doc-001,Chest X-Ray,,Image-Acquired
+rad-apt-39,,enc-None,doc-001,Chest X-Ray,,Image-Acquired
+rad-apt-2b,,enc-None,doc-001,Chest X-Ray,,Image-Acquired
+rad-apt-bc,,enc-None,doc-001,Chest X-Ray,,Image-Acquired
+rad-apt-8a,,enc-None,doc-001,Chest X-Ray,,Ordered
+rad-apt-3a,,enc-None,doc-001,Chest X-Ray,,Ordered
+rad-apt-d1,,enc-None,doc-001,Chest X-Ray,,Ordered
+rad-apt-11,,enc-None,doc-001,Chest X-Ray,,Ordered
+rad-apt-ab,,enc-None,doc-001,Chest X-Ray,,Ordered
+rad-apt-5f,,enc-None,doc-001,Chest X-Ray,,Ordered
+rad-apt-43,,enc-None,doc-001,Chest X-Ray,,Ordered
+rad-apt-b9,,enc-None,doc-001,Chest X-Ray,,Ordered
+rad-apt-16,,enc-None,doc-001,Chest X-Ray,,Ordered

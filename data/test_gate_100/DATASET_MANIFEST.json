@@ -1,0 +1,94 @@
+{
+  "dataset_name": "SYNAPSE Phase 2 Synthetic Hospital Dataset",
+  "validation_verdict": "PASS \u2014 DATASET VALIDATED",
+  "patient_count": 100,
+  "random_seed": 42,
+  "git_commit": "git-commit-untracked",
+  "validated_at": "2026-10-13T18:49:04.426601",
+  "target_directory": "data\\test_gate_100",
+  "manifest_files": {
+    "conditions.csv": {
+      "size_bytes": 9383,
+      "sha256": "3907f6483643e98d6ad955fb810701431607a611a106c11a9afcb3b8ffbd32a4"
+    },
+    "encounters.csv": {
+      "size_bytes": 11989,
+      "sha256": "a78a3d3e2e67588158b772e945b851aabdf7d1fc16e33ecbbac35ac0b3100a0e"
+    },
+    "events.csv": {
+      "size_bytes": 58955,
+      "sha256": "edcd663a975ef9409df897df1768abe262d6ccbdf5567b7dee5395f98883c4a6"
+    },
+    "FINAL_10000_DATASET_VALIDATION.json": {
+      "size_bytes": 24008,
+      "sha256": "70733ae5479619e1a9c12245375876f6999dc2367000ee1870673b3883a5c6f0"
+    },
+    "FINAL_10000_DATASET_VALIDATION.md": {
+      "size_bytes": 6949,
+      "sha256": "d7df0478659ac369ee3a0477b0d49dd9925b1768ff79878d2097cade611fe678"
+    },
+    "generation_summary.csv": {
+      "size_bytes": 366,
+      "sha256": "67055f8f54c1e100f70cd4e16eb6858047eac2a2a3a03bd5981db2b816a79731"
+    },
+    "invoices.csv": {
+      "size_bytes": 7167,
+      "sha256": "faa7b683c8186b7329a23b811181c91f8709567d9e9ca2ed42ef6a6a42048c48"
+    },
+    "journey_traces.csv": {
+      "size_bytes": 8977,
+      "sha256": "310653378142055711e6ecfe1d443897ec075a0d6b9dc3a1565767c34254d04d"
+    },
+    "labs.csv": {
+      "size_bytes": 7956,
+      "sha256": "d30091cdc9631be8301fdb284f5009a3d16d52b1bf283a53fafe4fdcc5df67e4"
+    },
+    "medications.csv": {
+      "size_bytes": 13178,
+      "sha256": "e712fba80259be23ee73c97d871717c5f4e5eda457204ac6a1bd85b39f57e6fb"
+    },
+    "patients.csv": {
+      "size_bytes": 5693,
+      "sha256": "99aa78ad606bb75c4dd67979bab89e7deef76e0e1a4c64155fd3a7cb2f12eceb"
+    },
+    "payments.csv": {
+      "size_bytes": 9373,
+      "sha256": "fc9c070d5d0a0111a9ba33125cc6c81e27a42ce8dd8bf343f9dfb0bd05a33c54"
+    },
+    "radiology.csv": {
+      "size_bytes": 11250,
+      "sha256": "fbce687e0447d13aa3f41c620361c8fa0c759a1f0acf63920c615edf480e83dd"
+    },
+    "symptoms.csv": {
+      "size_bytes": 28395,
+      "sha256": "48df98e7a9a7e8454e574f6ebac03a40c85860d7deb1bd83953712f477128b1d"
+    }
+  },
+  "passed_checks_count": 12,
+  "critical_errors_count": 0,
+  "noncritical_warnings_count": 0,
+  "legitimate_pending_states": {
+    "invoices_after_encounter_delayed_billing": 0,
+    "invoice_status_distribution": {
+      "Paid": 100
+    },
+    "lab_pending_tests": 75,
+    "lab_abnormal_results": 7,
+    "radiology_pending_studies": 75,
+    "radiology_abnormal_studies": 1
+  },
+  "performance_metrics": {
+    "start_time": "2026-10-13T18:49:03.546674",
+    "end_time": "2026-10-13T18:49:04.166093",
+    "total_runtime_seconds": 0.62,
+    "simulation_runtime_seconds": 0.13,
+    "export_runtime_seconds": 0.07,
+    "total_events_processed": 1125,
+    "events_per_second": 8596.14,
+    "total_records_generated": 1873,
+    "records_per_second": 3023.83,
+    "total_output_size_bytes": 172682,
+    "total_output_size_mb": 0.16,
+    "patients_generated": 100
+  }
+}

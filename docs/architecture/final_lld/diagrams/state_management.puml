@@ -1,0 +1,21 @@
+@startuml state_management
+title SYNAPSE Phase 2 - State Management & Transition Engine
+
+class StateManager {
+    - _store: Dict[str, Dict[str, Dict[str, Any]]]
+    - transition_validator: ITransitionValidator
+    + __init__(transition_validator: Optional[ITransitionValidator])
+    + get_entity_state(table_name: str, entity_id: str): dict
+    + set_entity_state(table_name: str, entity_id: str, state: dict)
+    + build_input_context(action, timestamp, scen_id, dept_id, patient_id): InputContext
+    + apply_decision(decision: DecisionResult): bool
+}
+
+class TransitionManager {
+    + {static} validate_transition(entity_table, curr_state, next_state): Tuple[bool, Optional[str]]
+    + {static} is_terminal_state(entity_table, state): bool
+}
+
+StateManager --> TransitionManager : Injected via ITransitionValidator
+
+@enduml

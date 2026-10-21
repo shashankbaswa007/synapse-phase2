@@ -1,0 +1,66 @@
+history_id,patient_id,condition,onset_date,status
+hist-pat-47d399ee-1,pat-47d399ee,History of Hypertension,2024-01-01,Resolved
+hist-pat-47d399ee-2,pat-47d399ee,History of Migraine,2024-01-01,Resolved
+hist-pat-f0e02688-1,pat-f0e02688,History of Asthma,2024-01-01,Resolved
+hist-pat-9ed94c53-1,pat-9ed94c53,History of Hypertension,2024-01-01,Resolved
+hist-pat-9ed94c53-2,pat-9ed94c53,History of Asthma,2024-01-01,Resolved
+hist-pat-9b68d389-1,pat-9b68d389,History of Hypertension,2024-01-01,Resolved
+hist-pat-533e977d-1,pat-533e977d,History of Hypertension,2024-01-01,Resolved
+hist-pat-a06f4a36-1,pat-a06f4a36,History of Hypertension,2024-01-01,Resolved
+hist-pat-f87219d5-1,pat-f87219d5,History of Hypertension,2024-01-01,Resolved
+hist-pat-f87219d5-2,pat-f87219d5,History of Type 2 Diabetes,2024-01-01,Resolved
+hist-pat-f87219d5-3,pat-f87219d5,History of GERD,2024-01-01,Resolved
+hist-pat-d267a62d-1,pat-d267a62d,History of Hypertension,2024-01-01,Resolved
+hist-pat-d267a62d-2,pat-d267a62d,History of Hyperlipidemia,2024-01-01,Resolved
+hist-pat-c3cc4a9e-1,pat-c3cc4a9e,History of Asthma,2024-01-01,Resolved
+hist-pat-1265eb94-1,pat-1265eb94,History of Type 2 Diabetes,2024-01-01,Resolved
+hist-pat-1265eb94-2,pat-1265eb94,History of Osteoarthritis,2024-01-01,Resolved
+hist-pat-a473ac91-1,pat-a473ac91,History of Type 2 Diabetes,2024-01-01,Resolved
+hist-pat-a473ac91-2,pat-a473ac91,History of Osteoarthritis,2024-01-01,Resolved
+hist-pat-31bf8c20-1,pat-31bf8c20,History of Type 2 Diabetes,2024-01-01,Resolved
+hist-pat-9578a842-1,pat-9578a842,History of Hyperlipidemia,2024-01-01,Resolved
+hist-pat-eb396e94-1,pat-eb396e94,History of Hyperlipidemia,2024-01-01,Resolved
+hist-pat-4df87660-1,pat-4df87660,History of Asthma,2024-01-01,Resolved
+hist-pat-bac880c3-1,pat-bac880c3,History of Migraine,2024-01-01,Resolved
+hist-pat-112f32bb-1,pat-112f32bb,History of Migraine,2024-01-01,Resolved
+hist-pat-0ad3e5a5-1,pat-0ad3e5a5,History of Hyperlipidemia,2024-01-01,Resolved
+hist-pat-125ca3a8-1,pat-125ca3a8,History of Hypertension,2024-01-01,Resolved
+hist-pat-c2022dca-1,pat-c2022dca,History of Hypertension,2024-01-01,Resolved
+hist-pat-c2022dca-2,pat-c2022dca,History of Hyperlipidemia,2024-01-01,Resolved
+hist-pat-cd684243-1,pat-cd684243,History of Hypertension,2024-01-01,Resolved
+hist-pat-a547822b-1,pat-a547822b,History of Hypertension,2024-01-01,Resolved
+hist-pat-aa30d085-1,pat-aa30d085,History of Type 2 Diabetes,2024-01-01,Resolved
+hist-pat-8a627583-1,pat-8a627583,History of Migraine,2024-01-01,Resolved
+hist-pat-44e3e3ca-1,pat-44e3e3ca,History of Hypertension,2024-01-01,Resolved
+hist-pat-44e3e3ca-2,pat-44e3e3ca,History of Hyperlipidemia,2024-01-01,Resolved
+hist-pat-89088ec5-1,pat-89088ec5,History of Hyperlipidemia,2024-01-01,Resolved
+hist-pat-a963865d-1,pat-a963865d,History of Osteoarthritis,2024-01-01,Resolved
+hist-pat-2bfa219d-1,pat-2bfa219d,History of Hypertension,2024-01-01,Resolved
+hist-pat-181c210d-1,pat-181c210d,History of Type 2 Diabetes,2024-01-01,Resolved
+hist-pat-181c210d-2,pat-181c210d,History of Hyperlipidemia,2024-01-01,Resolved
+hist-pat-51c4dc08-1,pat-51c4dc08,History of Osteoarthritis,2024-01-01,Resolved
+hist-pat-f41cb289-1,pat-f41cb289,History of Hyperlipidemia,2024-01-01,Resolved
+hist-pat-eefe16a3-1,pat-eefe16a3,History of Type 2 Diabetes,2024-01-01,Resolved
+hist-pat-eefe16a3-2,pat-eefe16a3,History of Osteoarthritis,2024-01-01,Resolved
+hist-pat-78462171-1,pat-78462171,History of Type 2 Diabetes,2024-01-01,Resolved
+hist-pat-78462171-2,pat-78462171,History of Hyperlipidemia,2024-01-01,Resolved
+hist-pat-4b2f828f-1,pat-4b2f828f,History of Asthma,2024-01-01,Resolved
+hist-pat-a7c3cae0-1,pat-a7c3cae0,History of Asthma,2024-01-01,Resolved
+hist-pat-8771de9a-1,pat-8771de9a,History of Hyperlipidemia,2024-01-01,Resolved
+hist-pat-a082f5f0-1,pat-a082f5f0,History of Migraine,2024-01-01,Resolved
+hist-pat-8c442a1c-1,pat-8c442a1c,History of Type 2 Diabetes,2024-01-01,Resolved
+hist-pat-d3257d03-1,pat-d3257d03,History of Asthma,2024-01-01,Resolved
+hist-pat-7fd6e23c-1,pat-7fd6e23c,History of GERD,2024-01-01,Resolved
+hist-pat-41636346-1,pat-41636346,History of Osteoarthritis,2024-01-01,Resolved
+hist-pat-97d954e4-1,pat-97d954e4,History of Hyperlipidemia,2024-01-01,Resolved
+hist-pat-97d954e4-2,pat-97d954e4,History of Osteoarthritis,2024-01-01,Resolved
+hist-pat-25776961-1,pat-25776961,History of Hyperlipidemia,2024-01-01,Resolved
+hist-pat-d99396f1-1,pat-d99396f1,History of Hypertension,2024-01-01,Resolved
+hist-pat-5e85143c-1,pat-5e85143c,History of Migraine,2024-01-01,Resolved
+hist-pat-a714ccb4-1,pat-a714ccb4,History of Type 2 Diabetes,2024-01-01,Resolved
+hist-pat-0a911725-1,pat-0a911725,History of Hyperlipidemia,2024-01-01,Resolved
+hist-pat-f5e70111-1,pat-f5e70111,History of Hyperlipidemia,2024-01-01,Resolved
+hist-pat-f5e70111-2,pat-f5e70111,History of Migraine,2024-01-01,Resolved
+hist-pat-26fe8b44-1,pat-26fe8b44,History of Hypertension,2024-01-01,Resolved
+hist-pat-28e1275b-1,pat-28e1275b,History of Hypertension,2024-01-01,Resolved
+hist-pat-5042f4f1-1,pat-5042f4f1,History of Osteoarthritis,2024-01-01,Resolved

@@ -1,0 +1,30 @@
+@startuml export_and_validation
+title SYNAPSE Phase 2 - CSV Export & Validation Pipeline
+
+class CSVExporter {
+    - state_manager: StateManager
+    - output_dir: Path
+    + export_all(): Dict[str, Path]
+    + export_simplified_dataset(target_dir: Path): Dict[str, Path]
+}
+
+class IntegrityAuditor {
+    - state_manager: StateManager
+    - committed_events: List[DomainEvent]
+    + audit_all(): dict
+    + audit_temporal_ordering(): dict
+    + audit_referential_integrity(): dict
+    + audit_state_consistency(): dict
+}
+
+class DatasetAuditor {
+    - dataset_dir: Path
+    + run_full_audit(): dict
+    + audit_referential_integrity(): dict
+    + audit_required_fields(): dict
+    + audit_temporal_consistency(): dict
+    + audit_clinical_safety(): dict
+}
+
+CSVExporter ..> DatasetAuditor
+@enduml

@@ -1,0 +1,28 @@
+{
+  "document_id": "doc-bill-b4865353",
+  "document_type": "Invoice",
+  "patient_id": "pat-4d9387bf",
+  "patient_journey_id": "pj-b4865353",
+  "scenario_id": "SCEN-V1-04",
+  "source_entity_table": "finance.invoices",
+  "source_entity_id": "inv-b4865353",
+  "source_action_id": "act-billing",
+  "source_event_id": "evt-0feac68877",
+  "created_at": "2026-01-01 12:27:00",
+  "document_version": "1.0.0",
+  "document_status": "FINAL",
+  "file_path": "C:\\AI\\synapse phase2\\output\\100_patients\\documents\\bills\\doc-bill-b4865353.md",
+  "checksum": "31328ac9b45f9f5510e722ae496660d43f83bdbd94744ae4e5ca19e7d9243e9a",
+  "metadata_payload": {
+    "invoice_id": "inv-b4865353",
+    "line_items": [
+      {
+        "item": "Outpatient Consultation Fee",
+        "amount": 500.0,
+        "source": "Consultation"
+      }
+    ],
+    "total": 500.0,
+    "status": "Cancelled"
+  }
+}

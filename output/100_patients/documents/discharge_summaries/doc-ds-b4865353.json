@@ -1,0 +1,26 @@
+{
+  "document_id": "doc-ds-b4865353",
+  "document_type": "DischargeSummary",
+  "patient_id": "pat-4d9387bf",
+  "patient_journey_id": "pj-b4865353",
+  "scenario_id": "SCEN-V1-04",
+  "source_entity_table": "clinical.encounters",
+  "source_entity_id": "enc-b4865353",
+  "source_action_id": "act-discharge",
+  "source_event_id": "evt-0feac68877",
+  "created_at": "2026-01-01 12:27:00",
+  "document_version": "1.0.0",
+  "document_status": "FINAL",
+  "file_path": "C:\\AI\\synapse phase2\\output\\100_patients\\documents\\discharge_summaries\\doc-ds-b4865353.md",
+  "checksum": "692b25dd4f53bbfa29e78316d136a253a69839ea3abffb0ce9152b8d2dabe445",
+  "metadata_payload": {
+    "discharge_summary_id": "doc-ds-b4865353",
+    "safety_logs": [
+      "Medication dispense blocked due to pharmacy inventory stock depletion.",
+      "Medication dispense blocked due to pharmacy inventory stock depletion.",
+      "Medication dispense blocked due to pharmacy inventory stock depletion.",
+      "Medication dispense blocked due to pharmacy inventory stock depletion."
+    ],
+    "outcome": "Discharged with safety hold clinical alert created"
+  }
+}

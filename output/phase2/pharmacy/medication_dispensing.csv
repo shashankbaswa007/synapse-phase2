@@ -1,0 +1,16 @@
+dispensing_id,prescription_id,patient_id,medicine_id,dispensed_quantity,dispensed_at,status
+disp-rx-e04d0b0e,rx-e04d0b0e,pat-47d399ee,Paracetamol,10,,Dispensed
+disp-rx-a7e6a0d0,rx-a7e6a0d0,pat-d089dbdf,Paracetamol,10,,Dispensed
+disp-rx-5843e9fb,rx-5843e9fb,pat-a06f4a36,Paracetamol,10,,Dispensed
+disp-rx-2f8ae30b,rx-2f8ae30b,pat-c3cc4a9e,Paracetamol,10,,Dispensed
+disp-rx-e64bf8d8,rx-e64bf8d8,pat-a473ac91,Paracetamol,10,,Dispensed
+disp-rx-280fe7fc,rx-280fe7fc,pat-eb396e94,Paracetamol,10,,Dispensed
+disp-rx-e24b0646,rx-e24b0646,pat-60e7e9f1,Paracetamol,10,,Dispensed
+disp-rx-c3ee3eb0,rx-c3ee3eb0,pat-2ecd928c,Paracetamol,10,,Dispensed
+disp-rx-48ad968a,rx-48ad968a,pat-03353559,Paracetamol,10,,Dispensed
+disp-rx-2ca9de44,rx-2ca9de44,pat-0f6b61fa,Paracetamol,10,,Dispensed
+disp-rx-5faefa8d,rx-5faefa8d,pat-a547822b,Paracetamol,10,,Dispensed
+disp-rx-ca4780df,rx-ca4780df,pat-aa30d085,Paracetamol,10,,Dispensed
+disp-rx-dbc4de44,rx-dbc4de44,pat-dd38dbd1,Paracetamol,10,,Dispensed
+disp-rx-9cfcacbf,rx-9cfcacbf,pat-32c2c183,Paracetamol,10,,Dispensed
+disp-rx-0640b5f9,rx-0640b5f9,pat-89088ec5,Paracetamol,10,,Dispensed

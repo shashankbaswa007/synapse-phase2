@@ -1,0 +1,1001 @@
+radiology_id,patient_id,encounter_id,modality,findings,impression,is_abnormal,completed_at,status
+rad-92bdbb73,pat-2c4738ba,enc-507dc51c,Lumbar Spine X-Ray,Pending,Pending,False,2026-01-01T08:00:00,Ordered
+rad-d26cca00,pat-37ead575,enc-bacc40fa,Chest X-Ray,Mild cardiomegaly with pulmonary congestion.,Findings suggestive of mild cardiomegaly with pulmonary congestion,True,2026-01-01T08:25:00,Reported
+rad-7096c8f6,pat-e9fd620d,enc-da876380,Chest X-Ray,Pending,Pending,False,2026-01-01T08:10:00,Ordered
+rad-c9ec2bcd,pat-1b84d2d9,enc-975fd421,Chest X-Ray,Pending,Pending,False,2026-01-01T08:15:00,Ordered
+rad-b207829e,pat-677ba36c,enc-c0db9235,Chest X-Ray,Pending,Pending,False,2026-01-01T08:20:00,Ordered
+rad-493a5f17,pat-690dacfc,enc-07ccf0fa,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-01T08:45:00,Reported
+rad-bb02b611,pat-5a94f18f,enc-637d0acb,Chest X-Ray,Pending,Pending,False,2026-01-01T08:30:00,Ordered
+rad-e2f78d1d,pat-15c24454,enc-a1e7f363,Chest X-Ray,Pending,Pending,False,2026-01-01T08:35:00,Ordered
+rad-55093d24,pat-e208459d,enc-de1f8424,Chest X-Ray,Pending,Pending,False,2026-01-01T08:40:00,Ordered
+rad-94075877,pat-35d72e9a,enc-7035420a,Lumbar Spine X-Ray,Normal lumbar spine alignment. No fractures or dislocations. Preserved disc spaces.,Unremarkable examination. Normal study.,False,2026-01-01T09:05:00,Reported
+rad-e37a4455,pat-bc39c3ba,enc-add5041c,Chest X-Ray,Pending,Pending,False,2026-01-01T08:50:00,Ordered
+rad-c6701a5e,pat-e4c4357c,enc-49436a85,Chest X-Ray,Pending,Pending,False,2026-01-01T08:55:00,Ordered
+rad-e2874f60,pat-eadb3853,enc-567463be,Chest X-Ray,Pending,Pending,False,2026-01-01T09:00:00,Ordered
+rad-f4cb2798,pat-7925c5a6,enc-5552fade,Chest X-Ray,Mild cardiomegaly with pulmonary congestion.,Findings suggestive of mild cardiomegaly with pulmonary congestion,True,2026-01-01T09:25:00,Reported
+rad-54d2e904,pat-477bdc2d,enc-be248ec4,Chest X-Ray,Pending,Pending,False,2026-01-01T09:10:00,Ordered
+rad-495f2821,pat-e1066324,enc-f0b381ab,CT Head,Pending,Pending,False,2026-01-01T09:15:00,Ordered
+rad-d7d598fc,pat-3f53191a,enc-8116427c,Chest X-Ray,Pending,Pending,False,2026-01-01T09:20:00,Ordered
+rad-75676dd7,pat-102ac66d,enc-01313c1d,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-01T09:45:00,Reported
+rad-245e07a9,pat-06aa397a,enc-6ea7b748,Chest X-Ray,Pending,Pending,False,2026-01-01T09:30:00,Ordered
+rad-ef3f99e2,pat-5f5ad8da,enc-8aea866e,Chest X-Ray,Pending,Pending,False,2026-01-01T09:35:00,Ordered
+rad-96eb0494,pat-39488c3b,enc-6c5ad8f6,Lumbar Spine X-Ray,Pending,Pending,False,2026-01-01T09:40:00,Ordered
+rad-aefaec01,pat-4168d556,enc-58604bd0,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-01T10:05:00,Reported
+rad-82a45617,pat-4d815e69,enc-c0da1066,Chest X-Ray,Pending,Pending,False,2026-01-01T09:50:00,Ordered
+rad-0b932e61,pat-2a6f64a1,enc-95835ec5,Chest X-Ray,Pending,Pending,False,2026-01-01T09:55:00,Ordered
+rad-841b3d56,pat-d899ee28,enc-7d8029f4,Chest X-Ray,Pending,Pending,False,2026-01-01T10:00:00,Ordered
+rad-b7a79a35,pat-c525b128,enc-a4c2508a,Chest X-Ray,Mild cardiomegaly with pulmonary congestion.,Findings suggestive of mild cardiomegaly with pulmonary congestion,True,2026-01-01T10:25:00,Reported
+rad-32055977,pat-9c117a30,enc-d585d9e7,Chest X-Ray,Pending,Pending,False,2026-01-01T10:10:00,Ordered
+rad-12e2e5e1,pat-16caf038,enc-519c2c7a,Chest X-Ray,Pending,Pending,False,2026-01-01T10:15:00,Ordered
+rad-68414950,pat-e96202bf,enc-dde26325,Chest X-Ray,Pending,Pending,False,2026-01-01T10:20:00,Ordered
+rad-eb12841e,pat-6ea88804,enc-126f3be0,Chest X-Ray,Right lower lobe consolidation.,Findings suggestive of right lower lobe consolidation,True,2026-01-01T10:45:00,Reported
+rad-b637aea9,pat-ee00e0e8,enc-38347934,Chest X-Ray,Pending,Pending,False,2026-01-01T10:30:00,Ordered
+rad-b9ad0ff1,pat-a4ade64a,enc-051a0dc4,Chest X-Ray,Pending,Pending,False,2026-01-01T10:35:00,Ordered
+rad-76c6a8c8,pat-c5433340,enc-d937173d,Chest X-Ray,Pending,Pending,False,2026-01-01T10:40:00,Ordered
+rad-b2d81278,pat-f3ca2332,enc-b899a8b2,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-01T11:05:00,Reported
+rad-042329bb,pat-c99a9f3c,enc-ac096cc8,Chest X-Ray,Pending,Pending,False,2026-01-01T10:50:00,Ordered
+rad-3b60384a,pat-5f42b05f,enc-5efb24f2,Lumbar Spine X-Ray,Pending,Pending,False,2026-01-01T10:55:00,Ordered
+rad-bed826f9,pat-449458ef,enc-4cc2f713,Chest X-Ray,Pending,Pending,False,2026-01-01T11:00:00,Ordered
+rad-84e1a81b,pat-e6f86a87,enc-f71def84,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-01T11:25:00,Reported
+rad-8956c8c0,pat-60155c99,enc-454edbf8,Chest X-Ray,Pending,Pending,False,2026-01-01T11:10:00,Ordered
+rad-14ce4176,pat-0cd5f88c,enc-845708bc,Chest X-Ray,Pending,Pending,False,2026-01-01T11:15:00,Ordered
+rad-d81803b2,pat-a290a9a9,enc-a752d32e,Chest X-Ray,Pending,Pending,False,2026-01-01T11:20:00,Ordered
+rad-fd840df1,pat-09af1164,enc-dbfb760a,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-01T11:45:00,Reported
+rad-11192ca8,pat-09fa3bd9,enc-125ef031,Chest X-Ray,Pending,Pending,False,2026-01-01T11:30:00,Ordered
+rad-bc65a211,pat-d98117ea,enc-f03c3724,Chest X-Ray,Pending,Pending,False,2026-01-01T11:35:00,Ordered
+rad-46f8aa2a,pat-f758d2a0,enc-d4319b73,Chest X-Ray,Pending,Pending,False,2026-01-01T11:40:00,Ordered
+rad-7d659776,pat-262d148b,enc-7c018bf5,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-01T12:05:00,Reported
+rad-f658e722,pat-da693c7d,enc-87058e40,Chest X-Ray,Pending,Pending,False,2026-01-01T11:50:00,Ordered
+rad-afb74af8,pat-50085873,enc-24a8858b,Chest X-Ray,Pending,Pending,False,2026-01-01T11:55:00,Ordered
+rad-68e9ad1e,pat-ec2a249a,enc-2cd43eaf,Chest X-Ray,Pending,Pending,False,2026-01-01T12:00:00,Ordered
+rad-4e875afb,pat-843eae72,enc-9dff0dc8,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-01T12:25:00,Reported
+rad-be257930,pat-7687d607,enc-28149859,Chest X-Ray,Pending,Pending,False,2026-01-01T12:10:00,Ordered
+rad-2a2f5ac4,pat-9c10241e,enc-8e9202db,Chest X-Ray,Pending,Pending,False,2026-01-01T12:15:00,Ordered
+rad-ffe708e6,pat-1fb8e703,enc-483f7cee,Chest X-Ray,Pending,Pending,False,2026-01-01T12:20:00,Ordered
+rad-c61d8a1f,pat-2fbcecfa,enc-9e7b8dd8,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-01T12:45:00,Reported
+rad-10c4db12,pat-2b2ccf51,enc-5b047813,Chest X-Ray,Pending,Pending,False,2026-01-01T12:30:00,Ordered
+rad-6bb87f0c,pat-c0300c59,enc-a8663f63,Chest X-Ray,Pending,Pending,False,2026-01-01T12:35:00,Ordered
+rad-c3d23299,pat-72c15a43,enc-ddd09ab7,Chest X-Ray,Pending,Pending,False,2026-01-01T12:40:00,Ordered
+rad-86fbe843,pat-732a5e43,enc-18324801,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-01T13:05:00,Reported
+rad-71d6d5dc,pat-133c5920,enc-b1ad5bed,Chest X-Ray,Pending,Pending,False,2026-01-01T12:50:00,Ordered
+rad-2ef2fa63,pat-05dc2c6d,enc-25771fd8,Chest X-Ray,Pending,Pending,False,2026-01-01T12:55:00,Ordered
+rad-dda777a7,pat-01010337,enc-f3e77ead,Chest X-Ray,Pending,Pending,False,2026-01-01T13:00:00,Ordered
+rad-0459d4f7,pat-e7cff090,enc-d8c90186,Lumbar Spine X-Ray,Normal lumbar spine alignment. No fractures or dislocations. Preserved disc spaces.,Unremarkable examination. Normal study.,False,2026-01-01T13:25:00,Reported
+rad-1a75694a,pat-b5c45229,enc-f1ad8c90,Chest X-Ray,Pending,Pending,False,2026-01-01T13:10:00,Ordered
+rad-5b849630,pat-f3e3ffbc,enc-458541d5,Chest X-Ray,Pending,Pending,False,2026-01-01T13:15:00,Ordered
+rad-28753d7d,pat-ae73f8b1,enc-99a4e463,Chest X-Ray,Pending,Pending,False,2026-01-01T13:20:00,Ordered
+rad-9ad0d269,pat-4a4b7e30,enc-6f0f648d,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-01T13:45:00,Reported
+rad-3c88499c,pat-f26e0b4e,enc-2016889f,Chest X-Ray,Pending,Pending,False,2026-01-01T13:30:00,Ordered
+rad-d18b754c,pat-e3d9f486,enc-fb089d7c,Chest X-Ray,Pending,Pending,False,2026-01-01T13:35:00,Ordered
+rad-5f69e0b3,pat-d8b847c7,enc-412906b5,Chest X-Ray,Pending,Pending,False,2026-01-01T13:40:00,Ordered
+rad-3d63ca4d,pat-b3524481,enc-a636a08e,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-01T14:05:00,Reported
+rad-91961f24,pat-587d3427,enc-be71ceb3,Chest X-Ray,Pending,Pending,False,2026-01-01T13:50:00,Ordered
+rad-a718add6,pat-88a2b54c,enc-13bafe03,Chest X-Ray,Pending,Pending,False,2026-01-01T13:55:00,Ordered
+rad-78fa2ee4,pat-18bce673,enc-4fd97b2b,Chest X-Ray,Pending,Pending,False,2026-01-01T14:00:00,Ordered
+rad-2b7a345e,pat-353c9899,enc-f8acca8b,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-01T14:25:00,Reported
+rad-4c47debc,pat-22d31e5d,enc-eaa0b11c,Chest X-Ray,Pending,Pending,False,2026-01-01T14:10:00,Ordered
+rad-884b94a2,pat-9a5782ac,enc-be57dd96,Chest X-Ray,Pending,Pending,False,2026-01-01T14:15:00,Ordered
+rad-66b7fa02,pat-0dbd6089,enc-58bcea59,Chest X-Ray,Pending,Pending,False,2026-01-01T14:20:00,Ordered
+rad-7bec5a70,pat-ab7f06a6,enc-cbb2cdf2,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-01T14:45:00,Reported
+rad-fc214403,pat-e1db4bee,enc-dd2f2017,Chest X-Ray,Pending,Pending,False,2026-01-01T14:30:00,Ordered
+rad-b53e797a,pat-ac671ebd,enc-ae82efbb,Chest X-Ray,Pending,Pending,False,2026-01-01T14:35:00,Ordered
+rad-766da38e,pat-999bbaa6,enc-f6bdc815,Chest X-Ray,Pending,Pending,False,2026-01-01T14:40:00,Ordered
+rad-812efcef,pat-3caf4bf2,enc-61fba94e,Chest X-Ray,Right lower lobe consolidation.,Findings suggestive of right lower lobe consolidation,True,2026-01-01T15:05:00,Reported
+rad-64d9b9c1,pat-ddf8bdf8,enc-98a7d532,Chest X-Ray,Pending,Pending,False,2026-01-01T14:50:00,Ordered
+rad-73681be9,pat-9ba2cfd3,enc-9019f74d,Chest X-Ray,Pending,Pending,False,2026-01-01T14:55:00,Ordered
+rad-189eb7e3,pat-58ea3291,enc-58e9a162,Chest X-Ray,Pending,Pending,False,2026-01-01T15:00:00,Ordered
+rad-f9bd49ec,pat-ff456978,enc-110eb448,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-01T15:25:00,Reported
+rad-1374761c,pat-0945b59e,enc-f5f77954,Chest X-Ray,Pending,Pending,False,2026-01-01T15:10:00,Ordered
+rad-ba266de9,pat-90598c20,enc-e11db23b,Chest X-Ray,Pending,Pending,False,2026-01-01T15:15:00,Ordered
+rad-05071792,pat-3a03c0ce,enc-2e7150f5,Chest X-Ray,Pending,Pending,False,2026-01-01T15:20:00,Ordered
+rad-ea802971,pat-2e5a341b,enc-745284a4,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-01T15:45:00,Reported
+rad-9bd813e4,pat-cb51c016,enc-90730330,Chest X-Ray,Pending,Pending,False,2026-01-01T15:30:00,Ordered
+rad-a9d66edf,pat-bf3c1170,enc-7019350c,Chest X-Ray,Pending,Pending,False,2026-01-01T15:35:00,Ordered
+rad-aabdd010,pat-e8407282,enc-ca5f608c,Chest X-Ray,Pending,Pending,False,2026-01-01T15:40:00,Ordered
+rad-1c0d7638,pat-9bdaae57,enc-6cdc76b2,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-01T16:05:00,Reported
+rad-498668cd,pat-974a841e,enc-79fbc918,Chest X-Ray,Pending,Pending,False,2026-01-01T15:50:00,Ordered
+rad-c2198e43,pat-6f1905d8,enc-956a5ee1,Lumbar Spine X-Ray,Pending,Pending,False,2026-01-01T15:55:00,Ordered
+rad-789e0829,pat-fffd70f3,enc-980bf9b0,Chest X-Ray,Pending,Pending,False,2026-01-01T16:00:00,Ordered
+rad-7ad311ec,pat-6b5f209c,enc-00dae76b,Chest X-Ray,Mild cardiomegaly with pulmonary congestion.,Findings suggestive of mild cardiomegaly with pulmonary congestion,True,2026-01-01T16:25:00,Reported
+rad-e7d59c8d,pat-a48d9bc6,enc-c35d7d50,Chest X-Ray,Pending,Pending,False,2026-01-01T16:10:00,Ordered
+rad-79e31772,pat-3fa181d4,enc-92d27245,Chest X-Ray,Pending,Pending,False,2026-01-01T16:15:00,Ordered
+rad-755c947f,pat-7ef8629f,enc-44d8d60c,Chest X-Ray,Pending,Pending,False,2026-01-01T16:20:00,Ordered
+rad-5aa954b2,pat-9e13b7db,enc-022a9861,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-01T16:45:00,Reported
+rad-5c769af9,pat-30bb52bd,enc-c81e740f,Chest X-Ray,Pending,Pending,False,2026-01-01T16:30:00,Ordered
+rad-9d3938ac,pat-035da36c,enc-2b59e8e6,Chest X-Ray,Pending,Pending,False,2026-01-01T16:35:00,Ordered
+rad-de69b956,pat-8cf7d318,enc-49444424,Chest X-Ray,Pending,Pending,False,2026-01-01T16:40:00,Ordered
+rad-0b38bd83,pat-cb281497,enc-26fdb3ae,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-01T17:05:00,Reported
+rad-a0f649e7,pat-5876da00,enc-dd8bb791,Chest X-Ray,Pending,Pending,False,2026-01-01T16:50:00,Ordered
+rad-5177fdf4,pat-84a757cc,enc-bd9160f8,Chest X-Ray,Pending,Pending,False,2026-01-01T16:55:00,Ordered
+rad-3b06f700,pat-6b3af6e7,enc-c3bb2227,Chest X-Ray,Pending,Pending,False,2026-01-01T17:00:00,Ordered
+rad-1335b81b,pat-3d7638d8,enc-656bac84,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-01T17:25:00,Reported
+rad-51b43eb8,pat-bb099143,enc-197a4f1d,Chest X-Ray,Pending,Pending,False,2026-01-01T17:10:00,Ordered
+rad-e74274d1,pat-dbbba6b4,enc-2f77f30d,Chest X-Ray,Pending,Pending,False,2026-01-01T17:15:00,Ordered
+rad-e96e221e,pat-b317702b,enc-ba732467,Chest X-Ray,Pending,Pending,False,2026-01-01T17:20:00,Ordered
+rad-c8222dea,pat-d9310987,enc-89b7d36e,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-01T17:45:00,Reported
+rad-ebc514ee,pat-f6614448,enc-4ff456af,Chest X-Ray,Pending,Pending,False,2026-01-01T17:30:00,Ordered
+rad-da007fb8,pat-79804df6,enc-4e535f95,Chest X-Ray,Pending,Pending,False,2026-01-01T17:35:00,Ordered
+rad-b5534d3e,pat-285f0e6c,enc-01406182,Chest X-Ray,Pending,Pending,False,2026-01-01T17:40:00,Ordered
+rad-36ab0fb7,pat-059c8a9d,enc-a270246a,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-01T18:05:00,Reported
+rad-541f8a99,pat-b17d8415,enc-99174aeb,Chest X-Ray,Pending,Pending,False,2026-01-01T17:50:00,Ordered
+rad-4cb5b787,pat-ef1c29cc,enc-6848b584,Chest X-Ray,Pending,Pending,False,2026-01-01T17:55:00,Ordered
+rad-5767edf9,pat-fa9ae5f7,enc-21954b4d,Chest X-Ray,Pending,Pending,False,2026-01-01T18:00:00,Ordered
+rad-397fbbc6,pat-797271bb,enc-d56a1b90,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-01T18:25:00,Reported
+rad-e0dc09dd,pat-8381d3de,enc-b6cb8f91,Chest X-Ray,Pending,Pending,False,2026-01-01T18:10:00,Ordered
+rad-2fb4307c,pat-08cf6eb0,enc-203a63e8,Chest X-Ray,Pending,Pending,False,2026-01-01T18:15:00,Ordered
+rad-381d2f1d,pat-7cbef28c,enc-227c63cd,Chest X-Ray,Pending,Pending,False,2026-01-01T18:20:00,Ordered
+rad-c3ee61db,pat-58085e67,enc-c596a8cc,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-01T18:45:00,Reported
+rad-46b3da91,pat-b2f7fde7,enc-9adb5163,Chest X-Ray,Pending,Pending,False,2026-01-01T18:30:00,Ordered
+rad-97493001,pat-3831a1cb,enc-0412f918,Lumbar Spine X-Ray,Pending,Pending,False,2026-01-01T18:35:00,Ordered
+rad-9d45f46d,pat-b8debfd1,enc-2e668071,Chest X-Ray,Pending,Pending,False,2026-01-01T18:40:00,Ordered
+rad-8678f19c,pat-1ff335be,enc-462e546a,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-01T19:05:00,Reported
+rad-145ba644,pat-1cba3c77,enc-71b25c95,Chest X-Ray,Pending,Pending,False,2026-01-01T18:50:00,Ordered
+rad-b3325dff,pat-5fbb41d5,enc-104bb179,Chest X-Ray,Pending,Pending,False,2026-01-01T18:55:00,Ordered
+rad-dfa3908a,pat-1caf198e,enc-ef088071,Chest X-Ray,Pending,Pending,False,2026-01-01T19:00:00,Ordered
+rad-2fc77f6e,pat-dbc8d6e2,enc-ed12c539,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-01T19:25:00,Reported
+rad-8ec7774c,pat-cd93fe8c,enc-afe8e61d,Chest X-Ray,Pending,Pending,False,2026-01-01T19:10:00,Ordered
+rad-41477d85,pat-076d0386,enc-dc19d450,Chest X-Ray,Pending,Pending,False,2026-01-01T19:15:00,Ordered
+rad-2bf812cb,pat-96717d40,enc-b92ebe6c,Lumbar Spine X-Ray,Pending,Pending,False,2026-01-01T19:20:00,Ordered
+rad-00ae06a6,pat-354dd996,enc-b01ce022,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-01T19:45:00,Reported
+rad-a2b7a5e4,pat-df582771,enc-b58107a2,Chest X-Ray,Pending,Pending,False,2026-01-01T19:30:00,Ordered
+rad-8c766ace,pat-75ae484d,enc-3d410a94,Chest X-Ray,Pending,Pending,False,2026-01-01T19:35:00,Ordered
+rad-e7478634,pat-3f808fe0,enc-f3fc2ea6,Chest X-Ray,Pending,Pending,False,2026-01-01T19:40:00,Ordered
+rad-b47253f3,pat-b9e2d3ce,enc-7ba31fe1,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-01T20:05:00,Reported
+rad-6d75a832,pat-ac96b9bb,enc-01a94537,Chest X-Ray,Pending,Pending,False,2026-01-01T19:50:00,Ordered
+rad-733b2d20,pat-7444a520,enc-4e41cebb,Chest X-Ray,Pending,Pending,False,2026-01-01T19:55:00,Ordered
+rad-13e5fbca,pat-9ca7259f,enc-1964d3e6,Chest X-Ray,Pending,Pending,False,2026-01-01T20:00:00,Ordered
+rad-1d1cb0e7,pat-99403221,enc-b1cc5be4,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-01T20:25:00,Reported
+rad-8bf68095,pat-f7c7806d,enc-608282d0,Chest X-Ray,Pending,Pending,False,2026-01-01T20:10:00,Ordered
+rad-bb97c490,pat-b0bcc11f,enc-521e6528,Chest X-Ray,Pending,Pending,False,2026-01-01T20:15:00,Ordered
+rad-d9155057,pat-b5828d3f,enc-021f5f8b,Chest X-Ray,Pending,Pending,False,2026-01-01T20:20:00,Ordered
+rad-eb5664d1,pat-4da353dc,enc-47d0001a,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-01T20:45:00,Reported
+rad-31d728dd,pat-50648a7c,enc-d2e2450c,Chest X-Ray,Pending,Pending,False,2026-01-01T20:30:00,Ordered
+rad-c2e1c7d3,pat-059751e0,enc-75f962e7,Chest X-Ray,Pending,Pending,False,2026-01-01T20:35:00,Ordered
+rad-058efac0,pat-29fbe6a8,enc-5312de6e,Chest X-Ray,Pending,Pending,False,2026-01-01T20:40:00,Ordered
+rad-607edc0e,pat-b8bd0959,enc-73847fc2,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-01T21:05:00,Reported
+rad-6c7d4873,pat-2dfef59d,enc-2368290e,Chest X-Ray,Pending,Pending,False,2026-01-01T20:50:00,Ordered
+rad-8ed79322,pat-00709882,enc-22110ca9,Chest X-Ray,Pending,Pending,False,2026-01-01T20:55:00,Ordered
+rad-3419d79b,pat-627535d7,enc-5e887016,Chest X-Ray,Pending,Pending,False,2026-01-01T21:00:00,Ordered
+rad-a50ddea2,pat-3800ffa6,enc-f14f0fb6,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-01T21:25:00,Reported
+rad-b58a0c7c,pat-01790923,enc-7d0b9d32,Chest X-Ray,Pending,Pending,False,2026-01-01T21:10:00,Ordered
+rad-4d0c3752,pat-c363a4ef,enc-2f3937da,Chest X-Ray,Pending,Pending,False,2026-01-01T21:15:00,Ordered
+rad-9f1bd044,pat-088ad063,enc-b4fc5b7c,Chest X-Ray,Pending,Pending,False,2026-01-01T21:20:00,Ordered
+rad-655c3cb4,pat-3d65a03f,enc-ba5cc6fb,Chest X-Ray,Bilateral infiltrates suggestive of pneumonia.,Findings suggestive of bilateral infiltrates suggestive of pneumonia,True,2026-01-01T21:45:00,Reported
+rad-aad3f7b5,pat-49ebcfa9,enc-2439fdc3,Chest X-Ray,Pending,Pending,False,2026-01-01T21:30:00,Ordered
+rad-e04823ad,pat-6e352a54,enc-2359848c,Chest X-Ray,Pending,Pending,False,2026-01-01T21:35:00,Ordered
+rad-2ba2dbb6,pat-7e0ff1bf,enc-6cc1812d,Chest X-Ray,Pending,Pending,False,2026-01-01T21:40:00,Ordered
+rad-9cbe89a7,pat-2c42b0cc,enc-680e63b8,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-01T22:05:00,Reported
+rad-7385f252,pat-c2e38b87,enc-0fd3d43f,Chest X-Ray,Pending,Pending,False,2026-01-01T21:50:00,Ordered
+rad-877631ac,pat-af8ef508,enc-4ae024e7,Chest X-Ray,Pending,Pending,False,2026-01-01T21:55:00,Ordered
+rad-237f8b71,pat-642d3a5d,enc-49164e60,Chest X-Ray,Pending,Pending,False,2026-01-01T22:00:00,Ordered
+rad-9f9cd954,pat-2adb1891,enc-6db3d3ff,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-01T22:25:00,Reported
+rad-2377eb75,pat-304cd156,enc-2ee59432,Chest X-Ray,Pending,Pending,False,2026-01-01T22:10:00,Ordered
+rad-210a7104,pat-ecf2d25e,enc-c84d6648,Chest X-Ray,Pending,Pending,False,2026-01-01T22:15:00,Ordered
+rad-ea475b3f,pat-7dc42808,enc-b619630d,Chest X-Ray,Pending,Pending,False,2026-01-01T22:20:00,Ordered
+rad-c6914bfa,pat-613b91b0,enc-3aab9d84,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-01T22:45:00,Reported
+rad-669d9496,pat-57cd1111,enc-1bc8cb01,Chest X-Ray,Pending,Pending,False,2026-01-01T22:30:00,Ordered
+rad-42a1f39a,pat-eefe8c9c,enc-35dff7f7,Chest X-Ray,Pending,Pending,False,2026-01-01T22:35:00,Ordered
+rad-616e9af8,pat-c90a4683,enc-1b5f1816,Lumbar Spine X-Ray,Pending,Pending,False,2026-01-01T22:40:00,Ordered
+rad-35661764,pat-9cb48d3f,enc-737b3ab1,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-01T23:05:00,Reported
+rad-d4667c18,pat-30a51a13,enc-0d7837df,Chest X-Ray,Pending,Pending,False,2026-01-01T22:50:00,Ordered
+rad-ad490a34,pat-12a218a5,enc-ac3118fa,Chest X-Ray,Pending,Pending,False,2026-01-01T22:55:00,Ordered
+rad-0e55bc76,pat-df550326,enc-c37716b3,Chest X-Ray,Pending,Pending,False,2026-01-01T23:00:00,Ordered
+rad-98baec21,pat-2a5902bb,enc-ae245e9b,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-01T23:25:00,Reported
+rad-5561cc83,pat-5eb65288,enc-4d97822d,Chest X-Ray,Pending,Pending,False,2026-01-01T23:10:00,Ordered
+rad-bcfe6a7e,pat-5d8e272d,enc-67d65dea,Chest X-Ray,Pending,Pending,False,2026-01-01T23:15:00,Ordered
+rad-69347ce3,pat-f2f30b2a,enc-556c10c0,Chest X-Ray,Pending,Pending,False,2026-01-01T23:20:00,Ordered
+rad-a20486ab,pat-7916b34d,enc-64493a32,Chest X-Ray,Right lower lobe consolidation.,Findings suggestive of right lower lobe consolidation,True,2026-01-01T23:45:00,Reported
+rad-d9c92a13,pat-5bacbcc1,enc-b99ac3f1,Chest X-Ray,Pending,Pending,False,2026-01-01T23:30:00,Ordered
+rad-a15c90c5,pat-312b64bd,enc-2e4e0eed,Lumbar Spine X-Ray,Pending,Pending,False,2026-01-01T23:35:00,Ordered
+rad-587e1025,pat-edb82833,enc-332f0d25,Chest X-Ray,Pending,Pending,False,2026-01-01T23:40:00,Ordered
+rad-25a050ef,pat-d19c7ebd,enc-6153564d,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-02T00:05:00,Reported
+rad-cfb7a676,pat-28cc5c25,enc-867891f7,Chest X-Ray,Pending,Pending,False,2026-01-01T23:50:00,Ordered
+rad-39d276b8,pat-84dce380,enc-843da7e5,Chest X-Ray,Pending,Pending,False,2026-01-01T23:55:00,Ordered
+rad-2aafc431,pat-31732883,enc-39f9bb42,Chest X-Ray,Pending,Pending,False,2026-01-02T00:00:00,Ordered
+rad-066edcb6,pat-f7cf61a3,enc-46e65961,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-02T00:25:00,Reported
+rad-1122ec75,pat-ffa34cd1,enc-3fe26ee7,Chest X-Ray,Pending,Pending,False,2026-01-02T00:10:00,Ordered
+rad-5b2b94be,pat-5a08cb43,enc-2df6eaf0,Chest X-Ray,Pending,Pending,False,2026-01-02T00:15:00,Ordered
+rad-afe978bd,pat-7e4ec6ae,enc-15fd447c,Chest X-Ray,Pending,Pending,False,2026-01-02T00:20:00,Ordered
+rad-f0125110,pat-19710739,enc-11d75dd8,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-02T00:45:00,Reported
+rad-28ea4f83,pat-531868ca,enc-33c5784e,Chest X-Ray,Pending,Pending,False,2026-01-02T00:30:00,Ordered
+rad-3ef88c21,pat-9cf9e67d,enc-31ab6444,Chest X-Ray,Pending,Pending,False,2026-01-02T00:35:00,Ordered
+rad-1a1ccc3c,pat-5f2e291b,enc-7a672e62,Chest X-Ray,Pending,Pending,False,2026-01-02T00:40:00,Ordered
+rad-dce8a872,pat-93120218,enc-d7f946b6,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-02T01:05:00,Reported
+rad-fed15633,pat-cfdb83d5,enc-d8b887c0,Chest X-Ray,Pending,Pending,False,2026-01-02T00:50:00,Ordered
+rad-3d60b398,pat-b50c934b,enc-ec8bdf77,Chest X-Ray,Pending,Pending,False,2026-01-02T00:55:00,Ordered
+rad-a48b6e9c,pat-6e96ae23,enc-700bd28f,Chest X-Ray,Pending,Pending,False,2026-01-02T01:00:00,Ordered
+rad-73e81dfb,pat-57071e4c,enc-cf79ff9a,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-02T01:25:00,Reported
+rad-17c6afde,pat-ae2d7c50,enc-4364d4d5,Chest X-Ray,Pending,Pending,False,2026-01-02T01:10:00,Ordered
+rad-ade2c39f,pat-4a62a8da,enc-0cd214ef,Chest X-Ray,Pending,Pending,False,2026-01-02T01:15:00,Ordered
+rad-628a0c44,pat-7079641e,enc-32660e77,Chest X-Ray,Pending,Pending,False,2026-01-02T01:20:00,Ordered
+rad-0aa8481e,pat-659b327f,enc-3c2bbe72,CT Head,No acute intracranial hemorrhage or infarction.,Findings suggestive of no acute intracranial hemorrhage or infarction,True,2026-01-02T01:45:00,Reported
+rad-3a7cd438,pat-d1f249e5,enc-c7ecc5e5,Chest X-Ray,Pending,Pending,False,2026-01-02T01:30:00,Ordered
+rad-31a7208a,pat-151107d7,enc-fc502096,Chest X-Ray,Pending,Pending,False,2026-01-02T01:35:00,Ordered
+rad-b2f260d4,pat-19fec229,enc-a888f77a,Chest X-Ray,Pending,Pending,False,2026-01-02T01:40:00,Ordered
+rad-904760f6,pat-df5c259c,enc-145034e4,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-02T02:05:00,Reported
+rad-7403b0ac,pat-75b69b2c,enc-30aff4b3,Chest X-Ray,Pending,Pending,False,2026-01-02T01:50:00,Ordered
+rad-96649b7a,pat-d2d70ec9,enc-c34c7307,Chest X-Ray,Pending,Pending,False,2026-01-02T01:55:00,Ordered
+rad-a059e455,pat-565fad65,enc-11134ddc,Chest X-Ray,Pending,Pending,False,2026-01-02T02:00:00,Ordered
+rad-19fe5985,pat-68c187f5,enc-215f2467,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-02T02:25:00,Reported
+rad-5d76d82a,pat-8599cef3,enc-cf0153f8,Chest X-Ray,Pending,Pending,False,2026-01-02T02:10:00,Ordered
+rad-37f509af,pat-26bab454,enc-7b77f441,Chest X-Ray,Pending,Pending,False,2026-01-02T02:15:00,Ordered
+rad-f9fa4f9f,pat-9c42e880,enc-0919b795,Chest X-Ray,Pending,Pending,False,2026-01-02T02:20:00,Ordered
+rad-2b9f6a58,pat-dbaa6091,enc-04484121,Lumbar Spine X-Ray,Normal lumbar spine alignment. No fractures or dislocations. Preserved disc spaces.,Unremarkable examination. Normal study.,False,2026-01-02T02:45:00,Reported
+rad-e82b479e,pat-6a2af70e,enc-8b5ed5b9,Chest X-Ray,Pending,Pending,False,2026-01-02T02:30:00,Ordered
+rad-7e2f8842,pat-36e9d33e,enc-18bd44a6,Chest X-Ray,Pending,Pending,False,2026-01-02T02:35:00,Ordered
+rad-0d116f69,pat-870cf08f,enc-ef7344be,Chest X-Ray,Pending,Pending,False,2026-01-02T02:40:00,Ordered
+rad-faa020a5,pat-96e00de1,enc-ddd705fe,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-02T03:05:00,Reported
+rad-2f39f6fe,pat-79bb57af,enc-839ebcf1,Chest X-Ray,Pending,Pending,False,2026-01-02T02:50:00,Ordered
+rad-cb71d7ed,pat-27a05a66,enc-e1c41340,Chest X-Ray,Pending,Pending,False,2026-01-02T02:55:00,Ordered
+rad-98c9c2ad,pat-3d0b2c6b,enc-56a7ed9f,Chest X-Ray,Pending,Pending,False,2026-01-02T03:00:00,Ordered
+rad-d225f7ef,pat-a774345c,enc-ca8d7b2e,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-02T03:25:00,Reported
+rad-34a2ea59,pat-c522be41,enc-f187c38e,Chest X-Ray,Pending,Pending,False,2026-01-02T03:10:00,Ordered
+rad-fc2f2b17,pat-41705059,enc-ae2cfc2c,Chest X-Ray,Pending,Pending,False,2026-01-02T03:15:00,Ordered
+rad-fbc9423c,pat-b04075dd,enc-1e8ffc21,Lumbar Spine X-Ray,Pending,Pending,False,2026-01-02T03:20:00,Ordered
+rad-3ad40a98,pat-1621205b,enc-4a9c9d4b,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-02T03:45:00,Reported
+rad-b3f28b24,pat-71e0e7f0,enc-788ddf13,Chest X-Ray,Pending,Pending,False,2026-01-02T03:30:00,Ordered
+rad-eaa26e36,pat-60f951b8,enc-574d2233,Chest X-Ray,Pending,Pending,False,2026-01-02T03:35:00,Ordered
+rad-b4a580a0,pat-32481de3,enc-a3034b53,Chest X-Ray,Pending,Pending,False,2026-01-02T03:40:00,Ordered
+rad-bafeb523,pat-fa1f2e2c,enc-3cd77187,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-02T04:05:00,Reported
+rad-4355ed88,pat-a71bc6da,enc-79ba80a0,Chest X-Ray,Pending,Pending,False,2026-01-02T03:50:00,Ordered
+rad-fb6c9c78,pat-d70d84c3,enc-3709ba24,Chest X-Ray,Pending,Pending,False,2026-01-02T03:55:00,Ordered
+rad-a4a55dbe,pat-9d84fbbe,enc-9a9dfb50,Chest X-Ray,Pending,Pending,False,2026-01-02T04:00:00,Ordered
+rad-2d033180,pat-57612fc3,enc-7b22c4c0,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-02T04:25:00,Reported
+rad-e2d3d00f,pat-fe3156a0,enc-d430aaf1,Chest X-Ray,Pending,Pending,False,2026-01-02T04:10:00,Ordered
+rad-6ee58d52,pat-ac2b33bf,enc-15a9ad40,Chest X-Ray,Pending,Pending,False,2026-01-02T04:15:00,Ordered
+rad-8a2b0545,pat-065d9020,enc-6d722c75,Chest X-Ray,Pending,Pending,False,2026-01-02T04:20:00,Ordered
+rad-ab4b39d4,pat-cf28f1c2,enc-e0309e3a,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-02T04:45:00,Reported
+rad-18923a56,pat-727fc6bf,enc-23ced235,Chest X-Ray,Pending,Pending,False,2026-01-02T04:30:00,Ordered
+rad-34c8b0cd,pat-99252fc3,enc-0673104c,Chest X-Ray,Pending,Pending,False,2026-01-02T04:35:00,Ordered
+rad-116ff541,pat-91466418,enc-3767bd37,Chest X-Ray,Pending,Pending,False,2026-01-02T04:40:00,Ordered
+rad-3f24232e,pat-16993980,enc-c9de1250,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-02T05:05:00,Reported
+rad-ec2c8171,pat-484283e1,enc-2c0fab11,Chest X-Ray,Pending,Pending,False,2026-01-02T04:50:00,Ordered
+rad-6918fa30,pat-407e721a,enc-18625fb5,Chest X-Ray,Pending,Pending,False,2026-01-02T04:55:00,Ordered
+rad-e4d08049,pat-de73ccb5,enc-136e2631,Chest X-Ray,Pending,Pending,False,2026-01-02T05:00:00,Ordered
+rad-72b2658d,pat-d58663b9,enc-f0c98c2b,CT Head,No acute intracranial abnormality. Normal ventricles and cisterns.,Unremarkable examination. Normal study.,False,2026-01-02T05:25:00,Reported
+rad-0fd339b8,pat-77eefd5d,enc-9b3c385c,Chest X-Ray,Pending,Pending,False,2026-01-02T05:10:00,Ordered
+rad-5312e01b,pat-a3bb38bc,enc-11559e20,Chest X-Ray,Pending,Pending,False,2026-01-02T05:15:00,Ordered
+rad-60ef7bd6,pat-d9681ca6,enc-29ba04af,Chest X-Ray,Pending,Pending,False,2026-01-02T05:20:00,Ordered
+rad-42005edc,pat-670a0da2,enc-a0fa06af,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-02T05:45:00,Reported
+rad-1b2c5301,pat-739f77d9,enc-877afd85,Chest X-Ray,Pending,Pending,False,2026-01-02T05:30:00,Ordered
+rad-716944b8,pat-847bc3c5,enc-313bf700,Chest X-Ray,Pending,Pending,False,2026-01-02T05:35:00,Ordered
+rad-be028086,pat-d1cd29d4,enc-8b2b3b14,Chest X-Ray,Pending,Pending,False,2026-01-02T05:40:00,Ordered
+rad-286fa4ad,pat-3be3ef46,enc-17191fe7,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-02T06:05:00,Reported
+rad-15f84300,pat-6249c051,enc-d4a3714f,Chest X-Ray,Pending,Pending,False,2026-01-02T05:50:00,Ordered
+rad-f3412a12,pat-ee3e6f3a,enc-ddb1e89c,Lumbar Spine X-Ray,Pending,Pending,False,2026-01-02T05:55:00,Ordered
+rad-75051bc0,pat-9b7b8009,enc-5953c173,Chest X-Ray,Pending,Pending,False,2026-01-02T06:00:00,Ordered
+rad-9bed622a,pat-84855dfb,enc-73b5d0d7,Chest X-Ray,Right lower lobe consolidation.,Findings suggestive of right lower lobe consolidation,True,2026-01-02T06:25:00,Reported
+rad-4f803373,pat-2f9f1271,enc-dd70341a,Chest X-Ray,Pending,Pending,False,2026-01-02T06:10:00,Ordered
+rad-4ba7aa20,pat-4f4eecdd,enc-833ea12c,Chest X-Ray,Pending,Pending,False,2026-01-02T06:15:00,Ordered
+rad-69fbbca8,pat-29d19d4d,enc-3a9cab86,Chest X-Ray,Pending,Pending,False,2026-01-02T06:20:00,Ordered
+rad-6980a326,pat-2b6af29f,enc-14643343,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-02T06:45:00,Reported
+rad-5ebd159d,pat-07b5ee1f,enc-e4ba5f23,Chest X-Ray,Pending,Pending,False,2026-01-02T06:30:00,Ordered
+rad-90f9cd30,pat-193616b2,enc-84f727a3,Chest X-Ray,Pending,Pending,False,2026-01-02T06:35:00,Ordered
+rad-618ea09e,pat-d7b57b56,enc-c5e43102,Chest X-Ray,Pending,Pending,False,2026-01-02T06:40:00,Ordered
+rad-f7b3dd21,pat-2493b09a,enc-639f01e7,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-02T07:05:00,Reported
+rad-3992e75e,pat-aec4fc4d,enc-2befeff9,Chest X-Ray,Pending,Pending,False,2026-01-02T06:50:00,Ordered
+rad-428b2e3a,pat-6be9dc3e,enc-3475be8d,Lumbar Spine X-Ray,Pending,Pending,False,2026-01-02T06:55:00,Ordered
+rad-99ecc289,pat-af3cd44d,enc-d9fabbe9,Chest X-Ray,Pending,Pending,False,2026-01-02T07:00:00,Ordered
+rad-8a2ab8aa,pat-16a43a77,enc-4a018569,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-02T07:25:00,Reported
+rad-b775d616,pat-cee67edf,enc-c4511c17,Chest X-Ray,Pending,Pending,False,2026-01-02T07:10:00,Ordered
+rad-d562fdf3,pat-b4701e51,enc-087a4ced,Chest X-Ray,Pending,Pending,False,2026-01-02T07:15:00,Ordered
+rad-c34a3ea3,pat-2bbbfb41,enc-f18cb1f7,Chest X-Ray,Pending,Pending,False,2026-01-02T07:20:00,Ordered
+rad-65b4696a,pat-b0ab2dc1,enc-3339389a,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-02T07:45:00,Reported
+rad-4cb83ac6,pat-6ee39799,enc-7bbc2f38,Chest X-Ray,Pending,Pending,False,2026-01-02T07:30:00,Ordered
+rad-8ee6adb2,pat-6533d621,enc-2d22ac1a,Chest X-Ray,Pending,Pending,False,2026-01-02T07:35:00,Ordered
+rad-d1c47049,pat-aa4fadd3,enc-64d6b355,Chest X-Ray,Pending,Pending,False,2026-01-02T07:40:00,Ordered
+rad-4c7ce4bf,pat-b8d47f6c,enc-59796962,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-02T08:05:00,Reported
+rad-2d004cc8,pat-1e09f661,enc-2434837f,Chest X-Ray,Pending,Pending,False,2026-01-02T07:50:00,Ordered
+rad-b9705e6c,pat-81341bcb,enc-4dcacbda,Chest X-Ray,Pending,Pending,False,2026-01-02T07:55:00,Ordered
+rad-6c47cf98,pat-f68a3f5a,enc-b24f428e,Chest X-Ray,Pending,Pending,False,2026-01-02T08:00:00,Ordered
+rad-b2f8d560,pat-c097d192,enc-6a14cbfc,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-02T08:25:00,Reported
+rad-aed110fd,pat-96b80e00,enc-07006192,Chest X-Ray,Pending,Pending,False,2026-01-02T08:10:00,Ordered
+rad-4a9c37d8,pat-03bd50e8,enc-90f490b3,Chest X-Ray,Pending,Pending,False,2026-01-02T08:15:00,Ordered
+rad-2ae74a42,pat-4ea5c9a5,enc-6b2b92ea,Chest X-Ray,Pending,Pending,False,2026-01-02T08:20:00,Ordered
+rad-02d3309a,pat-24c6bce2,enc-3e3bc24b,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-02T08:45:00,Reported
+rad-1d6d6eba,pat-d24f6ad1,enc-5d95434b,Chest X-Ray,Pending,Pending,False,2026-01-02T08:30:00,Ordered
+rad-0fdca31f,pat-d09d87a3,enc-3aefe587,Chest X-Ray,Pending,Pending,False,2026-01-02T08:35:00,Ordered
+rad-1c1c3ffc,pat-457dd7d2,enc-3a6db618,Chest X-Ray,Pending,Pending,False,2026-01-02T08:40:00,Ordered
+rad-c8e1d8e7,pat-9ba40ea0,enc-73e20cb6,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-02T09:05:00,Reported
+rad-76b032eb,pat-55bd4f0e,enc-8c1b9c00,Chest X-Ray,Pending,Pending,False,2026-01-02T08:50:00,Ordered
+rad-33568c2d,pat-7eed4d29,enc-d2eec088,Chest X-Ray,Pending,Pending,False,2026-01-02T08:55:00,Ordered
+rad-7c87deb6,pat-9543a726,enc-b1876914,Chest X-Ray,Pending,Pending,False,2026-01-02T09:00:00,Ordered
+rad-1e2c591a,pat-e22d4d59,enc-1f1821eb,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-02T09:25:00,Reported
+rad-933d9b82,pat-cba75204,enc-a4f1b490,Chest X-Ray,Pending,Pending,False,2026-01-02T09:10:00,Ordered
+rad-5010c730,pat-50822756,enc-908e72ad,Chest X-Ray,Pending,Pending,False,2026-01-02T09:15:00,Ordered
+rad-e62dec1f,pat-3e060292,enc-5b5437f6,Chest X-Ray,Pending,Pending,False,2026-01-02T09:20:00,Ordered
+rad-8f156263,pat-4582fa5c,enc-0be09eef,Lumbar Spine X-Ray,Normal lumbar spine alignment. No fractures or dislocations. Preserved disc spaces.,Unremarkable examination. Normal study.,False,2026-01-02T09:45:00,Reported
+rad-538c6dac,pat-effc1051,enc-0448a663,Chest X-Ray,Pending,Pending,False,2026-01-02T09:30:00,Ordered
+rad-489a53c1,pat-03647145,enc-c2b7d548,Chest X-Ray,Pending,Pending,False,2026-01-02T09:35:00,Ordered
+rad-46fbf83f,pat-5dd90a7c,enc-8683e151,Chest X-Ray,Pending,Pending,False,2026-01-02T09:40:00,Ordered
+rad-b5d722a6,pat-609066aa,enc-b86e1632,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-02T10:05:00,Reported
+rad-f8aa3dd7,pat-8425c7a1,enc-a3166347,Chest X-Ray,Pending,Pending,False,2026-01-02T09:50:00,Ordered
+rad-71568c57,pat-d6ee778c,enc-33a5e5e1,CT Head,Pending,Pending,False,2026-01-02T09:55:00,Ordered
+rad-d20ccc9e,pat-bf6c39f5,enc-3bb1f4a8,Chest X-Ray,Pending,Pending,False,2026-01-02T10:00:00,Ordered
+rad-6d5f48a3,pat-b7bcbe70,enc-9f073526,Lumbar Spine X-Ray,Normal lumbar spine alignment. No fractures or dislocations. Preserved disc spaces.,Unremarkable examination. Normal study.,False,2026-01-02T10:25:00,Reported
+rad-10c33fd0,pat-e8df0223,enc-f1ff145a,Chest X-Ray,Pending,Pending,False,2026-01-02T10:10:00,Ordered
+rad-1d9596b0,pat-8c410513,enc-22f15c3c,Chest X-Ray,Pending,Pending,False,2026-01-02T10:15:00,Ordered
+rad-40457979,pat-bd0156b2,enc-ed92794e,Chest X-Ray,Pending,Pending,False,2026-01-02T10:20:00,Ordered
+rad-f615babc,pat-f8f14639,enc-b00326b8,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-02T10:45:00,Reported
+rad-af6e4065,pat-da0db44f,enc-4aedbd2a,Chest X-Ray,Pending,Pending,False,2026-01-02T10:30:00,Ordered
+rad-31ab37ae,pat-74c8291b,enc-1adfc692,Chest X-Ray,Pending,Pending,False,2026-01-02T10:35:00,Ordered
+rad-45ff0bce,pat-cdca6544,enc-3ea87e52,CT Head,Pending,Pending,False,2026-01-02T10:40:00,Ordered
+rad-f5709432,pat-b48ba412,enc-4c591fe4,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-02T11:05:00,Reported
+rad-90e3b5f1,pat-9fb8651b,enc-306c5138,Chest X-Ray,Pending,Pending,False,2026-01-02T10:50:00,Ordered
+rad-2221cf83,pat-672125eb,enc-897564cc,Chest X-Ray,Pending,Pending,False,2026-01-02T10:55:00,Ordered
+rad-1c191bf7,pat-90e6d2bc,enc-a40e7341,Chest X-Ray,Pending,Pending,False,2026-01-02T11:00:00,Ordered
+rad-99ca9e36,pat-f2c3ee28,enc-d1383d27,CT Head,No acute intracranial abnormality. Normal ventricles and cisterns.,Unremarkable examination. Normal study.,False,2026-01-02T11:25:00,Reported
+rad-491b03d0,pat-cee26f11,enc-954263e2,Chest X-Ray,Pending,Pending,False,2026-01-02T11:10:00,Ordered
+rad-debd8270,pat-95b85698,enc-595c25a1,Chest X-Ray,Pending,Pending,False,2026-01-02T11:15:00,Ordered
+rad-c6623a22,pat-5856adac,enc-4fe68913,Chest X-Ray,Pending,Pending,False,2026-01-02T11:20:00,Ordered
+rad-bf7e2fad,pat-449f06ed,enc-c554e057,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-02T11:45:00,Reported
+rad-9b79c819,pat-465e84a5,enc-e87146e8,Chest X-Ray,Pending,Pending,False,2026-01-02T11:30:00,Ordered
+rad-19707602,pat-f6086533,enc-7ff5ce04,Chest X-Ray,Pending,Pending,False,2026-01-02T11:35:00,Ordered
+rad-564025d9,pat-ec72816a,enc-20941c27,Chest X-Ray,Pending,Pending,False,2026-01-02T11:40:00,Ordered
+rad-5ecb5d5b,pat-9aa2c5b0,enc-fddd6efe,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-02T12:05:00,Reported
+rad-4a777532,pat-37c453d3,enc-314d21c0,Chest X-Ray,Pending,Pending,False,2026-01-02T11:50:00,Ordered
+rad-7d602532,pat-93f5578e,enc-95c5e8fe,Chest X-Ray,Pending,Pending,False,2026-01-02T11:55:00,Ordered
+rad-5f695f19,pat-e420c0c5,enc-3ebdfbcd,Chest X-Ray,Pending,Pending,False,2026-01-02T12:00:00,Ordered
+rad-ab763424,pat-6eff3205,enc-babd88ac,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-02T12:25:00,Reported
+rad-ec44e7c4,pat-fed6a0b0,enc-5636a338,Chest X-Ray,Pending,Pending,False,2026-01-02T12:10:00,Ordered
+rad-9a4a3737,pat-d783135a,enc-a532a40c,Chest X-Ray,Pending,Pending,False,2026-01-02T12:15:00,Ordered
+rad-20add8e4,pat-7420b09d,enc-0962fdb0,Chest X-Ray,Pending,Pending,False,2026-01-02T12:20:00,Ordered
+rad-86463b48,pat-56b734ef,enc-6952b9da,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-02T12:45:00,Reported
+rad-db4bf27d,pat-dadc9ea3,enc-2e2ba034,Chest X-Ray,Pending,Pending,False,2026-01-02T12:30:00,Ordered
+rad-316bdac5,pat-1f240909,enc-93cb7119,Chest X-Ray,Pending,Pending,False,2026-01-02T12:35:00,Ordered
+rad-20c6e6e3,pat-9ca9c8f1,enc-1a1facfa,Chest X-Ray,Pending,Pending,False,2026-01-02T12:40:00,Ordered
+rad-ce06a238,pat-232cbc06,enc-7bef34fb,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-02T13:05:00,Reported
+rad-6ca711db,pat-8c2da950,enc-e72acc00,Chest X-Ray,Pending,Pending,False,2026-01-02T12:50:00,Ordered
+rad-0b903455,pat-cd789144,enc-d33cc30f,Chest X-Ray,Pending,Pending,False,2026-01-02T12:55:00,Ordered
+rad-a7a99d63,pat-85af9326,enc-072c840a,Chest X-Ray,Pending,Pending,False,2026-01-02T13:00:00,Ordered
+rad-e3b49156,pat-216f7b1b,enc-165dba67,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-02T13:25:00,Reported
+rad-a2500c2b,pat-ff0e0c79,enc-5bf05a36,Chest X-Ray,Pending,Pending,False,2026-01-02T13:10:00,Ordered
+rad-8751b9fb,pat-6adff249,enc-c23479a9,CT Head,Pending,Pending,False,2026-01-02T13:15:00,Ordered
+rad-9b221cda,pat-cd91ba6a,enc-fcafd34d,Chest X-Ray,Pending,Pending,False,2026-01-02T13:20:00,Ordered
+rad-bfdc618d,pat-c8b0518e,enc-d45bcff1,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-02T13:45:00,Reported
+rad-903b686c,pat-f7f30569,enc-8b4aaee6,Chest X-Ray,Pending,Pending,False,2026-01-02T13:30:00,Ordered
+rad-67fcb99c,pat-e14b2bf6,enc-1eb7880b,Chest X-Ray,Pending,Pending,False,2026-01-02T13:35:00,Ordered
+rad-e6b76939,pat-5b577031,enc-6b2844ea,Chest X-Ray,Pending,Pending,False,2026-01-02T13:40:00,Ordered
+rad-a512840d,pat-c70b41be,enc-3e861cb0,Chest X-Ray,Mild cardiomegaly with pulmonary congestion.,Findings suggestive of mild cardiomegaly with pulmonary congestion,True,2026-01-02T14:05:00,Reported
+rad-13e4e3b8,pat-0785e6a3,enc-5c8a882a,Chest X-Ray,Pending,Pending,False,2026-01-02T13:50:00,Ordered
+rad-16a4f066,pat-fb8d1adf,enc-1de23a05,Chest X-Ray,Pending,Pending,False,2026-01-02T13:55:00,Ordered
+rad-bb24dc2b,pat-755b4d38,enc-69d69bae,Chest X-Ray,Pending,Pending,False,2026-01-02T14:00:00,Ordered
+rad-efe730ee,pat-1e005038,enc-b3f23986,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-02T14:25:00,Reported
+rad-d761b47e,pat-4ef534b9,enc-c226ad88,Chest X-Ray,Pending,Pending,False,2026-01-02T14:10:00,Ordered
+rad-dfa59433,pat-623944cc,enc-067749ba,Chest X-Ray,Pending,Pending,False,2026-01-02T14:15:00,Ordered
+rad-41c4da75,pat-48cc1715,enc-23c2de8e,Lumbar Spine X-Ray,Pending,Pending,False,2026-01-02T14:20:00,Ordered
+rad-5edd2c54,pat-0456b1a7,enc-27abcf91,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-02T14:45:00,Reported
+rad-0736c69d,pat-c6da0ce8,enc-c27b84e2,Chest X-Ray,Pending,Pending,False,2026-01-02T14:30:00,Ordered
+rad-ee4c05da,pat-932ef07d,enc-16e52613,Chest X-Ray,Pending,Pending,False,2026-01-02T14:35:00,Ordered
+rad-1866aa90,pat-4971d6de,enc-0e193d7d,Chest X-Ray,Pending,Pending,False,2026-01-02T14:40:00,Ordered
+rad-259b07a4,pat-22ed3ef4,enc-f6abb5a2,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-02T15:05:00,Reported
+rad-feb391f2,pat-519392dc,enc-1d7b9fef,Chest X-Ray,Pending,Pending,False,2026-01-02T14:50:00,Ordered
+rad-605b07e1,pat-4a6684d7,enc-24383823,Chest X-Ray,Pending,Pending,False,2026-01-02T14:55:00,Ordered
+rad-e388beae,pat-d41468c3,enc-c20448a3,Lumbar Spine X-Ray,Pending,Pending,False,2026-01-02T15:00:00,Ordered
+rad-1671c718,pat-7dc0ca1c,enc-c9fff0bb,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-02T15:25:00,Reported
+rad-c4ff2986,pat-c9a6b30e,enc-c0c848f5,Chest X-Ray,Pending,Pending,False,2026-01-02T15:10:00,Ordered
+rad-eabfe814,pat-481115b6,enc-b38dcf1f,Chest X-Ray,Pending,Pending,False,2026-01-02T15:15:00,Ordered
+rad-90372504,pat-177b0be4,enc-6865732f,Chest X-Ray,Pending,Pending,False,2026-01-02T15:20:00,Ordered
+rad-86ce8bc0,pat-1870d195,enc-25fcb175,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-02T15:45:00,Reported
+rad-722ab406,pat-95fe9d82,enc-1ae70765,Chest X-Ray,Pending,Pending,False,2026-01-02T15:30:00,Ordered
+rad-e5654142,pat-d46fdf55,enc-053f293a,Chest X-Ray,Pending,Pending,False,2026-01-02T15:35:00,Ordered
+rad-fd16eef1,pat-638510df,enc-787329db,Chest X-Ray,Pending,Pending,False,2026-01-02T15:40:00,Ordered
+rad-40e3b75a,pat-16c225e6,enc-20b25219,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-02T16:05:00,Reported
+rad-758a2387,pat-b961d9f0,enc-c6329f70,Chest X-Ray,Pending,Pending,False,2026-01-02T15:50:00,Ordered
+rad-867e5bcb,pat-7eff89a8,enc-01155d93,Chest X-Ray,Pending,Pending,False,2026-01-02T15:55:00,Ordered
+rad-be6bf2a0,pat-37c2ffb4,enc-9445e934,Chest X-Ray,Pending,Pending,False,2026-01-02T16:00:00,Ordered
+rad-490fb643,pat-8c90e9ab,enc-f01c3a4f,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-02T16:25:00,Reported
+rad-73bf456d,pat-c2d0232d,enc-6697585b,Chest X-Ray,Pending,Pending,False,2026-01-02T16:10:00,Ordered
+rad-24094605,pat-a2b94010,enc-17a80c7c,Chest X-Ray,Pending,Pending,False,2026-01-02T16:15:00,Ordered
+rad-67cdf11e,pat-69a11f32,enc-78e342de,Chest X-Ray,Pending,Pending,False,2026-01-02T16:20:00,Ordered
+rad-830d8a67,pat-87dbc18e,enc-93a9ecbe,Chest X-Ray,Bilateral infiltrates suggestive of pneumonia.,Findings suggestive of bilateral infiltrates suggestive of pneumonia,True,2026-01-02T16:45:00,Reported
+rad-6cc3b28c,pat-8fe5ee40,enc-267719ce,Chest X-Ray,Pending,Pending,False,2026-01-02T16:30:00,Ordered
+rad-0fc3d38c,pat-f7b13117,enc-fa83b273,Chest X-Ray,Pending,Pending,False,2026-01-02T16:35:00,Ordered
+rad-ff9a05bf,pat-5d56f606,enc-3a8043fa,Chest X-Ray,Pending,Pending,False,2026-01-02T16:40:00,Ordered
+rad-96c77b0f,pat-0070da33,enc-ad03a4e3,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-02T17:05:00,Reported
+rad-a55805e0,pat-63bdf91b,enc-45b204e0,Chest X-Ray,Pending,Pending,False,2026-01-02T16:50:00,Ordered
+rad-865f1146,pat-583391c5,enc-f8351470,Chest X-Ray,Pending,Pending,False,2026-01-02T16:55:00,Ordered
+rad-fe1b4f62,pat-e64e8155,enc-7f64b3cc,Chest X-Ray,Pending,Pending,False,2026-01-02T17:00:00,Ordered
+rad-6d32a944,pat-491c92cd,enc-b32fded1,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-02T17:25:00,Reported
+rad-84be1328,pat-8b19d6ea,enc-c258927a,Chest X-Ray,Pending,Pending,False,2026-01-02T17:10:00,Ordered
+rad-44b95bc2,pat-c9d63f98,enc-ed7addda,Chest X-Ray,Pending,Pending,False,2026-01-02T17:15:00,Ordered
+rad-a2917d95,pat-55c551b6,enc-550dd93c,Chest X-Ray,Pending,Pending,False,2026-01-02T17:20:00,Ordered
+rad-746b8742,pat-2dc897f3,enc-fead6848,Lumbar Spine X-Ray,Normal lumbar spine alignment. No fractures or dislocations. Preserved disc spaces.,Unremarkable examination. Normal study.,False,2026-01-02T17:45:00,Reported
+rad-c42babca,pat-32638110,enc-a0640042,Chest X-Ray,Pending,Pending,False,2026-01-02T17:30:00,Ordered
+rad-a2d4507a,pat-c3adc9a9,enc-1284f4da,Chest X-Ray,Pending,Pending,False,2026-01-02T17:35:00,Ordered
+rad-986f769b,pat-968a8b1f,enc-ca562abd,Chest X-Ray,Pending,Pending,False,2026-01-02T17:40:00,Ordered
+rad-5495452d,pat-8d698991,enc-0a74e35e,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-02T18:05:00,Reported
+rad-db926623,pat-7ac86c7a,enc-ef448bd2,Chest X-Ray,Pending,Pending,False,2026-01-02T17:50:00,Ordered
+rad-f50ca213,pat-1a90a283,enc-2427b937,Lumbar Spine X-Ray,Pending,Pending,False,2026-01-02T17:55:00,Ordered
+rad-32e69462,pat-74454237,enc-14b17529,Chest X-Ray,Pending,Pending,False,2026-01-02T18:00:00,Ordered
+rad-81cc58ca,pat-c831355b,enc-4d44887e,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-02T18:25:00,Reported
+rad-d03f4833,pat-e518330a,enc-4135b997,Chest X-Ray,Pending,Pending,False,2026-01-02T18:10:00,Ordered
+rad-d6f9a9c0,pat-c879533f,enc-6e1f4cc0,Chest X-Ray,Pending,Pending,False,2026-01-02T18:15:00,Ordered
+rad-eb3d8453,pat-65f76c68,enc-d111ecd1,Lumbar Spine X-Ray,Pending,Pending,False,2026-01-02T18:20:00,Ordered
+rad-5fcdd737,pat-ff20fc38,enc-13e60c98,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-02T18:45:00,Reported
+rad-51bacc3e,pat-74c0fd75,enc-216721d5,Chest X-Ray,Pending,Pending,False,2026-01-02T18:30:00,Ordered
+rad-dc2bbdfc,pat-dcaeda55,enc-4be4af3c,Chest X-Ray,Pending,Pending,False,2026-01-02T18:35:00,Ordered
+rad-fc1278f4,pat-5d5481b3,enc-c628b88a,Chest X-Ray,Pending,Pending,False,2026-01-02T18:40:00,Ordered
+rad-405b475a,pat-a2f0b286,enc-4c82c219,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-02T19:05:00,Reported
+rad-995b935d,pat-771768a9,enc-589a09ca,Chest X-Ray,Pending,Pending,False,2026-01-02T18:50:00,Ordered
+rad-746a600b,pat-fbe6af34,enc-e65092cb,Chest X-Ray,Pending,Pending,False,2026-01-02T18:55:00,Ordered
+rad-5dbceeba,pat-c0a21607,enc-123e7c29,Chest X-Ray,Pending,Pending,False,2026-01-02T19:00:00,Ordered
+rad-6cdd64ef,pat-603b3e57,enc-713c2216,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-02T19:25:00,Reported
+rad-1d6d5f25,pat-69938b52,enc-8a5ae835,Chest X-Ray,Pending,Pending,False,2026-01-02T19:10:00,Ordered
+rad-2d3ee079,pat-6777ad67,enc-1d60d9f6,Chest X-Ray,Pending,Pending,False,2026-01-02T19:15:00,Ordered
+rad-a997d75d,pat-98554996,enc-ec66e5a2,Chest X-Ray,Pending,Pending,False,2026-01-02T19:20:00,Ordered
+rad-f337f340,pat-c6428a98,enc-d55ac75a,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-02T19:45:00,Reported
+rad-751f0ca4,pat-6ba04d53,enc-c9d4cd65,Chest X-Ray,Pending,Pending,False,2026-01-02T19:30:00,Ordered
+rad-e6ba89bb,pat-fc8cca54,enc-434d8624,Chest X-Ray,Pending,Pending,False,2026-01-02T19:35:00,Ordered
+rad-5b17549e,pat-244313e6,enc-0aba1eeb,Chest X-Ray,Pending,Pending,False,2026-01-02T19:40:00,Ordered
+rad-f0756580,pat-ed4b94e1,enc-da2d6640,Chest X-Ray,Right lower lobe consolidation.,Findings suggestive of right lower lobe consolidation,True,2026-01-02T20:05:00,Reported
+rad-ba9f0efa,pat-88b77357,enc-33e22b78,Chest X-Ray,Pending,Pending,False,2026-01-02T19:50:00,Ordered
+rad-381ce6fa,pat-b75a87d2,enc-7c80de81,Chest X-Ray,Pending,Pending,False,2026-01-02T19:55:00,Ordered
+rad-c1122116,pat-c43ecf7d,enc-a92f35da,Chest X-Ray,Pending,Pending,False,2026-01-02T20:00:00,Ordered
+rad-423c322f,pat-6e7b7de6,enc-9f88038c,Chest X-Ray,Right lower lobe consolidation.,Findings suggestive of right lower lobe consolidation,True,2026-01-02T20:25:00,Reported
+rad-da55fc3b,pat-d4df91dc,enc-614e099a,Chest X-Ray,Pending,Pending,False,2026-01-02T20:10:00,Ordered
+rad-cd35afd6,pat-155ea74a,enc-33c327e0,Chest X-Ray,Pending,Pending,False,2026-01-02T20:15:00,Ordered
+rad-191257fa,pat-0e5986dc,enc-044d33d0,Chest X-Ray,Pending,Pending,False,2026-01-02T20:20:00,Ordered
+rad-ec4c1251,pat-566b50c5,enc-df89b4ec,CT Head,No acute intracranial abnormality. Normal ventricles and cisterns.,Unremarkable examination. Normal study.,False,2026-01-02T20:45:00,Reported
+rad-1fcf75cf,pat-1fef4358,enc-05b04c06,Chest X-Ray,Pending,Pending,False,2026-01-02T20:30:00,Ordered
+rad-1d5439cd,pat-9f46725a,enc-4b5efc24,Chest X-Ray,Pending,Pending,False,2026-01-02T20:35:00,Ordered
+rad-534ef186,pat-613a6a59,enc-e0f9c45e,Chest X-Ray,Pending,Pending,False,2026-01-02T20:40:00,Ordered
+rad-e5f6d4e4,pat-96a36b51,enc-fff197f4,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-02T21:05:00,Reported
+rad-30d4f687,pat-8133629f,enc-2bdf3f10,Chest X-Ray,Pending,Pending,False,2026-01-02T20:50:00,Ordered
+rad-55226999,pat-2af12934,enc-4e94ca7c,Chest X-Ray,Pending,Pending,False,2026-01-02T20:55:00,Ordered
+rad-6aed86d0,pat-3f83b86a,enc-cf632ba9,Chest X-Ray,Pending,Pending,False,2026-01-02T21:00:00,Ordered
+rad-3bf13c98,pat-5ee5eb4e,enc-e222ec71,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-02T21:25:00,Reported
+rad-b195e723,pat-d2d7b0ab,enc-32c7c80e,Chest X-Ray,Pending,Pending,False,2026-01-02T21:10:00,Ordered
+rad-f924ac44,pat-25cb7a84,enc-03e6c704,Chest X-Ray,Pending,Pending,False,2026-01-02T21:15:00,Ordered
+rad-7d689808,pat-b7c6c7d7,enc-9b2498f6,Chest X-Ray,Pending,Pending,False,2026-01-02T21:20:00,Ordered
+rad-b32066d4,pat-981e2046,enc-ee571e0d,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-02T21:45:00,Reported
+rad-3e4383f9,pat-24cb0074,enc-59449c68,Chest X-Ray,Pending,Pending,False,2026-01-02T21:30:00,Ordered
+rad-75490e5a,pat-e0621cfa,enc-eed3f209,Lumbar Spine X-Ray,Pending,Pending,False,2026-01-02T21:35:00,Ordered
+rad-24c85c37,pat-10c8bbb3,enc-a80106b2,Chest X-Ray,Pending,Pending,False,2026-01-02T21:40:00,Ordered
+rad-6ebc8af7,pat-88b491e3,enc-e35d04cc,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-02T22:05:00,Reported
+rad-a99d94f3,pat-fe266624,enc-caa5e184,Chest X-Ray,Pending,Pending,False,2026-01-02T21:50:00,Ordered
+rad-ba2076a5,pat-7c6c582c,enc-d3fabe99,Chest X-Ray,Pending,Pending,False,2026-01-02T21:55:00,Ordered
+rad-ad729960,pat-88baf91b,enc-ae6c9974,Chest X-Ray,Pending,Pending,False,2026-01-02T22:00:00,Ordered
+rad-f9839059,pat-2d4eab71,enc-37922dab,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-02T22:25:00,Reported
+rad-a059c999,pat-301c53ce,enc-fd3b9019,Chest X-Ray,Pending,Pending,False,2026-01-02T22:10:00,Ordered
+rad-ab5304ba,pat-9d1598d1,enc-50e82e8b,Chest X-Ray,Pending,Pending,False,2026-01-02T22:15:00,Ordered
+rad-91c9a3c9,pat-de9a257c,enc-1db4dccb,Chest X-Ray,Pending,Pending,False,2026-01-02T22:20:00,Ordered
+rad-d98b6bc8,pat-99381cbd,enc-8b037ba9,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-02T22:45:00,Reported
+rad-8b2fe0ae,pat-f5053694,enc-99d60867,Chest X-Ray,Pending,Pending,False,2026-01-02T22:30:00,Ordered
+rad-9a06cda8,pat-42dfe09e,enc-0c9050a8,Chest X-Ray,Pending,Pending,False,2026-01-02T22:35:00,Ordered
+rad-5042c1c6,pat-b9cc0206,enc-ba13cb19,Chest X-Ray,Pending,Pending,False,2026-01-02T22:40:00,Ordered
+rad-f6dfe87f,pat-c20612d9,enc-ff7a734f,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-02T23:05:00,Reported
+rad-764bac55,pat-97ba47e7,enc-e9193b19,Chest X-Ray,Pending,Pending,False,2026-01-02T22:50:00,Ordered
+rad-8bdbf983,pat-7947f0d3,enc-969f1309,Chest X-Ray,Pending,Pending,False,2026-01-02T22:55:00,Ordered
+rad-be7d7fea,pat-7fa43fc3,enc-dd75111e,Chest X-Ray,Pending,Pending,False,2026-01-02T23:00:00,Ordered
+rad-531b3e9c,pat-02d21376,enc-29ddda91,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-02T23:25:00,Reported
+rad-e06c0e37,pat-4e883950,enc-b5797f3f,Chest X-Ray,Pending,Pending,False,2026-01-02T23:10:00,Ordered
+rad-edd8a593,pat-0067112c,enc-7a9ceaa8,Chest X-Ray,Pending,Pending,False,2026-01-02T23:15:00,Ordered
+rad-43385848,pat-19df5925,enc-b92dd08d,Chest X-Ray,Pending,Pending,False,2026-01-02T23:20:00,Ordered
+rad-64af54da,pat-3b7275e6,enc-6efc3b3d,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-02T23:45:00,Reported
+rad-99a311ad,pat-69c5b99e,enc-f2c945a3,Chest X-Ray,Pending,Pending,False,2026-01-02T23:30:00,Ordered
+rad-49d1204e,pat-e73bcd81,enc-3a75a9fd,Chest X-Ray,Pending,Pending,False,2026-01-02T23:35:00,Ordered
+rad-262531af,pat-bf552031,enc-b6b69e2e,Chest X-Ray,Pending,Pending,False,2026-01-02T23:40:00,Ordered
+rad-5d510abb,pat-51d78511,enc-d10e39f7,Lumbar Spine X-Ray,Normal lumbar spine alignment. No fractures or dislocations. Preserved disc spaces.,Unremarkable examination. Normal study.,False,2026-01-03T00:05:00,Reported
+rad-0d7222ee,pat-a45a0086,enc-1761c3c3,Chest X-Ray,Pending,Pending,False,2026-01-02T23:50:00,Ordered
+rad-3144c9ef,pat-fc16c553,enc-6bfc52a1,Chest X-Ray,Pending,Pending,False,2026-01-02T23:55:00,Ordered
+rad-03a8d02c,pat-194d35dd,enc-15d14a30,Lumbar Spine X-Ray,Pending,Pending,False,2026-01-03T00:00:00,Ordered
+rad-51ca1ce8,pat-49d95edd,enc-6a32b882,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-03T00:25:00,Reported
+rad-561f4a76,pat-82341b76,enc-24add1c6,Chest X-Ray,Pending,Pending,False,2026-01-03T00:10:00,Ordered
+rad-f011b3a5,pat-b4188feb,enc-d76dda78,Chest X-Ray,Pending,Pending,False,2026-01-03T00:15:00,Ordered
+rad-09f8895d,pat-2ce11f38,enc-306a79cb,Lumbar Spine X-Ray,Pending,Pending,False,2026-01-03T00:20:00,Ordered
+rad-9f2b1ca0,pat-bcda01d3,enc-c2d7292d,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-03T00:45:00,Reported
+rad-cdaf024b,pat-85f1283d,enc-99d09654,Chest X-Ray,Pending,Pending,False,2026-01-03T00:30:00,Ordered
+rad-1a5ad979,pat-60cd9b17,enc-072d4cf5,Chest X-Ray,Pending,Pending,False,2026-01-03T00:35:00,Ordered
+rad-b6381ec8,pat-6b406554,enc-f04f9024,Chest X-Ray,Pending,Pending,False,2026-01-03T00:40:00,Ordered
+rad-10231162,pat-90dd1045,enc-90d8fba9,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-03T01:05:00,Reported
+rad-67dd2e6d,pat-bd0d0435,enc-8cb6f43e,Chest X-Ray,Pending,Pending,False,2026-01-03T00:50:00,Ordered
+rad-1a37f464,pat-4912cda6,enc-a7e9f158,Chest X-Ray,Pending,Pending,False,2026-01-03T00:55:00,Ordered
+rad-f9b9bccb,pat-1e089ec0,enc-c639e438,Chest X-Ray,Pending,Pending,False,2026-01-03T01:00:00,Ordered
+rad-8734072d,pat-aa5e2a2c,enc-08eeee00,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-03T01:25:00,Reported
+rad-af69d6e0,pat-06ffb318,enc-119e77bd,Chest X-Ray,Pending,Pending,False,2026-01-03T01:10:00,Ordered
+rad-296e2d8b,pat-33d663a0,enc-3eac6567,Chest X-Ray,Pending,Pending,False,2026-01-03T01:15:00,Ordered
+rad-4cc7b5ca,pat-56fb1741,enc-e62be80d,Chest X-Ray,Pending,Pending,False,2026-01-03T01:20:00,Ordered
+rad-f58e1a27,pat-b9d6813b,enc-d1c37f5c,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-03T01:45:00,Reported
+rad-b85f87d1,pat-e84ec460,enc-8b9ef9aa,Chest X-Ray,Pending,Pending,False,2026-01-03T01:30:00,Ordered
+rad-cfcbdc2b,pat-120a1b92,enc-93cdc8f5,Chest X-Ray,Pending,Pending,False,2026-01-03T01:35:00,Ordered
+rad-1f1e31bc,pat-065ca8dc,enc-7c527d7c,Chest X-Ray,Pending,Pending,False,2026-01-03T01:40:00,Ordered
+rad-3e281acb,pat-b10188d6,enc-5a8634f8,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-03T02:05:00,Reported
+rad-c1835884,pat-21fdf91d,enc-c02ac814,Chest X-Ray,Pending,Pending,False,2026-01-03T01:50:00,Ordered
+rad-a5f7ae0b,pat-26deef87,enc-843e67c4,Chest X-Ray,Pending,Pending,False,2026-01-03T01:55:00,Ordered
+rad-603210fd,pat-8f60b78e,enc-072018f0,Chest X-Ray,Pending,Pending,False,2026-01-03T02:00:00,Ordered
+rad-91653b31,pat-127eb458,enc-a722d699,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-03T02:25:00,Reported
+rad-4155528b,pat-f253e41f,enc-637505b1,Chest X-Ray,Pending,Pending,False,2026-01-03T02:10:00,Ordered
+rad-70629312,pat-8d57beb7,enc-d98404af,Chest X-Ray,Pending,Pending,False,2026-01-03T02:15:00,Ordered
+rad-92bf82b6,pat-2d57f7eb,enc-0f4e86fb,Chest X-Ray,Pending,Pending,False,2026-01-03T02:20:00,Ordered
+rad-a86ff57b,pat-d19a0aa7,enc-237e1e1e,Chest X-Ray,Bilateral infiltrates suggestive of pneumonia.,Findings suggestive of bilateral infiltrates suggestive of pneumonia,True,2026-01-03T02:45:00,Reported
+rad-45125599,pat-c1c54c16,enc-743d6473,Chest X-Ray,Pending,Pending,False,2026-01-03T02:30:00,Ordered
+rad-97045886,pat-3b0801e8,enc-5579634c,Chest X-Ray,Pending,Pending,False,2026-01-03T02:35:00,Ordered
+rad-894ea5ae,pat-d702c669,enc-a1aa11a6,Lumbar Spine X-Ray,Pending,Pending,False,2026-01-03T02:40:00,Ordered
+rad-2f4674d2,pat-4a56d146,enc-ae69c3bc,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-03T03:05:00,Reported
+rad-8e11b2d1,pat-8459bf8f,enc-c754ca70,Chest X-Ray,Pending,Pending,False,2026-01-03T02:50:00,Ordered
+rad-08d2b996,pat-62ac624b,enc-c65ae5d5,Chest X-Ray,Pending,Pending,False,2026-01-03T02:55:00,Ordered
+rad-879b47ac,pat-60cc4404,enc-ae96dbaf,Chest X-Ray,Pending,Pending,False,2026-01-03T03:00:00,Ordered
+rad-36bc8e0f,pat-c82ece72,enc-f7f36958,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-03T03:25:00,Reported
+rad-9cd66668,pat-06e9e597,enc-e7c63ddd,Chest X-Ray,Pending,Pending,False,2026-01-03T03:10:00,Ordered
+rad-7990be0a,pat-be704aa4,enc-78d4dbdf,Chest X-Ray,Pending,Pending,False,2026-01-03T03:15:00,Ordered
+rad-68f8114a,pat-8ca41e6c,enc-342bbff8,Chest X-Ray,Pending,Pending,False,2026-01-03T03:20:00,Ordered
+rad-dcb75875,pat-6737c65a,enc-0279d7a5,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-03T03:45:00,Reported
+rad-1e889c3e,pat-0a949783,enc-a14171c9,Chest X-Ray,Pending,Pending,False,2026-01-03T03:30:00,Ordered
+rad-a5aae0e7,pat-0d0a9ed1,enc-92d58bd3,Chest X-Ray,Pending,Pending,False,2026-01-03T03:35:00,Ordered
+rad-e648c129,pat-65de6a79,enc-15429d99,Chest X-Ray,Pending,Pending,False,2026-01-03T03:40:00,Ordered
+rad-1eb242cb,pat-0bc16a73,enc-e96ac733,Lumbar Spine X-Ray,Normal lumbar spine alignment. No fractures or dislocations. Preserved disc spaces.,Unremarkable examination. Normal study.,False,2026-01-03T04:05:00,Reported
+rad-4a480e63,pat-cad4e1b0,enc-462afd12,Chest X-Ray,Pending,Pending,False,2026-01-03T03:50:00,Ordered
+rad-7c241792,pat-4cd38203,enc-1cf9d79d,Chest X-Ray,Pending,Pending,False,2026-01-03T03:55:00,Ordered
+rad-12bdc8db,pat-800c106f,enc-d7763352,Chest X-Ray,Pending,Pending,False,2026-01-03T04:00:00,Ordered
+rad-17577fe8,pat-ba3ca6aa,enc-214f5bc2,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-03T04:25:00,Reported
+rad-120a6fab,pat-c0ad1b25,enc-f732f32b,Chest X-Ray,Pending,Pending,False,2026-01-03T04:10:00,Ordered
+rad-6243d0f7,pat-492f5d3a,enc-501e17bb,Chest X-Ray,Pending,Pending,False,2026-01-03T04:15:00,Ordered
+rad-03e5be24,pat-15f7b069,enc-628e38d1,Chest X-Ray,Pending,Pending,False,2026-01-03T04:20:00,Ordered
+rad-8e2e2b59,pat-48a1d0ee,enc-269267be,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-03T04:45:00,Reported
+rad-e1950284,pat-02f6e0ab,enc-3a6fb07d,Chest X-Ray,Pending,Pending,False,2026-01-03T04:30:00,Ordered
+rad-ad08280d,pat-39764618,enc-2c3aea2b,Chest X-Ray,Pending,Pending,False,2026-01-03T04:35:00,Ordered
+rad-15d84c5e,pat-f8a8c4c4,enc-958fb853,Chest X-Ray,Pending,Pending,False,2026-01-03T04:40:00,Ordered
+rad-576c26a7,pat-bd8967a6,enc-2d351d52,Lumbar Spine X-Ray,Normal lumbar spine alignment. No fractures or dislocations. Preserved disc spaces.,Unremarkable examination. Normal study.,False,2026-01-03T05:05:00,Reported
+rad-6df4fba0,pat-cea346b9,enc-021ce4b8,Chest X-Ray,Pending,Pending,False,2026-01-03T04:50:00,Ordered
+rad-428d970a,pat-1ee81e5a,enc-412b8f81,Chest X-Ray,Pending,Pending,False,2026-01-03T04:55:00,Ordered
+rad-0bce6d0e,pat-d5d9bd48,enc-ef482a25,Chest X-Ray,Pending,Pending,False,2026-01-03T05:00:00,Ordered
+rad-55f275cd,pat-eda6b337,enc-6f281878,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-03T05:25:00,Reported
+rad-f52a6376,pat-b07a4dce,enc-772eefa1,Chest X-Ray,Pending,Pending,False,2026-01-03T05:10:00,Ordered
+rad-290a4379,pat-c0d1226b,enc-9a0a8d7c,Chest X-Ray,Pending,Pending,False,2026-01-03T05:15:00,Ordered
+rad-4c49daef,pat-cc9a5202,enc-2ddfa067,Chest X-Ray,Pending,Pending,False,2026-01-03T05:20:00,Ordered
+rad-1782536e,pat-48d8128d,enc-936e6348,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-03T05:45:00,Reported
+rad-fcc0d267,pat-5f076a57,enc-97cc7ba6,Chest X-Ray,Pending,Pending,False,2026-01-03T05:30:00,Ordered
+rad-1bc72439,pat-ad72f1e8,enc-39ef5316,Chest X-Ray,Pending,Pending,False,2026-01-03T05:35:00,Ordered
+rad-d180d605,pat-9c4c9368,enc-9792ea5f,Chest X-Ray,Pending,Pending,False,2026-01-03T05:40:00,Ordered
+rad-49912d55,pat-c8897185,enc-ef6ab50c,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-03T06:05:00,Reported
+rad-41def9c8,pat-1e8d99b4,enc-a035827e,Chest X-Ray,Pending,Pending,False,2026-01-03T05:50:00,Ordered
+rad-0af1569d,pat-63e25cd1,enc-42ec1669,Chest X-Ray,Pending,Pending,False,2026-01-03T05:55:00,Ordered
+rad-66096a25,pat-5048664b,enc-17aacca9,Chest X-Ray,Pending,Pending,False,2026-01-03T06:00:00,Ordered
+rad-38c1e85e,pat-b4e3f1b6,enc-6913d256,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-03T06:25:00,Reported
+rad-a0e2f018,pat-49b876fb,enc-c223b904,Chest X-Ray,Pending,Pending,False,2026-01-03T06:10:00,Ordered
+rad-25bd46a4,pat-c323ef3e,enc-7d3e0095,Chest X-Ray,Pending,Pending,False,2026-01-03T06:15:00,Ordered
+rad-4297ed80,pat-3e9b2531,enc-a57f3099,Chest X-Ray,Pending,Pending,False,2026-01-03T06:20:00,Ordered
+rad-9caa54f6,pat-6d5125bb,enc-1554788e,Chest X-Ray,Right lower lobe consolidation.,Findings suggestive of right lower lobe consolidation,True,2026-01-03T06:45:00,Reported
+rad-25501e9d,pat-0783404a,enc-e77a8b32,Chest X-Ray,Pending,Pending,False,2026-01-03T06:30:00,Ordered
+rad-b6d024b2,pat-b1890328,enc-5f75b771,Chest X-Ray,Pending,Pending,False,2026-01-03T06:35:00,Ordered
+rad-3f8b6237,pat-cbaf3fb4,enc-67a6915a,Chest X-Ray,Pending,Pending,False,2026-01-03T06:40:00,Ordered
+rad-0ae365cd,pat-07953b00,enc-fe348b18,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-03T07:05:00,Reported
+rad-3fcc9585,pat-7ca7f369,enc-25fd136c,Chest X-Ray,Pending,Pending,False,2026-01-03T06:50:00,Ordered
+rad-89aaa6e8,pat-053b3e64,enc-46648ff1,Chest X-Ray,Pending,Pending,False,2026-01-03T06:55:00,Ordered
+rad-969558cb,pat-9250febe,enc-20d4ccd1,Chest X-Ray,Pending,Pending,False,2026-01-03T07:00:00,Ordered
+rad-d946cfc5,pat-e64b43d7,enc-c706b859,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-03T07:25:00,Reported
+rad-d9867dcd,pat-6af7ea4b,enc-e526c612,Chest X-Ray,Pending,Pending,False,2026-01-03T07:10:00,Ordered
+rad-4e1266bc,pat-adcbf9bf,enc-720d15e9,CT Head,Pending,Pending,False,2026-01-03T07:15:00,Ordered
+rad-a53d7536,pat-9cf64076,enc-e8105441,Chest X-Ray,Pending,Pending,False,2026-01-03T07:20:00,Ordered
+rad-92a54bb1,pat-65992e5b,enc-61190b40,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-03T07:45:00,Reported
+rad-6fdbba6b,pat-5eab7d7a,enc-6249efdc,Chest X-Ray,Pending,Pending,False,2026-01-03T07:30:00,Ordered
+rad-639c74f7,pat-68966fb4,enc-18876c22,Chest X-Ray,Pending,Pending,False,2026-01-03T07:35:00,Ordered
+rad-ac9aa137,pat-1d52ce4c,enc-edf4f07a,Chest X-Ray,Pending,Pending,False,2026-01-03T07:40:00,Ordered
+rad-5c0a4cbe,pat-c94420bc,enc-4826d10d,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-03T08:05:00,Reported
+rad-83c41d5a,pat-a2a2328a,enc-50cfe66d,Chest X-Ray,Pending,Pending,False,2026-01-03T07:50:00,Ordered
+rad-a61e892d,pat-17d39682,enc-0c381972,Chest X-Ray,Pending,Pending,False,2026-01-03T07:55:00,Ordered
+rad-8198c833,pat-dd2ccc74,enc-93632a29,Chest X-Ray,Pending,Pending,False,2026-01-03T08:00:00,Ordered
+rad-311dfc07,pat-4e53082b,enc-b5ba4023,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-03T08:25:00,Reported
+rad-10d3c2b6,pat-2bdca53b,enc-be604313,Chest X-Ray,Pending,Pending,False,2026-01-03T08:10:00,Ordered
+rad-8aa6fa4e,pat-379d8637,enc-767a731b,Chest X-Ray,Pending,Pending,False,2026-01-03T08:15:00,Ordered
+rad-2243b810,pat-2b9f4417,enc-9b8d037b,Chest X-Ray,Pending,Pending,False,2026-01-03T08:20:00,Ordered
+rad-1338561d,pat-a237e13e,enc-07087353,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-03T08:45:00,Reported
+rad-b971e057,pat-69cd617d,enc-4e03b56d,Chest X-Ray,Pending,Pending,False,2026-01-03T08:30:00,Ordered
+rad-954b2ecb,pat-b4fbb86d,enc-65250a9a,Chest X-Ray,Pending,Pending,False,2026-01-03T08:35:00,Ordered
+rad-40dd2dd3,pat-bb3591d1,enc-232bb305,Chest X-Ray,Pending,Pending,False,2026-01-03T08:40:00,Ordered
+rad-9419d784,pat-8ca1075b,enc-331ab72c,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-03T09:05:00,Reported
+rad-aa6c482e,pat-bb1b686d,enc-22163d52,Chest X-Ray,Pending,Pending,False,2026-01-03T08:50:00,Ordered
+rad-5147138e,pat-0842d02d,enc-7931b694,Chest X-Ray,Pending,Pending,False,2026-01-03T08:55:00,Ordered
+rad-5b182cd2,pat-38e124e3,enc-e39aa881,Chest X-Ray,Pending,Pending,False,2026-01-03T09:00:00,Ordered
+rad-7cf19884,pat-28edfbb7,enc-9a637b6e,Lumbar Spine X-Ray,Normal lumbar spine alignment. No fractures or dislocations. Preserved disc spaces.,Unremarkable examination. Normal study.,False,2026-01-03T09:25:00,Reported
+rad-bb5608be,pat-b17a1681,enc-02f484f3,Chest X-Ray,Pending,Pending,False,2026-01-03T09:10:00,Ordered
+rad-a24fb2e3,pat-b81d0273,enc-f94468cb,Chest X-Ray,Pending,Pending,False,2026-01-03T09:15:00,Ordered
+rad-6e32ac3f,pat-0e0d657a,enc-923b0478,Chest X-Ray,Pending,Pending,False,2026-01-03T09:20:00,Ordered
+rad-6861d3ee,pat-6e962e3b,enc-6f22e6f1,Chest X-Ray,Mild cardiomegaly with pulmonary congestion.,Findings suggestive of mild cardiomegaly with pulmonary congestion,True,2026-01-03T09:45:00,Reported
+rad-ae05a783,pat-e8cec3d9,enc-b58d63a4,Chest X-Ray,Pending,Pending,False,2026-01-03T09:30:00,Ordered
+rad-3a3b1215,pat-ac93f96e,enc-db490120,Chest X-Ray,Pending,Pending,False,2026-01-03T09:35:00,Ordered
+rad-38875006,pat-04a27335,enc-ba7586c2,Chest X-Ray,Pending,Pending,False,2026-01-03T09:40:00,Ordered
+rad-1cf37ec3,pat-baacc601,enc-12f2de1d,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-03T10:05:00,Reported
+rad-9653feb1,pat-9cc0a815,enc-5fa190be,Chest X-Ray,Pending,Pending,False,2026-01-03T09:50:00,Ordered
+rad-e3cb4639,pat-fe06eda7,enc-8f644c21,Chest X-Ray,Pending,Pending,False,2026-01-03T09:55:00,Ordered
+rad-775b8289,pat-97110adc,enc-4bec950c,Chest X-Ray,Pending,Pending,False,2026-01-03T10:00:00,Ordered
+rad-b9d4781d,pat-5134fd73,enc-8f1e0a0e,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-03T10:25:00,Reported
+rad-2eb22039,pat-1f64899e,enc-fd7634b6,Chest X-Ray,Pending,Pending,False,2026-01-03T10:10:00,Ordered
+rad-2c773580,pat-5bff0da3,enc-a9d80b26,Chest X-Ray,Pending,Pending,False,2026-01-03T10:15:00,Ordered
+rad-c8847a9d,pat-321f3129,enc-a5c9544b,Chest X-Ray,Pending,Pending,False,2026-01-03T10:20:00,Ordered
+rad-88c1b658,pat-c9090c34,enc-10e9f9fa,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-03T10:45:00,Reported
+rad-f9b1fa85,pat-1faacf15,enc-99dea0ae,Chest X-Ray,Pending,Pending,False,2026-01-03T10:30:00,Ordered
+rad-9c1c8d8a,pat-3780439f,enc-c7b8ff1b,Chest X-Ray,Pending,Pending,False,2026-01-03T10:35:00,Ordered
+rad-d0f65747,pat-c6009674,enc-e2bb1e89,Chest X-Ray,Pending,Pending,False,2026-01-03T10:40:00,Ordered
+rad-0ff92bd1,pat-9f8095d9,enc-6d79cca0,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-03T11:05:00,Reported
+rad-3a1bdff8,pat-2ba71e87,enc-0deed0f6,Chest X-Ray,Pending,Pending,False,2026-01-03T10:50:00,Ordered
+rad-85272754,pat-97fd97c0,enc-742e1fc9,Chest X-Ray,Pending,Pending,False,2026-01-03T10:55:00,Ordered
+rad-0274d261,pat-c4dcc605,enc-7a345f13,Chest X-Ray,Pending,Pending,False,2026-01-03T11:00:00,Ordered
+rad-18adce44,pat-4262ebd9,enc-9f8908cb,Lumbar Spine X-Ray,Normal lumbar spine alignment. No fractures or dislocations. Preserved disc spaces.,Unremarkable examination. Normal study.,False,2026-01-03T11:25:00,Reported
+rad-98f7194b,pat-0e2c9cb1,enc-9aa32454,Chest X-Ray,Pending,Pending,False,2026-01-03T11:10:00,Ordered
+rad-ac87a93f,pat-01a1ed3d,enc-8cc96195,Chest X-Ray,Pending,Pending,False,2026-01-03T11:15:00,Ordered
+rad-33a08692,pat-ceb93b9d,enc-b19b9fc3,Chest X-Ray,Pending,Pending,False,2026-01-03T11:20:00,Ordered
+rad-e0e0833e,pat-2b3589e9,enc-322f6565,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-03T11:45:00,Reported
+rad-ec40c0c2,pat-0d094d0e,enc-9c8c1939,Chest X-Ray,Pending,Pending,False,2026-01-03T11:30:00,Ordered
+rad-8ce04ba7,pat-e0d0c54a,enc-6fe09f9d,Chest X-Ray,Pending,Pending,False,2026-01-03T11:35:00,Ordered
+rad-c02bf300,pat-fdb556b1,enc-b1dd312d,Chest X-Ray,Pending,Pending,False,2026-01-03T11:40:00,Ordered
+rad-58210902,pat-04831026,enc-8c2b8fd7,Lumbar Spine X-Ray,Normal lumbar spine alignment. No fractures or dislocations. Preserved disc spaces.,Unremarkable examination. Normal study.,False,2026-01-03T12:05:00,Reported
+rad-39aeb549,pat-0f37a1af,enc-57d83e71,Chest X-Ray,Pending,Pending,False,2026-01-03T11:50:00,Ordered
+rad-7e731566,pat-96d50f66,enc-a060cd1f,Chest X-Ray,Pending,Pending,False,2026-01-03T11:55:00,Ordered
+rad-630c7624,pat-f1c5332d,enc-d5490175,Chest X-Ray,Pending,Pending,False,2026-01-03T12:00:00,Ordered
+rad-d0037242,pat-55200dae,enc-e3cfa87d,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-03T12:25:00,Reported
+rad-4a584690,pat-2dbcac34,enc-d9276232,Chest X-Ray,Pending,Pending,False,2026-01-03T12:10:00,Ordered
+rad-8cef8c9e,pat-63813d0d,enc-8dfcaac0,Lumbar Spine X-Ray,Pending,Pending,False,2026-01-03T12:15:00,Ordered
+rad-3368bdea,pat-30289b00,enc-c206dacb,Chest X-Ray,Pending,Pending,False,2026-01-03T12:20:00,Ordered
+rad-b64ac56d,pat-4f0d6ae4,enc-6e87d390,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-03T12:45:00,Reported
+rad-9b8bdaa8,pat-1e56f2a2,enc-2f642b22,Chest X-Ray,Pending,Pending,False,2026-01-03T12:30:00,Ordered
+rad-319c4827,pat-2737589b,enc-4dc258a0,Chest X-Ray,Pending,Pending,False,2026-01-03T12:35:00,Ordered
+rad-507f6f3d,pat-72cd73b8,enc-5c9067d6,Chest X-Ray,Pending,Pending,False,2026-01-03T12:40:00,Ordered
+rad-8a0088e5,pat-9064901e,enc-a1040828,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-03T13:05:00,Reported
+rad-62e7e896,pat-b12c5232,enc-431333a3,Chest X-Ray,Pending,Pending,False,2026-01-03T12:50:00,Ordered
+rad-41fce03b,pat-4c1e91a9,enc-7308f6b2,Chest X-Ray,Pending,Pending,False,2026-01-03T12:55:00,Ordered
+rad-b9b1846e,pat-5bb0cbde,enc-a7273dd3,Chest X-Ray,Pending,Pending,False,2026-01-03T13:00:00,Ordered
+rad-a30d43a3,pat-62c985b6,enc-2112890a,Chest X-Ray,Right lower lobe consolidation.,Findings suggestive of right lower lobe consolidation,True,2026-01-03T13:25:00,Reported
+rad-3cf624ad,pat-e43edf0d,enc-e9549f2a,Chest X-Ray,Pending,Pending,False,2026-01-03T13:10:00,Ordered
+rad-81b02491,pat-b8a1ec24,enc-d64d6042,Chest X-Ray,Pending,Pending,False,2026-01-03T13:15:00,Ordered
+rad-593ef1cf,pat-1885fddd,enc-07e1fdb7,Chest X-Ray,Pending,Pending,False,2026-01-03T13:20:00,Ordered
+rad-0870993f,pat-70f9ca35,enc-910dfac6,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-03T13:45:00,Reported
+rad-95fcdd42,pat-a40a58bf,enc-19c9dd1a,Chest X-Ray,Pending,Pending,False,2026-01-03T13:30:00,Ordered
+rad-6eef6498,pat-d8dc09ec,enc-b843ae99,CT Head,Pending,Pending,False,2026-01-03T13:35:00,Ordered
+rad-a737b746,pat-30ed7916,enc-e7299a3c,Chest X-Ray,Pending,Pending,False,2026-01-03T13:40:00,Ordered
+rad-78daa0c2,pat-67a0a463,enc-e706dfe6,Chest X-Ray,Bilateral infiltrates suggestive of pneumonia.,Findings suggestive of bilateral infiltrates suggestive of pneumonia,True,2026-01-03T14:05:00,Reported
+rad-911b1e75,pat-7ab2ae02,enc-c79876b2,Chest X-Ray,Pending,Pending,False,2026-01-03T13:50:00,Ordered
+rad-405a9e6a,pat-62793fd6,enc-8431b9f9,Chest X-Ray,Pending,Pending,False,2026-01-03T13:55:00,Ordered
+rad-27372ca8,pat-da91d1be,enc-52bd2ec8,Chest X-Ray,Pending,Pending,False,2026-01-03T14:00:00,Ordered
+rad-518a3cd3,pat-e4c6d435,enc-f95e259b,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-03T14:25:00,Reported
+rad-54625ca1,pat-dc5ad71c,enc-ae1e4431,Chest X-Ray,Pending,Pending,False,2026-01-03T14:10:00,Ordered
+rad-9c9f3811,pat-becd2d3f,enc-86ebadce,Chest X-Ray,Pending,Pending,False,2026-01-03T14:15:00,Ordered
+rad-5bc7551a,pat-e6b9bcf1,enc-f0d4a1e2,Chest X-Ray,Pending,Pending,False,2026-01-03T14:20:00,Ordered
+rad-ebcb21ee,pat-e7b2399b,enc-e3dafaa6,Chest X-Ray,Right lower lobe consolidation.,Findings suggestive of right lower lobe consolidation,True,2026-01-03T14:45:00,Reported
+rad-f5efbe9c,pat-44d6635c,enc-0f33a06a,Chest X-Ray,Pending,Pending,False,2026-01-03T14:30:00,Ordered
+rad-280c3158,pat-11b851d4,enc-7522495e,Chest X-Ray,Pending,Pending,False,2026-01-03T14:35:00,Ordered
+rad-63f88c1e,pat-25306f77,enc-d74551cb,Chest X-Ray,Pending,Pending,False,2026-01-03T14:40:00,Ordered
+rad-311a2942,pat-d057ee3b,enc-d423e34c,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-03T15:05:00,Reported
+rad-2c57de6e,pat-be22ddf9,enc-881be017,Chest X-Ray,Pending,Pending,False,2026-01-03T14:50:00,Ordered
+rad-e9c13990,pat-3cf2064c,enc-b5057753,Chest X-Ray,Pending,Pending,False,2026-01-03T14:55:00,Ordered
+rad-9f8228a3,pat-51246ca9,enc-82c5d46c,Chest X-Ray,Pending,Pending,False,2026-01-03T15:00:00,Ordered
+rad-6770e99d,pat-983cd9b0,enc-d67b8126,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-03T15:25:00,Reported
+rad-66502766,pat-d9b3eb0c,enc-27ef4af3,Chest X-Ray,Pending,Pending,False,2026-01-03T15:10:00,Ordered
+rad-70b9a5a4,pat-244b7096,enc-b840192c,Chest X-Ray,Pending,Pending,False,2026-01-03T15:15:00,Ordered
+rad-b15f202a,pat-3dafa4c4,enc-b6171c71,Chest X-Ray,Pending,Pending,False,2026-01-03T15:20:00,Ordered
+rad-11d5a8f1,pat-37c5c19e,enc-0f1d7160,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-03T15:45:00,Reported
+rad-470a26fd,pat-b78ee3d6,enc-824b70dc,Chest X-Ray,Pending,Pending,False,2026-01-03T15:30:00,Ordered
+rad-13ed2c67,pat-dac3bb8b,enc-00f4f79d,Chest X-Ray,Pending,Pending,False,2026-01-03T15:35:00,Ordered
+rad-5188bba8,pat-49d82dd3,enc-6092a039,Lumbar Spine X-Ray,Pending,Pending,False,2026-01-03T15:40:00,Ordered
+rad-bf8744a4,pat-a0a2409f,enc-87653e2b,Lumbar Spine X-Ray,Normal lumbar spine alignment. No fractures or dislocations. Preserved disc spaces.,Unremarkable examination. Normal study.,False,2026-01-03T16:05:00,Reported
+rad-1f9a2af9,pat-41d778c7,enc-528ba86b,Chest X-Ray,Pending,Pending,False,2026-01-03T15:50:00,Ordered
+rad-5ba3e4c3,pat-7135e10e,enc-fc119349,Chest X-Ray,Pending,Pending,False,2026-01-03T15:55:00,Ordered
+rad-83ab78cb,pat-79db36dc,enc-c3f3d2d8,Chest X-Ray,Pending,Pending,False,2026-01-03T16:00:00,Ordered
+rad-5858aa66,pat-63770860,enc-c543ed25,Lumbar Spine X-Ray,Normal lumbar spine alignment. No fractures or dislocations. Preserved disc spaces.,Unremarkable examination. Normal study.,False,2026-01-03T16:25:00,Reported
+rad-0d850615,pat-1862a36b,enc-a335172a,Chest X-Ray,Pending,Pending,False,2026-01-03T16:10:00,Ordered
+rad-54542846,pat-e5282a25,enc-5c52a76f,Chest X-Ray,Pending,Pending,False,2026-01-03T16:15:00,Ordered
+rad-91d3e099,pat-427da854,enc-9c1b1bf8,Chest X-Ray,Pending,Pending,False,2026-01-03T16:20:00,Ordered
+rad-4778eb6f,pat-0bbdb33e,enc-2001ac13,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-03T16:45:00,Reported
+rad-184e5909,pat-2a9169ad,enc-398d9d4b,Chest X-Ray,Pending,Pending,False,2026-01-03T16:30:00,Ordered
+rad-cb736997,pat-fc4e548d,enc-7eb7c4ec,Chest X-Ray,Pending,Pending,False,2026-01-03T16:35:00,Ordered
+rad-3e1f3232,pat-3130c2c6,enc-2543aac2,Chest X-Ray,Pending,Pending,False,2026-01-03T16:40:00,Ordered
+rad-9718c1f2,pat-0a8ef8c0,enc-40336cf4,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-03T17:05:00,Reported
+rad-80231960,pat-c5e080ee,enc-852895de,Chest X-Ray,Pending,Pending,False,2026-01-03T16:50:00,Ordered
+rad-6e1f545c,pat-380def5d,enc-9b0bc516,Chest X-Ray,Pending,Pending,False,2026-01-03T16:55:00,Ordered
+rad-fdf8e1f4,pat-4e342eea,enc-0b570c44,Chest X-Ray,Pending,Pending,False,2026-01-03T17:00:00,Ordered
+rad-5619862b,pat-42c90521,enc-59a344f3,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-03T17:25:00,Reported
+rad-33783242,pat-1bc6e0a8,enc-1b5f89f9,Chest X-Ray,Pending,Pending,False,2026-01-03T17:10:00,Ordered
+rad-d20a1021,pat-f2caec8d,enc-a8658141,Chest X-Ray,Pending,Pending,False,2026-01-03T17:15:00,Ordered
+rad-1be986ef,pat-f832d323,enc-45a4d5d7,Chest X-Ray,Pending,Pending,False,2026-01-03T17:20:00,Ordered
+rad-ff534e42,pat-877c5640,enc-f3e26cf3,Chest X-Ray,Mild cardiomegaly with pulmonary congestion.,Findings suggestive of mild cardiomegaly with pulmonary congestion,True,2026-01-03T17:45:00,Reported
+rad-37e120c5,pat-16292c84,enc-f0748860,Chest X-Ray,Pending,Pending,False,2026-01-03T17:30:00,Ordered
+rad-040a2b65,pat-2aa5eb43,enc-9b553d8c,Chest X-Ray,Pending,Pending,False,2026-01-03T17:35:00,Ordered
+rad-f119af3d,pat-c31a1970,enc-5f4e7ea2,Chest X-Ray,Pending,Pending,False,2026-01-03T17:40:00,Ordered
+rad-4b19f9e0,pat-b74633b4,enc-60c50d77,Chest X-Ray,Bilateral infiltrates suggestive of pneumonia.,Findings suggestive of bilateral infiltrates suggestive of pneumonia,True,2026-01-03T18:05:00,Reported
+rad-118e1ccd,pat-cc948721,enc-070e3afe,Chest X-Ray,Pending,Pending,False,2026-01-03T17:50:00,Ordered
+rad-2ae4b20b,pat-18e9fa71,enc-d184e8d3,Chest X-Ray,Pending,Pending,False,2026-01-03T17:55:00,Ordered
+rad-7d6d0a5e,pat-2e1a396c,enc-ecb224e9,Chest X-Ray,Pending,Pending,False,2026-01-03T18:00:00,Ordered
+rad-83fbe39f,pat-241d26ad,enc-f7cd4889,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-03T18:25:00,Reported
+rad-87bd725e,pat-d4b3b115,enc-39c16603,Chest X-Ray,Pending,Pending,False,2026-01-03T18:10:00,Ordered
+rad-2e5222b9,pat-6e5c4bbd,enc-1326d732,Chest X-Ray,Pending,Pending,False,2026-01-03T18:15:00,Ordered
+rad-3d9a5c58,pat-06ece18a,enc-1b831f91,Chest X-Ray,Pending,Pending,False,2026-01-03T18:20:00,Ordered
+rad-09aae1fd,pat-e947b9d5,enc-3d7f526c,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-03T18:45:00,Reported
+rad-d70e08f6,pat-f27c4ac6,enc-b3602405,Chest X-Ray,Pending,Pending,False,2026-01-03T18:30:00,Ordered
+rad-cb3e5c5b,pat-c951c472,enc-35d74c7e,Chest X-Ray,Pending,Pending,False,2026-01-03T18:35:00,Ordered
+rad-1e168fb4,pat-83009be5,enc-6dbda8d2,Chest X-Ray,Pending,Pending,False,2026-01-03T18:40:00,Ordered
+rad-de99fa9a,pat-d852592f,enc-504f30e7,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-03T19:05:00,Reported
+rad-cc618256,pat-e9abaac1,enc-bb6d9b48,Chest X-Ray,Pending,Pending,False,2026-01-03T18:50:00,Ordered
+rad-440fda62,pat-d7285ab5,enc-2d879257,Chest X-Ray,Pending,Pending,False,2026-01-03T18:55:00,Ordered
+rad-786a57ef,pat-ff0f9da9,enc-8f9f5133,Chest X-Ray,Pending,Pending,False,2026-01-03T19:00:00,Ordered
+rad-34d5a57a,pat-3af20cd7,enc-cd30e5ae,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-03T19:25:00,Reported
+rad-44ee356b,pat-0e94d87c,enc-3dd09209,Chest X-Ray,Pending,Pending,False,2026-01-03T19:10:00,Ordered
+rad-6d3c10bb,pat-5ea410d1,enc-cbb5943a,Chest X-Ray,Pending,Pending,False,2026-01-03T19:15:00,Ordered
+rad-bfcf341b,pat-a3098b09,enc-a5d84000,Chest X-Ray,Pending,Pending,False,2026-01-03T19:20:00,Ordered
+rad-242b4ed6,pat-8cdd746c,enc-d0b31ca1,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-03T19:45:00,Reported
+rad-2f114796,pat-659ad121,enc-a6b0fe0a,Chest X-Ray,Pending,Pending,False,2026-01-03T19:30:00,Ordered
+rad-da12d33a,pat-ce76e144,enc-568d47c9,Chest X-Ray,Pending,Pending,False,2026-01-03T19:35:00,Ordered
+rad-4b27a508,pat-0d51ae24,enc-8af411b7,Chest X-Ray,Pending,Pending,False,2026-01-03T19:40:00,Ordered
+rad-6b30cf1b,pat-be95586a,enc-8e7c06ef,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-03T20:05:00,Reported
+rad-b934f06d,pat-48562146,enc-6a7dd20c,Chest X-Ray,Pending,Pending,False,2026-01-03T19:50:00,Ordered
+rad-8cafa262,pat-83439c35,enc-fd2c8502,Chest X-Ray,Pending,Pending,False,2026-01-03T19:55:00,Ordered
+rad-3ca099ed,pat-45165d85,enc-d9b4be47,Chest X-Ray,Pending,Pending,False,2026-01-03T20:00:00,Ordered
+rad-a786bb84,pat-60811709,enc-32fab30d,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-03T20:25:00,Reported
+rad-29e7fc10,pat-0cdf49d4,enc-8dcd8a23,Chest X-Ray,Pending,Pending,False,2026-01-03T20:10:00,Ordered
+rad-421f1793,pat-e4c4d0b7,enc-f8374747,Chest X-Ray,Pending,Pending,False,2026-01-03T20:15:00,Ordered
+rad-03e022bb,pat-00e7837c,enc-a793f274,Chest X-Ray,Pending,Pending,False,2026-01-03T20:20:00,Ordered
+rad-05d96295,pat-9a838938,enc-86113940,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-03T20:45:00,Reported
+rad-6323ec06,pat-86e46bcc,enc-2234d5e7,Chest X-Ray,Pending,Pending,False,2026-01-03T20:30:00,Ordered
+rad-3d25baa9,pat-b3c99797,enc-89faa398,Chest X-Ray,Pending,Pending,False,2026-01-03T20:35:00,Ordered
+rad-3370d786,pat-b29e8cb5,enc-f5c215db,Chest X-Ray,Pending,Pending,False,2026-01-03T20:40:00,Ordered
+rad-0fb91fb2,pat-4ebe6e40,enc-661af400,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-03T21:05:00,Reported
+rad-55c7d27c,pat-df7960cb,enc-26d1be94,Chest X-Ray,Pending,Pending,False,2026-01-03T20:50:00,Ordered
+rad-1658f5b6,pat-3438a40c,enc-c404a98a,Chest X-Ray,Pending,Pending,False,2026-01-03T20:55:00,Ordered
+rad-27f57687,pat-8227cd62,enc-6417ccf4,Chest X-Ray,Pending,Pending,False,2026-01-03T21:00:00,Ordered
+rad-d59b9de8,pat-12ae834f,enc-0be72650,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-03T21:25:00,Reported
+rad-5669d99c,pat-9c1bc939,enc-3594370a,Chest X-Ray,Pending,Pending,False,2026-01-03T21:10:00,Ordered
+rad-2e293468,pat-9afe0815,enc-7a4f5634,Lumbar Spine X-Ray,Pending,Pending,False,2026-01-03T21:15:00,Ordered
+rad-0b67cd12,pat-f4e0f646,enc-3b286547,Chest X-Ray,Pending,Pending,False,2026-01-03T21:20:00,Ordered
+rad-01e30eea,pat-bd7d43e7,enc-d2cce052,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-03T21:45:00,Reported
+rad-def82454,pat-035aeb99,enc-7e0658b8,Chest X-Ray,Pending,Pending,False,2026-01-03T21:30:00,Ordered
+rad-ef93c852,pat-c84dbfdb,enc-863c1cc1,Chest X-Ray,Pending,Pending,False,2026-01-03T21:35:00,Ordered
+rad-057a775d,pat-90f1fd9e,enc-8c24d00f,Chest X-Ray,Pending,Pending,False,2026-01-03T21:40:00,Ordered
+rad-1b4d60fa,pat-ee88c16a,enc-0f2eb44b,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-03T22:05:00,Reported
+rad-fa56c91f,pat-85a7fbe9,enc-e7bb4ca8,Chest X-Ray,Pending,Pending,False,2026-01-03T21:50:00,Ordered
+rad-ff4c063d,pat-2d550c64,enc-daa6d238,Chest X-Ray,Pending,Pending,False,2026-01-03T21:55:00,Ordered
+rad-d1e2addc,pat-59f0c829,enc-08ee66e6,Chest X-Ray,Pending,Pending,False,2026-01-03T22:00:00,Ordered
+rad-0dcd2980,pat-2d17ae92,enc-ed4e667d,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-03T22:25:00,Reported
+rad-fa5a94d4,pat-0c554f6c,enc-131067e0,Chest X-Ray,Pending,Pending,False,2026-01-03T22:10:00,Ordered
+rad-7f703857,pat-d1de0f5e,enc-0b639576,Chest X-Ray,Pending,Pending,False,2026-01-03T22:15:00,Ordered
+rad-43e65910,pat-25d5dc94,enc-9b6ede83,Chest X-Ray,Pending,Pending,False,2026-01-03T22:20:00,Ordered
+rad-989d5fff,pat-869eebe3,enc-1ef1c6a4,Chest X-Ray,Bilateral infiltrates suggestive of pneumonia.,Findings suggestive of bilateral infiltrates suggestive of pneumonia,True,2026-01-03T22:45:00,Reported
+rad-60711907,pat-5d23c713,enc-4d78c01e,Chest X-Ray,Pending,Pending,False,2026-01-03T22:30:00,Ordered
+rad-97be33dc,pat-d435cbaa,enc-e668071f,Chest X-Ray,Pending,Pending,False,2026-01-03T22:35:00,Ordered
+rad-563c54da,pat-79c3a544,enc-8156aef3,Chest X-Ray,Pending,Pending,False,2026-01-03T22:40:00,Ordered
+rad-aa5c36d1,pat-9388f36f,enc-6ffffdcc,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-03T23:05:00,Reported
+rad-812a2d92,pat-1cd53a4b,enc-1165886b,Chest X-Ray,Pending,Pending,False,2026-01-03T22:50:00,Ordered
+rad-b8151055,pat-7292e91c,enc-ce6a552f,Chest X-Ray,Pending,Pending,False,2026-01-03T22:55:00,Ordered
+rad-512fb0fc,pat-a0752df4,enc-8231b515,Chest X-Ray,Pending,Pending,False,2026-01-03T23:00:00,Ordered
+rad-6a1f073c,pat-01c39800,enc-bb41e1f2,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-03T23:25:00,Reported
+rad-adf474d2,pat-2e1a4ede,enc-ea558dfc,Chest X-Ray,Pending,Pending,False,2026-01-03T23:10:00,Ordered
+rad-bc6b390b,pat-e495d4bf,enc-aaf92511,Chest X-Ray,Pending,Pending,False,2026-01-03T23:15:00,Ordered
+rad-fe03adac,pat-6daa598b,enc-7a7d338c,Chest X-Ray,Pending,Pending,False,2026-01-03T23:20:00,Ordered
+rad-5c2ef888,pat-9666a93d,enc-ba5fc943,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-03T23:45:00,Reported
+rad-6974a792,pat-c852d6e6,enc-f841cf59,Chest X-Ray,Pending,Pending,False,2026-01-03T23:30:00,Ordered
+rad-aacb4ff3,pat-f6be0c3a,enc-c6425db4,Chest X-Ray,Pending,Pending,False,2026-01-03T23:35:00,Ordered
+rad-ced2f9f9,pat-1e9c18a8,enc-d9e4746c,Chest X-Ray,Pending,Pending,False,2026-01-03T23:40:00,Ordered
+rad-db33cc9d,pat-c388db3f,enc-f1cd562d,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-04T00:05:00,Reported
+rad-65e29670,pat-6d3df531,enc-29407d8a,Chest X-Ray,Pending,Pending,False,2026-01-03T23:50:00,Ordered
+rad-52b395a9,pat-88ac99b0,enc-cb16e1be,Chest X-Ray,Pending,Pending,False,2026-01-03T23:55:00,Ordered
+rad-74a477cf,pat-88bacbef,enc-5fc044fc,Chest X-Ray,Pending,Pending,False,2026-01-04T00:00:00,Ordered
+rad-b71ed43d,pat-05bd914b,enc-07c27dc7,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-04T00:25:00,Reported
+rad-90bdda9c,pat-93c3261d,enc-30db9ab0,Chest X-Ray,Pending,Pending,False,2026-01-04T00:10:00,Ordered
+rad-bf7fb02c,pat-86906c75,enc-7c1009b8,Chest X-Ray,Pending,Pending,False,2026-01-04T00:15:00,Ordered
+rad-ba184fd6,pat-e6279332,enc-d053f831,Chest X-Ray,Pending,Pending,False,2026-01-04T00:20:00,Ordered
+rad-8ebdeae1,pat-b35715a7,enc-89a76b5f,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-04T00:45:00,Reported
+rad-d901ed9d,pat-94269171,enc-55a7cc62,Chest X-Ray,Pending,Pending,False,2026-01-04T00:30:00,Ordered
+rad-a3cb470b,pat-d0089a9b,enc-e916d192,Chest X-Ray,Pending,Pending,False,2026-01-04T00:35:00,Ordered
+rad-65097582,pat-0aeaeaf2,enc-e9b46a7c,Chest X-Ray,Pending,Pending,False,2026-01-04T00:40:00,Ordered
+rad-dc6cf996,pat-67ac97d2,enc-131a8798,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-04T01:05:00,Reported
+rad-fbbc6590,pat-a60feb0b,enc-152460f4,Chest X-Ray,Pending,Pending,False,2026-01-04T00:50:00,Ordered
+rad-221b8dbd,pat-56f1bb99,enc-368241e1,Chest X-Ray,Pending,Pending,False,2026-01-04T00:55:00,Ordered
+rad-9b3597a0,pat-af675636,enc-a2eca7dc,Chest X-Ray,Pending,Pending,False,2026-01-04T01:00:00,Ordered
+rad-713e3d46,pat-4615a4de,enc-9e584160,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-04T01:25:00,Reported
+rad-6e8b8841,pat-4b248cdf,enc-14ca4594,Chest X-Ray,Pending,Pending,False,2026-01-04T01:10:00,Ordered
+rad-43e71431,pat-59dff740,enc-f04daae8,Chest X-Ray,Pending,Pending,False,2026-01-04T01:15:00,Ordered
+rad-8896ccfd,pat-b43b004f,enc-4164eb64,Chest X-Ray,Pending,Pending,False,2026-01-04T01:20:00,Ordered
+rad-16e878a0,pat-566cbc8d,enc-fdd3bb7d,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-04T01:45:00,Reported
+rad-a80ff84a,pat-e0d0b3ee,enc-135873d7,Chest X-Ray,Pending,Pending,False,2026-01-04T01:30:00,Ordered
+rad-8d6a2a5e,pat-8677358f,enc-7fa05a9a,Chest X-Ray,Pending,Pending,False,2026-01-04T01:35:00,Ordered
+rad-61235880,pat-8a3c1e8e,enc-332c669d,Chest X-Ray,Pending,Pending,False,2026-01-04T01:40:00,Ordered
+rad-30c87d5f,pat-5f742251,enc-faee0d4b,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-04T02:05:00,Reported
+rad-89a0bf16,pat-d2176571,enc-839569ed,Chest X-Ray,Pending,Pending,False,2026-01-04T01:50:00,Ordered
+rad-8abf34cb,pat-a18ca929,enc-fbfd3943,Chest X-Ray,Pending,Pending,False,2026-01-04T01:55:00,Ordered
+rad-fdfc2f5f,pat-15cc9aad,enc-90720f9a,Chest X-Ray,Pending,Pending,False,2026-01-04T02:00:00,Ordered
+rad-8891add0,pat-6caa5407,enc-42ee91cd,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-04T02:25:00,Reported
+rad-ab78e8a4,pat-88424bd3,enc-430e11d4,Chest X-Ray,Pending,Pending,False,2026-01-04T02:10:00,Ordered
+rad-c46315e2,pat-9aa14582,enc-57d6bb92,Chest X-Ray,Pending,Pending,False,2026-01-04T02:15:00,Ordered
+rad-6b4ca3f0,pat-d546e789,enc-3fef31f4,Chest X-Ray,Pending,Pending,False,2026-01-04T02:20:00,Ordered
+rad-77361ed0,pat-ac65c549,enc-95e31bd3,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-04T02:45:00,Reported
+rad-bd75682c,pat-2491a023,enc-6807095e,Chest X-Ray,Pending,Pending,False,2026-01-04T02:30:00,Ordered
+rad-a9c193bc,pat-208b4f7b,enc-0479b1f8,Chest X-Ray,Pending,Pending,False,2026-01-04T02:35:00,Ordered
+rad-4f2b9a75,pat-603e0c7d,enc-78a021dd,Chest X-Ray,Pending,Pending,False,2026-01-04T02:40:00,Ordered
+rad-d29ec454,pat-63bb635c,enc-679ccfa7,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-04T03:05:00,Reported
+rad-f0032a7d,pat-51faaf3f,enc-438a6c1f,Chest X-Ray,Pending,Pending,False,2026-01-04T02:50:00,Ordered
+rad-399c7c9f,pat-e77f592b,enc-d77cbafe,Chest X-Ray,Pending,Pending,False,2026-01-04T02:55:00,Ordered
+rad-cdf97034,pat-9ab70d4c,enc-c9a05f9d,CT Head,Pending,Pending,False,2026-01-04T03:00:00,Ordered
+rad-4212bd41,pat-51eb0bd8,enc-81c6aaa3,Chest X-Ray,Right lower lobe consolidation.,Findings suggestive of right lower lobe consolidation,True,2026-01-04T03:25:00,Reported
+rad-1a155abc,pat-5c730991,enc-8654fb02,Chest X-Ray,Pending,Pending,False,2026-01-04T03:10:00,Ordered
+rad-36cba1a7,pat-0b14cd82,enc-54ed925e,Chest X-Ray,Pending,Pending,False,2026-01-04T03:15:00,Ordered
+rad-9ccccdaa,pat-5821391a,enc-21a7f025,Chest X-Ray,Pending,Pending,False,2026-01-04T03:20:00,Ordered
+rad-7846b9f4,pat-7e762ed3,enc-a6a9bda1,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-04T03:45:00,Reported
+rad-ffc2d5da,pat-95ef3955,enc-7d7fd0a5,Chest X-Ray,Pending,Pending,False,2026-01-04T03:30:00,Ordered
+rad-43acba4d,pat-ab6485a6,enc-e48ff216,Chest X-Ray,Pending,Pending,False,2026-01-04T03:35:00,Ordered
+rad-08bb229c,pat-b6b35301,enc-d8e9c549,Chest X-Ray,Pending,Pending,False,2026-01-04T03:40:00,Ordered
+rad-eeaa3540,pat-d4ff1b16,enc-d12bfe28,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-04T04:05:00,Reported
+rad-04d3d9c1,pat-04e2bc0e,enc-4c58a18c,Chest X-Ray,Pending,Pending,False,2026-01-04T03:50:00,Ordered
+rad-0007c75d,pat-c1691a34,enc-3d41710e,Chest X-Ray,Pending,Pending,False,2026-01-04T03:55:00,Ordered
+rad-dbd2d38b,pat-3cb54492,enc-3616146c,Chest X-Ray,Pending,Pending,False,2026-01-04T04:00:00,Ordered
+rad-3f5654bc,pat-1ef692f0,enc-3d1fd85f,Chest X-Ray,Mild cardiomegaly with pulmonary congestion.,Findings suggestive of mild cardiomegaly with pulmonary congestion,True,2026-01-04T04:25:00,Reported
+rad-5bd29c23,pat-8940b51e,enc-916608d3,Chest X-Ray,Pending,Pending,False,2026-01-04T04:10:00,Ordered
+rad-67512201,pat-8626680f,enc-eb3ccb1e,Chest X-Ray,Pending,Pending,False,2026-01-04T04:15:00,Ordered
+rad-82818ee7,pat-1153cb10,enc-1bc08df1,Chest X-Ray,Pending,Pending,False,2026-01-04T04:20:00,Ordered
+rad-453e0a48,pat-bb998b62,enc-c66d3eb2,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-04T04:45:00,Reported
+rad-a6b92292,pat-4447aa7b,enc-30bcbfc7,Chest X-Ray,Pending,Pending,False,2026-01-04T04:30:00,Ordered
+rad-12f5fd89,pat-6b44a557,enc-dda5433f,Chest X-Ray,Pending,Pending,False,2026-01-04T04:35:00,Ordered
+rad-20a6f21b,pat-6a4f887c,enc-48e6c6f6,Chest X-Ray,Pending,Pending,False,2026-01-04T04:40:00,Ordered
+rad-f751dc4d,pat-1c5d983b,enc-9c2a1327,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-04T05:05:00,Reported
+rad-2ab6f7a8,pat-09dda457,enc-df2cd2b6,Chest X-Ray,Pending,Pending,False,2026-01-04T04:50:00,Ordered
+rad-a470397b,pat-ad4268f5,enc-5a9d98b4,Chest X-Ray,Pending,Pending,False,2026-01-04T04:55:00,Ordered
+rad-b788622d,pat-6b5617ee,enc-d28a7b8c,Chest X-Ray,Pending,Pending,False,2026-01-04T05:00:00,Ordered
+rad-1048141a,pat-abf7736a,enc-3410b5cd,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-04T05:25:00,Reported
+rad-c07a3ae6,pat-b98dfbdc,enc-aa8e45b2,Chest X-Ray,Pending,Pending,False,2026-01-04T05:10:00,Ordered
+rad-996ca96e,pat-4cde171e,enc-0e149e98,Chest X-Ray,Pending,Pending,False,2026-01-04T05:15:00,Ordered
+rad-d9bf6540,pat-06594513,enc-3e689040,Chest X-Ray,Pending,Pending,False,2026-01-04T05:20:00,Ordered
+rad-bd41dc72,pat-c5bfab16,enc-1c7beae5,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-04T05:45:00,Reported
+rad-37dcc53c,pat-89f0ac80,enc-92228f14,Chest X-Ray,Pending,Pending,False,2026-01-04T05:30:00,Ordered
+rad-12e5403a,pat-78eb565b,enc-7e9d4ebd,Chest X-Ray,Pending,Pending,False,2026-01-04T05:35:00,Ordered
+rad-049a665d,pat-91fa72cd,enc-44512c63,Chest X-Ray,Pending,Pending,False,2026-01-04T05:40:00,Ordered
+rad-3a52c91f,pat-586d146f,enc-e5241f7f,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-04T06:05:00,Reported
+rad-8e1f5376,pat-1fbf8709,enc-1aa3495a,Chest X-Ray,Pending,Pending,False,2026-01-04T05:50:00,Ordered
+rad-04051365,pat-c2eae90a,enc-d58d966e,Chest X-Ray,Pending,Pending,False,2026-01-04T05:55:00,Ordered
+rad-a20063e4,pat-e0256501,enc-00e3f637,Lumbar Spine X-Ray,Pending,Pending,False,2026-01-04T06:00:00,Ordered
+rad-79a464e0,pat-892ed12c,enc-2b1007e5,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-04T06:25:00,Reported
+rad-de1b2863,pat-8ec4b226,enc-2fe6f888,Chest X-Ray,Pending,Pending,False,2026-01-04T06:10:00,Ordered
+rad-e209414b,pat-e6d4d820,enc-b98717d5,Chest X-Ray,Pending,Pending,False,2026-01-04T06:15:00,Ordered
+rad-e038c949,pat-9bc3b99e,enc-50a3a90e,Chest X-Ray,Pending,Pending,False,2026-01-04T06:20:00,Ordered
+rad-e849a79b,pat-18653a1d,enc-f4281477,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-04T06:45:00,Reported
+rad-d2903b35,pat-1e757935,enc-992e2999,Chest X-Ray,Pending,Pending,False,2026-01-04T06:30:00,Ordered
+rad-830bfbdf,pat-77131f98,enc-e15aba12,Chest X-Ray,Pending,Pending,False,2026-01-04T06:35:00,Ordered
+rad-678607aa,pat-8aa95126,enc-3ab7e8ea,Chest X-Ray,Pending,Pending,False,2026-01-04T06:40:00,Ordered
+rad-77306269,pat-b7b8f361,enc-7c4fd4af,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-04T07:05:00,Reported
+rad-ab9980ea,pat-6f58f89f,enc-567c96d6,Chest X-Ray,Pending,Pending,False,2026-01-04T06:50:00,Ordered
+rad-c2419442,pat-cfaec2e6,enc-4ad91069,Chest X-Ray,Pending,Pending,False,2026-01-04T06:55:00,Ordered
+rad-3a9bfd27,pat-f965f8d3,enc-a17874a5,Chest X-Ray,Pending,Pending,False,2026-01-04T07:00:00,Ordered
+rad-bf0d2822,pat-3a4991bb,enc-649c4bcb,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-04T07:25:00,Reported
+rad-1201d332,pat-0c6c1a29,enc-4ab4a5b9,Chest X-Ray,Pending,Pending,False,2026-01-04T07:10:00,Ordered
+rad-59457ea7,pat-8eda8357,enc-d4825e86,Chest X-Ray,Pending,Pending,False,2026-01-04T07:15:00,Ordered
+rad-2a2184f8,pat-2f17a99b,enc-7391d6d7,Chest X-Ray,Pending,Pending,False,2026-01-04T07:20:00,Ordered
+rad-dc113cf5,pat-7b57f076,enc-30c27a9d,Chest X-Ray,Mild cardiomegaly with pulmonary congestion.,Findings suggestive of mild cardiomegaly with pulmonary congestion,True,2026-01-04T07:45:00,Reported
+rad-65fdb201,pat-e0701b69,enc-20842e9a,Chest X-Ray,Pending,Pending,False,2026-01-04T07:30:00,Ordered
+rad-f95b0c46,pat-40bc1509,enc-0255a713,Chest X-Ray,Pending,Pending,False,2026-01-04T07:35:00,Ordered
+rad-f2a660a1,pat-9feb7a59,enc-c355f9f5,Chest X-Ray,Pending,Pending,False,2026-01-04T07:40:00,Ordered
+rad-9bef9acb,pat-d1fc75b5,enc-1acd736d,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-04T08:05:00,Reported
+rad-377c2b0e,pat-830cd3b6,enc-fd7fa7fc,Chest X-Ray,Pending,Pending,False,2026-01-04T07:50:00,Ordered
+rad-8fdc68ef,pat-161d906c,enc-28a92e2e,Chest X-Ray,Pending,Pending,False,2026-01-04T07:55:00,Ordered
+rad-28b47ecf,pat-edf499a3,enc-5c12d81e,Chest X-Ray,Pending,Pending,False,2026-01-04T08:00:00,Ordered
+rad-22f2f066,pat-15fcfd80,enc-23b7c07e,Chest X-Ray,Bilateral infiltrates suggestive of pneumonia.,Findings suggestive of bilateral infiltrates suggestive of pneumonia,True,2026-01-04T08:25:00,Reported
+rad-017f690b,pat-f7d7b05c,enc-3d51d832,Chest X-Ray,Pending,Pending,False,2026-01-04T08:10:00,Ordered
+rad-2cc187ce,pat-b3df52b6,enc-8beb5c5f,Chest X-Ray,Pending,Pending,False,2026-01-04T08:15:00,Ordered
+rad-f37a95cc,pat-9e3d6663,enc-8c3316c2,Chest X-Ray,Pending,Pending,False,2026-01-04T08:20:00,Ordered
+rad-cb91ae14,pat-a5f41ace,enc-2fdac239,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-04T08:45:00,Reported
+rad-ff4e59db,pat-a8b426e5,enc-ec10add4,Chest X-Ray,Pending,Pending,False,2026-01-04T08:30:00,Ordered
+rad-b7468da2,pat-cb517c92,enc-f81d1064,Chest X-Ray,Pending,Pending,False,2026-01-04T08:35:00,Ordered
+rad-8daf5bfe,pat-f1cda720,enc-6154bdcf,Chest X-Ray,Pending,Pending,False,2026-01-04T08:40:00,Ordered
+rad-ae5c563c,pat-2609f07e,enc-24b54010,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-04T09:05:00,Reported
+rad-ce5b64b8,pat-6ca63e0a,enc-e9eb98bf,Chest X-Ray,Pending,Pending,False,2026-01-04T08:50:00,Ordered
+rad-5023dac8,pat-9d3e3f3d,enc-bf07c8f6,Chest X-Ray,Pending,Pending,False,2026-01-04T08:55:00,Ordered
+rad-bf64c9bf,pat-bfddd2f2,enc-a4718461,Chest X-Ray,Pending,Pending,False,2026-01-04T09:00:00,Ordered
+rad-08931b32,pat-4740cb20,enc-8f2676f3,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-04T09:25:00,Reported
+rad-8208ecba,pat-648a78ab,enc-8485cb11,Chest X-Ray,Pending,Pending,False,2026-01-04T09:10:00,Ordered
+rad-d2b92b77,pat-a99698c7,enc-ecd79b6d,Chest X-Ray,Pending,Pending,False,2026-01-04T09:15:00,Ordered
+rad-63f492db,pat-ae1a7dd1,enc-41e54ef0,Chest X-Ray,Pending,Pending,False,2026-01-04T09:20:00,Ordered
+rad-443dce92,pat-cbdbfcb7,enc-dac58551,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-04T09:45:00,Reported
+rad-bef4655d,pat-1627bc8e,enc-b1d17c36,Chest X-Ray,Pending,Pending,False,2026-01-04T09:30:00,Ordered
+rad-3af1f26d,pat-6faabe96,enc-a4d7deae,Lumbar Spine X-Ray,Pending,Pending,False,2026-01-04T09:35:00,Ordered
+rad-e214b931,pat-bdcb8999,enc-b7e51ff8,Chest X-Ray,Pending,Pending,False,2026-01-04T09:40:00,Ordered
+rad-1f9c0530,pat-73c154ae,enc-eb3ec7c3,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-04T10:05:00,Reported
+rad-361520c9,pat-74db6b25,enc-cfda83ef,Chest X-Ray,Pending,Pending,False,2026-01-04T09:50:00,Ordered
+rad-19fffd91,pat-637c2e83,enc-80ee1049,Chest X-Ray,Pending,Pending,False,2026-01-04T09:55:00,Ordered
+rad-5bd80c60,pat-fe3d2526,enc-eb6db871,Chest X-Ray,Pending,Pending,False,2026-01-04T10:00:00,Ordered
+rad-fdc0711c,pat-1acc6fb2,enc-4a73926c,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-04T10:25:00,Reported
+rad-22a9bafc,pat-ff10b970,enc-a05d9e1e,Chest X-Ray,Pending,Pending,False,2026-01-04T10:10:00,Ordered
+rad-eec65c28,pat-0bbb19e5,enc-b17c6905,Chest X-Ray,Pending,Pending,False,2026-01-04T10:15:00,Ordered
+rad-ee0dad79,pat-f8dac9cf,enc-33621e35,Chest X-Ray,Pending,Pending,False,2026-01-04T10:20:00,Ordered
+rad-c69b8c43,pat-e4fb0c1a,enc-cc982c40,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-04T10:45:00,Reported
+rad-7d2e3506,pat-cc37e248,enc-4e34e9b0,Chest X-Ray,Pending,Pending,False,2026-01-04T10:30:00,Ordered
+rad-91223992,pat-3a6cc581,enc-a24be089,Chest X-Ray,Pending,Pending,False,2026-01-04T10:35:00,Ordered
+rad-18086d13,pat-7662e390,enc-11247473,Chest X-Ray,Pending,Pending,False,2026-01-04T10:40:00,Ordered
+rad-dce4ff54,pat-8380e902,enc-f948b50f,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-04T11:05:00,Reported
+rad-cc752d74,pat-74c00402,enc-d3de74fa,Chest X-Ray,Pending,Pending,False,2026-01-04T10:50:00,Ordered
+rad-8739a615,pat-8a10e863,enc-7f9393d9,Chest X-Ray,Pending,Pending,False,2026-01-04T10:55:00,Ordered
+rad-7d2e8f49,pat-08c6344b,enc-a0e668b0,CT Head,Pending,Pending,False,2026-01-04T11:00:00,Ordered
+rad-e68cb1ff,pat-d711dbc7,enc-3b991bf5,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-04T11:25:00,Reported
+rad-577e3e90,pat-6d532ab1,enc-159f1bd2,Chest X-Ray,Pending,Pending,False,2026-01-04T11:10:00,Ordered
+rad-cdde19b9,pat-aac1fd09,enc-f3417e43,Chest X-Ray,Pending,Pending,False,2026-01-04T11:15:00,Ordered
+rad-9d98a83a,pat-8ac9f569,enc-956cbbe1,Chest X-Ray,Pending,Pending,False,2026-01-04T11:20:00,Ordered
+rad-f510e1a6,pat-6c9297c1,enc-a39e1ee9,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-04T11:45:00,Reported
+rad-9ff307c0,pat-b57a0881,enc-33430aaa,Chest X-Ray,Pending,Pending,False,2026-01-04T11:30:00,Ordered
+rad-45c82ebe,pat-9a8fdffa,enc-ae02faf7,Chest X-Ray,Pending,Pending,False,2026-01-04T11:35:00,Ordered
+rad-83921213,pat-d458ed62,enc-22eeb1a6,Chest X-Ray,Pending,Pending,False,2026-01-04T11:40:00,Ordered
+rad-0234361d,pat-a5a6d9e8,enc-acead667,Lumbar Spine X-Ray,Normal lumbar spine alignment. No fractures or dislocations. Preserved disc spaces.,Unremarkable examination. Normal study.,False,2026-01-04T12:05:00,Reported
+rad-1758a9ad,pat-3fe41edd,enc-81050894,Chest X-Ray,Pending,Pending,False,2026-01-04T11:50:00,Ordered
+rad-84cc6db7,pat-3f550e45,enc-f945a192,Chest X-Ray,Pending,Pending,False,2026-01-04T11:55:00,Ordered
+rad-f1d74294,pat-1601b0a5,enc-20219282,Lumbar Spine X-Ray,Pending,Pending,False,2026-01-04T12:00:00,Ordered
+rad-69dce338,pat-5db80d90,enc-cde3c871,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-04T12:25:00,Reported
+rad-69d13062,pat-d37d299c,enc-54ec5394,Chest X-Ray,Pending,Pending,False,2026-01-04T12:10:00,Ordered
+rad-afbd86b6,pat-c5cdefbe,enc-37048d69,Chest X-Ray,Pending,Pending,False,2026-01-04T12:15:00,Ordered
+rad-df9aef55,pat-a5a7d370,enc-b759ae06,Chest X-Ray,Pending,Pending,False,2026-01-04T12:20:00,Ordered
+rad-71f2d0b6,pat-bbe0e699,enc-433afb5d,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-04T12:45:00,Reported
+rad-dd530e49,pat-74e715d4,enc-a897fda3,Chest X-Ray,Pending,Pending,False,2026-01-04T12:30:00,Ordered
+rad-8c4cfbda,pat-462ba971,enc-41212266,Chest X-Ray,Pending,Pending,False,2026-01-04T12:35:00,Ordered
+rad-93c5444d,pat-92cec90c,enc-729e97db,Chest X-Ray,Pending,Pending,False,2026-01-04T12:40:00,Ordered
+rad-0fdd735c,pat-b149e1db,enc-3d2f2a10,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-04T13:05:00,Reported
+rad-da1f2a7f,pat-224c6d01,enc-3aab4306,Chest X-Ray,Pending,Pending,False,2026-01-04T12:50:00,Ordered
+rad-16c354cc,pat-35702856,enc-22b8981a,Chest X-Ray,Pending,Pending,False,2026-01-04T12:55:00,Ordered
+rad-2d4b7d14,pat-df7bc6e5,enc-7550d741,Lumbar Spine X-Ray,Pending,Pending,False,2026-01-04T13:00:00,Ordered
+rad-61b6227b,pat-a2898a7a,enc-d9d3cf69,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-04T13:25:00,Reported
+rad-54062c94,pat-c1972d90,enc-e74c6e57,Chest X-Ray,Pending,Pending,False,2026-01-04T13:10:00,Ordered
+rad-2f87907d,pat-acee4d75,enc-f835e324,Chest X-Ray,Pending,Pending,False,2026-01-04T13:15:00,Ordered
+rad-26aadbdf,pat-751af5ee,enc-721e7c7f,Chest X-Ray,Pending,Pending,False,2026-01-04T13:20:00,Ordered
+rad-97d32b60,pat-46a0eec8,enc-78df81ce,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-04T13:45:00,Reported
+rad-cfb7bbeb,pat-406d1770,enc-4677b6e2,Chest X-Ray,Pending,Pending,False,2026-01-04T13:30:00,Ordered
+rad-c302c3bf,pat-2141a425,enc-24e10514,Chest X-Ray,Pending,Pending,False,2026-01-04T13:35:00,Ordered
+rad-f99ffee7,pat-3ee80685,enc-f964cea2,Chest X-Ray,Pending,Pending,False,2026-01-04T13:40:00,Ordered
+rad-f63fb4c6,pat-80fe60d4,enc-bf99ab0f,Chest X-Ray,Bilateral infiltrates suggestive of pneumonia.,Findings suggestive of bilateral infiltrates suggestive of pneumonia,True,2026-01-04T14:05:00,Reported
+rad-e05127ac,pat-37a4c0ba,enc-ccd20a9c,Chest X-Ray,Pending,Pending,False,2026-01-04T13:50:00,Ordered
+rad-2b2336e9,pat-b36aa26d,enc-0b3952c4,Chest X-Ray,Pending,Pending,False,2026-01-04T13:55:00,Ordered
+rad-2e750c4b,pat-69ca93fe,enc-8c0d0cea,Chest X-Ray,Pending,Pending,False,2026-01-04T14:00:00,Ordered
+rad-dc023ed5,pat-097e9a04,enc-8e6014d7,Chest X-Ray,Right lower lobe consolidation.,Findings suggestive of right lower lobe consolidation,True,2026-01-04T14:25:00,Reported
+rad-82543388,pat-09686189,enc-bc3a4e39,Chest X-Ray,Pending,Pending,False,2026-01-04T14:10:00,Ordered
+rad-ab007138,pat-57bc91d7,enc-829be95c,CT Head,Pending,Pending,False,2026-01-04T14:15:00,Ordered
+rad-0df77b2e,pat-beda7d3a,enc-14b77a21,Chest X-Ray,Pending,Pending,False,2026-01-04T14:20:00,Ordered
+rad-c7a4e4db,pat-c1c4afd5,enc-a51c19a8,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-04T14:45:00,Reported
+rad-ada9a748,pat-a94386e5,enc-1cf8cda6,Chest X-Ray,Pending,Pending,False,2026-01-04T14:30:00,Ordered
+rad-b7ba3001,pat-73649ff1,enc-4d3a49f2,Chest X-Ray,Pending,Pending,False,2026-01-04T14:35:00,Ordered
+rad-f59aac94,pat-0ad1d803,enc-11aad197,Chest X-Ray,Pending,Pending,False,2026-01-04T14:40:00,Ordered
+rad-7561f41c,pat-38d42728,enc-549c5ecf,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-04T15:05:00,Reported
+rad-c99e03b7,pat-d9cce4da,enc-c26682a5,Chest X-Ray,Pending,Pending,False,2026-01-04T14:50:00,Ordered
+rad-447a8e9e,pat-01f925df,enc-37791ed6,Chest X-Ray,Pending,Pending,False,2026-01-04T14:55:00,Ordered
+rad-d4c2bd54,pat-bfa69295,enc-6ab45dcf,Chest X-Ray,Pending,Pending,False,2026-01-04T15:00:00,Ordered
+rad-176b4b0d,pat-d5c8a871,enc-5227620e,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-04T15:25:00,Reported
+rad-b4d58f61,pat-eac1d4aa,enc-041e0b2e,Chest X-Ray,Pending,Pending,False,2026-01-04T15:10:00,Ordered
+rad-1867a025,pat-0bc911eb,enc-f7279258,Chest X-Ray,Pending,Pending,False,2026-01-04T15:15:00,Ordered
+rad-b2e92c97,pat-55c5b923,enc-d3138eb8,Lumbar Spine X-Ray,Pending,Pending,False,2026-01-04T15:20:00,Ordered
+rad-da555a81,pat-762d918d,enc-29443eff,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-04T15:45:00,Reported
+rad-e3c7a0f9,pat-35655f7d,enc-c3135421,Chest X-Ray,Pending,Pending,False,2026-01-04T15:30:00,Ordered
+rad-aeb0d5be,pat-a24d3e2d,enc-d1002612,Chest X-Ray,Pending,Pending,False,2026-01-04T15:35:00,Ordered
+rad-40152cb9,pat-d3e87ed5,enc-e07d561f,Chest X-Ray,Pending,Pending,False,2026-01-04T15:40:00,Ordered
+rad-edccc05c,pat-3562e32a,enc-ed6ade4c,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-04T16:05:00,Reported
+rad-c8264cf6,pat-89c3a346,enc-32ba92ad,Chest X-Ray,Pending,Pending,False,2026-01-04T15:50:00,Ordered
+rad-ce7815d2,pat-63d3063d,enc-cb85e78c,Chest X-Ray,Pending,Pending,False,2026-01-04T15:55:00,Ordered
+rad-24e7b777,pat-48cdb89f,enc-e8de5677,Chest X-Ray,Pending,Pending,False,2026-01-04T16:00:00,Ordered
+rad-bdf97e50,pat-f6919213,enc-d00b2fda,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-04T16:25:00,Reported
+rad-b1c605b8,pat-b0bd4e7d,enc-f92a1c91,Chest X-Ray,Pending,Pending,False,2026-01-04T16:10:00,Ordered
+rad-3e1b7231,pat-92a85d34,enc-15bd9bc8,Chest X-Ray,Pending,Pending,False,2026-01-04T16:15:00,Ordered
+rad-20abad78,pat-e2952bc2,enc-4ee98f73,Chest X-Ray,Pending,Pending,False,2026-01-04T16:20:00,Ordered
+rad-ba584527,pat-1fa34279,enc-84b02c01,Lumbar Spine X-Ray,Normal lumbar spine alignment. No fractures or dislocations. Preserved disc spaces.,Unremarkable examination. Normal study.,False,2026-01-04T16:45:00,Reported
+rad-ca35a907,pat-fc86b38b,enc-a8843795,Chest X-Ray,Pending,Pending,False,2026-01-04T16:30:00,Ordered
+rad-4a042678,pat-f9ece2f7,enc-20d129a6,Chest X-Ray,Pending,Pending,False,2026-01-04T16:35:00,Ordered
+rad-349bd1ef,pat-4ca2fcc2,enc-ddc04b26,Chest X-Ray,Pending,Pending,False,2026-01-04T16:40:00,Ordered
+rad-725bbd1e,pat-e9c1b570,enc-48a2345b,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-04T17:05:00,Reported
+rad-b509315f,pat-8911438e,enc-e41757fc,Chest X-Ray,Pending,Pending,False,2026-01-04T16:50:00,Ordered
+rad-bd932a2a,pat-dc8a54fb,enc-d366bc13,Chest X-Ray,Pending,Pending,False,2026-01-04T16:55:00,Ordered
+rad-343663bd,pat-6abfd462,enc-d899bd92,Chest X-Ray,Pending,Pending,False,2026-01-04T17:00:00,Ordered
+rad-566ca4e6,pat-6cce0645,enc-af95610c,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-04T17:25:00,Reported
+rad-e0a7bdfa,pat-faad7072,enc-aec54684,Chest X-Ray,Pending,Pending,False,2026-01-04T17:10:00,Ordered
+rad-01be0df1,pat-74ca3625,enc-2a388bf6,Chest X-Ray,Pending,Pending,False,2026-01-04T17:15:00,Ordered
+rad-f5afd00d,pat-994411fa,enc-b885fd5e,Chest X-Ray,Pending,Pending,False,2026-01-04T17:20:00,Ordered
+rad-b6ab3570,pat-bee46e0c,enc-69e2d721,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-04T17:45:00,Reported
+rad-422297cd,pat-3e03c249,enc-684c3909,Chest X-Ray,Pending,Pending,False,2026-01-04T17:30:00,Ordered
+rad-29f5ebb5,pat-19d7c03a,enc-8fed0912,Chest X-Ray,Pending,Pending,False,2026-01-04T17:35:00,Ordered
+rad-05838a9b,pat-e0dbe1f4,enc-6f9efc50,Chest X-Ray,Pending,Pending,False,2026-01-04T17:40:00,Ordered
+rad-bccda951,pat-b289fafb,enc-9de14f34,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-04T18:05:00,Reported
+rad-17fe7c79,pat-e4442b9b,enc-c30192bf,Chest X-Ray,Pending,Pending,False,2026-01-04T17:50:00,Ordered
+rad-71cd67f2,pat-1be833e8,enc-7ab44b54,Chest X-Ray,Pending,Pending,False,2026-01-04T17:55:00,Ordered
+rad-cd9a934d,pat-9ab2c682,enc-ea1596c8,Chest X-Ray,Pending,Pending,False,2026-01-04T18:00:00,Ordered
+rad-497956e7,pat-05cdd30f,enc-e63a06a9,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-04T18:25:00,Reported
+rad-17ddcb4a,pat-36eaa830,enc-83bdcc82,Chest X-Ray,Pending,Pending,False,2026-01-04T18:10:00,Ordered
+rad-c417b11a,pat-aeff74ec,enc-122bd4cf,Chest X-Ray,Pending,Pending,False,2026-01-04T18:15:00,Ordered
+rad-bfdc142b,pat-c58ea7c6,enc-db0a7b42,Chest X-Ray,Pending,Pending,False,2026-01-04T18:20:00,Ordered
+rad-e8c8a8f3,pat-21783848,enc-eb2909c9,Chest X-Ray,Mild cardiomegaly with pulmonary congestion.,Findings suggestive of mild cardiomegaly with pulmonary congestion,True,2026-01-04T18:45:00,Reported
+rad-62dc5345,pat-4e402b68,enc-dba9d898,Chest X-Ray,Pending,Pending,False,2026-01-04T18:30:00,Ordered
+rad-f0bb1f51,pat-b75e3dd7,enc-f7273452,Chest X-Ray,Pending,Pending,False,2026-01-04T18:35:00,Ordered
+rad-95a94553,pat-ca9285ce,enc-e8c4ce37,Chest X-Ray,Pending,Pending,False,2026-01-04T18:40:00,Ordered
+rad-7d2f608d,pat-62296a51,enc-271ca949,Chest X-Ray,Clear lung fields. No cardiomegaly. Normal mediastinal silhouette.,Unremarkable examination. Normal study.,False,2026-01-04T19:05:00,Reported
+rad-1f122673,pat-59fd3dc6,enc-8622370d,Chest X-Ray,Pending,Pending,False,2026-01-04T18:50:00,Ordered
+rad-8553a485,pat-14896481,enc-a31b81fc,Chest X-Ray,Pending,Pending,False,2026-01-04T18:55:00,Ordered
+rad-2560ebc3,pat-34c6e64e,enc-076ce8c5,Chest X-Ray,Pending,Pending,False,2026-01-04T19:00:00,Ordered
+rad-9ba5f030,pat-7c985279,enc-b74a5501,Lumbar Spine X-Ray,Normal lumbar spine alignment. No fractures or dislocations. Preserved disc spaces.,Unremarkable examination. Normal study.,False,2026-01-04T19:25:00,Reported
+rad-7339d805,pat-0218aae3,enc-ec203c37,Chest X-Ray,Pending,Pending,False,2026-01-04T19:10:00,Ordered
+rad-87f81ad8,pat-2b8fb3ee,enc-684842e8,Chest X-Ray,Pending,Pending,False,2026-01-04T19:15:00,Ordered

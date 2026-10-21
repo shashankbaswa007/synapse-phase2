@@ -1,0 +1,11 @@
+patient_id,name,age,gender,blood_group,insurance_type,status
+pat-5c78cb6a,Dylan Clarke,52,Male,B+,Corporate,Active
+pat-0688affd,Kenneth Valdez,75,Male,O+,Private,Active
+pat-bb11e9ed,Sarah Rodriguez,72,Female,A+,General,Active
+pat-324df629,Jessica Weber,20,Female,O+,Government,Active
+pat-37f21d46,Timothy James,77,Male,A+,General,Active
+pat-3f1262b2,Joshua Richards,75,Male,B+,General,Active
+pat-5a399525,Lisa Smith,12,Female,O+,Private,Active
+pat-6db5a4b3,Trevor Delacruz,53,Male,O+,General,Active
+pat-d0581d2b,Christopher Guzman,2,Male,O+,General,Active
+pat-3852a6e9,Lori Turner,24,Female,O+,Corporate,Active

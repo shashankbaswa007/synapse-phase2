@@ -1,0 +1,28 @@
+{
+  "document_id": "doc-lab-apt-2d",
+  "document_type": "LabReport",
+  "patient_id": "pat-ef47a6c2",
+  "patient_journey_id": "pj-5040ddf2",
+  "scenario_id": "SCEN-V1-01",
+  "source_entity_table": "laboratory.laboratory_orders",
+  "source_entity_id": "lab-apt-2d",
+  "source_action_id": "act-960c9368",
+  "source_event_id": "evt-2f8dc61052",
+  "created_at": "2026-01-01 09:35:00",
+  "document_version": "1.0.0",
+  "document_status": "FINAL",
+  "file_path": "C:\\AI\\synapse phase2\\output\\100_patients\\documents\\lab_reports\\doc-lab-apt-2d.md",
+  "checksum": "19e7deeeb7099154a8c2bd874eafe4d7913b7bd7900043e00f7f3a3cbb1fceec",
+  "metadata_payload": {
+    "patient_id": "pat-ef47a6c2",
+    "journey_id": "pj-5040ddf2",
+    "step_id": "step_lab_order",
+    "patient.patients": "pat-ef47a6c2",
+    "clinical.appointments": "apt-2d04bdef",
+    "clinical.encounters": "enc-5040ddf2",
+    "pharmacy.prescriptions": "rx-f7a37c2a",
+    "pharmacy.inventory_batches": "batch-b954d080",
+    "laboratory.laboratory_orders": "lab-apt-2d",
+    "radiology.radiology_orders": "rad-apt-2d"
+  }
+}

@@ -1,0 +1,31 @@
+@startuml event_processing
+title Sequence 3: Event Queue Processing Loop
+
+participant Engine as "SimulationEngine"
+participant Queue as "EventQueue"
+participant Clock as "SimulationClock"
+participant Disp as "EventDispatcher"
+participant DeptHandler as "BaseDepartmentHandler"
+participant Sched as "FutureActionScheduler"
+
+loop while queue has items or scheduler has due actions
+    Engine -> Queue : peek()
+    Engine -> Sched : peek_next_due_time()
+    alt event earlier than action
+        Engine -> Queue : pop()
+        Engine -> Clock : advance_to(event.scheduled_at)
+        Engine -> Disp : dispatch(event)
+        Disp -> DeptHandler : handle_event(event)
+        DeptHandler --> Disp : List[ActionRequest]
+        Disp --> Engine : List[ActionRequest]
+        loop for each req
+            Engine -> Sched : schedule_action(req, clock.now())
+        end
+    else due action earlier
+        Engine -> Sched : get_due_actions(next_time)
+        loop for each action
+            Engine -> Engine : _process_scheduled_action(action)
+        end
+    end
+end
+@enduml

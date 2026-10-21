@@ -1,0 +1,77 @@
+{
+  "metadata": {
+    "generated_at": "2026-09-01T10:42:49.892216",
+    "total_patients": 100,
+    "total_events": 753,
+    "total_documents": 229
+  },
+  "document_validation": {
+    "success": false,
+    "validated_count": 229,
+    "failed_count": 3,
+    "mismatches": [
+      {
+        "document_id": "doc-ds-2690f412",
+        "errors": [
+          "Discharge Summary status mismatch: Clinical encounter status in database is 'Active', should be Closed."
+        ]
+      },
+      {
+        "document_id": "doc-ds-925d6f0f",
+        "errors": [
+          "Discharge Summary status mismatch: Clinical encounter status in database is 'Active', should be Closed."
+        ]
+      },
+      {
+        "document_id": "doc-ds-49e87413",
+        "errors": [
+          "Discharge Summary status mismatch: Clinical encounter status in database is 'Active', should be Closed."
+        ]
+      }
+    ]
+  },
+  "deep_data_audit": {
+    "identity_referential": {
+      "success": true,
+      "error_count": 0,
+      "errors": []
+    },
+    "temporal_sequencing": {
+      "success": true,
+      "error_count": 0,
+      "errors": []
+    },
+    "state_transitions": {
+      "success": true,
+      "error_count": 0,
+      "errors": []
+    },
+    "resource_constraints": {
+      "success": true,
+      "error_count": 0,
+      "errors": []
+    },
+    "rule_compliance": {
+      "success": true,
+      "error_count": 0,
+      "errors": []
+    },
+    "success": true
+  },
+  "cross_layer_checks": {
+    "success": false,
+    "errors": [
+      "Cross-layer mismatch: Patient 'pat-b8020907' has database record but 0 generated documents.",
+      "Cross-layer mismatch: Patient 'pat-41f09678' has database record but 0 generated documents.",
+      "Cross-layer mismatch: Patient 'pat-0d9940af' has database record but 0 generated documents.",
+      "Cross-layer mismatch: Patient 'pat-569c1747' has database record but 0 generated documents.",
+      "Cross-layer mismatch: Patient 'pat-4933df6c' has database record but 0 generated documents.",
+      "Cross-layer mismatch: Patient 'pat-7d91e3db' has database record but 0 generated documents.",
+      "Cross-layer mismatch: Patient 'pat-d5b670ea' has database record but 0 generated documents.",
+      "Cross-layer mismatch: Patient 'pat-7a0de029' has database record but 0 generated documents.",
+      "Cross-layer mismatch: Patient 'pat-a86e82ab' has database record but 0 generated documents.",
+      "Cross-layer mismatch: Lineage map lists 62 patient journeys, but database states list 100 patients."
+    ]
+  },
+  "success": false
+}

@@ -1,0 +1,22 @@
+{
+  "total_patients": 100,
+  "total_events_processed": 1004,
+  "decisions_allowed": 648,
+  "decisions_blocked": 105,
+  "rule_hits": {
+    "RULE-WORK-OPD-010": 62,
+    "DEFAULT_FALLBACK_ALLOW": 510,
+    "RULE-STATE-RX-020": 31,
+    "RULE-STATE-RX-021": 15,
+    "RULE-STATE-LAB-010": 15,
+    "RULE-CLIN-ALLERGY-001": 45,
+    "RULE-STATE-RAD-010": 15,
+    "RULE-GLOB-STOCK-001": 60
+  },
+  "events_emitted_types": {},
+  "journey_outcomes": {
+    "SUCCESS_COMPLETED": 59,
+    "IN_PROGRESS": 41
+  },
+  "final_simulation_time": "2026-01-01T13:05:00"
+}

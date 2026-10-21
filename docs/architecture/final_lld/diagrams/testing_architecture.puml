@@ -1,0 +1,45 @@
+@startuml testing_architecture
+title SYNAPSE Phase 2 - Test Suite Architecture
+
+package "Unit & Engine Tests" {
+    [test_stage6_clock_scheduler.py]
+    [test_stage6_domain_events.py]
+    [test_stage6_ordering_causation.py]
+    [test_event_queue.py]
+    [test_dispatcher.py]
+    [test_orchestrator.py]
+}
+
+package "State & Rule Tests" {
+    [test_state_machines.py]
+    [test_state_manager.py]
+    [test_rule_engine.py]
+    [test_lab_rad_finance_rules.py]
+}
+
+package "Workflow & Department Tests" {
+    [test_stage7_workflows.py]
+    [test_stage7_patient_journeys.py]
+    [test_stage7_cross_department.py]
+    [test_stage9_prescription.py]
+    [test_stage9_diagnostics.py]
+    [test_stage9_billing.py]
+    [test_stage9_discharge.py]
+}
+
+package "Knowledge & PubMed Tests" {
+    [test_pubmed_treatment_architecture.py]
+    [test_pubmed_datagen_integration.py]
+}
+
+package "Validation & Dataset Tests" {
+    [test_data_integrity_temporal_consistency.py]
+    [test_phase2_csv_export.py]
+    [test_stage9_integrity.py]
+}
+
+package "SOLID Compliance Tests" {
+    [test_solid_principles.py]
+}
+
+@enduml

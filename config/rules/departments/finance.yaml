@@ -1,0 +1,107 @@
+# Finance Department Rules
+# RULE-STATE-FIN-010: Generate invoice (Draft → Unpaid)
+# RULE-STATE-FIN-011: Block invoice generation when NOT Draft
+# RULE-STATE-FIN-020: Process payment (Unpaid → Paid)
+# RULE-STATE-FIN-021: Block payment when NOT Unpaid
+
+- rule_id: "RULE-STATE-FIN-010"
+  name: "Invoice Generation State Transition"
+  category: "WORKFLOW_SEQUENCE"
+  description: "Generating invoice transitions from Draft to Unpaid, ready for payment."
+  source_type: "INTERNAL_DESIGN"
+  priority: 60
+  precedence_level: 60
+  version: "1.0.0"
+  scenarios: ["SCEN-V1-01", "SCEN-V1-02", "SCEN-V1-03", "SCEN-V1-04"]
+  departments: ["finance"]
+  entities_affected: ["finance.invoices"]
+  preconditions:
+    action_type: "GENERATE_INVOICE"
+    required_context_keys: ["entity_state.status"]
+  conditions:
+    all_of:
+      - "context.entity_state.status EQUALS 'Draft'"
+  allowed_actions: ["GENERATE_INVOICE"]
+  blocked_actions: []
+  state_transitions:
+    - target_entity: "finance.invoices"
+      target_field: "status"
+      new_value: "Unpaid"
+  cross_department_effects: []
+  events_generated: ["InvoiceGenerated"]
+  documents_triggered: ["Invoice"]
+
+- rule_id: "RULE-STATE-FIN-011"
+  name: "Block Invoice Generation When Not Draft"
+  category: "WORKFLOW_SEQUENCE"
+  description: "Blocks invoice generation if invoice is not in Draft state."
+  source_type: "INTERNAL_DESIGN"
+  priority: 70
+  precedence_level: 60
+  version: "1.0.0"
+  scenarios: ["SCEN-V1-01", "SCEN-V1-02", "SCEN-V1-03", "SCEN-V1-04"]
+  departments: ["finance"]
+  entities_affected: ["finance.invoices"]
+  preconditions:
+    action_type: "GENERATE_INVOICE"
+    required_context_keys: ["entity_state.status"]
+  conditions:
+    none_of:
+      - "context.entity_state.status EQUALS 'Draft'"
+  allowed_actions: []
+  blocked_actions: ["GENERATE_INVOICE"]
+  state_transitions: []
+  cross_department_effects: []
+  events_generated: ["InvoiceGenerationBlocked"]
+  documents_triggered: []
+
+- rule_id: "RULE-STATE-FIN-020"
+  name: "Invoice Payment Processing"
+  category: "WORKFLOW_SEQUENCE"
+  description: "Processes payment for an unpaid invoice, transitioning to Paid."
+  source_type: "INTERNAL_DESIGN"
+  priority: 60
+  precedence_level: 60
+  version: "1.0.0"
+  scenarios: ["SCEN-V1-01", "SCEN-V1-02", "SCEN-V1-03", "SCEN-V1-04"]
+  departments: ["finance"]
+  entities_affected: ["finance.invoices"]
+  preconditions:
+    action_type: "PROCESS_PAYMENT"
+    required_context_keys: ["entity_state.status"]
+  conditions:
+    all_of:
+      - "context.entity_state.status EQUALS 'Unpaid'"
+  allowed_actions: ["PROCESS_PAYMENT"]
+  blocked_actions: []
+  state_transitions:
+    - target_entity: "finance.invoices"
+      target_field: "status"
+      new_value: "Paid"
+  cross_department_effects: []
+  events_generated: ["PaymentProcessed"]
+  documents_triggered: ["PaymentReceipt"]
+
+- rule_id: "RULE-STATE-FIN-021"
+  name: "Block Payment When Not Unpaid"
+  category: "WORKFLOW_SEQUENCE"
+  description: "Blocks payment processing if invoice is not in Unpaid state."
+  source_type: "INTERNAL_DESIGN"
+  priority: 70
+  precedence_level: 60
+  version: "1.0.0"
+  scenarios: ["SCEN-V1-01", "SCEN-V1-02", "SCEN-V1-03", "SCEN-V1-04"]
+  departments: ["finance"]
+  entities_affected: ["finance.invoices"]
+  preconditions:
+    action_type: "PROCESS_PAYMENT"
+    required_context_keys: ["entity_state.status"]
+  conditions:
+    none_of:
+      - "context.entity_state.status EQUALS 'Unpaid'"
+  allowed_actions: []
+  blocked_actions: ["PROCESS_PAYMENT"]
+  state_transitions: []
+  cross_department_effects: []
+  events_generated: ["PaymentBlocked"]
+  documents_triggered: []

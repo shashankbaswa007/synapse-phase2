@@ -1,0 +1,23 @@
+@startuml clinical_department
+title Clinical Department Component Architecture
+
+class ClinicalDepartmentHandler {
+    + department_name: str = "clinical"
+    - clinical_gen: ClinicalEntityGenerator
+    - patient_contexts: Dict[str, PatientContext]
+    - state_manager: StateManager
+    + handle_event(event: SimulationEvent): List[ActionRequest]
+}
+
+class ClinicalEntityGenerator {
+    - kb: MedicalKnowledgeBase
+    - master_data: MasterDataSnapshot
+    + select_diagnosis(patient: PatientContext): DiagnosisEntry
+    + generate_vitals(patient: PatientContext, diag: DiagnosisEntry): GeneratedVitals
+    + select_medication(patient, diag, force_conflict): Tuple[DrugTreatment, bool]
+    + generate_consultation_data(...)
+    + generate_prescription_data(...)
+}
+
+ClinicalDepartmentHandler --> ClinicalEntityGenerator
+@enduml

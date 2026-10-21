@@ -1,0 +1,23 @@
+{
+  "document_id": "doc-rx-0640b5f9",
+  "document_type": "Prescription",
+  "patient_id": "pat-89088ec5",
+  "patient_journey_id": "pj-2b4713bc",
+  "scenario_id": "SCEN-V1-01",
+  "source_entity_table": "pharmacy.prescriptions",
+  "source_entity_id": "rx-0640b5f9",
+  "source_action_id": "act-211611fc",
+  "source_event_id": "evt-afd2972fbc",
+  "created_at": "2026-01-01 12:50:00",
+  "document_version": "1.0.0",
+  "document_status": "FINAL",
+  "file_path": "C:\\AI\\synapse phase2\\output\\phase2\\documents\\prescriptions\\doc-rx-0640b5f9.md",
+  "checksum": "77ed9f633b4f5f6567a3bdd43505e6b63fbb4ab0997f4bedee795950d66b3e7a",
+  "metadata_payload": {
+    "prescription_id": "rx-0640b5f9",
+    "patient_id": "pat-89088ec5",
+    "drug_name": "Paracetamol",
+    "drug_class": "Analgesic",
+    "status": "Dispensed"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "document_id": "doc-bill-b5b14e8b",
+  "document_type": "Invoice",
+  "patient_id": "pat-aa30d085",
+  "patient_journey_id": "pj-b5b14e8b",
+  "scenario_id": "SCEN-V1-01",
+  "source_entity_table": "finance.invoices",
+  "source_entity_id": "inv-b5b14e8b",
+  "source_action_id": "act-billing",
+  "source_event_id": "evt-3d4952f41b",
+  "created_at": "2026-01-01 11:55:00",
+  "document_version": "1.0.0",
+  "document_status": "FINAL",
+  "file_path": "C:\\AI\\synapse phase2\\output\\phase2\\documents\\bills\\doc-bill-b5b14e8b.md",
+  "checksum": "1c795731a09aaebb804cb9fc53ba52f07e959ff2334f551b2c321479aacfea6b",
+  "metadata_payload": {
+    "invoice_id": "inv-b5b14e8b",
+    "line_items": [
+      {
+        "item": "Outpatient Consultation Fee",
+        "amount": 500.0,
+        "source": "Consultation"
+      },
+      {
+        "item": "Pharmacy Medication Charge",
+        "amount": 5.0,
+        "source": "evt-20461129f0"
+      }
+    ],
+    "total": 505.0,
+    "status": "Paid"
+  }
+}

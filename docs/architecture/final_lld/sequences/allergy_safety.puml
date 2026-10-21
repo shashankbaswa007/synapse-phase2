@@ -1,0 +1,17 @@
+@startuml allergy_safety
+title Sequence 5: Allergy Safety Hold Execution Flow
+
+participant Sim as "SimulationEngine"
+participant Pipe as "ExecutionPipeline"
+participant RuleEng as "RuleEngine"
+participant State as "StateManager"
+
+Sim -> Pipe : execute_action(VERIFY_PRESCRIPTION)
+Pipe -> State : build_input_context()
+State --> Pipe : InputContext(allergies=['Penicillin'], drug_class='Beta-Lactam')
+Pipe -> RuleEng : evaluate(InputContext)
+Note over RuleEng: Evaluates RULE-CLIN-ALLERGY-001 (Priority 90, Level 2 Clinical Safety)
+RuleEng --> Pipe : DecisionResult(status=BLOCKED, winning_rule='RULE-CLIN-ALLERGY-001', events_to_emit=['PrescriptionAllergyConflictDetected'])
+Pipe --> Sim : ExecutionResult(success=False)
+Sim -> Sim : emit DomainEvent(event_type='PrescriptionAllergyConflictDetected', status='BLOCKED_FAILURE')
+@enduml

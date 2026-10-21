@@ -1,0 +1,1779 @@
+{
+  "metadata": {
+    "generated_at": "2026-09-01T10:42:32.510789",
+    "total_events": 126,
+    "total_documents": 33
+  },
+  "journeys": {
+    "pj-0692134f": {
+      "journey_id": "pj-0692134f",
+      "patient_id": "pat-31dac1ec",
+      "scenario_instance_id": "SCEN-V1-01-inst-1-d9f3aa",
+      "steps": [
+        {
+          "action_id": "act-db8ca8d3",
+          "event_id": "evt-6cbc0d946e",
+          "event_type": "EncounterStarted",
+          "timestamp": "2026-01-01T08:00:00",
+          "producer_domain": "clinical",
+          "target_entity": "clinical.appointments:apt-6994c773",
+          "status": "COMMITTED",
+          "causation_depth": 0,
+          "sequence_number": 0,
+          "documents": []
+        },
+        {
+          "action_id": "act-verify-9744eb21",
+          "event_id": "evt-d7c055e641",
+          "event_type": "VERIFY_PRESCRIPTION_Executed",
+          "timestamp": "2026-01-01T08:00:00",
+          "producer_domain": "pharmacy",
+          "target_entity": "pharmacy.prescriptions:rx-001",
+          "status": "COMMITTED",
+          "causation_depth": 1,
+          "sequence_number": 1,
+          "documents": []
+        },
+        {
+          "action_id": "act-dispense-e8fd2565",
+          "event_id": "evt-f9ff76a64f",
+          "event_type": "CONFIRM_MEDICINE_DISPENSE_Executed",
+          "timestamp": "2026-01-01T08:00:00",
+          "producer_domain": "pharmacy",
+          "target_entity": "pharmacy.prescriptions:rx-001",
+          "status": "COMMITTED",
+          "causation_depth": 1,
+          "sequence_number": 2,
+          "documents": []
+        },
+        {
+          "action_id": "act-bf7a0fc6",
+          "event_id": "evt-e6fc2c2f0a",
+          "event_type": "PrescriptionVerified",
+          "timestamp": "2026-01-01T08:05:00",
+          "producer_domain": "pharmacy",
+          "target_entity": "pharmacy.prescriptions:rx-4fec5545",
+          "status": "COMMITTED",
+          "causation_depth": 0,
+          "sequence_number": 4,
+          "documents": []
+        },
+        {
+          "action_id": "act-4b3b40a1",
+          "event_id": "evt-da171c710a",
+          "event_type": "VERIFY_PRESCRIPTION_Executed",
+          "timestamp": "2026-01-01T08:05:00",
+          "producer_domain": "pharmacy",
+          "target_entity": "pharmacy.prescriptions:rx-4fec5545",
+          "status": "COMMITTED",
+          "causation_depth": 0,
+          "sequence_number": 5,
+          "documents": []
+        },
+        {
+          "action_id": "act-959abb14",
+          "event_id": "evt-9e3510bb5a",
+          "event_type": "VERIFY_PRESCRIPTION_Executed",
+          "timestamp": "2026-01-01T08:05:00",
+          "producer_domain": "pharmacy",
+          "target_entity": "pharmacy.prescriptions:rx-4fec5545",
+          "status": "COMMITTED",
+          "causation_depth": 0,
+          "sequence_number": 6,
+          "documents": []
+        },
+        {
+          "action_id": "act-dispense-465562ce",
+          "event_id": "evt-36e5547a30",
+          "event_type": "CONFIRM_MEDICINE_DISPENSE_Executed",
+          "timestamp": "2026-01-01T08:05:00",
+          "producer_domain": "pharmacy",
+          "target_entity": "pharmacy.prescriptions:rx-001",
+          "status": "COMMITTED",
+          "causation_depth": 1,
+          "sequence_number": 9,
+          "documents": []
+        },
+        {
+          "action_id": "act-2f516e40",
+          "event_id": "evt-7ab5638b31",
+          "event_type": "MedicineDispensed",
+          "timestamp": "2026-01-01T08:10:00",
+          "producer_domain": "pharmacy",
+          "target_entity": "pharmacy.prescriptions:rx-4fec5545",
+          "status": "COMMITTED",
+          "causation_depth": 0,
+          "sequence_number": 11,
+          "documents": [
+            {
+              "document_id": "doc-rx-4fec5545",
+              "document_type": "Prescription",
+              "file_path": "C:\\AI\\synapse phase2\\output\\10_patients\\documents\\prescriptions\\doc-rx-4fec5545.md"
+            }
+          ]
+        },
+        {
+          "action_id": "act-f2c6b8ad",
+          "event_id": "evt-ba5362894d",
+          "event_type": "CONFIRM_MEDICINE_DISPENSE_Executed",
+          "timestamp": "2026-01-01T08:10:00",
+          "producer_domain": "pharmacy",
+          "target_entity": "pharmacy.prescriptions:rx-4fec5545",
+          "status": "COMMITTED",
+          "causation_depth": 0,
+          "sequence_number": 12,
+          "documents": []
+        },
+        {
+          "action_id": "act-422b5f70",
+          "event_id": "evt-3f9ceb2d89",
+          "event_type": "CONFIRM_MEDICINE_DISPENSE_Executed",
+          "timestamp": "2026-01-01T08:10:00",
+          "producer_domain": "pharmacy",
+          "target_entity": "pharmacy.prescriptions:rx-4fec5545",
+          "status": "COMMITTED",
+          "causation_depth": 0,
+          "sequence_number": 13,
+          "documents": []
+        },
+        {
+          "action_id": "act-27e9f879",
+          "event_id": "evt-14b3fc2f8d",
+          "event_type": "CONFIRM_MEDICINE_DISPENSE_Executed",
+          "timestamp": "2026-01-01T08:10:00",
+          "producer_domain": "pharmacy",
+          "target_entity": "pharmacy.prescriptions:rx-4fec5545",
+          "status": "COMMITTED",
+          "causation_depth": 0,
+          "sequence_number": 14,
+          "documents": []
+        },
+        {
+          "action_id": "act-fin-ed24ea9c",
+          "event_id": "evt-ca9bd4cf65",
+          "event_type": "GENERATE_INVOICE_Executed",
+          "timestamp": "2026-01-01T08:10:00",
+          "producer_domain": "finance",
+          "target_entity": "finance.invoices:inv-001",
+          "status": "COMMITTED",
+          "causation_depth": 1,
+          "sequence_number": 17,
+          "documents": []
+        },
+        {
+          "action_id": "act-620b63b9",
+          "event_id": "evt-ab712f2400",
+          "event_type": "GENERATE_INVOICE_Executed",
+          "timestamp": "2026-01-01T08:15:00",
+          "producer_domain": "finance",
+          "target_entity": "finance.invoices:ent-9b19ad1d",
+          "status": "COMMITTED",
+          "causation_depth": 0,
+          "sequence_number": 23,
+          "documents": []
+        },
+        {
+          "action_id": "act-c21ebd57",
+          "event_id": "evt-91e5227fe7",
+          "event_type": "GENERATE_INVOICE_Executed",
+          "timestamp": "2026-01-01T08:15:00",
+          "producer_domain": "finance",
+          "target_entity": "finance.invoices:ent-4fc0d9ef",
+          "status": "COMMITTED",
+          "causation_depth": 0,
+          "sequence_number": 24,
+          "documents": []
+        },
+        {
+          "action_id": "act-6cff2c6a",
+          "event_id": "evt-e9d2667520",
+          "event_type": "GENERATE_INVOICE_Executed",
+          "timestamp": "2026-01-01T08:15:00",
+          "producer_domain": "finance",
+          "target_entity": "finance.invoices:ent-41206612",
+          "status": "COMMITTED",
+          "causation_depth": 0,
+          "sequence_number": 25,
+          "documents": []
+        },
+        {
+          "action_id": "act-83d8e31f",
+          "event_id": "evt-665fcb4acc",
+          "event_type": "GENERATE_INVOICE_Executed",
+          "timestamp": "2026-01-01T08:15:00",
+          "producer_domain": "finance",
+          "target_entity": "finance.invoices:ent-316210d7",
+          "status": "COMMITTED",
+          "causation_depth": 0,
+          "sequence_number": 26,
+          "documents": []
+        },
+        {
+          "action_id": "act-b3f6b123",
+          "event_id": "evt-177a7b949a",
+          "event_type": "GENERATE_INVOICE_Executed",
+          "timestamp": "2026-01-01T08:15:00",
+          "producer_domain": "finance",
+          "target_entity": "finance.invoices:ent-c90cf9ca",
+          "status": "COMMITTED",
+          "causation_depth": 0,
+          "sequence_number": 29,
+          "documents": [
+            {
+              "document_id": "doc-bill-0692134f",
+              "document_type": "Invoice",
+              "file_path": "C:\\AI\\synapse phase2\\output\\10_patients\\documents\\bills\\doc-bill-0692134f.md"
+            },
+            {
+              "document_id": "doc-ds-0692134f",
+              "document_type": "DischargeSummary",
+              "file_path": "C:\\AI\\synapse phase2\\output\\10_patients\\documents\\discharge_summaries\\doc-ds-0692134f.md"
+            }
+          ]
+        }
+      ]
+    },
+    "pj-7a539f68": {
+      "journey_id": "pj-7a539f68",
+      "patient_id": "pat-d1cdd0e5",
+      "scenario_instance_id": "SCEN-V1-02-inst-2-ad756f",
+      "steps": [
+        {
+          "action_id": "act-4ba6fa3f",
+          "event_id": "evt-607519b4dc",
+          "event_type": "EncounterStarted",
+          "timestamp": "2026-01-01T08:05:00",
+          "producer_domain": "clinical",
+          "target_entity": "clinical.appointments:apt-252c7868",
+          "status": "COMMITTED",
+          "causation_depth": 0,
+          "sequence_number": 3,
+          "documents": []
+        },
+        {
+          "action_id": "act-verify-36c00cc8",
+          "event_id": "evt-9944fe2e56",
+          "event_type": "VERIFY_PRESCRIPTION_Executed",
+          "timestamp": "2026-01-01T08:05:00",
+          "producer_domain": "pharmacy",
+          "target_entity": "pharmacy.prescriptions:rx-001",
+          "status": "COMMITTED",
+          "causation_depth": 1,
+          "sequence_number": 7,
+          "documents": []
+        },
+        {
+          "action_id": "act-dispense-f5ded734",
+          "event_id": "evt-475d75ed79",
+          "event_type": "CONFIRM_MEDICINE_DISPENSE_Executed",
+          "timestamp": "2026-01-01T08:05:00",
+          "producer_domain": "pharmacy",
+          "target_entity": "pharmacy.prescriptions:rx-001",
+          "status": "COMMITTED",
+          "causation_depth": 1,
+          "sequence_number": 8,
+          "documents": []
+        },
+        {
+          "action_id": "act-2e47512f",
+          "event_id": "evt-c51dbc4ae4",
+          "event_type": "LabSampleCollected",
+          "timestamp": "2026-01-01T08:15:00",
+          "producer_domain": "laboratory",
+          "target_entity": "laboratory.laboratory_orders:lab-apt-25",
+          "status": "COMMITTED",
+          "causation_depth": 0,
+          "sequence_number": 19,
+          "documents": [
+            {
+              "document_id": "doc-lab-apt-25",
+              "document_type": "LabReport",
+              "file_path": "C:\\AI\\synapse phase2\\output\\10_patients\\documents\\lab_reports\\doc-lab-apt-25.md"
+            }
+          ]
+        },
+        {
+          "action_id": "act-d80ced6e",
+          "event_id": "evt-bb46e3ac95",
+          "event_type": "COLLECT_LAB_SAMPLE_Executed",
+          "timestamp": "2026-01-01T08:15:00",
+          "producer_domain": "laboratory",
+          "target_entity": "laboratory.laboratory_orders:lab-apt-25",
+          "status": "COMMITTED",
+          "causation_depth": 0,
+          "sequence_number": 20,
+          "documents": []
+        },
+        {
+          "action_id": "act-77bcfb25",
+          "event_id": "evt-73980e6f17",
+          "event_type": "COLLECT_LAB_SAMPLE_Executed",
+          "timestamp": "2026-01-01T08:15:00",
+          "producer_domain": "laboratory",
+          "target_entity": "laboratory.laboratory_orders:lab-apt-25",
+          "status": "COMMITTED",
+          "causation_depth": 0,
+          "sequence_number": 21,
+          "documents": []
+        },
+        {
+          "action_id": "act-68996d63",
+          "event_id": "evt-de0f5c35e5",
+          "event_type": "RadiologyImageAcquired",
+          "timestamp": "2026-01-01T08:25:00",
+          "producer_domain": "radiology",
+          "target_entity": "radiology.radiology_orders:rad-apt-25",
+          "status": "COMMITTED",
+          "causation_depth": 0,
+          "sequence_number": 43,
+          "documents": [
+            {
+              "document_id": "doc-rad-apt-25",
+              "document_type": "RadReport",
+              "file_path": "C:\\AI\\synapse phase2\\output\\10_patients\\documents\\rad_reports\\doc-rad-apt-25.md"
+            }
+          ]
+        },
+        {
+          "action_id": "act-e50366da",
+          "event_id": "evt-dc17b4c62e",
+          "event_type": "ACQUIRE_RADIOLOGY_IMAGE_Executed",
+          "timestamp": "2026-01-01T08:25:00",
+          "producer_domain": "radiology",
+          "target_entity": "radiology.radiology_orders:rad-apt-25",
+          "status": "COMMITTED",
+          "causation_depth": 0,
+          "sequence_number": 44,
+          "documents": []
+        },
+        {
+          "action_id": "act-d777e9ac",
+          "event_id": "evt-11def61873",
+          "event_type": "ACQUIRE_RADIOLOGY_IMAGE_Executed",
+          "timestamp": "2026-01-01T08:25:00",
+          "producer_domain": "radiology",
+          "target_entity": "radiology.radiology_orders:rad-apt-25",
+          "status": "COMMITTED",
+          "causation_depth": 0,
+          "sequence_number": 45,
+          "documents": [
+            {
+              "document_id": "doc-bill-7a539f68",
+              "document_type": "Invoice",
+              "file_path": "C:\\AI\\synapse phase2\\output\\10_patients\\documents\\bills\\doc-bill-7a539f68.md"
+            },
+            {
+              "document_id": "doc-ds-7a539f68",
+              "document_type": "DischargeSummary",
+              "file_path": "C:\\AI\\synapse phase2\\output\\10_patients\\documents\\discharge_summaries\\doc-ds-7a539f68.md"
+            }
+          ]
+        }
+      ]
+    },
+    "pj-2d1075cf": {
+      "journey_id": "pj-2d1075cf",
+      "patient_id": "pat-12cdaad7",
+      "scenario_instance_id": "SCEN-V1-03-inst-3-516f30",
+      "steps": [
+        {
+          "action_id": "act-856910c9",
+          "event_id": "evt-f5445829b1",
+          "event_type": "EncounterStarted",
+          "timestamp": "2026-01-01T08:10:00",
+          "producer_domain": "clinical",
+          "target_entity": "clinical.appointments:apt-2ff9805a",
+          "status": "COMMITTED",
+          "causation_depth": 0,
+          "sequence_number": 10,
+          "documents": []
+        },
+        {
+          "action_id": "act-verify-72127f31",
+          "event_id": "evt-c53b03b7ab",
+          "event_type": "VERIFY_PRESCRIPTION_Executed",
+          "timestamp": "2026-01-01T08:10:00",
+          "producer_domain": "pharmacy",
+          "target_entity": "pharmacy.prescriptions:rx-001",
+          "status": "COMMITTED",
+          "causation_depth": 1,
+          "sequence_number": 15,
+          "documents": []
+        },
+        {
+          "action_id": "act-dispense-9f7e91e8",
+          "event_id": "evt-b8c69291d7",
+          "event_type": "CONFIRM_MEDICINE_DISPENSE_Executed",
+          "timestamp": "2026-01-01T08:10:00",
+          "producer_domain": "pharmacy",
+          "target_entity": "pharmacy.prescriptions:rx-001",
+          "status": "COMMITTED",
+          "causation_depth": 1,
+          "sequence_number": 16,
+          "documents": []
+        },
+        {
+          "action_id": "act-6336ee9e",
+          "event_id": "evt-err-0952f94e58",
+          "event_type": "PrescriptionAllergyConflictDetected",
+          "timestamp": "2026-01-01T08:15:00",
+          "producer_domain": "pharmacy",
+          "target_entity": "pharmacy.prescriptions:rx-73908c9f",
+          "status": "BLOCKED_FAILURE",
+          "causation_depth": 0,
+          "sequence_number": 22,
+          "documents": [
+            {
+              "document_id": "doc-rx-73908c9f",
+              "document_type": "Prescription",
+              "file_path": "C:\\AI\\synapse phase2\\output\\10_patients\\documents\\prescriptions\\doc-rx-73908c9f.md"
+            }
+          ]
+        },
+        {
+          "action_id": "act-3b93a762",
+          "event_id": "evt-err-54b5d07ff4",
+          "event_type": "PrescriptionAllergyConflictDetected",
+          "timestamp": "2026-01-01T08:15:00",
+          "producer_domain": "pharmacy",
+          "target_entity": "pharmacy.prescriptions:rx-73908c9f",
+          "status": "BLOCKED_FAILURE",
+          "causation_depth": 0,
+          "sequence_number": 27,
+          "documents": []
+        },
+        {
+          "action_id": "act-c86b059a",
+          "event_id": "evt-err-7d94e04311",
+          "event_type": "PrescriptionAllergyConflictDetected",
+          "timestamp": "2026-01-01T08:15:00",
+          "producer_domain": "pharmacy",
+          "target_entity": "pharmacy.prescriptions:rx-73908c9f",
+          "status": "BLOCKED_FAILURE",
+          "causation_depth": 0,
+          "sequence_number": 28,
+          "documents": []
+        },
+        {
+          "action_id": "act-rec-537ba1ba",
+          "event_id": "evt-e734df47ba",
+          "event_type": "CREATE_CLINICAL_ALERT_Executed",
+          "timestamp": "2026-01-01T08:17:00",
+          "producer_domain": "clinical",
+          "target_entity": "clinical.encounters:enc-2d1075cf",
+          "status": "COMMITTED",
+          "causation_depth": 0,
+          "sequence_number": 32,
+          "documents": []
+        },
+        {
+          "action_id": "act-rec-bb6dd1a5",
+          "event_id": "evt-f83f0f2021",
+          "event_type": "CREATE_CLINICAL_ALERT_Executed",
+          "timestamp": "2026-01-01T08:17:00",
+          "producer_domain": "clinical",
+          "target_entity": "clinical.encounters:enc-2d1075cf",
+          "status": "COMMITTED",
+          "causation_depth": 0,
+          "sequence_number": 33,
+          "documents": []
+        },
+        {
+          "action_id": "act-rec-919d54a2",
+          "event_id": "evt-a4efb4fb54",
+          "event_type": "CREATE_CLINICAL_ALERT_Executed",
+          "timestamp": "2026-01-01T08:17:00",
+          "producer_domain": "clinical",
+          "target_entity": "clinical.encounters:enc-2d1075cf",
+          "status": "COMMITTED",
+          "causation_depth": 0,
+          "sequence_number": 34,
+          "documents": [
+            {
+              "document_id": "doc-bill-2d1075cf",
+              "document_type": "Invoice",
+              "file_path": "C:\\AI\\synapse phase2\\output\\10_patients\\documents\\bills\\doc-bill-2d1075cf.md"
+            },
+            {
+              "document_id": "doc-ds-2d1075cf",
+              "document_type": "DischargeSummary",
+              "file_path": "C:\\AI\\synapse phase2\\output\\10_patients\\documents\\discharge_summaries\\doc-ds-2d1075cf.md"
+            }
+          ]
+        }
+      ]
+    },
+    "pj-9541a683": {
+      "journey_id": "pj-9541a683",
+      "patient_id": "pat-0f393f7c",
+      "scenario_instance_id": "SCEN-V1-04-inst-4-54fa70",
+      "steps": [
+        {
+          "action_id": "act-8ee7a71e",
+          "event_id": "evt-6c042744f5",
+          "event_type": "EncounterStarted",
+          "timestamp": "2026-01-01T08:15:00",
+          "producer_domain": "clinical",
+          "target_entity": "clinical.appointments:apt-9908311e",
+          "status": "COMMITTED",
+          "causation_depth": 0,
+          "sequence_number": 18,
+          "documents": []
+        },
+        {
+          "action_id": "act-verify-fec84174",
+          "event_id": "evt-533cf5d30a",
+          "event_type": "VERIFY_PRESCRIPTION_Executed",
+          "timestamp": "2026-01-01T08:15:00",
+          "producer_domain": "pharmacy",
+          "target_entity": "pharmacy.prescriptions:rx-001",
+          "status": "COMMITTED",
+          "causation_depth": 1,
+          "sequence_number": 30,
+          "documents": []
+        },
+        {
+          "action_id": "act-dispense-eec69837",
+          "event_id": "evt-c69f145eab",
+          "event_type": "CONFIRM_MEDICINE_DISPENSE_Executed",
+          "timestamp": "2026-01-01T08:15:00",
+          "producer_domain": "pharmacy",
+          "target_entity": "pharmacy.prescriptions:rx-001",
+          "status": "COMMITTED",
+          "causation_depth": 1,
+          "sequence_number": 31,
+          "documents": []
+        },
+        {
+          "action_id": "act-6ed30e1c",
+          "event_id": "evt-21272b8033",
+          "event_type": "PrescriptionVerified",
+          "timestamp": "2026-01-01T08:20:00",
+          "producer_domain": "pharmacy",
+          "target_entity": "pharmacy.prescriptions:rx-ddf7f0a1",
+          "status": "COMMITTED",
+          "causation_depth": 0,
+          "sequence_number": 36,
+          "documents": [
+            {
+              "document_id": "doc-rx-ddf7f0a1",
+              "document_type": "Prescription",
+              "file_path": "C:\\AI\\synapse phase2\\output\\10_patients\\documents\\prescriptions\\doc-rx-ddf7f0a1.md"
+            }
+          ]
+        },
+        {
+          "action_id": "act-75e9018e",
+          "event_id": "evt-1f1282eab6",
+          "event_type": "VERIFY_PRESCRIPTION_Executed",
+          "timestamp": "2026-01-01T08:20:00",
+          "producer_domain": "pharmacy",
+          "target_entity": "pharmacy.prescriptions:rx-ddf7f0a1",
+          "status": "COMMITTED",
+          "causation_depth": 0,
+          "sequence_number": 37,
+          "documents": []
+        },
+        {
+          "action_id": "act-0fef97b6",
+          "event_id": "evt-85af1aa2fa",
+          "event_type": "VERIFY_PRESCRIPTION_Executed",
+          "timestamp": "2026-01-01T08:20:00",
+          "producer_domain": "pharmacy",
+          "target_entity": "pharmacy.prescriptions:rx-ddf7f0a1",
+          "status": "COMMITTED",
+          "causation_depth": 0,
+          "sequence_number": 38,
+          "documents": []
+        },
+        {
+          "action_id": "act-dispense-198067af",
+          "event_id": "evt-9d15051f7f",
+          "event_type": "CONFIRM_MEDICINE_DISPENSE_Executed",
+          "timestamp": "2026-01-01T08:20:00",
+          "producer_domain": "pharmacy",
+          "target_entity": "pharmacy.prescriptions:rx-001",
+          "status": "COMMITTED",
+          "causation_depth": 1,
+          "sequence_number": 41,
+          "documents": []
+        },
+        {
+          "action_id": "act-eeef47d3",
+          "event_id": "evt-err-1e4a49492e",
+          "event_type": "InventoryShortageDetected",
+          "timestamp": "2026-01-01T08:25:00",
+          "producer_domain": "pharmacy",
+          "target_entity": "pharmacy.prescriptions:rx-ddf7f0a1",
+          "status": "BLOCKED_FAILURE",
+          "causation_depth": 0,
+          "sequence_number": 47,
+          "documents": []
+        },
+        {
+          "action_id": "act-28c32183",
+          "event_id": "evt-err-b795e7fd27",
+          "event_type": "InventoryShortageDetected",
+          "timestamp": "2026-01-01T08:25:00",
+          "producer_domain": "pharmacy",
+          "target_entity": "pharmacy.prescriptions:rx-ddf7f0a1",
+          "status": "BLOCKED_FAILURE",
+          "causation_depth": 0,
+          "sequence_number": 48,
+          "documents": []
+        },
+        {
+          "action_id": "act-3e77ebe7",
+          "event_id": "evt-err-ba6d6680b7",
+          "event_type": "InventoryShortageDetected",
+          "timestamp": "2026-01-01T08:25:00",
+          "producer_domain": "pharmacy",
+          "target_entity": "pharmacy.prescriptions:rx-ddf7f0a1",
+          "status": "BLOCKED_FAILURE",
+          "causation_depth": 0,
+          "sequence_number": 49,
+          "documents": []
+        },
+        {
+          "action_id": "act-49bfc288",
+          "event_id": "evt-err-70df912c02",
+          "event_type": "InventoryShortageDetected",
+          "timestamp": "2026-01-01T08:25:00",
+          "producer_domain": "pharmacy",
+          "target_entity": "pharmacy.prescriptions:rx-ddf7f0a1",
+          "status": "BLOCKED_FAILURE",
+          "causation_depth": 0,
+          "sequence_number": 52,
+          "documents": []
+        },
+        {
+          "action_id": "act-rec-1765112a",
+          "event_id": "evt-78ebb2a522",
+          "event_type": "CREATE_CLINICAL_ALERT_Executed",
+          "timestamp": "2026-01-01T08:27:00",
+          "producer_domain": "clinical",
+          "target_entity": "clinical.encounters:enc-9541a683",
+          "status": "COMMITTED",
+          "causation_depth": 0,
+          "sequence_number": 56,
+          "documents": []
+        },
+        {
+          "action_id": "act-rec-8b3c5ab4",
+          "event_id": "evt-5b31d85891",
+          "event_type": "CREATE_CLINICAL_ALERT_Executed",
+          "timestamp": "2026-01-01T08:27:00",
+          "producer_domain": "clinical",
+          "target_entity": "clinical.encounters:enc-9541a683",
+          "status": "COMMITTED",
+          "causation_depth": 0,
+          "sequence_number": 57,
+          "documents": []
+        },
+        {
+          "action_id": "act-rec-af73cf04",
+          "event_id": "evt-bf390a3afd",
+          "event_type": "CREATE_CLINICAL_ALERT_Executed",
+          "timestamp": "2026-01-01T08:27:00",
+          "producer_domain": "clinical",
+          "target_entity": "clinical.encounters:enc-9541a683",
+          "status": "COMMITTED",
+          "causation_depth": 0,
+          "sequence_number": 58,
+          "documents": []
+        },
+        {
+          "action_id": "act-rec-04b4cc9f",
+          "event_id": "evt-25c023adb1",
+          "event_type": "CREATE_CLINICAL_ALERT_Executed",
+          "timestamp": "2026-01-01T08:27:00",
+          "producer_domain": "clinical",
+          "target_entity": "clinical.encounters:enc-9541a683",
+          "status": "COMMITTED",
+          "causation_depth": 0,
+          "sequence_number": 59,
+          "documents": [
+            {
+              "document_id": "doc-bill-9541a683",
+              "document_type": "Invoice",
+              "file_path": "C:\\AI\\synapse phase2\\output\\10_patients\\documents\\bills\\doc-bill-9541a683.md"
+            },
+            {
+              "document_id": "doc-ds-9541a683",
+              "document_type": "DischargeSummary",
+              "file_path": "C:\\AI\\synapse phase2\\output\\10_patients\\documents\\discharge_summaries\\doc-ds-9541a683.md"
+            }
+          ]
+        }
+      ]
+    },
+    "pj-a500d3cd": {
+      "journey_id": "pj-a500d3cd",
+      "patient_id": "pat-02b1672b",
+      "scenario_instance_id": "SCEN-V1-01-inst-5-94c156",
+      "steps": [
+        {
+          "action_id": "act-e30c0380",
+          "event_id": "evt-126c8dfaae",
+          "event_type": "EncounterStarted",
+          "timestamp": "2026-01-01T08:20:00",
+          "producer_domain": "clinical",
+          "target_entity": "clinical.appointments:apt-c8f3bd11",
+          "status": "COMMITTED",
+          "causation_depth": 0,
+          "sequence_number": 35,
+          "documents": []
+        },
+        {
+          "action_id": "act-verify-968f3f58",
+          "event_id": "evt-afabf90835",
+          "event_type": "VERIFY_PRESCRIPTION_Executed",
+          "timestamp": "2026-01-01T08:20:00",
+          "producer_domain": "pharmacy",
+          "target_entity": "pharmacy.prescriptions:rx-001",
+          "status": "COMMITTED",
+          "causation_depth": 1,
+          "sequence_number": 39,
+          "documents": []
+        },
+        {
+          "action_id": "act-dispense-a8ba987e",
+          "event_id": "evt-19e1d1c25b",
+          "event_type": "CONFIRM_MEDICINE_DISPENSE_Executed",
+          "timestamp": "2026-01-01T08:20:00",
+          "producer_domain": "pharmacy",
+          "target_entity": "pharmacy.prescriptions:rx-001",
+          "status": "COMMITTED",
+          "causation_depth": 1,
+          "sequence_number": 40,
+          "documents": []
+        },
+        {
+          "action_id": "act-31ce9c91",
+          "event_id": "evt-c0298230f2",
+          "event_type": "PrescriptionVerified",
+          "timestamp": "2026-01-01T08:25:00",
+          "producer_domain": "pharmacy",
+          "target_entity": "pharmacy.prescriptions:rx-f1ba3e48",
+          "status": "COMMITTED",
+          "causation_depth": 0,
+          "sequence_number": 46,
+          "documents": []
+        },
+        {
+          "action_id": "act-ec67ee5f",
+          "event_id": "evt-f9b1677b3f",
+          "event_type": "VERIFY_PRESCRIPTION_Executed",
+          "timestamp": "2026-01-01T08:25:00",
+          "producer_domain": "pharmacy",
+          "target_entity": "pharmacy.prescriptions:rx-f1ba3e48",
+          "status": "COMMITTED",
+          "causation_depth": 0,
+          "sequence_number": 50,
+          "documents": []
+        },
+        {
+          "action_id": "act-c9f1615d",
+          "event_id": "evt-104f5d73b2",
+          "event_type": "VERIFY_PRESCRIPTION_Executed",
+          "timestamp": "2026-01-01T08:25:00",
+          "producer_domain": "pharmacy",
+          "target_entity": "pharmacy.prescriptions:rx-f1ba3e48",
+          "status": "COMMITTED",
+          "causation_depth": 0,
+          "sequence_number": 51,
+          "documents": []
+        },
+        {
+          "action_id": "act-dispense-2e72cc1b",
+          "event_id": "evt-b135c87fa1",
+          "event_type": "CONFIRM_MEDICINE_DISPENSE_Executed",
+          "timestamp": "2026-01-01T08:25:00",
+          "producer_domain": "pharmacy",
+          "target_entity": "pharmacy.prescriptions:rx-001",
+          "status": "COMMITTED",
+          "causation_depth": 1,
+          "sequence_number": 55,
+          "documents": []
+        },
+        {
+          "action_id": "act-0cce236c",
+          "event_id": "evt-c3b625374d",
+          "event_type": "MedicineDispensed",
+          "timestamp": "2026-01-01T08:30:00",
+          "producer_domain": "pharmacy",
+          "target_entity": "pharmacy.prescriptions:rx-f1ba3e48",
+          "status": "COMMITTED",
+          "causation_depth": 0,
+          "sequence_number": 61,
+          "documents": [
+            {
+              "document_id": "doc-rx-f1ba3e48",
+              "document_type": "Prescription",
+              "file_path": "C:\\AI\\synapse phase2\\output\\10_patients\\documents\\prescriptions\\doc-rx-f1ba3e48.md"
+            }
+          ]
+        },
+        {
+          "action_id": "act-03632546",
+          "event_id": "evt-f7c0c75927",
+          "event_type": "CONFIRM_MEDICINE_DISPENSE_Executed",
+          "timestamp": "2026-01-01T08:30:00",
+          "producer_domain": "pharmacy",
+          "target_entity": "pharmacy.prescriptions:rx-f1ba3e48",
+          "status": "COMMITTED",
+          "causation_depth": 0,
+          "sequence_number": 62,
+          "documents": []
+        },
+        {
+          "action_id": "act-72a94135",
+          "event_id": "evt-82298f2245",
+          "event_type": "CONFIRM_MEDICINE_DISPENSE_Executed",
+          "timestamp": "2026-01-01T08:30:00",
+          "producer_domain": "pharmacy",
+          "target_entity": "pharmacy.prescriptions:rx-f1ba3e48",
+          "status": "COMMITTED",
+          "causation_depth": 0,
+          "sequence_number": 63,
+          "documents": []
+        },
+        {
+          "action_id": "act-3220f034",
+          "event_id": "evt-8b00e7756c",
+          "event_type": "CONFIRM_MEDICINE_DISPENSE_Executed",
+          "timestamp": "2026-01-01T08:30:00",
+          "producer_domain": "pharmacy",
+          "target_entity": "pharmacy.prescriptions:rx-f1ba3e48",
+          "status": "COMMITTED",
+          "causation_depth": 0,
+          "sequence_number": 64,
+          "documents": []
+        },
+        {
+          "action_id": "act-fin-4cb61edd",
+          "event_id": "evt-0d406fcfa2",
+          "event_type": "GENERATE_INVOICE_Executed",
+          "timestamp": "2026-01-01T08:30:00",
+          "producer_domain": "finance",
+          "target_entity": "finance.invoices:inv-001",
+          "status": "COMMITTED",
+          "causation_depth": 1,
+          "sequence_number": 67,
+          "documents": []
+        },
+        {
+          "action_id": "act-81dfa69d",
+          "event_id": "evt-042ddecadd",
+          "event_type": "GENERATE_INVOICE_Executed",
+          "timestamp": "2026-01-01T08:35:00",
+          "producer_domain": "finance",
+          "target_entity": "finance.invoices:ent-05df2169",
+          "status": "COMMITTED",
+          "causation_depth": 0,
+          "sequence_number": 73,
+          "documents": []
+        },
+        {
+          "action_id": "act-24f04f90",
+          "event_id": "evt-d4fbfd3902",
+          "event_type": "GENERATE_INVOICE_Executed",
+          "timestamp": "2026-01-01T08:35:00",
+          "producer_domain": "finance",
+          "target_entity": "finance.invoices:ent-180f6d52",
+          "status": "COMMITTED",
+          "causation_depth": 0,
+          "sequence_number": 74,
+          "documents": []
+        },
+        {
+          "action_id": "act-db6863cc",
+          "event_id": "evt-d2abcb7838",
+          "event_type": "GENERATE_INVOICE_Executed",
+          "timestamp": "2026-01-01T08:35:00",
+          "producer_domain": "finance",
+          "target_entity": "finance.invoices:ent-c16a7efa",
+          "status": "COMMITTED",
+          "causation_depth": 0,
+          "sequence_number": 75,
+          "documents": []
+        },
+        {
+          "action_id": "act-7da744d4",
+          "event_id": "evt-2405333ed7",
+          "event_type": "GENERATE_INVOICE_Executed",
+          "timestamp": "2026-01-01T08:35:00",
+          "producer_domain": "finance",
+          "target_entity": "finance.invoices:ent-1de9e03a",
+          "status": "COMMITTED",
+          "causation_depth": 0,
+          "sequence_number": 76,
+          "documents": []
+        },
+        {
+          "action_id": "act-d3a72eeb",
+          "event_id": "evt-1ae1ce2588",
+          "event_type": "GENERATE_INVOICE_Executed",
+          "timestamp": "2026-01-01T08:35:00",
+          "producer_domain": "finance",
+          "target_entity": "finance.invoices:ent-ccb3d95b",
+          "status": "COMMITTED",
+          "causation_depth": 0,
+          "sequence_number": 79,
+          "documents": [
+            {
+              "document_id": "doc-bill-a500d3cd",
+              "document_type": "Invoice",
+              "file_path": "C:\\AI\\synapse phase2\\output\\10_patients\\documents\\bills\\doc-bill-a500d3cd.md"
+            },
+            {
+              "document_id": "doc-ds-a500d3cd",
+              "document_type": "DischargeSummary",
+              "file_path": "C:\\AI\\synapse phase2\\output\\10_patients\\documents\\discharge_summaries\\doc-ds-a500d3cd.md"
+            }
+          ]
+        }
+      ]
+    },
+    "pj-5326f948": {
+      "journey_id": "pj-5326f948",
+      "patient_id": "pat-6004b9a3",
+      "scenario_instance_id": "SCEN-V1-02-inst-6-f02b07",
+      "steps": [
+        {
+          "action_id": "act-140d4e02",
+          "event_id": "evt-0dfcd3893d",
+          "event_type": "EncounterStarted",
+          "timestamp": "2026-01-01T08:25:00",
+          "producer_domain": "clinical",
+          "target_entity": "clinical.appointments:apt-a133509b",
+          "status": "COMMITTED",
+          "causation_depth": 0,
+          "sequence_number": 42,
+          "documents": []
+        },
+        {
+          "action_id": "act-verify-7be00dfb",
+          "event_id": "evt-1b9973bfd5",
+          "event_type": "VERIFY_PRESCRIPTION_Executed",
+          "timestamp": "2026-01-01T08:25:00",
+          "producer_domain": "pharmacy",
+          "target_entity": "pharmacy.prescriptions:rx-001",
+          "status": "COMMITTED",
+          "causation_depth": 1,
+          "sequence_number": 53,
+          "documents": []
+        },
+        {
+          "action_id": "act-dispense-a127a15b",
+          "event_id": "evt-90fa62189c",
+          "event_type": "CONFIRM_MEDICINE_DISPENSE_Executed",
+          "timestamp": "2026-01-01T08:25:00",
+          "producer_domain": "pharmacy",
+          "target_entity": "pharmacy.prescriptions:rx-001",
+          "status": "COMMITTED",
+          "causation_depth": 1,
+          "sequence_number": 54,
+          "documents": []
+        },
+        {
+          "action_id": "act-25dc4689",
+          "event_id": "evt-8bbf0c7a2c",
+          "event_type": "LabSampleCollected",
+          "timestamp": "2026-01-01T08:35:00",
+          "producer_domain": "laboratory",
+          "target_entity": "laboratory.laboratory_orders:lab-apt-a1",
+          "status": "COMMITTED",
+          "causation_depth": 0,
+          "sequence_number": 69,
+          "documents": [
+            {
+              "document_id": "doc-lab-apt-a1",
+              "document_type": "LabReport",
+              "file_path": "C:\\AI\\synapse phase2\\output\\10_patients\\documents\\lab_reports\\doc-lab-apt-a1.md"
+            }
+          ]
+        },
+        {
+          "action_id": "act-3a9e5e0c",
+          "event_id": "evt-81391e1f76",
+          "event_type": "COLLECT_LAB_SAMPLE_Executed",
+          "timestamp": "2026-01-01T08:35:00",
+          "producer_domain": "laboratory",
+          "target_entity": "laboratory.laboratory_orders:lab-apt-a1",
+          "status": "COMMITTED",
+          "causation_depth": 0,
+          "sequence_number": 70,
+          "documents": []
+        },
+        {
+          "action_id": "act-8d7c621e",
+          "event_id": "evt-ed6a5b1cdd",
+          "event_type": "COLLECT_LAB_SAMPLE_Executed",
+          "timestamp": "2026-01-01T08:35:00",
+          "producer_domain": "laboratory",
+          "target_entity": "laboratory.laboratory_orders:lab-apt-a1",
+          "status": "COMMITTED",
+          "causation_depth": 0,
+          "sequence_number": 71,
+          "documents": []
+        },
+        {
+          "action_id": "act-82135d8c",
+          "event_id": "evt-b1005facb1",
+          "event_type": "RadiologyImageAcquired",
+          "timestamp": "2026-01-01T08:45:00",
+          "producer_domain": "radiology",
+          "target_entity": "radiology.radiology_orders:rad-apt-a1",
+          "status": "COMMITTED",
+          "causation_depth": 0,
+          "sequence_number": 93,
+          "documents": [
+            {
+              "document_id": "doc-rad-apt-a1",
+              "document_type": "RadReport",
+              "file_path": "C:\\AI\\synapse phase2\\output\\10_patients\\documents\\rad_reports\\doc-rad-apt-a1.md"
+            }
+          ]
+        },
+        {
+          "action_id": "act-48f7cdc9",
+          "event_id": "evt-dd462288c7",
+          "event_type": "ACQUIRE_RADIOLOGY_IMAGE_Executed",
+          "timestamp": "2026-01-01T08:45:00",
+          "producer_domain": "radiology",
+          "target_entity": "radiology.radiology_orders:rad-apt-a1",
+          "status": "COMMITTED",
+          "causation_depth": 0,
+          "sequence_number": 94,
+          "documents": []
+        },
+        {
+          "action_id": "act-173555bb",
+          "event_id": "evt-bce4716554",
+          "event_type": "ACQUIRE_RADIOLOGY_IMAGE_Executed",
+          "timestamp": "2026-01-01T08:45:00",
+          "producer_domain": "radiology",
+          "target_entity": "radiology.radiology_orders:rad-apt-a1",
+          "status": "COMMITTED",
+          "causation_depth": 0,
+          "sequence_number": 95,
+          "documents": [
+            {
+              "document_id": "doc-bill-5326f948",
+              "document_type": "Invoice",
+              "file_path": "C:\\AI\\synapse phase2\\output\\10_patients\\documents\\bills\\doc-bill-5326f948.md"
+            },
+            {
+              "document_id": "doc-ds-5326f948",
+              "document_type": "DischargeSummary",
+              "file_path": "C:\\AI\\synapse phase2\\output\\10_patients\\documents\\discharge_summaries\\doc-ds-5326f948.md"
+            }
+          ]
+        }
+      ]
+    },
+    "pj-3cea6418": {
+      "journey_id": "pj-3cea6418",
+      "patient_id": "pat-a574f6b0",
+      "scenario_instance_id": "SCEN-V1-03-inst-7-53f8c4",
+      "steps": [
+        {
+          "action_id": "act-e814e55c",
+          "event_id": "evt-fca09c47c9",
+          "event_type": "EncounterStarted",
+          "timestamp": "2026-01-01T08:30:00",
+          "producer_domain": "clinical",
+          "target_entity": "clinical.appointments:apt-d77e15fe",
+          "status": "COMMITTED",
+          "causation_depth": 0,
+          "sequence_number": 60,
+          "documents": []
+        },
+        {
+          "action_id": "act-verify-1da489f4",
+          "event_id": "evt-c870ac5ed8",
+          "event_type": "VERIFY_PRESCRIPTION_Executed",
+          "timestamp": "2026-01-01T08:30:00",
+          "producer_domain": "pharmacy",
+          "target_entity": "pharmacy.prescriptions:rx-001",
+          "status": "COMMITTED",
+          "causation_depth": 1,
+          "sequence_number": 65,
+          "documents": []
+        },
+        {
+          "action_id": "act-dispense-ea24dd90",
+          "event_id": "evt-2dc37e6713",
+          "event_type": "CONFIRM_MEDICINE_DISPENSE_Executed",
+          "timestamp": "2026-01-01T08:30:00",
+          "producer_domain": "pharmacy",
+          "target_entity": "pharmacy.prescriptions:rx-001",
+          "status": "COMMITTED",
+          "causation_depth": 1,
+          "sequence_number": 66,
+          "documents": []
+        },
+        {
+          "action_id": "act-4cab6135",
+          "event_id": "evt-err-c7a924d5a6",
+          "event_type": "PrescriptionAllergyConflictDetected",
+          "timestamp": "2026-01-01T08:35:00",
+          "producer_domain": "pharmacy",
+          "target_entity": "pharmacy.prescriptions:rx-8eec56d6",
+          "status": "BLOCKED_FAILURE",
+          "causation_depth": 0,
+          "sequence_number": 72,
+          "documents": [
+            {
+              "document_id": "doc-rx-8eec56d6",
+              "document_type": "Prescription",
+              "file_path": "C:\\AI\\synapse phase2\\output\\10_patients\\documents\\prescriptions\\doc-rx-8eec56d6.md"
+            }
+          ]
+        },
+        {
+          "action_id": "act-08ca45cc",
+          "event_id": "evt-err-bbfbfe593a",
+          "event_type": "PrescriptionAllergyConflictDetected",
+          "timestamp": "2026-01-01T08:35:00",
+          "producer_domain": "pharmacy",
+          "target_entity": "pharmacy.prescriptions:rx-8eec56d6",
+          "status": "BLOCKED_FAILURE",
+          "causation_depth": 0,
+          "sequence_number": 77,
+          "documents": []
+        },
+        {
+          "action_id": "act-1482a998",
+          "event_id": "evt-err-c2b0484596",
+          "event_type": "PrescriptionAllergyConflictDetected",
+          "timestamp": "2026-01-01T08:35:00",
+          "producer_domain": "pharmacy",
+          "target_entity": "pharmacy.prescriptions:rx-8eec56d6",
+          "status": "BLOCKED_FAILURE",
+          "causation_depth": 0,
+          "sequence_number": 78,
+          "documents": []
+        },
+        {
+          "action_id": "act-rec-e15b0d66",
+          "event_id": "evt-7be0d235c0",
+          "event_type": "CREATE_CLINICAL_ALERT_Executed",
+          "timestamp": "2026-01-01T08:37:00",
+          "producer_domain": "clinical",
+          "target_entity": "clinical.encounters:enc-3cea6418",
+          "status": "COMMITTED",
+          "causation_depth": 0,
+          "sequence_number": 82,
+          "documents": []
+        },
+        {
+          "action_id": "act-rec-68b9c337",
+          "event_id": "evt-798a3b089a",
+          "event_type": "CREATE_CLINICAL_ALERT_Executed",
+          "timestamp": "2026-01-01T08:37:00",
+          "producer_domain": "clinical",
+          "target_entity": "clinical.encounters:enc-3cea6418",
+          "status": "COMMITTED",
+          "causation_depth": 0,
+          "sequence_number": 83,
+          "documents": []
+        },
+        {
+          "action_id": "act-rec-e6113658",
+          "event_id": "evt-2599322a41",
+          "event_type": "CREATE_CLINICAL_ALERT_Executed",
+          "timestamp": "2026-01-01T08:37:00",
+          "producer_domain": "clinical",
+          "target_entity": "clinical.encounters:enc-3cea6418",
+          "status": "COMMITTED",
+          "causation_depth": 0,
+          "sequence_number": 84,
+          "documents": [
+            {
+              "document_id": "doc-bill-3cea6418",
+              "document_type": "Invoice",
+              "file_path": "C:\\AI\\synapse phase2\\output\\10_patients\\documents\\bills\\doc-bill-3cea6418.md"
+            },
+            {
+              "document_id": "doc-ds-3cea6418",
+              "document_type": "DischargeSummary",
+              "file_path": "C:\\AI\\synapse phase2\\output\\10_patients\\documents\\discharge_summaries\\doc-ds-3cea6418.md"
+            }
+          ]
+        }
+      ]
+    },
+    "pj-ab86ad6f": {
+      "journey_id": "pj-ab86ad6f",
+      "patient_id": "pat-268895ca",
+      "scenario_instance_id": "SCEN-V1-04-inst-8-928a99",
+      "steps": [
+        {
+          "action_id": "act-da2fd042",
+          "event_id": "evt-dd4998b82d",
+          "event_type": "EncounterStarted",
+          "timestamp": "2026-01-01T08:35:00",
+          "producer_domain": "clinical",
+          "target_entity": "clinical.appointments:apt-f3530682",
+          "status": "COMMITTED",
+          "causation_depth": 0,
+          "sequence_number": 68,
+          "documents": []
+        },
+        {
+          "action_id": "act-verify-e1e342e5",
+          "event_id": "evt-9d10279656",
+          "event_type": "VERIFY_PRESCRIPTION_Executed",
+          "timestamp": "2026-01-01T08:35:00",
+          "producer_domain": "pharmacy",
+          "target_entity": "pharmacy.prescriptions:rx-001",
+          "status": "COMMITTED",
+          "causation_depth": 1,
+          "sequence_number": 80,
+          "documents": []
+        },
+        {
+          "action_id": "act-dispense-630fb900",
+          "event_id": "evt-1666973eab",
+          "event_type": "CONFIRM_MEDICINE_DISPENSE_Executed",
+          "timestamp": "2026-01-01T08:35:00",
+          "producer_domain": "pharmacy",
+          "target_entity": "pharmacy.prescriptions:rx-001",
+          "status": "COMMITTED",
+          "causation_depth": 1,
+          "sequence_number": 81,
+          "documents": []
+        },
+        {
+          "action_id": "act-f7807ff6",
+          "event_id": "evt-652ca813ad",
+          "event_type": "PrescriptionVerified",
+          "timestamp": "2026-01-01T08:40:00",
+          "producer_domain": "pharmacy",
+          "target_entity": "pharmacy.prescriptions:rx-dcc634ad",
+          "status": "COMMITTED",
+          "causation_depth": 0,
+          "sequence_number": 86,
+          "documents": [
+            {
+              "document_id": "doc-rx-dcc634ad",
+              "document_type": "Prescription",
+              "file_path": "C:\\AI\\synapse phase2\\output\\10_patients\\documents\\prescriptions\\doc-rx-dcc634ad.md"
+            }
+          ]
+        },
+        {
+          "action_id": "act-b5de4afb",
+          "event_id": "evt-eb6c959ea7",
+          "event_type": "VERIFY_PRESCRIPTION_Executed",
+          "timestamp": "2026-01-01T08:40:00",
+          "producer_domain": "pharmacy",
+          "target_entity": "pharmacy.prescriptions:rx-dcc634ad",
+          "status": "COMMITTED",
+          "causation_depth": 0,
+          "sequence_number": 87,
+          "documents": []
+        },
+        {
+          "action_id": "act-f7860258",
+          "event_id": "evt-79273ac247",
+          "event_type": "VERIFY_PRESCRIPTION_Executed",
+          "timestamp": "2026-01-01T08:40:00",
+          "producer_domain": "pharmacy",
+          "target_entity": "pharmacy.prescriptions:rx-dcc634ad",
+          "status": "COMMITTED",
+          "causation_depth": 0,
+          "sequence_number": 88,
+          "documents": []
+        },
+        {
+          "action_id": "act-dispense-9dd502c9",
+          "event_id": "evt-c3e834f222",
+          "event_type": "CONFIRM_MEDICINE_DISPENSE_Executed",
+          "timestamp": "2026-01-01T08:40:00",
+          "producer_domain": "pharmacy",
+          "target_entity": "pharmacy.prescriptions:rx-001",
+          "status": "COMMITTED",
+          "causation_depth": 1,
+          "sequence_number": 91,
+          "documents": []
+        },
+        {
+          "action_id": "act-63f22e43",
+          "event_id": "evt-err-afb444ecad",
+          "event_type": "InventoryShortageDetected",
+          "timestamp": "2026-01-01T08:45:00",
+          "producer_domain": "pharmacy",
+          "target_entity": "pharmacy.prescriptions:rx-dcc634ad",
+          "status": "BLOCKED_FAILURE",
+          "causation_depth": 0,
+          "sequence_number": 97,
+          "documents": []
+        },
+        {
+          "action_id": "act-2e22a6d9",
+          "event_id": "evt-err-eedee9db51",
+          "event_type": "InventoryShortageDetected",
+          "timestamp": "2026-01-01T08:45:00",
+          "producer_domain": "pharmacy",
+          "target_entity": "pharmacy.prescriptions:rx-dcc634ad",
+          "status": "BLOCKED_FAILURE",
+          "causation_depth": 0,
+          "sequence_number": 98,
+          "documents": []
+        },
+        {
+          "action_id": "act-7651ba56",
+          "event_id": "evt-err-f4459e3387",
+          "event_type": "InventoryShortageDetected",
+          "timestamp": "2026-01-01T08:45:00",
+          "producer_domain": "pharmacy",
+          "target_entity": "pharmacy.prescriptions:rx-dcc634ad",
+          "status": "BLOCKED_FAILURE",
+          "causation_depth": 0,
+          "sequence_number": 99,
+          "documents": []
+        },
+        {
+          "action_id": "act-92fee08b",
+          "event_id": "evt-err-3fba7457a2",
+          "event_type": "InventoryShortageDetected",
+          "timestamp": "2026-01-01T08:45:00",
+          "producer_domain": "pharmacy",
+          "target_entity": "pharmacy.prescriptions:rx-dcc634ad",
+          "status": "BLOCKED_FAILURE",
+          "causation_depth": 0,
+          "sequence_number": 102,
+          "documents": []
+        },
+        {
+          "action_id": "act-rec-efb76e2f",
+          "event_id": "evt-6114f2a125",
+          "event_type": "CREATE_CLINICAL_ALERT_Executed",
+          "timestamp": "2026-01-01T08:47:00",
+          "producer_domain": "clinical",
+          "target_entity": "clinical.encounters:enc-ab86ad6f",
+          "status": "COMMITTED",
+          "causation_depth": 0,
+          "sequence_number": 106,
+          "documents": []
+        },
+        {
+          "action_id": "act-rec-117adff0",
+          "event_id": "evt-eb89e39f0b",
+          "event_type": "CREATE_CLINICAL_ALERT_Executed",
+          "timestamp": "2026-01-01T08:47:00",
+          "producer_domain": "clinical",
+          "target_entity": "clinical.encounters:enc-ab86ad6f",
+          "status": "COMMITTED",
+          "causation_depth": 0,
+          "sequence_number": 107,
+          "documents": []
+        },
+        {
+          "action_id": "act-rec-467d3b1c",
+          "event_id": "evt-2b9d61b5a7",
+          "event_type": "CREATE_CLINICAL_ALERT_Executed",
+          "timestamp": "2026-01-01T08:47:00",
+          "producer_domain": "clinical",
+          "target_entity": "clinical.encounters:enc-ab86ad6f",
+          "status": "COMMITTED",
+          "causation_depth": 0,
+          "sequence_number": 108,
+          "documents": []
+        },
+        {
+          "action_id": "act-rec-2017880c",
+          "event_id": "evt-84260bd224",
+          "event_type": "CREATE_CLINICAL_ALERT_Executed",
+          "timestamp": "2026-01-01T08:47:00",
+          "producer_domain": "clinical",
+          "target_entity": "clinical.encounters:enc-ab86ad6f",
+          "status": "COMMITTED",
+          "causation_depth": 0,
+          "sequence_number": 109,
+          "documents": [
+            {
+              "document_id": "doc-bill-ab86ad6f",
+              "document_type": "Invoice",
+              "file_path": "C:\\AI\\synapse phase2\\output\\10_patients\\documents\\bills\\doc-bill-ab86ad6f.md"
+            },
+            {
+              "document_id": "doc-ds-ab86ad6f",
+              "document_type": "DischargeSummary",
+              "file_path": "C:\\AI\\synapse phase2\\output\\10_patients\\documents\\discharge_summaries\\doc-ds-ab86ad6f.md"
+            }
+          ]
+        }
+      ]
+    },
+    "pj-5517c659": {
+      "journey_id": "pj-5517c659",
+      "patient_id": "pat-9368d223",
+      "scenario_instance_id": "SCEN-V1-01-inst-9-a6744d",
+      "steps": [
+        {
+          "action_id": "act-4afb6a8f",
+          "event_id": "evt-1305e93284",
+          "event_type": "EncounterStarted",
+          "timestamp": "2026-01-01T08:40:00",
+          "producer_domain": "clinical",
+          "target_entity": "clinical.appointments:apt-a18c8e9c",
+          "status": "COMMITTED",
+          "causation_depth": 0,
+          "sequence_number": 85,
+          "documents": []
+        },
+        {
+          "action_id": "act-verify-8005778b",
+          "event_id": "evt-e1dc4f6af5",
+          "event_type": "VERIFY_PRESCRIPTION_Executed",
+          "timestamp": "2026-01-01T08:40:00",
+          "producer_domain": "pharmacy",
+          "target_entity": "pharmacy.prescriptions:rx-001",
+          "status": "COMMITTED",
+          "causation_depth": 1,
+          "sequence_number": 89,
+          "documents": []
+        },
+        {
+          "action_id": "act-dispense-acb103ad",
+          "event_id": "evt-d94d7eb144",
+          "event_type": "CONFIRM_MEDICINE_DISPENSE_Executed",
+          "timestamp": "2026-01-01T08:40:00",
+          "producer_domain": "pharmacy",
+          "target_entity": "pharmacy.prescriptions:rx-001",
+          "status": "COMMITTED",
+          "causation_depth": 1,
+          "sequence_number": 90,
+          "documents": []
+        },
+        {
+          "action_id": "act-a423138b",
+          "event_id": "evt-690c40c1e1",
+          "event_type": "PrescriptionVerified",
+          "timestamp": "2026-01-01T08:45:00",
+          "producer_domain": "pharmacy",
+          "target_entity": "pharmacy.prescriptions:rx-bf3eee40",
+          "status": "COMMITTED",
+          "causation_depth": 0,
+          "sequence_number": 96,
+          "documents": []
+        },
+        {
+          "action_id": "act-a5d3f488",
+          "event_id": "evt-d718da83a5",
+          "event_type": "VERIFY_PRESCRIPTION_Executed",
+          "timestamp": "2026-01-01T08:45:00",
+          "producer_domain": "pharmacy",
+          "target_entity": "pharmacy.prescriptions:rx-bf3eee40",
+          "status": "COMMITTED",
+          "causation_depth": 0,
+          "sequence_number": 100,
+          "documents": []
+        },
+        {
+          "action_id": "act-6abf5fb0",
+          "event_id": "evt-ea168a757c",
+          "event_type": "VERIFY_PRESCRIPTION_Executed",
+          "timestamp": "2026-01-01T08:45:00",
+          "producer_domain": "pharmacy",
+          "target_entity": "pharmacy.prescriptions:rx-bf3eee40",
+          "status": "COMMITTED",
+          "causation_depth": 0,
+          "sequence_number": 101,
+          "documents": []
+        },
+        {
+          "action_id": "act-dispense-5e804a6d",
+          "event_id": "evt-29e3df2447",
+          "event_type": "CONFIRM_MEDICINE_DISPENSE_Executed",
+          "timestamp": "2026-01-01T08:45:00",
+          "producer_domain": "pharmacy",
+          "target_entity": "pharmacy.prescriptions:rx-001",
+          "status": "COMMITTED",
+          "causation_depth": 1,
+          "sequence_number": 105,
+          "documents": []
+        },
+        {
+          "action_id": "act-ee56add6",
+          "event_id": "evt-1dae50577a",
+          "event_type": "MedicineDispensed",
+          "timestamp": "2026-01-01T08:50:00",
+          "producer_domain": "pharmacy",
+          "target_entity": "pharmacy.prescriptions:rx-bf3eee40",
+          "status": "COMMITTED",
+          "causation_depth": 0,
+          "sequence_number": 110,
+          "documents": [
+            {
+              "document_id": "doc-rx-bf3eee40",
+              "document_type": "Prescription",
+              "file_path": "C:\\AI\\synapse phase2\\output\\10_patients\\documents\\prescriptions\\doc-rx-bf3eee40.md"
+            }
+          ]
+        },
+        {
+          "action_id": "act-e9f0029e",
+          "event_id": "evt-004a608b31",
+          "event_type": "CONFIRM_MEDICINE_DISPENSE_Executed",
+          "timestamp": "2026-01-01T08:50:00",
+          "producer_domain": "pharmacy",
+          "target_entity": "pharmacy.prescriptions:rx-bf3eee40",
+          "status": "COMMITTED",
+          "causation_depth": 0,
+          "sequence_number": 111,
+          "documents": []
+        },
+        {
+          "action_id": "act-19402d4f",
+          "event_id": "evt-ee324cfffe",
+          "event_type": "CONFIRM_MEDICINE_DISPENSE_Executed",
+          "timestamp": "2026-01-01T08:50:00",
+          "producer_domain": "pharmacy",
+          "target_entity": "pharmacy.prescriptions:rx-bf3eee40",
+          "status": "COMMITTED",
+          "causation_depth": 0,
+          "sequence_number": 112,
+          "documents": []
+        },
+        {
+          "action_id": "act-776f5dbb",
+          "event_id": "evt-28429db58e",
+          "event_type": "CONFIRM_MEDICINE_DISPENSE_Executed",
+          "timestamp": "2026-01-01T08:50:00",
+          "producer_domain": "pharmacy",
+          "target_entity": "pharmacy.prescriptions:rx-bf3eee40",
+          "status": "COMMITTED",
+          "causation_depth": 0,
+          "sequence_number": 113,
+          "documents": []
+        },
+        {
+          "action_id": "act-fin-79f21bbf",
+          "event_id": "evt-0922785c78",
+          "event_type": "GENERATE_INVOICE_Executed",
+          "timestamp": "2026-01-01T08:50:00",
+          "producer_domain": "finance",
+          "target_entity": "finance.invoices:inv-001",
+          "status": "COMMITTED",
+          "causation_depth": 1,
+          "sequence_number": 114,
+          "documents": []
+        },
+        {
+          "action_id": "act-b19102fe",
+          "event_id": "evt-12043e9630",
+          "event_type": "GENERATE_INVOICE_Executed",
+          "timestamp": "2026-01-01T08:55:00",
+          "producer_domain": "finance",
+          "target_entity": "finance.invoices:ent-c184a502",
+          "status": "COMMITTED",
+          "causation_depth": 0,
+          "sequence_number": 118,
+          "documents": []
+        },
+        {
+          "action_id": "act-75ee78cc",
+          "event_id": "evt-8f1e64368c",
+          "event_type": "GENERATE_INVOICE_Executed",
+          "timestamp": "2026-01-01T08:55:00",
+          "producer_domain": "finance",
+          "target_entity": "finance.invoices:ent-57f49ae5",
+          "status": "COMMITTED",
+          "causation_depth": 0,
+          "sequence_number": 119,
+          "documents": []
+        },
+        {
+          "action_id": "act-7959e3ca",
+          "event_id": "evt-9b21bc1741",
+          "event_type": "GENERATE_INVOICE_Executed",
+          "timestamp": "2026-01-01T08:55:00",
+          "producer_domain": "finance",
+          "target_entity": "finance.invoices:ent-522046c8",
+          "status": "COMMITTED",
+          "causation_depth": 0,
+          "sequence_number": 120,
+          "documents": []
+        },
+        {
+          "action_id": "act-f713beba",
+          "event_id": "evt-2dc87f625a",
+          "event_type": "GENERATE_INVOICE_Executed",
+          "timestamp": "2026-01-01T08:55:00",
+          "producer_domain": "finance",
+          "target_entity": "finance.invoices:ent-e9a356ab",
+          "status": "COMMITTED",
+          "causation_depth": 0,
+          "sequence_number": 121,
+          "documents": []
+        },
+        {
+          "action_id": "act-781411ea",
+          "event_id": "evt-3923db27f2",
+          "event_type": "GENERATE_INVOICE_Executed",
+          "timestamp": "2026-01-01T08:55:00",
+          "producer_domain": "finance",
+          "target_entity": "finance.invoices:ent-bc98e917",
+          "status": "COMMITTED",
+          "causation_depth": 0,
+          "sequence_number": 122,
+          "documents": [
+            {
+              "document_id": "doc-bill-5517c659",
+              "document_type": "Invoice",
+              "file_path": "C:\\AI\\synapse phase2\\output\\10_patients\\documents\\bills\\doc-bill-5517c659.md"
+            },
+            {
+              "document_id": "doc-ds-5517c659",
+              "document_type": "DischargeSummary",
+              "file_path": "C:\\AI\\synapse phase2\\output\\10_patients\\documents\\discharge_summaries\\doc-ds-5517c659.md"
+            }
+          ]
+        }
+      ]
+    },
+    "pj-361ac248": {
+      "journey_id": "pj-361ac248",
+      "patient_id": "pat-3f532259",
+      "scenario_instance_id": "SCEN-V1-02-inst-10-235dbb",
+      "steps": [
+        {
+          "action_id": "act-90f3a02e",
+          "event_id": "evt-084cf40f96",
+          "event_type": "EncounterStarted",
+          "timestamp": "2026-01-01T08:45:00",
+          "producer_domain": "clinical",
+          "target_entity": "clinical.appointments:apt-d60b04a5",
+          "status": "COMMITTED",
+          "causation_depth": 0,
+          "sequence_number": 92,
+          "documents": []
+        },
+        {
+          "action_id": "act-verify-cc66cef5",
+          "event_id": "evt-f601abde58",
+          "event_type": "VERIFY_PRESCRIPTION_Executed",
+          "timestamp": "2026-01-01T08:45:00",
+          "producer_domain": "pharmacy",
+          "target_entity": "pharmacy.prescriptions:rx-001",
+          "status": "COMMITTED",
+          "causation_depth": 1,
+          "sequence_number": 103,
+          "documents": []
+        },
+        {
+          "action_id": "act-dispense-fcb4b402",
+          "event_id": "evt-fc24562d88",
+          "event_type": "CONFIRM_MEDICINE_DISPENSE_Executed",
+          "timestamp": "2026-01-01T08:45:00",
+          "producer_domain": "pharmacy",
+          "target_entity": "pharmacy.prescriptions:rx-001",
+          "status": "COMMITTED",
+          "causation_depth": 1,
+          "sequence_number": 104,
+          "documents": []
+        },
+        {
+          "action_id": "act-1ef68520",
+          "event_id": "evt-1ec0b3f734",
+          "event_type": "LabSampleCollected",
+          "timestamp": "2026-01-01T08:55:00",
+          "producer_domain": "laboratory",
+          "target_entity": "laboratory.laboratory_orders:lab-apt-d6",
+          "status": "COMMITTED",
+          "causation_depth": 0,
+          "sequence_number": 115,
+          "documents": [
+            {
+              "document_id": "doc-lab-apt-d6",
+              "document_type": "LabReport",
+              "file_path": "C:\\AI\\synapse phase2\\output\\10_patients\\documents\\lab_reports\\doc-lab-apt-d6.md"
+            }
+          ]
+        },
+        {
+          "action_id": "act-23ae32e3",
+          "event_id": "evt-1193d70d4c",
+          "event_type": "COLLECT_LAB_SAMPLE_Executed",
+          "timestamp": "2026-01-01T08:55:00",
+          "producer_domain": "laboratory",
+          "target_entity": "laboratory.laboratory_orders:lab-apt-d6",
+          "status": "COMMITTED",
+          "causation_depth": 0,
+          "sequence_number": 116,
+          "documents": []
+        },
+        {
+          "action_id": "act-61351a9b",
+          "event_id": "evt-20dd9bccb0",
+          "event_type": "COLLECT_LAB_SAMPLE_Executed",
+          "timestamp": "2026-01-01T08:55:00",
+          "producer_domain": "laboratory",
+          "target_entity": "laboratory.laboratory_orders:lab-apt-d6",
+          "status": "COMMITTED",
+          "causation_depth": 0,
+          "sequence_number": 117,
+          "documents": []
+        },
+        {
+          "action_id": "act-159b5a89",
+          "event_id": "evt-d9460455ff",
+          "event_type": "RadiologyImageAcquired",
+          "timestamp": "2026-01-01T09:05:00",
+          "producer_domain": "radiology",
+          "target_entity": "radiology.radiology_orders:rad-apt-d6",
+          "status": "COMMITTED",
+          "causation_depth": 0,
+          "sequence_number": 123,
+          "documents": [
+            {
+              "document_id": "doc-rad-apt-d6",
+              "document_type": "RadReport",
+              "file_path": "C:\\AI\\synapse phase2\\output\\10_patients\\documents\\rad_reports\\doc-rad-apt-d6.md"
+            }
+          ]
+        },
+        {
+          "action_id": "act-0433162d",
+          "event_id": "evt-00ccd2aa76",
+          "event_type": "ACQUIRE_RADIOLOGY_IMAGE_Executed",
+          "timestamp": "2026-01-01T09:05:00",
+          "producer_domain": "radiology",
+          "target_entity": "radiology.radiology_orders:rad-apt-d6",
+          "status": "COMMITTED",
+          "causation_depth": 0,
+          "sequence_number": 124,
+          "documents": []
+        },
+        {
+          "action_id": "act-9eda11ad",
+          "event_id": "evt-8bf4fa5cbe",
+          "event_type": "ACQUIRE_RADIOLOGY_IMAGE_Executed",
+          "timestamp": "2026-01-01T09:05:00",
+          "producer_domain": "radiology",
+          "target_entity": "radiology.radiology_orders:rad-apt-d6",
+          "status": "COMMITTED",
+          "causation_depth": 0,
+          "sequence_number": 125,
+          "documents": [
+            {
+              "document_id": "doc-bill-361ac248",
+              "document_type": "Invoice",
+              "file_path": "C:\\AI\\synapse phase2\\output\\10_patients\\documents\\bills\\doc-bill-361ac248.md"
+            },
+            {
+              "document_id": "doc-ds-361ac248",
+              "document_type": "DischargeSummary",
+              "file_path": "C:\\AI\\synapse phase2\\output\\10_patients\\documents\\discharge_summaries\\doc-ds-361ac248.md"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

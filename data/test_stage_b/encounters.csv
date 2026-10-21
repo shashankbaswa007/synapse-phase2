@@ -1,0 +1,11 @@
+encounter_id,patient_id,journey_id,doctor_id,start_time,end_time,status,chief_complaint
+enc-a4a014d0,pat-5c78cb6a,pj-a4a014d0,doc-001,2026-01-01T08:00:00,2026-01-01T08:15:00,Closed,Routine OPD Consultation
+enc-41c56d10,pat-0688affd,pj-41c56d10,doc-001,2026-01-01T08:05:00,2026-01-01T08:25:00,Closed,Routine OPD Consultation
+enc-e96f1881,pat-bb11e9ed,pj-e96f1881,doc-001,2026-01-01T08:10:00,2026-01-01T08:22:00,Closed,Routine OPD Consultation
+enc-b141fc32,pat-324df629,pj-b141fc32,doc-001,2026-01-01T08:15:00,2026-01-01T08:32:00,Closed,Routine OPD Consultation
+enc-38e3a95c,pat-37f21d46,pj-38e3a95c,doc-001,2026-01-01T08:20:00,2026-01-01T08:35:00,Closed,Routine OPD Consultation
+enc-3073365c,pat-3f1262b2,pj-3073365c,doc-001,2026-01-01T08:25:00,2026-01-01T08:45:00,Closed,Routine OPD Consultation
+enc-2703a847,pat-5a399525,pj-2703a847,doc-001,2026-01-01T08:30:00,2026-01-01T08:42:00,Closed,Routine OPD Consultation
+enc-8619fb98,pat-6db5a4b3,pj-8619fb98,doc-001,2026-01-01T08:35:00,2026-01-01T08:52:00,Closed,Routine OPD Consultation
+enc-775382e2,pat-d0581d2b,pj-775382e2,doc-001,2026-01-01T08:40:00,2026-01-01T08:55:00,Closed,Routine OPD Consultation
+enc-6f1cd0c9,pat-3852a6e9,pj-6f1cd0c9,doc-001,2026-01-01T08:45:00,2026-01-01T09:05:00,Closed,Routine OPD Consultation

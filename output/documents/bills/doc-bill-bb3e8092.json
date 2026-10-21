@@ -1,0 +1,28 @@
+{
+  "document_id": "doc-bill-bb3e8092",
+  "document_type": "Invoice",
+  "patient_id": "pat-69ee0c14",
+  "patient_journey_id": "pj-bb3e8092",
+  "scenario_id": "SCEN-V1-02",
+  "source_entity_table": "finance.invoices",
+  "source_entity_id": "inv-bb3e8092",
+  "source_action_id": "act-billing",
+  "source_event_id": "evt-6594e0c933",
+  "created_at": "2026-01-01 08:45:00",
+  "document_version": "1.0.0",
+  "document_status": "FINAL",
+  "file_path": "C:\\AI\\synapse phase2\\output\\documents\\bills\\doc-bill-bb3e8092.md",
+  "checksum": "6404021c23bbce456993258e56e8944034794542d34eec44607daf8a8ee43995",
+  "metadata_payload": {
+    "invoice_id": "inv-bb3e8092",
+    "line_items": [
+      {
+        "item": "Outpatient Consultation Fee",
+        "amount": 500.0,
+        "source": "Consultation"
+      }
+    ],
+    "total": 500.0,
+    "status": "Paid"
+  }
+}

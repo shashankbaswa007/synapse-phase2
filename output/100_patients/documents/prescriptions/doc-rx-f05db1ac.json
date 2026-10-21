@@ -1,0 +1,23 @@
+{
+  "document_id": "doc-rx-f05db1ac",
+  "document_type": "Prescription",
+  "patient_id": "pat-0b9f1452",
+  "patient_journey_id": "",
+  "scenario_id": "SCEN-V1-01",
+  "source_entity_table": "pharmacy.prescriptions",
+  "source_entity_id": "rx-f05db1ac",
+  "source_action_id": "act-consult",
+  "source_event_id": "evt-consult",
+  "created_at": "2026-09-01 10:42:49.479148",
+  "document_version": "1.0.0",
+  "document_status": "FINAL",
+  "file_path": "C:\\AI\\synapse phase2\\output\\100_patients\\documents\\prescriptions\\doc-rx-f05db1ac.md",
+  "checksum": "32c0b770d39150422856dfd8168162707178ebe8789247807d949fa7fca585e9",
+  "metadata_payload": {
+    "prescription_id": "rx-f05db1ac",
+    "patient_id": "pat-0b9f1452",
+    "drug_name": "Paracetamol",
+    "drug_class": "Analgesic",
+    "status": "Issued"
+  }
+}

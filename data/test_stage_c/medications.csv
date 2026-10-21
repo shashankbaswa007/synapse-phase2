@@ -1,0 +1,101 @@
+medication_id,patient_id,encounter_id,condition_id,drug_name,drug_class,dosage,frequency,source,evidence_ids,status
+rx-aabbb918,pat-084be401,enc-8ac6465d,cond-pat-084be401,Paracetamol,Analgesic,500mg,TDS,pubmed_evidence,31234510,Dispensed
+rx-b0b8d17f,pat-d6228b8f,enc-efb6511d,cond-pat-d6228b8f,Levofloxacin,Fluoroquinolone,500mg,OD,pubmed_evidence,31234506,Issued
+rx-472e5df8,pat-e83b8c15,enc-20335af7,cond-pat-e83b8c15,Ceftriaxone,Therapeutic_Agent,1 unit,OD,pubmed_evidence,31234506,Blocked_Safety_Hold
+rx-38d2a7d8,pat-192adfbe,enc-92f04794,cond-pat-192adfbe,Omeprazole,PPI,20mg,OD,pubmed_evidence,31234509,Verification_Passed
+rx-9c351ed4,pat-2d23608e,enc-8b841f40,cond-pat-2d23608e,Amoxicillin,Beta-Lactam,500mg,TDS,pubmed_evidence,31234513,Dispensed
+rx-d2ead3ea,pat-288d6805,enc-5c109cdf,cond-pat-288d6805,Paracetamol,Analgesic,500mg,TDS,pubmed_evidence,31234516,Issued
+rx-ce4865a8,pat-20f5bb9a,enc-3cc3ab91,cond-pat-20f5bb9a,Cephalexin,Beta-Lactam,500mg,QDS,pubmed_evidence,31234507,Blocked_Safety_Hold
+rx-07500d95,pat-f74243bf,enc-99041db1,cond-pat-f74243bf,Amoxicillin,Beta-Lactam,500mg,TDS,pubmed_evidence,31234513,Verification_Passed
+rx-c15b971f,pat-d12ad0df,enc-65a34c9f,cond-pat-d12ad0df,Hydrocortisone_Cream,Topical_Corticosteroid,1%,BD,pubmed_evidence,31234512,Dispensed
+rx-79eb9414,pat-e5ddf46b,enc-a9f85960,cond-pat-e5ddf46b,Diclofenac,NSAID,50mg,BD,pubmed_evidence,31234510,Issued
+rx-f3181529,pat-8f819a5d,enc-22d13a7f,cond-pat-8f819a5d,Ceftriaxone,Therapeutic_Agent,1 unit,OD,pubmed_evidence,31234506,Blocked_Safety_Hold
+rx-8df5ff10,pat-7a014dc8,enc-2afa2e8b,cond-pat-7a014dc8,Amoxicillin,Beta-Lactam,500mg,TDS,pubmed_evidence,31234513,Verification_Passed
+rx-beb8e3dd,pat-d9c7a148,enc-b99acb50,cond-pat-d9c7a148,Budesonide,Inhaled_Corticosteroid,200mcg,BD,pubmed_evidence,31234505,Dispensed
+rx-6768cb05,pat-2a733a36,enc-d30ab11a,cond-pat-2a733a36,Metformin,Biguanide,500mg,BD,pubmed_evidence,31234501;31234502,Issued
+rx-f86a7358,pat-fab6bd88,enc-a86a636c,cond-pat-fab6bd88,Amoxicillin,Beta-Lactam,500mg,TDS,pubmed_evidence,31234513,Blocked_Safety_Hold
+rx-729b261a,pat-211f192b,enc-d22c7c35,cond-pat-211f192b,Naproxen,NSAID,500mg,BD,pubmed_evidence,31234508,Verification_Passed
+rx-63aac153,pat-acea87f1,enc-6bdf341e,cond-pat-acea87f1,Ipratropium,Therapeutic_Agent,1 unit,OD,pubmed_evidence,31234505,Dispensed
+rx-77cff5b9,pat-3f81ef37,enc-0c600c4f,cond-pat-3f81ef37,Hydrocortisone_Cream,Topical_Corticosteroid,1%,BD,pubmed_evidence,31234512,Issued
+rx-694349ee,pat-0afe42f0,enc-55d7c45f,cond-pat-0afe42f0,Amoxicillin-Clavulanate,Therapeutic_Agent,1 unit,OD,pubmed_evidence,31234506,Blocked_Safety_Hold
+rx-40fa030b,pat-d2098200,enc-94f2a37b,cond-pat-d2098200,Paracetamol,Analgesic,500mg,TDS,pubmed_evidence,31234514,Verification_Passed
+rx-650a8776,pat-eb97af58,enc-b9e723e7,cond-pat-eb97af58,Ibuprofen,NSAID,400mg,TDS,pubmed_evidence,31234510,Dispensed
+rx-6269a9b4,pat-501b27df,enc-396ae89a,cond-pat-501b27df,Rosuvastatin,Statin,10mg,OD,pubmed_evidence,31234511,Issued
+rx-7337975e,pat-36c162e9,enc-dad3a563,cond-pat-36c162e9,Cephalexin,Beta-Lactam,500mg,QDS,pubmed_evidence,31234507,Blocked_Safety_Hold
+rx-6003e957,pat-e90e0a8b,enc-b18b1924,cond-pat-e90e0a8b,Paracetamol,Analgesic,500mg,TDS,pubmed_evidence,31234514,Verification_Passed
+rx-32fcd745,pat-f1a9fa08,enc-e15ced46,cond-pat-f1a9fa08,Azithromycin,Macrolide,500mg,OD,pubmed_evidence,31234506,Dispensed
+rx-3c51d616,pat-b2e1a365,enc-f1705586,cond-pat-b2e1a365,Paracetamol,Analgesic,500mg,TDS,pubmed_evidence,31234516,Issued
+rx-f600e737,pat-145310da,enc-ca18133e,cond-pat-145310da,Amoxicillin,Beta-Lactam,500mg,TDS,pubmed_evidence,31234513,Blocked_Safety_Hold
+rx-d5dc3299,pat-1aec23cb,enc-9682787f,cond-pat-1aec23cb,Sucralfate,Mucosal_Protectant,1g,BD,pubmed_evidence,31234509,Verification_Passed
+rx-0e51a62b,pat-d10b6ad3,enc-00679df3,cond-pat-d10b6ad3,Ibuprofen,NSAID,400mg,TDS,pubmed_evidence,31234517,Dispensed
+rx-08881221,pat-198d2654,enc-8301d846,cond-pat-198d2654,Levofloxacin,Fluoroquinolone,500mg,OD,pubmed_evidence,31234506,Issued
+rx-a8a98665,pat-e6b4a22b,enc-7e3e4f61,cond-pat-e6b4a22b,Cephalexin,Beta-Lactam,500mg,QDS,pubmed_evidence,31234507,Blocked_Safety_Hold
+rx-ab70c6c7,pat-cc5446ce,enc-b7fc8bf1,cond-pat-cc5446ce,Domperidone,Prokinetic,10mg,TDS,pubmed_evidence,31234509,Verification_Passed
+rx-88a40e21,pat-2fc3ff78,enc-786f6571,cond-pat-2fc3ff78,Paracetamol,Analgesic,500mg,TDS,pubmed_evidence,31234516,Dispensed
+rx-95566d46,pat-b3f0b3f3,enc-27d0c24f,cond-pat-b3f0b3f3,Sucralfate,Mucosal_Protectant,1g,BD,pubmed_evidence,31234509,Issued
+rx-2172eb27,pat-8be127ce,enc-74b10371,cond-pat-8be127ce,Amoxicillin-Clavulanate,Therapeutic_Agent,1 unit,OD,pubmed_evidence,31234506,Blocked_Safety_Hold
+rx-7878cc88,pat-a7512f92,enc-c9b48da5,cond-pat-a7512f92,Celecoxib,NSAID,200mg,BD,pubmed_evidence,31234510,Verification_Passed
+rx-5d146836,pat-1f00df3c,enc-2f86cd44,cond-pat-1f00df3c,Azithromycin,Macrolide,500mg,OD,pubmed_evidence,31234513,Dispensed
+rx-62273a23,pat-f9fc78ae,enc-559842af,cond-pat-f9fc78ae,Enalapril,Therapeutic_Agent,1 unit,OD,pubmed_evidence,31234503,Issued
+rx-7506d774,pat-17f014a4,enc-48865a4e,cond-pat-17f014a4,Amoxicillin,Beta-Lactam,500mg,TDS,pubmed_evidence,31234513,Blocked_Safety_Hold
+rx-dae9bf7b,pat-75f5c276,enc-28267b3d,cond-pat-75f5c276,Azithromycin,Macrolide,500mg,OD,pubmed_evidence,31234506,Verification_Passed
+rx-954e9378,pat-79b81daa,enc-23bcf3f0,cond-pat-79b81daa,Loratadine,Antihistamine,10mg,OD,pubmed_evidence,31234512,Dispensed
+rx-21c118f2,pat-d901b714,enc-deabf22d,cond-pat-d901b714,Hydrocortisone_Cream,Topical_Corticosteroid,1%,BD,pubmed_evidence,31234512,Issued
+rx-01bb642f,pat-56893331,enc-2cbe53ff,cond-pat-56893331,Cephalexin,Beta-Lactam,500mg,QDS,pubmed_evidence,31234507,Blocked_Safety_Hold
+rx-9f1d041c,pat-6c47ce7b,enc-5600cfdf,cond-pat-6c47ce7b,Ibuprofen,NSAID,400mg,TDS,pubmed_evidence,31234517,Verification_Passed
+rx-607d5b8c,pat-d7612eaf,enc-8e5cffcd,cond-pat-d7612eaf,Amoxicillin-Clavulanate,Therapeutic_Agent,1 unit,OD,pubmed_evidence,31234506,Dispensed
+rx-f566dd8a,pat-e09fb5ad,enc-e277075b,cond-pat-e09fb5ad,Omeprazole,PPI,20mg,OD,pubmed_evidence,31234509,Issued
+rx-1ef71f26,pat-a7491980,enc-617fa8a8,cond-pat-a7491980,Amoxicillin,Beta-Lactam,500mg,TDS,pubmed_evidence,31234513,Blocked_Safety_Hold
+rx-44d9ee61,pat-b0c1f16c,enc-9ef2297c,cond-pat-b0c1f16c,Omeprazole,PPI,20mg,OD,pubmed_evidence,31234509,Verification_Passed
+rx-2328484a,pat-404641b1,enc-d00e215c,cond-pat-404641b1,Amoxicillin,Beta-Lactam,500mg,TDS,pubmed_evidence,31234513,Dispensed
+rx-62c046a2,pat-fba53074,enc-26ac31b8,cond-pat-fba53074,Azithromycin,Macrolide,500mg,OD,pubmed_evidence,31234506,Issued
+rx-90e38e17,pat-b0c752d8,enc-31378f3b,cond-pat-b0c752d8,Amoxicillin,Beta-Lactam,500mg,TDS,pubmed_evidence,31234513,Blocked_Safety_Hold
+rx-82e4e511,pat-82a0d0cd,enc-7a17897f,cond-pat-82a0d0cd,Paracetamol,Analgesic,500mg,TDS,pubmed_evidence,31234514,Verification_Passed
+rx-42432af5,pat-a1caf569,enc-1e2a8b3b,cond-pat-a1caf569,Omeprazole,PPI,20mg,OD,pubmed_evidence,31234515,Dispensed
+rx-d1d56570,pat-5bb8b43b,enc-5639ede6,cond-pat-5bb8b43b,Paracetamol,Analgesic,500mg,TDS,pubmed_evidence,31234514,Issued
+rx-3b752906,pat-8dbc64c0,enc-48743e6d,cond-pat-8dbc64c0,Amoxicillin,Beta-Lactam,500mg,TDS,pubmed_evidence,31234513,Blocked_Safety_Hold
+rx-012ec99d,pat-5684f60b,enc-77fa54e6,cond-pat-5684f60b,Metformin,Biguanide,500mg,BD,pubmed_evidence,31234501;31234502,Verification_Passed
+rx-ca6a5e76,pat-d0ab2ad0,enc-45750c41,cond-pat-d0ab2ad0,Sucralfate,Mucosal_Protectant,1g,BD,pubmed_evidence,31234515,Dispensed
+rx-b07bce71,pat-4f5f6355,enc-1de784d3,cond-pat-4f5f6355,Paracetamol,Analgesic,500mg,TDS,pubmed_evidence,31234516,Issued
+rx-005a64b1,pat-ce40d467,enc-40a6008a,cond-pat-ce40d467,Cephalexin,Beta-Lactam,500mg,QDS,pubmed_evidence,31234507,Blocked_Safety_Hold
+rx-75c7fb85,pat-9c2e7f81,enc-3f68aab6,cond-pat-9c2e7f81,Paracetamol,Analgesic,500mg,TDS,pubmed_evidence,31234516,Verification_Passed
+rx-c050b43f,pat-0559c227,enc-857c186f,cond-pat-0559c227,Sucralfate,Mucosal_Protectant,1g,BD,pubmed_evidence,31234515,Dispensed
+rx-149c2e19,pat-0a2cbbf8,enc-990e852b,cond-pat-0a2cbbf8,Celecoxib,NSAID,200mg,BD,pubmed_evidence,31234510,Issued
+rx-8626bad0,pat-a1e63cef,enc-e535cba1,cond-pat-a1e63cef,Amoxicillin,Beta-Lactam,500mg,TDS,pubmed_evidence,31234513,Blocked_Safety_Hold
+rx-528f0fa7,pat-24f0d0c4,enc-046a4598,cond-pat-24f0d0c4,Azithromycin,Macrolide,500mg,OD,pubmed_evidence,31234506,Verification_Passed
+rx-f129c686,pat-6dc06496,enc-783a093f,cond-pat-6dc06496,Budesonide,Inhaled_Corticosteroid,200mcg,BD,pubmed_evidence,31234505,Dispensed
+rx-221cd084,pat-179608f7,enc-fceeb3fe,cond-pat-179608f7,Omeprazole,PPI,20mg,OD,pubmed_evidence,31234509,Issued
+rx-5282e9d0,pat-d21b5e0f,enc-f42f757e,cond-pat-d21b5e0f,Amoxicillin-Clavulanate,Therapeutic_Agent,1 unit,OD,pubmed_evidence,31234506,Blocked_Safety_Hold
+rx-d3f30625,pat-d18b7b2c,enc-9770d7bc,cond-pat-d18b7b2c,Ipratropium,Therapeutic_Agent,1 unit,OD,pubmed_evidence,31234505,Verification_Passed
+rx-a3206162,pat-fadbfb2c,enc-41460332,cond-pat-fadbfb2c,Paracetamol,Analgesic,500mg,TDS,pubmed_evidence,31234514,Dispensed
+rx-f53b52e0,pat-4f19662a,enc-4b115d6f,cond-pat-4f19662a,Atorvastatin,Statin,10mg,OD,pubmed_evidence,31234511,Issued
+rx-bb8650b7,pat-ee6bcd10,enc-00b2ac75,cond-pat-ee6bcd10,Cephalexin,Beta-Lactam,500mg,QDS,pubmed_evidence,31234507,Blocked_Safety_Hold
+rx-187bdd1e,pat-ec9bc4c3,enc-d03088c0,cond-pat-ec9bc4c3,Hydrocortisone_Cream,Topical_Corticosteroid,1%,BD,pubmed_evidence,31234512,Verification_Passed
+rx-5a0d714b,pat-9fd42c54,enc-cdde1219,cond-pat-9fd42c54,Omeprazole,PPI,20mg,OD,pubmed_evidence,31234515,Dispensed
+rx-3c07f75f,pat-d4b52fa2,enc-ade2c28e,cond-pat-d4b52fa2,Telmisartan,Therapeutic_Agent,1 unit,OD,pubmed_evidence,31234504,Issued
+rx-18ce6e08,pat-3a2ea4a0,enc-30c6eee4,cond-pat-3a2ea4a0,Amoxicillin,Beta-Lactam,500mg,TDS,pubmed_evidence,31234513,Blocked_Safety_Hold
+rx-d7726c24,pat-a23eaf81,enc-d7bd1960,cond-pat-a23eaf81,Paracetamol,Analgesic,500mg,TDS,pubmed_evidence,31234513,Verification_Passed
+rx-92820ffb,pat-7d3f1877,enc-c7d6f586,cond-pat-7d3f1877,Paracetamol,Analgesic,500mg,TDS,pubmed_evidence,31234516,Dispensed
+rx-17160783,pat-b718c32d,enc-a408951b,cond-pat-b718c32d,Paracetamol,Analgesic,500mg,TDS,pubmed_evidence,31234514,Issued
+rx-27fc09c1,pat-36a8de70,enc-d4ee2d16,cond-pat-36a8de70,Cephalexin,Beta-Lactam,500mg,QDS,pubmed_evidence,31234507,Blocked_Safety_Hold
+rx-1b2b7968,pat-79653c39,enc-558152c2,cond-pat-79653c39,Amoxicillin,Beta-Lactam,500mg,TDS,pubmed_evidence,31234513,Verification_Passed
+rx-490acc98,pat-cb379979,enc-ceccdd6d,cond-pat-cb379979,Amoxicillin,Beta-Lactam,500mg,TDS,pubmed_evidence,31234513,Dispensed
+rx-655c22f5,pat-cf70931f,enc-3844902b,cond-pat-cf70931f,Salbutamol,Beta2_Agonist,100mcg,PRN,pubmed_evidence,31234505,Issued
+rx-4218a483,pat-a2c5797d,enc-31ec1901,cond-pat-a2c5797d,Cephalexin,Beta-Lactam,500mg,QDS,pubmed_evidence,31234507,Blocked_Safety_Hold
+rx-7dbcc123,pat-29dc4248,enc-2868096e,cond-pat-29dc4248,Loratadine,Antihistamine,10mg,OD,pubmed_evidence,31234512,Verification_Passed
+rx-66e62e3e,pat-ff60e81e,enc-974426b6,cond-pat-ff60e81e,Amoxicillin,Beta-Lactam,500mg,TDS,pubmed_evidence,31234513,Dispensed
+rx-9f2e4d40,pat-b3650816,enc-cbc2f144,cond-pat-b3650816,Azithromycin,Macrolide,500mg,OD,pubmed_evidence,31234513,Issued
+rx-b7be2f3d,pat-4164a3bd,enc-c6b141ca,cond-pat-4164a3bd,Amoxicillin,Beta-Lactam,500mg,TDS,pubmed_evidence,31234513,Blocked_Safety_Hold
+rx-3c1b2a92,pat-a9025817,enc-6d2aca2e,cond-pat-a9025817,Paracetamol,Analgesic,500mg,TDS,pubmed_evidence,31234516,Verification_Passed
+rx-c316fa79,pat-d5454f43,enc-3e3c6c51,cond-pat-d5454f43,Paracetamol,Analgesic,500mg,TDS,pubmed_evidence,31234516,Dispensed
+rx-33795cca,pat-5fc42786,enc-591892d5,cond-pat-5fc42786,Azithromycin,Macrolide,500mg,OD,pubmed_evidence,31234513,Issued
+rx-0e6f245f,pat-47a1ad6f,enc-a64e87dc,cond-pat-47a1ad6f,Cephalexin,Beta-Lactam,500mg,QDS,pubmed_evidence,31234507,Blocked_Safety_Hold
+rx-bef60270,pat-3f5e397f,enc-27710b3f,cond-pat-3f5e397f,Paracetamol,Analgesic,500mg,TDS,pubmed_evidence,31234513,Verification_Passed
+rx-b781c193,pat-2b562e90,enc-3bf2d8a5,cond-pat-2b562e90,Amlodipine,Calcium_Channel_Blocker,5mg,OD,pubmed_evidence,31234503,Dispensed
+rx-81c45c0e,pat-cf0c5627,enc-60629986,cond-pat-cf0c5627,Sucralfate,Mucosal_Protectant,1g,BD,pubmed_evidence,31234515,Issued
+rx-836833a2,pat-302b187c,enc-8555703d,cond-pat-302b187c,Ceftriaxone,Therapeutic_Agent,1 unit,OD,pubmed_evidence,31234506,Blocked_Safety_Hold
+rx-06887df2,pat-824c06fa,enc-5a132b61,cond-pat-824c06fa,Paracetamol,Analgesic,500mg,TDS,pubmed_evidence,31234510,Verification_Passed
+rx-c2e97997,pat-6050fef8,enc-278952a7,cond-pat-6050fef8,Empagliflozin,SGLT2_Inhibitor,10mg,OD,pubmed_evidence,31234502,Dispensed
+rx-228ab4b1,pat-c2e13268,enc-b1ad8b70,cond-pat-c2e13268,Metformin,Biguanide,500mg,BD,pubmed_evidence,31234501;31234502,Issued
+rx-5d7e8d1e,pat-de599da2,enc-4a65f7e7,cond-pat-de599da2,Amoxicillin,Beta-Lactam,500mg,TDS,pubmed_evidence,31234513,Blocked_Safety_Hold
+rx-4250a8a5,pat-dd7b3253,enc-c170a8db,cond-pat-dd7b3253,Azithromycin,Macrolide,500mg,OD,pubmed_evidence,31234513,Verification_Passed

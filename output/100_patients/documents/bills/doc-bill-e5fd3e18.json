@@ -1,0 +1,38 @@
+{
+  "document_id": "doc-bill-e5fd3e18",
+  "document_type": "Invoice",
+  "patient_id": "pat-5d497755",
+  "patient_journey_id": "pj-e5fd3e18",
+  "scenario_id": "SCEN-V1-02",
+  "source_entity_table": "finance.invoices",
+  "source_entity_id": "inv-e5fd3e18",
+  "source_action_id": "act-billing",
+  "source_event_id": "evt-a802e92686",
+  "created_at": "2026-01-01 10:25:00",
+  "document_version": "1.0.0",
+  "document_status": "FINAL",
+  "file_path": "C:\\AI\\synapse phase2\\output\\100_patients\\documents\\bills\\doc-bill-e5fd3e18.md",
+  "checksum": "3a72d647ffb40821e4e43f72a7606abda2de2e7099ccc6685c2c7196822139c5",
+  "metadata_payload": {
+    "invoice_id": "inv-e5fd3e18",
+    "line_items": [
+      {
+        "item": "Outpatient Consultation Fee",
+        "amount": 500.0,
+        "source": "Consultation"
+      },
+      {
+        "item": "Laboratory Pathology Test Fee",
+        "amount": 350.0,
+        "source": "evt-b22efde6fb"
+      },
+      {
+        "item": "Radiology Imaging Chest X-Ray",
+        "amount": 800.0,
+        "source": "evt-f16321afe0"
+      }
+    ],
+    "total": 1650.0,
+    "status": "Paid"
+  }
+}

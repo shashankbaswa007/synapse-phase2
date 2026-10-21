@@ -1,0 +1,23 @@
+{
+  "document_id": "doc-rx-99912e46",
+  "document_type": "Prescription",
+  "patient_id": "pat-57d67520",
+  "patient_journey_id": "pj-5aeeda9f",
+  "scenario_id": "SCEN-V1-01",
+  "source_entity_table": "pharmacy.prescriptions",
+  "source_entity_id": "rx-99912e46",
+  "source_action_id": "act-8bbb00cc",
+  "source_event_id": "evt-5955347d95",
+  "created_at": "2026-01-01 09:20:00",
+  "document_version": "1.0.0",
+  "document_status": "FINAL",
+  "file_path": "C:\\AI\\synapse phase2\\output\\phase2\\documents\\prescriptions\\doc-rx-99912e46.md",
+  "checksum": "ee9b98b7e3091598dac8853c948c3e52fa1dbd8195be4cb016309fe77330eff9",
+  "metadata_payload": {
+    "prescription_id": "rx-99912e46",
+    "patient_id": "pat-57d67520",
+    "drug_name": "Ibuprofen",
+    "drug_class": "NSAID",
+    "status": "Verification_Passed"
+  }
+}

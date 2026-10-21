@@ -1,0 +1,6 @@
+department_id,department_name,type,status
+DEPT-CLIN,,clinical,Active
+DEPT-PHARM,,pharmacy,Active
+DEPT-LAB,,laboratory,Active
+DEPT-RAD,,radiology,Active
+DEPT-FIN,,finance,Active

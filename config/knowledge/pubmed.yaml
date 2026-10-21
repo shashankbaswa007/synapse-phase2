@@ -1,0 +1,119 @@
+# ==============================================================================
+# SYNAPSE PubMed Biomedical Knowledge Integration Configuration
+# ==============================================================================
+
+enabled: true
+offline_mode: false
+cache_dir: "data/knowledge/pubmed/cache"
+store_dir: "data/knowledge/pubmed"
+max_results_per_query: 5
+publication_year_min: 2015
+publication_year_max: 2026
+rate_limit_delay_seconds: 0.35  # NCBI rate limit: max 3 requests/sec without API key
+
+# Controlled clinical queries for evidence retrieval
+target_queries:
+  - id: "Q-DIAB"
+    topic: "Type 2 Diabetes"
+    disease_code: "E11.9"
+    disease_name: "Type 2 diabetes mellitus"
+    search_term: "Type 2 diabetes mellitus oral hypoglycemic treatment metformin glimepiride"
+    category: "metabolic"
+
+  - id: "Q-HTN"
+    topic: "Essential Hypertension"
+    disease_code: "I10"
+    disease_name: "Essential hypertension"
+    search_term: "Essential hypertension antihypertensive therapy amlodipine losartan metoprolol"
+    category: "cardiovascular"
+
+  - id: "Q-ASTH"
+    topic: "Asthma"
+    disease_code: "J45.9"
+    disease_name: "Asthma"
+    search_term: "Asthma bronchodilator inhaled corticosteroid salbutamol budesonide montelukast"
+    category: "respiratory"
+
+  - id: "Q-PNEUM"
+    topic: "Pneumonia"
+    disease_code: "J18.9"
+    disease_name: "Pneumonia"
+    search_term: "Community acquired pneumonia antibiotic treatment amoxicillin azithromycin levofloxacin"
+    category: "respiratory"
+
+  - id: "Q-UTI"
+    topic: "Urinary Tract Infection"
+    disease_code: "N39.0"
+    disease_name: "Urinary tract infection"
+    search_term: "Urinary tract infection antibiotic nitrofurantoin ciprofloxacin cephalexin"
+    category: "genitourinary"
+
+  - id: "Q-MIG"
+    topic: "Migraine"
+    disease_code: "G43.9"
+    disease_name: "Migraine"
+    search_term: "Migraine treatment triptan sumatriptan nsaid ibuprofen"
+    category: "neurological"
+
+  - id: "Q-GERD"
+    topic: "Gastro-esophageal Reflux Disease"
+    disease_code: "K21.0"
+    disease_name: "Gastro-esophageal reflux disease"
+    search_term: "Gastroesophageal reflux disease proton pump inhibitor omeprazole pantoprazole"
+    category: "gastrointestinal"
+
+  - id: "Q-OA"
+    topic: "Osteoarthritis / Musculoskeletal Pain"
+    disease_code: "M54.5"
+    disease_name: "Low back pain / Osteoarthritis"
+    search_term: "Osteoarthritis low back pain analgesics ibuprofen diclofenac paracetamol"
+    category: "musculoskeletal"
+
+  - id: "Q-HLIP"
+    topic: "Hyperlipidemia"
+    disease_code: "E78.5"
+    disease_name: "Hyperlipidemia"
+    search_term: "Hyperlipidemia statin therapy atorvastatin rosuvastatin lipid lowering"
+    category: "metabolic"
+
+  - id: "Q-DERM"
+    topic: "Allergic Dermatitis"
+    disease_code: "L30.9"
+    disease_name: "Dermatitis"
+    search_term: "Atopic dermatitis allergic skin rash cetirizine hydrocortisone loratadine"
+    category: "dermatological"
+
+  - id: "Q-URI"
+    topic: "Acute Upper Respiratory Infection"
+    disease_code: "J06.9"
+    disease_name: "Acute upper respiratory infection"
+    search_term: "Acute upper respiratory infection symptomatic therapy paracetamol amoxicillin"
+    category: "respiratory"
+
+  - id: "Q-VIRAL"
+    topic: "Viral Infection"
+    disease_code: "B34.9"
+    disease_name: "Viral infection, unspecified"
+    search_term: "Viral infection supportive care antipyretic paracetamol hydration"
+    category: "infectious"
+
+  - id: "Q-GASTR"
+    topic: "Gastritis"
+    disease_code: "K29.7"
+    disease_name: "Gastritis, unspecified"
+    search_term: "Gastritis proton pump inhibitor omeprazole sucralfate mucosal protection"
+    category: "gastrointestinal"
+
+  - id: "Q-FEVER"
+    topic: "Fever"
+    disease_code: "R50.9"
+    disease_name: "Fever, unspecified"
+    search_term: "Fever antipyretic paracetamol acetaminophen treatment"
+    category: "general"
+
+  - id: "Q-PANN"
+    topic: "Panniculitis / Musculoskeletal Pain"
+    disease_code: "M79.3"
+    disease_name: "Panniculitis, unspecified"
+    search_term: "Panniculitis musculoskeletal inflammation nsaid ibuprofen paracetamol"
+    category: "musculoskeletal"

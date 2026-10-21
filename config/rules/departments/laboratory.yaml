@@ -1,0 +1,107 @@
+# Laboratory Department Rules
+# RULE-STATE-LAB-010: Allow sample collection when Ordered
+# RULE-STATE-LAB-011: Block sample collection when NOT Ordered
+# RULE-STATE-LAB-020: Allow result completion when Sample-Collected
+# RULE-STATE-LAB-021: Block result completion when NOT Sample-Collected
+
+- rule_id: "RULE-STATE-LAB-010"
+  name: "Lab Sample Collection State Transition"
+  category: "WORKFLOW_SEQUENCE"
+  description: "Successful collection of lab sample transitions order to Sample-Collected."
+  source_type: "INTERNAL_DESIGN"
+  priority: 60
+  precedence_level: 60
+  version: "1.0.0"
+  scenarios: ["SCEN-V1-01", "SCEN-V1-02", "SCEN-V1-03", "SCEN-V1-04"]
+  departments: ["laboratory"]
+  entities_affected: ["laboratory.laboratory_orders"]
+  preconditions:
+    action_type: "COLLECT_LAB_SAMPLE"
+    required_context_keys: ["entity_state.status"]
+  conditions:
+    all_of:
+      - "context.entity_state.status EQUALS 'Ordered'"
+  allowed_actions: ["COLLECT_LAB_SAMPLE"]
+  blocked_actions: []
+  state_transitions:
+    - target_entity: "laboratory.laboratory_orders"
+      target_field: "status"
+      new_value: "Sample-Collected"
+  cross_department_effects: []
+  events_generated: ["LabSampleCollected"]
+  documents_triggered: ["LabReport"]
+
+- rule_id: "RULE-STATE-LAB-011"
+  name: "Block Lab Sample Collection When Not Ordered"
+  category: "WORKFLOW_SEQUENCE"
+  description: "Blocks sample collection if lab order is not in Ordered state."
+  source_type: "INTERNAL_DESIGN"
+  priority: 70
+  precedence_level: 60
+  version: "1.0.0"
+  scenarios: ["SCEN-V1-01", "SCEN-V1-02", "SCEN-V1-03", "SCEN-V1-04"]
+  departments: ["laboratory"]
+  entities_affected: ["laboratory.laboratory_orders"]
+  preconditions:
+    action_type: "COLLECT_LAB_SAMPLE"
+    required_context_keys: ["entity_state.status"]
+  conditions:
+    none_of:
+      - "context.entity_state.status EQUALS 'Ordered'"
+  allowed_actions: []
+  blocked_actions: ["COLLECT_LAB_SAMPLE"]
+  state_transitions: []
+  cross_department_effects: []
+  events_generated: ["LabSampleCollectionBlocked"]
+  documents_triggered: []
+
+- rule_id: "RULE-STATE-LAB-020"
+  name: "Lab Result Completion State Transition"
+  category: "WORKFLOW_SEQUENCE"
+  description: "Completes lab order after sample has been collected and results processed."
+  source_type: "INTERNAL_DESIGN"
+  priority: 60
+  precedence_level: 60
+  version: "1.0.0"
+  scenarios: ["SCEN-V1-01", "SCEN-V1-02", "SCEN-V1-03", "SCEN-V1-04"]
+  departments: ["laboratory"]
+  entities_affected: ["laboratory.laboratory_orders"]
+  preconditions:
+    action_type: "COMPLETE_LAB_RESULT"
+    required_context_keys: ["entity_state.status"]
+  conditions:
+    all_of:
+      - "context.entity_state.status EQUALS 'Sample-Collected'"
+  allowed_actions: ["COMPLETE_LAB_RESULT"]
+  blocked_actions: []
+  state_transitions:
+    - target_entity: "laboratory.laboratory_orders"
+      target_field: "status"
+      new_value: "Completed"
+  cross_department_effects: []
+  events_generated: ["LabResultCompleted"]
+  documents_triggered: ["LabResultReport"]
+
+- rule_id: "RULE-STATE-LAB-021"
+  name: "Block Lab Result Completion When Not Sample-Collected"
+  category: "WORKFLOW_SEQUENCE"
+  description: "Blocks lab result completion if sample has not been collected yet."
+  source_type: "INTERNAL_DESIGN"
+  priority: 70
+  precedence_level: 60
+  version: "1.0.0"
+  scenarios: ["SCEN-V1-01", "SCEN-V1-02", "SCEN-V1-03", "SCEN-V1-04"]
+  departments: ["laboratory"]
+  entities_affected: ["laboratory.laboratory_orders"]
+  preconditions:
+    action_type: "COMPLETE_LAB_RESULT"
+    required_context_keys: ["entity_state.status"]
+  conditions:
+    none_of:
+      - "context.entity_state.status EQUALS 'Sample-Collected'"
+  allowed_actions: []
+  blocked_actions: ["COMPLETE_LAB_RESULT"]
+  state_transitions: []
+  cross_department_effects: []
+  events_generated: ["LabResultCompletionBlocked"]
+  documents_triggered: []

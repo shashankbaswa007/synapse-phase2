@@ -1,0 +1,23 @@
+@startuml department_workflows
+title Sequence 7: Cross-Department Workflow Coordination
+
+participant Clin as "ClinicalDepartment"
+participant Coord as "WorkflowCoordinator"
+participant Disp as "EventDispatcher"
+participant Pharm as "PharmacyDepartment"
+participant Lab as "LaboratoryDepartment"
+participant Fin as "FinanceDepartment"
+
+Clin -> Coord : on_domain_event(EncounterStarted)
+Coord -> Disp : dispatch(PrescriptionIssued)
+Disp -> Pharm : handle_event(PrescriptionIssued)
+Pharm --> Disp : [ActionRequest: VERIFY_PRESCRIPTION]
+
+Coord -> Disp : dispatch(LabOrderCreated)
+Disp -> Lab : handle_event(LabOrderCreated)
+Lab --> Disp : [ActionRequest: COLLECT_LAB_SAMPLE]
+
+Coord -> Disp : dispatch(MedicineDispensed)
+Disp -> Fin : handle_event(MedicineDispensed)
+Fin --> Disp : [ActionRequest: ADD_INVOICE_LINE_ITEM]
+@enduml

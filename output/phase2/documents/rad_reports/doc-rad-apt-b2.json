@@ -1,0 +1,28 @@
+{
+  "document_id": "doc-rad-apt-b2",
+  "document_type": "RadReport",
+  "patient_id": "pat-9b68d389",
+  "patient_journey_id": "pj-9e9d3bfc",
+  "scenario_id": "SCEN-V1-01",
+  "source_entity_table": "radiology.radiology_orders",
+  "source_entity_id": "rad-apt-b2",
+  "source_action_id": "act-35280ed9",
+  "source_event_id": "evt-0f2cba8b74",
+  "created_at": "2026-01-01 08:45:00",
+  "document_version": "1.0.0",
+  "document_status": "FINAL",
+  "file_path": "C:\\AI\\synapse phase2\\output\\phase2\\documents\\rad_reports\\doc-rad-apt-b2.md",
+  "checksum": "4619d642a9a2671b8aed10a83a162db1562693b0f50a06ff7eef810ce51dcd36",
+  "metadata_payload": {
+    "patient_id": "pat-9b68d389",
+    "journey_id": "pj-9e9d3bfc",
+    "step_id": "step_rad_order",
+    "patient.patients": "pat-9b68d389",
+    "clinical.appointments": "apt-b243ad71",
+    "clinical.encounters": "enc-9e9d3bfc",
+    "pharmacy.prescriptions": "rx-cad408d4",
+    "pharmacy.inventory_batches": "batch-78bbd086",
+    "laboratory.laboratory_orders": "lab-apt-b2",
+    "radiology.radiology_orders": "rad-apt-b2"
+  }
+}

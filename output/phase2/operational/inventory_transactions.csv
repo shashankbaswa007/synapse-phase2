@@ -1,0 +1,16 @@
+transaction_id,batch_id,patient_id,event_id,quantity_change,transaction_type,timestamp
+itx-evt-9a638e7633,batch-65d4a259,pat-47d399ee,evt-9a638e7633,-1,Dispensation,2026-01-01 08:10:00
+itx-evt-394ad74ba7,batch-765ab020,pat-d089dbdf,evt-394ad74ba7,-1,Dispensation,2026-01-01 08:30:00
+itx-evt-2f6f3add1f,batch-f63ed8a7,pat-a06f4a36,evt-2f6f3add1f,-1,Dispensation,2026-01-01 08:50:00
+itx-evt-c725e3756b,batch-1b46a8ff,pat-c3cc4a9e,evt-c725e3756b,-1,Dispensation,2026-01-01 09:10:00
+itx-evt-16b7c9c995,batch-efd2acce,pat-a473ac91,evt-16b7c9c995,-1,Dispensation,2026-01-01 09:30:00
+itx-evt-b182e282f9,batch-97675678,pat-eb396e94,evt-b182e282f9,-1,Dispensation,2026-01-01 09:50:00
+itx-evt-c1a004caa7,batch-a304db50,pat-60e7e9f1,evt-c1a004caa7,-1,Dispensation,2026-01-01 10:10:00
+itx-evt-b6b33c46f0,batch-886a9f13,pat-2ecd928c,evt-b6b33c46f0,-1,Dispensation,2026-01-01 10:30:00
+itx-evt-a76bcaefde,batch-ebc92599,pat-03353559,evt-a76bcaefde,-1,Dispensation,2026-01-01 10:50:00
+itx-evt-2b82cbfee7,batch-a22999a5,pat-0f6b61fa,evt-2b82cbfee7,-1,Dispensation,2026-01-01 11:10:00
+itx-evt-5c24155929,batch-ea47bd36,pat-a547822b,evt-5c24155929,-1,Dispensation,2026-01-01 11:30:00
+itx-evt-20461129f0,batch-9121c63c,pat-aa30d085,evt-20461129f0,-1,Dispensation,2026-01-01 11:50:00
+itx-evt-9b8b74f88b,batch-fcecc7d8,pat-dd38dbd1,evt-9b8b74f88b,-1,Dispensation,2026-01-01 12:10:00
+itx-evt-eab3e6b8ab,batch-00402ecd,pat-32c2c183,evt-eab3e6b8ab,-1,Dispensation,2026-01-01 12:30:00
+itx-evt-afd2972fbc,batch-d651badd,pat-89088ec5,evt-afd2972fbc,-1,Dispensation,2026-01-01 12:50:00

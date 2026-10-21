@@ -1,0 +1,33 @@
+@startuml module_dependencies
+title SYNAPSE Phase 2 - Subsystem Dependency Graph
+
+[generator] ..> [core]
+[generator] ..> [state]
+[generator] ..> [rules]
+[generator] ..> [knowledge]
+[generator] ..> [departments]
+[generator] ..> [workflows]
+[generator] ..> [datagen]
+
+[core] ..> [state]
+[core] ..> [engine]
+
+[engine] ..> [state]
+[engine] ..> [rules]
+
+[state] ..> [transitions]
+
+[departments] ..> [core]
+[departments] ..> [state]
+[departments] ..> [datagen]
+
+[knowledge] ..> [knowledge.pubmed]
+[datagen] ..> [knowledge]
+
+[exporter] ..> [state]
+[exporter] ..> [datagen]
+
+[validation] ..> [state]
+[validation] ..> [exporter]
+
+@enduml

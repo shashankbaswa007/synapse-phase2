@@ -1,0 +1,21 @@
+room_id,room_name,department_id,floor,room_type
+OPD-001,Outpatient Clinical Services Room 1,DEPT-CLIN,1,consultation
+OPD-002,Outpatient Clinical Services Room 2,DEPT-CLIN,1,consultation
+OPD-003,Outpatient Clinical Services Room 3,DEPT-CLIN,1,consultation
+OPD-004,Outpatient Clinical Services Room 4,DEPT-CLIN,1,consultation
+OPD-005,Outpatient Clinical Services Room 5,DEPT-CLIN,1,consultation
+OPD-006,Outpatient Clinical Services Room 6,DEPT-CLIN,1,consultation
+OPD-007,Outpatient Clinical Services Room 7,DEPT-CLIN,1,consultation
+OPD-008,Outpatient Clinical Services Room 8,DEPT-CLIN,1,consultation
+OPD-009,Outpatient Clinical Services Room 9,DEPT-CLIN,1,consultation
+OPD-010,Outpatient Clinical Services Room 10,DEPT-CLIN,1,consultation
+PHR-001,Pharmacy Room 1,DEPT-PHARM,0,pharmacy
+PHR-002,Pharmacy Room 2,DEPT-PHARM,0,pharmacy
+LAB-001,Pathology Laboratory Room 1,DEPT-LAB,-1,laboratory
+LAB-002,Pathology Laboratory Room 2,DEPT-LAB,-1,laboratory
+LAB-003,Pathology Laboratory Room 3,DEPT-LAB,-1,laboratory
+RAD-001,Radiology & Imaging Room 1,DEPT-RAD,-1,radiology
+RAD-002,Radiology & Imaging Room 2,DEPT-RAD,-1,radiology
+RAD-003,Radiology & Imaging Room 3,DEPT-RAD,-1,radiology
+FIN-001,Finance & Billing Room 1,DEPT-FIN,0,finance
+FIN-002,Finance & Billing Room 2,DEPT-FIN,0,finance

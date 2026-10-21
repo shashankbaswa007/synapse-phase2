@@ -1,0 +1,37 @@
+@startuml simulation_engine
+title SYNAPSE Phase 2 - Simulation Engine Core Loop
+
+class SimulationEngine {
+    - clock: SimulationClock
+    - scheduler: FutureActionScheduler
+    - event_queue: EventQueue
+    - dispatcher: EventDispatcher
+    - state_manager: StateManager
+    - pipeline: ExecutionPipeline
+    - committed_events: List[DomainEvent]
+    - trace_log: List[dict]
+    + step(): bool
+    + run_until(until_time, max_events): List[DomainEvent]
+    - _process_simulation_event(SimulationEvent)
+    - _process_scheduled_action(ScheduledFutureAction): Tuple[ExecutionResult, DomainEvent]
+}
+
+class ExecutionPipeline {
+    - state_manager: StateManager
+    - rule_engine: RuleEngine
+    + execute_action(action, simulated_timestamp, scenario_id, department_id, patient_id, causation_depth): ExecutionResult
+}
+
+class ExecutionResult {
+    + success: bool
+    + context: InputContext
+    + decision: DecisionResult
+    + state_applied: bool
+    + causation_depth: int
+    + emitted_events: List[OutboxEventProposal]
+}
+
+SimulationEngine --> ExecutionPipeline
+ExecutionPipeline ..> ExecutionResult
+
+@enduml

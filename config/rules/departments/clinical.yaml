@@ -1,0 +1,27 @@
+- rule_id: "RULE-WORK-OPD-010"
+  name: "OPD Check-in Prerequisite for Consultation"
+  category: "WORKFLOW_SEQUENCE"
+  description: "Requires patient appointment status to be Checked-In before doctor consultation can begin."
+  source_type: "INTERNAL_DESIGN"
+  source_reference: "Stage 2 Internal Rule Spec / Level 3 Workflow Rule"
+  priority: 60
+  precedence_level: 60
+  version: "1.0.0"
+  scenarios: ["SCEN-V1-01", "SCEN-V1-02", "SCEN-V1-03", "SCEN-V1-04"]
+  departments: ["clinical"]
+  entities_affected: ["clinical.appointments"]
+  preconditions:
+    action_type: "START_DOCTOR_CONSULTATION"
+    required_context_keys: ["entity_state.status"]
+  conditions:
+    all_of:
+      - "context.entity_state.status EQUALS 'Checked-In'"
+  allowed_actions: ["START_DOCTOR_CONSULTATION"]
+  blocked_actions: []
+  state_transitions:
+    - target_entity: "clinical.appointments"
+      target_field: "status"
+      new_value: "In-Consult"
+  cross_department_effects: []
+  events_generated: ["EncounterStarted"]
+  documents_triggered: ["Consultation Note"]

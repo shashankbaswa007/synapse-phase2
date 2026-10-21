@@ -1,0 +1,79 @@
+@startuml repository_overview
+title SYNAPSE Phase 2 - System Architecture Overview
+
+skinparam packageStyle rectangle
+skinparam componentStyle uml2
+
+package "Application Entrypoints" {
+    [generate_synthetic_data.py] as CLI
+    [HospitalSimulator] as Facade
+}
+
+package "Core Discrete Simulation" {
+    [SimulationEngine] as SimEngine
+    [SimulationClock] as Clock
+    [FutureActionScheduler] as Scheduler
+    [EventQueue] as EventQ
+    [EventDispatcher] as Dispatcher
+}
+
+package "Orchestration & State Machine" {
+    [ExecutionPipeline] as Pipeline
+    [StateManager] as StateMgr
+    [TransitionManager] as TransMgr
+    [WorkflowCoordinator] as Coordinator
+}
+
+package "Rule & Cognitive Layer" {
+    [RuleEngine] as RuleEng
+    [RuleRepository] as RuleRepo
+    [MedicalKnowledgeBase] as MedKB
+    [PubMedKnowledgeManager] as PubMedMgr
+}
+
+package "Department Handlers" {
+    [ClinicalDepartmentHandler] as ClinDept
+    [PharmacyDepartmentHandler] as PharmDept
+    [LaboratoryDepartmentHandler] as LabDept
+    [RadiologyDepartmentHandler] as RadDept
+    [FinanceDepartmentHandler] as FinDept
+}
+
+package "Synthetic Data Generators" {
+    [MasterDataGenerator] as MasterGen
+    [PatientProfileGenerator] as PatGen
+    [ClinicalEntityGenerator] as ClinGen
+    [DiagnosticGenerator] as DiagGen
+    [BillingGenerator] as BillGen
+}
+
+package "Persistence & Validation" {
+    [CSVExporter] as Exporter
+    [IntegrityAuditor] as Auditor
+    [DatasetAuditor] as DataAuditor
+}
+
+CLI --> Facade
+Facade --> SimEngine
+Facade --> MedKB
+Facade --> Coordinator
+SimEngine --> Clock
+SimEngine --> Scheduler
+SimEngine --> EventQ
+SimEngine --> Dispatcher
+SimEngine --> Pipeline
+Pipeline --> StateMgr
+Pipeline --> RuleEng
+RuleEng --> RuleRepo
+StateMgr --> TransMgr
+Dispatcher --> ClinDept
+Dispatcher --> PharmDept
+Dispatcher --> LabDept
+Dispatcher --> RadDept
+Dispatcher --> FinDept
+MedKB --> PubMedMgr
+Exporter --> StateMgr
+Auditor --> StateMgr
+DataAuditor --> Exporter
+
+@enduml

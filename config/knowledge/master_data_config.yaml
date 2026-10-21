@@ -1,0 +1,631 @@
+# ==============================================================================
+# SYNAPSE V1 — Master Data Configuration
+# ==============================================================================
+# Hospital reference data: departments, staff, rooms, initial inventory.
+# Generated ONCE per simulation run before patient journeys begin.
+# ==============================================================================
+
+departments:
+  - id: "DEPT-CLIN"
+    name: "Outpatient Clinical Services"
+    type: "clinical"
+    floor: 1
+    rooms:
+      count: 10
+      prefix: "OPD"
+    staff:
+      doctors: 5
+      nurses: 8
+
+  - id: "DEPT-PHARM"
+    name: "Pharmacy"
+    type: "pharmacy"
+    floor: 0
+    rooms:
+      count: 2
+      prefix: "PHR"
+    staff:
+      pharmacists: 3
+      pharmacy_technicians: 2
+
+  - id: "DEPT-LAB"
+    name: "Pathology Laboratory"
+    type: "laboratory"
+    floor: -1
+    rooms:
+      count: 3
+      prefix: "LAB"
+    staff:
+      pathologists: 2
+      lab_technicians: 4
+
+  - id: "DEPT-RAD"
+    name: "Radiology & Imaging"
+    type: "radiology"
+    floor: -1
+    rooms:
+      count: 3
+      prefix: "RAD"
+    staff:
+      radiologists: 2
+      rad_technicians: 3
+
+  - id: "DEPT-FIN"
+    name: "Finance & Billing"
+    type: "finance"
+    floor: 0
+    rooms:
+      count: 2
+      prefix: "FIN"
+    staff:
+      billing_clerks: 3
+
+specializations:
+  - "General Medicine"
+  - "Internal Medicine"
+  - "Pediatrics"
+  - "Orthopedics"
+  - "Pulmonology"
+
+# Initial pharmacy inventory batches
+# Each batch is a single drug type with an initial stock quantity
+# Initial pharmacy inventory batches
+# Each batch is a single drug type with initial stock quantity and full drug metadata
+initial_inventory:
+  - drug_name: "Paracetamol"
+    drug_class: "Analgesic"
+    category: "analgesics"
+    therapeutic_class: "Analgesic / Antipyretic"
+    dosage_form: "Tablet"
+    strength: "500mg"
+    stock_unit: "tablet"
+    batch_quantity: 1000
+    unit_cost: 2.50
+    expiry_months: 24
+
+  - drug_name: "Amoxicillin"
+    drug_class: "Beta-Lactam"
+    category: "antibiotics"
+    therapeutic_class: "Penicillin Antibiotic"
+    dosage_form: "Capsule"
+    strength: "500mg"
+    stock_unit: "capsule"
+    batch_quantity: 600
+    unit_cost: 8.00
+    expiry_months: 18
+
+  - drug_name: "Azithromycin"
+    drug_class: "Macrolide"
+    category: "antibiotics"
+    therapeutic_class: "Macrolide Antibiotic"
+    dosage_form: "Tablet"
+    strength: "500mg"
+    stock_unit: "tablet"
+    batch_quantity: 400
+    unit_cost: 15.00
+    expiry_months: 24
+
+  - drug_name: "Ibuprofen"
+    drug_class: "NSAID"
+    category: "NSAIDs"
+    therapeutic_class: "Non-Steroidal Anti-Inflammatory"
+    dosage_form: "Tablet"
+    strength: "400mg"
+    stock_unit: "tablet"
+    batch_quantity: 800
+    unit_cost: 3.00
+    expiry_months: 36
+
+  - drug_name: "Omeprazole"
+    drug_class: "PPI"
+    category: "gastrointestinal"
+    therapeutic_class: "Proton Pump Inhibitor"
+    dosage_form: "Capsule"
+    strength: "20mg"
+    stock_unit: "capsule"
+    batch_quantity: 700
+    unit_cost: 5.00
+    expiry_months: 24
+
+  - drug_name: "Amlodipine"
+    drug_class: "Calcium_Channel_Blocker"
+    category: "antihypertensives"
+    therapeutic_class: "Calcium Channel Blocker"
+    dosage_form: "Tablet"
+    strength: "5mg"
+    stock_unit: "tablet"
+    batch_quantity: 600
+    unit_cost: 4.00
+    expiry_months: 36
+
+  - drug_name: "Metformin"
+    drug_class: "Biguanide"
+    category: "antidiabetics"
+    therapeutic_class: "Oral Hypoglycemic / Biguanide"
+    dosage_form: "Tablet"
+    strength: "500mg"
+    stock_unit: "tablet"
+    batch_quantity: 900
+    unit_cost: 3.50
+    expiry_months: 36
+
+  - drug_name: "Losartan"
+    drug_class: "ARB"
+    category: "antihypertensives"
+    therapeutic_class: "Angiotensin II Receptor Blocker"
+    dosage_form: "Tablet"
+    strength: "50mg"
+    stock_unit: "tablet"
+    batch_quantity: 500
+    unit_cost: 6.00
+    expiry_months: 30
+
+  - drug_name: "Atorvastatin"
+    drug_class: "Statin"
+    category: "lipid_lowering"
+    therapeutic_class: "HMG-CoA Reductase Inhibitor"
+    dosage_form: "Tablet"
+    strength: "10mg"
+    stock_unit: "tablet"
+    batch_quantity: 600
+    unit_cost: 7.00
+    expiry_months: 30
+
+  - drug_name: "Ciprofloxacin"
+    drug_class: "Fluoroquinolone"
+    category: "antibiotics"
+    therapeutic_class: "Fluoroquinolone Antibiotic"
+    dosage_form: "Tablet"
+    strength: "500mg"
+    stock_unit: "tablet"
+    batch_quantity: 400
+    unit_cost: 10.00
+    expiry_months: 24
+
+  - drug_name: "Diclofenac"
+    drug_class: "NSAID"
+    category: "NSAIDs"
+    therapeutic_class: "Non-Steroidal Anti-Inflammatory"
+    dosage_form: "Tablet"
+    strength: "50mg"
+    stock_unit: "tablet"
+    batch_quantity: 600
+    unit_cost: 3.50
+    expiry_months: 30
+
+  - drug_name: "Levofloxacin"
+    drug_class: "Fluoroquinolone"
+    category: "antibiotics"
+    therapeutic_class: "Fluoroquinolone Antibiotic"
+    dosage_form: "Tablet"
+    strength: "500mg"
+    stock_unit: "tablet"
+    batch_quantity: 300
+    unit_cost: 12.00
+    expiry_months: 24
+
+  - drug_name: "Cetirizine"
+    drug_class: "Antihistamine"
+    category: "antihistamines"
+    therapeutic_class: "H1 Antihistamine"
+    dosage_form: "Tablet"
+    strength: "10mg"
+    stock_unit: "tablet"
+    batch_quantity: 800
+    unit_cost: 2.00
+    expiry_months: 36
+
+  - drug_name: "Salbutamol"
+    drug_class: "Beta2_Agonist"
+    category: "respiratory"
+    therapeutic_class: "Bronchodilator"
+    dosage_form: "Inhaler"
+    strength: "100mcg"
+    stock_unit: "inhaler"
+    batch_quantity: 300
+    unit_cost: 25.00
+    expiry_months: 24
+
+  - drug_name: "Domperidone"
+    drug_class: "Prokinetic"
+    category: "antiemetics"
+    therapeutic_class: "Dopamine Antagonist / Prokinetic"
+    dosage_form: "Tablet"
+    strength: "10mg"
+    stock_unit: "tablet"
+    batch_quantity: 500
+    unit_cost: 4.00
+    expiry_months: 24
+
+  - drug_name: "Nitrofurantoin"
+    drug_class: "Nitrofuran"
+    category: "urinary"
+    therapeutic_class: "Urinary Tract Antibacterial"
+    dosage_form: "Capsule"
+    strength: "100mg"
+    stock_unit: "capsule"
+    batch_quantity: 400
+    unit_cost: 6.00
+    expiry_months: 24
+
+  - drug_name: "Sumatriptan"
+    drug_class: "Triptan"
+    category: "neurological"
+    therapeutic_class: "5-HT1 Receptor Agonist"
+    dosage_form: "Tablet"
+    strength: "50mg"
+    stock_unit: "tablet"
+    batch_quantity: 200
+    unit_cost: 20.00
+    expiry_months: 24
+
+  - drug_name: "Glimepiride"
+    drug_class: "Sulfonylurea"
+    category: "antidiabetics"
+    therapeutic_class: "Oral Hypoglycemic / Sulfonylurea"
+    dosage_form: "Tablet"
+    strength: "1mg"
+    stock_unit: "tablet"
+    batch_quantity: 500
+    unit_cost: 5.00
+    expiry_months: 30
+
+  - drug_name: "Pantoprazole"
+    drug_class: "PPI"
+    category: "gastrointestinal"
+    therapeutic_class: "Proton Pump Inhibitor"
+    dosage_form: "Tablet"
+    strength: "40mg"
+    stock_unit: "tablet"
+    batch_quantity: 600
+    unit_cost: 6.00
+    expiry_months: 24
+
+  - drug_name: "Telmisartan"
+    drug_class: "ARB"
+    category: "antihypertensives"
+    therapeutic_class: "Angiotensin II Receptor Blocker"
+    dosage_form: "Tablet"
+    strength: "40mg"
+    stock_unit: "tablet"
+    batch_quantity: 500
+    unit_cost: 7.50
+    expiry_months: 30
+
+  - drug_name: "Enalapril"
+    drug_class: "ACE_Inhibitor"
+    category: "antihypertensives"
+    therapeutic_class: "ACE Inhibitor"
+    dosage_form: "Tablet"
+    strength: "5mg"
+    stock_unit: "tablet"
+    batch_quantity: 400
+    unit_cost: 4.50
+    expiry_months: 36
+
+  - drug_name: "Metoprolol"
+    drug_class: "Beta_Blocker"
+    category: "antihypertensives"
+    therapeutic_class: "Beta-Adrenergic Blocker"
+    dosage_form: "Tablet"
+    strength: "50mg"
+    stock_unit: "tablet"
+    batch_quantity: 500
+    unit_cost: 5.50
+    expiry_months: 30
+
+  - drug_name: "Hydrochlorothiazide"
+    drug_class: "Thiazide_Diuretic"
+    category: "antihypertensives"
+    therapeutic_class: "Thiazide Diuretic"
+    dosage_form: "Tablet"
+    strength: "12.5mg"
+    stock_unit: "tablet"
+    batch_quantity: 600
+    unit_cost: 2.00
+    expiry_months: 36
+
+  - drug_name: "Gliclazide"
+    drug_class: "Sulfonylurea"
+    category: "antidiabetics"
+    therapeutic_class: "Oral Hypoglycemic / Sulfonylurea"
+    dosage_form: "Tablet"
+    strength: "80mg"
+    stock_unit: "tablet"
+    batch_quantity: 400
+    unit_cost: 6.50
+    expiry_months: 30
+
+  - drug_name: "Sitagliptin"
+    drug_class: "DPP4_Inhibitor"
+    category: "antidiabetics"
+    therapeutic_class: "DPP-4 Inhibitor"
+    dosage_form: "Tablet"
+    strength: "100mg"
+    stock_unit: "tablet"
+    batch_quantity: 300
+    unit_cost: 18.00
+    expiry_months: 24
+
+  - drug_name: "Empagliflozin"
+    drug_class: "SGLT2_Inhibitor"
+    category: "antidiabetics"
+    therapeutic_class: "SGLT2 Inhibitor"
+    dosage_form: "Tablet"
+    strength: "10mg"
+    stock_unit: "tablet"
+    batch_quantity: 250
+    unit_cost: 22.00
+    expiry_months: 24
+
+  - drug_name: "Cephalexin"
+    drug_class: "Beta-Lactam"
+    category: "antibiotics"
+    therapeutic_class: "First-Gen Cephalosporin"
+    dosage_form: "Capsule"
+    strength: "500mg"
+    stock_unit: "capsule"
+    batch_quantity: 400
+    unit_cost: 9.00
+    expiry_months: 24
+
+  - drug_name: "Amoxicillin-Clavulanate"
+    drug_class: "Beta-Lactam"
+    category: "antibiotics"
+    therapeutic_class: "Penicillin + Beta-Lactamase Inhibitor"
+    dosage_form: "Tablet"
+    strength: "625mg"
+    stock_unit: "tablet"
+    batch_quantity: 500
+    unit_cost: 16.00
+    expiry_months: 18
+
+  - drug_name: "Ceftriaxone"
+    drug_class: "Beta-Lactam"
+    category: "antibiotics"
+    therapeutic_class: "Third-Gen Cephalosporin"
+    dosage_form: "Injection"
+    strength: "1g"
+    stock_unit: "vial"
+    batch_quantity: 200
+    unit_cost: 35.00
+    expiry_months: 24
+
+  - drug_name: "Doxycycline"
+    drug_class: "Tetracycline"
+    category: "antibiotics"
+    therapeutic_class: "Tetracycline Antibiotic"
+    dosage_form: "Capsule"
+    strength: "100mg"
+    stock_unit: "capsule"
+    batch_quantity: 400
+    unit_cost: 7.00
+    expiry_months: 24
+
+  - drug_name: "Clarithromycin"
+    drug_class: "Macrolide"
+    category: "antibiotics"
+    therapeutic_class: "Macrolide Antibiotic"
+    dosage_form: "Tablet"
+    strength: "500mg"
+    stock_unit: "tablet"
+    batch_quantity: 250
+    unit_cost: 18.00
+    expiry_months: 24
+
+  - drug_name: "Naproxen"
+    drug_class: "NSAID"
+    category: "NSAIDs"
+    therapeutic_class: "Non-Steroidal Anti-Inflammatory"
+    dosage_form: "Tablet"
+    strength: "500mg"
+    stock_unit: "tablet"
+    batch_quantity: 500
+    unit_cost: 5.00
+    expiry_months: 36
+
+  - drug_name: "Celecoxib"
+    drug_class: "NSAID"
+    category: "NSAIDs"
+    therapeutic_class: "COX-2 Selective Inhibitor"
+    dosage_form: "Capsule"
+    strength: "200mg"
+    stock_unit: "capsule"
+    batch_quantity: 300
+    unit_cost: 12.00
+    expiry_months: 30
+
+  - drug_name: "Tramadol"
+    drug_class: "Opioid_Analgesic"
+    category: "analgesics"
+    therapeutic_class: "Centrally Acting Analgesic"
+    dosage_form: "Capsule"
+    strength: "50mg"
+    stock_unit: "capsule"
+    batch_quantity: 300
+    unit_cost: 10.00
+    expiry_months: 24
+
+  - drug_name: "Rosuvastatin"
+    drug_class: "Statin"
+    category: "lipid_lowering"
+    therapeutic_class: "HMG-CoA Reductase Inhibitor"
+    dosage_form: "Tablet"
+    strength: "10mg"
+    stock_unit: "tablet"
+    batch_quantity: 500
+    unit_cost: 11.00
+    expiry_months: 30
+
+  - drug_name: "Ondansetron"
+    drug_class: "Antiemetic"
+    category: "antiemetics"
+    therapeutic_class: "5-HT3 Antagonist"
+    dosage_form: "Tablet"
+    strength: "4mg"
+    stock_unit: "tablet"
+    batch_quantity: 600
+    unit_cost: 8.00
+    expiry_months: 36
+
+  - drug_name: "Sucralfate"
+    drug_class: "Mucosal_Protectant"
+    category: "gastrointestinal"
+    therapeutic_class: "Anti-Ulcer Protectant"
+    dosage_form: "Suspension"
+    strength: "1000mg/5ml"
+    stock_unit: "bottle"
+    batch_quantity: 200
+    unit_cost: 45.00
+    expiry_months: 24
+
+  - drug_name: "Loratadine"
+    drug_class: "Antihistamine"
+    category: "antihistamines"
+    therapeutic_class: "Non-Sedating Antihistamine"
+    dosage_form: "Tablet"
+    strength: "10mg"
+    stock_unit: "tablet"
+    batch_quantity: 600
+    unit_cost: 3.00
+    expiry_months: 36
+
+  - drug_name: "Levocetirizine"
+    drug_class: "Antihistamine"
+    category: "antihistamines"
+    therapeutic_class: "Third-Gen Antihistamine"
+    dosage_form: "Tablet"
+    strength: "5mg"
+    stock_unit: "tablet"
+    batch_quantity: 700
+    unit_cost: 3.50
+    expiry_months: 36
+
+  - drug_name: "Budesonide"
+    drug_class: "Inhaled_Corticosteroid"
+    category: "respiratory"
+    therapeutic_class: "Inhaled Corticosteroid"
+    dosage_form: "Inhaler"
+    strength: "200mcg"
+    stock_unit: "inhaler"
+    batch_quantity: 250
+    unit_cost: 40.00
+    expiry_months: 24
+
+  - drug_name: "Montelukast"
+    drug_class: "Leukotriene_Antagonist"
+    category: "respiratory"
+    therapeutic_class: "Leukotriene Receptor Antagonist"
+    dosage_form: "Tablet"
+    strength: "10mg"
+    stock_unit: "tablet"
+    batch_quantity: 500
+    unit_cost: 9.00
+    expiry_months: 30
+
+  - drug_name: "Ipratropium"
+    drug_class: "Anticholinergic"
+    category: "respiratory"
+    therapeutic_class: "Anticholinergic Bronchodilator"
+    dosage_form: "Inhaler"
+    strength: "20mcg"
+    stock_unit: "inhaler"
+    batch_quantity: 200
+    unit_cost: 30.00
+    expiry_months: 24
+
+  - drug_name: "Gabapentin"
+    drug_class: "Anticonvulsant_Neuropathic"
+    category: "neurological"
+    therapeutic_class: "GABA Analog Neuropathic Agent"
+    dosage_form: "Capsule"
+    strength: "300mg"
+    stock_unit: "capsule"
+    batch_quantity: 350
+    unit_cost: 14.00
+    expiry_months: 30
+
+  - drug_name: "Pregabalin"
+    drug_class: "Neuropathic_Analgesic"
+    category: "neurological"
+    therapeutic_class: "Neuropathic Analgesic"
+    dosage_form: "Capsule"
+    strength: "75mg"
+    stock_unit: "capsule"
+    batch_quantity: 300
+    unit_cost: 16.00
+    expiry_months: 24
+
+  - drug_name: "Hydrocortisone_Cream"
+    drug_class: "Topical_Corticosteroid"
+    category: "dermatological"
+    therapeutic_class: "Topical Corticosteroid"
+    dosage_form: "Cream"
+    strength: "1%"
+    stock_unit: "tube"
+    batch_quantity: 300
+    unit_cost: 15.00
+    expiry_months: 24
+
+  - drug_name: "Clotrimazole"
+    drug_class: "Antifungal"
+    category: "dermatological"
+    therapeutic_class: "Topical Antifungal"
+    dosage_form: "Cream"
+    strength: "1%"
+    stock_unit: "tube"
+    batch_quantity: 300
+    unit_cost: 18.00
+    expiry_months: 24
+
+  - drug_name: "Tamsulosin"
+    drug_class: "Alpha_Blocker"
+    category: "urinary"
+    therapeutic_class: "Alpha-1 Adrenoceptor Blocker"
+    dosage_form: "Capsule"
+    strength: "0.4mg"
+    stock_unit: "capsule"
+    batch_quantity: 400
+    unit_cost: 12.00
+    expiry_months: 30
+
+  - drug_name: "Solifenacin"
+    drug_class: "Antimuscarinic"
+    category: "urinary"
+    therapeutic_class: "Urinary Antispasmodic"
+    dosage_form: "Tablet"
+    strength: "5mg"
+    stock_unit: "tablet"
+    batch_quantity: 250
+    unit_cost: 20.00
+    expiry_months: 24
+
+  - drug_name: "Aspirin"
+    drug_class: "Antiplatelet_NSAID"
+    category: "cardiovascular"
+    therapeutic_class: "Antiplatelet / Analgesic"
+    dosage_form: "Tablet"
+    strength: "75mg"
+    stock_unit: "tablet"
+    batch_quantity: 800
+    unit_cost: 1.50
+    expiry_months: 36
+
+  - drug_name: "Clopidogrel"
+    drug_class: "Antiplatelet"
+    category: "cardiovascular"
+    therapeutic_class: "P2Y12 Antiplatelet"
+    dosage_form: "Tablet"
+    strength: "75mg"
+    stock_unit: "tablet"
+    batch_quantity: 500
+    unit_cost: 10.00
+    expiry_months: 30
+
+
+# Operating hours for appointment slot generation
+operating_hours:
+  start_hour: 8
+  end_hour: 18
+  slot_duration_minutes: 15
+  days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]

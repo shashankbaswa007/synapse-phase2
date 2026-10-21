@@ -1,0 +1,101 @@
+condition_id,patient_id,encounter_id,condition_code,condition_name,status
+cond-pat-084be401,pat-084be401,enc-8ac6465d,M54.5,Low back pain,Confirmed
+cond-pat-d6228b8f,pat-d6228b8f,enc-efb6511d,J18.9,"Pneumonia, unspecified organism",Confirmed
+cond-pat-e83b8c15,pat-e83b8c15,enc-20335af7,J18.9,"Pneumonia, unspecified organism",Confirmed
+cond-pat-192adfbe,pat-192adfbe,enc-92f04794,K21.0,Gastro-esophageal reflux disease with esophagitis,Confirmed
+cond-pat-2d23608e,pat-2d23608e,enc-8b841f40,J06.9,Acute upper respiratory infection,Confirmed
+cond-pat-288d6805,pat-288d6805,enc-5c109cdf,R50.9,"Fever, unspecified",Confirmed
+cond-pat-20f5bb9a,pat-20f5bb9a,enc-3cc3ab91,N39.0,"Urinary tract infection, site not specified",Confirmed
+cond-pat-f74243bf,pat-f74243bf,enc-99041db1,J06.9,Acute upper respiratory infection,Confirmed
+cond-pat-d12ad0df,pat-d12ad0df,enc-65a34c9f,L30.9,"Dermatitis, unspecified",Confirmed
+cond-pat-e5ddf46b,pat-e5ddf46b,enc-a9f85960,M54.5,Low back pain,Confirmed
+cond-pat-8f819a5d,pat-8f819a5d,enc-22d13a7f,J18.9,"Pneumonia, unspecified organism",Confirmed
+cond-pat-7a014dc8,pat-7a014dc8,enc-2afa2e8b,J06.9,Acute upper respiratory infection,Confirmed
+cond-pat-d9c7a148,pat-d9c7a148,enc-b99acb50,J45.9,"Asthma, unspecified",Confirmed
+cond-pat-2a733a36,pat-2a733a36,enc-d30ab11a,E11.9,Type 2 diabetes mellitus without complications,Confirmed
+cond-pat-fab6bd88,pat-fab6bd88,enc-a86a636c,J06.9,Acute upper respiratory infection,Confirmed
+cond-pat-211f192b,pat-211f192b,enc-d22c7c35,G43.9,"Migraine, unspecified",Confirmed
+cond-pat-acea87f1,pat-acea87f1,enc-6bdf341e,J45.9,"Asthma, unspecified",Confirmed
+cond-pat-3f81ef37,pat-3f81ef37,enc-0c600c4f,L30.9,"Dermatitis, unspecified",Confirmed
+cond-pat-0afe42f0,pat-0afe42f0,enc-55d7c45f,J18.9,"Pneumonia, unspecified organism",Confirmed
+cond-pat-d2098200,pat-d2098200,enc-94f2a37b,B34.9,"Viral infection, unspecified",Confirmed
+cond-pat-eb97af58,pat-eb97af58,enc-b9e723e7,M54.5,Low back pain,Confirmed
+cond-pat-501b27df,pat-501b27df,enc-396ae89a,E78.5,"Hyperlipidemia, unspecified",Confirmed
+cond-pat-36c162e9,pat-36c162e9,enc-dad3a563,N39.0,"Urinary tract infection, site not specified",Confirmed
+cond-pat-e90e0a8b,pat-e90e0a8b,enc-b18b1924,B34.9,"Viral infection, unspecified",Confirmed
+cond-pat-f1a9fa08,pat-f1a9fa08,enc-e15ced46,J18.9,"Pneumonia, unspecified organism",Confirmed
+cond-pat-b2e1a365,pat-b2e1a365,enc-f1705586,R50.9,"Fever, unspecified",Confirmed
+cond-pat-145310da,pat-145310da,enc-ca18133e,J06.9,Acute upper respiratory infection,Confirmed
+cond-pat-1aec23cb,pat-1aec23cb,enc-9682787f,K21.0,Gastro-esophageal reflux disease with esophagitis,Confirmed
+cond-pat-d10b6ad3,pat-d10b6ad3,enc-00679df3,M79.3,"Panniculitis, unspecified",Confirmed
+cond-pat-198d2654,pat-198d2654,enc-8301d846,J18.9,"Pneumonia, unspecified organism",Confirmed
+cond-pat-e6b4a22b,pat-e6b4a22b,enc-7e3e4f61,N39.0,"Urinary tract infection, site not specified",Confirmed
+cond-pat-cc5446ce,pat-cc5446ce,enc-b7fc8bf1,K21.0,Gastro-esophageal reflux disease with esophagitis,Confirmed
+cond-pat-2fc3ff78,pat-2fc3ff78,enc-786f6571,R50.9,"Fever, unspecified",Confirmed
+cond-pat-b3f0b3f3,pat-b3f0b3f3,enc-27d0c24f,K21.0,Gastro-esophageal reflux disease with esophagitis,Confirmed
+cond-pat-8be127ce,pat-8be127ce,enc-74b10371,J18.9,"Pneumonia, unspecified organism",Confirmed
+cond-pat-a7512f92,pat-a7512f92,enc-c9b48da5,M54.5,Low back pain,Confirmed
+cond-pat-1f00df3c,pat-1f00df3c,enc-2f86cd44,J06.9,Acute upper respiratory infection,Confirmed
+cond-pat-f9fc78ae,pat-f9fc78ae,enc-559842af,I10,Essential hypertension,Confirmed
+cond-pat-17f014a4,pat-17f014a4,enc-48865a4e,J06.9,Acute upper respiratory infection,Confirmed
+cond-pat-75f5c276,pat-75f5c276,enc-28267b3d,J18.9,"Pneumonia, unspecified organism",Confirmed
+cond-pat-79b81daa,pat-79b81daa,enc-23bcf3f0,L30.9,"Dermatitis, unspecified",Confirmed
+cond-pat-d901b714,pat-d901b714,enc-deabf22d,L30.9,"Dermatitis, unspecified",Confirmed
+cond-pat-56893331,pat-56893331,enc-2cbe53ff,N39.0,"Urinary tract infection, site not specified",Confirmed
+cond-pat-6c47ce7b,pat-6c47ce7b,enc-5600cfdf,M79.3,"Panniculitis, unspecified",Confirmed
+cond-pat-d7612eaf,pat-d7612eaf,enc-8e5cffcd,J18.9,"Pneumonia, unspecified organism",Confirmed
+cond-pat-e09fb5ad,pat-e09fb5ad,enc-e277075b,K21.0,Gastro-esophageal reflux disease with esophagitis,Confirmed
+cond-pat-a7491980,pat-a7491980,enc-617fa8a8,J06.9,Acute upper respiratory infection,Confirmed
+cond-pat-b0c1f16c,pat-b0c1f16c,enc-9ef2297c,K21.0,Gastro-esophageal reflux disease with esophagitis,Confirmed
+cond-pat-404641b1,pat-404641b1,enc-d00e215c,J06.9,Acute upper respiratory infection,Confirmed
+cond-pat-fba53074,pat-fba53074,enc-26ac31b8,J18.9,"Pneumonia, unspecified organism",Confirmed
+cond-pat-b0c752d8,pat-b0c752d8,enc-31378f3b,J06.9,Acute upper respiratory infection,Confirmed
+cond-pat-82a0d0cd,pat-82a0d0cd,enc-7a17897f,B34.9,"Viral infection, unspecified",Confirmed
+cond-pat-a1caf569,pat-a1caf569,enc-1e2a8b3b,K29.7,"Gastritis, unspecified",Confirmed
+cond-pat-5bb8b43b,pat-5bb8b43b,enc-5639ede6,B34.9,"Viral infection, unspecified",Confirmed
+cond-pat-8dbc64c0,pat-8dbc64c0,enc-48743e6d,J06.9,Acute upper respiratory infection,Confirmed
+cond-pat-5684f60b,pat-5684f60b,enc-77fa54e6,E11.9,Type 2 diabetes mellitus without complications,Confirmed
+cond-pat-d0ab2ad0,pat-d0ab2ad0,enc-45750c41,K29.7,"Gastritis, unspecified",Confirmed
+cond-pat-4f5f6355,pat-4f5f6355,enc-1de784d3,R50.9,"Fever, unspecified",Confirmed
+cond-pat-ce40d467,pat-ce40d467,enc-40a6008a,N39.0,"Urinary tract infection, site not specified",Confirmed
+cond-pat-9c2e7f81,pat-9c2e7f81,enc-3f68aab6,R50.9,"Fever, unspecified",Confirmed
+cond-pat-0559c227,pat-0559c227,enc-857c186f,K29.7,"Gastritis, unspecified",Confirmed
+cond-pat-0a2cbbf8,pat-0a2cbbf8,enc-990e852b,M54.5,Low back pain,Confirmed
+cond-pat-a1e63cef,pat-a1e63cef,enc-e535cba1,J06.9,Acute upper respiratory infection,Confirmed
+cond-pat-24f0d0c4,pat-24f0d0c4,enc-046a4598,J18.9,"Pneumonia, unspecified organism",Confirmed
+cond-pat-6dc06496,pat-6dc06496,enc-783a093f,J45.9,"Asthma, unspecified",Confirmed
+cond-pat-179608f7,pat-179608f7,enc-fceeb3fe,K21.0,Gastro-esophageal reflux disease with esophagitis,Confirmed
+cond-pat-d21b5e0f,pat-d21b5e0f,enc-f42f757e,J18.9,"Pneumonia, unspecified organism",Confirmed
+cond-pat-d18b7b2c,pat-d18b7b2c,enc-9770d7bc,J45.9,"Asthma, unspecified",Confirmed
+cond-pat-fadbfb2c,pat-fadbfb2c,enc-41460332,B34.9,"Viral infection, unspecified",Confirmed
+cond-pat-4f19662a,pat-4f19662a,enc-4b115d6f,E78.5,"Hyperlipidemia, unspecified",Confirmed
+cond-pat-ee6bcd10,pat-ee6bcd10,enc-00b2ac75,N39.0,"Urinary tract infection, site not specified",Confirmed
+cond-pat-ec9bc4c3,pat-ec9bc4c3,enc-d03088c0,L30.9,"Dermatitis, unspecified",Confirmed
+cond-pat-9fd42c54,pat-9fd42c54,enc-cdde1219,K29.7,"Gastritis, unspecified",Confirmed
+cond-pat-d4b52fa2,pat-d4b52fa2,enc-ade2c28e,I10,Essential hypertension,Confirmed
+cond-pat-3a2ea4a0,pat-3a2ea4a0,enc-30c6eee4,J06.9,Acute upper respiratory infection,Confirmed
+cond-pat-a23eaf81,pat-a23eaf81,enc-d7bd1960,J06.9,Acute upper respiratory infection,Confirmed
+cond-pat-7d3f1877,pat-7d3f1877,enc-c7d6f586,R50.9,"Fever, unspecified",Confirmed
+cond-pat-b718c32d,pat-b718c32d,enc-a408951b,B34.9,"Viral infection, unspecified",Confirmed
+cond-pat-36a8de70,pat-36a8de70,enc-d4ee2d16,N39.0,"Urinary tract infection, site not specified",Confirmed
+cond-pat-79653c39,pat-79653c39,enc-558152c2,J06.9,Acute upper respiratory infection,Confirmed
+cond-pat-cb379979,pat-cb379979,enc-ceccdd6d,J06.9,Acute upper respiratory infection,Confirmed
+cond-pat-cf70931f,pat-cf70931f,enc-3844902b,J45.9,"Asthma, unspecified",Confirmed
+cond-pat-a2c5797d,pat-a2c5797d,enc-31ec1901,N39.0,"Urinary tract infection, site not specified",Confirmed
+cond-pat-29dc4248,pat-29dc4248,enc-2868096e,L30.9,"Dermatitis, unspecified",Confirmed
+cond-pat-ff60e81e,pat-ff60e81e,enc-974426b6,J06.9,Acute upper respiratory infection,Confirmed
+cond-pat-b3650816,pat-b3650816,enc-cbc2f144,J06.9,Acute upper respiratory infection,Confirmed
+cond-pat-4164a3bd,pat-4164a3bd,enc-c6b141ca,J06.9,Acute upper respiratory infection,Confirmed
+cond-pat-a9025817,pat-a9025817,enc-6d2aca2e,R50.9,"Fever, unspecified",Confirmed
+cond-pat-d5454f43,pat-d5454f43,enc-3e3c6c51,R50.9,"Fever, unspecified",Confirmed
+cond-pat-5fc42786,pat-5fc42786,enc-591892d5,J06.9,Acute upper respiratory infection,Confirmed
+cond-pat-47a1ad6f,pat-47a1ad6f,enc-a64e87dc,N39.0,"Urinary tract infection, site not specified",Confirmed
+cond-pat-3f5e397f,pat-3f5e397f,enc-27710b3f,J06.9,Acute upper respiratory infection,Confirmed
+cond-pat-2b562e90,pat-2b562e90,enc-3bf2d8a5,I10,Essential hypertension,Confirmed
+cond-pat-cf0c5627,pat-cf0c5627,enc-60629986,K29.7,"Gastritis, unspecified",Confirmed
+cond-pat-302b187c,pat-302b187c,enc-8555703d,J18.9,"Pneumonia, unspecified organism",Confirmed
+cond-pat-824c06fa,pat-824c06fa,enc-5a132b61,M54.5,Low back pain,Confirmed
+cond-pat-6050fef8,pat-6050fef8,enc-278952a7,E11.9,Type 2 diabetes mellitus without complications,Confirmed
+cond-pat-c2e13268,pat-c2e13268,enc-b1ad8b70,E11.9,Type 2 diabetes mellitus without complications,Confirmed
+cond-pat-de599da2,pat-de599da2,enc-4a65f7e7,J06.9,Acute upper respiratory infection,Confirmed
+cond-pat-dd7b3253,pat-dd7b3253,enc-c170a8db,J06.9,Acute upper respiratory infection,Confirmed

@@ -1,0 +1,66 @@
+condition_id,patient_id,condition_name,severity
+chr-pat-47d399ee-1,pat-47d399ee,Hypertension,Managed
+chr-pat-47d399ee-2,pat-47d399ee,Migraine,Managed
+chr-pat-f0e02688-1,pat-f0e02688,Asthma,Managed
+chr-pat-9ed94c53-1,pat-9ed94c53,Hypertension,Managed
+chr-pat-9ed94c53-2,pat-9ed94c53,Asthma,Managed
+chr-pat-9b68d389-1,pat-9b68d389,Hypertension,Managed
+chr-pat-533e977d-1,pat-533e977d,Hypertension,Managed
+chr-pat-a06f4a36-1,pat-a06f4a36,Hypertension,Managed
+chr-pat-f87219d5-1,pat-f87219d5,Hypertension,Managed
+chr-pat-f87219d5-2,pat-f87219d5,Type 2 Diabetes,Managed
+chr-pat-f87219d5-3,pat-f87219d5,GERD,Managed
+chr-pat-d267a62d-1,pat-d267a62d,Hypertension,Managed
+chr-pat-d267a62d-2,pat-d267a62d,Hyperlipidemia,Managed
+chr-pat-c3cc4a9e-1,pat-c3cc4a9e,Asthma,Managed
+chr-pat-1265eb94-1,pat-1265eb94,Type 2 Diabetes,Managed
+chr-pat-1265eb94-2,pat-1265eb94,Osteoarthritis,Managed
+chr-pat-a473ac91-1,pat-a473ac91,Type 2 Diabetes,Managed
+chr-pat-a473ac91-2,pat-a473ac91,Osteoarthritis,Managed
+chr-pat-31bf8c20-1,pat-31bf8c20,Type 2 Diabetes,Managed
+chr-pat-9578a842-1,pat-9578a842,Hyperlipidemia,Managed
+chr-pat-eb396e94-1,pat-eb396e94,Hyperlipidemia,Managed
+chr-pat-4df87660-1,pat-4df87660,Asthma,Managed
+chr-pat-bac880c3-1,pat-bac880c3,Migraine,Managed
+chr-pat-112f32bb-1,pat-112f32bb,Migraine,Managed
+chr-pat-0ad3e5a5-1,pat-0ad3e5a5,Hyperlipidemia,Managed
+chr-pat-125ca3a8-1,pat-125ca3a8,Hypertension,Managed
+chr-pat-c2022dca-1,pat-c2022dca,Hypertension,Managed
+chr-pat-c2022dca-2,pat-c2022dca,Hyperlipidemia,Managed
+chr-pat-cd684243-1,pat-cd684243,Hypertension,Managed
+chr-pat-a547822b-1,pat-a547822b,Hypertension,Managed
+chr-pat-aa30d085-1,pat-aa30d085,Type 2 Diabetes,Managed
+chr-pat-8a627583-1,pat-8a627583,Migraine,Managed
+chr-pat-44e3e3ca-1,pat-44e3e3ca,Hypertension,Managed
+chr-pat-44e3e3ca-2,pat-44e3e3ca,Hyperlipidemia,Managed
+chr-pat-89088ec5-1,pat-89088ec5,Hyperlipidemia,Managed
+chr-pat-a963865d-1,pat-a963865d,Osteoarthritis,Managed
+chr-pat-2bfa219d-1,pat-2bfa219d,Hypertension,Managed
+chr-pat-181c210d-1,pat-181c210d,Type 2 Diabetes,Managed
+chr-pat-181c210d-2,pat-181c210d,Hyperlipidemia,Managed
+chr-pat-51c4dc08-1,pat-51c4dc08,Osteoarthritis,Managed
+chr-pat-f41cb289-1,pat-f41cb289,Hyperlipidemia,Managed
+chr-pat-eefe16a3-1,pat-eefe16a3,Type 2 Diabetes,Managed
+chr-pat-eefe16a3-2,pat-eefe16a3,Osteoarthritis,Managed
+chr-pat-78462171-1,pat-78462171,Type 2 Diabetes,Managed
+chr-pat-78462171-2,pat-78462171,Hyperlipidemia,Managed
+chr-pat-4b2f828f-1,pat-4b2f828f,Asthma,Managed
+chr-pat-a7c3cae0-1,pat-a7c3cae0,Asthma,Managed
+chr-pat-8771de9a-1,pat-8771de9a,Hyperlipidemia,Managed
+chr-pat-a082f5f0-1,pat-a082f5f0,Migraine,Managed
+chr-pat-8c442a1c-1,pat-8c442a1c,Type 2 Diabetes,Managed
+chr-pat-d3257d03-1,pat-d3257d03,Asthma,Managed
+chr-pat-7fd6e23c-1,pat-7fd6e23c,GERD,Managed
+chr-pat-41636346-1,pat-41636346,Osteoarthritis,Managed
+chr-pat-97d954e4-1,pat-97d954e4,Hyperlipidemia,Managed
+chr-pat-97d954e4-2,pat-97d954e4,Osteoarthritis,Managed
+chr-pat-25776961-1,pat-25776961,Hyperlipidemia,Managed
+chr-pat-d99396f1-1,pat-d99396f1,Hypertension,Managed
+chr-pat-5e85143c-1,pat-5e85143c,Migraine,Managed
+chr-pat-a714ccb4-1,pat-a714ccb4,Type 2 Diabetes,Managed
+chr-pat-0a911725-1,pat-0a911725,Hyperlipidemia,Managed
+chr-pat-f5e70111-1,pat-f5e70111,Hyperlipidemia,Managed
+chr-pat-f5e70111-2,pat-f5e70111,Migraine,Managed
+chr-pat-26fe8b44-1,pat-26fe8b44,Hypertension,Managed
+chr-pat-28e1275b-1,pat-28e1275b,Hypertension,Managed
+chr-pat-5042f4f1-1,pat-5042f4f1,Osteoarthritis,Managed

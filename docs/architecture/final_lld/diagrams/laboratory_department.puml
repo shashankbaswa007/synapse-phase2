@@ -1,0 +1,17 @@
+@startuml laboratory_department
+title Laboratory Department Component Architecture
+
+class LaboratoryDepartmentHandler {
+    + department_name: str = "laboratory"
+    - diagnostic_gen: DiagnosticGenerator
+    - state_manager: StateManager
+    + handle_event(event: SimulationEvent): List[ActionRequest]
+}
+
+class DiagnosticGenerator {
+    + generate_lab_result(): LabResultRecord
+    + generate_radiology_report(): RadiologyRecord
+}
+
+LaboratoryDepartmentHandler --> DiagnosticGenerator
+@enduml

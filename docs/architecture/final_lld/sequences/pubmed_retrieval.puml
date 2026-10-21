@@ -1,0 +1,23 @@
+@startuml pubmed_retrieval
+title Sequence 6: PubMed Evidence Retrieval & Provenance Linking
+
+participant KB as "MedicalKnowledgeBase"
+participant Mgr as "PubMedKnowledgeManager"
+participant Store as "PubMedKnowledgeStore"
+participant Cache as "PubMedArticleCache"
+participant Extr as "PubMedEvidenceExtractor"
+
+KB -> Mgr : get_evidence_for_condition("Hypertension", "I10")
+Mgr -> Store : find_relationships("Hypertension")
+alt Cache / Store Hit
+    Store --> Mgr : List[PubMedRelationship]
+else Store Miss
+    Mgr -> Cache : get_cached_article(pmid)
+    Cache --> Mgr : Article XML
+    Mgr -> Extr : extract_treatment_relationships(Article)
+    Extr --> Mgr : Relationships
+    Mgr -> Store : save_relationship(rel)
+end
+Mgr --> KB : List[PubMedRelationship]
+Note over KB: Diagnoses annotated with verified PMIDs for clinical provenance
+@enduml

@@ -1,0 +1,6 @@
+doctor_id,department_id,name,specialization,qualification,status
+doc-dept-clin-001,DEPT-CLIN,Dr. Alexander,General Medicine,"MBBS, MD",Active
+doc-dept-clin-002,DEPT-CLIN,Dr. Jimenez,Pediatrics,"MBBS, MD",Active
+doc-dept-clin-003,DEPT-CLIN,Dr. Campbell,Internal Medicine,"MBBS, MD",Active
+doc-dept-clin-004,DEPT-CLIN,Dr. Morris,Internal Medicine,"MBBS, MD",Active
+doc-dept-clin-005,DEPT-CLIN,Dr. Liu,Internal Medicine,"MBBS, MD",Active

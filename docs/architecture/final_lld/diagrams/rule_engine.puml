@@ -1,0 +1,33 @@
+@startuml rule_engine
+title SYNAPSE Phase 2 - Rule Engine & Decision Arbitration
+
+class RuleRepository {
+    - _rules: Dict[str, SynapseRule]
+    + load_rules(rules_dir: Path)
+    + get_rule_by_id(rule_id: str): Optional[SynapseRule]
+    + get_rules_for_action(action_type: str): List[SynapseRule]
+}
+
+class RuleEngine {
+    - repository: RuleRepository
+    - evaluator: RuleEvaluator
+    + evaluate(context: InputContext): DecisionResult
+}
+
+class RuleEvaluator {
+    + evaluate_rule(rule: SynapseRule, context: InputContext): bool
+}
+
+class DecisionResult {
+    + status: DecisionStatus
+    + winning_rule_id: Optional[str]
+    + reason: str
+    + state_transitions: List[StateTransitionProposal]
+    + events_to_emit: List[OutboxEventProposal]
+}
+
+RuleEngine --> RuleRepository
+RuleEngine --> RuleEvaluator
+RuleEngine ..> DecisionResult
+
+@enduml

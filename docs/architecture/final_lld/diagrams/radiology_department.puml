@@ -1,0 +1,12 @@
+@startuml radiology_department
+title Radiology Department Component Architecture
+
+class RadiologyDepartmentHandler {
+    + department_name: str = "radiology"
+    - diagnostic_gen: DiagnosticGenerator
+    - state_manager: StateManager
+    + handle_event(event: SimulationEvent): List[ActionRequest]
+}
+
+RadiologyDepartmentHandler --> DiagnosticGenerator
+@enduml

@@ -1,0 +1,760 @@
+{
+  "timestamp": "2026-10-13T17:48:58.134273",
+  "dataset_directory": "data\\.staging_test_gate_1000_c79aee",
+  "files_present": {
+    "patients.csv": true,
+    "encounters.csv": true,
+    "conditions.csv": true,
+    "symptoms.csv": true,
+    "medications.csv": true,
+    "labs.csv": true,
+    "radiology.csv": true,
+    "invoices.csv": true,
+    "payments.csv": true,
+    "events.csv": true,
+    "journey_traces.csv": true,
+    "generation_summary.csv": true
+  },
+  "dataset_counts": {
+    "patients.csv": {
+      "exists": true,
+      "row_count": 1000,
+      "column_count": 7,
+      "file_size_bytes": 56231,
+      "file_size_kb": 54.91
+    },
+    "encounters.csv": {
+      "exists": true,
+      "row_count": 1000,
+      "column_count": 8,
+      "file_size_bytes": 119089,
+      "file_size_kb": 116.3
+    },
+    "conditions.csv": {
+      "exists": true,
+      "row_count": 1000,
+      "column_count": 6,
+      "file_size_bytes": 93031,
+      "file_size_kb": 90.85
+    },
+    "symptoms.csv": {
+      "exists": true,
+      "row_count": 3771,
+      "column_count": 5,
+      "file_size_bytes": 279144,
+      "file_size_kb": 272.6
+    },
+    "medications.csv": {
+      "exists": true,
+      "row_count": 1000,
+      "column_count": 11,
+      "file_size_bytes": 130511,
+      "file_size_kb": 127.45
+    },
+    "labs.csv": {
+      "exists": true,
+      "row_count": 1000,
+      "column_count": 8,
+      "file_size_bytes": 93574,
+      "file_size_kb": 91.38
+    },
+    "radiology.csv": {
+      "exists": true,
+      "row_count": 1000,
+      "column_count": 9,
+      "file_size_bytes": 125516,
+      "file_size_kb": 122.57
+    },
+    "invoices.csv": {
+      "exists": true,
+      "row_count": 1000,
+      "column_count": 6,
+      "file_size_bytes": 71567,
+      "file_size_kb": 69.89
+    },
+    "payments.csv": {
+      "exists": true,
+      "row_count": 750,
+      "column_count": 7,
+      "file_size_bytes": 69823,
+      "file_size_kb": 68.19
+    },
+    "events.csv": {
+      "exists": true,
+      "row_count": 15000,
+      "column_count": 7,
+      "file_size_bytes": 1657830,
+      "file_size_kb": 1618.97
+    },
+    "journey_traces.csv": {
+      "exists": true,
+      "row_count": 1000,
+      "column_count": 7,
+      "file_size_bytes": 89327,
+      "file_size_kb": 87.23
+    },
+    "generation_summary.csv": {
+      "exists": true,
+      "row_count": 15,
+      "column_count": 2,
+      "file_size_bytes": 377,
+      "file_size_kb": 0.37
+    }
+  },
+  "duplicate_id_audit": {
+    "patients.csv": {
+      "pk": "patient_id",
+      "total_rows": 1000,
+      "unique_ids": 1000,
+      "duplicate_ids": 0,
+      "status": "PASS"
+    },
+    "encounters.csv": {
+      "pk": "encounter_id",
+      "total_rows": 1000,
+      "unique_ids": 1000,
+      "duplicate_ids": 0,
+      "status": "PASS"
+    },
+    "conditions.csv": {
+      "pk": "condition_id",
+      "total_rows": 1000,
+      "unique_ids": 1000,
+      "duplicate_ids": 0,
+      "status": "PASS"
+    },
+    "symptoms.csv": {
+      "pk": "symptom_id",
+      "total_rows": 3771,
+      "unique_ids": 3771,
+      "duplicate_ids": 0,
+      "status": "PASS"
+    },
+    "medications.csv": {
+      "pk": "medication_id",
+      "total_rows": 1000,
+      "unique_ids": 1000,
+      "duplicate_ids": 0,
+      "status": "PASS"
+    },
+    "labs.csv": {
+      "pk": "lab_id",
+      "total_rows": 1000,
+      "unique_ids": 1000,
+      "duplicate_ids": 0,
+      "status": "PASS"
+    },
+    "radiology.csv": {
+      "pk": "radiology_id",
+      "total_rows": 1000,
+      "unique_ids": 1000,
+      "duplicate_ids": 0,
+      "status": "PASS"
+    },
+    "invoices.csv": {
+      "pk": "invoice_id",
+      "total_rows": 1000,
+      "unique_ids": 1000,
+      "duplicate_ids": 0,
+      "status": "PASS"
+    },
+    "payments.csv": {
+      "pk": "payment_id",
+      "total_rows": 750,
+      "unique_ids": 750,
+      "duplicate_ids": 0,
+      "status": "PASS"
+    },
+    "events.csv": {
+      "pk": "event_id",
+      "total_rows": 15000,
+      "unique_ids": 15000,
+      "duplicate_ids": 0,
+      "status": "PASS"
+    },
+    "journey_traces.csv": {
+      "pk": "journey_id",
+      "total_rows": 1000,
+      "unique_ids": 1000,
+      "duplicate_ids": 0,
+      "status": "PASS"
+    },
+    "generation_summary.csv": {
+      "pk": "metric_name",
+      "total_rows": 15,
+      "unique_ids": 15,
+      "duplicate_ids": 0,
+      "status": "PASS"
+    }
+  },
+  "referential_integrity_audit": {
+    "total_dangling_references": 0,
+    "foreign_key_checks": [
+      {
+        "fk": "encounters.patient_id -> patients.patient_id",
+        "dangling": 0
+      }
+    ],
+    "status": "PASS"
+  },
+  "null_required_audit": {
+    "total_required_nulls": 0,
+    "details": {
+      "patients.csv": {
+        "patient_id": {
+          "required": true,
+          "null_count": 0,
+          "status": "PASS"
+        },
+        "name": {
+          "required": true,
+          "null_count": 0,
+          "status": "PASS"
+        },
+        "age": {
+          "required": true,
+          "null_count": 0,
+          "status": "PASS"
+        },
+        "gender": {
+          "required": true,
+          "null_count": 0,
+          "status": "PASS"
+        },
+        "blood_group": {
+          "required": true,
+          "null_count": 0,
+          "status": "PASS"
+        },
+        "insurance_type": {
+          "required": true,
+          "null_count": 0,
+          "status": "PASS"
+        },
+        "status": {
+          "required": true,
+          "null_count": 0,
+          "status": "PASS"
+        }
+      },
+      "encounters.csv": {
+        "encounter_id": {
+          "required": true,
+          "null_count": 0,
+          "status": "PASS"
+        },
+        "patient_id": {
+          "required": true,
+          "null_count": 0,
+          "status": "PASS"
+        },
+        "journey_id": {
+          "required": true,
+          "null_count": 0,
+          "status": "PASS"
+        },
+        "doctor_id": {
+          "required": true,
+          "null_count": 0,
+          "status": "PASS"
+        },
+        "start_time": {
+          "required": true,
+          "null_count": 0,
+          "status": "PASS"
+        },
+        "end_time": {
+          "required": true,
+          "null_count": 0,
+          "status": "PASS"
+        },
+        "status": {
+          "required": true,
+          "null_count": 0,
+          "status": "PASS"
+        },
+        "chief_complaint": {
+          "required": true,
+          "null_count": 0,
+          "status": "PASS"
+        }
+      },
+      "conditions.csv": {
+        "condition_id": {
+          "required": true,
+          "null_count": 0,
+          "status": "PASS"
+        },
+        "patient_id": {
+          "required": true,
+          "null_count": 0,
+          "status": "PASS"
+        },
+        "encounter_id": {
+          "required": true,
+          "null_count": 0,
+          "status": "PASS"
+        },
+        "condition_code": {
+          "required": true,
+          "null_count": 0,
+          "status": "PASS"
+        },
+        "condition_name": {
+          "required": true,
+          "null_count": 0,
+          "status": "PASS"
+        },
+        "status": {
+          "required": true,
+          "null_count": 0,
+          "status": "PASS"
+        }
+      },
+      "symptoms.csv": {
+        "symptom_id": {
+          "required": true,
+          "null_count": 0,
+          "status": "PASS"
+        },
+        "patient_id": {
+          "required": true,
+          "null_count": 0,
+          "status": "PASS"
+        },
+        "encounter_id": {
+          "required": true,
+          "null_count": 0,
+          "status": "PASS"
+        },
+        "condition_id": {
+          "required": true,
+          "null_count": 0,
+          "status": "PASS"
+        },
+        "symptom_name": {
+          "required": true,
+          "null_count": 0,
+          "status": "PASS"
+        }
+      },
+      "medications.csv": {
+        "medication_id": {
+          "required": true,
+          "null_count": 0,
+          "status": "PASS"
+        },
+        "patient_id": {
+          "required": true,
+          "null_count": 0,
+          "status": "PASS"
+        },
+        "encounter_id": {
+          "required": true,
+          "null_count": 0,
+          "status": "PASS"
+        },
+        "condition_id": {
+          "required": true,
+          "null_count": 0,
+          "status": "PASS"
+        },
+        "drug_name": {
+          "required": true,
+          "null_count": 0,
+          "status": "PASS"
+        },
+        "dosage": {
+          "required": true,
+          "null_count": 0,
+          "status": "PASS"
+        },
+        "frequency": {
+          "required": true,
+          "null_count": 0,
+          "status": "PASS"
+        },
+        "source": {
+          "required": true,
+          "null_count": 0,
+          "status": "PASS"
+        },
+        "status": {
+          "required": true,
+          "null_count": 0,
+          "status": "PASS"
+        }
+      },
+      "labs.csv": {
+        "lab_id": {
+          "required": true,
+          "null_count": 0,
+          "status": "PASS"
+        },
+        "patient_id": {
+          "required": true,
+          "null_count": 0,
+          "status": "PASS"
+        },
+        "encounter_id": {
+          "required": true,
+          "null_count": 0,
+          "status": "PASS"
+        },
+        "test_name": {
+          "required": true,
+          "null_count": 0,
+          "status": "PASS"
+        },
+        "result": {
+          "required": true,
+          "null_count": 0,
+          "status": "PASS"
+        },
+        "is_abnormal": {
+          "required": true,
+          "null_count": 0,
+          "status": "PASS"
+        },
+        "status": {
+          "required": true,
+          "null_count": 0,
+          "status": "PASS"
+        }
+      },
+      "radiology.csv": {
+        "radiology_id": {
+          "required": true,
+          "null_count": 0,
+          "status": "PASS"
+        },
+        "patient_id": {
+          "required": true,
+          "null_count": 0,
+          "status": "PASS"
+        },
+        "encounter_id": {
+          "required": true,
+          "null_count": 0,
+          "status": "PASS"
+        },
+        "modality": {
+          "required": true,
+          "null_count": 0,
+          "status": "PASS"
+        },
+        "findings": {
+          "required": true,
+          "null_count": 0,
+          "status": "PASS"
+        },
+        "impression": {
+          "required": true,
+          "null_count": 0,
+          "status": "PASS"
+        },
+        "is_abnormal": {
+          "required": true,
+          "null_count": 0,
+          "status": "PASS"
+        },
+        "status": {
+          "required": true,
+          "null_count": 0,
+          "status": "PASS"
+        }
+      },
+      "invoices.csv": {
+        "invoice_id": {
+          "required": true,
+          "null_count": 0,
+          "status": "PASS"
+        },
+        "patient_id": {
+          "required": true,
+          "null_count": 0,
+          "status": "PASS"
+        },
+        "encounter_id": {
+          "required": true,
+          "null_count": 0,
+          "status": "PASS"
+        },
+        "total_amount": {
+          "required": true,
+          "null_count": 0,
+          "status": "PASS"
+        },
+        "status": {
+          "required": true,
+          "null_count": 0,
+          "status": "PASS"
+        },
+        "created_at": {
+          "required": true,
+          "null_count": 0,
+          "status": "PASS"
+        }
+      },
+      "payments.csv": {
+        "payment_id": {
+          "required": true,
+          "null_count": 0,
+          "status": "PASS"
+        },
+        "invoice_id": {
+          "required": true,
+          "null_count": 0,
+          "status": "PASS"
+        },
+        "patient_id": {
+          "required": true,
+          "null_count": 0,
+          "status": "PASS"
+        },
+        "amount": {
+          "required": true,
+          "null_count": 0,
+          "status": "PASS"
+        },
+        "payment_method": {
+          "required": true,
+          "null_count": 0,
+          "status": "PASS"
+        },
+        "timestamp": {
+          "required": true,
+          "null_count": 0,
+          "status": "PASS"
+        },
+        "status": {
+          "required": true,
+          "null_count": 0,
+          "status": "PASS"
+        }
+      },
+      "events.csv": {
+        "event_id": {
+          "required": true,
+          "null_count": 0,
+          "status": "PASS"
+        },
+        "event_type": {
+          "required": true,
+          "null_count": 0,
+          "status": "PASS"
+        },
+        "source_department": {
+          "required": true,
+          "null_count": 0,
+          "status": "PASS"
+        },
+        "timestamp": {
+          "required": true,
+          "null_count": 0,
+          "status": "PASS"
+        },
+        "status": {
+          "required": true,
+          "null_count": 0,
+          "status": "PASS"
+        }
+      },
+      "journey_traces.csv": {
+        "journey_id": {
+          "required": true,
+          "null_count": 0,
+          "status": "PASS"
+        },
+        "patient_id": {
+          "required": true,
+          "null_count": 0,
+          "status": "PASS"
+        },
+        "scenario_id": {
+          "required": true,
+          "null_count": 0,
+          "status": "PASS"
+        },
+        "status": {
+          "required": true,
+          "null_count": 0,
+          "status": "PASS"
+        },
+        "started_at": {
+          "required": true,
+          "null_count": 0,
+          "status": "PASS"
+        },
+        "completed_at": {
+          "required": true,
+          "null_count": 0,
+          "status": "PASS"
+        },
+        "step_count": {
+          "required": true,
+          "null_count": 0,
+          "status": "PASS"
+        }
+      },
+      "generation_summary.csv": {
+        "metric_name": {
+          "required": true,
+          "null_count": 0,
+          "status": "PASS"
+        },
+        "metric_value": {
+          "required": true,
+          "null_count": 0,
+          "status": "PASS"
+        }
+      }
+    },
+    "status": "PASS"
+  },
+  "temporal_audit": {
+    "invalid_encounter_durations": 0,
+    "invalid_temporal_relationships": 0,
+    "status": "PASS"
+  },
+  "clinical_safety_audit": {
+    "allergy_safety_violations": 0,
+    "rule_compliance": "100%",
+    "status": "PASS"
+  },
+  "provenance_audit": {
+    "pubmed_backed_treatment_records": 1000,
+    "missing_evidence_ids": 0,
+    "invalid_evidence_references": 0,
+    "status": "PASS"
+  },
+  "patient_connectivity": {
+    "total_patients": 1000,
+    "patients_with_encounters": 1000,
+    "patients_with_conditions": 1000,
+    "patients_with_symptoms": 1000,
+    "patients_with_medications": 1000,
+    "patients_with_labs": 1000,
+    "patients_with_radiology": 1000,
+    "patients_with_invoices": 1000,
+    "patients_with_payments": 750,
+    "patients_with_events": 1000
+  },
+  "scenario_distribution": {
+    "SCEN-V1-01": 250,
+    "SCEN-V1-02": 250,
+    "SCEN-V1-03": 250,
+    "SCEN-V1-04": 250
+  },
+  "overall_status": "PASS \u2014 DATASET READY FOR PHASE 3",
+  "critical_errors": [],
+  "invoice_lifecycle_audit": {
+    "total_invoices": 1000,
+    "invoices_during_encounter": 1000,
+    "invoices_before_encounter": 0,
+    "invoices_after_encounter": 0,
+    "status_distribution": {
+      "Paid": 750,
+      "Unpaid": 250
+    },
+    "status": "PASS"
+  },
+  "laboratory_lifecycle_audit": {
+    "total_orders": 1000,
+    "samples_collected_events": 250,
+    "completed_tests": 250,
+    "pending_tests": 750,
+    "missing_completion_timestamps": 0,
+    "abnormal_results": 43,
+    "test_type_distribution": {
+      "CBC": 479,
+      "Complete Blood Count": 154,
+      "CRP": 87,
+      "C-Reactive Protein": 32,
+      "Urinalysis": 60,
+      "Fasting Blood Sugar": 9,
+      "Lipid Profile Panel": 24,
+      "Urine_Culture": 43,
+      "FBS": 12,
+      "Liver Function Panel": 8,
+      "Renal_Function": 12,
+      "HbA1c": 9,
+      "Glycated Hemoglobin (HbA1c)": 5,
+      "Lipid_Panel": 30,
+      "Renal Function Panel": 9,
+      "Routine Urinalysis": 3,
+      "ESR": 6,
+      "Liver_Function": 12,
+      "Erythrocyte Sedimentation Rate": 6
+    },
+    "status": "PASS"
+  },
+  "radiology_lifecycle_audit": {
+    "total_orders": 1000,
+    "acquisition_events": 250,
+    "completed_studies": 250,
+    "pending_studies": 750,
+    "missing_completion_timestamps": 0,
+    "abnormal_studies": 30,
+    "modality_distribution": {
+      "Lumbar Spine X-Ray": 44,
+      "Chest X-Ray": 943,
+      "CT Head": 13
+    },
+    "status": "PASS"
+  },
+  "journey_encounter_audit": {
+    "journeys_completed": 750,
+    "encounters_closed": 1000,
+    "mismatched_end_times": 0,
+    "scen_02_violations": 0,
+    "status": "PASS"
+  },
+  "medication_diversity_audit": {
+    "total_medication_records": 1000,
+    "distinct_medications": 37,
+    "distinct_conditions": 15,
+    "top_medications": [
+      {
+        "drug_name": "Paracetamol",
+        "count": 220,
+        "percentage": 22.0
+      },
+      {
+        "drug_name": "Amoxicillin",
+        "count": 116,
+        "percentage": 11.6
+      },
+      {
+        "drug_name": "Cephalexin",
+        "count": 92,
+        "percentage": 9.2
+      },
+      {
+        "drug_name": "Azithromycin",
+        "count": 62,
+        "percentage": 6.2
+      },
+      {
+        "drug_name": "Omeprazole",
+        "count": 39,
+        "percentage": 3.9
+      }
+    ],
+    "status": "PASS"
+  },
+  "performance_metrics": {
+    "start_time": "2026-10-13T17:48:53.335895",
+    "end_time": "2026-10-13T17:48:58.235826",
+    "total_runtime_seconds": 4.9,
+    "simulation_runtime_seconds": 3.68,
+    "export_runtime_seconds": 0.21,
+    "total_events_processed": 24000,
+    "events_per_second": 6518.57,
+    "total_records_generated": 27536,
+    "records_per_second": 5619.68,
+    "total_output_size_bytes": 2786020,
+    "total_output_size_mb": 2.66,
+    "patients_generated": 1000
+  }
+}

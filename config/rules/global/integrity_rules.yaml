@@ -1,0 +1,24 @@
+- rule_id: "RULE-GLOB-STOCK-001"
+  name: "Non-Negative Pharmacy Inventory Stock Check"
+  category: "RESOURCE_AVAILABILITY"
+  description: "Blocks medication dispensing if requested quantity exceeds available inventory batch stock."
+  source_type: "INTERNAL_DESIGN"
+  source_reference: "Stage 2 Internal Rule Spec / Level 1 Integrity Constraint"
+  priority: 100
+  precedence_level: 100
+  version: "1.0.0"
+  scenarios: ["*"]
+  departments: ["pharmacy"]
+  entities_affected: ["pharmacy.inventory_batches"]
+  preconditions:
+    action_type: "CONFIRM_MEDICINE_DISPENSE"
+    required_context_keys: ["extra_context.requested_quantity", "resource_state.quantity_available"]
+  conditions:
+    all_of:
+      - "context.extra_context.requested_quantity > context.resource_state.quantity_available"
+  allowed_actions: []
+  blocked_actions: ["CONFIRM_MEDICINE_DISPENSE"]
+  state_transitions: []
+  cross_department_effects: []
+  events_generated: ["InventoryShortageDetected"]
+  documents_triggered: ["Partial Dispensing & Backorder Slip"]

@@ -1,0 +1,26 @@
+@startuml rule_evaluation
+title Sequence 4: Rule Evaluation & Dynamic Failure Emission
+
+participant Pipeline as "ExecutionPipeline"
+participant State as "StateManager"
+participant RuleEng as "RuleEngine"
+participant Evaluator as "RuleEvaluator"
+participant Engine as "SimulationEngine"
+
+Pipeline -> State : build_input_context(action)
+State --> Pipeline : InputContext
+Pipeline -> RuleEng : evaluate(InputContext)
+loop for each matching rule
+    RuleEng -> Evaluator : evaluate_rule(rule, InputContext)
+    Evaluator --> RuleEng : boolean match
+end
+alt Winning rule allows
+    RuleEng --> Pipeline : DecisionResult(ALLOWED, proposals)
+    Pipeline -> State : apply_decision(decision)
+    Pipeline --> Engine : ExecutionResult(success=True)
+else Winning rule blocks
+    RuleEng --> Pipeline : DecisionResult(BLOCKED, winning_rule_id, events_to_emit=[OutboxEventProposal])
+    Pipeline --> Engine : ExecutionResult(success=False, decision)
+    Engine -> Engine : emit DomainEvent(event_type = decision.events_to_emit[0].event_type)
+end
+@enduml

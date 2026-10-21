@@ -1,0 +1,26 @@
+{
+  "pmid": "31234503",
+  "title": "Amlodipine vs Losartan initial monotherapy in essential hypertension: A randomized trial",
+  "abstract": "Both amlodipine and losartan demonstrate robust blood pressure reduction in essential hypertension. Amlodipine produced mild peripheral edema, while losartan showed superior renal protection.",
+  "publication_year": 2020,
+  "journal": "Lancet Hypertension",
+  "authors": [
+    "Chobanian AV",
+    "Bakris GL"
+  ],
+  "mesh_terms": [
+    "Hypertension",
+    "Amlodipine",
+    "Losartan",
+    "Enalapril",
+    "Edema"
+  ],
+  "keywords": [
+    "hypertension",
+    "amlodipine",
+    "losartan"
+  ],
+  "doi": null,
+  "retrieved_at": "2026-10-13T18:53:35.952542",
+  "query_topic": "Essential Hypertension"
+}

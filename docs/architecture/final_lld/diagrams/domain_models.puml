@@ -1,0 +1,39 @@
+@startuml domain_models
+title SYNAPSE Phase 2 - Domain Data Models
+
+class PatientContext {
+    + patient_id: str
+    + name: str
+    + age: int
+    + gender: str
+    + allergies: List[str]
+    + chronic_conditions: List[str]
+    + insurance_type: str
+    + scenario_id: str
+    + encounter_id: Optional[str]
+    + force_conflict: bool
+}
+
+class ActionRequest {
+    + action_id: str
+    + action_type: str
+    + target_department: str
+    + target_entity_table: str
+    + target_entity_id: str
+    + requested_timestamp: datetime
+    + payload: dict
+}
+
+class DomainEvent {
+    + event_id: str
+    + event_type: str
+    + timestamp: datetime
+    + producer_domain: str
+    + entity_table: str
+    + entity_id: str
+    + status: str
+    + causation_id: str
+    + causation_depth: int
+}
+
+@enduml

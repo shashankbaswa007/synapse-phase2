@@ -1,0 +1,723 @@
+decision_id,target_entity,action,rule_id,decision,reason,timestamp,domain_event
+dec-1,clinical.appointments:apt-23471c4d,START_DOCTOR_CONSULTATION,RULE-WORK-OPD-010,ALLOWED,Rule check passed,2026-01-01T08:00:00,EncounterStarted
+dec-2,pharmacy.prescriptions:rx-001,VERIFY_PRESCRIPTION,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T08:00:00,VERIFY_PRESCRIPTION_Executed
+dec-3,pharmacy.prescriptions:rx-001,CONFIRM_MEDICINE_DISPENSE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T08:00:00,CONFIRM_MEDICINE_DISPENSE_Executed
+dec-4,clinical.appointments:apt-7a336ef5,START_DOCTOR_CONSULTATION,RULE-WORK-OPD-010,ALLOWED,Rule check passed,2026-01-01T08:05:00,EncounterStarted
+dec-5,pharmacy.prescriptions:rx-e04d0b0e,VERIFY_PRESCRIPTION,RULE-STATE-RX-020,ALLOWED,Rule check passed,2026-01-01T08:05:00,PrescriptionVerified
+dec-6,pharmacy.prescriptions:rx-e04d0b0e,VERIFY_PRESCRIPTION,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T08:05:00,VERIFY_PRESCRIPTION_Executed
+dec-7,pharmacy.prescriptions:rx-e04d0b0e,VERIFY_PRESCRIPTION,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T08:05:00,VERIFY_PRESCRIPTION_Executed
+dec-8,pharmacy.prescriptions:rx-001,VERIFY_PRESCRIPTION,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T08:05:00,VERIFY_PRESCRIPTION_Executed
+dec-9,pharmacy.prescriptions:rx-001,CONFIRM_MEDICINE_DISPENSE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T08:05:00,CONFIRM_MEDICINE_DISPENSE_Executed
+dec-10,pharmacy.prescriptions:rx-001,CONFIRM_MEDICINE_DISPENSE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T08:05:00,CONFIRM_MEDICINE_DISPENSE_Executed
+dec-11,clinical.appointments:apt-acfde4a4,START_DOCTOR_CONSULTATION,RULE-WORK-OPD-010,ALLOWED,Rule check passed,2026-01-01T08:10:00,EncounterStarted
+dec-12,pharmacy.prescriptions:rx-e04d0b0e,CONFIRM_MEDICINE_DISPENSE,RULE-STATE-RX-021,ALLOWED,Rule check passed,2026-01-01T08:10:00,MedicineDispensed
+dec-13,pharmacy.prescriptions:rx-e04d0b0e,CONFIRM_MEDICINE_DISPENSE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T08:10:00,CONFIRM_MEDICINE_DISPENSE_Executed
+dec-14,pharmacy.prescriptions:rx-e04d0b0e,CONFIRM_MEDICINE_DISPENSE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T08:10:00,CONFIRM_MEDICINE_DISPENSE_Executed
+dec-15,pharmacy.prescriptions:rx-e04d0b0e,CONFIRM_MEDICINE_DISPENSE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T08:10:00,CONFIRM_MEDICINE_DISPENSE_Executed
+dec-16,pharmacy.prescriptions:rx-001,VERIFY_PRESCRIPTION,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T08:10:00,VERIFY_PRESCRIPTION_Executed
+dec-17,pharmacy.prescriptions:rx-001,CONFIRM_MEDICINE_DISPENSE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T08:10:00,CONFIRM_MEDICINE_DISPENSE_Executed
+dec-18,finance.invoices:inv-001,GENERATE_INVOICE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T08:10:00,GENERATE_INVOICE_Executed
+dec-19,clinical.appointments:apt-b656eda7,START_DOCTOR_CONSULTATION,RULE-WORK-OPD-010,ALLOWED,Rule check passed,2026-01-01T08:15:00,EncounterStarted
+dec-20,laboratory.laboratory_orders:lab-apt-7a,COLLECT_LAB_SAMPLE,RULE-STATE-LAB-010,ALLOWED,Rule check passed,2026-01-01T08:15:00,LabSampleCollected
+dec-21,laboratory.laboratory_orders:lab-apt-7a,COLLECT_LAB_SAMPLE,RULE-STATE-LAB-011,BLOCKED,Action 'COLLECT_LAB_SAMPLE' BLOCKED by LEVEL_3_DEPARTMENT_WORKFLOW rule 'RULE-STATE-LAB-011': Blocks sample collection if lab order is not in Ordered state.,2026-01-01T08:15:00,COLLECT_LAB_SAMPLE_Blocked
+dec-22,laboratory.laboratory_orders:lab-apt-7a,COLLECT_LAB_SAMPLE,RULE-STATE-LAB-011,BLOCKED,Action 'COLLECT_LAB_SAMPLE' BLOCKED by LEVEL_3_DEPARTMENT_WORKFLOW rule 'RULE-STATE-LAB-011': Blocks sample collection if lab order is not in Ordered state.,2026-01-01T08:15:00,COLLECT_LAB_SAMPLE_Blocked
+dec-23,pharmacy.prescriptions:rx-fecc424a,VERIFY_PRESCRIPTION,RULE-CLIN-ALLERGY-001,BLOCKED,Action 'VERIFY_PRESCRIPTION' BLOCKED by LEVEL_2_CLINICAL_SAFETY rule 'RULE-CLIN-ALLERGY-001': Blocks dispensing of Beta-lactam antibiotics (e.g. Amoxicillin) when patient has documented Penicillin allergy.,2026-01-01T08:15:00,PrescriptionAllergyConflictDetected
+dec-24,finance.invoices:ent-a0cc3ab2,GENERATE_INVOICE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T08:15:00,GENERATE_INVOICE_Executed
+dec-25,finance.invoices:ent-143643da,GENERATE_INVOICE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T08:15:00,GENERATE_INVOICE_Executed
+dec-26,finance.invoices:ent-6c75e925,GENERATE_INVOICE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T08:15:00,GENERATE_INVOICE_Executed
+dec-27,finance.invoices:ent-c6b5ab3f,GENERATE_INVOICE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T08:15:00,GENERATE_INVOICE_Executed
+dec-28,pharmacy.prescriptions:rx-fecc424a,VERIFY_PRESCRIPTION,RULE-CLIN-ALLERGY-001,BLOCKED,Action 'VERIFY_PRESCRIPTION' BLOCKED by LEVEL_2_CLINICAL_SAFETY rule 'RULE-CLIN-ALLERGY-001': Blocks dispensing of Beta-lactam antibiotics (e.g. Amoxicillin) when patient has documented Penicillin allergy.,2026-01-01T08:15:00,PrescriptionAllergyConflictDetected
+dec-29,pharmacy.prescriptions:rx-fecc424a,VERIFY_PRESCRIPTION,RULE-CLIN-ALLERGY-001,BLOCKED,Action 'VERIFY_PRESCRIPTION' BLOCKED by LEVEL_2_CLINICAL_SAFETY rule 'RULE-CLIN-ALLERGY-001': Blocks dispensing of Beta-lactam antibiotics (e.g. Amoxicillin) when patient has documented Penicillin allergy.,2026-01-01T08:15:00,PrescriptionAllergyConflictDetected
+dec-30,finance.invoices:ent-0343476c,GENERATE_INVOICE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T08:15:00,GENERATE_INVOICE_Executed
+dec-31,pharmacy.prescriptions:rx-001,VERIFY_PRESCRIPTION,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T08:15:00,VERIFY_PRESCRIPTION_Executed
+dec-32,pharmacy.prescriptions:rx-001,CONFIRM_MEDICINE_DISPENSE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T08:15:00,CONFIRM_MEDICINE_DISPENSE_Executed
+dec-33,clinical.encounters:enc-78b6ce33,CREATE_CLINICAL_ALERT,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T08:17:00,CREATE_CLINICAL_ALERT_Executed
+dec-34,clinical.encounters:enc-78b6ce33,CREATE_CLINICAL_ALERT,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T08:17:00,CREATE_CLINICAL_ALERT_Executed
+dec-35,clinical.encounters:enc-78b6ce33,CREATE_CLINICAL_ALERT,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T08:17:00,CREATE_CLINICAL_ALERT_Executed
+dec-36,clinical.appointments:apt-748e2f93,START_DOCTOR_CONSULTATION,RULE-WORK-OPD-010,ALLOWED,Rule check passed,2026-01-01T08:20:00,EncounterStarted
+dec-37,pharmacy.prescriptions:rx-871db8b3,VERIFY_PRESCRIPTION,RULE-STATE-RX-020,ALLOWED,Rule check passed,2026-01-01T08:20:00,PrescriptionVerified
+dec-38,pharmacy.prescriptions:rx-871db8b3,VERIFY_PRESCRIPTION,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T08:20:00,VERIFY_PRESCRIPTION_Executed
+dec-39,pharmacy.prescriptions:rx-871db8b3,VERIFY_PRESCRIPTION,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T08:20:00,VERIFY_PRESCRIPTION_Executed
+dec-40,pharmacy.prescriptions:rx-001,VERIFY_PRESCRIPTION,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T08:20:00,VERIFY_PRESCRIPTION_Executed
+dec-41,pharmacy.prescriptions:rx-001,CONFIRM_MEDICINE_DISPENSE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T08:20:00,CONFIRM_MEDICINE_DISPENSE_Executed
+dec-42,pharmacy.prescriptions:rx-001,CONFIRM_MEDICINE_DISPENSE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T08:20:00,CONFIRM_MEDICINE_DISPENSE_Executed
+dec-43,clinical.appointments:apt-b243ad71,START_DOCTOR_CONSULTATION,RULE-WORK-OPD-010,ALLOWED,Rule check passed,2026-01-01T08:25:00,EncounterStarted
+dec-44,radiology.radiology_orders:rad-apt-7a,ACQUIRE_RADIOLOGY_IMAGE,RULE-STATE-RAD-010,ALLOWED,Rule check passed,2026-01-01T08:25:00,RadiologyImageAcquired
+dec-45,pharmacy.prescriptions:rx-a7e6a0d0,VERIFY_PRESCRIPTION,RULE-STATE-RX-020,ALLOWED,Rule check passed,2026-01-01T08:25:00,PrescriptionVerified
+dec-46,pharmacy.prescriptions:rx-871db8b3,CONFIRM_MEDICINE_DISPENSE,RULE-GLOB-STOCK-001,BLOCKED,Action 'CONFIRM_MEDICINE_DISPENSE' BLOCKED by LEVEL_1_SYSTEM_INTEGRITY rule 'RULE-GLOB-STOCK-001': Blocks medication dispensing if requested quantity exceeds available inventory batch stock.,2026-01-01T08:25:00,InventoryShortageDetected
+dec-47,pharmacy.prescriptions:rx-871db8b3,CONFIRM_MEDICINE_DISPENSE,RULE-GLOB-STOCK-001,BLOCKED,Action 'CONFIRM_MEDICINE_DISPENSE' BLOCKED by LEVEL_1_SYSTEM_INTEGRITY rule 'RULE-GLOB-STOCK-001': Blocks medication dispensing if requested quantity exceeds available inventory batch stock.,2026-01-01T08:25:00,InventoryShortageDetected
+dec-48,pharmacy.prescriptions:rx-871db8b3,CONFIRM_MEDICINE_DISPENSE,RULE-GLOB-STOCK-001,BLOCKED,Action 'CONFIRM_MEDICINE_DISPENSE' BLOCKED by LEVEL_1_SYSTEM_INTEGRITY rule 'RULE-GLOB-STOCK-001': Blocks medication dispensing if requested quantity exceeds available inventory batch stock.,2026-01-01T08:25:00,InventoryShortageDetected
+dec-49,pharmacy.prescriptions:rx-a7e6a0d0,VERIFY_PRESCRIPTION,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T08:25:00,VERIFY_PRESCRIPTION_Executed
+dec-50,pharmacy.prescriptions:rx-a7e6a0d0,VERIFY_PRESCRIPTION,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T08:25:00,VERIFY_PRESCRIPTION_Executed
+dec-51,pharmacy.prescriptions:rx-871db8b3,CONFIRM_MEDICINE_DISPENSE,RULE-GLOB-STOCK-001,BLOCKED,Action 'CONFIRM_MEDICINE_DISPENSE' BLOCKED by LEVEL_1_SYSTEM_INTEGRITY rule 'RULE-GLOB-STOCK-001': Blocks medication dispensing if requested quantity exceeds available inventory batch stock.,2026-01-01T08:25:00,InventoryShortageDetected
+dec-52,pharmacy.prescriptions:rx-001,VERIFY_PRESCRIPTION,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T08:25:00,VERIFY_PRESCRIPTION_Executed
+dec-53,pharmacy.prescriptions:rx-001,CONFIRM_MEDICINE_DISPENSE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T08:25:00,CONFIRM_MEDICINE_DISPENSE_Executed
+dec-54,pharmacy.prescriptions:rx-001,CONFIRM_MEDICINE_DISPENSE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T08:25:00,CONFIRM_MEDICINE_DISPENSE_Executed
+dec-55,clinical.encounters:enc-f2a39aab,CREATE_CLINICAL_ALERT,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T08:27:00,CREATE_CLINICAL_ALERT_Executed
+dec-56,clinical.encounters:enc-f2a39aab,CREATE_CLINICAL_ALERT,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T08:27:00,CREATE_CLINICAL_ALERT_Executed
+dec-57,clinical.encounters:enc-f2a39aab,CREATE_CLINICAL_ALERT,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T08:27:00,CREATE_CLINICAL_ALERT_Executed
+dec-58,clinical.encounters:enc-f2a39aab,CREATE_CLINICAL_ALERT,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T08:27:00,CREATE_CLINICAL_ALERT_Executed
+dec-59,clinical.appointments:apt-32c36ee6,START_DOCTOR_CONSULTATION,RULE-WORK-OPD-010,ALLOWED,Rule check passed,2026-01-01T08:30:00,EncounterStarted
+dec-60,pharmacy.prescriptions:rx-a7e6a0d0,CONFIRM_MEDICINE_DISPENSE,RULE-STATE-RX-021,ALLOWED,Rule check passed,2026-01-01T08:30:00,MedicineDispensed
+dec-61,pharmacy.prescriptions:rx-a7e6a0d0,CONFIRM_MEDICINE_DISPENSE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T08:30:00,CONFIRM_MEDICINE_DISPENSE_Executed
+dec-62,pharmacy.prescriptions:rx-a7e6a0d0,CONFIRM_MEDICINE_DISPENSE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T08:30:00,CONFIRM_MEDICINE_DISPENSE_Executed
+dec-63,pharmacy.prescriptions:rx-a7e6a0d0,CONFIRM_MEDICINE_DISPENSE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T08:30:00,CONFIRM_MEDICINE_DISPENSE_Executed
+dec-64,pharmacy.prescriptions:rx-001,VERIFY_PRESCRIPTION,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T08:30:00,VERIFY_PRESCRIPTION_Executed
+dec-65,pharmacy.prescriptions:rx-001,CONFIRM_MEDICINE_DISPENSE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T08:30:00,CONFIRM_MEDICINE_DISPENSE_Executed
+dec-66,finance.invoices:inv-001,GENERATE_INVOICE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T08:30:00,GENERATE_INVOICE_Executed
+dec-67,clinical.appointments:apt-dc41334b,START_DOCTOR_CONSULTATION,RULE-WORK-OPD-010,ALLOWED,Rule check passed,2026-01-01T08:35:00,EncounterStarted
+dec-68,laboratory.laboratory_orders:lab-apt-b2,COLLECT_LAB_SAMPLE,RULE-STATE-LAB-010,ALLOWED,Rule check passed,2026-01-01T08:35:00,LabSampleCollected
+dec-69,laboratory.laboratory_orders:lab-apt-b2,COLLECT_LAB_SAMPLE,RULE-STATE-LAB-011,BLOCKED,Action 'COLLECT_LAB_SAMPLE' BLOCKED by LEVEL_3_DEPARTMENT_WORKFLOW rule 'RULE-STATE-LAB-011': Blocks sample collection if lab order is not in Ordered state.,2026-01-01T08:35:00,COLLECT_LAB_SAMPLE_Blocked
+dec-70,laboratory.laboratory_orders:lab-apt-b2,COLLECT_LAB_SAMPLE,RULE-STATE-LAB-011,BLOCKED,Action 'COLLECT_LAB_SAMPLE' BLOCKED by LEVEL_3_DEPARTMENT_WORKFLOW rule 'RULE-STATE-LAB-011': Blocks sample collection if lab order is not in Ordered state.,2026-01-01T08:35:00,COLLECT_LAB_SAMPLE_Blocked
+dec-71,pharmacy.prescriptions:rx-91828656,VERIFY_PRESCRIPTION,RULE-CLIN-ALLERGY-001,BLOCKED,Action 'VERIFY_PRESCRIPTION' BLOCKED by LEVEL_2_CLINICAL_SAFETY rule 'RULE-CLIN-ALLERGY-001': Blocks dispensing of Beta-lactam antibiotics (e.g. Amoxicillin) when patient has documented Penicillin allergy.,2026-01-01T08:35:00,PrescriptionAllergyConflictDetected
+dec-72,finance.invoices:ent-5ad96c85,GENERATE_INVOICE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T08:35:00,GENERATE_INVOICE_Executed
+dec-73,finance.invoices:ent-15ffdb8c,GENERATE_INVOICE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T08:35:00,GENERATE_INVOICE_Executed
+dec-74,finance.invoices:ent-a7457dbf,GENERATE_INVOICE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T08:35:00,GENERATE_INVOICE_Executed
+dec-75,finance.invoices:ent-b37f15fd,GENERATE_INVOICE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T08:35:00,GENERATE_INVOICE_Executed
+dec-76,pharmacy.prescriptions:rx-91828656,VERIFY_PRESCRIPTION,RULE-CLIN-ALLERGY-001,BLOCKED,Action 'VERIFY_PRESCRIPTION' BLOCKED by LEVEL_2_CLINICAL_SAFETY rule 'RULE-CLIN-ALLERGY-001': Blocks dispensing of Beta-lactam antibiotics (e.g. Amoxicillin) when patient has documented Penicillin allergy.,2026-01-01T08:35:00,PrescriptionAllergyConflictDetected
+dec-77,pharmacy.prescriptions:rx-91828656,VERIFY_PRESCRIPTION,RULE-CLIN-ALLERGY-001,BLOCKED,Action 'VERIFY_PRESCRIPTION' BLOCKED by LEVEL_2_CLINICAL_SAFETY rule 'RULE-CLIN-ALLERGY-001': Blocks dispensing of Beta-lactam antibiotics (e.g. Amoxicillin) when patient has documented Penicillin allergy.,2026-01-01T08:35:00,PrescriptionAllergyConflictDetected
+dec-78,finance.invoices:ent-b085a846,GENERATE_INVOICE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T08:35:00,GENERATE_INVOICE_Executed
+dec-79,pharmacy.prescriptions:rx-001,VERIFY_PRESCRIPTION,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T08:35:00,VERIFY_PRESCRIPTION_Executed
+dec-80,pharmacy.prescriptions:rx-001,CONFIRM_MEDICINE_DISPENSE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T08:35:00,CONFIRM_MEDICINE_DISPENSE_Executed
+dec-81,clinical.encounters:enc-d5e4bf84,CREATE_CLINICAL_ALERT,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T08:37:00,CREATE_CLINICAL_ALERT_Executed
+dec-82,clinical.encounters:enc-d5e4bf84,CREATE_CLINICAL_ALERT,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T08:37:00,CREATE_CLINICAL_ALERT_Executed
+dec-83,clinical.encounters:enc-d5e4bf84,CREATE_CLINICAL_ALERT,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T08:37:00,CREATE_CLINICAL_ALERT_Executed
+dec-84,clinical.appointments:apt-2726dacd,START_DOCTOR_CONSULTATION,RULE-WORK-OPD-010,ALLOWED,Rule check passed,2026-01-01T08:40:00,EncounterStarted
+dec-85,pharmacy.prescriptions:rx-903f01cb,VERIFY_PRESCRIPTION,RULE-STATE-RX-020,ALLOWED,Rule check passed,2026-01-01T08:40:00,PrescriptionVerified
+dec-86,pharmacy.prescriptions:rx-903f01cb,VERIFY_PRESCRIPTION,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T08:40:00,VERIFY_PRESCRIPTION_Executed
+dec-87,pharmacy.prescriptions:rx-903f01cb,VERIFY_PRESCRIPTION,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T08:40:00,VERIFY_PRESCRIPTION_Executed
+dec-88,pharmacy.prescriptions:rx-001,VERIFY_PRESCRIPTION,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T08:40:00,VERIFY_PRESCRIPTION_Executed
+dec-89,pharmacy.prescriptions:rx-001,CONFIRM_MEDICINE_DISPENSE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T08:40:00,CONFIRM_MEDICINE_DISPENSE_Executed
+dec-90,pharmacy.prescriptions:rx-001,CONFIRM_MEDICINE_DISPENSE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T08:40:00,CONFIRM_MEDICINE_DISPENSE_Executed
+dec-91,clinical.appointments:apt-8d58fd7e,START_DOCTOR_CONSULTATION,RULE-WORK-OPD-010,ALLOWED,Rule check passed,2026-01-01T08:45:00,EncounterStarted
+dec-92,radiology.radiology_orders:rad-apt-b2,ACQUIRE_RADIOLOGY_IMAGE,RULE-STATE-RAD-010,ALLOWED,Rule check passed,2026-01-01T08:45:00,RadiologyImageAcquired
+dec-93,pharmacy.prescriptions:rx-5843e9fb,VERIFY_PRESCRIPTION,RULE-STATE-RX-020,ALLOWED,Rule check passed,2026-01-01T08:45:00,PrescriptionVerified
+dec-94,pharmacy.prescriptions:rx-903f01cb,CONFIRM_MEDICINE_DISPENSE,RULE-GLOB-STOCK-001,BLOCKED,Action 'CONFIRM_MEDICINE_DISPENSE' BLOCKED by LEVEL_1_SYSTEM_INTEGRITY rule 'RULE-GLOB-STOCK-001': Blocks medication dispensing if requested quantity exceeds available inventory batch stock.,2026-01-01T08:45:00,InventoryShortageDetected
+dec-95,pharmacy.prescriptions:rx-903f01cb,CONFIRM_MEDICINE_DISPENSE,RULE-GLOB-STOCK-001,BLOCKED,Action 'CONFIRM_MEDICINE_DISPENSE' BLOCKED by LEVEL_1_SYSTEM_INTEGRITY rule 'RULE-GLOB-STOCK-001': Blocks medication dispensing if requested quantity exceeds available inventory batch stock.,2026-01-01T08:45:00,InventoryShortageDetected
+dec-96,pharmacy.prescriptions:rx-903f01cb,CONFIRM_MEDICINE_DISPENSE,RULE-GLOB-STOCK-001,BLOCKED,Action 'CONFIRM_MEDICINE_DISPENSE' BLOCKED by LEVEL_1_SYSTEM_INTEGRITY rule 'RULE-GLOB-STOCK-001': Blocks medication dispensing if requested quantity exceeds available inventory batch stock.,2026-01-01T08:45:00,InventoryShortageDetected
+dec-97,pharmacy.prescriptions:rx-5843e9fb,VERIFY_PRESCRIPTION,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T08:45:00,VERIFY_PRESCRIPTION_Executed
+dec-98,pharmacy.prescriptions:rx-5843e9fb,VERIFY_PRESCRIPTION,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T08:45:00,VERIFY_PRESCRIPTION_Executed
+dec-99,pharmacy.prescriptions:rx-903f01cb,CONFIRM_MEDICINE_DISPENSE,RULE-GLOB-STOCK-001,BLOCKED,Action 'CONFIRM_MEDICINE_DISPENSE' BLOCKED by LEVEL_1_SYSTEM_INTEGRITY rule 'RULE-GLOB-STOCK-001': Blocks medication dispensing if requested quantity exceeds available inventory batch stock.,2026-01-01T08:45:00,InventoryShortageDetected
+dec-100,pharmacy.prescriptions:rx-001,VERIFY_PRESCRIPTION,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T08:45:00,VERIFY_PRESCRIPTION_Executed
+dec-101,pharmacy.prescriptions:rx-001,CONFIRM_MEDICINE_DISPENSE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T08:45:00,CONFIRM_MEDICINE_DISPENSE_Executed
+dec-102,pharmacy.prescriptions:rx-001,CONFIRM_MEDICINE_DISPENSE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T08:45:00,CONFIRM_MEDICINE_DISPENSE_Executed
+dec-103,clinical.encounters:enc-875f9663,CREATE_CLINICAL_ALERT,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T08:47:00,CREATE_CLINICAL_ALERT_Executed
+dec-104,clinical.encounters:enc-875f9663,CREATE_CLINICAL_ALERT,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T08:47:00,CREATE_CLINICAL_ALERT_Executed
+dec-105,clinical.encounters:enc-875f9663,CREATE_CLINICAL_ALERT,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T08:47:00,CREATE_CLINICAL_ALERT_Executed
+dec-106,clinical.encounters:enc-875f9663,CREATE_CLINICAL_ALERT,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T08:47:00,CREATE_CLINICAL_ALERT_Executed
+dec-107,clinical.appointments:apt-e1302090,START_DOCTOR_CONSULTATION,RULE-WORK-OPD-010,ALLOWED,Rule check passed,2026-01-01T08:50:00,EncounterStarted
+dec-108,pharmacy.prescriptions:rx-5843e9fb,CONFIRM_MEDICINE_DISPENSE,RULE-STATE-RX-021,ALLOWED,Rule check passed,2026-01-01T08:50:00,MedicineDispensed
+dec-109,pharmacy.prescriptions:rx-5843e9fb,CONFIRM_MEDICINE_DISPENSE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T08:50:00,CONFIRM_MEDICINE_DISPENSE_Executed
+dec-110,pharmacy.prescriptions:rx-5843e9fb,CONFIRM_MEDICINE_DISPENSE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T08:50:00,CONFIRM_MEDICINE_DISPENSE_Executed
+dec-111,pharmacy.prescriptions:rx-5843e9fb,CONFIRM_MEDICINE_DISPENSE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T08:50:00,CONFIRM_MEDICINE_DISPENSE_Executed
+dec-112,pharmacy.prescriptions:rx-001,VERIFY_PRESCRIPTION,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T08:50:00,VERIFY_PRESCRIPTION_Executed
+dec-113,pharmacy.prescriptions:rx-001,CONFIRM_MEDICINE_DISPENSE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T08:50:00,CONFIRM_MEDICINE_DISPENSE_Executed
+dec-114,finance.invoices:inv-001,GENERATE_INVOICE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T08:50:00,GENERATE_INVOICE_Executed
+dec-115,clinical.appointments:apt-35739d32,START_DOCTOR_CONSULTATION,RULE-WORK-OPD-010,ALLOWED,Rule check passed,2026-01-01T08:55:00,EncounterStarted
+dec-116,laboratory.laboratory_orders:lab-apt-8d,COLLECT_LAB_SAMPLE,RULE-STATE-LAB-010,ALLOWED,Rule check passed,2026-01-01T08:55:00,LabSampleCollected
+dec-117,laboratory.laboratory_orders:lab-apt-8d,COLLECT_LAB_SAMPLE,RULE-STATE-LAB-011,BLOCKED,Action 'COLLECT_LAB_SAMPLE' BLOCKED by LEVEL_3_DEPARTMENT_WORKFLOW rule 'RULE-STATE-LAB-011': Blocks sample collection if lab order is not in Ordered state.,2026-01-01T08:55:00,COLLECT_LAB_SAMPLE_Blocked
+dec-118,laboratory.laboratory_orders:lab-apt-8d,COLLECT_LAB_SAMPLE,RULE-STATE-LAB-011,BLOCKED,Action 'COLLECT_LAB_SAMPLE' BLOCKED by LEVEL_3_DEPARTMENT_WORKFLOW rule 'RULE-STATE-LAB-011': Blocks sample collection if lab order is not in Ordered state.,2026-01-01T08:55:00,COLLECT_LAB_SAMPLE_Blocked
+dec-119,pharmacy.prescriptions:rx-1df53127,VERIFY_PRESCRIPTION,RULE-CLIN-ALLERGY-001,BLOCKED,Action 'VERIFY_PRESCRIPTION' BLOCKED by LEVEL_2_CLINICAL_SAFETY rule 'RULE-CLIN-ALLERGY-001': Blocks dispensing of Beta-lactam antibiotics (e.g. Amoxicillin) when patient has documented Penicillin allergy.,2026-01-01T08:55:00,PrescriptionAllergyConflictDetected
+dec-120,finance.invoices:ent-2d267abe,GENERATE_INVOICE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T08:55:00,GENERATE_INVOICE_Executed
+dec-121,finance.invoices:ent-bd68a2de,GENERATE_INVOICE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T08:55:00,GENERATE_INVOICE_Executed
+dec-122,finance.invoices:ent-9d4cef41,GENERATE_INVOICE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T08:55:00,GENERATE_INVOICE_Executed
+dec-123,finance.invoices:ent-7623433f,GENERATE_INVOICE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T08:55:00,GENERATE_INVOICE_Executed
+dec-124,pharmacy.prescriptions:rx-1df53127,VERIFY_PRESCRIPTION,RULE-CLIN-ALLERGY-001,BLOCKED,Action 'VERIFY_PRESCRIPTION' BLOCKED by LEVEL_2_CLINICAL_SAFETY rule 'RULE-CLIN-ALLERGY-001': Blocks dispensing of Beta-lactam antibiotics (e.g. Amoxicillin) when patient has documented Penicillin allergy.,2026-01-01T08:55:00,PrescriptionAllergyConflictDetected
+dec-125,pharmacy.prescriptions:rx-1df53127,VERIFY_PRESCRIPTION,RULE-CLIN-ALLERGY-001,BLOCKED,Action 'VERIFY_PRESCRIPTION' BLOCKED by LEVEL_2_CLINICAL_SAFETY rule 'RULE-CLIN-ALLERGY-001': Blocks dispensing of Beta-lactam antibiotics (e.g. Amoxicillin) when patient has documented Penicillin allergy.,2026-01-01T08:55:00,PrescriptionAllergyConflictDetected
+dec-126,finance.invoices:ent-824def59,GENERATE_INVOICE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T08:55:00,GENERATE_INVOICE_Executed
+dec-127,pharmacy.prescriptions:rx-001,VERIFY_PRESCRIPTION,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T08:55:00,VERIFY_PRESCRIPTION_Executed
+dec-128,pharmacy.prescriptions:rx-001,CONFIRM_MEDICINE_DISPENSE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T08:55:00,CONFIRM_MEDICINE_DISPENSE_Executed
+dec-129,clinical.encounters:enc-4fea6db6,CREATE_CLINICAL_ALERT,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T08:57:00,CREATE_CLINICAL_ALERT_Executed
+dec-130,clinical.encounters:enc-4fea6db6,CREATE_CLINICAL_ALERT,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T08:57:00,CREATE_CLINICAL_ALERT_Executed
+dec-131,clinical.encounters:enc-4fea6db6,CREATE_CLINICAL_ALERT,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T08:57:00,CREATE_CLINICAL_ALERT_Executed
+dec-132,clinical.appointments:apt-828da6a1,START_DOCTOR_CONSULTATION,RULE-WORK-OPD-010,ALLOWED,Rule check passed,2026-01-01T09:00:00,EncounterStarted
+dec-133,pharmacy.prescriptions:rx-25014a19,VERIFY_PRESCRIPTION,RULE-STATE-RX-020,ALLOWED,Rule check passed,2026-01-01T09:00:00,PrescriptionVerified
+dec-134,pharmacy.prescriptions:rx-25014a19,VERIFY_PRESCRIPTION,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T09:00:00,VERIFY_PRESCRIPTION_Executed
+dec-135,pharmacy.prescriptions:rx-25014a19,VERIFY_PRESCRIPTION,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T09:00:00,VERIFY_PRESCRIPTION_Executed
+dec-136,pharmacy.prescriptions:rx-001,VERIFY_PRESCRIPTION,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T09:00:00,VERIFY_PRESCRIPTION_Executed
+dec-137,pharmacy.prescriptions:rx-001,CONFIRM_MEDICINE_DISPENSE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T09:00:00,CONFIRM_MEDICINE_DISPENSE_Executed
+dec-138,pharmacy.prescriptions:rx-001,CONFIRM_MEDICINE_DISPENSE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T09:00:00,CONFIRM_MEDICINE_DISPENSE_Executed
+dec-139,clinical.appointments:apt-6bba2eac,START_DOCTOR_CONSULTATION,RULE-WORK-OPD-010,ALLOWED,Rule check passed,2026-01-01T09:05:00,EncounterStarted
+dec-140,radiology.radiology_orders:rad-apt-8d,ACQUIRE_RADIOLOGY_IMAGE,RULE-STATE-RAD-010,ALLOWED,Rule check passed,2026-01-01T09:05:00,RadiologyImageAcquired
+dec-141,pharmacy.prescriptions:rx-2f8ae30b,VERIFY_PRESCRIPTION,RULE-STATE-RX-020,ALLOWED,Rule check passed,2026-01-01T09:05:00,PrescriptionVerified
+dec-142,pharmacy.prescriptions:rx-25014a19,CONFIRM_MEDICINE_DISPENSE,RULE-GLOB-STOCK-001,BLOCKED,Action 'CONFIRM_MEDICINE_DISPENSE' BLOCKED by LEVEL_1_SYSTEM_INTEGRITY rule 'RULE-GLOB-STOCK-001': Blocks medication dispensing if requested quantity exceeds available inventory batch stock.,2026-01-01T09:05:00,InventoryShortageDetected
+dec-143,pharmacy.prescriptions:rx-25014a19,CONFIRM_MEDICINE_DISPENSE,RULE-GLOB-STOCK-001,BLOCKED,Action 'CONFIRM_MEDICINE_DISPENSE' BLOCKED by LEVEL_1_SYSTEM_INTEGRITY rule 'RULE-GLOB-STOCK-001': Blocks medication dispensing if requested quantity exceeds available inventory batch stock.,2026-01-01T09:05:00,InventoryShortageDetected
+dec-144,pharmacy.prescriptions:rx-25014a19,CONFIRM_MEDICINE_DISPENSE,RULE-GLOB-STOCK-001,BLOCKED,Action 'CONFIRM_MEDICINE_DISPENSE' BLOCKED by LEVEL_1_SYSTEM_INTEGRITY rule 'RULE-GLOB-STOCK-001': Blocks medication dispensing if requested quantity exceeds available inventory batch stock.,2026-01-01T09:05:00,InventoryShortageDetected
+dec-145,pharmacy.prescriptions:rx-2f8ae30b,VERIFY_PRESCRIPTION,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T09:05:00,VERIFY_PRESCRIPTION_Executed
+dec-146,pharmacy.prescriptions:rx-2f8ae30b,VERIFY_PRESCRIPTION,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T09:05:00,VERIFY_PRESCRIPTION_Executed
+dec-147,pharmacy.prescriptions:rx-25014a19,CONFIRM_MEDICINE_DISPENSE,RULE-GLOB-STOCK-001,BLOCKED,Action 'CONFIRM_MEDICINE_DISPENSE' BLOCKED by LEVEL_1_SYSTEM_INTEGRITY rule 'RULE-GLOB-STOCK-001': Blocks medication dispensing if requested quantity exceeds available inventory batch stock.,2026-01-01T09:05:00,InventoryShortageDetected
+dec-148,pharmacy.prescriptions:rx-001,VERIFY_PRESCRIPTION,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T09:05:00,VERIFY_PRESCRIPTION_Executed
+dec-149,pharmacy.prescriptions:rx-001,CONFIRM_MEDICINE_DISPENSE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T09:05:00,CONFIRM_MEDICINE_DISPENSE_Executed
+dec-150,pharmacy.prescriptions:rx-001,CONFIRM_MEDICINE_DISPENSE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T09:05:00,CONFIRM_MEDICINE_DISPENSE_Executed
+dec-151,clinical.encounters:enc-ef639dc3,CREATE_CLINICAL_ALERT,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T09:07:00,CREATE_CLINICAL_ALERT_Executed
+dec-152,clinical.encounters:enc-ef639dc3,CREATE_CLINICAL_ALERT,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T09:07:00,CREATE_CLINICAL_ALERT_Executed
+dec-153,clinical.encounters:enc-ef639dc3,CREATE_CLINICAL_ALERT,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T09:07:00,CREATE_CLINICAL_ALERT_Executed
+dec-154,clinical.encounters:enc-ef639dc3,CREATE_CLINICAL_ALERT,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T09:07:00,CREATE_CLINICAL_ALERT_Executed
+dec-155,clinical.appointments:apt-8c74e9f4,START_DOCTOR_CONSULTATION,RULE-WORK-OPD-010,ALLOWED,Rule check passed,2026-01-01T09:10:00,EncounterStarted
+dec-156,pharmacy.prescriptions:rx-2f8ae30b,CONFIRM_MEDICINE_DISPENSE,RULE-STATE-RX-021,ALLOWED,Rule check passed,2026-01-01T09:10:00,MedicineDispensed
+dec-157,pharmacy.prescriptions:rx-2f8ae30b,CONFIRM_MEDICINE_DISPENSE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T09:10:00,CONFIRM_MEDICINE_DISPENSE_Executed
+dec-158,pharmacy.prescriptions:rx-2f8ae30b,CONFIRM_MEDICINE_DISPENSE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T09:10:00,CONFIRM_MEDICINE_DISPENSE_Executed
+dec-159,pharmacy.prescriptions:rx-2f8ae30b,CONFIRM_MEDICINE_DISPENSE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T09:10:00,CONFIRM_MEDICINE_DISPENSE_Executed
+dec-160,pharmacy.prescriptions:rx-001,VERIFY_PRESCRIPTION,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T09:10:00,VERIFY_PRESCRIPTION_Executed
+dec-161,pharmacy.prescriptions:rx-001,CONFIRM_MEDICINE_DISPENSE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T09:10:00,CONFIRM_MEDICINE_DISPENSE_Executed
+dec-162,finance.invoices:inv-001,GENERATE_INVOICE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T09:10:00,GENERATE_INVOICE_Executed
+dec-163,clinical.appointments:apt-5a85a094,START_DOCTOR_CONSULTATION,RULE-WORK-OPD-010,ALLOWED,Rule check passed,2026-01-01T09:15:00,EncounterStarted
+dec-164,laboratory.laboratory_orders:lab-apt-6b,COLLECT_LAB_SAMPLE,RULE-STATE-LAB-010,ALLOWED,Rule check passed,2026-01-01T09:15:00,LabSampleCollected
+dec-165,laboratory.laboratory_orders:lab-apt-6b,COLLECT_LAB_SAMPLE,RULE-STATE-LAB-011,BLOCKED,Action 'COLLECT_LAB_SAMPLE' BLOCKED by LEVEL_3_DEPARTMENT_WORKFLOW rule 'RULE-STATE-LAB-011': Blocks sample collection if lab order is not in Ordered state.,2026-01-01T09:15:00,COLLECT_LAB_SAMPLE_Blocked
+dec-166,laboratory.laboratory_orders:lab-apt-6b,COLLECT_LAB_SAMPLE,RULE-STATE-LAB-011,BLOCKED,Action 'COLLECT_LAB_SAMPLE' BLOCKED by LEVEL_3_DEPARTMENT_WORKFLOW rule 'RULE-STATE-LAB-011': Blocks sample collection if lab order is not in Ordered state.,2026-01-01T09:15:00,COLLECT_LAB_SAMPLE_Blocked
+dec-167,pharmacy.prescriptions:rx-46217ddf,VERIFY_PRESCRIPTION,RULE-CLIN-ALLERGY-001,BLOCKED,Action 'VERIFY_PRESCRIPTION' BLOCKED by LEVEL_2_CLINICAL_SAFETY rule 'RULE-CLIN-ALLERGY-001': Blocks dispensing of Beta-lactam antibiotics (e.g. Amoxicillin) when patient has documented Penicillin allergy.,2026-01-01T09:15:00,PrescriptionAllergyConflictDetected
+dec-168,finance.invoices:ent-081b8208,GENERATE_INVOICE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T09:15:00,GENERATE_INVOICE_Executed
+dec-169,finance.invoices:ent-46de4c5e,GENERATE_INVOICE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T09:15:00,GENERATE_INVOICE_Executed
+dec-170,finance.invoices:ent-436adda9,GENERATE_INVOICE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T09:15:00,GENERATE_INVOICE_Executed
+dec-171,finance.invoices:ent-1b7805c8,GENERATE_INVOICE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T09:15:00,GENERATE_INVOICE_Executed
+dec-172,pharmacy.prescriptions:rx-46217ddf,VERIFY_PRESCRIPTION,RULE-CLIN-ALLERGY-001,BLOCKED,Action 'VERIFY_PRESCRIPTION' BLOCKED by LEVEL_2_CLINICAL_SAFETY rule 'RULE-CLIN-ALLERGY-001': Blocks dispensing of Beta-lactam antibiotics (e.g. Amoxicillin) when patient has documented Penicillin allergy.,2026-01-01T09:15:00,PrescriptionAllergyConflictDetected
+dec-173,pharmacy.prescriptions:rx-46217ddf,VERIFY_PRESCRIPTION,RULE-CLIN-ALLERGY-001,BLOCKED,Action 'VERIFY_PRESCRIPTION' BLOCKED by LEVEL_2_CLINICAL_SAFETY rule 'RULE-CLIN-ALLERGY-001': Blocks dispensing of Beta-lactam antibiotics (e.g. Amoxicillin) when patient has documented Penicillin allergy.,2026-01-01T09:15:00,PrescriptionAllergyConflictDetected
+dec-174,finance.invoices:ent-b9da02ad,GENERATE_INVOICE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T09:15:00,GENERATE_INVOICE_Executed
+dec-175,pharmacy.prescriptions:rx-001,VERIFY_PRESCRIPTION,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T09:15:00,VERIFY_PRESCRIPTION_Executed
+dec-176,pharmacy.prescriptions:rx-001,CONFIRM_MEDICINE_DISPENSE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T09:15:00,CONFIRM_MEDICINE_DISPENSE_Executed
+dec-177,clinical.encounters:enc-42e52f82,CREATE_CLINICAL_ALERT,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T09:17:00,CREATE_CLINICAL_ALERT_Executed
+dec-178,clinical.encounters:enc-42e52f82,CREATE_CLINICAL_ALERT,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T09:17:00,CREATE_CLINICAL_ALERT_Executed
+dec-179,clinical.encounters:enc-42e52f82,CREATE_CLINICAL_ALERT,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T09:17:00,CREATE_CLINICAL_ALERT_Executed
+dec-180,clinical.appointments:apt-960feaf6,START_DOCTOR_CONSULTATION,RULE-WORK-OPD-010,ALLOWED,Rule check passed,2026-01-01T09:20:00,EncounterStarted
+dec-181,pharmacy.prescriptions:rx-99912e46,VERIFY_PRESCRIPTION,RULE-STATE-RX-020,ALLOWED,Rule check passed,2026-01-01T09:20:00,PrescriptionVerified
+dec-182,pharmacy.prescriptions:rx-99912e46,VERIFY_PRESCRIPTION,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T09:20:00,VERIFY_PRESCRIPTION_Executed
+dec-183,pharmacy.prescriptions:rx-99912e46,VERIFY_PRESCRIPTION,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T09:20:00,VERIFY_PRESCRIPTION_Executed
+dec-184,pharmacy.prescriptions:rx-001,VERIFY_PRESCRIPTION,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T09:20:00,VERIFY_PRESCRIPTION_Executed
+dec-185,pharmacy.prescriptions:rx-001,CONFIRM_MEDICINE_DISPENSE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T09:20:00,CONFIRM_MEDICINE_DISPENSE_Executed
+dec-186,pharmacy.prescriptions:rx-001,CONFIRM_MEDICINE_DISPENSE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T09:20:00,CONFIRM_MEDICINE_DISPENSE_Executed
+dec-187,clinical.appointments:apt-298dc9b7,START_DOCTOR_CONSULTATION,RULE-WORK-OPD-010,ALLOWED,Rule check passed,2026-01-01T09:25:00,EncounterStarted
+dec-188,radiology.radiology_orders:rad-apt-6b,ACQUIRE_RADIOLOGY_IMAGE,RULE-STATE-RAD-010,ALLOWED,Rule check passed,2026-01-01T09:25:00,RadiologyImageAcquired
+dec-189,pharmacy.prescriptions:rx-e64bf8d8,VERIFY_PRESCRIPTION,RULE-STATE-RX-020,ALLOWED,Rule check passed,2026-01-01T09:25:00,PrescriptionVerified
+dec-190,pharmacy.prescriptions:rx-99912e46,CONFIRM_MEDICINE_DISPENSE,RULE-GLOB-STOCK-001,BLOCKED,Action 'CONFIRM_MEDICINE_DISPENSE' BLOCKED by LEVEL_1_SYSTEM_INTEGRITY rule 'RULE-GLOB-STOCK-001': Blocks medication dispensing if requested quantity exceeds available inventory batch stock.,2026-01-01T09:25:00,InventoryShortageDetected
+dec-191,pharmacy.prescriptions:rx-99912e46,CONFIRM_MEDICINE_DISPENSE,RULE-GLOB-STOCK-001,BLOCKED,Action 'CONFIRM_MEDICINE_DISPENSE' BLOCKED by LEVEL_1_SYSTEM_INTEGRITY rule 'RULE-GLOB-STOCK-001': Blocks medication dispensing if requested quantity exceeds available inventory batch stock.,2026-01-01T09:25:00,InventoryShortageDetected
+dec-192,pharmacy.prescriptions:rx-99912e46,CONFIRM_MEDICINE_DISPENSE,RULE-GLOB-STOCK-001,BLOCKED,Action 'CONFIRM_MEDICINE_DISPENSE' BLOCKED by LEVEL_1_SYSTEM_INTEGRITY rule 'RULE-GLOB-STOCK-001': Blocks medication dispensing if requested quantity exceeds available inventory batch stock.,2026-01-01T09:25:00,InventoryShortageDetected
+dec-193,pharmacy.prescriptions:rx-e64bf8d8,VERIFY_PRESCRIPTION,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T09:25:00,VERIFY_PRESCRIPTION_Executed
+dec-194,pharmacy.prescriptions:rx-e64bf8d8,VERIFY_PRESCRIPTION,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T09:25:00,VERIFY_PRESCRIPTION_Executed
+dec-195,pharmacy.prescriptions:rx-99912e46,CONFIRM_MEDICINE_DISPENSE,RULE-GLOB-STOCK-001,BLOCKED,Action 'CONFIRM_MEDICINE_DISPENSE' BLOCKED by LEVEL_1_SYSTEM_INTEGRITY rule 'RULE-GLOB-STOCK-001': Blocks medication dispensing if requested quantity exceeds available inventory batch stock.,2026-01-01T09:25:00,InventoryShortageDetected
+dec-196,pharmacy.prescriptions:rx-001,VERIFY_PRESCRIPTION,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T09:25:00,VERIFY_PRESCRIPTION_Executed
+dec-197,pharmacy.prescriptions:rx-001,CONFIRM_MEDICINE_DISPENSE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T09:25:00,CONFIRM_MEDICINE_DISPENSE_Executed
+dec-198,pharmacy.prescriptions:rx-001,CONFIRM_MEDICINE_DISPENSE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T09:25:00,CONFIRM_MEDICINE_DISPENSE_Executed
+dec-199,clinical.encounters:enc-5aeeda9f,CREATE_CLINICAL_ALERT,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T09:27:00,CREATE_CLINICAL_ALERT_Executed
+dec-200,clinical.encounters:enc-5aeeda9f,CREATE_CLINICAL_ALERT,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T09:27:00,CREATE_CLINICAL_ALERT_Executed
+dec-201,clinical.encounters:enc-5aeeda9f,CREATE_CLINICAL_ALERT,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T09:27:00,CREATE_CLINICAL_ALERT_Executed
+dec-202,clinical.encounters:enc-5aeeda9f,CREATE_CLINICAL_ALERT,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T09:27:00,CREATE_CLINICAL_ALERT_Executed
+dec-203,clinical.appointments:apt-97c33a1b,START_DOCTOR_CONSULTATION,RULE-WORK-OPD-010,ALLOWED,Rule check passed,2026-01-01T09:30:00,EncounterStarted
+dec-204,pharmacy.prescriptions:rx-e64bf8d8,CONFIRM_MEDICINE_DISPENSE,RULE-STATE-RX-021,ALLOWED,Rule check passed,2026-01-01T09:30:00,MedicineDispensed
+dec-205,pharmacy.prescriptions:rx-e64bf8d8,CONFIRM_MEDICINE_DISPENSE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T09:30:00,CONFIRM_MEDICINE_DISPENSE_Executed
+dec-206,pharmacy.prescriptions:rx-e64bf8d8,CONFIRM_MEDICINE_DISPENSE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T09:30:00,CONFIRM_MEDICINE_DISPENSE_Executed
+dec-207,pharmacy.prescriptions:rx-e64bf8d8,CONFIRM_MEDICINE_DISPENSE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T09:30:00,CONFIRM_MEDICINE_DISPENSE_Executed
+dec-208,pharmacy.prescriptions:rx-001,VERIFY_PRESCRIPTION,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T09:30:00,VERIFY_PRESCRIPTION_Executed
+dec-209,pharmacy.prescriptions:rx-001,CONFIRM_MEDICINE_DISPENSE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T09:30:00,CONFIRM_MEDICINE_DISPENSE_Executed
+dec-210,finance.invoices:inv-001,GENERATE_INVOICE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T09:30:00,GENERATE_INVOICE_Executed
+dec-211,clinical.appointments:apt-f15d356c,START_DOCTOR_CONSULTATION,RULE-WORK-OPD-010,ALLOWED,Rule check passed,2026-01-01T09:35:00,EncounterStarted
+dec-212,laboratory.laboratory_orders:lab-apt-29,COLLECT_LAB_SAMPLE,RULE-STATE-LAB-010,ALLOWED,Rule check passed,2026-01-01T09:35:00,LabSampleCollected
+dec-213,laboratory.laboratory_orders:lab-apt-29,COLLECT_LAB_SAMPLE,RULE-STATE-LAB-011,BLOCKED,Action 'COLLECT_LAB_SAMPLE' BLOCKED by LEVEL_3_DEPARTMENT_WORKFLOW rule 'RULE-STATE-LAB-011': Blocks sample collection if lab order is not in Ordered state.,2026-01-01T09:35:00,COLLECT_LAB_SAMPLE_Blocked
+dec-214,laboratory.laboratory_orders:lab-apt-29,COLLECT_LAB_SAMPLE,RULE-STATE-LAB-011,BLOCKED,Action 'COLLECT_LAB_SAMPLE' BLOCKED by LEVEL_3_DEPARTMENT_WORKFLOW rule 'RULE-STATE-LAB-011': Blocks sample collection if lab order is not in Ordered state.,2026-01-01T09:35:00,COLLECT_LAB_SAMPLE_Blocked
+dec-215,pharmacy.prescriptions:rx-77625cb8,VERIFY_PRESCRIPTION,RULE-CLIN-ALLERGY-001,BLOCKED,Action 'VERIFY_PRESCRIPTION' BLOCKED by LEVEL_2_CLINICAL_SAFETY rule 'RULE-CLIN-ALLERGY-001': Blocks dispensing of Beta-lactam antibiotics (e.g. Amoxicillin) when patient has documented Penicillin allergy.,2026-01-01T09:35:00,PrescriptionAllergyConflictDetected
+dec-216,finance.invoices:ent-bd765286,GENERATE_INVOICE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T09:35:00,GENERATE_INVOICE_Executed
+dec-217,finance.invoices:ent-1d64c613,GENERATE_INVOICE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T09:35:00,GENERATE_INVOICE_Executed
+dec-218,finance.invoices:ent-f2f4ee9d,GENERATE_INVOICE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T09:35:00,GENERATE_INVOICE_Executed
+dec-219,finance.invoices:ent-96ddfc50,GENERATE_INVOICE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T09:35:00,GENERATE_INVOICE_Executed
+dec-220,pharmacy.prescriptions:rx-77625cb8,VERIFY_PRESCRIPTION,RULE-CLIN-ALLERGY-001,BLOCKED,Action 'VERIFY_PRESCRIPTION' BLOCKED by LEVEL_2_CLINICAL_SAFETY rule 'RULE-CLIN-ALLERGY-001': Blocks dispensing of Beta-lactam antibiotics (e.g. Amoxicillin) when patient has documented Penicillin allergy.,2026-01-01T09:35:00,PrescriptionAllergyConflictDetected
+dec-221,pharmacy.prescriptions:rx-77625cb8,VERIFY_PRESCRIPTION,RULE-CLIN-ALLERGY-001,BLOCKED,Action 'VERIFY_PRESCRIPTION' BLOCKED by LEVEL_2_CLINICAL_SAFETY rule 'RULE-CLIN-ALLERGY-001': Blocks dispensing of Beta-lactam antibiotics (e.g. Amoxicillin) when patient has documented Penicillin allergy.,2026-01-01T09:35:00,PrescriptionAllergyConflictDetected
+dec-222,finance.invoices:ent-e24e5d41,GENERATE_INVOICE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T09:35:00,GENERATE_INVOICE_Executed
+dec-223,pharmacy.prescriptions:rx-001,VERIFY_PRESCRIPTION,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T09:35:00,VERIFY_PRESCRIPTION_Executed
+dec-224,pharmacy.prescriptions:rx-001,CONFIRM_MEDICINE_DISPENSE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T09:35:00,CONFIRM_MEDICINE_DISPENSE_Executed
+dec-225,clinical.encounters:enc-a48e242f,CREATE_CLINICAL_ALERT,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T09:37:00,CREATE_CLINICAL_ALERT_Executed
+dec-226,clinical.encounters:enc-a48e242f,CREATE_CLINICAL_ALERT,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T09:37:00,CREATE_CLINICAL_ALERT_Executed
+dec-227,clinical.encounters:enc-a48e242f,CREATE_CLINICAL_ALERT,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T09:37:00,CREATE_CLINICAL_ALERT_Executed
+dec-228,clinical.appointments:apt-4182307e,START_DOCTOR_CONSULTATION,RULE-WORK-OPD-010,ALLOWED,Rule check passed,2026-01-01T09:40:00,EncounterStarted
+dec-229,pharmacy.prescriptions:rx-87cc0c71,VERIFY_PRESCRIPTION,RULE-STATE-RX-020,ALLOWED,Rule check passed,2026-01-01T09:40:00,PrescriptionVerified
+dec-230,pharmacy.prescriptions:rx-87cc0c71,VERIFY_PRESCRIPTION,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T09:40:00,VERIFY_PRESCRIPTION_Executed
+dec-231,pharmacy.prescriptions:rx-87cc0c71,VERIFY_PRESCRIPTION,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T09:40:00,VERIFY_PRESCRIPTION_Executed
+dec-232,pharmacy.prescriptions:rx-001,VERIFY_PRESCRIPTION,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T09:40:00,VERIFY_PRESCRIPTION_Executed
+dec-233,pharmacy.prescriptions:rx-001,CONFIRM_MEDICINE_DISPENSE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T09:40:00,CONFIRM_MEDICINE_DISPENSE_Executed
+dec-234,pharmacy.prescriptions:rx-001,CONFIRM_MEDICINE_DISPENSE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T09:40:00,CONFIRM_MEDICINE_DISPENSE_Executed
+dec-235,clinical.appointments:apt-d2165004,START_DOCTOR_CONSULTATION,RULE-WORK-OPD-010,ALLOWED,Rule check passed,2026-01-01T09:45:00,EncounterStarted
+dec-236,radiology.radiology_orders:rad-apt-29,ACQUIRE_RADIOLOGY_IMAGE,RULE-STATE-RAD-010,ALLOWED,Rule check passed,2026-01-01T09:45:00,RadiologyImageAcquired
+dec-237,pharmacy.prescriptions:rx-280fe7fc,VERIFY_PRESCRIPTION,RULE-STATE-RX-020,ALLOWED,Rule check passed,2026-01-01T09:45:00,PrescriptionVerified
+dec-238,pharmacy.prescriptions:rx-87cc0c71,CONFIRM_MEDICINE_DISPENSE,RULE-GLOB-STOCK-001,BLOCKED,Action 'CONFIRM_MEDICINE_DISPENSE' BLOCKED by LEVEL_1_SYSTEM_INTEGRITY rule 'RULE-GLOB-STOCK-001': Blocks medication dispensing if requested quantity exceeds available inventory batch stock.,2026-01-01T09:45:00,InventoryShortageDetected
+dec-239,pharmacy.prescriptions:rx-87cc0c71,CONFIRM_MEDICINE_DISPENSE,RULE-GLOB-STOCK-001,BLOCKED,Action 'CONFIRM_MEDICINE_DISPENSE' BLOCKED by LEVEL_1_SYSTEM_INTEGRITY rule 'RULE-GLOB-STOCK-001': Blocks medication dispensing if requested quantity exceeds available inventory batch stock.,2026-01-01T09:45:00,InventoryShortageDetected
+dec-240,pharmacy.prescriptions:rx-87cc0c71,CONFIRM_MEDICINE_DISPENSE,RULE-GLOB-STOCK-001,BLOCKED,Action 'CONFIRM_MEDICINE_DISPENSE' BLOCKED by LEVEL_1_SYSTEM_INTEGRITY rule 'RULE-GLOB-STOCK-001': Blocks medication dispensing if requested quantity exceeds available inventory batch stock.,2026-01-01T09:45:00,InventoryShortageDetected
+dec-241,pharmacy.prescriptions:rx-280fe7fc,VERIFY_PRESCRIPTION,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T09:45:00,VERIFY_PRESCRIPTION_Executed
+dec-242,pharmacy.prescriptions:rx-280fe7fc,VERIFY_PRESCRIPTION,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T09:45:00,VERIFY_PRESCRIPTION_Executed
+dec-243,pharmacy.prescriptions:rx-87cc0c71,CONFIRM_MEDICINE_DISPENSE,RULE-GLOB-STOCK-001,BLOCKED,Action 'CONFIRM_MEDICINE_DISPENSE' BLOCKED by LEVEL_1_SYSTEM_INTEGRITY rule 'RULE-GLOB-STOCK-001': Blocks medication dispensing if requested quantity exceeds available inventory batch stock.,2026-01-01T09:45:00,InventoryShortageDetected
+dec-244,pharmacy.prescriptions:rx-001,VERIFY_PRESCRIPTION,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T09:45:00,VERIFY_PRESCRIPTION_Executed
+dec-245,pharmacy.prescriptions:rx-001,CONFIRM_MEDICINE_DISPENSE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T09:45:00,CONFIRM_MEDICINE_DISPENSE_Executed
+dec-246,pharmacy.prescriptions:rx-001,CONFIRM_MEDICINE_DISPENSE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T09:45:00,CONFIRM_MEDICINE_DISPENSE_Executed
+dec-247,clinical.encounters:enc-47c3b9d6,CREATE_CLINICAL_ALERT,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T09:47:00,CREATE_CLINICAL_ALERT_Executed
+dec-248,clinical.encounters:enc-47c3b9d6,CREATE_CLINICAL_ALERT,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T09:47:00,CREATE_CLINICAL_ALERT_Executed
+dec-249,clinical.encounters:enc-47c3b9d6,CREATE_CLINICAL_ALERT,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T09:47:00,CREATE_CLINICAL_ALERT_Executed
+dec-250,clinical.encounters:enc-47c3b9d6,CREATE_CLINICAL_ALERT,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T09:47:00,CREATE_CLINICAL_ALERT_Executed
+dec-251,clinical.appointments:apt-be751c5b,START_DOCTOR_CONSULTATION,RULE-WORK-OPD-010,ALLOWED,Rule check passed,2026-01-01T09:50:00,EncounterStarted
+dec-252,pharmacy.prescriptions:rx-280fe7fc,CONFIRM_MEDICINE_DISPENSE,RULE-STATE-RX-021,ALLOWED,Rule check passed,2026-01-01T09:50:00,MedicineDispensed
+dec-253,pharmacy.prescriptions:rx-280fe7fc,CONFIRM_MEDICINE_DISPENSE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T09:50:00,CONFIRM_MEDICINE_DISPENSE_Executed
+dec-254,pharmacy.prescriptions:rx-280fe7fc,CONFIRM_MEDICINE_DISPENSE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T09:50:00,CONFIRM_MEDICINE_DISPENSE_Executed
+dec-255,pharmacy.prescriptions:rx-280fe7fc,CONFIRM_MEDICINE_DISPENSE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T09:50:00,CONFIRM_MEDICINE_DISPENSE_Executed
+dec-256,pharmacy.prescriptions:rx-001,VERIFY_PRESCRIPTION,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T09:50:00,VERIFY_PRESCRIPTION_Executed
+dec-257,pharmacy.prescriptions:rx-001,CONFIRM_MEDICINE_DISPENSE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T09:50:00,CONFIRM_MEDICINE_DISPENSE_Executed
+dec-258,finance.invoices:inv-001,GENERATE_INVOICE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T09:50:00,GENERATE_INVOICE_Executed
+dec-259,clinical.appointments:apt-6488ee36,START_DOCTOR_CONSULTATION,RULE-WORK-OPD-010,ALLOWED,Rule check passed,2026-01-01T09:55:00,EncounterStarted
+dec-260,laboratory.laboratory_orders:lab-apt-d2,COLLECT_LAB_SAMPLE,RULE-STATE-LAB-010,ALLOWED,Rule check passed,2026-01-01T09:55:00,LabSampleCollected
+dec-261,laboratory.laboratory_orders:lab-apt-d2,COLLECT_LAB_SAMPLE,RULE-STATE-LAB-011,BLOCKED,Action 'COLLECT_LAB_SAMPLE' BLOCKED by LEVEL_3_DEPARTMENT_WORKFLOW rule 'RULE-STATE-LAB-011': Blocks sample collection if lab order is not in Ordered state.,2026-01-01T09:55:00,COLLECT_LAB_SAMPLE_Blocked
+dec-262,laboratory.laboratory_orders:lab-apt-d2,COLLECT_LAB_SAMPLE,RULE-STATE-LAB-011,BLOCKED,Action 'COLLECT_LAB_SAMPLE' BLOCKED by LEVEL_3_DEPARTMENT_WORKFLOW rule 'RULE-STATE-LAB-011': Blocks sample collection if lab order is not in Ordered state.,2026-01-01T09:55:00,COLLECT_LAB_SAMPLE_Blocked
+dec-263,pharmacy.prescriptions:rx-d013cb4b,VERIFY_PRESCRIPTION,RULE-CLIN-ALLERGY-001,BLOCKED,Action 'VERIFY_PRESCRIPTION' BLOCKED by LEVEL_2_CLINICAL_SAFETY rule 'RULE-CLIN-ALLERGY-001': Blocks dispensing of Beta-lactam antibiotics (e.g. Amoxicillin) when patient has documented Penicillin allergy.,2026-01-01T09:55:00,PrescriptionAllergyConflictDetected
+dec-264,finance.invoices:ent-cb53c31c,GENERATE_INVOICE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T09:55:00,GENERATE_INVOICE_Executed
+dec-265,finance.invoices:ent-6e9a76b4,GENERATE_INVOICE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T09:55:00,GENERATE_INVOICE_Executed
+dec-266,finance.invoices:ent-f5ae667d,GENERATE_INVOICE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T09:55:00,GENERATE_INVOICE_Executed
+dec-267,finance.invoices:ent-c8ba620a,GENERATE_INVOICE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T09:55:00,GENERATE_INVOICE_Executed
+dec-268,pharmacy.prescriptions:rx-d013cb4b,VERIFY_PRESCRIPTION,RULE-CLIN-ALLERGY-001,BLOCKED,Action 'VERIFY_PRESCRIPTION' BLOCKED by LEVEL_2_CLINICAL_SAFETY rule 'RULE-CLIN-ALLERGY-001': Blocks dispensing of Beta-lactam antibiotics (e.g. Amoxicillin) when patient has documented Penicillin allergy.,2026-01-01T09:55:00,PrescriptionAllergyConflictDetected
+dec-269,pharmacy.prescriptions:rx-d013cb4b,VERIFY_PRESCRIPTION,RULE-CLIN-ALLERGY-001,BLOCKED,Action 'VERIFY_PRESCRIPTION' BLOCKED by LEVEL_2_CLINICAL_SAFETY rule 'RULE-CLIN-ALLERGY-001': Blocks dispensing of Beta-lactam antibiotics (e.g. Amoxicillin) when patient has documented Penicillin allergy.,2026-01-01T09:55:00,PrescriptionAllergyConflictDetected
+dec-270,finance.invoices:ent-80da9cf0,GENERATE_INVOICE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T09:55:00,GENERATE_INVOICE_Executed
+dec-271,pharmacy.prescriptions:rx-001,VERIFY_PRESCRIPTION,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T09:55:00,VERIFY_PRESCRIPTION_Executed
+dec-272,pharmacy.prescriptions:rx-001,CONFIRM_MEDICINE_DISPENSE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T09:55:00,CONFIRM_MEDICINE_DISPENSE_Executed
+dec-273,clinical.encounters:enc-0a7230db,CREATE_CLINICAL_ALERT,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T09:57:00,CREATE_CLINICAL_ALERT_Executed
+dec-274,clinical.encounters:enc-0a7230db,CREATE_CLINICAL_ALERT,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T09:57:00,CREATE_CLINICAL_ALERT_Executed
+dec-275,clinical.encounters:enc-0a7230db,CREATE_CLINICAL_ALERT,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T09:57:00,CREATE_CLINICAL_ALERT_Executed
+dec-276,clinical.appointments:apt-d17ceaad,START_DOCTOR_CONSULTATION,RULE-WORK-OPD-010,ALLOWED,Rule check passed,2026-01-01T10:00:00,EncounterStarted
+dec-277,pharmacy.prescriptions:rx-b51cdd8b,VERIFY_PRESCRIPTION,RULE-STATE-RX-020,ALLOWED,Rule check passed,2026-01-01T10:00:00,PrescriptionVerified
+dec-278,pharmacy.prescriptions:rx-b51cdd8b,VERIFY_PRESCRIPTION,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T10:00:00,VERIFY_PRESCRIPTION_Executed
+dec-279,pharmacy.prescriptions:rx-b51cdd8b,VERIFY_PRESCRIPTION,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T10:00:00,VERIFY_PRESCRIPTION_Executed
+dec-280,pharmacy.prescriptions:rx-001,VERIFY_PRESCRIPTION,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T10:00:00,VERIFY_PRESCRIPTION_Executed
+dec-281,pharmacy.prescriptions:rx-001,CONFIRM_MEDICINE_DISPENSE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T10:00:00,CONFIRM_MEDICINE_DISPENSE_Executed
+dec-282,pharmacy.prescriptions:rx-001,CONFIRM_MEDICINE_DISPENSE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T10:00:00,CONFIRM_MEDICINE_DISPENSE_Executed
+dec-283,clinical.appointments:apt-e2e24d10,START_DOCTOR_CONSULTATION,RULE-WORK-OPD-010,ALLOWED,Rule check passed,2026-01-01T10:05:00,EncounterStarted
+dec-284,radiology.radiology_orders:rad-apt-d2,ACQUIRE_RADIOLOGY_IMAGE,RULE-STATE-RAD-010,ALLOWED,Rule check passed,2026-01-01T10:05:00,RadiologyImageAcquired
+dec-285,pharmacy.prescriptions:rx-e24b0646,VERIFY_PRESCRIPTION,RULE-STATE-RX-020,ALLOWED,Rule check passed,2026-01-01T10:05:00,PrescriptionVerified
+dec-286,pharmacy.prescriptions:rx-b51cdd8b,CONFIRM_MEDICINE_DISPENSE,RULE-GLOB-STOCK-001,BLOCKED,Action 'CONFIRM_MEDICINE_DISPENSE' BLOCKED by LEVEL_1_SYSTEM_INTEGRITY rule 'RULE-GLOB-STOCK-001': Blocks medication dispensing if requested quantity exceeds available inventory batch stock.,2026-01-01T10:05:00,InventoryShortageDetected
+dec-287,pharmacy.prescriptions:rx-b51cdd8b,CONFIRM_MEDICINE_DISPENSE,RULE-GLOB-STOCK-001,BLOCKED,Action 'CONFIRM_MEDICINE_DISPENSE' BLOCKED by LEVEL_1_SYSTEM_INTEGRITY rule 'RULE-GLOB-STOCK-001': Blocks medication dispensing if requested quantity exceeds available inventory batch stock.,2026-01-01T10:05:00,InventoryShortageDetected
+dec-288,pharmacy.prescriptions:rx-b51cdd8b,CONFIRM_MEDICINE_DISPENSE,RULE-GLOB-STOCK-001,BLOCKED,Action 'CONFIRM_MEDICINE_DISPENSE' BLOCKED by LEVEL_1_SYSTEM_INTEGRITY rule 'RULE-GLOB-STOCK-001': Blocks medication dispensing if requested quantity exceeds available inventory batch stock.,2026-01-01T10:05:00,InventoryShortageDetected
+dec-289,pharmacy.prescriptions:rx-e24b0646,VERIFY_PRESCRIPTION,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T10:05:00,VERIFY_PRESCRIPTION_Executed
+dec-290,pharmacy.prescriptions:rx-e24b0646,VERIFY_PRESCRIPTION,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T10:05:00,VERIFY_PRESCRIPTION_Executed
+dec-291,pharmacy.prescriptions:rx-b51cdd8b,CONFIRM_MEDICINE_DISPENSE,RULE-GLOB-STOCK-001,BLOCKED,Action 'CONFIRM_MEDICINE_DISPENSE' BLOCKED by LEVEL_1_SYSTEM_INTEGRITY rule 'RULE-GLOB-STOCK-001': Blocks medication dispensing if requested quantity exceeds available inventory batch stock.,2026-01-01T10:05:00,InventoryShortageDetected
+dec-292,pharmacy.prescriptions:rx-001,VERIFY_PRESCRIPTION,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T10:05:00,VERIFY_PRESCRIPTION_Executed
+dec-293,pharmacy.prescriptions:rx-001,CONFIRM_MEDICINE_DISPENSE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T10:05:00,CONFIRM_MEDICINE_DISPENSE_Executed
+dec-294,pharmacy.prescriptions:rx-001,CONFIRM_MEDICINE_DISPENSE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T10:05:00,CONFIRM_MEDICINE_DISPENSE_Executed
+dec-295,clinical.encounters:enc-eb7f5f60,CREATE_CLINICAL_ALERT,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T10:07:00,CREATE_CLINICAL_ALERT_Executed
+dec-296,clinical.encounters:enc-eb7f5f60,CREATE_CLINICAL_ALERT,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T10:07:00,CREATE_CLINICAL_ALERT_Executed
+dec-297,clinical.encounters:enc-eb7f5f60,CREATE_CLINICAL_ALERT,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T10:07:00,CREATE_CLINICAL_ALERT_Executed
+dec-298,clinical.encounters:enc-eb7f5f60,CREATE_CLINICAL_ALERT,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T10:07:00,CREATE_CLINICAL_ALERT_Executed
+dec-299,clinical.appointments:apt-e09afd46,START_DOCTOR_CONSULTATION,RULE-WORK-OPD-010,ALLOWED,Rule check passed,2026-01-01T10:10:00,EncounterStarted
+dec-300,pharmacy.prescriptions:rx-e24b0646,CONFIRM_MEDICINE_DISPENSE,RULE-STATE-RX-021,ALLOWED,Rule check passed,2026-01-01T10:10:00,MedicineDispensed
+dec-301,pharmacy.prescriptions:rx-e24b0646,CONFIRM_MEDICINE_DISPENSE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T10:10:00,CONFIRM_MEDICINE_DISPENSE_Executed
+dec-302,pharmacy.prescriptions:rx-e24b0646,CONFIRM_MEDICINE_DISPENSE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T10:10:00,CONFIRM_MEDICINE_DISPENSE_Executed
+dec-303,pharmacy.prescriptions:rx-e24b0646,CONFIRM_MEDICINE_DISPENSE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T10:10:00,CONFIRM_MEDICINE_DISPENSE_Executed
+dec-304,pharmacy.prescriptions:rx-001,VERIFY_PRESCRIPTION,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T10:10:00,VERIFY_PRESCRIPTION_Executed
+dec-305,pharmacy.prescriptions:rx-001,CONFIRM_MEDICINE_DISPENSE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T10:10:00,CONFIRM_MEDICINE_DISPENSE_Executed
+dec-306,finance.invoices:inv-001,GENERATE_INVOICE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T10:10:00,GENERATE_INVOICE_Executed
+dec-307,clinical.appointments:apt-9629ddfc,START_DOCTOR_CONSULTATION,RULE-WORK-OPD-010,ALLOWED,Rule check passed,2026-01-01T10:15:00,EncounterStarted
+dec-308,laboratory.laboratory_orders:lab-apt-e2,COLLECT_LAB_SAMPLE,RULE-STATE-LAB-010,ALLOWED,Rule check passed,2026-01-01T10:15:00,LabSampleCollected
+dec-309,laboratory.laboratory_orders:lab-apt-e2,COLLECT_LAB_SAMPLE,RULE-STATE-LAB-011,BLOCKED,Action 'COLLECT_LAB_SAMPLE' BLOCKED by LEVEL_3_DEPARTMENT_WORKFLOW rule 'RULE-STATE-LAB-011': Blocks sample collection if lab order is not in Ordered state.,2026-01-01T10:15:00,COLLECT_LAB_SAMPLE_Blocked
+dec-310,laboratory.laboratory_orders:lab-apt-e2,COLLECT_LAB_SAMPLE,RULE-STATE-LAB-011,BLOCKED,Action 'COLLECT_LAB_SAMPLE' BLOCKED by LEVEL_3_DEPARTMENT_WORKFLOW rule 'RULE-STATE-LAB-011': Blocks sample collection if lab order is not in Ordered state.,2026-01-01T10:15:00,COLLECT_LAB_SAMPLE_Blocked
+dec-311,pharmacy.prescriptions:rx-0c262b4b,VERIFY_PRESCRIPTION,RULE-CLIN-ALLERGY-001,BLOCKED,Action 'VERIFY_PRESCRIPTION' BLOCKED by LEVEL_2_CLINICAL_SAFETY rule 'RULE-CLIN-ALLERGY-001': Blocks dispensing of Beta-lactam antibiotics (e.g. Amoxicillin) when patient has documented Penicillin allergy.,2026-01-01T10:15:00,PrescriptionAllergyConflictDetected
+dec-312,finance.invoices:ent-c9e93cb9,GENERATE_INVOICE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T10:15:00,GENERATE_INVOICE_Executed
+dec-313,finance.invoices:ent-af1b5a7b,GENERATE_INVOICE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T10:15:00,GENERATE_INVOICE_Executed
+dec-314,finance.invoices:ent-e35b7190,GENERATE_INVOICE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T10:15:00,GENERATE_INVOICE_Executed
+dec-315,finance.invoices:ent-147fd9b4,GENERATE_INVOICE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T10:15:00,GENERATE_INVOICE_Executed
+dec-316,pharmacy.prescriptions:rx-0c262b4b,VERIFY_PRESCRIPTION,RULE-CLIN-ALLERGY-001,BLOCKED,Action 'VERIFY_PRESCRIPTION' BLOCKED by LEVEL_2_CLINICAL_SAFETY rule 'RULE-CLIN-ALLERGY-001': Blocks dispensing of Beta-lactam antibiotics (e.g. Amoxicillin) when patient has documented Penicillin allergy.,2026-01-01T10:15:00,PrescriptionAllergyConflictDetected
+dec-317,pharmacy.prescriptions:rx-0c262b4b,VERIFY_PRESCRIPTION,RULE-CLIN-ALLERGY-001,BLOCKED,Action 'VERIFY_PRESCRIPTION' BLOCKED by LEVEL_2_CLINICAL_SAFETY rule 'RULE-CLIN-ALLERGY-001': Blocks dispensing of Beta-lactam antibiotics (e.g. Amoxicillin) when patient has documented Penicillin allergy.,2026-01-01T10:15:00,PrescriptionAllergyConflictDetected
+dec-318,finance.invoices:ent-54a5475f,GENERATE_INVOICE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T10:15:00,GENERATE_INVOICE_Executed
+dec-319,pharmacy.prescriptions:rx-001,VERIFY_PRESCRIPTION,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T10:15:00,VERIFY_PRESCRIPTION_Executed
+dec-320,pharmacy.prescriptions:rx-001,CONFIRM_MEDICINE_DISPENSE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T10:15:00,CONFIRM_MEDICINE_DISPENSE_Executed
+dec-321,clinical.encounters:enc-6f47770e,CREATE_CLINICAL_ALERT,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T10:17:00,CREATE_CLINICAL_ALERT_Executed
+dec-322,clinical.encounters:enc-6f47770e,CREATE_CLINICAL_ALERT,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T10:17:00,CREATE_CLINICAL_ALERT_Executed
+dec-323,clinical.encounters:enc-6f47770e,CREATE_CLINICAL_ALERT,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T10:17:00,CREATE_CLINICAL_ALERT_Executed
+dec-324,clinical.appointments:apt-65b1cb80,START_DOCTOR_CONSULTATION,RULE-WORK-OPD-010,ALLOWED,Rule check passed,2026-01-01T10:20:00,EncounterStarted
+dec-325,pharmacy.prescriptions:rx-ef5385a3,VERIFY_PRESCRIPTION,RULE-STATE-RX-020,ALLOWED,Rule check passed,2026-01-01T10:20:00,PrescriptionVerified
+dec-326,pharmacy.prescriptions:rx-ef5385a3,VERIFY_PRESCRIPTION,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T10:20:00,VERIFY_PRESCRIPTION_Executed
+dec-327,pharmacy.prescriptions:rx-ef5385a3,VERIFY_PRESCRIPTION,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T10:20:00,VERIFY_PRESCRIPTION_Executed
+dec-328,pharmacy.prescriptions:rx-001,VERIFY_PRESCRIPTION,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T10:20:00,VERIFY_PRESCRIPTION_Executed
+dec-329,pharmacy.prescriptions:rx-001,CONFIRM_MEDICINE_DISPENSE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T10:20:00,CONFIRM_MEDICINE_DISPENSE_Executed
+dec-330,pharmacy.prescriptions:rx-001,CONFIRM_MEDICINE_DISPENSE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T10:20:00,CONFIRM_MEDICINE_DISPENSE_Executed
+dec-331,clinical.appointments:apt-86aea2db,START_DOCTOR_CONSULTATION,RULE-WORK-OPD-010,ALLOWED,Rule check passed,2026-01-01T10:25:00,EncounterStarted
+dec-332,radiology.radiology_orders:rad-apt-e2,ACQUIRE_RADIOLOGY_IMAGE,RULE-STATE-RAD-010,ALLOWED,Rule check passed,2026-01-01T10:25:00,RadiologyImageAcquired
+dec-333,pharmacy.prescriptions:rx-c3ee3eb0,VERIFY_PRESCRIPTION,RULE-STATE-RX-020,ALLOWED,Rule check passed,2026-01-01T10:25:00,PrescriptionVerified
+dec-334,pharmacy.prescriptions:rx-ef5385a3,CONFIRM_MEDICINE_DISPENSE,RULE-GLOB-STOCK-001,BLOCKED,Action 'CONFIRM_MEDICINE_DISPENSE' BLOCKED by LEVEL_1_SYSTEM_INTEGRITY rule 'RULE-GLOB-STOCK-001': Blocks medication dispensing if requested quantity exceeds available inventory batch stock.,2026-01-01T10:25:00,InventoryShortageDetected
+dec-335,pharmacy.prescriptions:rx-ef5385a3,CONFIRM_MEDICINE_DISPENSE,RULE-GLOB-STOCK-001,BLOCKED,Action 'CONFIRM_MEDICINE_DISPENSE' BLOCKED by LEVEL_1_SYSTEM_INTEGRITY rule 'RULE-GLOB-STOCK-001': Blocks medication dispensing if requested quantity exceeds available inventory batch stock.,2026-01-01T10:25:00,InventoryShortageDetected
+dec-336,pharmacy.prescriptions:rx-ef5385a3,CONFIRM_MEDICINE_DISPENSE,RULE-GLOB-STOCK-001,BLOCKED,Action 'CONFIRM_MEDICINE_DISPENSE' BLOCKED by LEVEL_1_SYSTEM_INTEGRITY rule 'RULE-GLOB-STOCK-001': Blocks medication dispensing if requested quantity exceeds available inventory batch stock.,2026-01-01T10:25:00,InventoryShortageDetected
+dec-337,pharmacy.prescriptions:rx-c3ee3eb0,VERIFY_PRESCRIPTION,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T10:25:00,VERIFY_PRESCRIPTION_Executed
+dec-338,pharmacy.prescriptions:rx-c3ee3eb0,VERIFY_PRESCRIPTION,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T10:25:00,VERIFY_PRESCRIPTION_Executed
+dec-339,pharmacy.prescriptions:rx-ef5385a3,CONFIRM_MEDICINE_DISPENSE,RULE-GLOB-STOCK-001,BLOCKED,Action 'CONFIRM_MEDICINE_DISPENSE' BLOCKED by LEVEL_1_SYSTEM_INTEGRITY rule 'RULE-GLOB-STOCK-001': Blocks medication dispensing if requested quantity exceeds available inventory batch stock.,2026-01-01T10:25:00,InventoryShortageDetected
+dec-340,pharmacy.prescriptions:rx-001,VERIFY_PRESCRIPTION,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T10:25:00,VERIFY_PRESCRIPTION_Executed
+dec-341,pharmacy.prescriptions:rx-001,CONFIRM_MEDICINE_DISPENSE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T10:25:00,CONFIRM_MEDICINE_DISPENSE_Executed
+dec-342,pharmacy.prescriptions:rx-001,CONFIRM_MEDICINE_DISPENSE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T10:25:00,CONFIRM_MEDICINE_DISPENSE_Executed
+dec-343,clinical.encounters:enc-49cab98f,CREATE_CLINICAL_ALERT,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T10:27:00,CREATE_CLINICAL_ALERT_Executed
+dec-344,clinical.encounters:enc-49cab98f,CREATE_CLINICAL_ALERT,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T10:27:00,CREATE_CLINICAL_ALERT_Executed
+dec-345,clinical.encounters:enc-49cab98f,CREATE_CLINICAL_ALERT,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T10:27:00,CREATE_CLINICAL_ALERT_Executed
+dec-346,clinical.encounters:enc-49cab98f,CREATE_CLINICAL_ALERT,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T10:27:00,CREATE_CLINICAL_ALERT_Executed
+dec-347,clinical.appointments:apt-50a42b65,START_DOCTOR_CONSULTATION,RULE-WORK-OPD-010,ALLOWED,Rule check passed,2026-01-01T10:30:00,EncounterStarted
+dec-348,pharmacy.prescriptions:rx-c3ee3eb0,CONFIRM_MEDICINE_DISPENSE,RULE-STATE-RX-021,ALLOWED,Rule check passed,2026-01-01T10:30:00,MedicineDispensed
+dec-349,pharmacy.prescriptions:rx-c3ee3eb0,CONFIRM_MEDICINE_DISPENSE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T10:30:00,CONFIRM_MEDICINE_DISPENSE_Executed
+dec-350,pharmacy.prescriptions:rx-c3ee3eb0,CONFIRM_MEDICINE_DISPENSE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T10:30:00,CONFIRM_MEDICINE_DISPENSE_Executed
+dec-351,pharmacy.prescriptions:rx-c3ee3eb0,CONFIRM_MEDICINE_DISPENSE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T10:30:00,CONFIRM_MEDICINE_DISPENSE_Executed
+dec-352,pharmacy.prescriptions:rx-001,VERIFY_PRESCRIPTION,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T10:30:00,VERIFY_PRESCRIPTION_Executed
+dec-353,pharmacy.prescriptions:rx-001,CONFIRM_MEDICINE_DISPENSE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T10:30:00,CONFIRM_MEDICINE_DISPENSE_Executed
+dec-354,finance.invoices:inv-001,GENERATE_INVOICE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T10:30:00,GENERATE_INVOICE_Executed
+dec-355,clinical.appointments:apt-f6f14a05,START_DOCTOR_CONSULTATION,RULE-WORK-OPD-010,ALLOWED,Rule check passed,2026-01-01T10:35:00,EncounterStarted
+dec-356,laboratory.laboratory_orders:lab-apt-86,COLLECT_LAB_SAMPLE,RULE-STATE-LAB-010,ALLOWED,Rule check passed,2026-01-01T10:35:00,LabSampleCollected
+dec-357,laboratory.laboratory_orders:lab-apt-86,COLLECT_LAB_SAMPLE,RULE-STATE-LAB-011,BLOCKED,Action 'COLLECT_LAB_SAMPLE' BLOCKED by LEVEL_3_DEPARTMENT_WORKFLOW rule 'RULE-STATE-LAB-011': Blocks sample collection if lab order is not in Ordered state.,2026-01-01T10:35:00,COLLECT_LAB_SAMPLE_Blocked
+dec-358,laboratory.laboratory_orders:lab-apt-86,COLLECT_LAB_SAMPLE,RULE-STATE-LAB-011,BLOCKED,Action 'COLLECT_LAB_SAMPLE' BLOCKED by LEVEL_3_DEPARTMENT_WORKFLOW rule 'RULE-STATE-LAB-011': Blocks sample collection if lab order is not in Ordered state.,2026-01-01T10:35:00,COLLECT_LAB_SAMPLE_Blocked
+dec-359,pharmacy.prescriptions:rx-47a58857,VERIFY_PRESCRIPTION,RULE-CLIN-ALLERGY-001,BLOCKED,Action 'VERIFY_PRESCRIPTION' BLOCKED by LEVEL_2_CLINICAL_SAFETY rule 'RULE-CLIN-ALLERGY-001': Blocks dispensing of Beta-lactam antibiotics (e.g. Amoxicillin) when patient has documented Penicillin allergy.,2026-01-01T10:35:00,PrescriptionAllergyConflictDetected
+dec-360,finance.invoices:ent-1d0d40b1,GENERATE_INVOICE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T10:35:00,GENERATE_INVOICE_Executed
+dec-361,finance.invoices:ent-44b161f3,GENERATE_INVOICE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T10:35:00,GENERATE_INVOICE_Executed
+dec-362,finance.invoices:ent-0747d50a,GENERATE_INVOICE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T10:35:00,GENERATE_INVOICE_Executed
+dec-363,finance.invoices:ent-5999a58e,GENERATE_INVOICE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T10:35:00,GENERATE_INVOICE_Executed
+dec-364,pharmacy.prescriptions:rx-47a58857,VERIFY_PRESCRIPTION,RULE-CLIN-ALLERGY-001,BLOCKED,Action 'VERIFY_PRESCRIPTION' BLOCKED by LEVEL_2_CLINICAL_SAFETY rule 'RULE-CLIN-ALLERGY-001': Blocks dispensing of Beta-lactam antibiotics (e.g. Amoxicillin) when patient has documented Penicillin allergy.,2026-01-01T10:35:00,PrescriptionAllergyConflictDetected
+dec-365,pharmacy.prescriptions:rx-47a58857,VERIFY_PRESCRIPTION,RULE-CLIN-ALLERGY-001,BLOCKED,Action 'VERIFY_PRESCRIPTION' BLOCKED by LEVEL_2_CLINICAL_SAFETY rule 'RULE-CLIN-ALLERGY-001': Blocks dispensing of Beta-lactam antibiotics (e.g. Amoxicillin) when patient has documented Penicillin allergy.,2026-01-01T10:35:00,PrescriptionAllergyConflictDetected
+dec-366,finance.invoices:ent-1f769abf,GENERATE_INVOICE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T10:35:00,GENERATE_INVOICE_Executed
+dec-367,pharmacy.prescriptions:rx-001,VERIFY_PRESCRIPTION,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T10:35:00,VERIFY_PRESCRIPTION_Executed
+dec-368,pharmacy.prescriptions:rx-001,CONFIRM_MEDICINE_DISPENSE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T10:35:00,CONFIRM_MEDICINE_DISPENSE_Executed
+dec-369,clinical.encounters:enc-3d3a0660,CREATE_CLINICAL_ALERT,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T10:37:00,CREATE_CLINICAL_ALERT_Executed
+dec-370,clinical.encounters:enc-3d3a0660,CREATE_CLINICAL_ALERT,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T10:37:00,CREATE_CLINICAL_ALERT_Executed
+dec-371,clinical.encounters:enc-3d3a0660,CREATE_CLINICAL_ALERT,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T10:37:00,CREATE_CLINICAL_ALERT_Executed
+dec-372,clinical.appointments:apt-5cdb0be6,START_DOCTOR_CONSULTATION,RULE-WORK-OPD-010,ALLOWED,Rule check passed,2026-01-01T10:40:00,EncounterStarted
+dec-373,pharmacy.prescriptions:rx-9a39135b,VERIFY_PRESCRIPTION,RULE-STATE-RX-020,ALLOWED,Rule check passed,2026-01-01T10:40:00,PrescriptionVerified
+dec-374,pharmacy.prescriptions:rx-9a39135b,VERIFY_PRESCRIPTION,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T10:40:00,VERIFY_PRESCRIPTION_Executed
+dec-375,pharmacy.prescriptions:rx-9a39135b,VERIFY_PRESCRIPTION,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T10:40:00,VERIFY_PRESCRIPTION_Executed
+dec-376,pharmacy.prescriptions:rx-001,VERIFY_PRESCRIPTION,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T10:40:00,VERIFY_PRESCRIPTION_Executed
+dec-377,pharmacy.prescriptions:rx-001,CONFIRM_MEDICINE_DISPENSE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T10:40:00,CONFIRM_MEDICINE_DISPENSE_Executed
+dec-378,pharmacy.prescriptions:rx-001,CONFIRM_MEDICINE_DISPENSE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T10:40:00,CONFIRM_MEDICINE_DISPENSE_Executed
+dec-379,clinical.appointments:apt-f4ee0a2d,START_DOCTOR_CONSULTATION,RULE-WORK-OPD-010,ALLOWED,Rule check passed,2026-01-01T10:45:00,EncounterStarted
+dec-380,radiology.radiology_orders:rad-apt-86,ACQUIRE_RADIOLOGY_IMAGE,RULE-STATE-RAD-010,ALLOWED,Rule check passed,2026-01-01T10:45:00,RadiologyImageAcquired
+dec-381,pharmacy.prescriptions:rx-48ad968a,VERIFY_PRESCRIPTION,RULE-STATE-RX-020,ALLOWED,Rule check passed,2026-01-01T10:45:00,PrescriptionVerified
+dec-382,pharmacy.prescriptions:rx-9a39135b,CONFIRM_MEDICINE_DISPENSE,RULE-GLOB-STOCK-001,BLOCKED,Action 'CONFIRM_MEDICINE_DISPENSE' BLOCKED by LEVEL_1_SYSTEM_INTEGRITY rule 'RULE-GLOB-STOCK-001': Blocks medication dispensing if requested quantity exceeds available inventory batch stock.,2026-01-01T10:45:00,InventoryShortageDetected
+dec-383,pharmacy.prescriptions:rx-9a39135b,CONFIRM_MEDICINE_DISPENSE,RULE-GLOB-STOCK-001,BLOCKED,Action 'CONFIRM_MEDICINE_DISPENSE' BLOCKED by LEVEL_1_SYSTEM_INTEGRITY rule 'RULE-GLOB-STOCK-001': Blocks medication dispensing if requested quantity exceeds available inventory batch stock.,2026-01-01T10:45:00,InventoryShortageDetected
+dec-384,pharmacy.prescriptions:rx-9a39135b,CONFIRM_MEDICINE_DISPENSE,RULE-GLOB-STOCK-001,BLOCKED,Action 'CONFIRM_MEDICINE_DISPENSE' BLOCKED by LEVEL_1_SYSTEM_INTEGRITY rule 'RULE-GLOB-STOCK-001': Blocks medication dispensing if requested quantity exceeds available inventory batch stock.,2026-01-01T10:45:00,InventoryShortageDetected
+dec-385,pharmacy.prescriptions:rx-48ad968a,VERIFY_PRESCRIPTION,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T10:45:00,VERIFY_PRESCRIPTION_Executed
+dec-386,pharmacy.prescriptions:rx-48ad968a,VERIFY_PRESCRIPTION,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T10:45:00,VERIFY_PRESCRIPTION_Executed
+dec-387,pharmacy.prescriptions:rx-9a39135b,CONFIRM_MEDICINE_DISPENSE,RULE-GLOB-STOCK-001,BLOCKED,Action 'CONFIRM_MEDICINE_DISPENSE' BLOCKED by LEVEL_1_SYSTEM_INTEGRITY rule 'RULE-GLOB-STOCK-001': Blocks medication dispensing if requested quantity exceeds available inventory batch stock.,2026-01-01T10:45:00,InventoryShortageDetected
+dec-388,pharmacy.prescriptions:rx-001,VERIFY_PRESCRIPTION,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T10:45:00,VERIFY_PRESCRIPTION_Executed
+dec-389,pharmacy.prescriptions:rx-001,CONFIRM_MEDICINE_DISPENSE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T10:45:00,CONFIRM_MEDICINE_DISPENSE_Executed
+dec-390,pharmacy.prescriptions:rx-001,CONFIRM_MEDICINE_DISPENSE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T10:45:00,CONFIRM_MEDICINE_DISPENSE_Executed
+dec-391,clinical.encounters:enc-fbbad4e9,CREATE_CLINICAL_ALERT,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T10:47:00,CREATE_CLINICAL_ALERT_Executed
+dec-392,clinical.encounters:enc-fbbad4e9,CREATE_CLINICAL_ALERT,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T10:47:00,CREATE_CLINICAL_ALERT_Executed
+dec-393,clinical.encounters:enc-fbbad4e9,CREATE_CLINICAL_ALERT,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T10:47:00,CREATE_CLINICAL_ALERT_Executed
+dec-394,clinical.encounters:enc-fbbad4e9,CREATE_CLINICAL_ALERT,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T10:47:00,CREATE_CLINICAL_ALERT_Executed
+dec-395,clinical.appointments:apt-aa003140,START_DOCTOR_CONSULTATION,RULE-WORK-OPD-010,ALLOWED,Rule check passed,2026-01-01T10:50:00,EncounterStarted
+dec-396,pharmacy.prescriptions:rx-48ad968a,CONFIRM_MEDICINE_DISPENSE,RULE-STATE-RX-021,ALLOWED,Rule check passed,2026-01-01T10:50:00,MedicineDispensed
+dec-397,pharmacy.prescriptions:rx-48ad968a,CONFIRM_MEDICINE_DISPENSE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T10:50:00,CONFIRM_MEDICINE_DISPENSE_Executed
+dec-398,pharmacy.prescriptions:rx-48ad968a,CONFIRM_MEDICINE_DISPENSE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T10:50:00,CONFIRM_MEDICINE_DISPENSE_Executed
+dec-399,pharmacy.prescriptions:rx-48ad968a,CONFIRM_MEDICINE_DISPENSE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T10:50:00,CONFIRM_MEDICINE_DISPENSE_Executed
+dec-400,pharmacy.prescriptions:rx-001,VERIFY_PRESCRIPTION,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T10:50:00,VERIFY_PRESCRIPTION_Executed
+dec-401,pharmacy.prescriptions:rx-001,CONFIRM_MEDICINE_DISPENSE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T10:50:00,CONFIRM_MEDICINE_DISPENSE_Executed
+dec-402,finance.invoices:inv-001,GENERATE_INVOICE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T10:50:00,GENERATE_INVOICE_Executed
+dec-403,clinical.appointments:apt-755f04d2,START_DOCTOR_CONSULTATION,RULE-WORK-OPD-010,ALLOWED,Rule check passed,2026-01-01T10:55:00,EncounterStarted
+dec-404,laboratory.laboratory_orders:lab-apt-f4,COLLECT_LAB_SAMPLE,RULE-STATE-LAB-010,ALLOWED,Rule check passed,2026-01-01T10:55:00,LabSampleCollected
+dec-405,laboratory.laboratory_orders:lab-apt-f4,COLLECT_LAB_SAMPLE,RULE-STATE-LAB-011,BLOCKED,Action 'COLLECT_LAB_SAMPLE' BLOCKED by LEVEL_3_DEPARTMENT_WORKFLOW rule 'RULE-STATE-LAB-011': Blocks sample collection if lab order is not in Ordered state.,2026-01-01T10:55:00,COLLECT_LAB_SAMPLE_Blocked
+dec-406,laboratory.laboratory_orders:lab-apt-f4,COLLECT_LAB_SAMPLE,RULE-STATE-LAB-011,BLOCKED,Action 'COLLECT_LAB_SAMPLE' BLOCKED by LEVEL_3_DEPARTMENT_WORKFLOW rule 'RULE-STATE-LAB-011': Blocks sample collection if lab order is not in Ordered state.,2026-01-01T10:55:00,COLLECT_LAB_SAMPLE_Blocked
+dec-407,pharmacy.prescriptions:rx-cc09f05d,VERIFY_PRESCRIPTION,RULE-CLIN-ALLERGY-001,BLOCKED,Action 'VERIFY_PRESCRIPTION' BLOCKED by LEVEL_2_CLINICAL_SAFETY rule 'RULE-CLIN-ALLERGY-001': Blocks dispensing of Beta-lactam antibiotics (e.g. Amoxicillin) when patient has documented Penicillin allergy.,2026-01-01T10:55:00,PrescriptionAllergyConflictDetected
+dec-408,finance.invoices:ent-d552bea7,GENERATE_INVOICE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T10:55:00,GENERATE_INVOICE_Executed
+dec-409,finance.invoices:ent-41947655,GENERATE_INVOICE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T10:55:00,GENERATE_INVOICE_Executed
+dec-410,finance.invoices:ent-55886d7c,GENERATE_INVOICE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T10:55:00,GENERATE_INVOICE_Executed
+dec-411,finance.invoices:ent-e1c4fc49,GENERATE_INVOICE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T10:55:00,GENERATE_INVOICE_Executed
+dec-412,pharmacy.prescriptions:rx-cc09f05d,VERIFY_PRESCRIPTION,RULE-CLIN-ALLERGY-001,BLOCKED,Action 'VERIFY_PRESCRIPTION' BLOCKED by LEVEL_2_CLINICAL_SAFETY rule 'RULE-CLIN-ALLERGY-001': Blocks dispensing of Beta-lactam antibiotics (e.g. Amoxicillin) when patient has documented Penicillin allergy.,2026-01-01T10:55:00,PrescriptionAllergyConflictDetected
+dec-413,pharmacy.prescriptions:rx-cc09f05d,VERIFY_PRESCRIPTION,RULE-CLIN-ALLERGY-001,BLOCKED,Action 'VERIFY_PRESCRIPTION' BLOCKED by LEVEL_2_CLINICAL_SAFETY rule 'RULE-CLIN-ALLERGY-001': Blocks dispensing of Beta-lactam antibiotics (e.g. Amoxicillin) when patient has documented Penicillin allergy.,2026-01-01T10:55:00,PrescriptionAllergyConflictDetected
+dec-414,finance.invoices:ent-d7f6d101,GENERATE_INVOICE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T10:55:00,GENERATE_INVOICE_Executed
+dec-415,pharmacy.prescriptions:rx-001,VERIFY_PRESCRIPTION,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T10:55:00,VERIFY_PRESCRIPTION_Executed
+dec-416,pharmacy.prescriptions:rx-001,CONFIRM_MEDICINE_DISPENSE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T10:55:00,CONFIRM_MEDICINE_DISPENSE_Executed
+dec-417,clinical.encounters:enc-e55dcdc1,CREATE_CLINICAL_ALERT,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T10:57:00,CREATE_CLINICAL_ALERT_Executed
+dec-418,clinical.encounters:enc-e55dcdc1,CREATE_CLINICAL_ALERT,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T10:57:00,CREATE_CLINICAL_ALERT_Executed
+dec-419,clinical.encounters:enc-e55dcdc1,CREATE_CLINICAL_ALERT,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T10:57:00,CREATE_CLINICAL_ALERT_Executed
+dec-420,clinical.appointments:apt-0e50a5c4,START_DOCTOR_CONSULTATION,RULE-WORK-OPD-010,ALLOWED,Rule check passed,2026-01-01T11:00:00,EncounterStarted
+dec-421,pharmacy.prescriptions:rx-72f9c6d1,VERIFY_PRESCRIPTION,RULE-STATE-RX-020,ALLOWED,Rule check passed,2026-01-01T11:00:00,PrescriptionVerified
+dec-422,pharmacy.prescriptions:rx-72f9c6d1,VERIFY_PRESCRIPTION,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T11:00:00,VERIFY_PRESCRIPTION_Executed
+dec-423,pharmacy.prescriptions:rx-72f9c6d1,VERIFY_PRESCRIPTION,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T11:00:00,VERIFY_PRESCRIPTION_Executed
+dec-424,pharmacy.prescriptions:rx-001,VERIFY_PRESCRIPTION,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T11:00:00,VERIFY_PRESCRIPTION_Executed
+dec-425,pharmacy.prescriptions:rx-001,CONFIRM_MEDICINE_DISPENSE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T11:00:00,CONFIRM_MEDICINE_DISPENSE_Executed
+dec-426,pharmacy.prescriptions:rx-001,CONFIRM_MEDICINE_DISPENSE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T11:00:00,CONFIRM_MEDICINE_DISPENSE_Executed
+dec-427,clinical.appointments:apt-0eacf47d,START_DOCTOR_CONSULTATION,RULE-WORK-OPD-010,ALLOWED,Rule check passed,2026-01-01T11:05:00,EncounterStarted
+dec-428,radiology.radiology_orders:rad-apt-f4,ACQUIRE_RADIOLOGY_IMAGE,RULE-STATE-RAD-010,ALLOWED,Rule check passed,2026-01-01T11:05:00,RadiologyImageAcquired
+dec-429,pharmacy.prescriptions:rx-2ca9de44,VERIFY_PRESCRIPTION,RULE-STATE-RX-020,ALLOWED,Rule check passed,2026-01-01T11:05:00,PrescriptionVerified
+dec-430,pharmacy.prescriptions:rx-72f9c6d1,CONFIRM_MEDICINE_DISPENSE,RULE-GLOB-STOCK-001,BLOCKED,Action 'CONFIRM_MEDICINE_DISPENSE' BLOCKED by LEVEL_1_SYSTEM_INTEGRITY rule 'RULE-GLOB-STOCK-001': Blocks medication dispensing if requested quantity exceeds available inventory batch stock.,2026-01-01T11:05:00,InventoryShortageDetected
+dec-431,pharmacy.prescriptions:rx-72f9c6d1,CONFIRM_MEDICINE_DISPENSE,RULE-GLOB-STOCK-001,BLOCKED,Action 'CONFIRM_MEDICINE_DISPENSE' BLOCKED by LEVEL_1_SYSTEM_INTEGRITY rule 'RULE-GLOB-STOCK-001': Blocks medication dispensing if requested quantity exceeds available inventory batch stock.,2026-01-01T11:05:00,InventoryShortageDetected
+dec-432,pharmacy.prescriptions:rx-72f9c6d1,CONFIRM_MEDICINE_DISPENSE,RULE-GLOB-STOCK-001,BLOCKED,Action 'CONFIRM_MEDICINE_DISPENSE' BLOCKED by LEVEL_1_SYSTEM_INTEGRITY rule 'RULE-GLOB-STOCK-001': Blocks medication dispensing if requested quantity exceeds available inventory batch stock.,2026-01-01T11:05:00,InventoryShortageDetected
+dec-433,pharmacy.prescriptions:rx-2ca9de44,VERIFY_PRESCRIPTION,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T11:05:00,VERIFY_PRESCRIPTION_Executed
+dec-434,pharmacy.prescriptions:rx-2ca9de44,VERIFY_PRESCRIPTION,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T11:05:00,VERIFY_PRESCRIPTION_Executed
+dec-435,pharmacy.prescriptions:rx-72f9c6d1,CONFIRM_MEDICINE_DISPENSE,RULE-GLOB-STOCK-001,BLOCKED,Action 'CONFIRM_MEDICINE_DISPENSE' BLOCKED by LEVEL_1_SYSTEM_INTEGRITY rule 'RULE-GLOB-STOCK-001': Blocks medication dispensing if requested quantity exceeds available inventory batch stock.,2026-01-01T11:05:00,InventoryShortageDetected
+dec-436,pharmacy.prescriptions:rx-001,VERIFY_PRESCRIPTION,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T11:05:00,VERIFY_PRESCRIPTION_Executed
+dec-437,pharmacy.prescriptions:rx-001,CONFIRM_MEDICINE_DISPENSE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T11:05:00,CONFIRM_MEDICINE_DISPENSE_Executed
+dec-438,pharmacy.prescriptions:rx-001,CONFIRM_MEDICINE_DISPENSE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T11:05:00,CONFIRM_MEDICINE_DISPENSE_Executed
+dec-439,clinical.encounters:enc-8fd2ba67,CREATE_CLINICAL_ALERT,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T11:07:00,CREATE_CLINICAL_ALERT_Executed
+dec-440,clinical.encounters:enc-8fd2ba67,CREATE_CLINICAL_ALERT,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T11:07:00,CREATE_CLINICAL_ALERT_Executed
+dec-441,clinical.encounters:enc-8fd2ba67,CREATE_CLINICAL_ALERT,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T11:07:00,CREATE_CLINICAL_ALERT_Executed
+dec-442,clinical.encounters:enc-8fd2ba67,CREATE_CLINICAL_ALERT,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T11:07:00,CREATE_CLINICAL_ALERT_Executed
+dec-443,clinical.appointments:apt-60a8205a,START_DOCTOR_CONSULTATION,RULE-WORK-OPD-010,ALLOWED,Rule check passed,2026-01-01T11:10:00,EncounterStarted
+dec-444,pharmacy.prescriptions:rx-2ca9de44,CONFIRM_MEDICINE_DISPENSE,RULE-STATE-RX-021,ALLOWED,Rule check passed,2026-01-01T11:10:00,MedicineDispensed
+dec-445,pharmacy.prescriptions:rx-2ca9de44,CONFIRM_MEDICINE_DISPENSE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T11:10:00,CONFIRM_MEDICINE_DISPENSE_Executed
+dec-446,pharmacy.prescriptions:rx-2ca9de44,CONFIRM_MEDICINE_DISPENSE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T11:10:00,CONFIRM_MEDICINE_DISPENSE_Executed
+dec-447,pharmacy.prescriptions:rx-2ca9de44,CONFIRM_MEDICINE_DISPENSE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T11:10:00,CONFIRM_MEDICINE_DISPENSE_Executed
+dec-448,pharmacy.prescriptions:rx-001,VERIFY_PRESCRIPTION,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T11:10:00,VERIFY_PRESCRIPTION_Executed
+dec-449,pharmacy.prescriptions:rx-001,CONFIRM_MEDICINE_DISPENSE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T11:10:00,CONFIRM_MEDICINE_DISPENSE_Executed
+dec-450,finance.invoices:inv-001,GENERATE_INVOICE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T11:10:00,GENERATE_INVOICE_Executed
+dec-451,clinical.appointments:apt-91dd7827,START_DOCTOR_CONSULTATION,RULE-WORK-OPD-010,ALLOWED,Rule check passed,2026-01-01T11:15:00,EncounterStarted
+dec-452,laboratory.laboratory_orders:lab-apt-0e,COLLECT_LAB_SAMPLE,RULE-STATE-LAB-010,ALLOWED,Rule check passed,2026-01-01T11:15:00,LabSampleCollected
+dec-453,laboratory.laboratory_orders:lab-apt-0e,COLLECT_LAB_SAMPLE,RULE-STATE-LAB-011,BLOCKED,Action 'COLLECT_LAB_SAMPLE' BLOCKED by LEVEL_3_DEPARTMENT_WORKFLOW rule 'RULE-STATE-LAB-011': Blocks sample collection if lab order is not in Ordered state.,2026-01-01T11:15:00,COLLECT_LAB_SAMPLE_Blocked
+dec-454,laboratory.laboratory_orders:lab-apt-0e,COLLECT_LAB_SAMPLE,RULE-STATE-LAB-011,BLOCKED,Action 'COLLECT_LAB_SAMPLE' BLOCKED by LEVEL_3_DEPARTMENT_WORKFLOW rule 'RULE-STATE-LAB-011': Blocks sample collection if lab order is not in Ordered state.,2026-01-01T11:15:00,COLLECT_LAB_SAMPLE_Blocked
+dec-455,pharmacy.prescriptions:rx-846570ed,VERIFY_PRESCRIPTION,RULE-CLIN-ALLERGY-001,BLOCKED,Action 'VERIFY_PRESCRIPTION' BLOCKED by LEVEL_2_CLINICAL_SAFETY rule 'RULE-CLIN-ALLERGY-001': Blocks dispensing of Beta-lactam antibiotics (e.g. Amoxicillin) when patient has documented Penicillin allergy.,2026-01-01T11:15:00,PrescriptionAllergyConflictDetected
+dec-456,finance.invoices:ent-d13e4bd0,GENERATE_INVOICE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T11:15:00,GENERATE_INVOICE_Executed
+dec-457,finance.invoices:ent-bafec539,GENERATE_INVOICE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T11:15:00,GENERATE_INVOICE_Executed
+dec-458,finance.invoices:ent-234a2ebd,GENERATE_INVOICE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T11:15:00,GENERATE_INVOICE_Executed
+dec-459,finance.invoices:ent-9908e209,GENERATE_INVOICE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T11:15:00,GENERATE_INVOICE_Executed
+dec-460,pharmacy.prescriptions:rx-846570ed,VERIFY_PRESCRIPTION,RULE-CLIN-ALLERGY-001,BLOCKED,Action 'VERIFY_PRESCRIPTION' BLOCKED by LEVEL_2_CLINICAL_SAFETY rule 'RULE-CLIN-ALLERGY-001': Blocks dispensing of Beta-lactam antibiotics (e.g. Amoxicillin) when patient has documented Penicillin allergy.,2026-01-01T11:15:00,PrescriptionAllergyConflictDetected
+dec-461,pharmacy.prescriptions:rx-846570ed,VERIFY_PRESCRIPTION,RULE-CLIN-ALLERGY-001,BLOCKED,Action 'VERIFY_PRESCRIPTION' BLOCKED by LEVEL_2_CLINICAL_SAFETY rule 'RULE-CLIN-ALLERGY-001': Blocks dispensing of Beta-lactam antibiotics (e.g. Amoxicillin) when patient has documented Penicillin allergy.,2026-01-01T11:15:00,PrescriptionAllergyConflictDetected
+dec-462,finance.invoices:ent-4155721d,GENERATE_INVOICE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T11:15:00,GENERATE_INVOICE_Executed
+dec-463,pharmacy.prescriptions:rx-001,VERIFY_PRESCRIPTION,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T11:15:00,VERIFY_PRESCRIPTION_Executed
+dec-464,pharmacy.prescriptions:rx-001,CONFIRM_MEDICINE_DISPENSE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T11:15:00,CONFIRM_MEDICINE_DISPENSE_Executed
+dec-465,clinical.encounters:enc-5d0d8736,CREATE_CLINICAL_ALERT,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T11:17:00,CREATE_CLINICAL_ALERT_Executed
+dec-466,clinical.encounters:enc-5d0d8736,CREATE_CLINICAL_ALERT,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T11:17:00,CREATE_CLINICAL_ALERT_Executed
+dec-467,clinical.encounters:enc-5d0d8736,CREATE_CLINICAL_ALERT,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T11:17:00,CREATE_CLINICAL_ALERT_Executed
+dec-468,clinical.appointments:apt-2a2a6424,START_DOCTOR_CONSULTATION,RULE-WORK-OPD-010,ALLOWED,Rule check passed,2026-01-01T11:20:00,EncounterStarted
+dec-469,pharmacy.prescriptions:rx-e4331de0,VERIFY_PRESCRIPTION,RULE-STATE-RX-020,ALLOWED,Rule check passed,2026-01-01T11:20:00,PrescriptionVerified
+dec-470,pharmacy.prescriptions:rx-e4331de0,VERIFY_PRESCRIPTION,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T11:20:00,VERIFY_PRESCRIPTION_Executed
+dec-471,pharmacy.prescriptions:rx-e4331de0,VERIFY_PRESCRIPTION,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T11:20:00,VERIFY_PRESCRIPTION_Executed
+dec-472,pharmacy.prescriptions:rx-001,VERIFY_PRESCRIPTION,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T11:20:00,VERIFY_PRESCRIPTION_Executed
+dec-473,pharmacy.prescriptions:rx-001,CONFIRM_MEDICINE_DISPENSE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T11:20:00,CONFIRM_MEDICINE_DISPENSE_Executed
+dec-474,pharmacy.prescriptions:rx-001,CONFIRM_MEDICINE_DISPENSE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T11:20:00,CONFIRM_MEDICINE_DISPENSE_Executed
+dec-475,clinical.appointments:apt-204a7b98,START_DOCTOR_CONSULTATION,RULE-WORK-OPD-010,ALLOWED,Rule check passed,2026-01-01T11:25:00,EncounterStarted
+dec-476,radiology.radiology_orders:rad-apt-0e,ACQUIRE_RADIOLOGY_IMAGE,RULE-STATE-RAD-010,ALLOWED,Rule check passed,2026-01-01T11:25:00,RadiologyImageAcquired
+dec-477,pharmacy.prescriptions:rx-5faefa8d,VERIFY_PRESCRIPTION,RULE-STATE-RX-020,ALLOWED,Rule check passed,2026-01-01T11:25:00,PrescriptionVerified
+dec-478,pharmacy.prescriptions:rx-e4331de0,CONFIRM_MEDICINE_DISPENSE,RULE-GLOB-STOCK-001,BLOCKED,Action 'CONFIRM_MEDICINE_DISPENSE' BLOCKED by LEVEL_1_SYSTEM_INTEGRITY rule 'RULE-GLOB-STOCK-001': Blocks medication dispensing if requested quantity exceeds available inventory batch stock.,2026-01-01T11:25:00,InventoryShortageDetected
+dec-479,pharmacy.prescriptions:rx-e4331de0,CONFIRM_MEDICINE_DISPENSE,RULE-GLOB-STOCK-001,BLOCKED,Action 'CONFIRM_MEDICINE_DISPENSE' BLOCKED by LEVEL_1_SYSTEM_INTEGRITY rule 'RULE-GLOB-STOCK-001': Blocks medication dispensing if requested quantity exceeds available inventory batch stock.,2026-01-01T11:25:00,InventoryShortageDetected
+dec-480,pharmacy.prescriptions:rx-e4331de0,CONFIRM_MEDICINE_DISPENSE,RULE-GLOB-STOCK-001,BLOCKED,Action 'CONFIRM_MEDICINE_DISPENSE' BLOCKED by LEVEL_1_SYSTEM_INTEGRITY rule 'RULE-GLOB-STOCK-001': Blocks medication dispensing if requested quantity exceeds available inventory batch stock.,2026-01-01T11:25:00,InventoryShortageDetected
+dec-481,pharmacy.prescriptions:rx-5faefa8d,VERIFY_PRESCRIPTION,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T11:25:00,VERIFY_PRESCRIPTION_Executed
+dec-482,pharmacy.prescriptions:rx-5faefa8d,VERIFY_PRESCRIPTION,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T11:25:00,VERIFY_PRESCRIPTION_Executed
+dec-483,pharmacy.prescriptions:rx-e4331de0,CONFIRM_MEDICINE_DISPENSE,RULE-GLOB-STOCK-001,BLOCKED,Action 'CONFIRM_MEDICINE_DISPENSE' BLOCKED by LEVEL_1_SYSTEM_INTEGRITY rule 'RULE-GLOB-STOCK-001': Blocks medication dispensing if requested quantity exceeds available inventory batch stock.,2026-01-01T11:25:00,InventoryShortageDetected
+dec-484,pharmacy.prescriptions:rx-001,VERIFY_PRESCRIPTION,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T11:25:00,VERIFY_PRESCRIPTION_Executed
+dec-485,pharmacy.prescriptions:rx-001,CONFIRM_MEDICINE_DISPENSE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T11:25:00,CONFIRM_MEDICINE_DISPENSE_Executed
+dec-486,pharmacy.prescriptions:rx-001,CONFIRM_MEDICINE_DISPENSE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T11:25:00,CONFIRM_MEDICINE_DISPENSE_Executed
+dec-487,clinical.encounters:enc-5b55b457,CREATE_CLINICAL_ALERT,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T11:27:00,CREATE_CLINICAL_ALERT_Executed
+dec-488,clinical.encounters:enc-5b55b457,CREATE_CLINICAL_ALERT,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T11:27:00,CREATE_CLINICAL_ALERT_Executed
+dec-489,clinical.encounters:enc-5b55b457,CREATE_CLINICAL_ALERT,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T11:27:00,CREATE_CLINICAL_ALERT_Executed
+dec-490,clinical.encounters:enc-5b55b457,CREATE_CLINICAL_ALERT,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T11:27:00,CREATE_CLINICAL_ALERT_Executed
+dec-491,clinical.appointments:apt-7afd3cea,START_DOCTOR_CONSULTATION,RULE-WORK-OPD-010,ALLOWED,Rule check passed,2026-01-01T11:30:00,EncounterStarted
+dec-492,pharmacy.prescriptions:rx-5faefa8d,CONFIRM_MEDICINE_DISPENSE,RULE-STATE-RX-021,ALLOWED,Rule check passed,2026-01-01T11:30:00,MedicineDispensed
+dec-493,pharmacy.prescriptions:rx-5faefa8d,CONFIRM_MEDICINE_DISPENSE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T11:30:00,CONFIRM_MEDICINE_DISPENSE_Executed
+dec-494,pharmacy.prescriptions:rx-5faefa8d,CONFIRM_MEDICINE_DISPENSE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T11:30:00,CONFIRM_MEDICINE_DISPENSE_Executed
+dec-495,pharmacy.prescriptions:rx-5faefa8d,CONFIRM_MEDICINE_DISPENSE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T11:30:00,CONFIRM_MEDICINE_DISPENSE_Executed
+dec-496,pharmacy.prescriptions:rx-001,VERIFY_PRESCRIPTION,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T11:30:00,VERIFY_PRESCRIPTION_Executed
+dec-497,pharmacy.prescriptions:rx-001,CONFIRM_MEDICINE_DISPENSE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T11:30:00,CONFIRM_MEDICINE_DISPENSE_Executed
+dec-498,finance.invoices:inv-001,GENERATE_INVOICE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T11:30:00,GENERATE_INVOICE_Executed
+dec-499,clinical.appointments:apt-2fbc22d5,START_DOCTOR_CONSULTATION,RULE-WORK-OPD-010,ALLOWED,Rule check passed,2026-01-01T11:35:00,EncounterStarted
+dec-500,laboratory.laboratory_orders:lab-apt-20,COLLECT_LAB_SAMPLE,RULE-STATE-LAB-010,ALLOWED,Rule check passed,2026-01-01T11:35:00,LabSampleCollected
+dec-501,laboratory.laboratory_orders:lab-apt-20,COLLECT_LAB_SAMPLE,RULE-STATE-LAB-011,BLOCKED,Action 'COLLECT_LAB_SAMPLE' BLOCKED by LEVEL_3_DEPARTMENT_WORKFLOW rule 'RULE-STATE-LAB-011': Blocks sample collection if lab order is not in Ordered state.,2026-01-01T11:35:00,COLLECT_LAB_SAMPLE_Blocked
+dec-502,laboratory.laboratory_orders:lab-apt-20,COLLECT_LAB_SAMPLE,RULE-STATE-LAB-011,BLOCKED,Action 'COLLECT_LAB_SAMPLE' BLOCKED by LEVEL_3_DEPARTMENT_WORKFLOW rule 'RULE-STATE-LAB-011': Blocks sample collection if lab order is not in Ordered state.,2026-01-01T11:35:00,COLLECT_LAB_SAMPLE_Blocked
+dec-503,pharmacy.prescriptions:rx-ab632f71,VERIFY_PRESCRIPTION,RULE-CLIN-ALLERGY-001,BLOCKED,Action 'VERIFY_PRESCRIPTION' BLOCKED by LEVEL_2_CLINICAL_SAFETY rule 'RULE-CLIN-ALLERGY-001': Blocks dispensing of Beta-lactam antibiotics (e.g. Amoxicillin) when patient has documented Penicillin allergy.,2026-01-01T11:35:00,PrescriptionAllergyConflictDetected
+dec-504,finance.invoices:ent-c028471d,GENERATE_INVOICE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T11:35:00,GENERATE_INVOICE_Executed
+dec-505,finance.invoices:ent-961461fc,GENERATE_INVOICE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T11:35:00,GENERATE_INVOICE_Executed
+dec-506,finance.invoices:ent-4d0b91fd,GENERATE_INVOICE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T11:35:00,GENERATE_INVOICE_Executed
+dec-507,finance.invoices:ent-2c2d59fa,GENERATE_INVOICE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T11:35:00,GENERATE_INVOICE_Executed
+dec-508,pharmacy.prescriptions:rx-ab632f71,VERIFY_PRESCRIPTION,RULE-CLIN-ALLERGY-001,BLOCKED,Action 'VERIFY_PRESCRIPTION' BLOCKED by LEVEL_2_CLINICAL_SAFETY rule 'RULE-CLIN-ALLERGY-001': Blocks dispensing of Beta-lactam antibiotics (e.g. Amoxicillin) when patient has documented Penicillin allergy.,2026-01-01T11:35:00,PrescriptionAllergyConflictDetected
+dec-509,pharmacy.prescriptions:rx-ab632f71,VERIFY_PRESCRIPTION,RULE-CLIN-ALLERGY-001,BLOCKED,Action 'VERIFY_PRESCRIPTION' BLOCKED by LEVEL_2_CLINICAL_SAFETY rule 'RULE-CLIN-ALLERGY-001': Blocks dispensing of Beta-lactam antibiotics (e.g. Amoxicillin) when patient has documented Penicillin allergy.,2026-01-01T11:35:00,PrescriptionAllergyConflictDetected
+dec-510,finance.invoices:ent-3443405a,GENERATE_INVOICE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T11:35:00,GENERATE_INVOICE_Executed
+dec-511,pharmacy.prescriptions:rx-001,VERIFY_PRESCRIPTION,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T11:35:00,VERIFY_PRESCRIPTION_Executed
+dec-512,pharmacy.prescriptions:rx-001,CONFIRM_MEDICINE_DISPENSE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T11:35:00,CONFIRM_MEDICINE_DISPENSE_Executed
+dec-513,clinical.encounters:enc-f536c414,CREATE_CLINICAL_ALERT,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T11:37:00,CREATE_CLINICAL_ALERT_Executed
+dec-514,clinical.encounters:enc-f536c414,CREATE_CLINICAL_ALERT,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T11:37:00,CREATE_CLINICAL_ALERT_Executed
+dec-515,clinical.encounters:enc-f536c414,CREATE_CLINICAL_ALERT,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T11:37:00,CREATE_CLINICAL_ALERT_Executed
+dec-516,clinical.appointments:apt-aeb81959,START_DOCTOR_CONSULTATION,RULE-WORK-OPD-010,ALLOWED,Rule check passed,2026-01-01T11:40:00,EncounterStarted
+dec-517,pharmacy.prescriptions:rx-e697f538,VERIFY_PRESCRIPTION,RULE-STATE-RX-020,ALLOWED,Rule check passed,2026-01-01T11:40:00,PrescriptionVerified
+dec-518,pharmacy.prescriptions:rx-e697f538,VERIFY_PRESCRIPTION,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T11:40:00,VERIFY_PRESCRIPTION_Executed
+dec-519,pharmacy.prescriptions:rx-e697f538,VERIFY_PRESCRIPTION,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T11:40:00,VERIFY_PRESCRIPTION_Executed
+dec-520,pharmacy.prescriptions:rx-001,VERIFY_PRESCRIPTION,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T11:40:00,VERIFY_PRESCRIPTION_Executed
+dec-521,pharmacy.prescriptions:rx-001,CONFIRM_MEDICINE_DISPENSE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T11:40:00,CONFIRM_MEDICINE_DISPENSE_Executed
+dec-522,pharmacy.prescriptions:rx-001,CONFIRM_MEDICINE_DISPENSE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T11:40:00,CONFIRM_MEDICINE_DISPENSE_Executed
+dec-523,clinical.appointments:apt-b241c5fd,START_DOCTOR_CONSULTATION,RULE-WORK-OPD-010,ALLOWED,Rule check passed,2026-01-01T11:45:00,EncounterStarted
+dec-524,radiology.radiology_orders:rad-apt-20,ACQUIRE_RADIOLOGY_IMAGE,RULE-STATE-RAD-010,ALLOWED,Rule check passed,2026-01-01T11:45:00,RadiologyImageAcquired
+dec-525,pharmacy.prescriptions:rx-ca4780df,VERIFY_PRESCRIPTION,RULE-STATE-RX-020,ALLOWED,Rule check passed,2026-01-01T11:45:00,PrescriptionVerified
+dec-526,pharmacy.prescriptions:rx-e697f538,CONFIRM_MEDICINE_DISPENSE,RULE-GLOB-STOCK-001,BLOCKED,Action 'CONFIRM_MEDICINE_DISPENSE' BLOCKED by LEVEL_1_SYSTEM_INTEGRITY rule 'RULE-GLOB-STOCK-001': Blocks medication dispensing if requested quantity exceeds available inventory batch stock.,2026-01-01T11:45:00,InventoryShortageDetected
+dec-527,pharmacy.prescriptions:rx-e697f538,CONFIRM_MEDICINE_DISPENSE,RULE-GLOB-STOCK-001,BLOCKED,Action 'CONFIRM_MEDICINE_DISPENSE' BLOCKED by LEVEL_1_SYSTEM_INTEGRITY rule 'RULE-GLOB-STOCK-001': Blocks medication dispensing if requested quantity exceeds available inventory batch stock.,2026-01-01T11:45:00,InventoryShortageDetected
+dec-528,pharmacy.prescriptions:rx-e697f538,CONFIRM_MEDICINE_DISPENSE,RULE-GLOB-STOCK-001,BLOCKED,Action 'CONFIRM_MEDICINE_DISPENSE' BLOCKED by LEVEL_1_SYSTEM_INTEGRITY rule 'RULE-GLOB-STOCK-001': Blocks medication dispensing if requested quantity exceeds available inventory batch stock.,2026-01-01T11:45:00,InventoryShortageDetected
+dec-529,pharmacy.prescriptions:rx-ca4780df,VERIFY_PRESCRIPTION,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T11:45:00,VERIFY_PRESCRIPTION_Executed
+dec-530,pharmacy.prescriptions:rx-ca4780df,VERIFY_PRESCRIPTION,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T11:45:00,VERIFY_PRESCRIPTION_Executed
+dec-531,pharmacy.prescriptions:rx-e697f538,CONFIRM_MEDICINE_DISPENSE,RULE-GLOB-STOCK-001,BLOCKED,Action 'CONFIRM_MEDICINE_DISPENSE' BLOCKED by LEVEL_1_SYSTEM_INTEGRITY rule 'RULE-GLOB-STOCK-001': Blocks medication dispensing if requested quantity exceeds available inventory batch stock.,2026-01-01T11:45:00,InventoryShortageDetected
+dec-532,pharmacy.prescriptions:rx-001,VERIFY_PRESCRIPTION,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T11:45:00,VERIFY_PRESCRIPTION_Executed
+dec-533,pharmacy.prescriptions:rx-001,CONFIRM_MEDICINE_DISPENSE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T11:45:00,CONFIRM_MEDICINE_DISPENSE_Executed
+dec-534,pharmacy.prescriptions:rx-001,CONFIRM_MEDICINE_DISPENSE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T11:45:00,CONFIRM_MEDICINE_DISPENSE_Executed
+dec-535,clinical.encounters:enc-5db6f567,CREATE_CLINICAL_ALERT,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T11:47:00,CREATE_CLINICAL_ALERT_Executed
+dec-536,clinical.encounters:enc-5db6f567,CREATE_CLINICAL_ALERT,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T11:47:00,CREATE_CLINICAL_ALERT_Executed
+dec-537,clinical.encounters:enc-5db6f567,CREATE_CLINICAL_ALERT,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T11:47:00,CREATE_CLINICAL_ALERT_Executed
+dec-538,clinical.encounters:enc-5db6f567,CREATE_CLINICAL_ALERT,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T11:47:00,CREATE_CLINICAL_ALERT_Executed
+dec-539,clinical.appointments:apt-565f0bac,START_DOCTOR_CONSULTATION,RULE-WORK-OPD-010,ALLOWED,Rule check passed,2026-01-01T11:50:00,EncounterStarted
+dec-540,pharmacy.prescriptions:rx-ca4780df,CONFIRM_MEDICINE_DISPENSE,RULE-STATE-RX-021,ALLOWED,Rule check passed,2026-01-01T11:50:00,MedicineDispensed
+dec-541,pharmacy.prescriptions:rx-ca4780df,CONFIRM_MEDICINE_DISPENSE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T11:50:00,CONFIRM_MEDICINE_DISPENSE_Executed
+dec-542,pharmacy.prescriptions:rx-ca4780df,CONFIRM_MEDICINE_DISPENSE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T11:50:00,CONFIRM_MEDICINE_DISPENSE_Executed
+dec-543,pharmacy.prescriptions:rx-ca4780df,CONFIRM_MEDICINE_DISPENSE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T11:50:00,CONFIRM_MEDICINE_DISPENSE_Executed
+dec-544,pharmacy.prescriptions:rx-001,VERIFY_PRESCRIPTION,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T11:50:00,VERIFY_PRESCRIPTION_Executed
+dec-545,pharmacy.prescriptions:rx-001,CONFIRM_MEDICINE_DISPENSE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T11:50:00,CONFIRM_MEDICINE_DISPENSE_Executed
+dec-546,finance.invoices:inv-001,GENERATE_INVOICE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T11:50:00,GENERATE_INVOICE_Executed
+dec-547,clinical.appointments:apt-4fd5252d,START_DOCTOR_CONSULTATION,RULE-WORK-OPD-010,ALLOWED,Rule check passed,2026-01-01T11:55:00,EncounterStarted
+dec-548,laboratory.laboratory_orders:lab-apt-b2,COLLECT_LAB_SAMPLE,RULE-STATE-LAB-011,BLOCKED,Action 'COLLECT_LAB_SAMPLE' BLOCKED by LEVEL_3_DEPARTMENT_WORKFLOW rule 'RULE-STATE-LAB-011': Blocks sample collection if lab order is not in Ordered state.,2026-01-01T11:55:00,COLLECT_LAB_SAMPLE_Blocked
+dec-549,laboratory.laboratory_orders:lab-apt-b2,COLLECT_LAB_SAMPLE,RULE-STATE-LAB-011,BLOCKED,Action 'COLLECT_LAB_SAMPLE' BLOCKED by LEVEL_3_DEPARTMENT_WORKFLOW rule 'RULE-STATE-LAB-011': Blocks sample collection if lab order is not in Ordered state.,2026-01-01T11:55:00,COLLECT_LAB_SAMPLE_Blocked
+dec-550,laboratory.laboratory_orders:lab-apt-b2,COLLECT_LAB_SAMPLE,RULE-STATE-LAB-011,BLOCKED,Action 'COLLECT_LAB_SAMPLE' BLOCKED by LEVEL_3_DEPARTMENT_WORKFLOW rule 'RULE-STATE-LAB-011': Blocks sample collection if lab order is not in Ordered state.,2026-01-01T11:55:00,COLLECT_LAB_SAMPLE_Blocked
+dec-551,pharmacy.prescriptions:rx-00c2b83a,VERIFY_PRESCRIPTION,RULE-CLIN-ALLERGY-001,BLOCKED,Action 'VERIFY_PRESCRIPTION' BLOCKED by LEVEL_2_CLINICAL_SAFETY rule 'RULE-CLIN-ALLERGY-001': Blocks dispensing of Beta-lactam antibiotics (e.g. Amoxicillin) when patient has documented Penicillin allergy.,2026-01-01T11:55:00,PrescriptionAllergyConflictDetected
+dec-552,finance.invoices:ent-da2f2cf3,GENERATE_INVOICE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T11:55:00,GENERATE_INVOICE_Executed
+dec-553,finance.invoices:ent-04712561,GENERATE_INVOICE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T11:55:00,GENERATE_INVOICE_Executed
+dec-554,finance.invoices:ent-064cab5a,GENERATE_INVOICE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T11:55:00,GENERATE_INVOICE_Executed
+dec-555,finance.invoices:ent-8bea5af1,GENERATE_INVOICE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T11:55:00,GENERATE_INVOICE_Executed
+dec-556,pharmacy.prescriptions:rx-00c2b83a,VERIFY_PRESCRIPTION,RULE-CLIN-ALLERGY-001,BLOCKED,Action 'VERIFY_PRESCRIPTION' BLOCKED by LEVEL_2_CLINICAL_SAFETY rule 'RULE-CLIN-ALLERGY-001': Blocks dispensing of Beta-lactam antibiotics (e.g. Amoxicillin) when patient has documented Penicillin allergy.,2026-01-01T11:55:00,PrescriptionAllergyConflictDetected
+dec-557,pharmacy.prescriptions:rx-00c2b83a,VERIFY_PRESCRIPTION,RULE-CLIN-ALLERGY-001,BLOCKED,Action 'VERIFY_PRESCRIPTION' BLOCKED by LEVEL_2_CLINICAL_SAFETY rule 'RULE-CLIN-ALLERGY-001': Blocks dispensing of Beta-lactam antibiotics (e.g. Amoxicillin) when patient has documented Penicillin allergy.,2026-01-01T11:55:00,PrescriptionAllergyConflictDetected
+dec-558,finance.invoices:ent-184aca12,GENERATE_INVOICE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T11:55:00,GENERATE_INVOICE_Executed
+dec-559,pharmacy.prescriptions:rx-001,VERIFY_PRESCRIPTION,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T11:55:00,VERIFY_PRESCRIPTION_Executed
+dec-560,pharmacy.prescriptions:rx-001,CONFIRM_MEDICINE_DISPENSE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T11:55:00,CONFIRM_MEDICINE_DISPENSE_Executed
+dec-561,clinical.encounters:enc-1249823f,CREATE_CLINICAL_ALERT,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T11:57:00,CREATE_CLINICAL_ALERT_Executed
+dec-562,clinical.encounters:enc-1249823f,CREATE_CLINICAL_ALERT,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T11:57:00,CREATE_CLINICAL_ALERT_Executed
+dec-563,clinical.encounters:enc-1249823f,CREATE_CLINICAL_ALERT,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T11:57:00,CREATE_CLINICAL_ALERT_Executed
+dec-564,clinical.appointments:apt-9f52f0d9,START_DOCTOR_CONSULTATION,RULE-WORK-OPD-010,ALLOWED,Rule check passed,2026-01-01T12:00:00,EncounterStarted
+dec-565,pharmacy.prescriptions:rx-0a44c2c8,VERIFY_PRESCRIPTION,RULE-STATE-RX-020,ALLOWED,Rule check passed,2026-01-01T12:00:00,PrescriptionVerified
+dec-566,pharmacy.prescriptions:rx-0a44c2c8,VERIFY_PRESCRIPTION,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T12:00:00,VERIFY_PRESCRIPTION_Executed
+dec-567,pharmacy.prescriptions:rx-0a44c2c8,VERIFY_PRESCRIPTION,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T12:00:00,VERIFY_PRESCRIPTION_Executed
+dec-568,pharmacy.prescriptions:rx-001,VERIFY_PRESCRIPTION,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T12:00:00,VERIFY_PRESCRIPTION_Executed
+dec-569,pharmacy.prescriptions:rx-001,CONFIRM_MEDICINE_DISPENSE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T12:00:00,CONFIRM_MEDICINE_DISPENSE_Executed
+dec-570,pharmacy.prescriptions:rx-001,CONFIRM_MEDICINE_DISPENSE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T12:00:00,CONFIRM_MEDICINE_DISPENSE_Executed
+dec-571,clinical.appointments:apt-39f69b0d,START_DOCTOR_CONSULTATION,RULE-WORK-OPD-010,ALLOWED,Rule check passed,2026-01-01T12:05:00,EncounterStarted
+dec-572,pharmacy.prescriptions:rx-dbc4de44,VERIFY_PRESCRIPTION,RULE-STATE-RX-020,ALLOWED,Rule check passed,2026-01-01T12:05:00,PrescriptionVerified
+dec-573,pharmacy.prescriptions:rx-0a44c2c8,CONFIRM_MEDICINE_DISPENSE,RULE-GLOB-STOCK-001,BLOCKED,Action 'CONFIRM_MEDICINE_DISPENSE' BLOCKED by LEVEL_1_SYSTEM_INTEGRITY rule 'RULE-GLOB-STOCK-001': Blocks medication dispensing if requested quantity exceeds available inventory batch stock.,2026-01-01T12:05:00,InventoryShortageDetected
+dec-574,pharmacy.prescriptions:rx-0a44c2c8,CONFIRM_MEDICINE_DISPENSE,RULE-GLOB-STOCK-001,BLOCKED,Action 'CONFIRM_MEDICINE_DISPENSE' BLOCKED by LEVEL_1_SYSTEM_INTEGRITY rule 'RULE-GLOB-STOCK-001': Blocks medication dispensing if requested quantity exceeds available inventory batch stock.,2026-01-01T12:05:00,InventoryShortageDetected
+dec-575,pharmacy.prescriptions:rx-0a44c2c8,CONFIRM_MEDICINE_DISPENSE,RULE-GLOB-STOCK-001,BLOCKED,Action 'CONFIRM_MEDICINE_DISPENSE' BLOCKED by LEVEL_1_SYSTEM_INTEGRITY rule 'RULE-GLOB-STOCK-001': Blocks medication dispensing if requested quantity exceeds available inventory batch stock.,2026-01-01T12:05:00,InventoryShortageDetected
+dec-576,pharmacy.prescriptions:rx-dbc4de44,VERIFY_PRESCRIPTION,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T12:05:00,VERIFY_PRESCRIPTION_Executed
+dec-577,pharmacy.prescriptions:rx-dbc4de44,VERIFY_PRESCRIPTION,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T12:05:00,VERIFY_PRESCRIPTION_Executed
+dec-578,pharmacy.prescriptions:rx-0a44c2c8,CONFIRM_MEDICINE_DISPENSE,RULE-GLOB-STOCK-001,BLOCKED,Action 'CONFIRM_MEDICINE_DISPENSE' BLOCKED by LEVEL_1_SYSTEM_INTEGRITY rule 'RULE-GLOB-STOCK-001': Blocks medication dispensing if requested quantity exceeds available inventory batch stock.,2026-01-01T12:05:00,InventoryShortageDetected
+dec-579,pharmacy.prescriptions:rx-001,VERIFY_PRESCRIPTION,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T12:05:00,VERIFY_PRESCRIPTION_Executed
+dec-580,pharmacy.prescriptions:rx-001,CONFIRM_MEDICINE_DISPENSE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T12:05:00,CONFIRM_MEDICINE_DISPENSE_Executed
+dec-581,pharmacy.prescriptions:rx-001,CONFIRM_MEDICINE_DISPENSE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T12:05:00,CONFIRM_MEDICINE_DISPENSE_Executed
+dec-582,clinical.encounters:enc-24004904,CREATE_CLINICAL_ALERT,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T12:07:00,CREATE_CLINICAL_ALERT_Executed
+dec-583,clinical.encounters:enc-24004904,CREATE_CLINICAL_ALERT,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T12:07:00,CREATE_CLINICAL_ALERT_Executed
+dec-584,clinical.encounters:enc-24004904,CREATE_CLINICAL_ALERT,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T12:07:00,CREATE_CLINICAL_ALERT_Executed
+dec-585,clinical.encounters:enc-24004904,CREATE_CLINICAL_ALERT,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T12:07:00,CREATE_CLINICAL_ALERT_Executed
+dec-586,clinical.appointments:apt-8ad819a4,START_DOCTOR_CONSULTATION,RULE-WORK-OPD-010,ALLOWED,Rule check passed,2026-01-01T12:10:00,EncounterStarted
+dec-587,pharmacy.prescriptions:rx-dbc4de44,CONFIRM_MEDICINE_DISPENSE,RULE-STATE-RX-021,ALLOWED,Rule check passed,2026-01-01T12:10:00,MedicineDispensed
+dec-588,pharmacy.prescriptions:rx-dbc4de44,CONFIRM_MEDICINE_DISPENSE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T12:10:00,CONFIRM_MEDICINE_DISPENSE_Executed
+dec-589,pharmacy.prescriptions:rx-dbc4de44,CONFIRM_MEDICINE_DISPENSE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T12:10:00,CONFIRM_MEDICINE_DISPENSE_Executed
+dec-590,pharmacy.prescriptions:rx-dbc4de44,CONFIRM_MEDICINE_DISPENSE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T12:10:00,CONFIRM_MEDICINE_DISPENSE_Executed
+dec-591,pharmacy.prescriptions:rx-001,VERIFY_PRESCRIPTION,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T12:10:00,VERIFY_PRESCRIPTION_Executed
+dec-592,pharmacy.prescriptions:rx-001,CONFIRM_MEDICINE_DISPENSE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T12:10:00,CONFIRM_MEDICINE_DISPENSE_Executed
+dec-593,finance.invoices:inv-001,GENERATE_INVOICE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T12:10:00,GENERATE_INVOICE_Executed
+dec-594,clinical.appointments:apt-f2acd493,START_DOCTOR_CONSULTATION,RULE-WORK-OPD-010,ALLOWED,Rule check passed,2026-01-01T12:15:00,EncounterStarted
+dec-595,laboratory.laboratory_orders:lab-apt-39,COLLECT_LAB_SAMPLE,RULE-STATE-LAB-010,ALLOWED,Rule check passed,2026-01-01T12:15:00,LabSampleCollected
+dec-596,laboratory.laboratory_orders:lab-apt-39,COLLECT_LAB_SAMPLE,RULE-STATE-LAB-011,BLOCKED,Action 'COLLECT_LAB_SAMPLE' BLOCKED by LEVEL_3_DEPARTMENT_WORKFLOW rule 'RULE-STATE-LAB-011': Blocks sample collection if lab order is not in Ordered state.,2026-01-01T12:15:00,COLLECT_LAB_SAMPLE_Blocked
+dec-597,laboratory.laboratory_orders:lab-apt-39,COLLECT_LAB_SAMPLE,RULE-STATE-LAB-011,BLOCKED,Action 'COLLECT_LAB_SAMPLE' BLOCKED by LEVEL_3_DEPARTMENT_WORKFLOW rule 'RULE-STATE-LAB-011': Blocks sample collection if lab order is not in Ordered state.,2026-01-01T12:15:00,COLLECT_LAB_SAMPLE_Blocked
+dec-598,pharmacy.prescriptions:rx-482f5889,VERIFY_PRESCRIPTION,RULE-CLIN-ALLERGY-001,BLOCKED,Action 'VERIFY_PRESCRIPTION' BLOCKED by LEVEL_2_CLINICAL_SAFETY rule 'RULE-CLIN-ALLERGY-001': Blocks dispensing of Beta-lactam antibiotics (e.g. Amoxicillin) when patient has documented Penicillin allergy.,2026-01-01T12:15:00,PrescriptionAllergyConflictDetected
+dec-599,finance.invoices:ent-ffc9aa0f,GENERATE_INVOICE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T12:15:00,GENERATE_INVOICE_Executed
+dec-600,finance.invoices:ent-10bf9adf,GENERATE_INVOICE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T12:15:00,GENERATE_INVOICE_Executed
+dec-601,finance.invoices:ent-cf9c118d,GENERATE_INVOICE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T12:15:00,GENERATE_INVOICE_Executed
+dec-602,finance.invoices:ent-37e938e7,GENERATE_INVOICE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T12:15:00,GENERATE_INVOICE_Executed
+dec-603,pharmacy.prescriptions:rx-482f5889,VERIFY_PRESCRIPTION,RULE-CLIN-ALLERGY-001,BLOCKED,Action 'VERIFY_PRESCRIPTION' BLOCKED by LEVEL_2_CLINICAL_SAFETY rule 'RULE-CLIN-ALLERGY-001': Blocks dispensing of Beta-lactam antibiotics (e.g. Amoxicillin) when patient has documented Penicillin allergy.,2026-01-01T12:15:00,PrescriptionAllergyConflictDetected
+dec-604,pharmacy.prescriptions:rx-482f5889,VERIFY_PRESCRIPTION,RULE-CLIN-ALLERGY-001,BLOCKED,Action 'VERIFY_PRESCRIPTION' BLOCKED by LEVEL_2_CLINICAL_SAFETY rule 'RULE-CLIN-ALLERGY-001': Blocks dispensing of Beta-lactam antibiotics (e.g. Amoxicillin) when patient has documented Penicillin allergy.,2026-01-01T12:15:00,PrescriptionAllergyConflictDetected
+dec-605,finance.invoices:ent-15ec4777,GENERATE_INVOICE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T12:15:00,GENERATE_INVOICE_Executed
+dec-606,pharmacy.prescriptions:rx-001,VERIFY_PRESCRIPTION,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T12:15:00,VERIFY_PRESCRIPTION_Executed
+dec-607,pharmacy.prescriptions:rx-001,CONFIRM_MEDICINE_DISPENSE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T12:15:00,CONFIRM_MEDICINE_DISPENSE_Executed
+dec-608,clinical.encounters:enc-ffea5707,CREATE_CLINICAL_ALERT,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T12:17:00,CREATE_CLINICAL_ALERT_Executed
+dec-609,clinical.encounters:enc-ffea5707,CREATE_CLINICAL_ALERT,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T12:17:00,CREATE_CLINICAL_ALERT_Executed
+dec-610,clinical.encounters:enc-ffea5707,CREATE_CLINICAL_ALERT,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T12:17:00,CREATE_CLINICAL_ALERT_Executed
+dec-611,clinical.appointments:apt-723ccf51,START_DOCTOR_CONSULTATION,RULE-WORK-OPD-010,ALLOWED,Rule check passed,2026-01-01T12:20:00,EncounterStarted
+dec-612,pharmacy.prescriptions:rx-4a39a924,VERIFY_PRESCRIPTION,RULE-STATE-RX-020,ALLOWED,Rule check passed,2026-01-01T12:20:00,PrescriptionVerified
+dec-613,pharmacy.prescriptions:rx-4a39a924,VERIFY_PRESCRIPTION,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T12:20:00,VERIFY_PRESCRIPTION_Executed
+dec-614,pharmacy.prescriptions:rx-4a39a924,VERIFY_PRESCRIPTION,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T12:20:00,VERIFY_PRESCRIPTION_Executed
+dec-615,pharmacy.prescriptions:rx-001,VERIFY_PRESCRIPTION,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T12:20:00,VERIFY_PRESCRIPTION_Executed
+dec-616,pharmacy.prescriptions:rx-001,CONFIRM_MEDICINE_DISPENSE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T12:20:00,CONFIRM_MEDICINE_DISPENSE_Executed
+dec-617,pharmacy.prescriptions:rx-001,CONFIRM_MEDICINE_DISPENSE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T12:20:00,CONFIRM_MEDICINE_DISPENSE_Executed
+dec-618,clinical.appointments:apt-2b541bc9,START_DOCTOR_CONSULTATION,RULE-WORK-OPD-010,ALLOWED,Rule check passed,2026-01-01T12:25:00,EncounterStarted
+dec-619,radiology.radiology_orders:rad-apt-39,ACQUIRE_RADIOLOGY_IMAGE,RULE-STATE-RAD-010,ALLOWED,Rule check passed,2026-01-01T12:25:00,RadiologyImageAcquired
+dec-620,pharmacy.prescriptions:rx-9cfcacbf,VERIFY_PRESCRIPTION,RULE-STATE-RX-020,ALLOWED,Rule check passed,2026-01-01T12:25:00,PrescriptionVerified
+dec-621,pharmacy.prescriptions:rx-4a39a924,CONFIRM_MEDICINE_DISPENSE,RULE-GLOB-STOCK-001,BLOCKED,Action 'CONFIRM_MEDICINE_DISPENSE' BLOCKED by LEVEL_1_SYSTEM_INTEGRITY rule 'RULE-GLOB-STOCK-001': Blocks medication dispensing if requested quantity exceeds available inventory batch stock.,2026-01-01T12:25:00,InventoryShortageDetected
+dec-622,pharmacy.prescriptions:rx-4a39a924,CONFIRM_MEDICINE_DISPENSE,RULE-GLOB-STOCK-001,BLOCKED,Action 'CONFIRM_MEDICINE_DISPENSE' BLOCKED by LEVEL_1_SYSTEM_INTEGRITY rule 'RULE-GLOB-STOCK-001': Blocks medication dispensing if requested quantity exceeds available inventory batch stock.,2026-01-01T12:25:00,InventoryShortageDetected
+dec-623,pharmacy.prescriptions:rx-4a39a924,CONFIRM_MEDICINE_DISPENSE,RULE-GLOB-STOCK-001,BLOCKED,Action 'CONFIRM_MEDICINE_DISPENSE' BLOCKED by LEVEL_1_SYSTEM_INTEGRITY rule 'RULE-GLOB-STOCK-001': Blocks medication dispensing if requested quantity exceeds available inventory batch stock.,2026-01-01T12:25:00,InventoryShortageDetected
+dec-624,pharmacy.prescriptions:rx-9cfcacbf,VERIFY_PRESCRIPTION,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T12:25:00,VERIFY_PRESCRIPTION_Executed
+dec-625,pharmacy.prescriptions:rx-9cfcacbf,VERIFY_PRESCRIPTION,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T12:25:00,VERIFY_PRESCRIPTION_Executed
+dec-626,pharmacy.prescriptions:rx-4a39a924,CONFIRM_MEDICINE_DISPENSE,RULE-GLOB-STOCK-001,BLOCKED,Action 'CONFIRM_MEDICINE_DISPENSE' BLOCKED by LEVEL_1_SYSTEM_INTEGRITY rule 'RULE-GLOB-STOCK-001': Blocks medication dispensing if requested quantity exceeds available inventory batch stock.,2026-01-01T12:25:00,InventoryShortageDetected
+dec-627,pharmacy.prescriptions:rx-001,VERIFY_PRESCRIPTION,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T12:25:00,VERIFY_PRESCRIPTION_Executed
+dec-628,pharmacy.prescriptions:rx-001,CONFIRM_MEDICINE_DISPENSE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T12:25:00,CONFIRM_MEDICINE_DISPENSE_Executed
+dec-629,pharmacy.prescriptions:rx-001,CONFIRM_MEDICINE_DISPENSE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T12:25:00,CONFIRM_MEDICINE_DISPENSE_Executed
+dec-630,clinical.encounters:enc-6184f7a6,CREATE_CLINICAL_ALERT,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T12:27:00,CREATE_CLINICAL_ALERT_Executed
+dec-631,clinical.encounters:enc-6184f7a6,CREATE_CLINICAL_ALERT,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T12:27:00,CREATE_CLINICAL_ALERT_Executed
+dec-632,clinical.encounters:enc-6184f7a6,CREATE_CLINICAL_ALERT,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T12:27:00,CREATE_CLINICAL_ALERT_Executed
+dec-633,clinical.encounters:enc-6184f7a6,CREATE_CLINICAL_ALERT,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T12:27:00,CREATE_CLINICAL_ALERT_Executed
+dec-634,clinical.appointments:apt-7a6234e5,START_DOCTOR_CONSULTATION,RULE-WORK-OPD-010,ALLOWED,Rule check passed,2026-01-01T12:30:00,EncounterStarted
+dec-635,pharmacy.prescriptions:rx-9cfcacbf,CONFIRM_MEDICINE_DISPENSE,RULE-STATE-RX-021,ALLOWED,Rule check passed,2026-01-01T12:30:00,MedicineDispensed
+dec-636,pharmacy.prescriptions:rx-9cfcacbf,CONFIRM_MEDICINE_DISPENSE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T12:30:00,CONFIRM_MEDICINE_DISPENSE_Executed
+dec-637,pharmacy.prescriptions:rx-9cfcacbf,CONFIRM_MEDICINE_DISPENSE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T12:30:00,CONFIRM_MEDICINE_DISPENSE_Executed
+dec-638,pharmacy.prescriptions:rx-9cfcacbf,CONFIRM_MEDICINE_DISPENSE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T12:30:00,CONFIRM_MEDICINE_DISPENSE_Executed
+dec-639,pharmacy.prescriptions:rx-001,VERIFY_PRESCRIPTION,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T12:30:00,VERIFY_PRESCRIPTION_Executed
+dec-640,pharmacy.prescriptions:rx-001,CONFIRM_MEDICINE_DISPENSE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T12:30:00,CONFIRM_MEDICINE_DISPENSE_Executed
+dec-641,finance.invoices:inv-001,GENERATE_INVOICE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T12:30:00,GENERATE_INVOICE_Executed
+dec-642,clinical.appointments:apt-197b4007,START_DOCTOR_CONSULTATION,RULE-WORK-OPD-010,ALLOWED,Rule check passed,2026-01-01T12:35:00,EncounterStarted
+dec-643,laboratory.laboratory_orders:lab-apt-2b,COLLECT_LAB_SAMPLE,RULE-STATE-LAB-010,ALLOWED,Rule check passed,2026-01-01T12:35:00,LabSampleCollected
+dec-644,laboratory.laboratory_orders:lab-apt-2b,COLLECT_LAB_SAMPLE,RULE-STATE-LAB-011,BLOCKED,Action 'COLLECT_LAB_SAMPLE' BLOCKED by LEVEL_3_DEPARTMENT_WORKFLOW rule 'RULE-STATE-LAB-011': Blocks sample collection if lab order is not in Ordered state.,2026-01-01T12:35:00,COLLECT_LAB_SAMPLE_Blocked
+dec-645,laboratory.laboratory_orders:lab-apt-2b,COLLECT_LAB_SAMPLE,RULE-STATE-LAB-011,BLOCKED,Action 'COLLECT_LAB_SAMPLE' BLOCKED by LEVEL_3_DEPARTMENT_WORKFLOW rule 'RULE-STATE-LAB-011': Blocks sample collection if lab order is not in Ordered state.,2026-01-01T12:35:00,COLLECT_LAB_SAMPLE_Blocked
+dec-646,pharmacy.prescriptions:rx-48b3c9e7,VERIFY_PRESCRIPTION,RULE-CLIN-ALLERGY-001,BLOCKED,Action 'VERIFY_PRESCRIPTION' BLOCKED by LEVEL_2_CLINICAL_SAFETY rule 'RULE-CLIN-ALLERGY-001': Blocks dispensing of Beta-lactam antibiotics (e.g. Amoxicillin) when patient has documented Penicillin allergy.,2026-01-01T12:35:00,PrescriptionAllergyConflictDetected
+dec-647,finance.invoices:ent-b0fa4950,GENERATE_INVOICE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T12:35:00,GENERATE_INVOICE_Executed
+dec-648,finance.invoices:ent-61cabe34,GENERATE_INVOICE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T12:35:00,GENERATE_INVOICE_Executed
+dec-649,finance.invoices:ent-5ea398ad,GENERATE_INVOICE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T12:35:00,GENERATE_INVOICE_Executed
+dec-650,finance.invoices:ent-b84ef231,GENERATE_INVOICE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T12:35:00,GENERATE_INVOICE_Executed
+dec-651,pharmacy.prescriptions:rx-48b3c9e7,VERIFY_PRESCRIPTION,RULE-CLIN-ALLERGY-001,BLOCKED,Action 'VERIFY_PRESCRIPTION' BLOCKED by LEVEL_2_CLINICAL_SAFETY rule 'RULE-CLIN-ALLERGY-001': Blocks dispensing of Beta-lactam antibiotics (e.g. Amoxicillin) when patient has documented Penicillin allergy.,2026-01-01T12:35:00,PrescriptionAllergyConflictDetected
+dec-652,pharmacy.prescriptions:rx-48b3c9e7,VERIFY_PRESCRIPTION,RULE-CLIN-ALLERGY-001,BLOCKED,Action 'VERIFY_PRESCRIPTION' BLOCKED by LEVEL_2_CLINICAL_SAFETY rule 'RULE-CLIN-ALLERGY-001': Blocks dispensing of Beta-lactam antibiotics (e.g. Amoxicillin) when patient has documented Penicillin allergy.,2026-01-01T12:35:00,PrescriptionAllergyConflictDetected
+dec-653,finance.invoices:ent-389279b4,GENERATE_INVOICE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T12:35:00,GENERATE_INVOICE_Executed
+dec-654,pharmacy.prescriptions:rx-001,VERIFY_PRESCRIPTION,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T12:35:00,VERIFY_PRESCRIPTION_Executed
+dec-655,pharmacy.prescriptions:rx-001,CONFIRM_MEDICINE_DISPENSE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T12:35:00,CONFIRM_MEDICINE_DISPENSE_Executed
+dec-656,clinical.encounters:enc-6e30fdef,CREATE_CLINICAL_ALERT,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T12:37:00,CREATE_CLINICAL_ALERT_Executed
+dec-657,clinical.encounters:enc-6e30fdef,CREATE_CLINICAL_ALERT,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T12:37:00,CREATE_CLINICAL_ALERT_Executed
+dec-658,clinical.encounters:enc-6e30fdef,CREATE_CLINICAL_ALERT,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T12:37:00,CREATE_CLINICAL_ALERT_Executed
+dec-659,clinical.appointments:apt-a623eb6a,START_DOCTOR_CONSULTATION,RULE-WORK-OPD-010,ALLOWED,Rule check passed,2026-01-01T12:40:00,EncounterStarted
+dec-660,pharmacy.prescriptions:rx-e9958e92,VERIFY_PRESCRIPTION,RULE-STATE-RX-020,ALLOWED,Rule check passed,2026-01-01T12:40:00,PrescriptionVerified
+dec-661,pharmacy.prescriptions:rx-e9958e92,VERIFY_PRESCRIPTION,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T12:40:00,VERIFY_PRESCRIPTION_Executed
+dec-662,pharmacy.prescriptions:rx-e9958e92,VERIFY_PRESCRIPTION,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T12:40:00,VERIFY_PRESCRIPTION_Executed
+dec-663,pharmacy.prescriptions:rx-001,VERIFY_PRESCRIPTION,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T12:40:00,VERIFY_PRESCRIPTION_Executed
+dec-664,pharmacy.prescriptions:rx-001,CONFIRM_MEDICINE_DISPENSE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T12:40:00,CONFIRM_MEDICINE_DISPENSE_Executed
+dec-665,pharmacy.prescriptions:rx-001,CONFIRM_MEDICINE_DISPENSE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T12:40:00,CONFIRM_MEDICINE_DISPENSE_Executed
+dec-666,clinical.appointments:apt-bc695aaa,START_DOCTOR_CONSULTATION,RULE-WORK-OPD-010,ALLOWED,Rule check passed,2026-01-01T12:45:00,EncounterStarted
+dec-667,radiology.radiology_orders:rad-apt-2b,ACQUIRE_RADIOLOGY_IMAGE,RULE-STATE-RAD-010,ALLOWED,Rule check passed,2026-01-01T12:45:00,RadiologyImageAcquired
+dec-668,pharmacy.prescriptions:rx-0640b5f9,VERIFY_PRESCRIPTION,RULE-STATE-RX-020,ALLOWED,Rule check passed,2026-01-01T12:45:00,PrescriptionVerified
+dec-669,pharmacy.prescriptions:rx-e9958e92,CONFIRM_MEDICINE_DISPENSE,RULE-GLOB-STOCK-001,BLOCKED,Action 'CONFIRM_MEDICINE_DISPENSE' BLOCKED by LEVEL_1_SYSTEM_INTEGRITY rule 'RULE-GLOB-STOCK-001': Blocks medication dispensing if requested quantity exceeds available inventory batch stock.,2026-01-01T12:45:00,InventoryShortageDetected
+dec-670,pharmacy.prescriptions:rx-e9958e92,CONFIRM_MEDICINE_DISPENSE,RULE-GLOB-STOCK-001,BLOCKED,Action 'CONFIRM_MEDICINE_DISPENSE' BLOCKED by LEVEL_1_SYSTEM_INTEGRITY rule 'RULE-GLOB-STOCK-001': Blocks medication dispensing if requested quantity exceeds available inventory batch stock.,2026-01-01T12:45:00,InventoryShortageDetected
+dec-671,pharmacy.prescriptions:rx-e9958e92,CONFIRM_MEDICINE_DISPENSE,RULE-GLOB-STOCK-001,BLOCKED,Action 'CONFIRM_MEDICINE_DISPENSE' BLOCKED by LEVEL_1_SYSTEM_INTEGRITY rule 'RULE-GLOB-STOCK-001': Blocks medication dispensing if requested quantity exceeds available inventory batch stock.,2026-01-01T12:45:00,InventoryShortageDetected
+dec-672,pharmacy.prescriptions:rx-0640b5f9,VERIFY_PRESCRIPTION,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T12:45:00,VERIFY_PRESCRIPTION_Executed
+dec-673,pharmacy.prescriptions:rx-0640b5f9,VERIFY_PRESCRIPTION,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T12:45:00,VERIFY_PRESCRIPTION_Executed
+dec-674,pharmacy.prescriptions:rx-e9958e92,CONFIRM_MEDICINE_DISPENSE,RULE-GLOB-STOCK-001,BLOCKED,Action 'CONFIRM_MEDICINE_DISPENSE' BLOCKED by LEVEL_1_SYSTEM_INTEGRITY rule 'RULE-GLOB-STOCK-001': Blocks medication dispensing if requested quantity exceeds available inventory batch stock.,2026-01-01T12:45:00,InventoryShortageDetected
+dec-675,pharmacy.prescriptions:rx-001,VERIFY_PRESCRIPTION,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T12:45:00,VERIFY_PRESCRIPTION_Executed
+dec-676,pharmacy.prescriptions:rx-001,CONFIRM_MEDICINE_DISPENSE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T12:45:00,CONFIRM_MEDICINE_DISPENSE_Executed
+dec-677,pharmacy.prescriptions:rx-001,CONFIRM_MEDICINE_DISPENSE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T12:45:00,CONFIRM_MEDICINE_DISPENSE_Executed
+dec-678,clinical.encounters:enc-656bea36,CREATE_CLINICAL_ALERT,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T12:47:00,CREATE_CLINICAL_ALERT_Executed
+dec-679,clinical.encounters:enc-656bea36,CREATE_CLINICAL_ALERT,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T12:47:00,CREATE_CLINICAL_ALERT_Executed
+dec-680,clinical.encounters:enc-656bea36,CREATE_CLINICAL_ALERT,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T12:47:00,CREATE_CLINICAL_ALERT_Executed
+dec-681,clinical.encounters:enc-656bea36,CREATE_CLINICAL_ALERT,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T12:47:00,CREATE_CLINICAL_ALERT_Executed
+dec-682,clinical.appointments:apt-27b7a486,START_DOCTOR_CONSULTATION,RULE-WORK-OPD-010,ALLOWED,Rule check passed,2026-01-01T12:50:00,EncounterStarted
+dec-683,pharmacy.prescriptions:rx-0640b5f9,CONFIRM_MEDICINE_DISPENSE,RULE-STATE-RX-021,ALLOWED,Rule check passed,2026-01-01T12:50:00,MedicineDispensed
+dec-684,pharmacy.prescriptions:rx-0640b5f9,CONFIRM_MEDICINE_DISPENSE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T12:50:00,CONFIRM_MEDICINE_DISPENSE_Executed
+dec-685,pharmacy.prescriptions:rx-0640b5f9,CONFIRM_MEDICINE_DISPENSE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T12:50:00,CONFIRM_MEDICINE_DISPENSE_Executed
+dec-686,pharmacy.prescriptions:rx-0640b5f9,CONFIRM_MEDICINE_DISPENSE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T12:50:00,CONFIRM_MEDICINE_DISPENSE_Executed
+dec-687,pharmacy.prescriptions:rx-001,VERIFY_PRESCRIPTION,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T12:50:00,VERIFY_PRESCRIPTION_Executed
+dec-688,pharmacy.prescriptions:rx-001,CONFIRM_MEDICINE_DISPENSE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T12:50:00,CONFIRM_MEDICINE_DISPENSE_Executed
+dec-689,finance.invoices:inv-001,GENERATE_INVOICE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T12:50:00,GENERATE_INVOICE_Executed
+dec-690,clinical.appointments:apt-0c26ec8c,START_DOCTOR_CONSULTATION,RULE-WORK-OPD-010,ALLOWED,Rule check passed,2026-01-01T12:55:00,EncounterStarted
+dec-691,laboratory.laboratory_orders:lab-apt-bc,COLLECT_LAB_SAMPLE,RULE-STATE-LAB-010,ALLOWED,Rule check passed,2026-01-01T12:55:00,LabSampleCollected
+dec-692,laboratory.laboratory_orders:lab-apt-bc,COLLECT_LAB_SAMPLE,RULE-STATE-LAB-011,BLOCKED,Action 'COLLECT_LAB_SAMPLE' BLOCKED by LEVEL_3_DEPARTMENT_WORKFLOW rule 'RULE-STATE-LAB-011': Blocks sample collection if lab order is not in Ordered state.,2026-01-01T12:55:00,COLLECT_LAB_SAMPLE_Blocked
+dec-693,laboratory.laboratory_orders:lab-apt-bc,COLLECT_LAB_SAMPLE,RULE-STATE-LAB-011,BLOCKED,Action 'COLLECT_LAB_SAMPLE' BLOCKED by LEVEL_3_DEPARTMENT_WORKFLOW rule 'RULE-STATE-LAB-011': Blocks sample collection if lab order is not in Ordered state.,2026-01-01T12:55:00,COLLECT_LAB_SAMPLE_Blocked
+dec-694,pharmacy.prescriptions:rx-029a2562,VERIFY_PRESCRIPTION,RULE-CLIN-ALLERGY-001,BLOCKED,Action 'VERIFY_PRESCRIPTION' BLOCKED by LEVEL_2_CLINICAL_SAFETY rule 'RULE-CLIN-ALLERGY-001': Blocks dispensing of Beta-lactam antibiotics (e.g. Amoxicillin) when patient has documented Penicillin allergy.,2026-01-01T12:55:00,PrescriptionAllergyConflictDetected
+dec-695,finance.invoices:ent-b10f0609,GENERATE_INVOICE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T12:55:00,GENERATE_INVOICE_Executed
+dec-696,finance.invoices:ent-3ae0be52,GENERATE_INVOICE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T12:55:00,GENERATE_INVOICE_Executed
+dec-697,finance.invoices:ent-1c20a360,GENERATE_INVOICE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T12:55:00,GENERATE_INVOICE_Executed
+dec-698,finance.invoices:ent-e4eff2bf,GENERATE_INVOICE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T12:55:00,GENERATE_INVOICE_Executed
+dec-699,pharmacy.prescriptions:rx-029a2562,VERIFY_PRESCRIPTION,RULE-CLIN-ALLERGY-001,BLOCKED,Action 'VERIFY_PRESCRIPTION' BLOCKED by LEVEL_2_CLINICAL_SAFETY rule 'RULE-CLIN-ALLERGY-001': Blocks dispensing of Beta-lactam antibiotics (e.g. Amoxicillin) when patient has documented Penicillin allergy.,2026-01-01T12:55:00,PrescriptionAllergyConflictDetected
+dec-700,pharmacy.prescriptions:rx-029a2562,VERIFY_PRESCRIPTION,RULE-CLIN-ALLERGY-001,BLOCKED,Action 'VERIFY_PRESCRIPTION' BLOCKED by LEVEL_2_CLINICAL_SAFETY rule 'RULE-CLIN-ALLERGY-001': Blocks dispensing of Beta-lactam antibiotics (e.g. Amoxicillin) when patient has documented Penicillin allergy.,2026-01-01T12:55:00,PrescriptionAllergyConflictDetected
+dec-701,finance.invoices:ent-0e33b1c3,GENERATE_INVOICE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T12:55:00,GENERATE_INVOICE_Executed
+dec-702,pharmacy.prescriptions:rx-001,VERIFY_PRESCRIPTION,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T12:55:00,VERIFY_PRESCRIPTION_Executed
+dec-703,pharmacy.prescriptions:rx-001,CONFIRM_MEDICINE_DISPENSE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T12:55:00,CONFIRM_MEDICINE_DISPENSE_Executed
+dec-704,clinical.encounters:enc-6e02c8aa,CREATE_CLINICAL_ALERT,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T12:57:00,CREATE_CLINICAL_ALERT_Executed
+dec-705,clinical.encounters:enc-6e02c8aa,CREATE_CLINICAL_ALERT,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T12:57:00,CREATE_CLINICAL_ALERT_Executed
+dec-706,clinical.encounters:enc-6e02c8aa,CREATE_CLINICAL_ALERT,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T12:57:00,CREATE_CLINICAL_ALERT_Executed
+dec-707,clinical.appointments:apt-d53d1640,START_DOCTOR_CONSULTATION,RULE-WORK-OPD-010,ALLOWED,Rule check passed,2026-01-01T13:00:00,EncounterStarted
+dec-708,pharmacy.prescriptions:rx-e4781c77,VERIFY_PRESCRIPTION,RULE-STATE-RX-020,ALLOWED,Rule check passed,2026-01-01T13:00:00,PrescriptionVerified
+dec-709,pharmacy.prescriptions:rx-e4781c77,VERIFY_PRESCRIPTION,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T13:00:00,VERIFY_PRESCRIPTION_Executed
+dec-710,pharmacy.prescriptions:rx-e4781c77,VERIFY_PRESCRIPTION,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T13:00:00,VERIFY_PRESCRIPTION_Executed
+dec-711,pharmacy.prescriptions:rx-001,VERIFY_PRESCRIPTION,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T13:00:00,VERIFY_PRESCRIPTION_Executed
+dec-712,pharmacy.prescriptions:rx-001,CONFIRM_MEDICINE_DISPENSE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T13:00:00,CONFIRM_MEDICINE_DISPENSE_Executed
+dec-713,pharmacy.prescriptions:rx-001,CONFIRM_MEDICINE_DISPENSE,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T13:00:00,CONFIRM_MEDICINE_DISPENSE_Executed
+dec-714,clinical.appointments:apt-8a6dd0b6,START_DOCTOR_CONSULTATION,RULE-WORK-OPD-010,ALLOWED,Rule check passed,2026-01-01T13:05:00,EncounterStarted
+dec-715,radiology.radiology_orders:rad-apt-bc,ACQUIRE_RADIOLOGY_IMAGE,RULE-STATE-RAD-010,ALLOWED,Rule check passed,2026-01-01T13:05:00,RadiologyImageAcquired
+dec-716,pharmacy.prescriptions:rx-9bd4ba9a,VERIFY_PRESCRIPTION,RULE-STATE-RX-020,ALLOWED,Rule check passed,2026-01-01T13:05:00,PrescriptionVerified
+dec-717,pharmacy.prescriptions:rx-e4781c77,CONFIRM_MEDICINE_DISPENSE,RULE-GLOB-STOCK-001,BLOCKED,Action 'CONFIRM_MEDICINE_DISPENSE' BLOCKED by LEVEL_1_SYSTEM_INTEGRITY rule 'RULE-GLOB-STOCK-001': Blocks medication dispensing if requested quantity exceeds available inventory batch stock.,2026-01-01T13:05:00,InventoryShortageDetected
+dec-718,pharmacy.prescriptions:rx-e4781c77,CONFIRM_MEDICINE_DISPENSE,RULE-GLOB-STOCK-001,BLOCKED,Action 'CONFIRM_MEDICINE_DISPENSE' BLOCKED by LEVEL_1_SYSTEM_INTEGRITY rule 'RULE-GLOB-STOCK-001': Blocks medication dispensing if requested quantity exceeds available inventory batch stock.,2026-01-01T13:05:00,InventoryShortageDetected
+dec-719,pharmacy.prescriptions:rx-e4781c77,CONFIRM_MEDICINE_DISPENSE,RULE-GLOB-STOCK-001,BLOCKED,Action 'CONFIRM_MEDICINE_DISPENSE' BLOCKED by LEVEL_1_SYSTEM_INTEGRITY rule 'RULE-GLOB-STOCK-001': Blocks medication dispensing if requested quantity exceeds available inventory batch stock.,2026-01-01T13:05:00,InventoryShortageDetected
+dec-720,pharmacy.prescriptions:rx-9bd4ba9a,VERIFY_PRESCRIPTION,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T13:05:00,VERIFY_PRESCRIPTION_Executed
+dec-721,pharmacy.prescriptions:rx-9bd4ba9a,VERIFY_PRESCRIPTION,DEFAULT_FALLBACK_ALLOW,ALLOWED,Rule check passed,2026-01-01T13:05:00,VERIFY_PRESCRIPTION_Executed
+dec-722,pharmacy.prescriptions:rx-e4781c77,CONFIRM_MEDICINE_DISPENSE,RULE-GLOB-STOCK-001,BLOCKED,Action 'CONFIRM_MEDICINE_DISPENSE' BLOCKED by LEVEL_1_SYSTEM_INTEGRITY rule 'RULE-GLOB-STOCK-001': Blocks medication dispensing if requested quantity exceeds available inventory batch stock.,2026-01-01T13:05:00,InventoryShortageDetected

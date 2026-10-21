@@ -1,0 +1,101 @@
+lab_id,patient_id,encounter_id,test_name,result,is_abnormal,completed_at,status
+lab-124d2b23,pat-263cf446,enc-4322886a,CBC,Pending,False,,Ordered
+lab-9e29351d,pat-9e4a6b5d,enc-5ae12622,Complete Blood Count,Normal Range,False,2026-01-01T08:15:00,Completed
+lab-26e46e49,pat-f1ccfa8d,enc-af4c800c,CRP,Pending,False,,Ordered
+lab-7ef9462d,pat-a1e3d5f2,enc-73067de1,CBC,Pending,False,,Ordered
+lab-ebf99537,pat-6e9db4f1,enc-3953a3e2,CBC,Pending,False,,Ordered
+lab-62aa4b6b,pat-df3c4065,enc-d9d624ba,C-Reactive Protein,Abnormal Finding,True,2026-01-01T08:35:00,Completed
+lab-2a63d8eb,pat-fb9b310d,enc-102436a5,Urinalysis,Pending,False,,Ordered
+lab-248bff8d,pat-9f56cb8d,enc-10836cd4,CBC,Pending,False,,Ordered
+lab-98756a87,pat-87ed6cfe,enc-4f10cca1,CBC,Pending,False,,Ordered
+lab-b1b9ffa5,pat-7eb38178,enc-7c1c3fe1,Complete Blood Count,Normal Range,False,2026-01-01T08:55:00,Completed
+lab-b8d99aa6,pat-d011ede6,enc-8f2756f9,CRP,Pending,False,,Ordered
+lab-00cf25c4,pat-e4080bb4,enc-370b01e8,CBC,Pending,False,,Ordered
+lab-3a9236cb,pat-7dd4b6dc,enc-af3357aa,CBC,Pending,False,,Ordered
+lab-9922890b,pat-78cd82ab,enc-8d45fa2e,Fasting Blood Sugar,Abnormal Finding,True,2026-01-01T09:15:00,Completed
+lab-5c5e3f17,pat-eb607107,enc-b7d64878,CBC,Pending,False,,Ordered
+lab-4468f191,pat-4f8d7106,enc-86e669a7,CBC,Pending,False,,Ordered
+lab-b0599a0a,pat-8db6bf09,enc-99ab5e0d,CBC,Pending,False,,Ordered
+lab-150ecbb9,pat-164144c1,enc-69f938d2,Complete Blood Count,Normal Range,False,2026-01-01T09:35:00,Completed
+lab-605f92ba,pat-2a43e91b,enc-a7dc3842,CRP,Pending,False,,Ordered
+lab-0886bc29,pat-18024c58,enc-d0f89ee2,CBC,Pending,False,,Ordered
+lab-6bfb8c3b,pat-b465e0a6,enc-b2929046,CBC,Pending,False,,Ordered
+lab-4d0f6c9a,pat-fc3ec4ca,enc-301d32a7,Lipid Profile Panel,Normal Range,False,2026-01-01T09:55:00,Completed
+lab-6a5b4efe,pat-81661e8b,enc-3c7a2ec6,Urine_Culture,Pending,False,,Ordered
+lab-15cc03a5,pat-b88aa4b1,enc-1b7f56d4,CBC,Pending,False,,Ordered
+lab-e15ef569,pat-c740cbc8,enc-45cd32e1,CBC,Pending,False,,Ordered
+lab-5b6a74f6,pat-66860d19,enc-e163b529,C-Reactive Protein,Normal Range,False,2026-01-01T10:15:00,Completed
+lab-a9e3460c,pat-a2415748,enc-6b5c5c80,CBC,Pending,False,,Ordered
+lab-145ee8d2,pat-cd77fe9d,enc-2fa74957,CBC,Pending,False,,Ordered
+lab-47f22611,pat-fafbc649,enc-e42b82fc,CBC,Pending,False,,Ordered
+lab-8b39003e,pat-0e516a32,enc-db4512f4,C-Reactive Protein,Normal Range,False,2026-01-01T10:35:00,Completed
+lab-71693d24,pat-5464cf29,enc-40171b54,Urine_Culture,Pending,False,,Ordered
+lab-22e32f40,pat-9fd3dfc3,enc-a0c54dcf,CBC,Pending,False,,Ordered
+lab-247b15bd,pat-dd1803bf,enc-6eda80bc,CRP,Pending,False,,Ordered
+lab-a77a1287,pat-4e582d4d,enc-257274d5,Complete Blood Count,Normal Range,False,2026-01-01T10:55:00,Completed
+lab-4c307f78,pat-ceb2d79a,enc-6a249848,CRP,Pending,False,,Ordered
+lab-d2d29915,pat-0bfed554,enc-d249830b,CBC,Pending,False,,Ordered
+lab-7d276319,pat-5298c8f8,enc-ab2929a9,CBC,Pending,False,,Ordered
+lab-801af28c,pat-977c8594,enc-a7638b0b,Lipid Profile Panel,Normal Range,False,2026-01-01T11:15:00,Completed
+lab-f84fd391,pat-160bd5d1,enc-0f02b437,CBC,Pending,False,,Ordered
+lab-a67c9674,pat-0aff642d,enc-7ce5d7ca,CRP,Pending,False,,Ordered
+lab-162c7ff2,pat-980118f6,enc-9e20bfd9,CBC,Pending,False,,Ordered
+lab-c889880d,pat-cc5b27df,enc-c67d3c69,Complete Blood Count,Normal Range,False,2026-01-01T11:35:00,Completed
+lab-09ddb32c,pat-6d2d4a77,enc-2135f486,Urine_Culture,Pending,False,,Ordered
+lab-333f5baa,pat-d3730c3e,enc-819cc218,CBC,Pending,False,,Ordered
+lab-7273e932,pat-b15d763b,enc-ac6e9ba8,CBC,Pending,False,,Ordered
+lab-e6ab2534,pat-72555777,enc-c0daa09b,Complete Blood Count,Normal Range,False,2026-01-01T11:55:00,Completed
+lab-fcb6772a,pat-fad627c6,enc-0c0a670f,CBC,Pending,False,,Ordered
+lab-cb1f3dab,pat-e19829b1,enc-403e0c63,CBC,Pending,False,,Ordered
+lab-e567b874,pat-1fa59556,enc-f5fdc861,CBC,Pending,False,,Ordered
+lab-db5d20fe,pat-d4921463,enc-225795f2,C-Reactive Protein,Normal Range,False,2026-01-01T12:15:00,Completed
+lab-2a91bb24,pat-20b5cd38,enc-566bc1d7,CBC,Pending,False,,Ordered
+lab-30311516,pat-cc854756,enc-378b91fd,CBC,Pending,False,,Ordered
+lab-da97fc85,pat-7e70b279,enc-53e02485,CBC,Pending,False,,Ordered
+lab-24e975cd,pat-f4ab844e,enc-d9e0667d,Complete Blood Count,Normal Range,False,2026-01-01T12:35:00,Completed
+lab-fa28fdaf,pat-7f771b51,enc-e9c2b511,CBC,Pending,False,,Ordered
+lab-439574b0,pat-e40c7b72,enc-7cd542d6,FBS,Pending,False,,Ordered
+lab-dc1cbaaa,pat-7d691d5b,enc-911c9a15,CBC,Pending,False,,Ordered
+lab-3983c6a0,pat-74aec976,enc-634509b6,C-Reactive Protein,Abnormal Finding,True,2026-01-01T12:55:00,Completed
+lab-8d3b5785,pat-df6a66c0,enc-5986e482,Urine_Culture,Pending,False,,Ordered
+lab-1e61eae2,pat-0a484438,enc-6e94784a,CRP,Pending,False,,Ordered
+lab-fe4c06e0,pat-431d452b,enc-2aa98530,CBC,Pending,False,,Ordered
+lab-1c935bbd,pat-5e6809a4,enc-e9d6cd3c,Complete Blood Count,Abnormal Finding,True,2026-01-01T13:15:00,Completed
+lab-5c8bad48,pat-ecc4db73,enc-b67bada5,CBC,Pending,False,,Ordered
+lab-369ac12e,pat-9834fb37,enc-f8383668,CBC,Pending,False,,Ordered
+lab-9b4b400d,pat-06585cd6,enc-203bf3d0,CBC,Pending,False,,Ordered
+lab-430f5883,pat-5558caf9,enc-b1aec5d7,Complete Blood Count,Normal Range,False,2026-01-01T13:35:00,Completed
+lab-d1483b45,pat-984e449c,enc-62c2f4ad,CRP,Pending,False,,Ordered
+lab-05464c9e,pat-0a8c0df9,enc-94e0605e,CBC,Pending,False,,Ordered
+lab-35110bd1,pat-4aadf770,enc-ca2c61ce,CBC,Pending,False,,Ordered
+lab-533770d9,pat-d1a1ae0f,enc-b7e41984,Liver Function Panel,Abnormal Finding,True,2026-01-01T13:55:00,Completed
+lab-a9445478,pat-12f0ee5b,enc-36895a72,Urinalysis,Pending,False,,Ordered
+lab-b0c2bd34,pat-f63d962a,enc-67cf2aaa,CBC,Pending,False,,Ordered
+lab-3ca0a033,pat-72f3cb4a,enc-77b80a2e,CBC,Pending,False,,Ordered
+lab-2e52cd3c,pat-bbdf365a,enc-f18a8c82,Lipid Profile Panel,Normal Range,False,2026-01-01T14:15:00,Completed
+lab-a3f18bb3,pat-3d879ec8,enc-78321a94,CBC,Pending,False,,Ordered
+lab-dfb94635,pat-91455c3f,enc-4615e007,CBC,Pending,False,,Ordered
+lab-eba4d9bd,pat-626364ac,enc-eb4be4e5,CBC,Pending,False,,Ordered
+lab-a997f3dc,pat-152cf835,enc-91700d06,Complete Blood Count,Abnormal Finding,True,2026-01-01T14:35:00,Completed
+lab-2fca715d,pat-69cad3e0,enc-caf6cc64,Urine_Culture,Pending,False,,Ordered
+lab-46c80f59,pat-1b457ce0,enc-3e5cc1df,CBC,Pending,False,,Ordered
+lab-4440f858,pat-95ef8158,enc-5d7fc24d,CBC,Pending,False,,Ordered
+lab-69f74662,pat-25a687fe,enc-e7855398,Complete Blood Count,Normal Range,False,2026-01-01T14:55:00,Completed
+lab-1fb8d4dc,pat-a2f3aceb,enc-faaa295a,Urinalysis,Pending,False,,Ordered
+lab-fc919ff4,pat-2dfd1a2f,enc-a30ca9e5,CBC,Pending,False,,Ordered
+lab-e08c6bbd,pat-1f887423,enc-8b088412,CBC,Pending,False,,Ordered
+lab-6f5371d2,pat-df5fbfde,enc-7ed47857,Complete Blood Count,Normal Range,False,2026-01-01T15:15:00,Completed
+lab-463b53a2,pat-5c450477,enc-a52ceee0,CBC,Pending,False,,Ordered
+lab-72943ee2,pat-754e472b,enc-a0a16a99,CBC,Pending,False,,Ordered
+lab-b70bfb4d,pat-e247a828,enc-a1bafce6,CRP,Pending,False,,Ordered
+lab-fd59625c,pat-f1838b92,enc-14702eff,Complete Blood Count,Abnormal Finding,True,2026-01-01T15:35:00,Completed
+lab-d601f1a0,pat-06289b21,enc-c04c31e8,Urine_Culture,Pending,False,,Ordered
+lab-65e7bcee,pat-8b80caf3,enc-3a6616cb,CBC,Pending,False,,Ordered
+lab-68ef2ac6,pat-0ccadafc,enc-4d6aa154,Renal_Function,Pending,False,,Ordered
+lab-e5558c86,pat-0cdc5e3c,enc-7c154d35,Complete Blood Count,Normal Range,False,2026-01-01T15:55:00,Completed
+lab-ad4267d1,pat-270b8a33,enc-6992a676,CRP,Pending,False,,Ordered
+lab-cf4db250,pat-a6331305,enc-62dd4349,CBC,Pending,False,,Ordered
+lab-9166692b,pat-fc2a4f0e,enc-da33d145,HbA1c,Pending,False,,Ordered
+lab-bb48a8d0,pat-466fbb7f,enc-3c22525f,Lipid Profile Panel,Normal Range,False,2026-01-01T16:15:00,Completed
+lab-3eddee54,pat-75041cd5,enc-45f438c4,CBC,Pending,False,,Ordered
+lab-250f8e89,pat-840c7a24,enc-947497e2,CBC,Pending,False,,Ordered

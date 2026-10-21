@@ -1,0 +1,20 @@
+=================================================================
+                    SYNAPSE MEDICAL CENTER                       
+                       PRESCRIPTION SLIP                         
+=================================================================
+ Prescription ID : rx-2ca9de44
+ Date & Time     : 2026-01-01T11:10:00
+ Patient ID      : pat-0f6b61fa
+ Patient Name    : Dawn Schmidt
+ Document Status : Dispensed
+ Allergies       : None
+-----------------------------------------------------------------
+ Rx:
+  Medication : Paracetamol
+  Class      : Analgesic
+  Dosage     : 500mg
+  Frequency  : TDS
+  Duration   : 5 days
+-----------------------------------------------------------------
+ Status of Dispense    : MEDICINE FULLY DISPENSED
+=================================================================

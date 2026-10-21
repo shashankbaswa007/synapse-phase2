@@ -1,0 +1,23 @@
+{
+  "pmid": "31234502",
+  "title": "SGLT2 inhibitors and Empagliflozin cardiovascular outcomes in T2DM patients",
+  "abstract": "Empagliflozin significantly reduces cardiovascular mortality and glycated hemoglobin in adult type 2 diabetes patients.",
+  "publication_year": 2022,
+  "journal": "New England Journal of Medicine",
+  "authors": [
+    "Zinman B",
+    "Wanner C"
+  ],
+  "mesh_terms": [
+    "Empagliflozin",
+    "Metformin",
+    "Diabetes Mellitus, Type 2"
+  ],
+  "keywords": [
+    "empagliflozin",
+    "cardiovascular risk"
+  ],
+  "doi": null,
+  "retrieved_at": "2026-10-13T18:53:35.952535",
+  "query_topic": "Type 2 Diabetes"
+}

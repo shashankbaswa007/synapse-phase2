@@ -1,0 +1,31 @@
+@startuml patient_journeys
+title SYNAPSE Phase 2 - Patient Journey Workflows
+
+class WorkflowCoordinator {
+    - scheduler: FutureActionScheduler
+    - active_journeys: Dict[str, PatientJourney]
+    - workflow_definitions: Dict[str, WorkflowDefinition]
+    + register_workflow(WorkflowDefinition)
+    + start_journey(journey, start_time): Optional[ActionRequest]
+    + on_domain_event(DomainEvent): List[ActionRequest]
+}
+
+class PatientJourney {
+    + journey_id: str
+    + scenario_id: str
+    + patient_id: str
+    + current_step_id: str
+    + status: JourneyStatus
+    + step_history: list
+}
+
+class WorkflowDefinition {
+    + scenario_id: str
+    + initial_step_id: str
+    + steps: Dict[str, WorkflowStep]
+}
+
+WorkflowCoordinator *-- PatientJourney
+WorkflowCoordinator *-- WorkflowDefinition
+
+@enduml

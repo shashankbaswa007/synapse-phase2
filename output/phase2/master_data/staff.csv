@@ -1,0 +1,31 @@
+staff_id,department_id,name,role,specialization,qualification,status
+doc-dept-clin-001,DEPT-CLIN,Dr. Alexander,doctor,General Medicine,"MBBS, MD",Active
+doc-dept-clin-002,DEPT-CLIN,Dr. Jimenez,doctor,Pediatrics,"MBBS, MD",Active
+doc-dept-clin-003,DEPT-CLIN,Dr. Campbell,doctor,Internal Medicine,"MBBS, MD",Active
+doc-dept-clin-004,DEPT-CLIN,Dr. Morris,doctor,Internal Medicine,"MBBS, MD",Active
+doc-dept-clin-005,DEPT-CLIN,Dr. Liu,doctor,Internal Medicine,"MBBS, MD",Active
+nur-dept-clin-001,DEPT-CLIN,Raymond Brown,nurse,,BSc Nursing,Active
+nur-dept-clin-002,DEPT-CLIN,Barbara Banks,nurse,,BSc Nursing,Active
+nur-dept-clin-003,DEPT-CLIN,Dustin Peck,nurse,,BSc Nursing,Active
+nur-dept-clin-004,DEPT-CLIN,Jesse Johnson,nurse,,BSc Nursing,Active
+nur-dept-clin-005,DEPT-CLIN,Sara Jennings,nurse,,BSc Nursing,Active
+nur-dept-clin-006,DEPT-CLIN,Eric Brown,nurse,,BSc Nursing,Active
+nur-dept-clin-007,DEPT-CLIN,Tabitha Collins,nurse,,BSc Nursing,Active
+nur-dept-clin-008,DEPT-CLIN,Scott Hoffman,nurse,,BSc Nursing,Active
+phm-dept-pharm-001,DEPT-PHARM,Phm. Owen,pharmacist,,B.Pharm,Active
+phm-dept-pharm-002,DEPT-PHARM,Phm. Foster,pharmacist,,B.Pharm,Active
+phm-dept-pharm-003,DEPT-PHARM,Phm. Fisher,pharmacist,,B.Pharm,Active
+lab-dept-lab-001,DEPT-LAB,Julie Gordon,lab_technician,,DMLT,Active
+lab-dept-lab-002,DEPT-LAB,Nicholas Perez,lab_technician,,DMLT,Active
+lab-dept-lab-003,DEPT-LAB,Bryan Parker,lab_technician,,DMLT,Active
+lab-dept-lab-004,DEPT-LAB,Benjamin Allen,lab_technician,,DMLT,Active
+path-dept-lab-001,DEPT-LAB,Dr. Wang,pathologist,,MD Pathology,Active
+path-dept-lab-002,DEPT-LAB,Dr. Manning,pathologist,,MD Pathology,Active
+rad-dept-rad-001,DEPT-RAD,Dr. Perez,radiologist,,MD Radiology,Active
+rad-dept-rad-002,DEPT-RAD,Dr. Wilkins,radiologist,,MD Radiology,Active
+radt-dept-rad-001,DEPT-RAD,Karen Bennett,rad_technician,,B.Sc Radiology,Active
+radt-dept-rad-002,DEPT-RAD,Amanda Summers,rad_technician,,B.Sc Radiology,Active
+radt-dept-rad-003,DEPT-RAD,Robert Schneider,rad_technician,,B.Sc Radiology,Active
+fin-dept-fin-001,DEPT-FIN,Sarah Henderson,billing_clerk,,B.Com,Active
+fin-dept-fin-002,DEPT-FIN,Ashlee Santiago,billing_clerk,,B.Com,Active
+fin-dept-fin-003,DEPT-FIN,Elizabeth Martin,billing_clerk,,B.Com,Active

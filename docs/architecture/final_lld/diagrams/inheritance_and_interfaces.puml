@@ -1,0 +1,66 @@
+@startuml inheritance_and_interfaces
+title SYNAPSE Phase 2 - Inheritance & Protocol Realization
+
+interface IClock <<Protocol>> {
+    + now(): datetime
+    + advance_to(datetime): datetime
+    + advance_by_seconds(float): datetime
+    + advance_by_minutes(float): datetime
+}
+
+interface IScheduler <<Protocol>> {
+    + schedule_action(ActionRequest, datetime, int)
+    + peek_next_due_time(): Optional[datetime]
+    + get_due_actions(datetime): list
+    + invalidate_entity_actions(str, str): int
+}
+
+interface IStateReader <<Protocol>> {
+    + get_entity_state(str, str): dict
+}
+
+interface IStateWriter <<Protocol>> {
+    + set_entity_state(str, str, dict)
+}
+
+interface ITransitionValidator <<Protocol>> {
+    + validate_transition(str, str, str): Tuple[bool, Optional[str]]
+    + is_terminal_state(str, str): bool
+}
+
+interface IScenarioProfileHook <<Protocol>> {
+    + scenario_id: str
+    + create_patient_profile(patient_gen): PatientContext
+    + should_force_conflict(): bool
+}
+
+class SimulationClock implements IClock
+class FutureActionScheduler implements IScheduler
+class StateManager implements IStateReader, IStateWriter
+class TransitionManager implements ITransitionValidator
+
+abstract class BaseScenario {
+    + scenario_id: str
+    + setup_initial_state(StateManager)*
+    + generate_initial_events(datetime)*: SimulationEvent
+    + create_patient_profile(patient_gen): PatientContext
+    + should_force_conflict(): bool
+}
+
+class OutpatientRoutineScenario extends BaseScenario
+class DiagnosticInvestigationScenario extends BaseScenario
+class DrugAllergySafetyHoldScenario extends BaseScenario implements IScenarioProfileHook
+class InventoryDepletionScenario extends BaseScenario
+
+abstract class BaseDepartmentHandler {
+    + department_name: str
+    + handle_event(SimulationEvent)*: List[ActionRequest]
+}
+
+class ClinicalDepartmentHandler extends BaseDepartmentHandler
+class PharmacyDepartmentHandler extends BaseDepartmentHandler
+class LaboratoryDepartmentHandler extends BaseDepartmentHandler
+class RadiologyDepartmentHandler extends BaseDepartmentHandler
+class FinanceDepartmentHandler extends BaseDepartmentHandler
+
+@enduml

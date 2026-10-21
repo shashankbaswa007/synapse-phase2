@@ -1,0 +1,9 @@
+nurse_id,department_id,name,role,status
+nur-dept-clin-001,DEPT-CLIN,Raymond Brown,nurse,Active
+nur-dept-clin-002,DEPT-CLIN,Barbara Banks,nurse,Active
+nur-dept-clin-003,DEPT-CLIN,Dustin Peck,nurse,Active
+nur-dept-clin-004,DEPT-CLIN,Jesse Johnson,nurse,Active
+nur-dept-clin-005,DEPT-CLIN,Sara Jennings,nurse,Active
+nur-dept-clin-006,DEPT-CLIN,Eric Brown,nurse,Active
+nur-dept-clin-007,DEPT-CLIN,Tabitha Collins,nurse,Active
+nur-dept-clin-008,DEPT-CLIN,Scott Hoffman,nurse,Active

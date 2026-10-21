@@ -1,0 +1,95 @@
+- rule_id: "RULE-CLIN-ALLERGY-001"
+  name: "Penicillin Allergy Cross-Reactivity Hold"
+  category: "CLINICAL_SAFETY"
+  description: "Blocks dispensing of Beta-lactam antibiotics (e.g. Amoxicillin) when patient has documented Penicillin allergy."
+  source_type: "EXTERNAL_DOMAIN"
+  source_reference: "OpenFDA Drug-Allergy Matrix / RxNorm Beta-Lactam Class"
+  priority: 90
+  precedence_level: 80
+  version: "1.0.0"
+  scenarios: ["SCEN-V1-03"]
+  departments: ["pharmacy", "clinical"]
+  entities_affected: ["pharmacy.prescriptions", "patient.allergies"]
+  preconditions:
+    action_type: "VERIFY_PRESCRIPTION"
+    required_context_keys: ["patient_state.allergies", "extra_context.drug_class"]
+  conditions:
+    all_of:
+      - "context.patient_state.allergies CONTAINS 'Penicillin'"
+      - "context.extra_context.drug_class EQUALS 'Beta-Lactam'"
+  allowed_actions: []
+  blocked_actions: ["VERIFY_PRESCRIPTION"]
+  state_transitions:
+    - target_entity: "pharmacy.prescriptions"
+      target_field: "status"
+      new_value: "Blocked_Safety_Hold"
+  cross_department_effects:
+    - target_department: "clinical"
+      effect_type: "CREATE_CLINICAL_ALERT"
+      payload:
+        alert_type: "DRUG_ALLERGY_CONFLICT"
+        message: "Prescribed Amoxicillin conflicts with documented Penicillin allergy."
+  events_generated: ["PrescriptionAllergyConflictDetected"]
+  documents_triggered: ["Drug-Allergy Safety Alert Notice"]
+
+- rule_id: "RULE-STATE-RX-020"
+  name: "Prescription Verification Sequence"
+  category: "STATE_TRANSITION"
+  description: "Passes prescription verification when no clinical safety holds exist."
+  source_type: "INTERNAL_DESIGN"
+  source_reference: "Stage 2 Internal Rule Spec / Level 3 Workflow Rule"
+  priority: 50
+  precedence_level: 60
+  version: "1.0.0"
+  scenarios: ["SCEN-V1-01", "SCEN-V1-02", "SCEN-V1-03", "SCEN-V1-04"]
+  departments: ["pharmacy"]
+  entities_affected: ["pharmacy.prescriptions"]
+  preconditions:
+    action_type: "VERIFY_PRESCRIPTION"
+    required_context_keys: ["entity_state.status"]
+  conditions:
+    all_of:
+      - "context.entity_state.status EQUALS 'Issued'"
+  allowed_actions: ["VERIFY_PRESCRIPTION"]
+  blocked_actions: []
+  state_transitions:
+    - target_entity: "pharmacy.prescriptions"
+      target_field: "status"
+      new_value: "Verification_Passed"
+  cross_department_effects: []
+  events_generated: ["PrescriptionVerified"]
+  documents_triggered: []
+
+- rule_id: "RULE-STATE-RX-021"
+  name: "Prescription Dispense Fulfillment Sequence"
+  category: "STATE_TRANSITION"
+  description: "Allows prescription dispensing when verification has passed and stock is available."
+  source_type: "INTERNAL_DESIGN"
+  source_reference: "Stage 2 Internal Rule Spec / Level 3 Workflow Rule"
+  priority: 50
+  precedence_level: 60
+  version: "1.0.0"
+  scenarios: ["SCEN-V1-01", "SCEN-V1-02", "SCEN-V1-03", "SCEN-V1-04"]
+  departments: ["pharmacy"]
+  entities_affected: ["pharmacy.prescriptions", "pharmacy.inventory_batches"]
+  preconditions:
+    action_type: "CONFIRM_MEDICINE_DISPENSE"
+    required_context_keys: ["entity_state.status"]
+  conditions:
+    all_of:
+      - "context.entity_state.status EQUALS 'Verification_Passed'"
+  allowed_actions: ["CONFIRM_MEDICINE_DISPENSE"]
+  blocked_actions: []
+  state_transitions:
+    - target_entity: "pharmacy.prescriptions"
+      target_field: "status"
+      new_value: "Dispensed"
+  cross_department_effects:
+    - target_department: "finance"
+      effect_type: "ADD_INVOICE_LINE_ITEM"
+      payload:
+        service_name: "Pharmacy Medication Charge"
+        amount: 5.00
+  events_generated: ["MedicineDispensed", "InventoryStockUpdated"]
+  documents_triggered: ["Pharmacy Dispensing Record"]
+

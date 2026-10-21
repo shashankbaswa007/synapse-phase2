@@ -1,0 +1,23 @@
+{
+  "document_id": "doc-rx-e365fa0e",
+  "document_type": "Prescription",
+  "patient_id": "pat-af2665ba",
+  "patient_journey_id": "pj-3f9eb95c",
+  "scenario_id": "SCEN-V1-01",
+  "source_entity_table": "pharmacy.prescriptions",
+  "source_entity_id": "rx-e365fa0e",
+  "source_action_id": "act-c74540bd",
+  "source_event_id": "evt-err-c3fc808e90",
+  "created_at": "2026-01-01 10:35:00",
+  "document_version": "1.0.0",
+  "document_status": "FINAL",
+  "file_path": "C:\\AI\\synapse phase2\\output\\100_patients\\documents\\prescriptions\\doc-rx-e365fa0e.md",
+  "checksum": "16a9e142ec5f6a44ca1e73f09b27b9d39136cb13a6b658694b27b236e1d010a6",
+  "metadata_payload": {
+    "prescription_id": "rx-e365fa0e",
+    "patient_id": "pat-af2665ba",
+    "drug_name": "Amoxicillin",
+    "drug_class": "Beta-Lactam",
+    "status": "Blocked_Safety_Hold"
+  }
+}

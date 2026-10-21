@@ -1,0 +1,11 @@
+@startuml pharmacy_department
+title Pharmacy Department Component Architecture
+
+class PharmacyDepartmentHandler {
+    + department_name: str = "pharmacy"
+    - clinical_gen: ClinicalEntityGenerator
+    - state_manager: StateManager
+    + handle_event(event: SimulationEvent): List[ActionRequest]
+}
+
+@enduml

@@ -1,0 +1,32 @@
+@startuml pubmed_knowledge_pipeline
+title PubMed Evidence & Knowledge Pipeline
+
+class MedicalKnowledgeBase {
+    + diagnoses: List[DiagnosisEntry]
+    + drug_allergy_matrix: dict
+    + pubmed_manager: PubMedKnowledgeManager
+    + load(enable_pubmed, pubmed_store_dir, offline_mode)
+    + load_pubmed_evidence(store_dir, offline_mode)
+}
+
+class PubMedKnowledgeManager {
+    - client: PubMedClient
+    - cache: PubMedArticleCache
+    - parser: PubMedArticleParser
+    - extractor: PubMedEvidenceExtractor
+    - normalizer: PubMedEntityNormalizer
+    - validator: PubMedEvidenceValidator
+    - store: PubMedKnowledgeStore
+    + get_evidence_for_condition(condition, code, offline_mode): List[PubMedRelationship]
+}
+
+MedicalKnowledgeBase --> PubMedKnowledgeManager
+PubMedKnowledgeManager --> PubMedClient
+PubMedKnowledgeManager --> PubMedArticleCache
+PubMedKnowledgeManager --> PubMedArticleParser
+PubMedKnowledgeManager --> PubMedEvidenceExtractor
+PubMedKnowledgeManager --> PubMedEntityNormalizer
+PubMedKnowledgeManager --> PubMedEvidenceValidator
+PubMedKnowledgeManager --> PubMedKnowledgeStore
+
+@enduml

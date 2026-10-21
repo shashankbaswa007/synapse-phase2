@@ -1,0 +1,16 @@
+metric_name,metric_value
+generation_timestamp,2026-10-13T16:34:27.879485
+patient_count,10
+encounter_count,10
+condition_count,10
+symptom_count,38
+medication_count,10
+lab_count,10
+radiology_count,10
+invoice_count,10
+payment_count,7
+event_count,147
+journey_trace_count,10
+pubmed_knowledge_enabled,True
+random_seed,42
+validation_status,PASSED

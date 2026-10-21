@@ -1,0 +1,27 @@
+{
+  "pmid": "31234501",
+  "title": "Efficacy and safety of Metformin and Glimepiride combination therapy in Type 2 Diabetes Mellitus",
+  "abstract": "Background: Metformin remains first-line therapy for type 2 diabetes mellitus. Addition of glimepiride or DPP-4 inhibitors like sitagliptin provides effective glycemic control. Adverse reactions including mild hypoglycemia were observed in sulfonylurea arms.",
+  "publication_year": 2021,
+  "journal": "Diabetes Care",
+  "authors": [
+    "Smith A",
+    "Jones B",
+    "Patel R"
+  ],
+  "mesh_terms": [
+    "Diabetes Mellitus, Type 2",
+    "Metformin",
+    "Glimepiride",
+    "Sitagliptin",
+    "Hypoglycemia"
+  ],
+  "keywords": [
+    "t2dm",
+    "metformin",
+    "glycemic control"
+  ],
+  "doi": null,
+  "retrieved_at": "2026-10-13T18:53:35.952520",
+  "query_topic": "Type 2 Diabetes"
+}

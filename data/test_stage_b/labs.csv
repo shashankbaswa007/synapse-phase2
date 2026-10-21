@@ -1,0 +1,11 @@
+lab_id,patient_id,encounter_id,test_name,result,is_abnormal,completed_at,status
+lab-44ab114d,pat-5c78cb6a,enc-a4a014d0,CBC,Pending,False,2026-01-01T08:00:00,Ordered
+lab-b004b603,pat-0688affd,enc-41c56d10,Complete Blood Count,Normal Range,False,2026-01-01T08:15:00,Completed
+lab-37fe87d0,pat-bb11e9ed,enc-e96f1881,CRP,Pending,False,2026-01-01T08:10:00,Ordered
+lab-84cb3c07,pat-324df629,enc-b141fc32,CBC,Pending,False,2026-01-01T08:15:00,Ordered
+lab-1ce42edd,pat-37f21d46,enc-38e3a95c,CBC,Pending,False,2026-01-01T08:20:00,Ordered
+lab-56c80307,pat-3f1262b2,enc-3073365c,C-Reactive Protein,Normal Range,False,2026-01-01T08:35:00,Completed
+lab-b29b6568,pat-5a399525,enc-2703a847,Urinalysis,Pending,False,2026-01-01T08:30:00,Ordered
+lab-54d53c3d,pat-6db5a4b3,enc-8619fb98,CBC,Pending,False,2026-01-01T08:35:00,Ordered
+lab-cdcaccd1,pat-d0581d2b,enc-775382e2,CBC,Pending,False,2026-01-01T08:40:00,Ordered
+lab-8e47dea4,pat-3852a6e9,enc-6f1cd0c9,Complete Blood Count,Normal Range,False,2026-01-01T08:55:00,Completed

@@ -1,0 +1,24 @@
+@startuml data_export
+title Sequence 8: Relational CSV Export & Audit Flow
+
+participant Runner as "generate_synthetic_data.py"
+participant Sim as "HospitalSimulator"
+participant Exporter as "CSVExporter"
+participant Disk as "File System"
+participant Auditor as "DatasetAuditor"
+
+Runner -> Sim : run()
+Sim --> Runner : metrics
+Runner -> Exporter : export_simplified_dataset(output_dir)
+Exporter -> Disk : write patients.csv
+Exporter -> Disk : write encounters.csv
+Exporter -> Disk : write conditions.csv
+Exporter -> Disk : write symptoms.csv
+Exporter -> Disk : write medications.csv
+Exporter -> Disk : write labs.csv, radiology.csv
+Exporter -> Disk : write invoices.csv, payments.csv
+Exporter -> Disk : write events.csv, journey_traces.csv
+Exporter --> Runner : 12 simplified CSV files exported
+Runner -> Auditor : run_full_audit(output_dir)
+Auditor --> Runner : audit report (0 dangling FKs, 0 NULLs, PASS)
+@enduml

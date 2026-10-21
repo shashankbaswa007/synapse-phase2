@@ -1,0 +1,25 @@
+@startuml patient_generation
+title Sequence 2: Patient Generation & Polymorphic Profile Configuration
+
+participant Sim as "HospitalSimulator"
+participant PatGen as "PatientProfileGenerator"
+participant Scen as "BaseScenario / DrugAllergySafetyHoldScenario"
+participant ClinGen as "ClinicalEntityGenerator"
+participant State as "StateManager"
+
+Sim -> Scen** : instantiate scenario (SCEN-V1-01 .. 04)
+alt Polymorphic Scenario Profile Hook (LSP)
+    Sim -> Scen : create_patient_profile(patient_gen)
+    Scen -> PatGen : generate_patient(force_allergy=...)
+    PatGen --> Scen : PatientContext
+    Scen --> Sim : PatientContext
+    Sim -> Scen : should_force_conflict()
+    Scen --> Sim : force_conflict (bool)
+end
+Sim -> ClinGen : select_diagnosis(patient_context)
+ClinGen --> Sim : DiagnosisEntry
+Sim -> ClinGen : select_medication(patient_context, diagnosis, force_conflict)
+ClinGen --> Sim : (DrugTreatment, is_conflict)
+Sim -> Scen : setup_initial_state(state_manager)
+Scen -> State : set_entity_state(...)
+@enduml

@@ -1,0 +1,107 @@
+# Radiology Department Rules
+# RULE-STATE-RAD-010: Allow image acquisition when Ordered
+# RULE-STATE-RAD-011: Block image acquisition when NOT Ordered
+# RULE-STATE-RAD-020: Allow report completion when Image-Acquired
+# RULE-STATE-RAD-021: Block report completion when NOT Image-Acquired
+
+- rule_id: "RULE-STATE-RAD-010"
+  name: "Radiology Image Acquisition State Transition"
+  category: "WORKFLOW_SEQUENCE"
+  description: "Successful acquisition of image transitions order to Image-Acquired."
+  source_type: "INTERNAL_DESIGN"
+  priority: 60
+  precedence_level: 60
+  version: "1.0.0"
+  scenarios: ["SCEN-V1-01", "SCEN-V1-02", "SCEN-V1-03", "SCEN-V1-04"]
+  departments: ["radiology"]
+  entities_affected: ["radiology.radiology_orders"]
+  preconditions:
+    action_type: "ACQUIRE_RADIOLOGY_IMAGE"
+    required_context_keys: ["entity_state.status"]
+  conditions:
+    all_of:
+      - "context.entity_state.status EQUALS 'Ordered'"
+  allowed_actions: ["ACQUIRE_RADIOLOGY_IMAGE"]
+  blocked_actions: []
+  state_transitions:
+    - target_entity: "radiology.radiology_orders"
+      target_field: "status"
+      new_value: "Image-Acquired"
+  cross_department_effects: []
+  events_generated: ["RadiologyImageAcquired"]
+  documents_triggered: ["RadReport"]
+
+- rule_id: "RULE-STATE-RAD-011"
+  name: "Block Radiology Image Acquisition When Not Ordered"
+  category: "WORKFLOW_SEQUENCE"
+  description: "Blocks image acquisition if radiology order is not in Ordered state."
+  source_type: "INTERNAL_DESIGN"
+  priority: 70
+  precedence_level: 60
+  version: "1.0.0"
+  scenarios: ["SCEN-V1-01", "SCEN-V1-02", "SCEN-V1-03", "SCEN-V1-04"]
+  departments: ["radiology"]
+  entities_affected: ["radiology.radiology_orders"]
+  preconditions:
+    action_type: "ACQUIRE_RADIOLOGY_IMAGE"
+    required_context_keys: ["entity_state.status"]
+  conditions:
+    none_of:
+      - "context.entity_state.status EQUALS 'Ordered'"
+  allowed_actions: []
+  blocked_actions: ["ACQUIRE_RADIOLOGY_IMAGE"]
+  state_transitions: []
+  cross_department_effects: []
+  events_generated: ["RadiologyImageAcquisitionBlocked"]
+  documents_triggered: []
+
+- rule_id: "RULE-STATE-RAD-020"
+  name: "Radiology Report Completion State Transition"
+  category: "WORKFLOW_SEQUENCE"
+  description: "Completes radiology order after image acquired and report finalized."
+  source_type: "INTERNAL_DESIGN"
+  priority: 60
+  precedence_level: 60
+  version: "1.0.0"
+  scenarios: ["SCEN-V1-01", "SCEN-V1-02", "SCEN-V1-03", "SCEN-V1-04"]
+  departments: ["radiology"]
+  entities_affected: ["radiology.radiology_orders"]
+  preconditions:
+    action_type: "COMPLETE_RADIOLOGY_REPORT"
+    required_context_keys: ["entity_state.status"]
+  conditions:
+    all_of:
+      - "context.entity_state.status EQUALS 'Image-Acquired'"
+  allowed_actions: ["COMPLETE_RADIOLOGY_REPORT"]
+  blocked_actions: []
+  state_transitions:
+    - target_entity: "radiology.radiology_orders"
+      target_field: "status"
+      new_value: "Reported"
+  cross_department_effects: []
+  events_generated: ["RadiologyReportCompleted"]
+  documents_triggered: ["RadiologyFinalReport"]
+
+- rule_id: "RULE-STATE-RAD-021"
+  name: "Block Radiology Report When Not Image-Acquired"
+  category: "WORKFLOW_SEQUENCE"
+  description: "Blocks radiology report completion if image has not been acquired yet."
+  source_type: "INTERNAL_DESIGN"
+  priority: 70
+  precedence_level: 60
+  version: "1.0.0"
+  scenarios: ["SCEN-V1-01", "SCEN-V1-02", "SCEN-V1-03", "SCEN-V1-04"]
+  departments: ["radiology"]
+  entities_affected: ["radiology.radiology_orders"]
+  preconditions:
+    action_type: "COMPLETE_RADIOLOGY_REPORT"
+    required_context_keys: ["entity_state.status"]
+  conditions:
+    none_of:
+      - "context.entity_state.status EQUALS 'Image-Acquired'"
+  allowed_actions: []
+  blocked_actions: ["COMPLETE_RADIOLOGY_REPORT"]
+  state_transitions: []
+  cross_department_effects: []
+  events_generated: ["RadiologyReportBlocked"]
+  documents_triggered: []

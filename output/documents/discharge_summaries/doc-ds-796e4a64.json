@@ -1,0 +1,21 @@
+{
+  "document_id": "doc-ds-796e4a64",
+  "document_type": "DischargeSummary",
+  "patient_id": "pat-8500bf5a",
+  "patient_journey_id": "pj-796e4a64",
+  "scenario_id": "SCEN-V1-01",
+  "source_entity_table": "clinical.encounters",
+  "source_entity_id": "enc-796e4a64",
+  "source_action_id": "act-discharge",
+  "source_event_id": "evt-4346825648",
+  "created_at": "2026-01-01 08:55:00",
+  "document_version": "1.0.0",
+  "document_status": "FINAL",
+  "file_path": "C:\\AI\\synapse phase2\\output\\documents\\discharge_summaries\\doc-ds-796e4a64.md",
+  "checksum": "459960f79de2840ad3ab6a4f3c169bb4851816cb5a298d8ef57591d31fe1d40a",
+  "metadata_payload": {
+    "discharge_summary_id": "doc-ds-796e4a64",
+    "safety_logs": [],
+    "outcome": "Discharged in stable condition"
+  }
+}

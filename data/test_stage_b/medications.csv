@@ -1,0 +1,11 @@
+medication_id,patient_id,encounter_id,condition_id,drug_name,drug_class,dosage,frequency,source,evidence_ids,status
+rx-79d5a262,pat-5c78cb6a,enc-a4a014d0,cond-pat-5c78cb6a,Paracetamol,Analgesic,500mg,TDS,pubmed_evidence,31234510,Dispensed
+rx-52eb3a35,pat-0688affd,enc-41c56d10,cond-pat-0688affd,Levofloxacin,Fluoroquinolone,500mg,OD,pubmed_evidence,31234506,Issued
+rx-928a125f,pat-bb11e9ed,enc-e96f1881,cond-pat-bb11e9ed,Ceftriaxone,Therapeutic_Agent,1 unit,OD,pubmed_evidence,31234506,Blocked_Safety_Hold
+rx-924b23e2,pat-324df629,enc-b141fc32,cond-pat-324df629,Omeprazole,PPI,20mg,OD,pubmed_evidence,31234509,Verification_Passed
+rx-83020fe4,pat-37f21d46,enc-38e3a95c,cond-pat-37f21d46,Amoxicillin,Beta-Lactam,500mg,TDS,pubmed_evidence,31234513,Dispensed
+rx-2a6365b4,pat-3f1262b2,enc-3073365c,cond-pat-3f1262b2,Paracetamol,Analgesic,500mg,TDS,pubmed_evidence,31234516,Issued
+rx-5f60e4a5,pat-5a399525,enc-2703a847,cond-pat-5a399525,Cephalexin,Beta-Lactam,500mg,QDS,pubmed_evidence,31234507,Blocked_Safety_Hold
+rx-63cbc344,pat-6db5a4b3,enc-8619fb98,cond-pat-6db5a4b3,Amoxicillin,Beta-Lactam,500mg,TDS,pubmed_evidence,31234513,Verification_Passed
+rx-dd876082,pat-d0581d2b,enc-775382e2,cond-pat-d0581d2b,Hydrocortisone_Cream,Topical_Corticosteroid,1%,BD,pubmed_evidence,31234512,Dispensed
+rx-bf21c5b8,pat-3852a6e9,enc-6f1cd0c9,cond-pat-3852a6e9,Diclofenac,NSAID,50mg,BD,pubmed_evidence,31234510,Issued

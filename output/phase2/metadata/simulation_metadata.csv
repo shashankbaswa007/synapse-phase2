@@ -1,0 +1,9 @@
+metric_name,metric_value
+total_patients,100
+total_events_processed,1002
+decisions_allowed,586
+decisions_blocked,136
+rule_hits,"{'RULE-WORK-OPD-010': 62, 'DEFAULT_FALLBACK_ALLOW': 450, 'RULE-STATE-RX-020': 31, 'RULE-STATE-RX-021': 15, 'RULE-STATE-LAB-010': 14, 'RULE-STATE-LAB-011': 31, 'RULE-CLIN-ALLERGY-001': 45, 'RULE-STATE-RAD-010': 14, 'RULE-GLOB-STOCK-001': 60}"
+events_emitted_types,{}
+journey_outcomes,"{'SUCCESS_COMPLETED': 44, 'BLOCKED_BY_RULE-STATE-LAB-011': 15, 'IN_PROGRESS': 41}"
+final_simulation_time,2026-01-01T13:05:00

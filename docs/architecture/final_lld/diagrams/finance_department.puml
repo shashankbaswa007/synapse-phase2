@@ -1,0 +1,17 @@
+@startuml finance_department
+title Finance Department Component Architecture
+
+class FinanceDepartmentHandler {
+    + department_name: str = "finance"
+    - billing_gen: BillingGenerator
+    - state_manager: StateManager
+    + handle_event(event: SimulationEvent): List[ActionRequest]
+}
+
+class BillingGenerator {
+    + calculate_invoice(services): InvoiceRecord
+    + generate_payment(invoice): PaymentRecord
+}
+
+FinanceDepartmentHandler --> BillingGenerator
+@enduml

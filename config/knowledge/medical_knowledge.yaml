@@ -1,0 +1,415 @@
+# ==============================================================================
+# SYNAPSE V1 — Medical Knowledge Base
+# ==============================================================================
+# Curated medical domain knowledge for context-aware synthetic data generation.
+# This file is the SINGLE SOURCE OF TRUTH for diagnosis-treatment-drug relationships,
+# allergy cross-reactivity, lab reference ranges, and service pricing.
+#
+# DO NOT hard-code medical knowledge in Python. All domain data lives here.
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# DIAGNOSES: Clinical entities with plausible symptoms, labs, and imaging.
+# Medical treatment evidence is dynamically sourced from PubMed via PubMedKnowledgeManager.
+# ------------------------------------------------------------------------------
+diagnoses:
+  - code: "J06.9"
+    name: "Acute upper respiratory infection"
+    category: "respiratory"
+    age_range: [2, 90]
+    gender_bias: null
+    symptoms: ["cough", "sore_throat", "fever", "runny_nose"]
+    lab_tests: ["CBC"]
+    imaging: []
+
+  - code: "J18.9"
+    name: "Pneumonia, unspecified organism"
+    category: "respiratory"
+    age_range: [5, 90]
+    gender_bias: null
+    symptoms: ["high_fever", "productive_cough", "chest_pain", "dyspnea"]
+    lab_tests: ["CBC", "CRP"]
+    imaging: ["X-Ray_Chest"]
+
+  - code: "I10"
+    name: "Essential hypertension"
+    category: "cardiovascular"
+    age_range: [30, 90]
+    gender_bias: null
+    symptoms: ["headache", "dizziness", "blurred_vision"]
+    lab_tests: ["Lipid_Panel", "Renal_Function"]
+    imaging: []
+
+  - code: "E11.9"
+    name: "Type 2 diabetes mellitus without complications"
+    category: "metabolic"
+    age_range: [25, 90]
+    gender_bias: null
+    symptoms: ["polyuria", "polydipsia", "fatigue", "blurred_vision"]
+    lab_tests: ["FBS", "HbA1c", "Lipid_Panel"]
+    imaging: []
+
+  - code: "K21.0"
+    name: "Gastro-esophageal reflux disease with esophagitis"
+    category: "gastrointestinal"
+    age_range: [18, 85]
+    gender_bias: null
+    symptoms: ["heartburn", "acid_reflux", "chest_pain", "dysphagia"]
+    lab_tests: []
+    imaging: []
+
+  - code: "M54.5"
+    name: "Low back pain"
+    category: "musculoskeletal"
+    age_range: [18, 80]
+    gender_bias: null
+    symptoms: ["back_pain", "stiffness", "radiating_leg_pain"]
+    lab_tests: []
+    imaging: ["X-Ray_Lumbar_Spine"]
+
+  - code: "N39.0"
+    name: "Urinary tract infection, site not specified"
+    category: "genitourinary"
+    age_range: [15, 85]
+    gender_bias: "F"
+    symptoms: ["dysuria", "frequency", "urgency", "suprapubic_pain"]
+    lab_tests: ["Urinalysis", "Urine_Culture"]
+    imaging: []
+
+  - code: "J45.9"
+    name: "Asthma, unspecified"
+    category: "respiratory"
+    age_range: [5, 70]
+    gender_bias: null
+    symptoms: ["wheezing", "dyspnea", "cough", "chest_tightness"]
+    lab_tests: ["CBC"]
+    imaging: ["X-Ray_Chest"]
+
+  - code: "B34.9"
+    name: "Viral infection, unspecified"
+    category: "infectious"
+    age_range: [1, 90]
+    gender_bias: null
+    symptoms: ["fever", "body_aches", "fatigue", "headache"]
+    lab_tests: ["CBC"]
+    imaging: []
+
+  - code: "K29.7"
+    name: "Gastritis, unspecified"
+    category: "gastrointestinal"
+    age_range: [18, 80]
+    gender_bias: null
+    symptoms: ["epigastric_pain", "nausea", "bloating", "loss_of_appetite"]
+    lab_tests: ["CBC"]
+    imaging: []
+
+  - code: "R50.9"
+    name: "Fever, unspecified"
+    category: "general"
+    age_range: [1, 90]
+    gender_bias: null
+    symptoms: ["fever", "chills", "sweating", "body_aches"]
+    lab_tests: ["CBC", "CRP"]
+    imaging: []
+
+  - code: "G43.9"
+    name: "Migraine, unspecified"
+    category: "neurological"
+    age_range: [12, 65]
+    gender_bias: "F"
+    symptoms: ["severe_headache", "nausea", "photophobia", "aura"]
+    lab_tests: []
+    imaging: ["CT_Head"]
+
+  - code: "L30.9"
+    name: "Dermatitis, unspecified"
+    category: "dermatological"
+    age_range: [1, 80]
+    gender_bias: null
+    symptoms: ["rash", "itching", "redness", "dry_skin"]
+    lab_tests: []
+    imaging: []
+
+  - code: "M79.3"
+    name: "Panniculitis, unspecified"
+    category: "musculoskeletal"
+    age_range: [25, 75]
+    gender_bias: null
+    symptoms: ["joint_pain", "muscle_pain", "swelling"]
+    lab_tests: ["CBC", "CRP", "ESR"]
+    imaging: []
+
+  - code: "E78.5"
+    name: "Hyperlipidemia, unspecified"
+    category: "metabolic"
+    age_range: [30, 85]
+    gender_bias: null
+    symptoms: ["asymptomatic"]
+    lab_tests: ["Lipid_Panel", "Liver_Function"]
+    imaging: []
+
+# ------------------------------------------------------------------------------
+# DRUG-ALLERGY CROSS-REACTIVITY MATRIX
+# ------------------------------------------------------------------------------
+drug_allergy_matrix:
+  Penicillin:
+    cross_reactive_classes: ["Beta-Lactam"]
+    cross_reactive_drugs: ["Amoxicillin", "Ampicillin", "Cephalexin"]
+    safe_alternatives:
+      - drug: "Azithromycin"
+        drug_class: "Macrolide"
+      - drug: "Levofloxacin"
+        drug_class: "Fluoroquinolone"
+  Sulfonamide:
+    cross_reactive_classes: ["Sulfonamide"]
+    cross_reactive_drugs: ["Sulfamethoxazole", "Sulfasalazine"]
+    safe_alternatives:
+      - drug: "Ciprofloxacin"
+        drug_class: "Fluoroquinolone"
+  NSAID:
+    cross_reactive_classes: ["NSAID"]
+    cross_reactive_drugs: ["Ibuprofen", "Diclofenac", "Aspirin"]
+    safe_alternatives:
+      - drug: "Paracetamol"
+        drug_class: "Analgesic"
+
+# ------------------------------------------------------------------------------
+# CHRONIC CONDITIONS (age-correlated for patient generation)
+# ------------------------------------------------------------------------------
+chronic_conditions:
+  - name: "Hypertension"
+    min_age: 30
+    prevalence_percent: 25
+  - name: "Type 2 Diabetes"
+    min_age: 25
+    prevalence_percent: 12
+  - name: "Asthma"
+    min_age: 5
+    prevalence_percent: 8
+  - name: "Hyperlipidemia"
+    min_age: 30
+    prevalence_percent: 15
+  - name: "GERD"
+    min_age: 18
+    prevalence_percent: 10
+  - name: "Osteoarthritis"
+    min_age: 45
+    prevalence_percent: 12
+  - name: "Migraine"
+    min_age: 12
+    prevalence_percent: 10
+
+# ------------------------------------------------------------------------------
+# ALLERGY PREVALENCE (for patient generation)
+# ------------------------------------------------------------------------------
+allergy_prevalence:
+  - name: "Penicillin"
+    prevalence_percent: 10
+  - name: "Sulfonamide"
+    prevalence_percent: 3
+  - name: "NSAID"
+    prevalence_percent: 2
+  - name: "Latex"
+    prevalence_percent: 1
+  - name: "Iodine_Contrast"
+    prevalence_percent: 1
+
+# ------------------------------------------------------------------------------
+# LABORATORY TEST REFERENCE RANGES
+# ------------------------------------------------------------------------------
+lab_test_ranges:
+  CBC:
+    components:
+      - name: "Hemoglobin"
+        unit: "g/dL"
+        normal_range: [12.0, 17.5]
+        critical_low: 7.0
+        critical_high: 20.0
+      - name: "WBC"
+        unit: "x10^3/uL"
+        normal_range: [4.5, 11.0]
+        critical_low: 2.0
+        critical_high: 30.0
+      - name: "Platelet_Count"
+        unit: "x10^3/uL"
+        normal_range: [150, 400]
+        critical_low: 50
+        critical_high: 1000
+      - name: "RBC"
+        unit: "x10^6/uL"
+        normal_range: [4.0, 5.5]
+        critical_low: 2.5
+        critical_high: 7.0
+  CRP:
+    components:
+      - name: "C-Reactive_Protein"
+        unit: "mg/L"
+        normal_range: [0.0, 5.0]
+        critical_low: 0.0
+        critical_high: 200.0
+  ESR:
+    components:
+      - name: "Erythrocyte_Sedimentation_Rate"
+        unit: "mm/hr"
+        normal_range: [0, 20]
+        critical_low: 0
+        critical_high: 120
+  Lipid_Panel:
+    components:
+      - name: "Total_Cholesterol"
+        unit: "mg/dL"
+        normal_range: [125, 200]
+        critical_low: 100
+        critical_high: 400
+      - name: "LDL"
+        unit: "mg/dL"
+        normal_range: [0, 100]
+        critical_low: 0
+        critical_high: 250
+      - name: "HDL"
+        unit: "mg/dL"
+        normal_range: [40, 60]
+        critical_low: 20
+        critical_high: 100
+      - name: "Triglycerides"
+        unit: "mg/dL"
+        normal_range: [0, 150]
+        critical_low: 0
+        critical_high: 500
+  FBS:
+    components:
+      - name: "Fasting_Blood_Sugar"
+        unit: "mg/dL"
+        normal_range: [70, 100]
+        critical_low: 40
+        critical_high: 400
+  HbA1c:
+    components:
+      - name: "Glycated_Hemoglobin"
+        unit: "%"
+        normal_range: [4.0, 5.6]
+        critical_low: 3.0
+        critical_high: 14.0
+  Renal_Function:
+    components:
+      - name: "Creatinine"
+        unit: "mg/dL"
+        normal_range: [0.6, 1.2]
+        critical_low: 0.3
+        critical_high: 10.0
+      - name: "BUN"
+        unit: "mg/dL"
+        normal_range: [7, 20]
+        critical_low: 3
+        critical_high: 100
+  Liver_Function:
+    components:
+      - name: "ALT"
+        unit: "U/L"
+        normal_range: [7, 56]
+        critical_low: 0
+        critical_high: 1000
+      - name: "AST"
+        unit: "U/L"
+        normal_range: [10, 40]
+        critical_low: 0
+        critical_high: 1000
+  Urinalysis:
+    components:
+      - name: "pH"
+        unit: ""
+        normal_range: [4.5, 8.0]
+        critical_low: 4.0
+        critical_high: 9.0
+      - name: "Specific_Gravity"
+        unit: ""
+        normal_range: [1.005, 1.030]
+        critical_low: 1.001
+        critical_high: 1.040
+  Urine_Culture:
+    components:
+      - name: "Colony_Count"
+        unit: "CFU/mL"
+        normal_range: [0, 10000]
+        critical_low: 0
+        critical_high: 1000000
+
+# ------------------------------------------------------------------------------
+# RADIOLOGY FINDINGS TEMPLATES
+# ------------------------------------------------------------------------------
+radiology_findings:
+  X-Ray_Chest:
+    normal: "Clear lung fields. No cardiomegaly. Normal mediastinal silhouette."
+    abnormal:
+      - "Bilateral infiltrates suggestive of pneumonia."
+      - "Right lower lobe consolidation."
+      - "Mild cardiomegaly with pulmonary congestion."
+  X-Ray_Lumbar_Spine:
+    normal: "Normal lumbar spine alignment. No fractures or dislocations. Preserved disc spaces."
+    abnormal:
+      - "Mild degenerative changes at L4-L5."
+      - "Reduced disc space height at L5-S1."
+  CT_Head:
+    normal: "No acute intracranial abnormality. Normal ventricles and cisterns."
+    abnormal:
+      - "No acute intracranial hemorrhage or infarction."
+  CT_Abdomen:
+    normal: "Unremarkable CT of the abdomen and pelvis."
+    abnormal:
+      - "Mild hepatomegaly."
+      - "Small gallstone noted without cholecystitis."
+
+# ------------------------------------------------------------------------------
+# SERVICE PRICING (INR)
+# ------------------------------------------------------------------------------
+service_pricing:
+  consultation_fee: 500.0
+  follow_up_fee: 300.0
+  lab_test_fees:
+    CBC: 350.0
+    CRP: 400.0
+    ESR: 200.0
+    Lipid_Panel: 600.0
+    FBS: 150.0
+    HbA1c: 500.0
+    Renal_Function: 450.0
+    Liver_Function: 500.0
+    Urinalysis: 200.0
+    Urine_Culture: 500.0
+  imaging_fees:
+    X-Ray_Chest: 800.0
+    X-Ray_Lumbar_Spine: 900.0
+    CT_Head: 3500.0
+    CT_Abdomen: 4000.0
+  medication_markup_percent: 20.0
+
+# ------------------------------------------------------------------------------
+# VITALS RANGES BY AGE GROUP
+# ------------------------------------------------------------------------------
+vitals_ranges:
+  adult:
+    age_range: [18, 90]
+    temperature_c: [36.1, 37.2]
+    heart_rate_bpm: [60, 100]
+    systolic_bp: [90, 140]
+    diastolic_bp: [60, 90]
+    respiratory_rate: [12, 20]
+    spo2_percent: [95, 100]
+  pediatric:
+    age_range: [1, 17]
+    temperature_c: [36.5, 37.5]
+    heart_rate_bpm: [70, 120]
+    systolic_bp: [80, 120]
+    diastolic_bp: [50, 80]
+    respiratory_rate: [15, 30]
+    spo2_percent: [95, 100]
+  elderly:
+    age_range: [65, 90]
+    temperature_c: [35.8, 37.0]
+    heart_rate_bpm: [55, 90]
+    systolic_bp: [100, 160]
+    diastolic_bp: [60, 95]
+    respiratory_rate: [12, 22]
+    spo2_percent: [93, 100]
+  febrile:
+    temperature_c: [37.5, 39.5]

@@ -1,0 +1,85 @@
+@startuml repository_packages
+title SYNAPSE Phase 2 - Package Hierarchy
+
+package "synapse_simulator" {
+    package "core" {
+        class SimulationClock
+        class FutureActionScheduler
+        class EventQueue
+        class EventDispatcher
+        class SimulationEngine
+        interface IClock
+        interface IScheduler
+        interface IEventQueue
+        interface IEventDispatcher
+    }
+    package "engine" {
+        class ExecutionPipeline
+        class ExecutionResult
+    }
+    package "state" {
+        class StateManager
+        class ActionRequest
+        class DomainEvent
+        class DecisionResult
+        interface IStateReader
+        interface IStateWriter
+        interface IContextBuilder
+    }
+    package "transitions" {
+        class TransitionManager
+        class BaseStateMachine
+        interface ITransitionValidator
+    }
+    package "rules" {
+        class RuleEngine
+        class RuleRepository
+        class RuleEvaluator
+        class SynapseRule
+    }
+    package "workflows" {
+        class WorkflowCoordinator
+        class PatientJourney
+        class WorkflowDefinition
+    }
+    package "departments" {
+        abstract class BaseDepartmentHandler
+        class ClinicalDepartmentHandler
+        class PharmacyDepartmentHandler
+        class LaboratoryDepartmentHandler
+        class RadiologyDepartmentHandler
+        class FinanceDepartmentHandler
+    }
+    package "knowledge" {
+        class MedicalKnowledgeBase
+        package "pubmed" {
+            class PubMedKnowledgeManager
+            class PubMedClient
+            class PubMedArticleCache
+            class PubMedArticleParser
+            class PubMedEvidenceExtractor
+            class PubMedEntityNormalizer
+            class PubMedEvidenceValidator
+            class PubMedKnowledgeStore
+        }
+    }
+    package "datagen" {
+        class MasterDataGenerator
+        class PatientProfileGenerator
+        class ClinicalEntityGenerator
+        class DiagnosticGenerator
+        class BillingGenerator
+    }
+    package "generator" {
+        class HospitalSimulator
+        class SimulationBootstrapFactory
+    }
+    package "exporter" {
+        class CSVExporter
+    }
+    package "validation" {
+        class IntegrityAuditor
+        class DatasetAuditor
+    }
+}
+@enduml
