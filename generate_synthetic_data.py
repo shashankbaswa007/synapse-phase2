@@ -17,14 +17,13 @@ import argparse
 import csv
 import hashlib
 import json
-import os
 import shutil
 import sys
 import time
 import uuid
 from datetime import datetime, timedelta
 from pathlib import Path
-from typing import Dict, Any, List, Optional
+from typing import Dict, Any, Optional
 
 # Ensure project root is in sys.path
 PROJECT_ROOT = Path(__file__).resolve().parent
@@ -42,11 +41,7 @@ from synapse_simulator.evaluation.evaluator import DatasetEvaluator
 from synapse_simulator.evaluation.reference_data import ReferenceCatalog
 from synapse_simulator.evaluation.report import EvaluationReportFormatter
 from synapse_simulator.validation.dataset_auditor import DatasetAuditor
-from synapse_simulator.validation.validation_gate import (
-    DatasetValidationGate,
-    DatasetValidationError,
-    GateResult,
-)
+from synapse_simulator.validation.validation_gate import DatasetValidationGate
 from synapse_simulator.knowledge.pubmed.seed_cache import seed_pubmed_cache
 
 # Optional legacy hospital workflow imports
@@ -137,6 +132,7 @@ def _run_hospital_workflow(
     spawn_start = time.time()
     sim.spawn_patients(patient_count)
     spawn_time = time.time() - spawn_start
+    sim.metrics["spawn_time_seconds"] = spawn_time
 
     sim_start = time.time()
     max_events = patient_count * 150

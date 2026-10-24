@@ -1,7 +1,7 @@
 # SYNAPSE Phase 2 — Comprehensive Synthetic Data Evaluation Report
 
-**Evaluation Timestamp:** `2026-10-24T15:34:45.781767`  
-**Dataset Directory:** `/Users/shashi/synapse/synapse-phase2/data/.staging_synthetic_d38769`  
+**Evaluation Timestamp:** `2026-10-24T19:08:09.088010`  
+**Dataset Directory:** `/Users/shashi/synapse/synapse-phase2/data/synthetic`  
 **Overall Evaluation Status:** **PASS**  
 **Invariant Integrity:** **PASSED (0 Hard Violations)**  
 

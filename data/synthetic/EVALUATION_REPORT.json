@@ -1,6 +1,6 @@
 {
-  "dataset_directory": "/Users/shashi/synapse/synapse-phase2/data/.staging_synthetic_d38769",
-  "timestamp": "2026-10-24T15:34:45.781767",
+  "dataset_directory": "/Users/shashi/synapse/synapse-phase2/data/synthetic",
+  "timestamp": "2026-10-24T19:08:09.088010",
   "total_metrics": 21,
   "passed_metrics": 16,
   "warning_metrics": 0,

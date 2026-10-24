@@ -1,8 +1,8 @@
 {
   "manifest_version": "1.0.0",
-  "run_id": "synapse-p2-seed42-n10000-1792836285",
-  "timestamp": "2026-10-24T15:34:45.901501",
-  "git_commit": "1498daa4016a48f9d87e287ee1bd2aca80d240eb",
+  "run_id": "synapse-p2-seed42-n10000-1792846863",
+  "timestamp": "2026-10-24T18:31:03.715585",
+  "git_commit": "6fc2f91268283d7eff40eb212dcde6af804fdfa8",
   "architecture": "SYNAPSE Phase 2 Synthea-Inspired Longitudinal State Machine",
   "simulation_parameters": {
     "total_cohort_size": 10000,
@@ -33,12 +33,12 @@
     }
   },
   "performance_telemetry": {
-    "simulation_seconds": 17.463,
-    "export_seconds": 9.199,
-    "total_generation_seconds": 26.661,
+    "simulation_seconds": 17.362,
+    "export_seconds": 8.675,
+    "total_generation_seconds": 26.037,
     "total_actions_emitted": 51819,
     "exported_file_count": 18,
-    "peak_memory_mb": 207.0,
+    "peak_memory_mb": 210.86,
     "bp_protocol_id": "LASI_WAVE1_TRI_MEASUREMENT",
     "bp_protocol_version": "1.0.0",
     "community_bp_readings_count": 7914,

@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-10-24T15:34:45.327501",
+  "timestamp": "2026-10-24T18:31:03.226704",
   "dataset_directory": "/Users/shashi/synapse/synapse-phase2/data/synthetic",
   "files_present": {
     "patients.csv": true,
@@ -904,15 +904,15 @@
     "status": "PASS"
   },
   "performance_metrics": {
-    "start_time": "2026-10-24T15:34:18.402066",
-    "end_time": "2026-10-24T15:34:45.522031",
-    "total_runtime_seconds": 27.12,
-    "simulation_runtime_seconds": 26.79,
-    "export_runtime_seconds": 9.2,
+    "start_time": "2026-10-24T18:30:37.038120",
+    "end_time": "2026-10-24T18:31:03.398075",
+    "total_runtime_seconds": 26.36,
+    "simulation_runtime_seconds": 26.07,
+    "export_runtime_seconds": 8.68,
     "total_events_processed": 0,
     "events_per_second": 0.0,
     "total_records_generated": 94595,
-    "records_per_second": 3488.03,
+    "records_per_second": 3588.59,
     "total_output_size_bytes": 8760419,
     "total_output_size_mb": 8.35,
     "patients_generated": 10000

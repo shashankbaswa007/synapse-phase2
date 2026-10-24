@@ -1,7 +1,7 @@
 # FINAL SYNTHETIC DATASET VALIDATION REPORT — 10,000 PATIENTS
 
-**Generated At:** 2026-10-24T15:34:18.402066  
-**Completed At:** 2026-10-24T15:34:45.522031  
+**Generated At:** 2026-10-24T18:30:37.038120  
+**Completed At:** 2026-10-24T18:31:03.398075  
 **Target Directory:** `/Users/shashi/synapse/synapse-phase2/data/synthetic`  
 **Simulation Engine:** `ExperimentRunner` (Synthea-Inspired Longitudinal State Machines)  
 **Knowledge Engine:** `PubMedKnowledgeManager` (Offline Multi-Condition Mesh Evidence)  
@@ -14,9 +14,9 @@
 - **Requested Patient Count:** 10,000
 - **Actual Unique Patient Count:** 10,000
 - **Generation Status:** PASS
-- **Start Time:** 2026-10-24T15:34:18.402066
-- **End Time:** 2026-10-24T15:34:45.522031
-- **Total Simulation Duration:** 26.79s
+- **Start Time:** 2026-10-24T18:30:37.038120
+- **End Time:** 2026-10-24T18:31:03.398075
+- **Total Simulation Duration:** 26.07s
 - **Events Processed:** 0
 - **Random Seed:** 42
 - **Configuration:** `enable_pubmed=True`, `offline_mode=True`
@@ -176,10 +176,10 @@
 
 ## K. PERFORMANCE
 
-- **Total Wall-Clock Runtime:** 27.12s
-- **Simulation Runtime:** 26.79s
-- **CSV Export Runtime:** 9.2s
-- **Throughput:** 0.0 events/sec, 3488.0 records/sec
+- **Total Wall-Clock Runtime:** 26.36s
+- **Simulation Runtime:** 26.07s
+- **CSV Export Runtime:** 8.68s
+- **Throughput:** 0.0 events/sec, 3588.6 records/sec
 - **Total Output Size:** 8.35 MB (8,760,419 bytes)
 - **Failures / Retries:** `0`
 

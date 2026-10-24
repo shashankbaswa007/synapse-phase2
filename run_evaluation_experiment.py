@@ -28,9 +28,11 @@ def main():
     parser.add_argument("--seeds", type=str, default=None, help="Comma-separated list of seeds for Monte Carlo evaluation (e.g. 42,101,202)")
     parser.add_argument("--output-dir", type=str, default="data/experiments/baseline_run", help="Output directory")
     parser.add_argument("--profile", type=str, default=str(DEFAULT_PROFILE_PATH), help="Population profile path")
+    parser.add_argument("--modules-dir", type=str, default=str(DEFAULT_MODULES_DIR), help="Disease modules directory")
 
     args = parser.parse_args()
     out_dir = Path(args.output_dir)
+    modules_dir = Path(args.modules_dir)
 
     if args.seeds:
         seed_list = [int(s.strip()) for s in args.seeds.split(",") if s.strip()]
@@ -40,6 +42,7 @@ def main():
         print(f"Cohort Size:     {args.patients}")
         print(f"Seeds:           {seed_list}")
         print(f"Output Base:     {out_dir}")
+        print(f"Modules Dir:     {modules_dir}")
         print("==================================================================\n")
 
         res = ExperimentRunner.run_multi_seed_experiment(
@@ -47,8 +50,9 @@ def main():
             cohort_size=args.patients,
             base_output_dir=out_dir,
             profile_path=Path(args.profile),
+            modules_dir=modules_dir,
         )
-        print(f"\nMulti-Seed Monte Carlo evaluation completed:")
+        print("\nMulti-Seed Monte Carlo evaluation completed:")
         print(f"  - Summary JSON: {res['summary_json']}")
         print(f"  - Summary MD:   {res['summary_md']}")
     else:
@@ -58,6 +62,7 @@ def main():
         print(f"Cohort Size:     {args.patients}")
         print(f"Random Seed:     {args.seed}")
         print(f"Output Dir:      {out_dir}")
+        print(f"Modules Dir:     {modules_dir}")
         print("==================================================================\n")
 
         config = ExperimentConfig(
@@ -65,6 +70,7 @@ def main():
             seed=args.seed,
             output_dir=out_dir,
             profile_path=Path(args.profile),
+            modules_dir=modules_dir,
         )
         res = ExperimentRunner.run_experiment(config)
         verdict = res["manifest"]["evaluation_verdict"]

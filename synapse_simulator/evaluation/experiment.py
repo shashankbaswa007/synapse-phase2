@@ -371,6 +371,7 @@ class ExperimentRunner:
         cohort_size: int,
         base_output_dir: Path,
         profile_path: Path = DEFAULT_PROFILE_PATH,
+        modules_dir: Path = DEFAULT_MODULES_DIR,
     ) -> Dict[str, Any]:
         """Execute multi-seed Monte Carlo experiment to assess sampling variance vs model bias.
         
@@ -392,6 +393,7 @@ class ExperimentRunner:
                 seed=seed,
                 output_dir=seed_dir,
                 profile_path=profile_path,
+                modules_dir=modules_dir,
             )
             res = ExperimentRunner.run_experiment(cfg)
             runs.append(res)

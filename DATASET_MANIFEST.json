@@ -3,8 +3,8 @@
   "validation_verdict": "PASS \u2014 DATASET VALIDATED",
   "patient_count": 10000,
   "random_seed": 42,
-  "git_commit": "1498daa4016a48f9d87e287ee1bd2aca80d240eb",
-  "validated_at": "2026-10-24T15:34:45.867023",
+  "git_commit": "6fc2f91268283d7eff40eb212dcde6af804fdfa8",
+  "validated_at": "2026-10-24T18:31:03.690921",
   "target_directory": "data/synthetic",
   "manifest_files": {
     "medications.csv": {
@@ -40,8 +40,8 @@
       "sha256": "8415502dffa32630b0704d2bb285f63d4d7b975ef052350b47ffc0ff2fb1008a"
     },
     "FINAL_10000_DATASET_VALIDATION.md": {
-      "size_bytes": 8246,
-      "sha256": "d2dc466143488526695b32b323f07c2246457272e07221d1d3c291377f187e78"
+      "size_bytes": 8247,
+      "sha256": "8205b093a8a75e25eb94c2b6c74174fbc8b1a5f78bc3c4afbf1e8e89c3d316a3"
     },
     "patient_timeline.csv": {
       "size_bytes": 67,
@@ -49,11 +49,11 @@
     },
     "EVALUATION_REPORT.json": {
       "size_bytes": 21441,
-      "sha256": "65bd24f904d60729d87ded05abe6bdd13fbcdde2f7637778808e825685922d62"
+      "sha256": "e28464315f5d7a60a83c6022e3d150c319620314954f3cadfcf866e6314cfc76"
     },
     "EVALUATION_REPORT.md": {
       "size_bytes": 16656,
-      "sha256": "34e3c5c140bf6d2e957d05df62e15f91ea9a680d9861e2d94ef8f4f677867afa"
+      "sha256": "6f48c914a5b2619a58d70dca4a8c0ba17bb2d1ea35e3d590cc603e3e994369e3"
     },
     "care_plans.csv": {
       "size_bytes": 421527,
@@ -76,8 +76,8 @@
       "sha256": "8c0f8e79ec60e4a3618f01365a7b883008f8d96d87b5e554a4ccfc391cdcbb39"
     },
     "FINAL_10000_DATASET_VALIDATION.json": {
-      "size_bytes": 23043,
-      "sha256": "71b8d29e0b3c5a357969f40b2fb3e2607c212678c77f6ff4bb7d0b3a919d38b2"
+      "size_bytes": 23044,
+      "sha256": "019f64b58794b1b94ae1b8fcf5cf7430ae68b9d086fea3f274cc1b0082735e64"
     },
     "events.csv": {
       "size_bytes": 80,
@@ -108,15 +108,15 @@
     "radiology_abnormal_studies": 0
   },
   "performance_metrics": {
-    "start_time": "2026-10-24T15:34:18.402066",
-    "end_time": "2026-10-24T15:34:45.522031",
-    "total_runtime_seconds": 27.12,
-    "simulation_runtime_seconds": 26.79,
-    "export_runtime_seconds": 9.2,
+    "start_time": "2026-10-24T18:30:37.038120",
+    "end_time": "2026-10-24T18:31:03.398075",
+    "total_runtime_seconds": 26.36,
+    "simulation_runtime_seconds": 26.07,
+    "export_runtime_seconds": 8.68,
     "total_events_processed": 0,
     "events_per_second": 0.0,
     "total_records_generated": 94595,
-    "records_per_second": 3488.03,
+    "records_per_second": 3588.59,
     "total_output_size_bytes": 8760419,
     "total_output_size_mb": 8.35,
     "patients_generated": 10000
