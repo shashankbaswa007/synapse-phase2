@@ -1,6 +1,16 @@
-# SYNAPSE Phase 2 — Final Implemented LLD Architecture Documentation
+# SYNAPSE Phase 2 — Legacy Discrete-Event Hospital Simulator (Historical LLD Archive)
 
-Welcome to the definitive Low-Level Design (LLD) architectural documentation package for **SYNAPSE Phase 2: Synthetic Hospital Simulator & Data Generation Engine**.
+> [!WARNING]
+> **HISTORICAL / LEGACY COMPATIBILITY ARCHIVE**  
+> This directory preserves the historical Low-Level Design (LLD), class indexes, and SOLID audit documentation for the earlier discrete-event hospital operational simulator prototype (August–September 2026).
+>
+> **Status:** SUPERSEDED for active development. Retained SOLELY for backward compatibility (`--mode hospital`) and existing regression test coverage.
+>
+> **Canonical Active System:** The active production implementation for SYNAPSE Phase 2 is the **Synthea-inspired longitudinal healthcare simulation system** documented in:
+> - Root Entry Point: [`generate_synthetic_data.py`](file:///Users/shashi/synapse/synapse-phase2/generate_synthetic_data.py) (default: `--mode longitudinal`)
+> - Canonical Architecture: [`docs/architecture/longitudinal_system_architecture.md`](file:///Users/shashi/synapse/synapse-phase2/docs/architecture/longitudinal_system_architecture.md)
+> - Root Guide: [`README.md`](file:///Users/shashi/synapse/synapse-phase2/README.md)
+> - Verified Cohort: [`data/synthetic/`](file:///Users/shashi/synapse/synapse-phase2/data/synthetic/) ($N=10,000$, seed 42)
 
 ---
 

@@ -15,7 +15,7 @@ flowchart TD
     subgraph S1["Synthetic Data Generation Engine"]
         PP["Population Profile<br>(india_default_v1.yaml)"] --> PG["PatientProfileGenerator"]
         CM["Clinical Generic Modules<br>(HTN, T2D, URTI)"] --> MR["ClinicalModuleRunner"]
-        PG --> DE["Discrete-Event Engine<br>(HospitalSimulator / Orchestrator)"]
+        PG --> DE["Longitudinal Simulation Engine<br>(ExperimentRunner / ModuleRunner)"]
         MR --> DE
     end
 

@@ -1,5 +1,10 @@
 """
-Large-Scale Synthetic Hospital Simulator Engine with Stage 7 Workflow Integration.
+Legacy Discrete-Event Hospital Operational Simulator Engine (Stage 7 Workflow Integration).
+
+NOTE: Retained for backward compatibility mode (`generate_synthetic_data.py --mode hospital`)
+and historical regression testing.
+The canonical Phase 2 active system is the Synthea-inspired longitudinal population
+simulator executed via ExperimentRunner (synapse_simulator.evaluation.experiment).
 """
 
 import random

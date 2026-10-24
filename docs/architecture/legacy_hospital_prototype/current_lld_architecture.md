@@ -1,7 +1,15 @@
-# SYNAPSE Phase 2 — Current Low-Level Design (LLD) Architecture
+# SYNAPSE Phase 2 — Legacy Hospital Prototype Low-Level Design (Historical LLD)
 
-**Document Version:** 2.1 (Post-SOLID Refactoring)  
-**Status:** Authoritative Implemented Architecture  
+> [!WARNING]
+> **HISTORICAL / LEGACY COMPATIBILITY ARCHIVE**  
+> This document describes the low-level architecture of the earlier discrete-event hospital operational simulator (`HospitalSimulator`).
+>
+> **Status:** SUPERSEDED for active development. Retained for `--mode hospital` legacy compatibility.
+>
+> **Canonical Architecture:** The active architecture for SYNAPSE Phase 2 is the **Synthea-inspired longitudinal healthcare simulation system** documented in [`docs/architecture/longitudinal_system_architecture.md`](file:///Users/shashi/synapse/synapse-phase2/docs/architecture/longitudinal_system_architecture.md) and [`README.md`](file:///Users/shashi/synapse/synapse-phase2/README.md).
+
+**Document Version:** 2.1 (Historical Prototype)  
+**Status:** Archived Legacy LLD (`--mode hospital` compatibility)  
 **Date:** 2026-10-09  
 
 ---

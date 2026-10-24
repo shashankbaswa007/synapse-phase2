@@ -61,7 +61,7 @@ Each synthetic patient is initialized as an in-memory `PatientContext` with base
 
 Longitudinal health trajectories are defined via declarative YAML state machines executed every $\Delta t = 7$ days over a 720-day observation window.
 
-### 2.1 Essential Hypertension (`config/diseases/hypertension_v1.yaml`)
+### 2.1 Essential Hypertension (`config/modules/hypertension.yaml`)
 * **State Space**: `HEALTHY` $\rightarrow$ `PRE_HYPERTENSION` $\rightarrow$ `STAGE_1_HTN` $\rightarrow$ `STAGE_2_HTN` $\rightarrow$ `HYPERTENSIVE_CKD`.
 * **Risk Modifiers**: Age $\ge 45$, elevated BMI ($\ge 25\ \text{kg/m}^2$), male sex, baseline sodium consumption.
 * **Progression Dynamics**: Patients in `STAGE_1_HTN` experience elevated systolic/diastolic pressures. Without treatment, 1.0–2.0% annual transition to chronic kidney disease (`HYPERTENSIVE_CKD`) is modeled.
@@ -69,7 +69,7 @@ Longitudinal health trajectories are defined via declarative YAML state machines
   * First-Line: Monotherapy with **Amlodipine** (5 mg/day).
   * Intensification: Stepped-care escalation to **Telmisartan** (40 mg/day) if blood pressure remains uncontrolled after 90 days.
 
-### 2.2 Type 2 Diabetes Mellitus (`config/diseases/type2_diabetes_v1.yaml`)
+### 2.2 Type 2 Diabetes Mellitus (`config/modules/diabetes_t2.yaml`)
 * **State Space**: `HEALTHY` $\rightarrow$ `PRE_DIABETES` $\rightarrow$ `T2D_UNCOMPLICATED` $\rightarrow$ `DIABETIC_NEPHROPATHY`.
 * **Risk Modifiers**: Age $\ge 35$, elevated BMI, family history, sedentary activity.
 * **Complications**: Microvascular renal complications develop in a fraction of patients over prolonged exposure ($1.93\%$ progression in canonical cohort).
@@ -77,7 +77,7 @@ Longitudinal health trajectories are defined via declarative YAML state machines
   * First-Line: Monotherapy with **Metformin** (500–1000 mg/day).
   * Intensification: Stepped-care escalation to **Glimepiride** (1–2 mg/day) for uncontrolled hyperglycemia.
 
-### 2.3 Acute Upper Respiratory Tract Infection (`config/diseases/acute_urti_v1.yaml`)
+### 2.3 Acute Upper Respiratory Tract Infection (`config/modules/urti.yaml`)
 * **State Space**: `SUSCEPTIBLE` $\rightarrow$ `INCUBATION` $\rightarrow$ `ACUTE_INFECTION` $\rightarrow$ `CONVALESCENT` $\rightarrow$ `SUSCEPTIBLE`.
 * **Transmission Dynamics**: Seasonal multi-wave Poisson incidence with winter/monsoon surges.
 * **Symptom Expression**: Fever, cough, sore throat, and rhinorrhea.

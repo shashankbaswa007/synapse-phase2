@@ -1,9 +1,17 @@
-# SYNAPSE — SOLID-Compliant Architecture Design & Low-Level Design (LLD) Assessment
+# SYNAPSE — SOLID-Compliant Architecture Design & Low-Level Design (LLD) Assessment (Historical Archive)
 
-**Project:** SYNAPSE — Autonomous Multi-Agent Knowledge Management Platform Powered by a Synthetic Hospital Simulator  
-**Phase:** Phase 2 (Synthetic Hospital Simulator & Data Generation Engine)  
-**Document Type:** Architectural Assessment & Target Low-Level Design (LLD)  
-**Status:** **AUTHORITATIVE DESIGN PROPOSAL (ZERO CODE MODIFICATIONS)**  
+> [!WARNING]
+> **HISTORICAL / LEGACY COMPATIBILITY ARCHIVE**  
+> This document records the architectural and SOLID principles audit of the earlier discrete-event hospital operational simulator prototype (`HospitalSimulator`) conducted on 2026-10-09.
+>
+> **Status:** SUPERSEDED for active development. Retained for historical provenance and legacy compatibility mode (`--mode hospital`).
+>
+> **Active Implementation:** The active production architecture of SYNAPSE Phase 2 is the **Synthea-inspired longitudinal healthcare simulation system** documented in [`docs/architecture/longitudinal_system_architecture.md`](file:///Users/shashi/synapse/synapse-phase2/docs/architecture/longitudinal_system_architecture.md) and [`README.md`](file:///Users/shashi/synapse/synapse-phase2/README.md).
+
+**Project:** SYNAPSE — Synthetic Healthcare Simulation & Population Health  
+**Phase:** Phase 2 (Legacy Hospital Operational Simulator Compatibility Architecture)  
+**Document Type:** Historical Architectural Assessment & Low-Level Design (LLD)  
+**Status:** **HISTORICAL ARCHIVE (MODE=HOSPITAL COMPATIBILITY ONLY)**  
 **Author:** DeepMind Agentic Pair Programmer  
 **Date:** 2026-10-09  
 

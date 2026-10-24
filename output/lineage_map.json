@@ -26,9 +26,9 @@
       "stage_id": "STAGE-2-STATE-MACHINES",
       "stage_name": "Synthea-Inspired Disease Progression State Machines",
       "input_sources": [
-        "config/diseases/hypertension_v1.yaml",
-        "config/diseases/type2_diabetes_v1.yaml",
-        "config/diseases/acute_urti_v1.yaml"
+        "config/modules/hypertension.yaml",
+        "config/modules/diabetes_t2.yaml",
+        "config/modules/urti.yaml"
       ],
       "process_description": "Evaluates discrete-time Markovian and semi-Markovian state transitions every 7 days. Computes disease inception, chronic progression, microvascular complications, acute symptom triggers, and background mortality.",
       "output_entities": ["conditions.csv", "symptoms.csv", "deaths.csv"],

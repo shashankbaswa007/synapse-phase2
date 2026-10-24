@@ -1,5 +1,5 @@
 """
-CLI Entry Point for SYNAPSE Synthetic Hospital Simulator.
+CLI Entry Point for SYNAPSE Phase 2 Synthetic Patient & Longitudinal Simulation System.
 """
 
 import argparse
@@ -13,8 +13,8 @@ if str(PROJECT_ROOT) not in sys.path:
 
 
 def main():
-    parser = argparse.ArgumentParser(description="SYNAPSE Synthetic Hospital Simulation CLI")
-    parser.add_argument("--patients", type=int, default=20, help="Number of synthetic patient journeys to simulate")
+    parser = argparse.ArgumentParser(description="SYNAPSE Phase 2 Synthetic Patient & Longitudinal Simulation CLI")
+    parser.add_argument("--patients", type=int, default=20, help="Number of synthetic patients to simulate")
     parser.add_argument("--seed", type=int, default=42, help="Random seed for reproducibility")
     parser.add_argument("--output", type=str, default="data/synthetic", help="Directory path to save synthetic CSV dataset")
     args = parser.parse_args()
