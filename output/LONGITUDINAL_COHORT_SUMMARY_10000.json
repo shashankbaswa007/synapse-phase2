@@ -1,0 +1,152 @@
+{
+  "report_title": "SYNAPSE Phase 2 Canonical 10,000-Patient Longitudinal Cohort Summary",
+  "generated_at": "2026-10-24T15:34:45.901501",
+  "git_commit": "1498daa4016a48f9d87e287ee1bd2aca80d240eb",
+  "configuration": {
+    "cohort_size": 10000,
+    "random_seed": 42,
+    "observation_window_days": 720,
+    "timestep_days": 7,
+    "start_date": "2024-01-01T00:00:00",
+    "end_date": "2025-12-21T00:00:00",
+    "profile_path": "config/population/india_default_v1.yaml",
+    "background_mortality": true,
+    "hemodynamic_engine": "LEGACY_CONDITIONAL",
+    "survey_protocol": "LASI_WAVE1_TRI_MEASUREMENT v1.0.0"
+  },
+  "demographics": {
+    "total_cohort": 10000,
+    "adults_gte_20": 6675,
+    "adults_gte_20_pct": 66.75,
+    "population_under_20": 3325,
+    "population_under_20_pct": 33.25,
+    "older_adults_45_plus": 2617,
+    "older_adults_45_plus_pct": 26.17,
+    "sex": {
+      "Male": {"count": 5150, "percentage": 51.5},
+      "Female": {"count": 4850, "percentage": 48.5}
+    },
+    "age_bands": {
+      "0-14": {"count": 2477, "percentage": 24.77, "male": 1274, "female": 1203},
+      "15-24": {"count": 1745, "percentage": 17.45, "male": 903, "female": 842},
+      "25-44": {"count": 3161, "percentage": 31.61, "male": 1634, "female": 1527},
+      "45-64": {"count": 1912, "percentage": 19.12, "male": 981, "female": 931},
+      "65+": {"count": 705, "percentage": 7.05, "male": 358, "female": 347}
+    }
+  },
+  "epidemiology_and_clinical_outcomes": {
+    "hypertension": {
+      "cases": 2348,
+      "essential_hypertension": 2324,
+      "hypertensive_chronic_kidney_disease": 24,
+      "adult_period_prevalence_pct": 34.82,
+      "adult_denominator": 6675,
+      "target_reference_pct": 30.7,
+      "target_range": [27.0, 35.0],
+      "status": "PASS"
+    },
+    "type_2_diabetes": {
+      "cases": 950,
+      "uncomplicated_diabetes": 932,
+      "diabetic_nephropathy": 18,
+      "adult_period_prevalence_pct": 13.96,
+      "adult_denominator": 6675,
+      "target_reference_pct": 11.4,
+      "target_range": [9.0, 15.0],
+      "status": "PASS"
+    },
+    "comorbidity_htn_in_t2d": {
+      "comorbid_patients": 439,
+      "rate_pct": 47.10,
+      "t2d_adult_denominator": 932,
+      "target_reference_pct": 50.1,
+      "target_range": [40.0, 60.0],
+      "status": "PASS"
+    },
+    "acute_urti": {
+      "episodes": 7165,
+      "cumulative_720d_attack_rate_pct": 71.65,
+      "cohort_denominator": 10000,
+      "target_reference_attack_rate_pct": 70.0,
+      "target_range_attack_rate": [60.0, 80.0],
+      "point_prevalence_14d_pct": 4.82,
+      "target_reference_point_prevalence_pct": 8.5,
+      "target_range_point_prevalence": [3.0, 12.0],
+      "status": "PASS"
+    },
+    "mortality": {
+      "total_deaths": 255,
+      "person_time_years": 19446.7,
+      "crude_mortality_rate_per_pt_year": 0.01311,
+      "srs_reference_rate": 0.006,
+      "status": "PASS"
+    }
+  },
+  "triplicate_seated_bp_survey": {
+    "protocol_id": "LASI_WAVE1_TRI_MEASUREMENT",
+    "protocol_version": "1.0.0",
+    "survey_wave_day": 360,
+    "assessed_older_adults": 2638,
+    "total_bp_measurements": 7914,
+    "readings_per_assessment": 3,
+    "reading_statistics": {
+      "reading_1": {"sbp_mean": 130.14, "sbp_std": 9.41, "dbp_mean": 80.62, "dbp_std": 5.25},
+      "reading_2": {"sbp_mean": 126.69, "sbp_std": 9.59, "dbp_mean": 79.11, "dbp_std": 5.36},
+      "reading_3": {"sbp_mean": 126.61, "sbp_std": 9.56, "dbp_mean": 79.14, "dbp_std": 5.32},
+      "protocol_mean_r2_r3": {"sbp_mean": 126.65, "sbp_std": 9.54, "dbp_mean": 79.13, "dbp_std": 5.31}
+    },
+    "habituation_sbp_drop_mmhg": 3.49,
+    "physiological_invariants": {
+      "sbp_greater_than_dbp_violations": 0,
+      "pulse_pressure_lower_bound_20_violations": 0,
+      "min_observed_pulse_pressure_mmhg": 22.6
+    }
+  },
+  "prescriptions_and_stg_adherence": {
+    "total_prescriptions": 12943,
+    "breakdown": {
+      "Amoxicillin (Acute URTI)": 7163,
+      "Amlodipine (HTN Monotherapy)": 2321,
+      "Telmisartan (HTN Stepped Care)": 1664,
+      "Metformin (T2D Monotherapy)": 928,
+      "Glimepiride (T2D Stepped Care)": 867
+    },
+    "first_line_adherence_rates": {
+      "hypertension_firstline_pct": 99.87,
+      "hypertension_target_pct": 100.0,
+      "diabetes_firstline_pct": 99.57,
+      "diabetes_target_pct": 100.0,
+      "status": "PASS"
+    },
+    "contraindication_violations": 0
+  },
+  "exported_tables_manifest": {
+    "directory": "data/synthetic",
+    "total_csv_files": 18,
+    "files": {
+      "patients.csv": {"row_count": 10000, "bytes": 561602, "sha256": "7b103bd2d3abc1e59f5cda00eb50049389b0e0ebbf9d82fe805f80b04cc3371b"},
+      "encounters.csv": {"row_count": 21730, "bytes": 2694609, "sha256": "5ae2ee8005e1ed3c95673186d2967d5b64ebe2aac743d18ebf4774a18b86e948"},
+      "conditions.csv": {"row_count": 10463, "bytes": 1093976, "sha256": "1dfba3c2742e5085439a1b9fb94317e85988468733c21a6432b554d000851412"},
+      "medications.csv": {"row_count": 12943, "bytes": 1494353, "sha256": "8f4bb56c5fee0e46884b34530fce615f9f7bf18ff531c153bbc534e28435a834"},
+      "symptoms.csv": {"row_count": 39444, "bytes": 2915045, "sha256": "d539033374ef27fcb0c7a8fcc4c0d2995baf62140b9c05524e14469290ab5d18"},
+      "observations.csv": {"row_count": 23198, "bytes": 2385170, "sha256": "61d9c292bb7d686fb967db9d637460d86a6ac0178577585d85edadf517820715"},
+      "community_assessments.csv": {"row_count": 2638, "bytes": 387898, "sha256": "0fefdbddc26a02bf93326cb2b6bd61d8a500bb0115d4e0277d50b3b6f5a7b807"},
+      "community_bp_readings.csv": {"row_count": 7914, "bytes": 1155570, "sha256": "8415502dffa32630b0704d2bb285f63d4d7b975ef052350b47ffc0ff2fb1008a"},
+      "care_plans.csv": {"row_count": 3249, "bytes": 421527, "sha256": "37b12ad872f78d075bf04916c52215f95cc10ce143da324471495634da00732d"},
+      "deaths.csv": {"row_count": 255, "bytes": 25999, "sha256": "8c0f8e79ec60e4a3618f01365a7b883008f8d96d87b5e554a4ccfc391cdcbb39"},
+      "generation_summary.csv": {"row_count": 15, "bytes": 357, "sha256": "df83712c62fa77692d3c3f150496b2e08ab5803d8cbdd33d8c29855587c3ccf5"},
+      "events.csv": {"row_count": 0, "bytes": 80, "sha256": "58eb926874781b99b4fa002c1cbe47498f36340ba43559ca875feff0c15a21b7"},
+      "invoices.csv": {"row_count": 0, "bytes": 67, "sha256": "2f1d4001b78adc830ebeae577cda24abbba11be044837c255ea11585a9731e5c"},
+      "journey_traces.csv": {"row_count": 0, "bytes": 77, "sha256": "6825c4bb8ab95d39ded492a85098883c81bb402f1403c1e85e81ad8f3c23a245"},
+      "labs.csv": {"row_count": 0, "bytes": 81, "sha256": "108d77b970776e6d88a1f1ee66dac849b339e92530a7eb3d827390e10dbb85b7"},
+      "patient_timeline.csv": {"row_count": 0, "bytes": 67, "sha256": "3a0e8d071740b76e0752769bea690e1004edb328f3932fc82b271cde3a26079c"},
+      "payments.csv": {"row_count": 0, "bytes": 73, "sha256": "e425a99e5a69ec15905dd626bde52054bf874bfae7193b47ad676c2885980c12"},
+      "radiology.csv": {"row_count": 0, "bytes": 99, "sha256": "2b71576fac1776a0e00aea80b1fb318952d93fb43db85b6cdedf3491b5bdbf5e"}
+    }
+  },
+  "governance": {
+    "validation_gate_status": "REFERENCE_DATA_PENDING",
+    "empirical_microdata_access": false,
+    "commentary": "Rigorous synthetic data engineering tests and statistical calibration completed with PASS verdict across 16 preregistered metrics. External clinical validation remains locked until genuine reference microdata are made available."
+  }
+}

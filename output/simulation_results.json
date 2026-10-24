@@ -1,56 +1,97 @@
 {
-  "total_patients": 100,
-  "total_events_processed": 1002,
-  "decisions_allowed": 586,
-  "decisions_blocked": 136,
-  "rule_hits": {
-    "RULE-WORK-OPD-010": 62,
-    "DEFAULT_FALLBACK_ALLOW": 450,
-    "RULE-STATE-RX-020": 31,
-    "RULE-STATE-RX-021": 15,
-    "RULE-STATE-LAB-010": 14,
-    "RULE-STATE-LAB-011": 31,
-    "RULE-CLIN-ALLERGY-001": 45,
-    "RULE-STATE-RAD-010": 14,
-    "RULE-GLOB-STOCK-001": 60
+  "dataset_name": "SYNAPSE Phase 2 Canonical Synthetic Longitudinal Cohort",
+  "simulation_mode": "LONGITUDINAL_SYNTHEA",
+  "total_patients": 10000,
+  "random_seed": 42,
+  "observation_window_days": 720,
+  "timestep_days": 7,
+  "observation_start": "2024-01-01T00:00:00",
+  "observation_end": "2025-12-21T00:00:00",
+  "profile_path": "config/population/india_default_v1.yaml",
+  "background_mortality_enabled": true,
+  "hemodynamic_engine_mode": "LEGACY_CONDITIONAL",
+  "bp_protocol": {
+    "protocol_id": "LASI_WAVE1_TRI_MEASUREMENT",
+    "protocol_version": "1.0.0",
+    "target_cohort": "Older adults age 45+",
+    "readings_per_assessment": 3,
+    "total_assessments": 2638,
+    "total_bp_readings": 7914
   },
-  "events_emitted_types": {},
-  "journey_outcomes": {
-    "SUCCESS_COMPLETED": 44,
-    "BLOCKED_BY_RULE-STATE-LAB-011": 15,
-    "IN_PROGRESS": 41
+  "execution_telemetry": {
+    "simulation_seconds": 17.463,
+    "export_seconds": 9.199,
+    "total_runtime_seconds": 26.661,
+    "actions_emitted": 51819,
+    "peak_memory_mb": 207.0,
+    "git_commit": "1498daa4016a48f9d87e287ee1bd2aca80d240eb"
   },
-  "final_simulation_time": "2026-01-01T13:05:00",
-  "exported_csv_files": [
-    "departments.csv",
-    "doctors.csv",
-    "nurses.csv",
-    "staff.csv",
-    "rooms.csv",
-    "medicines.csv",
-    "patients.csv",
-    "patient_allergies.csv",
-    "patient_medical_history.csv",
-    "patient_chronic_conditions.csv",
-    "patient_insurance.csv",
-    "patient_family_history.csv",
-    "appointments.csv",
-    "consultations.csv",
-    "prescriptions.csv",
-    "lab_orders.csv",
-    "lab_samples.csv",
-    "radiology_orders.csv",
-    "pharmacy_orders.csv",
-    "medication_dispensing.csv",
-    "pharmacy_transactions.csv",
-    "inventory.csv",
-    "inventory_transactions.csv",
-    "bills.csv",
-    "payments.csv",
-    "events.csv",
-    "patient_journeys.csv",
-    "patient_journey_steps.csv",
-    "rule_decisions.csv",
-    "simulation_metadata.csv"
-  ]
+  "table_record_counts": {
+    "patients.csv": 10000,
+    "encounters.csv": 21730,
+    "conditions.csv": 10463,
+    "medications.csv": 12943,
+    "symptoms.csv": 39444,
+    "observations.csv": 23198,
+    "community_assessments.csv": 2638,
+    "community_bp_readings.csv": 7914,
+    "care_plans.csv": 3249,
+    "deaths.csv": 255,
+    "generation_summary.csv": 15,
+    "events.csv": 0,
+    "invoices.csv": 0,
+    "journey_traces.csv": 0,
+    "labs.csv": 0,
+    "patient_timeline.csv": 0,
+    "payments.csv": 0,
+    "radiology.csv": 0
+  },
+  "demographic_summary": {
+    "total_cohort": 10000,
+    "sex_distribution": {
+      "Male": 5150,
+      "Female": 4850
+    },
+    "male_pct": 51.5,
+    "female_pct": 48.5,
+    "age_distribution": {
+      "0-14": 2477,
+      "15-24": 1745,
+      "25-44": 3161,
+      "45-64": 1912,
+      "65+": 705
+    },
+    "older_adults_count": 2617,
+    "older_adults_pct": 26.17
+  },
+  "clinical_summary": {
+    "hypertension_cases": 2348,
+    "hypertension_period_prevalence_pct": 34.82,
+    "type_2_diabetes_cases": 950,
+    "type_2_diabetes_period_prevalence_pct": 13.96,
+    "acute_urti_episodes": 7165,
+    "urti_cumulative_attack_rate_pct": 71.65,
+    "total_deaths": 255,
+    "crude_mortality_rate_per_patient_year": 0.01311,
+    "active_care_plans": 3249
+  },
+  "evaluation_metrics": {
+    "overall_status": "PASS",
+    "invariants_passed": true,
+    "passed_metrics": 16,
+    "warning_metrics": 0,
+    "failed_metrics": 0,
+    "unverified_metrics": 5
+  },
+  "governance_and_validation": {
+    "validation_gate_status": "REFERENCE_DATA_PENDING",
+    "empirical_microdata_access": false,
+    "calibration_sources": [
+      "SRS 2021 India Demographic Census (Statement 19)",
+      "SRS 2016-2020 Abridged Life Tables (Mortality)",
+      "ICMR-INDIAB 2023 Cross-Sectional Hypertension & Diabetes Benchmarks",
+      "National Health Profile (NHP) India 2020 Acute URTI Benchmarks",
+      "ICMR Standard Treatment Guidelines (STG) 2022"
+    ]
+  }
 }

@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 580" width="100%" height="100%" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; background: #0f172a; border-radius: 12px;">
+<defs>
+  <linearGradient id="barGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#0284c7"/>
+    <stop offset="100%" stop-color="#38bdf8"/>
+  </linearGradient>
+</defs>
+<text x="490" y="42" text-anchor="middle" fill="#f8fafc" font-size="20" font-weight="700">Epidemiological & Disease Prevalence Benchmarks</text>
+<text x="490" y="66" text-anchor="middle" fill="#94a3b8" font-size="12">Synthetic Longitudinal Rates vs. Indian Empirical Benchmarks (ICMR-INDIAB 2023, NHP 2020)</text>
+<line x1="340.0" y1="90" x2="340.0" y2="500" stroke="#1e293b" stroke-width="1"/>
+<text x="340.0" y="84" text-anchor="middle" fill="#64748b" font-size="10">0%</text>
+<line x1="432.0" y1="90" x2="432.0" y2="500" stroke="#1e293b" stroke-width="1"/>
+<text x="432.0" y="84" text-anchor="middle" fill="#64748b" font-size="10">20%</text>
+<line x1="524.0" y1="90" x2="524.0" y2="500" stroke="#1e293b" stroke-width="1"/>
+<text x="524.0" y="84" text-anchor="middle" fill="#64748b" font-size="10">40%</text>
+<line x1="616.0" y1="90" x2="616.0" y2="500" stroke="#1e293b" stroke-width="1"/>
+<text x="616.0" y="84" text-anchor="middle" fill="#64748b" font-size="10">60%</text>
+<line x1="708.0" y1="90" x2="708.0" y2="500" stroke="#1e293b" stroke-width="1"/>
+<text x="708.0" y="84" text-anchor="middle" fill="#64748b" font-size="10">80%</text>
+<line x1="800.0" y1="90" x2="800.0" y2="500" stroke="#1e293b" stroke-width="1"/>
+<text x="800.0" y="84" text-anchor="middle" fill="#64748b" font-size="10">100%</text>
+<text x="320" y="120" text-anchor="end" fill="#f1f5f9" font-size="13" font-weight="600">Adult Hypertension (Age 20+)</text>
+<text x="320" y="136" text-anchor="end" fill="#94a3b8" font-size="10.5">Period Prevalence over 720 days (N=6,675 adults age >= 20)</text>
+<rect x="340" y="108" width="460" height="28" rx="6" fill="#1e293b" opacity="0.6"/>
+<rect x="464.2" y="108" width="36.8" height="28" rx="4" fill="#047857" opacity="0.25" stroke="#10b981" stroke-width="1" stroke-dasharray="3,2"/>
+<rect x="340" y="111" width="160.172" height="22" rx="4" fill="url(#barGrad)"/>
+<text x="508.172" y="127" fill="#38bdf8" font-size="12" font-weight="700">34.82%</text>
+<line x1="481.22" y1="104" x2="481.22" y2="140" stroke="#fbbf24" stroke-width="2.5"/>
+<polygon points="481.22,103 477.22,97 485.22,97" fill="#fbbf24"/>
+<text x="481.22" y="150" text-anchor="middle" fill="#fbbf24" font-size="9.5" font-weight="600">30.7% Ref</text>
+<rect x="890" y="110" width="54" height="22" rx="11" fill="#065f46" stroke="#10b981" stroke-width="1"/>
+<text x="917" y="125" text-anchor="middle" fill="#a7f3d0" font-size="10.5" font-weight="700">PASS</text>
+<text x="320" y="196" text-anchor="end" fill="#f1f5f9" font-size="13" font-weight="600">Adult Type 2 Diabetes (Age 20+)</text>
+<text x="320" y="212" text-anchor="end" fill="#94a3b8" font-size="10.5">Period Prevalence over 720 days (N=6,675 adults age >= 20)</text>
+<rect x="340" y="184" width="460" height="28" rx="6" fill="#1e293b" opacity="0.6"/>
+<rect x="381.4" y="184" width="27.599999999999998" height="28" rx="4" fill="#047857" opacity="0.25" stroke="#10b981" stroke-width="1" stroke-dasharray="3,2"/>
+<rect x="340" y="187" width="64.216" height="22" rx="4" fill="url(#barGrad)"/>
+<text x="412.216" y="203" fill="#38bdf8" font-size="12" font-weight="700">13.96%</text>
+<line x1="392.44" y1="180" x2="392.44" y2="216" stroke="#fbbf24" stroke-width="2.5"/>
+<polygon points="392.44,179 388.44,173 396.44,173" fill="#fbbf24"/>
+<text x="392.44" y="226" text-anchor="middle" fill="#fbbf24" font-size="9.5" font-weight="600">11.4% Ref</text>
+<rect x="890" y="186" width="54" height="22" rx="11" fill="#065f46" stroke="#10b981" stroke-width="1"/>
+<text x="917" y="201" text-anchor="middle" fill="#a7f3d0" font-size="10.5" font-weight="700">PASS</text>
+<text x="320" y="272" text-anchor="end" fill="#f1f5f9" font-size="13" font-weight="600">Comorbid HTN in T2D Patients</text>
+<text x="320" y="288" text-anchor="end" fill="#94a3b8" font-size="10.5">Co-occurrence rate in diabetic cohort (N=932)</text>
+<rect x="340" y="260" width="460" height="28" rx="6" fill="#1e293b" opacity="0.6"/>
+<rect x="524.0" y="260" width="92.0" height="28" rx="4" fill="#047857" opacity="0.25" stroke="#10b981" stroke-width="1" stroke-dasharray="3,2"/>
+<rect x="340" y="263" width="216.66" height="22" rx="4" fill="url(#barGrad)"/>
+<text x="564.66" y="279" fill="#38bdf8" font-size="12" font-weight="700">47.10%</text>
+<line x1="570.46" y1="256" x2="570.46" y2="292" stroke="#fbbf24" stroke-width="2.5"/>
+<polygon points="570.46,255 566.46,249 574.46,249" fill="#fbbf24"/>
+<text x="570.46" y="302" text-anchor="middle" fill="#fbbf24" font-size="9.5" font-weight="600">50.1% Ref</text>
+<rect x="890" y="262" width="54" height="22" rx="11" fill="#065f46" stroke="#10b981" stroke-width="1"/>
+<text x="917" y="277" text-anchor="middle" fill="#a7f3d0" font-size="10.5" font-weight="700">PASS</text>
+<text x="320" y="348" text-anchor="end" fill="#f1f5f9" font-size="13" font-weight="600">Acute URTI Cumulative Attack Rate</text>
+<text x="320" y="364" text-anchor="end" fill="#94a3b8" font-size="10.5">720-day multi-wave incident episodes (N=10,000)</text>
+<rect x="340" y="336" width="460" height="28" rx="6" fill="#1e293b" opacity="0.6"/>
+<rect x="616.0" y="336" width="92.0" height="28" rx="4" fill="#047857" opacity="0.25" stroke="#10b981" stroke-width="1" stroke-dasharray="3,2"/>
+<rect x="340" y="339" width="329.59" height="22" rx="4" fill="url(#barGrad)"/>
+<text x="677.5899999999999" y="355" fill="#38bdf8" font-size="12" font-weight="700">71.65%</text>
+<line x1="662.0" y1="332" x2="662.0" y2="368" stroke="#fbbf24" stroke-width="2.5"/>
+<polygon points="662.0,331 658.0,325 666.0,325" fill="#fbbf24"/>
+<text x="662.0" y="378" text-anchor="middle" fill="#fbbf24" font-size="9.5" font-weight="600">70.0% Ref</text>
+<rect x="890" y="338" width="54" height="22" rx="11" fill="#065f46" stroke="#10b981" stroke-width="1"/>
+<text x="917" y="353" text-anchor="middle" fill="#a7f3d0" font-size="10.5" font-weight="700">PASS</text>
+<text x="320" y="424" text-anchor="end" fill="#f1f5f9" font-size="13" font-weight="600">Acute URTI 14-Day Point Prevalence</text>
+<text x="320" y="440" text-anchor="end" fill="#94a3b8" font-size="10.5">Active respiratory episodes at snapshot (N=10,000)</text>
+<rect x="340" y="412" width="460" height="28" rx="6" fill="#1e293b" opacity="0.6"/>
+<rect x="353.8" y="412" width="41.4" height="28" rx="4" fill="#047857" opacity="0.25" stroke="#10b981" stroke-width="1" stroke-dasharray="3,2"/>
+<rect x="340" y="415" width="22.172" height="22" rx="4" fill="url(#barGrad)"/>
+<text x="370.172" y="431" fill="#38bdf8" font-size="12" font-weight="700">4.82%</text>
+<line x1="379.1" y1="408" x2="379.1" y2="444" stroke="#fbbf24" stroke-width="2.5"/>
+<polygon points="379.1,407 375.1,401 383.1,401" fill="#fbbf24"/>
+<text x="379.1" y="454" text-anchor="middle" fill="#fbbf24" font-size="9.5" font-weight="600">8.5% Ref</text>
+<rect x="890" y="414" width="54" height="22" rx="11" fill="#065f46" stroke="#10b981" stroke-width="1"/>
+<text x="917" y="429" text-anchor="middle" fill="#a7f3d0" font-size="10.5" font-weight="700">PASS</text>
+<rect x="240" y="515" width="500" height="38" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+<rect x="260" y="528" width="16" height="12" rx="3" fill="url(#barGrad)"/>
+<text x="284" y="538" fill="#cbd5e1" font-size="11">Synthetic Cohort Estimate</text>
+<line x1="440" y1="534" x2="465" y2="534" stroke="#fbbf24" stroke-width="2.5"/>
+<text x="473" y="538" fill="#fbbf24" font-size="11">Empirical Benchmark Target</text>
+<rect x="625" y="528" width="16" height="12" rx="3" fill="#047857" stroke="#10b981" stroke-width="1"/>
+<text x="649" y="538" fill="#a7f3d0" font-size="11">Acceptance Range</text>
+</svg>

@@ -1,0 +1,124 @@
+{
+  "dataset_name": "SYNAPSE Phase 2 Synthetic Hospital Dataset",
+  "validation_verdict": "PASS \u2014 DATASET VALIDATED",
+  "patient_count": 10000,
+  "random_seed": 42,
+  "git_commit": "1498daa4016a48f9d87e287ee1bd2aca80d240eb",
+  "validated_at": "2026-10-24T15:34:45.867023",
+  "target_directory": "data/synthetic",
+  "manifest_files": {
+    "medications.csv": {
+      "size_bytes": 1494353,
+      "sha256": "8f4bb56c5fee0e46884b34530fce615f9f7bf18ff531c153bbc534e28435a834"
+    },
+    "invoices.csv": {
+      "size_bytes": 67,
+      "sha256": "2f1d4001b78adc830ebeae577cda24abbba11be044837c255ea11585a9731e5c"
+    },
+    "community_assessments.csv": {
+      "size_bytes": 387898,
+      "sha256": "0fefdbddc26a02bf93326cb2b6bd61d8a500bb0115d4e0277d50b3b6f5a7b807"
+    },
+    "radiology.csv": {
+      "size_bytes": 99,
+      "sha256": "2b71576fac1776a0e00aea80b1fb318952d93fb43db85b6cdedf3491b5bdbf5e"
+    },
+    "journey_traces.csv": {
+      "size_bytes": 77,
+      "sha256": "6825c4bb8ab95d39ded492a85098883c81bb402f1403c1e85e81ad8f3c23a245"
+    },
+    "symptoms.csv": {
+      "size_bytes": 2915045,
+      "sha256": "d539033374ef27fcb0c7a8fcc4c0d2995baf62140b9c05524e14469290ab5d18"
+    },
+    "generation_summary.csv": {
+      "size_bytes": 357,
+      "sha256": "df83712c62fa77692d3c3f150496b2e08ab5803d8cbdd33d8c29855587c3ccf5"
+    },
+    "community_bp_readings.csv": {
+      "size_bytes": 1155570,
+      "sha256": "8415502dffa32630b0704d2bb285f63d4d7b975ef052350b47ffc0ff2fb1008a"
+    },
+    "FINAL_10000_DATASET_VALIDATION.md": {
+      "size_bytes": 8246,
+      "sha256": "d2dc466143488526695b32b323f07c2246457272e07221d1d3c291377f187e78"
+    },
+    "patient_timeline.csv": {
+      "size_bytes": 67,
+      "sha256": "3a0e8d071740b76e0752769bea690e1004edb328f3932fc82b271cde3a26079c"
+    },
+    "EVALUATION_REPORT.json": {
+      "size_bytes": 21441,
+      "sha256": "65bd24f904d60729d87ded05abe6bdd13fbcdde2f7637778808e825685922d62"
+    },
+    "EVALUATION_REPORT.md": {
+      "size_bytes": 16656,
+      "sha256": "34e3c5c140bf6d2e957d05df62e15f91ea9a680d9861e2d94ef8f4f677867afa"
+    },
+    "care_plans.csv": {
+      "size_bytes": 421527,
+      "sha256": "37b12ad872f78d075bf04916c52215f95cc10ce143da324471495634da00732d"
+    },
+    "payments.csv": {
+      "size_bytes": 73,
+      "sha256": "e425a99e5a69ec15905dd626bde52054bf874bfae7193b47ad676c2885980c12"
+    },
+    "conditions.csv": {
+      "size_bytes": 1093976,
+      "sha256": "1dfba3c2742e5085439a1b9fb94317e85988468733c21a6432b554d000851412"
+    },
+    "encounters.csv": {
+      "size_bytes": 2694609,
+      "sha256": "5ae2ee8005e1ed3c95673186d2967d5b64ebe2aac743d18ebf4774a18b86e948"
+    },
+    "deaths.csv": {
+      "size_bytes": 25999,
+      "sha256": "8c0f8e79ec60e4a3618f01365a7b883008f8d96d87b5e554a4ccfc391cdcbb39"
+    },
+    "FINAL_10000_DATASET_VALIDATION.json": {
+      "size_bytes": 23043,
+      "sha256": "71b8d29e0b3c5a357969f40b2fb3e2607c212678c77f6ff4bb7d0b3a919d38b2"
+    },
+    "events.csv": {
+      "size_bytes": 80,
+      "sha256": "58eb926874781b99b4fa002c1cbe47498f36340ba43559ca875feff0c15a21b7"
+    },
+    "patients.csv": {
+      "size_bytes": 561602,
+      "sha256": "7b103bd2d3abc1e59f5cda00eb50049389b0e0ebbf9d82fe805f80b04cc3371b"
+    },
+    "labs.csv": {
+      "size_bytes": 81,
+      "sha256": "108d77b970776e6d88a1f1ee66dac849b339e92530a7eb3d827390e10dbb85b7"
+    },
+    "observations.csv": {
+      "size_bytes": 2385170,
+      "sha256": "61d9c292bb7d686fb967db9d637460d86a6ac0178577585d85edadf517820715"
+    }
+  },
+  "passed_checks_count": 10,
+  "critical_errors_count": 0,
+  "noncritical_warnings_count": 0,
+  "legitimate_pending_states": {
+    "invoices_after_encounter_delayed_billing": 0,
+    "invoice_status_distribution": {},
+    "lab_pending_tests": 0,
+    "lab_abnormal_results": 0,
+    "radiology_pending_studies": 0,
+    "radiology_abnormal_studies": 0
+  },
+  "performance_metrics": {
+    "start_time": "2026-10-24T15:34:18.402066",
+    "end_time": "2026-10-24T15:34:45.522031",
+    "total_runtime_seconds": 27.12,
+    "simulation_runtime_seconds": 26.79,
+    "export_runtime_seconds": 9.2,
+    "total_events_processed": 0,
+    "events_per_second": 0.0,
+    "total_records_generated": 94595,
+    "records_per_second": 3488.03,
+    "total_output_size_bytes": 8760419,
+    "total_output_size_mb": 8.35,
+    "patients_generated": 10000
+  }
+}

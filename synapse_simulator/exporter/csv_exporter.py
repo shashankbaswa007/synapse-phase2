@@ -138,7 +138,8 @@ class CSVExporter:
         exported_files.update(res)
 
         # 12. Simplified Relational CSV Dataset (data/synthetic/*.csv)
-        res = self.export_simplified_dataset()
+        s_target = (self.output_dir / "synthetic") if self.output_dir else None
+        res = self.export_simplified_dataset(target_dir=s_target)
         exported_files.update(res)
 
         return exported_files
@@ -706,7 +707,7 @@ class CSVExporter:
 
     def export_simplified_dataset(self, target_dir: Optional[Path] = None) -> Dict[str, Path]:
         """Export simplified flat relational CSV dataset to target_dir (e.g. data/synthetic/*.csv)."""
-        s_dir = target_dir or Path("data/synthetic")
+        s_dir = target_dir or ((self.output_dir / "synthetic") if self.output_dir else Path("data/synthetic"))
         s_dir.mkdir(parents=True, exist_ok=True)
         exported: Dict[str, Path] = {}
 

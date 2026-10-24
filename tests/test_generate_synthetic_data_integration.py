@@ -149,3 +149,26 @@ def test_cli_invocation_via_main(tmp_path, monkeypatch):
     assert manifest["simulation_parameters"]["total_cohort_size"] == 3
     assert manifest["simulation_parameters"]["seed"] == 77
     assert manifest["simulation_parameters"]["observation_window_days"] == 90
+
+
+def test_csv_exporter_path_isolation_does_not_clobber_data_synthetic(tmp_path):
+    """TEST 6: CSVExporter initialized with output_dir must export to output_dir/synthetic,
+    strictly never clobbering or writing to the global data/synthetic/ directory.
+    """
+    from synapse_simulator.generator.hospital_generator import HospitalSimulator
+
+    custom_out = tmp_path / "isolated_hospital_run"
+    sim = HospitalSimulator(random_seed=42)
+    sim.spawn_patients(2)
+    sim.run(max_events=50, output_dir=str(custom_out))
+
+    # Verify files were exported into custom_out/phase2/synthetic, NOT global data/synthetic
+    assert (custom_out / "phase2").exists()
+    assert (custom_out / "phase2" / "synthetic" / "patients.csv").exists()
+
+    # Verify global data/synthetic/patients.csv was NOT overwritten with 2 patients
+    global_patients = Path("data/synthetic/patients.csv")
+    if global_patients.exists():
+        with open(global_patients, "r", encoding="utf-8") as f:
+            lines = sum(1 for _ in f)
+        assert lines == 10001, f"Expected 10,001 lines in global patients.csv, got {lines}"

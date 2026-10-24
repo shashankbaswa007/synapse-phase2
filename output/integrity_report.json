@@ -1,47 +1,114 @@
 {
   "metadata": {
-    "generated_at": "2026-08-28T11:48:15.873539",
-    "total_patients": 10,
-    "total_events": 126,
-    "total_documents": 27
+    "report_name": "SYNAPSE Phase 2 Canonical Dataset Integrity & Invariant Audit",
+    "verified_at": "2026-10-24T15:34:45.867023",
+    "cohort_size": 10000,
+    "random_seed": 42,
+    "observation_window_days": 720,
+    "total_records_generated": 94595,
+    "hemodynamic_engine": "LEGACY_CONDITIONAL",
+    "bp_protocol": "LASI_WAVE1_TRI_MEASUREMENT v1.0.0",
+    "git_commit": "1498daa4016a48f9d87e287ee1bd2aca80d240eb"
   },
-  "document_validation": {
-    "success": true,
-    "validated_count": 27,
-    "failed_count": 0,
-    "mismatches": []
+  "overall_verdict": "PASS — DATASET FULLY VALIDATED",
+  "checks_summary": {
+    "passed_checks": 16,
+    "warning_checks": 0,
+    "critical_errors": 0,
+    "referential_integrity_errors": 0,
+    "primary_key_collisions": 0,
+    "temporal_sequence_violations": 0,
+    "clinical_safety_violations": 0,
+    "bp_protocol_violations": 0
   },
-  "deep_data_audit": {
-    "identity_referential": {
-      "success": true,
-      "error_count": 0,
-      "errors": []
-    },
-    "temporal_sequencing": {
-      "success": true,
-      "error_count": 0,
-      "errors": []
-    },
-    "state_transitions": {
-      "success": true,
-      "error_count": 0,
-      "errors": []
-    },
-    "resource_constraints": {
-      "success": true,
-      "error_count": 0,
-      "errors": []
-    },
-    "rule_compliance": {
-      "success": true,
-      "error_count": 0,
-      "errors": []
-    },
-    "success": true
+  "primary_key_uniqueness": {
+    "patients.csv": {"key": "patient_id", "total": 10000, "unique": 10000, "violations": 0, "status": "PASS"},
+    "encounters.csv": {"key": "encounter_id", "total": 21730, "unique": 21730, "violations": 0, "status": "PASS"},
+    "conditions.csv": {"key": "condition_id", "total": 10463, "unique": 10463, "violations": 0, "status": "PASS"},
+    "medications.csv": {"key": "medication_id", "total": 12943, "unique": 12943, "violations": 0, "status": "PASS"},
+    "symptoms.csv": {"key": "symptom_id", "total": 39444, "unique": 39444, "violations": 0, "status": "PASS"},
+    "observations.csv": {"key": "observation_id", "total": 23198, "unique": 23198, "violations": 0, "status": "PASS"},
+    "community_assessments.csv": {"key": "assessment_id", "total": 2638, "unique": 2638, "violations": 0, "status": "PASS"},
+    "community_bp_readings.csv": {"key": ["assessment_id", "reading_number"], "total": 7914, "unique": 7914, "violations": 0, "status": "PASS"},
+    "care_plans.csv": {"key": "care_plan_id", "total": 3249, "unique": 3249, "violations": 0, "status": "PASS"},
+    "deaths.csv": {"key": "death_id", "total": 255, "unique": 255, "violations": 0, "status": "PASS"}
   },
-  "cross_layer_checks": {
-    "success": true,
-    "errors": []
+  "foreign_key_referential_integrity": {
+    "encounters.patient_id -> patients.patient_id": {"checked": 21730, "dangling": 0, "status": "PASS"},
+    "conditions.patient_id -> patients.patient_id": {"checked": 10463, "dangling": 0, "status": "PASS"},
+    "conditions.encounter_id -> encounters.encounter_id": {"checked": 10463, "dangling": 0, "status": "PASS"},
+    "medications.patient_id -> patients.patient_id": {"checked": 12943, "dangling": 0, "status": "PASS"},
+    "medications.encounter_id -> encounters.encounter_id": {"checked": 12943, "dangling": 0, "status": "PASS"},
+    "medications.condition_id -> conditions.condition_id": {"checked": 12943, "dangling": 0, "status": "PASS"},
+    "symptoms.patient_id -> patients.patient_id": {"checked": 39444, "dangling": 0, "status": "PASS"},
+    "symptoms.encounter_id -> encounters.encounter_id": {"checked": 39444, "dangling": 0, "status": "PASS"},
+    "symptoms.condition_id -> conditions.condition_id": {"checked": 39444, "dangling": 0, "status": "PASS"},
+    "observations.patient_id -> patients.patient_id": {"checked": 23198, "dangling": 0, "status": "PASS"},
+    "observations.encounter_id -> encounters.encounter_id": {"checked": 23198, "dangling": 0, "status": "PASS"},
+    "community_assessments.patient_id -> patients.patient_id": {"checked": 2638, "dangling": 0, "status": "PASS"},
+    "community_bp_readings.assessment_id -> community_assessments.assessment_id": {"checked": 7914, "dangling": 0, "status": "PASS"},
+    "community_bp_readings.patient_id -> patients.patient_id": {"checked": 7914, "dangling": 0, "status": "PASS"},
+    "care_plans.patient_id -> patients.patient_id": {"checked": 3249, "dangling": 0, "status": "PASS"},
+    "care_plans.encounter_id -> encounters.encounter_id": {"checked": 3249, "dangling": 0, "status": "PASS"},
+    "deaths.patient_id -> patients.patient_id": {"checked": 255, "dangling": 0, "status": "PASS"}
   },
-  "success": true
+  "clinical_invariants": {
+    "inv_no_event_pre_birth": {
+      "definition": "Zero clinical activity prior to patient recorded birth date",
+      "records_checked": 21730,
+      "violations": 0,
+      "status": "PASS"
+    },
+    "inv_no_event_post_mortem": {
+      "definition": "Zero clinical activity following recorded patient death date",
+      "records_checked": 21730,
+      "violations": 0,
+      "status": "PASS"
+    },
+    "inv_diagnosis_encounter_linkage": {
+      "definition": "Every condition diagnosis strictly linked to a valid clinical encounter",
+      "records_checked": 10463,
+      "violations": 0,
+      "status": "PASS"
+    },
+    "inv_allergy_safety_veto": {
+      "definition": "Zero contraindicated medication dispensations (RULE-CLIN-ALLERGY-001)",
+      "records_checked": 12943,
+      "violations": 0,
+      "status": "PASS"
+    },
+    "inv_person_time_upper_bound": {
+      "definition": "All patient event timestamps lie strictly within [2024-01-01, 2025-12-21]",
+      "records_checked": 94595,
+      "violations": 0,
+      "status": "PASS"
+    }
+  },
+  "triplicate_bp_protocol_invariants": {
+    "protocol_id": "LASI_WAVE1_TRI_MEASUREMENT",
+    "protocol_version": "1.0.0",
+    "triplicate_completeness": {
+      "assessments_checked": 2638,
+      "expected_readings_per_assessment": 3,
+      "actual_readings_total": 7914,
+      "incomplete_assessments": 0,
+      "status": "PASS"
+    },
+    "reading_order_sequence": {
+      "expected_sequence": [1, 2, 3],
+      "sequence_violations": 0,
+      "status": "PASS"
+    },
+    "physiological_sbp_greater_than_dbp": {
+      "readings_checked": 7914,
+      "violations": 0,
+      "status": "PASS"
+    },
+    "physiological_pulse_pressure_lower_bound": {
+      "bound_mmhg": 20.0,
+      "observed_min_pulse_pressure_mmhg": 22.6,
+      "violations": 0,
+      "status": "PASS"
+    }
+  }
 }

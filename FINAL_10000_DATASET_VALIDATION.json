@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-10-13T18:50:02.701641",
-  "dataset_directory": "C:\\AI\\synapse phase2\\data\\generated\\production_10000",
+  "timestamp": "2026-10-24T15:34:45.327501",
+  "dataset_directory": "/Users/shashi/synapse/synapse-phase2/data/synthetic",
   "files_present": {
     "patients.csv": true,
     "encounters.csv": true,
@@ -20,85 +20,105 @@
       "exists": true,
       "row_count": 10000,
       "column_count": 7,
-      "file_size_bytes": 562204,
-      "file_size_kb": 549.03
+      "file_size_bytes": 561602,
+      "file_size_kb": 548.44
     },
     "encounters.csv": {
       "exists": true,
-      "row_count": 10000,
+      "row_count": 21730,
       "column_count": 8,
-      "file_size_bytes": 1190089,
-      "file_size_kb": 1162.2
+      "file_size_bytes": 2694609,
+      "file_size_kb": 2631.45
     },
     "conditions.csv": {
       "exists": true,
-      "row_count": 10000,
+      "row_count": 10463,
       "column_count": 6,
-      "file_size_bytes": 930096,
-      "file_size_kb": 908.3
+      "file_size_bytes": 1093976,
+      "file_size_kb": 1068.34
     },
     "symptoms.csv": {
       "exists": true,
-      "row_count": 37652,
+      "row_count": 39444,
       "column_count": 5,
-      "file_size_bytes": 2789436,
-      "file_size_kb": 2724.06
+      "file_size_bytes": 2915045,
+      "file_size_kb": 2846.72
     },
     "medications.csv": {
       "exists": true,
-      "row_count": 10000,
+      "row_count": 12943,
       "column_count": 11,
-      "file_size_bytes": 1303718,
-      "file_size_kb": 1273.16
+      "file_size_bytes": 1494353,
+      "file_size_kb": 1459.33
     },
     "labs.csv": {
       "exists": true,
-      "row_count": 10000,
+      "row_count": 0,
       "column_count": 8,
-      "file_size_bytes": 793778,
-      "file_size_kb": 775.17
+      "file_size_bytes": 81,
+      "file_size_kb": 0.08
     },
     "radiology.csv": {
       "exists": true,
-      "row_count": 10000,
+      "row_count": 0,
       "column_count": 9,
-      "file_size_bytes": 1111133,
-      "file_size_kb": 1085.09
+      "file_size_bytes": 99,
+      "file_size_kb": 0.1
     },
     "invoices.csv": {
       "exists": true,
-      "row_count": 10000,
+      "row_count": 0,
       "column_count": 6,
-      "file_size_bytes": 710067,
-      "file_size_kb": 693.42
+      "file_size_bytes": 67,
+      "file_size_kb": 0.07
     },
     "payments.csv": {
       "exists": true,
-      "row_count": 10000,
+      "row_count": 0,
       "column_count": 7,
-      "file_size_bytes": 930073,
-      "file_size_kb": 908.27
+      "file_size_bytes": 73,
+      "file_size_kb": 0.07
     },
     "events.csv": {
       "exists": true,
-      "row_count": 57500,
+      "row_count": 0,
       "column_count": 7,
-      "file_size_bytes": 5887580,
-      "file_size_kb": 5749.59
+      "file_size_bytes": 80,
+      "file_size_kb": 0.08
     },
     "journey_traces.csv": {
       "exists": true,
-      "row_count": 10000,
+      "row_count": 0,
       "column_count": 7,
-      "file_size_bytes": 890077,
-      "file_size_kb": 869.22
+      "file_size_bytes": 77,
+      "file_size_kb": 0.08
     },
     "generation_summary.csv": {
       "exists": true,
       "row_count": 15,
       "column_count": 2,
-      "file_size_bytes": 388,
-      "file_size_kb": 0.38
+      "file_size_bytes": 357,
+      "file_size_kb": 0.35
+    },
+    "community_assessments.csv": {
+      "row_count": 2638,
+      "column_count": 11,
+      "file_size_bytes": 387898
+    },
+    "community_bp_readings.csv": {
+      "row_count": 7914,
+      "column_count": 12,
+      "file_size_bytes": 1155570
+    },
+    "care_plans.csv": {
+      "row_count": 3249,
+      "column_count": 8,
+      "file_size_bytes": 421527
+    },
+    "deaths.csv": {
+      "row_count": 255,
+      "column_count": 6,
+      "file_size_bytes": 25999
     }
   },
   "duplicate_id_audit": {
@@ -111,71 +131,71 @@
     },
     "encounters.csv": {
       "pk": "encounter_id",
-      "total_rows": 10000,
-      "unique_ids": 10000,
+      "total_rows": 21730,
+      "unique_ids": 21730,
       "duplicate_ids": 0,
       "status": "PASS"
     },
     "conditions.csv": {
       "pk": "condition_id",
-      "total_rows": 10000,
-      "unique_ids": 10000,
+      "total_rows": 10463,
+      "unique_ids": 10463,
       "duplicate_ids": 0,
       "status": "PASS"
     },
     "symptoms.csv": {
       "pk": "symptom_id",
-      "total_rows": 37652,
-      "unique_ids": 37652,
+      "total_rows": 39444,
+      "unique_ids": 39444,
       "duplicate_ids": 0,
       "status": "PASS"
     },
     "medications.csv": {
       "pk": "medication_id",
-      "total_rows": 10000,
-      "unique_ids": 10000,
+      "total_rows": 12943,
+      "unique_ids": 12943,
       "duplicate_ids": 0,
       "status": "PASS"
     },
     "labs.csv": {
       "pk": "lab_id",
-      "total_rows": 10000,
-      "unique_ids": 10000,
+      "total_rows": 0,
+      "unique_ids": 0,
       "duplicate_ids": 0,
       "status": "PASS"
     },
     "radiology.csv": {
       "pk": "radiology_id",
-      "total_rows": 10000,
-      "unique_ids": 10000,
+      "total_rows": 0,
+      "unique_ids": 0,
       "duplicate_ids": 0,
       "status": "PASS"
     },
     "invoices.csv": {
       "pk": "invoice_id",
-      "total_rows": 10000,
-      "unique_ids": 10000,
+      "total_rows": 0,
+      "unique_ids": 0,
       "duplicate_ids": 0,
       "status": "PASS"
     },
     "payments.csv": {
       "pk": "payment_id",
-      "total_rows": 10000,
-      "unique_ids": 10000,
+      "total_rows": 0,
+      "unique_ids": 0,
       "duplicate_ids": 0,
       "status": "PASS"
     },
     "events.csv": {
       "pk": "event_id",
-      "total_rows": 57500,
-      "unique_ids": 57500,
+      "total_rows": 0,
+      "unique_ids": 0,
       "duplicate_ids": 0,
       "status": "PASS"
     },
     "journey_traces.csv": {
       "pk": "journey_id",
-      "total_rows": 10000,
-      "unique_ids": 10000,
+      "total_rows": 0,
+      "unique_ids": 0,
       "duplicate_ids": 0,
       "status": "PASS"
     },
@@ -779,154 +799,122 @@
     "status": "PASS"
   },
   "provenance_audit": {
-    "pubmed_backed_treatment_records": 10000,
+    "pubmed_backed_treatment_records": 0,
     "missing_evidence_ids": 0,
     "invalid_evidence_references": 0,
     "status": "PASS"
   },
   "patient_connectivity": {
     "total_patients": 10000,
-    "patients_with_encounters": 10000,
-    "patients_with_conditions": 10000,
-    "patients_with_symptoms": 10000,
-    "patients_with_medications": 10000,
-    "patients_with_labs": 10000,
-    "patients_with_radiology": 10000,
-    "patients_with_invoices": 10000,
-    "patients_with_payments": 10000,
-    "patients_with_events": 10000
+    "patients_with_encounters": 7980,
+    "patients_with_conditions": 7980,
+    "patients_with_symptoms": 7980,
+    "patients_with_medications": 7974,
+    "patients_with_labs": 0,
+    "patients_with_radiology": 0,
+    "patients_with_invoices": 0,
+    "patients_with_payments": 0,
+    "patients_with_events": 0
   },
-  "scenario_distribution": {
-    "SCEN-V1-01": 2500,
-    "SCEN-V1-02": 2500,
-    "SCEN-V1-03": 2500,
-    "SCEN-V1-04": 2500
-  },
+  "scenario_distribution": {},
   "overall_status": "PASS \u2014 DATASET READY FOR PHASE 3",
   "critical_errors": [],
   "invoice_lifecycle_audit": {
-    "total_invoices": 10000,
-    "invoice_generated_events": 10000,
-    "paid_invoices": 10000,
+    "total_invoices": 0,
+    "invoice_generated_events": 0,
+    "paid_invoices": 0,
     "unpaid_invoices": 0,
-    "payments_count": 10000,
-    "payment_processed_events": 10000,
-    "invoices_during_encounter": 10000,
+    "payments_count": 0,
+    "payment_processed_events": 0,
+    "invoices_during_encounter": 0,
     "invoices_before_encounter": 0,
     "invoices_after_encounter": 0,
-    "status_distribution": {
-      "Paid": 10000
-    },
+    "status_distribution": {},
     "lifecycle_violations_total": 0,
     "status": "PASS"
   },
   "laboratory_lifecycle_audit": {
-    "total_orders": 10000,
-    "completed_tests": 2500,
-    "pending_tests": 7500,
-    "samples_collected_events": 2500,
-    "completed_events": 2500,
+    "total_orders": 0,
+    "completed_tests": 0,
+    "pending_tests": 0,
+    "samples_collected_events": 0,
+    "completed_events": 0,
     "ordered_with_completed_at_violations": 0,
     "completed_missing_completed_at_violations": 0,
     "event_linkage_violations": 0,
     "lifecycle_violations_total": 0,
     "missing_completion_timestamps": 0,
-    "abnormal_results": 396,
-    "test_type_distribution": {
-      "CBC": 4598,
-      "Complete Blood Count": 1615,
-      "CRP": 926,
-      "C-Reactive Protein": 324,
-      "Urinalysis": 532,
-      "Fasting Blood Sugar": 64,
-      "Lipid Profile Panel": 187,
-      "Urine_Culture": 484,
-      "FBS": 110,
-      "Liver Function Panel": 70,
-      "Renal_Function": 162,
-      "HbA1c": 111,
-      "Glycated Hemoglobin (HbA1c)": 53,
-      "Lipid_Panel": 383,
-      "Renal Function Panel": 75,
-      "Routine Urinalysis": 42,
-      "ESR": 67,
-      "Liver_Function": 127,
-      "Erythrocyte Sedimentation Rate": 34,
-      "Urine Culture & Sensitivity": 36
-    },
-    "status": "PASS"
+    "abnormal_results": 0,
+    "test_type_distribution": {},
+    "status": "FAIL"
   },
   "radiology_lifecycle_audit": {
-    "total_orders": 10000,
-    "completed_studies": 2500,
-    "pending_studies": 7500,
-    "acquisition_events": 2500,
-    "completed_events": 2500,
+    "total_orders": 0,
+    "completed_studies": 0,
+    "pending_studies": 0,
+    "acquisition_events": 0,
+    "completed_events": 0,
     "ordered_with_completed_at_violations": 0,
     "completed_missing_completed_at_violations": 0,
     "event_linkage_violations": 0,
     "lifecycle_violations_total": 0,
     "missing_completion_timestamps": 0,
-    "abnormal_studies": 383,
-    "modality_distribution": {
-      "Lumbar Spine X-Ray": 457,
-      "Chest X-Ray": 9379,
-      "CT Head": 164
-    },
-    "status": "PASS"
+    "abnormal_studies": 0,
+    "modality_distribution": {},
+    "status": "FAIL"
   },
   "journey_encounter_audit": {
-    "journeys_completed": 10000,
-    "encounters_closed": 10000,
+    "journeys_completed": 0,
+    "encounters_closed": 21730,
     "mismatched_end_times": 0,
     "scen_02_violations": 0,
     "status": "PASS"
   },
   "medication_diversity_audit": {
-    "total_medication_records": 10000,
-    "distinct_medications": 37,
-    "distinct_conditions": 15,
+    "total_medication_records": 12943,
+    "distinct_medications": 5,
+    "distinct_conditions": 5,
     "top_medications": [
       {
-        "drug_name": "Paracetamol",
-        "count": 2055,
-        "percentage": 20.55
-      },
-      {
         "drug_name": "Amoxicillin",
-        "count": 1061,
-        "percentage": 10.61
+        "count": 7163,
+        "percentage": 55.34
       },
       {
-        "drug_name": "Cephalexin",
-        "count": 926,
-        "percentage": 9.26
+        "drug_name": "Amlodipine",
+        "count": 2321,
+        "percentage": 17.93
       },
       {
-        "drug_name": "Azithromycin",
-        "count": 621,
-        "percentage": 6.21
+        "drug_name": "Telmisartan",
+        "count": 1664,
+        "percentage": 12.86
       },
       {
-        "drug_name": "Ceftriaxone",
-        "count": 382,
-        "percentage": 3.82
+        "drug_name": "Metformin",
+        "count": 928,
+        "percentage": 7.17
+      },
+      {
+        "drug_name": "Glimepiride",
+        "count": 867,
+        "percentage": 6.7
       }
     ],
     "status": "PASS"
   },
   "performance_metrics": {
-    "start_time": "2026-10-13T18:49:44.883298",
-    "end_time": "2026-10-13T18:50:03.177595",
-    "total_runtime_seconds": 18.29,
-    "simulation_runtime_seconds": 13.62,
-    "export_runtime_seconds": 1.07,
-    "total_events_processed": 112500,
-    "events_per_second": 8259.76,
-    "total_records_generated": 185167,
-    "records_per_second": 10121.58,
-    "total_output_size_bytes": 17098639,
-    "total_output_size_mb": 16.31,
+    "start_time": "2026-10-24T15:34:18.402066",
+    "end_time": "2026-10-24T15:34:45.522031",
+    "total_runtime_seconds": 27.12,
+    "simulation_runtime_seconds": 26.79,
+    "export_runtime_seconds": 9.2,
+    "total_events_processed": 0,
+    "events_per_second": 0.0,
+    "total_records_generated": 94595,
+    "records_per_second": 3488.03,
+    "total_output_size_bytes": 8760419,
+    "total_output_size_mb": 8.35,
     "patients_generated": 10000
   }
 }
