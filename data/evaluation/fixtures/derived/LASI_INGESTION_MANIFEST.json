@@ -1,0 +1,124 @@
+{
+  "manifest_id": "lasi-ingest-2026-10-24-f3e3b7a4",
+  "manifest_timestamp": "2026-10-24T13:33:51.192626",
+  "pipeline_version": "2.4.0",
+  "git_commit": null,
+  "data_source_type": "SYNTHETIC_TEST_FIXTURE",
+  "source_files": {
+    "lasi_wave1_sample_fixture.csv": {
+      "file_path": "/Users/shashi/synapse/synapse-phase2/data/evaluation/fixtures/lasi_wave1_sample_fixture.csv",
+      "file_name": "lasi_wave1_sample_fixture.csv",
+      "file_sha256": "f3e3b7a440cd743fb7b02c091bb4fe6ddefb96f907da0ce7a6875c6cd759d5a2",
+      "file_size_bytes": 3834,
+      "file_format": "CSV",
+      "total_rows": 50,
+      "total_columns": 18,
+      "column_names": [
+        "participant_id",
+        "r1agey",
+        "ragender",
+        "r1bpsys1",
+        "r1bpsys2",
+        "r1bpsys3",
+        "r1bpdia1",
+        "r1bpdia2",
+        "r1bpdia3",
+        "r1hba1c",
+        "r1hypere",
+        "r1diabe",
+        "r1kidneye",
+        "r1med_bp",
+        "r1med_diab",
+        "r1wtresp",
+        "r1strata",
+        "r1psu"
+      ],
+      "column_labels": {},
+      "variable_value_labels": {},
+      "has_user_missing_values": false,
+      "user_missing_counts": {}
+    }
+  },
+  "join_telemetry": null,
+  "schema_mappings": {
+    "age": "r1agey / age",
+    "gender": "ragender / gender",
+    "sbp_reading1": "r1bpsys1 / sbp1",
+    "sbp_reading2": "r1bpsys2 / sbp2",
+    "sbp_reading3": "r1bpsys3 / sbp3",
+    "dbp_reading1": "r1bpdia1 / dbp1",
+    "dbp_reading2": "r1bpdia2 / dbp2",
+    "dbp_reading3": "r1bpdia3 / dbp3",
+    "hba1c": "r1hba1c / hba1c",
+    "diagnosed_hypertension": "r1hypere / hypere",
+    "diagnosed_diabetes": "r1diabe / diabe",
+    "taking_bp_medication": "r1med_bp / r1rx_htn",
+    "survey_weight": "r1wtresp / weight",
+    "strata": "r1strata / strata",
+    "psu": "r1psu / psu",
+    "household_id": "household_id / hhid / prim_key",
+    "state": "state / r1state",
+    "urban_rural": "urban_rural / sector"
+  },
+  "missing_value_mappings": {
+    "policy": "Preserve explicit NaN/None. Never replace missing measurements with zero or normal values.",
+    "variable_specific_provenance": {
+      "policy_type": "VARIABLE_SPECIFIC_CODEBOOK_DRIVEN",
+      "ambiguous_values_count": 0,
+      "ambiguous_values_summary": [],
+      "safeguards_enforced": [
+        "Blood pressure 99 mmHg preserved as valid physiological reading",
+        "Age 98/99 preserved as valid older adult age",
+        "Missing clinical vitals never coerced to zero or normal values",
+        "Missing diagnoses never coerced to False",
+        "Missing weights flagged explicitly and excluded from weighted estimates"
+      ]
+    }
+  },
+  "row_counts": {
+    "total_rows_ingested": 50,
+    "valid_records": 50,
+    "excluded_records": 0
+  },
+  "parser_versions": {
+    "pyreadstat": "1.3.7",
+    "pandas": "3.0.6",
+    "python": "3.11.5"
+  },
+  "conversion_options": {
+    "strict_protocol_bp": false,
+    "enable_venous_hba1c": false,
+    "pseudonymization": {
+      "algorithm": "HMAC-SHA256",
+      "key_source": "PROJECT_DEFAULT_SALT",
+      "digest_prefix_length": 12,
+      "confidentiality_notice": "CONFIDENTIALITY AND LEGAL NOTICE: Cryptographic pseudonymization replaces direct identifiers with deterministic HMAC-SHA256 digests to prevent inadvertent exposure in operational artifacts. Pseudonymization does NOT constitute full statistical disclosure limitation or anonymization under Indian Digital Personal Data Protection (DPDP) Act or IIPS / Gateway to Global Aging Data Use Agreements. Microdata contains quasi-identifiers (demographic profiles, geographic strata, clinical measurements) that may permit re-identification if combined with external auxiliary datasets. Genuine reference microdata must remain confined to encrypted, access-controlled enclaves and must NEVER be exported, committed to version control, or transmitted outside authorized environments."
+    }
+  },
+  "survey_design_diagnostics_summary": {
+    "total_participants": 50,
+    "total_households": null,
+    "total_strata": 13,
+    "total_psus": 25,
+    "singleton_strata_count": 1,
+    "singleton_strata_pct": 7.69,
+    "weight_cv": 0.148,
+    "deff_w": 1.022,
+    "kish_eff_n": 48.94,
+    "biomarker_non_response_pct": 0.0,
+    "eligible_estimands": [
+      "sbp_mean_overall",
+      "dbp_mean_overall",
+      "hypertension_prevalence",
+      "hypertension_awareness",
+      "hypertension_treatment",
+      "hypertension_control",
+      "hba1c_mean_overall"
+    ],
+    "diagnostic_warnings": [
+      "SINGLETON PSUs: 1 strata contain exactly 1 PSU (e.g. ['ST_13']). Design variance estimation requires explicit singleton handling (certainty, centering, or collapsing).",
+      "SPARSE DOMAINS: Sample size n < 30 or n_eff < 25 in domains: Male_45_54, Male_55_64, Male_65_74, Male_75_plus, Female_45_54, Female_55_64, Female_65_74, Female_75_plus."
+    ]
+  },
+  "access_control_notice": "CONFIDENTIALITY NOTICE: Reference participant microdata is subject to strict Data Use Agreement (DUA) restrictions under IIPS / Gateway to Global Aging. Participant-level identifiers and raw records must never be exported to version control."
+}

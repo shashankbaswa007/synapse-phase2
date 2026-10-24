@@ -26,6 +26,10 @@ from synapse_simulator.evaluation.experiment import (
     DEFAULT_PROFILE_PATH,
     get_git_revision_hash,
 )
+from synapse_simulator.population.loader import load_population_profile
+from synapse_simulator.evaluation.evaluator import DatasetEvaluator
+from synapse_simulator.evaluation.reference_data import ReferenceCatalog
+from synapse_simulator.evaluation.report import EvaluationReportFormatter
 from synapse_simulator.evaluation.lasi.ingestor import LasiDataIngestor
 from synapse_simulator.evaluation.lasi.evaluator import (
     LasiExternalEvaluator,
@@ -100,6 +104,7 @@ def main():
     parser.add_argument("--output-dir", type=str, default="data/evaluation/lasi_cohort_500/seed_42", help="Dedicated output directory")
     parser.add_argument("--profile", type=str, default=str(DEFAULT_PROFILE_PATH), help="Population profile YAML path")
     parser.add_argument("--fixture", type=str, default="data/evaluation/fixtures/lasi_wave1_sample_fixture.csv", help="LASI reference fixture path")
+    parser.add_argument("--protocol", type=str, default="tri_measurement", choices=["tri_measurement", "single_reading"], help="Blood pressure measurement protocol (default: tri_measurement)")
 
     args = parser.parse_args()
     out_dir = Path(args.output_dir)
@@ -115,6 +120,7 @@ def main():
     print(f"Population Profile:       {profile_path}")
     print(f"Output Directory:         {out_dir}")
     print(f"Reference Fixture:        {fixture_path}")
+    print(f"BP Protocol:              {args.protocol}")
     print("==================================================================\n")
 
     # 1. Run simulation cohort generation
@@ -124,6 +130,7 @@ def main():
         seed=args.seed,
         profile_path=profile_path,
         output_dir=out_dir,
+        bp_protocol=args.protocol,
     )
     target_dir, telemetry = ExperimentRunner.generate_cohort(cfg)
     print(f"      Generation finished in {telemetry['total_generation_seconds']}s (Sim: {telemetry['simulation_seconds']}s, Export: {telemetry['export_seconds']}s)")
@@ -148,8 +155,26 @@ def main():
     else:
         print(f"      [OK] Minimum sample gate (>= 500 older adults) satisfied: {demo_audit['older_adults_count']} >= 500.")
 
-    # 4. Execute LASI External Evaluator
-    print("[3/4] Ingesting reference fixture and executing LasiExternalEvaluator...")
+    # 4. Independent Dataset Evaluator (Clinical Invariants & Longitudinal Fidelity)
+    print("[3/5] Executing independent DatasetEvaluator (invariants, demographics, prevalence, comorbidity, longitudinal, treatment)...")
+    catalog = ReferenceCatalog(load_population_profile(profile_path))
+    dataset_evaluator = DatasetEvaluator(
+        dataset_dir=out_dir,
+        reference_catalog=catalog,
+        observation_start=cfg.observation_start,
+        observation_end=cfg.observation_end,
+    )
+    dataset_report = dataset_evaluator.evaluate_all()
+    internal_md_path = out_dir / "EVALUATION_REPORT.md"
+    internal_json_path = out_dir / "EVALUATION_REPORT.json"
+    EvaluationReportFormatter.save_markdown(dataset_report, internal_md_path)
+    EvaluationReportFormatter.save_json(dataset_report, internal_json_path)
+    print(f"      Internal Evaluation Report written to: {internal_md_path}")
+    print(f"      Internal Invariants Passed:           {dataset_report.invariants_passed}")
+    print(f"      Internal Evaluation Verdict:          {dataset_report.overall_status.value} ({dataset_report.passed_metrics} PASS, {dataset_report.warning_metrics} WARN, {dataset_report.failed_metrics} FAIL, {dataset_report.unverified_metrics} UNVERIFIED)")
+
+    # 5. Execute LASI External Evaluator
+    print("[4/5] Ingesting reference fixture and executing LasiExternalEvaluator...")
     ingestor = LasiDataIngestor(source_path=fixture_path)
     records, quality_report = ingestor.ingest()
     evaluator = LasiExternalEvaluator(
@@ -169,8 +194,8 @@ def main():
     print(f"      LASI Evaluation JSON written to:   {json_path}")
     print(f"      Overall Gate Status:              {lasi_report.overall_gate_status.value}")
 
-    # 5. Write RUN_MANIFEST.json
-    print("[4/4] Writing RUN_MANIFEST.json...")
+    # 6. Write RUN_MANIFEST.json
+    print("[5/5] Writing RUN_MANIFEST.json...")
     manifest = {
         "manifest_version": "1.0.0",
         "run_id": f"lasi-eval-seed{args.seed}-n{args.patients}-{int(time.time())}",
@@ -185,10 +210,24 @@ def main():
             "profile_path": str(profile_path),
             "modules_dir": str(cfg.modules_dir),
             "background_mortality_enabled": True,
+            "bp_protocol": args.protocol,
+            "bp_protocol_id": telemetry.get("bp_protocol_id", "UNKNOWN"),
+            "bp_protocol_version": telemetry.get("bp_protocol_version", "UNKNOWN"),
         },
         "demographic_audit": demo_audit,
         "performance_telemetry": telemetry,
         "exported_file_hashes_sha256": file_hashes,
+        "internal_evaluation": {
+            "overall_status": dataset_report.overall_status.value,
+            "invariants_passed": dataset_report.invariants_passed,
+            "total_metrics": dataset_report.total_metrics,
+            "passed_metrics": dataset_report.passed_metrics,
+            "warning_metrics": dataset_report.warning_metrics,
+            "failed_metrics": dataset_report.failed_metrics,
+            "unverified_metrics": dataset_report.unverified_metrics,
+            "not_applicable_metrics": dataset_report.not_applicable_metrics,
+            "dimension_summaries": dataset_report.dimension_summaries,
+        },
         "lasi_evaluation": {
             "reference_file": str(fixture_path),
             "reference_file_sha256": quality_report.file_sha256,

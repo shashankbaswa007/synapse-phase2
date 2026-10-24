@@ -11,3 +11,21 @@ env/
 .ruff_cache/
 .idea/
 .vscode/
+.synapse_holdout_audit_ledger.json
+*.ledger.json
+.coverage
+htmlcov/
+
+# Security and Enclave Vaults
+*.key
+*.vault
+*.secret
+*.token
+.synapse_vault/
+data/genuine/
+
+# Scratch experiments and temporary debug probes (preserved locally)
+data/evaluation/lasi_cohort_500/seed_42_baseline/
+data/experiments/test_ehr_separation/
+data/synthetic/community_assessments.csv
+data/evaluation/lasi_cohort_500/seed_42/probe_results.json

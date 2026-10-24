@@ -1,6 +1,6 @@
 # SYNAPSE Phase 2: LASI Wave 1 External Evaluation Report
 
-**Evaluation Timestamp:** `2026-10-21T20:00:42.909308`  
+**Evaluation Timestamp:** `2026-10-24T13:19:40.479943`  
 **Synthetic Cohort Directory:** `/Users/shashi/synapse/synapse-phase2/data/evaluation/lasi_cohort_500/seed_42`  
 **Reference Source File:** `data/evaluation/fixtures/lasi_wave1_sample_fixture.csv`  
 **Reference File SHA-256:** `f3e3b7a440cd743fb7b02c091bb4fe6ddefb96f907da0ce7a6875c6cd759d5a2`  
@@ -53,12 +53,17 @@
 - **Patients with Only SBP or Only DBP:** `SBP Only: 0, DBP Only: 0`
 - **Implausible Pulse Pressure Count (PP < 20 or PP > 110 or SBP <= DBP):** `0`
 - **Unmeasured Rate Across Older Adults:** `59.13%`
+- **Total Independent Community Health Assessments:** `582`
+- **Community-Assessable Older Adults (Age >= 45):** `561`
+- **Clinical EHR Assessable Older Adults:** `235`
+- **Clinical EHR Unassessable Older Adults:** `340`
 
 ### Evaluation Estimands Breakdown
 - **Estimand A (Cross-Sectional Distribution):** Patient-level index BP (1 per patient) evaluated against LASI survey readings.
-- **Estimand B (Measurement-Defined Prevalence):** Criteria: Index SBP >= 140 OR Index DBP >= 90 OR on antihypertensive Rx.
-- **Estimand C (EHR-Recorded Diagnosis):** Diagnostic ICD-10 `I10` condition records in synthetic EHR.
-- **Estimand D (Longitudinal Trajectory):** Multi-visit trajectory response over time (marked UNVERIFIED for single-wave LASI).
+- **Estimand B (Measurement-Defined Prevalence):** Criteria: Index SBP >= 140 OR Index DBP >= 90 OR on antihypertensive Rx among assessable participants.
+- **Estimand C (Community-Assessment Prevalence):** Independent community health assessment survey capturing normotensive and hypertensive individuals without clinical selection bias.
+- **Estimand D (Clinical Facility Attenders):** Prevalence among older adults who attended >= 1 clinical facility encounter (healthcare-seeking bias).
+- **Estimand E (Unassessable / Missing Status):** Rate of older adults with unobserved clinical BP status (not classified as negative).
 
 ---
 
@@ -74,11 +79,14 @@
 | `lasi_bp_dbp_distribution` | Patient-Level Index Diastolic Blood Pressure Continuous Distribution | BLOOD_PRESSURE | B (>=45) | 235 | 50 (48.9) | 96.89 | 87.36 | +9.53 | 0.752 | 10.29 | **WARNING** |
 | `lasi_bp_dbp_standardized_mean` | Directly Standardized Mean Index DBP (Census SRS Standard) | BLOOD_PRESSURE | B (>=45) | 235 | 50 (48.9) | 96.88 | 84.26 | +12.62 | — | — | **WARNING** |
 | `lasi_bp_pulse_pressure_distribution` | Index Pulse Pressure Continuous Distribution (PP = SBP - DBP) | BLOOD_PRESSURE | B (>=45) | 235 | 50 | 59.55 | 60.18 | -0.63 | 0.115 | 1.23 | **WARNING** |
-| `lasi_prev_measurement_defined_htn_older_adult` | Measurement-Defined Hypertension Prevalence (Index SBP>=140 | DBP>=90 | Rx) | PREVALENCE | B (>=45) | 575 | 50 (48.9) | 40.87 | 79.73 | -38.86 | — | — | **WARNING** |
+| `lasi_prev_measurement_defined_htn_older_adult` | Measurement-Defined Hypertension Prevalence Among Assessable Patients (Index SBP>=140 | DBP>=90 | Rx) | PREVALENCE | B (>=45) | 235 | 50 (48.9) | 100.00 | 79.73 | +20.27 | — | — | **WARNING** |
+| `lasi_prev_htn_unassessable_status` | Unassessable / Missing Clinical Blood Pressure Status Rate | PREVALENCE | B (>=45) | 575 | 0 | 59.13 | N/A | N/A | — | — | **UNVERIFIED** |
 | `lasi_bp_longitudinal_trajectory_treatment_response` | Longitudinal BP Treatment Response Trajectory (Mean Delta SBP) | BLOOD_PRESSURE | B (>=45) | 229 | 50 | -14.47 | N/A | N/A | — | — | **UNVERIFIED** |
 | `lasi_lab_hba1c_distribution` | HbA1c Distribution Among Older Adults | HBA1C | B (>=45) | 506 | 49 | 7.89 | 7.14 | +0.75 | 0.266 | 0.75 | **UNVERIFIED** |
 | `lasi_lab_hba1c_clinical_categories` | HbA1c Clinical Control Categories (<7%, 7-8%, >8%) | HBA1C | B (>=45) | 506 | 49 | 0.27 | 0.00 | +0.27 | — | — | **UNVERIFIED** |
 | `lasi_prev_htn_older_adult` | Hypertension Prevalence Among Older Adults (Age >= 45) | PREVALENCE | B (>=45) | 575 | 50 (48.9) | 40.87 | 79.73 | -38.86 | — | — | **WARNING** |
+| `lasi_prev_htn_community_assessment` | Community Health Assessment Hypertension Prevalence (Survey SBP>=140 | DBP>=90 | Rx) | PREVALENCE | B (>=45) | 561 | 50 (48.9) | 38.68 | 79.73 | -41.05 | — | — | **WARNING** |
+| `lasi_prev_htn_clinical_attenders` | Hypertension Prevalence Among Clinical Facility Attenders | PREVALENCE | B (>=45) | 485 | 50 (48.9) | 48.45 | N/A | N/A | — | — | **UNVERIFIED** |
 | `lasi_prev_t2d_older_adult` | Type 2 Diabetes Prevalence Among Older Adults (Age >= 45) | PREVALENCE | B (>=45) | 575 | 50 (48.9) | 14.43 | 56.00 | -41.57 | — | — | **WARNING** |
 
 ---

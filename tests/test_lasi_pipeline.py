@@ -1039,4 +1039,446 @@ def test_separated_evaluation_estimands_structure(tmp_path):
     assert estimands["lasi_bp_longitudinal_trajectory_treatment_response"].status == LasiMetricStatus.UNVERIFIED
 
 
+# -------------------------------------------------------------------------
+# 7. Independent Estimand and Representativeness Unit Tests
+# -------------------------------------------------------------------------
 
+def test_measurement_defined_htn_without_ehr_diagnosis(tmp_path):
+    """Verify that a patient can meet the measurement-defined HTN definition without an EHR diagnosis."""
+    import csv
+    export_dir = tmp_path / "measured_undx_cohort"
+    export_dir.mkdir(parents=True)
+
+    with open(export_dir / "patients.csv", "w", newline="", encoding="utf-8") as f:
+        writer = csv.DictWriter(f, fieldnames=["patient_id", "gender", "age", "date_of_birth"])
+        writer.writeheader()
+        writer.writerow({"patient_id": "p-undx-01", "gender": "Female", "age": "55.0", "date_of_birth": "1971-01-01"})
+
+    # Stage 2 hypertension measured (150/95 mmHg), but NO diagnosis in conditions.csv
+    with open(export_dir / "observations.csv", "w", newline="", encoding="utf-8") as f:
+        writer = csv.DictWriter(f, fieldnames=["observation_id", "patient_id", "encounter_id", "timestamp", "observation_code", "observation_name", "value", "unit", "is_abnormal"])
+        writer.writeheader()
+        writer.writerow({"observation_id": "o1", "patient_id": "p-undx-01", "encounter_id": "e1", "timestamp": "2026-01-01T10:00:00", "observation_code": "SBP", "observation_name": "SBP", "value": "150.0", "unit": "mmHg", "is_abnormal": "True"})
+        writer.writerow({"observation_id": "o2", "patient_id": "p-undx-01", "encounter_id": "e1", "timestamp": "2026-01-01T10:00:00", "observation_code": "DBP", "observation_name": "DBP", "value": "95.0", "unit": "mmHg", "is_abnormal": "True"})
+
+    with open(export_dir / "conditions.csv", "w", newline="", encoding="utf-8") as f:
+        writer = csv.DictWriter(f, fieldnames=["condition_id", "patient_id", "encounter_id", "condition_code", "condition_name", "status"])
+        writer.writeheader()
+        # No condition records!
+
+    ingestor = LasiDataIngestor(source_path=FIXTURE_PATH)
+    records, q_report = ingestor.ingest()
+    evaluator = LasiExternalEvaluator(
+        synthetic_dir=export_dir,
+        reference_records=records,
+        quality_report=q_report,
+    )
+    report = evaluator.evaluate()
+
+    # Measurement-defined HTN prevalence must be 100% (1/1)
+    m_metric = next(m for m in report.metrics if m.metric_id == "lasi_prev_measurement_defined_htn_older_adult")
+    assert m_metric.synthetic_estimate == 100.0
+
+    # EHR-recorded HTN prevalence must be 0% (0/1)
+    ehr_metric = next(m for m in report.metrics if m.metric_id == "lasi_prev_htn_older_adult")
+    assert ehr_metric.synthetic_estimate == 0.0
+
+
+def test_ehr_diagnosis_without_measurement_threshold(tmp_path):
+    """Verify that a patient can have an EHR diagnosis without meeting the current measurement threshold."""
+    import csv
+    export_dir = tmp_path / "dx_normal_bp_cohort"
+    export_dir.mkdir(parents=True)
+
+    with open(export_dir / "patients.csv", "w", newline="", encoding="utf-8") as f:
+        writer = csv.DictWriter(f, fieldnames=["patient_id", "gender", "age", "date_of_birth"])
+        writer.writeheader()
+        writer.writerow({"patient_id": "p-dx-norm-01", "gender": "Male", "age": "60.0", "date_of_birth": "1966-01-01"})
+
+    # Normotensive measured BP (122/78 mmHg), no antihypertensives prescribed
+    with open(export_dir / "observations.csv", "w", newline="", encoding="utf-8") as f:
+        writer = csv.DictWriter(f, fieldnames=["observation_id", "patient_id", "encounter_id", "timestamp", "observation_code", "observation_name", "value", "unit", "is_abnormal"])
+        writer.writeheader()
+        writer.writerow({"observation_id": "o1", "patient_id": "p-dx-norm-01", "encounter_id": "e1", "timestamp": "2026-01-01T10:00:00", "observation_code": "SBP", "observation_name": "SBP", "value": "122.0", "unit": "mmHg", "is_abnormal": "False"})
+        writer.writerow({"observation_id": "o2", "patient_id": "p-dx-norm-01", "encounter_id": "e1", "timestamp": "2026-01-01T10:00:00", "observation_code": "DBP", "observation_name": "DBP", "value": "78.0", "unit": "mmHg", "is_abnormal": "False"})
+
+    # Documented I10 diagnosis in conditions.csv (e.g. historical / controlled diagnosis)
+    with open(export_dir / "conditions.csv", "w", newline="", encoding="utf-8") as f:
+        writer = csv.DictWriter(f, fieldnames=["condition_id", "patient_id", "encounter_id", "condition_code", "condition_name", "status"])
+        writer.writeheader()
+        writer.writerow({"condition_id": "c1", "patient_id": "p-dx-norm-01", "encounter_id": "e1", "condition_code": "I10", "condition_name": "Essential (primary) hypertension", "status": "Active"})
+
+    ingestor = LasiDataIngestor(source_path=FIXTURE_PATH)
+    records, q_report = ingestor.ingest()
+    evaluator = LasiExternalEvaluator(
+        synthetic_dir=export_dir,
+        reference_records=records,
+        quality_report=q_report,
+    )
+    report = evaluator.evaluate()
+
+    # Measurement-defined HTN must be 0% (0/1) because BP < 140/90 and not on medication
+    m_metric = next(m for m in report.metrics if m.metric_id == "lasi_prev_measurement_defined_htn_older_adult")
+    assert m_metric.synthetic_estimate == 0.0
+
+    # EHR-recorded HTN must be 100% (1/1)
+    ehr_metric = next(m for m in report.metrics if m.metric_id == "lasi_prev_htn_older_adult")
+    assert ehr_metric.synthetic_estimate == 100.0
+
+
+def test_antihypertensive_treatment_qualifies_measurement_definition(tmp_path):
+    """Verify that a patient with normal measured blood pressure on antihypertensive medication qualifies as hypertensive."""
+    import csv
+    export_dir = tmp_path / "rx_treated_cohort"
+    export_dir.mkdir(parents=True)
+
+    with open(export_dir / "patients.csv", "w", newline="", encoding="utf-8") as f:
+        writer = csv.DictWriter(f, fieldnames=["patient_id", "gender", "age", "date_of_birth"])
+        writer.writeheader()
+        writer.writerow({"patient_id": "p-rx-01", "gender": "Female", "age": "65.0", "date_of_birth": "1961-01-01"})
+        writer.writerow({"patient_id": "p-other-med-01", "gender": "Male", "age": "65.0", "date_of_birth": "1961-01-01"})
+
+    with open(export_dir / "observations.csv", "w", newline="", encoding="utf-8") as f:
+        writer = csv.DictWriter(f, fieldnames=["observation_id", "patient_id", "encounter_id", "timestamp", "observation_code", "observation_name", "value", "unit", "is_abnormal"])
+        writer.writeheader()
+        # Both patients have normal blood pressure
+        writer.writerow({"observation_id": "o1", "patient_id": "p-rx-01", "encounter_id": "e1", "timestamp": "2026-01-01T10:00:00", "observation_code": "SBP", "observation_name": "SBP", "value": "124.0", "unit": "mmHg", "is_abnormal": "False"})
+        writer.writerow({"observation_id": "o2", "patient_id": "p-rx-01", "encounter_id": "e1", "timestamp": "2026-01-01T10:00:00", "observation_code": "DBP", "observation_name": "DBP", "value": "78.0", "unit": "mmHg", "is_abnormal": "False"})
+        writer.writerow({"observation_id": "o3", "patient_id": "p-other-med-01", "encounter_id": "e2", "timestamp": "2026-01-01T10:00:00", "observation_code": "SBP", "observation_name": "SBP", "value": "120.0", "unit": "mmHg", "is_abnormal": "False"})
+        writer.writerow({"observation_id": "o4", "patient_id": "p-other-med-01", "encounter_id": "e2", "timestamp": "2026-01-01T10:00:00", "observation_code": "DBP", "observation_name": "DBP", "value": "75.0", "unit": "mmHg", "is_abnormal": "False"})
+
+    with open(export_dir / "medications.csv", "w", newline="", encoding="utf-8") as f:
+        writer = csv.DictWriter(f, fieldnames=["medication_id", "patient_id", "encounter_id", "condition_id", "drug_name", "drug_class", "dosage", "frequency", "source", "evidence_ids", "status"])
+        writer.writeheader()
+        # p-rx-01 has Amlodipine (antihypertensive)
+        writer.writerow({"medication_id": "m1", "patient_id": "p-rx-01", "encounter_id": "e1", "condition_id": "c1", "drug_name": "Amlodipine", "drug_class": "CCB", "dosage": "5mg", "frequency": "Once Daily", "source": "yaml", "evidence_ids": "", "status": "Dispensed"})
+        # p-other-med-01 has Paracetamol (analgesic, non-antihypertensive)
+        writer.writerow({"medication_id": "m2", "patient_id": "p-other-med-01", "encounter_id": "e2", "condition_id": "c2", "drug_name": "Paracetamol", "drug_class": "Analgesic", "dosage": "500mg", "frequency": "As Needed", "source": "yaml", "evidence_ids": "", "status": "Dispensed"})
+
+    ingestor = LasiDataIngestor(source_path=FIXTURE_PATH)
+    records, q_report = ingestor.ingest()
+    evaluator = LasiExternalEvaluator(
+        synthetic_dir=export_dir,
+        reference_records=records,
+        quality_report=q_report,
+    )
+    report = evaluator.evaluate()
+
+    # Exactly 1 of 2 patients qualifies for measurement-defined hypertension (50.0%)
+    m_metric = next(m for m in report.metrics if m.metric_id == "lasi_prev_measurement_defined_htn_older_adult")
+    assert m_metric.synthetic_estimate == 50.0
+    assert m_metric.synthetic_n == 2
+
+
+def test_missing_bp_not_silently_treated_as_normal(tmp_path):
+    """Verify that unmeasured patients are excluded from continuous BP metrics and not imputed as 0 or 120."""
+    import csv
+    export_dir = tmp_path / "missing_bp_unmeasured_cohort"
+    export_dir.mkdir(parents=True)
+
+    with open(export_dir / "patients.csv", "w", newline="", encoding="utf-8") as f:
+        writer = csv.DictWriter(f, fieldnames=["patient_id", "gender", "age", "date_of_birth"])
+        writer.writeheader()
+        writer.writerow({"patient_id": "p-measured", "gender": "Female", "age": "55.0", "date_of_birth": "1971-01-01"})
+        writer.writerow({"patient_id": "p-unmeasured", "gender": "Male", "age": "60.0", "date_of_birth": "1966-01-01"})
+
+    # Only p-measured has an observation
+    with open(export_dir / "observations.csv", "w", newline="", encoding="utf-8") as f:
+        writer = csv.DictWriter(f, fieldnames=["observation_id", "patient_id", "encounter_id", "timestamp", "observation_code", "observation_name", "value", "unit", "is_abnormal"])
+        writer.writeheader()
+        writer.writerow({"observation_id": "o1", "patient_id": "p-measured", "encounter_id": "e1", "timestamp": "2026-01-01T10:00:00", "observation_code": "SBP", "observation_name": "SBP", "value": "135.0", "unit": "mmHg", "is_abnormal": "False"})
+        writer.writerow({"observation_id": "o2", "patient_id": "p-measured", "encounter_id": "e1", "timestamp": "2026-01-01T10:00:00", "observation_code": "DBP", "observation_name": "DBP", "value": "85.0", "unit": "mmHg", "is_abnormal": "False"})
+
+    ingestor = LasiDataIngestor(source_path=FIXTURE_PATH)
+    records, q_report = ingestor.ingest()
+    evaluator = LasiExternalEvaluator(
+        synthetic_dir=export_dir,
+        reference_records=records,
+        quality_report=q_report,
+    )
+    report = evaluator.evaluate()
+
+    # Continuous SBP distribution must include ONLY the measured patient (synthetic_n = 1)
+    sbp_metric = next(m for m in report.metrics if m.metric_id == "lasi_bp_sbp_distribution")
+    assert sbp_metric.synthetic_n == 1
+    assert sbp_metric.synthetic_patient_count == 1
+    assert sbp_metric.synthetic_estimate == 135.0
+
+    # In audit concordance: unmeasured rate is 50.0% (1 of 2)
+    assert report.blood_pressure_concordance["missingness_rate_pct"] == 50.0
+
+
+def test_metric_denominators_separated_between_distributions_and_prevalence():
+    """Verify that prevalence estimands use scientifically correct, distinct denominators:
+    - Continuous distributions: Measured patients (N = 235)
+    - Estimand A (EHR Diagnosis): Total older adults (N = 575)
+    - Estimand B (Measurement-Defined): Assessable older adults with BP/Rx (N = 235)
+    - Estimand C (Community Assessment): Community-assessed older adults (N = 561)
+    - Estimand D (Clinical Attenders): Facility attenders (N = 485)
+    - Estimand E (Unassessable Status): Total older adults (N = 575)
+    """
+    cohort_dir = Path("data/evaluation/lasi_cohort_500/seed_42")
+    ingestor = LasiDataIngestor(source_path=FIXTURE_PATH)
+    records, q_report = ingestor.ingest()
+    evaluator = LasiExternalEvaluator(
+        synthetic_dir=cohort_dir,
+        reference_records=records,
+        quality_report=q_report,
+    )
+    report = evaluator.evaluate()
+
+    # Continuous distributions: synthetic_n == 235 (measured patients)
+    sbp_m = next(m for m in report.metrics if m.metric_id == "lasi_bp_sbp_distribution")
+    dbp_m = next(m for m in report.metrics if m.metric_id == "lasi_bp_dbp_distribution")
+    pp_m = next(m for m in report.metrics if m.metric_id == "lasi_bp_pulse_pressure_distribution")
+    assert sbp_m.synthetic_n == 235
+    assert dbp_m.synthetic_n == 235
+    assert pp_m.synthetic_n == 235
+
+    # Estimand A: EHR-recorded diagnosis prevalence (Denominator = 575, Numerator = 235)
+    prev_ehr_htn = next(m for m in report.metrics if m.metric_id == "lasi_prev_htn_older_adult")
+    assert prev_ehr_htn.synthetic_n == 575
+    assert prev_ehr_htn.synthetic_estimate == 40.87
+
+    # Estimand B: Measurement-defined among assessable participants (Denominator = 235, Numerator = 235)
+    prev_m_htn = next(m for m in report.metrics if m.metric_id == "lasi_prev_measurement_defined_htn_older_adult")
+    assert prev_m_htn.synthetic_n == 235
+    assert prev_m_htn.synthetic_estimate == 100.0
+
+    # Estimand C: Community health assessment prevalence
+    prev_comm = next(m for m in report.metrics if m.metric_id == "lasi_prev_htn_community_assessment")
+    assert prev_comm.synthetic_n == 561
+    assert prev_comm.synthetic_estimate == 38.68
+
+    # Estimand D: Hypertension prevalence among clinical facility attenders (Denominator = 485)
+    prev_clinic = next(m for m in report.metrics if m.metric_id == "lasi_prev_htn_clinical_attenders")
+    assert prev_clinic.synthetic_n == 485
+    assert prev_clinic.synthetic_estimate == 48.45
+
+    # Estimand E: Unassessable / missing status rate (Denominator = 575, Numerator = 340)
+    prev_unassess = next(m for m in report.metrics if m.metric_id == "lasi_prev_htn_unassessable_status")
+    assert prev_unassess.synthetic_n == 575
+    assert prev_unassess.synthetic_estimate == 59.13
+
+
+def test_community_measurements_do_not_create_clinical_encounters_or_diagnoses():
+    """Verify that community assessments never create clinical encounters, diagnoses, or prescriptions."""
+    from synapse_simulator.datagen.community_assessment import (
+        CommunityAssessmentGenerator,
+        CommunityAssessmentConfig,
+    )
+    from synapse_simulator.datagen.models import PatientContext
+
+    # Create dummy patients: one normotensive, one latent hypertensive
+    p_norm = PatientContext(
+        patient_id="p-comm-01",
+        name="Test Patient 1",
+        age=50,
+        gender="Male",
+        latent_conditions={},
+    )
+    p_htn = PatientContext(
+        patient_id="p-comm-02",
+        name="Test Patient 2",
+        age=62,
+        gender="Female",
+        latent_conditions={"I10": {"code": "I10", "name": "Essential hypertension", "recognized": False}},
+    )
+    patients = {p_norm.patient_id: p_norm, p_htn.patient_id: p_htn}
+
+    generator = CommunityAssessmentGenerator(base_seed=42)
+    assessments = generator.generate(patients)
+
+    # 1. Exactly 2 community assessment records created
+    assert len(assessments) == 2
+
+    # 2. Each record has valid community vital signs and provenance
+    for ca in assessments:
+        assert ca.provenance == "COMMUNITY_HEALTH_ASSESSMENT_LAYER"
+        assert ca.unit == "mmHg"
+        assert ca.sbp is not None and ca.dbp is not None
+        assert ca.pulse_pressure >= 20.0
+        # Must not contain any clinical encounter ID
+        assert not hasattr(ca, "encounter_id") or ca.encounter_id is None
+
+    # 3. Patient latent condition recognized status must NOT be modified
+    assert p_htn.latent_conditions["I10"]["recognized"] is False
+
+
+def test_patient_can_have_community_bp_without_ehr_diagnosis(tmp_path):
+    """Demonstrate that a patient can have valid community BP readings with zero EHR diagnoses."""
+    import csv
+    export_dir = tmp_path / "comm_no_dx_cohort"
+    export_dir.mkdir(parents=True)
+
+    with open(export_dir / "patients.csv", "w", newline="", encoding="utf-8") as f:
+        writer = csv.DictWriter(f, fieldnames=["patient_id", "gender", "age", "date_of_birth"])
+        writer.writeheader()
+        writer.writerow({"patient_id": "p-comm-only-01", "gender": "Female", "age": "58.0", "date_of_birth": "1968-01-01"})
+
+    # Community assessment file with measured BP (132/82 mmHg)
+    with open(export_dir / "community_assessments.csv", "w", newline="", encoding="utf-8") as f:
+        writer = csv.DictWriter(f, fieldnames=[
+            "assessment_id", "patient_id", "timestamp", "assessment_type",
+            "sbp", "dbp", "pulse_pressure", "unit", "survey_weight", "status", "provenance"
+        ])
+        writer.writeheader()
+        writer.writerow({
+            "assessment_id": "ca-p-comm-only-01",
+            "patient_id": "p-comm-only-01",
+            "timestamp": "2024-06-15T09:30:00",
+            "assessment_type": "COMMUNITY_HEALTH_ASSESSMENT",
+            "sbp": "132.0",
+            "dbp": "82.0",
+            "pulse_pressure": "50.0",
+            "unit": "mmHg",
+            "survey_weight": "1.0",
+            "status": "COMPLETED",
+            "provenance": "COMMUNITY_HEALTH_ASSESSMENT_LAYER",
+        })
+
+    # Empty clinical tables
+    for tbl in ["encounters.csv", "conditions.csv", "observations.csv", "medications.csv", "deaths.csv"]:
+        with open(export_dir / tbl, "w", newline="", encoding="utf-8") as f:
+            f.write("")
+
+    ingestor = LasiDataIngestor(source_path=FIXTURE_PATH)
+    records, q_report = ingestor.ingest()
+    evaluator = LasiExternalEvaluator(
+        synthetic_dir=export_dir,
+        reference_records=records,
+        quality_report=q_report,
+    )
+    report = evaluator.evaluate()
+
+    # Community assessment evaluated: 1 assessed patient, 0 positive (SBP < 140 and DBP < 90)
+    comm_m = next(m for m in report.metrics if m.metric_id == "lasi_prev_htn_community_assessment")
+    assert comm_m.synthetic_n == 1
+    assert comm_m.synthetic_estimate == 0.0
+
+    # EHR recorded diagnosis: 0% (0 / 1)
+    ehr_m = next(m for m in report.metrics if m.metric_id == "lasi_prev_htn_older_adult")
+    assert ehr_m.synthetic_estimate == 0.0
+
+
+def test_missing_measurements_classified_as_unassessable_not_negative(tmp_path):
+    """Verify that unmeasured older adults are classified under Estimand E (unassessable) and excluded from Estimand B denominator."""
+    import csv
+    export_dir = tmp_path / "unmeasured_safeguard_cohort"
+    export_dir.mkdir(parents=True)
+
+    with open(export_dir / "patients.csv", "w", newline="", encoding="utf-8") as f:
+        writer = csv.DictWriter(f, fieldnames=["patient_id", "gender", "age", "date_of_birth"])
+        writer.writeheader()
+        writer.writerow({"patient_id": "p-measured-htn", "gender": "Female", "age": "60.0", "date_of_birth": "1966-01-01"})
+        writer.writerow({"patient_id": "p-unmeasured-01", "gender": "Male", "age": "55.0", "date_of_birth": "1971-01-01"})
+        writer.writerow({"patient_id": "p-unmeasured-02", "gender": "Female", "age": "70.0", "date_of_birth": "1956-01-01"})
+
+    # Only p-measured-htn has an observation (150/95 mmHg)
+    with open(export_dir / "observations.csv", "w", newline="", encoding="utf-8") as f:
+        writer = csv.DictWriter(f, fieldnames=["observation_id", "patient_id", "encounter_id", "timestamp", "observation_code", "observation_name", "value", "unit", "is_abnormal"])
+        writer.writeheader()
+        writer.writerow({"observation_id": "o1", "patient_id": "p-measured-htn", "encounter_id": "e1", "timestamp": "2026-01-01T10:00:00", "observation_code": "SBP", "observation_name": "SBP", "value": "150.0", "unit": "mmHg", "is_abnormal": "True"})
+        writer.writerow({"observation_id": "o2", "patient_id": "p-measured-htn", "encounter_id": "e1", "timestamp": "2026-01-01T10:00:00", "observation_code": "DBP", "observation_name": "DBP", "value": "95.0", "unit": "mmHg", "is_abnormal": "True"})
+
+    for tbl in ["conditions.csv", "medications.csv", "deaths.csv"]:
+        with open(export_dir / tbl, "w", newline="", encoding="utf-8") as f:
+            f.write("")
+
+    ingestor = LasiDataIngestor(source_path=FIXTURE_PATH)
+    records, q_report = ingestor.ingest()
+    evaluator = LasiExternalEvaluator(
+        synthetic_dir=export_dir,
+        reference_records=records,
+        quality_report=q_report,
+    )
+    report = evaluator.evaluate()
+
+    # Estimand B denominator MUST be 1 (assessable only!), NOT 3!
+    m_metric = next(m for m in report.metrics if m.metric_id == "lasi_prev_measurement_defined_htn_older_adult")
+    assert m_metric.synthetic_n == 1
+    assert m_metric.synthetic_estimate == 100.0
+
+    # Estimand E reports the unassessable status rate: 2 of 3 (66.67%)
+    unassess_metric = next(m for m in report.metrics if m.metric_id == "lasi_prev_htn_unassessable_status")
+    assert unassess_metric.synthetic_n == 3
+    assert unassess_metric.synthetic_estimate == 66.67
+
+
+def test_community_and_clinical_observations_separately_identifiable():
+    """Verify that community assessments and clinical observations are distinctly partitioned."""
+    import csv
+    cohort_dir = Path("data/evaluation/lasi_cohort_500/seed_42")
+    comm_file = cohort_dir / "community_assessments.csv"
+    obs_file = cohort_dir / "observations.csv"
+
+    assert comm_file.exists()
+    assert obs_file.exists()
+
+    with open(comm_file, "r", encoding="utf-8-sig") as f:
+        comm_reader = csv.DictReader(f)
+        comm_rows = list(comm_reader)
+        assert len(comm_rows) > 0
+        for r in comm_rows:
+            assert r["provenance"] == "COMMUNITY_HEALTH_ASSESSMENT_LAYER"
+            assert "encounter_id" not in r
+
+    with open(obs_file, "r", encoding="utf-8-sig") as f:
+        obs_reader = csv.DictReader(f)
+        obs_rows = list(obs_reader)
+        assert len(obs_rows) > 0
+        for r in obs_rows:
+            assert "encounter_id" in r
+            assert r["encounter_id"].startswith("enc-")
+
+
+def test_community_assessment_fixed_seed_determinism():
+    """Verify that community assessment generation under a fixed seed is bit-for-bit deterministic."""
+    from synapse_simulator.datagen.community_assessment import (
+        CommunityAssessmentGenerator,
+        CommunityAssessmentConfig,
+    )
+    from synapse_simulator.datagen.models import PatientContext
+
+    patients = {
+        f"p-{i}": PatientContext(
+            patient_id=f"p-{i}",
+            name=f"Patient {i}",
+            age=45 + (i % 35),
+            gender="Female" if i % 2 == 0 else "Male",
+            latent_conditions={"I10": {"code": "I10"}} if i % 3 == 0 else {},
+        )
+        for i in range(50)
+    }
+
+    gen1 = CommunityAssessmentGenerator(base_seed=123)
+    res1 = gen1.generate(patients)
+
+    gen2 = CommunityAssessmentGenerator(base_seed=123)
+    res2 = gen2.generate(patients)
+
+    assert len(res1) == len(res2)
+    for r1, r2 in zip(res1, res2):
+        assert r1.assessment_id == r2.assessment_id
+        assert r1.patient_id == r2.patient_id
+        assert r1.sbp == r2.sbp
+        assert r1.dbp == r2.dbp
+        assert r1.pulse_pressure == r2.pulse_pressure
+        assert r1.status == r2.status
+
+
+def test_fixture_execution_strictly_reference_data_pending():
+    """Verify that executing against synthetic fixture data CANNOT pass the external validation gate."""
+    cohort_dir = Path("data/evaluation/lasi_cohort_500/seed_42")
+    ingestor = LasiDataIngestor(source_path=FIXTURE_PATH)
+    records, q_report = ingestor.ingest()
+    evaluator = LasiExternalEvaluator(
+        synthetic_dir=cohort_dir,
+        reference_records=records,
+        quality_report=q_report,
+    )
+    report = evaluator.evaluate()
+
+    # Overall gate status MUST remain strictly REFERENCE_DATA_PENDING
+    assert report.overall_gate_status == LasiEvaluationGateStatus.REFERENCE_DATA_PENDING
+    assert report.reference_source_type == LasiDataSourceType.SYNTHETIC_TEST_FIXTURE

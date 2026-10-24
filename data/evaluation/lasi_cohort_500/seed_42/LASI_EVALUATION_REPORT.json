@@ -1,5 +1,5 @@
 {
-  "evaluation_timestamp": "2026-10-21T20:00:42.909308",
+  "evaluation_timestamp": "2026-10-24T13:19:40.479943",
   "synthetic_dataset_dir": "/Users/shashi/synapse/synapse-phase2/data/evaluation/lasi_cohort_500/seed_42",
   "reference_file": "data/evaluation/fixtures/lasi_wave1_sample_fixture.csv",
   "reference_sha256": "f3e3b7a440cd743fb7b02c091bb4fe6ddefb96f907da0ce7a6875c6cd759d5a2",
@@ -65,7 +65,443 @@
       "max": 8.9,
       "valid_count": 49.0
     },
-    "quality_flags": []
+    "quality_flags": [],
+    "multi_module_joined": false,
+    "join_telemetry": null,
+    "survey_design_diagnostics": {
+      "diagnostics_timestamp": "2026-10-24T13:19:40.442678",
+      "source_label": "data/evaluation/fixtures/lasi_wave1_sample_fixture.csv",
+      "total_participants": 50,
+      "total_households": null,
+      "total_strata": 13,
+      "total_psus": 25,
+      "average_psu_size": 2.0,
+      "psu_size_min": 2,
+      "psu_size_max": 2,
+      "singleton_strata_count": 1,
+      "singleton_strata_pct": 7.69,
+      "low_support_strata_count": 1,
+      "field_statuses": {
+        "survey_weight": {
+          "field_name": "survey_weight",
+          "present": true,
+          "source_column": "survey_weight",
+          "total_records": 50,
+          "non_null_count": 50,
+          "missing_count": 0,
+          "missingness_pct": 0.0,
+          "notes": ""
+        },
+        "strata": {
+          "field_name": "strata",
+          "present": true,
+          "source_column": "strata",
+          "total_records": 50,
+          "non_null_count": 50,
+          "missing_count": 0,
+          "missingness_pct": 0.0,
+          "notes": ""
+        },
+        "psu": {
+          "field_name": "psu",
+          "present": true,
+          "source_column": "psu",
+          "total_records": 50,
+          "non_null_count": 50,
+          "missing_count": 0,
+          "missingness_pct": 0.0,
+          "notes": ""
+        },
+        "household_id": {
+          "field_name": "household_id",
+          "present": false,
+          "source_column": "household_id",
+          "total_records": 50,
+          "non_null_count": 0,
+          "missing_count": 50,
+          "missingness_pct": 100.0,
+          "notes": ""
+        },
+        "state": {
+          "field_name": "state",
+          "present": false,
+          "source_column": "state",
+          "total_records": 50,
+          "non_null_count": 0,
+          "missing_count": 50,
+          "missingness_pct": 100.0,
+          "notes": ""
+        },
+        "urban_rural": {
+          "field_name": "urban_rural",
+          "present": false,
+          "source_column": "urban_rural",
+          "total_records": 50,
+          "non_null_count": 0,
+          "missing_count": 50,
+          "missingness_pct": 100.0,
+          "notes": ""
+        }
+      },
+      "weight_diagnostics": {
+        "total_weights_observed": 50,
+        "missing_or_invalid_weights_count": 0,
+        "min_weight": 0.8,
+        "max_weight": 1.45,
+        "mean_weight": 1.1,
+        "median_weight": 1.1,
+        "std_weight": 0.1632,
+        "cv_weight": 0.148,
+        "deff_w": 1.022,
+        "kish_eff_n": 48.94,
+        "max_to_min_ratio": 1.81,
+        "extreme_weight_count": 0,
+        "extreme_weight_pct": 0.0,
+        "top_1_pct_weight_share": 2.64,
+        "top_5_pct_weight_share": 7.73,
+        "has_extreme_weights": false,
+        "weight_trimming_recommended": false
+      },
+      "stratum_topologies": [
+        {
+          "stratum_id": "ST_01",
+          "psu_count": 2,
+          "participant_count": 4,
+          "is_singleton": false,
+          "is_low_support": false
+        },
+        {
+          "stratum_id": "ST_02",
+          "psu_count": 2,
+          "participant_count": 4,
+          "is_singleton": false,
+          "is_low_support": false
+        },
+        {
+          "stratum_id": "ST_03",
+          "psu_count": 2,
+          "participant_count": 4,
+          "is_singleton": false,
+          "is_low_support": false
+        },
+        {
+          "stratum_id": "ST_04",
+          "psu_count": 2,
+          "participant_count": 4,
+          "is_singleton": false,
+          "is_low_support": false
+        },
+        {
+          "stratum_id": "ST_05",
+          "psu_count": 2,
+          "participant_count": 4,
+          "is_singleton": false,
+          "is_low_support": false
+        },
+        {
+          "stratum_id": "ST_06",
+          "psu_count": 2,
+          "participant_count": 4,
+          "is_singleton": false,
+          "is_low_support": false
+        },
+        {
+          "stratum_id": "ST_07",
+          "psu_count": 2,
+          "participant_count": 4,
+          "is_singleton": false,
+          "is_low_support": false
+        },
+        {
+          "stratum_id": "ST_08",
+          "psu_count": 2,
+          "participant_count": 4,
+          "is_singleton": false,
+          "is_low_support": false
+        },
+        {
+          "stratum_id": "ST_09",
+          "psu_count": 2,
+          "participant_count": 4,
+          "is_singleton": false,
+          "is_low_support": false
+        },
+        {
+          "stratum_id": "ST_10",
+          "psu_count": 2,
+          "participant_count": 4,
+          "is_singleton": false,
+          "is_low_support": false
+        },
+        {
+          "stratum_id": "ST_11",
+          "psu_count": 2,
+          "participant_count": 4,
+          "is_singleton": false,
+          "is_low_support": false
+        },
+        {
+          "stratum_id": "ST_12",
+          "psu_count": 2,
+          "participant_count": 4,
+          "is_singleton": false,
+          "is_low_support": false
+        },
+        {
+          "stratum_id": "ST_13",
+          "psu_count": 1,
+          "participant_count": 2,
+          "is_singleton": true,
+          "is_low_support": true
+        }
+      ],
+      "domain_supports": {
+        "Male_45_54": {
+          "domain_name": "Male_45_54",
+          "sample_size_n": 6,
+          "weighted_n": 5.7,
+          "effective_n": 5.97,
+          "is_sparse": true,
+          "is_severely_sparse": true
+        },
+        "Male_55_64": {
+          "domain_name": "Male_55_64",
+          "sample_size_n": 8,
+          "weighted_n": 8.4,
+          "effective_n": 7.94,
+          "is_sparse": true,
+          "is_severely_sparse": true
+        },
+        "Male_65_74": {
+          "domain_name": "Male_65_74",
+          "sample_size_n": 5,
+          "weighted_n": 5.9,
+          "effective_n": 4.99,
+          "is_sparse": true,
+          "is_severely_sparse": true
+        },
+        "Male_75_plus": {
+          "domain_name": "Male_75_plus",
+          "sample_size_n": 4,
+          "weighted_n": 5.4,
+          "effective_n": 3.99,
+          "is_sparse": true,
+          "is_severely_sparse": true
+        },
+        "Female_45_54": {
+          "domain_name": "Female_45_54",
+          "sample_size_n": 7,
+          "weighted_n": 6.2,
+          "effective_n": 6.98,
+          "is_sparse": true,
+          "is_severely_sparse": true
+        },
+        "Female_55_64": {
+          "domain_name": "Female_55_64",
+          "sample_size_n": 7,
+          "weighted_n": 7.3,
+          "effective_n": 6.98,
+          "is_sparse": true,
+          "is_severely_sparse": true
+        },
+        "Female_65_74": {
+          "domain_name": "Female_65_74",
+          "sample_size_n": 9,
+          "weighted_n": 10.7,
+          "effective_n": 8.96,
+          "is_sparse": true,
+          "is_severely_sparse": true
+        },
+        "Female_75_plus": {
+          "domain_name": "Female_75_plus",
+          "sample_size_n": 4,
+          "weighted_n": 5.2,
+          "effective_n": 3.96,
+          "is_sparse": true,
+          "is_severely_sparse": true
+        }
+      },
+      "missingness_rates": {
+        "age": 0.0,
+        "gender": 0.0,
+        "sbp_mean": 0.0,
+        "dbp_mean": 0.0,
+        "sbp_reading1": 0.0,
+        "sbp_reading2": 0.0,
+        "sbp_reading3": 0.0,
+        "dbp_reading1": 0.0,
+        "dbp_reading2": 0.0,
+        "dbp_reading3": 0.0,
+        "hba1c": 2.0,
+        "diagnosed_hypertension": 0.0,
+        "diagnosed_diabetes": 0.0,
+        "diagnosed_ckd": 0.0,
+        "taking_bp_medication": 0.0,
+        "taking_diabetes_medication": 0.0,
+        "survey_weight": 0.0,
+        "strata": 0.0,
+        "psu": 0.0
+      },
+      "module_participation": {
+        "individual_survey_participants": 50,
+        "biomarker_module_participants": 50,
+        "biomarker_non_response_count": 0,
+        "biomarker_non_response_pct": 0.0,
+        "blood_pressure_valid_count": 50,
+        "blood_pressure_missingness_pct": 0.0,
+        "hba1c_valid_count": 49,
+        "join_telemetry": {}
+      },
+      "estimand_eligibilities": {
+        "sbp_mean_overall": {
+          "estimand_id": "sbp_mean_overall",
+          "estimand_name": "Mean Systolic Blood Pressure (Older Adults >= 45)",
+          "target_variable": "sbp_mean",
+          "required_fields": [
+            "age",
+            "sbp_mean",
+            "survey_weight"
+          ],
+          "support_type": "DESIGN_WEIGHTED_OBSERVED",
+          "is_eligible": true,
+          "missingness_pct": 0.0,
+          "sample_size_available": 50,
+          "effective_sample_size": 48.94,
+          "ineligibility_reasons": [],
+          "methodological_notes": "Supported with full complex survey design weights."
+        },
+        "dbp_mean_overall": {
+          "estimand_id": "dbp_mean_overall",
+          "estimand_name": "Mean Diastolic Blood Pressure (Older Adults >= 45)",
+          "target_variable": "dbp_mean",
+          "required_fields": [
+            "age",
+            "dbp_mean",
+            "survey_weight"
+          ],
+          "support_type": "DESIGN_WEIGHTED_OBSERVED",
+          "is_eligible": true,
+          "missingness_pct": 0.0,
+          "sample_size_available": 50,
+          "effective_sample_size": 48.94,
+          "ineligibility_reasons": [],
+          "methodological_notes": "Supported with full complex survey design weights."
+        },
+        "sbp_quantiles_age_sex": {
+          "estimand_id": "sbp_quantiles_age_sex",
+          "estimand_name": "SBP Quantiles (25th, 50th, 75th) by Age-Sex Strata",
+          "target_variable": "sbp_mean",
+          "required_fields": [
+            "age",
+            "gender",
+            "sbp_mean",
+            "survey_weight"
+          ],
+          "support_type": "UNSUPPORTED",
+          "is_eligible": false,
+          "missingness_pct": 0.0,
+          "sample_size_available": 50,
+          "effective_sample_size": 48.94,
+          "ineligibility_reasons": [
+            "Severely sparse age-sex domains (n < 15): Male_45_54, Male_55_64, Male_65_74, Male_75_plus, Female_45_54, Female_55_64, Female_65_74, Female_75_plus."
+          ],
+          "methodological_notes": ""
+        },
+        "hypertension_prevalence": {
+          "estimand_id": "hypertension_prevalence",
+          "estimand_name": "Hypertension Prevalence (Composite: BP >= 140/90 or Rx or Dx)",
+          "target_variable": "hypertension_composite",
+          "required_fields": [
+            "age",
+            "sbp_mean",
+            "dbp_mean",
+            "diagnosed_hypertension",
+            "taking_bp_medication"
+          ],
+          "support_type": "DESIGN_WEIGHTED_OBSERVED",
+          "is_eligible": true,
+          "missingness_pct": 2.0,
+          "sample_size_available": 49,
+          "effective_sample_size": 48.94,
+          "ineligibility_reasons": [],
+          "methodological_notes": "Supported with full complex survey design weights."
+        },
+        "hypertension_awareness": {
+          "estimand_id": "hypertension_awareness",
+          "estimand_name": "Hypertension Awareness Rate (Self-reported Dx among Hypertensives)",
+          "target_variable": "diagnosed_hypertension",
+          "required_fields": [
+            "age",
+            "sbp_mean",
+            "dbp_mean",
+            "diagnosed_hypertension"
+          ],
+          "support_type": "DESIGN_WEIGHTED_OBSERVED",
+          "is_eligible": true,
+          "missingness_pct": 2.0,
+          "sample_size_available": 49,
+          "effective_sample_size": 48.94,
+          "ineligibility_reasons": [],
+          "methodological_notes": "Supported with full complex survey design weights."
+        },
+        "hypertension_treatment": {
+          "estimand_id": "hypertension_treatment",
+          "estimand_name": "Hypertension Treatment Rate (Medication among Diagnosed/Hypertensives)",
+          "target_variable": "taking_bp_medication",
+          "required_fields": [
+            "age",
+            "taking_bp_medication",
+            "diagnosed_hypertension"
+          ],
+          "support_type": "DESIGN_WEIGHTED_OBSERVED",
+          "is_eligible": true,
+          "missingness_pct": 0.0,
+          "sample_size_available": 50,
+          "effective_sample_size": 48.94,
+          "ineligibility_reasons": [],
+          "methodological_notes": "Supported with full complex survey design weights."
+        },
+        "hypertension_control": {
+          "estimand_id": "hypertension_control",
+          "estimand_name": "Hypertension Control Rate (BP < 140/90 among Treated)",
+          "target_variable": "sbp_mean,dbp_mean",
+          "required_fields": [
+            "age",
+            "sbp_mean",
+            "dbp_mean",
+            "taking_bp_medication"
+          ],
+          "support_type": "DESIGN_WEIGHTED_OBSERVED",
+          "is_eligible": true,
+          "missingness_pct": 0.0,
+          "sample_size_available": 50,
+          "effective_sample_size": 48.94,
+          "ineligibility_reasons": [],
+          "methodological_notes": "Supported with full complex survey design weights."
+        },
+        "hba1c_mean_overall": {
+          "estimand_id": "hba1c_mean_overall",
+          "estimand_name": "Mean HbA1c Laboratory Assay (%)",
+          "target_variable": "hba1c",
+          "required_fields": [
+            "age",
+            "hba1c",
+            "survey_weight"
+          ],
+          "support_type": "DESIGN_WEIGHTED_OBSERVED",
+          "is_eligible": true,
+          "missingness_pct": 2.0,
+          "sample_size_available": 49,
+          "effective_sample_size": 48.94,
+          "ineligibility_reasons": [],
+          "methodological_notes": "Supported with full complex survey design weights."
+        }
+      },
+      "diagnostic_warnings": [
+        "SINGLETON PSUs: 1 strata contain exactly 1 PSU (e.g. ['ST_13']). Design variance estimation requires explicit singleton handling (certainty, centering, or collapsing).",
+        "SPARSE DOMAINS: Sample size n < 30 or n_eff < 25 in domains: Male_45_54, Male_55_64, Male_65_74, Male_75_plus, Female_45_54, Female_55_64, Female_65_74, Female_75_plus."
+      ]
+    }
   },
   "metrics": [
     {
@@ -407,23 +843,23 @@
     },
     {
       "metric_id": "lasi_prev_measurement_defined_htn_older_adult",
-      "metric_name": "Measurement-Defined Hypertension Prevalence (Index SBP>=140 | DBP>=90 | Rx)",
+      "metric_name": "Measurement-Defined Hypertension Prevalence Among Assessable Patients (Index SBP>=140 | DBP>=90 | Rx)",
       "category": "PREVALENCE",
       "population": "POPULATION_B_OLDER_ADULTS",
       "standardized": false,
-      "synthetic_n": 575,
+      "synthetic_n": 235,
       "reference_n": 50,
-      "synthetic_patient_count": 575,
+      "synthetic_patient_count": 235,
       "synthetic_observation_count": 852,
       "estimand_type": "ESTIMAND_B_MEASUREMENT_DEFINED_PREVALENCE",
-      "synthetic_effective_n": 575.0,
+      "synthetic_effective_n": 235.0,
       "reference_effective_n": 48.94,
       "design_effect": 1.022,
       "min_sample_size_required": 20,
       "min_effective_sample_size_required": 25.0,
-      "synthetic_estimate": 40.87,
+      "synthetic_estimate": 100.0,
       "reference_estimate": 79.73,
-      "difference": -38.86,
+      "difference": 20.27,
       "synthetic_quantiles": null,
       "reference_quantiles": null,
       "quantile_differences": null,
@@ -431,8 +867,8 @@
       "ks_p_value": null,
       "wasserstein_distance": null,
       "synthetic_ci": [
-        36.92,
-        44.94
+        98.39,
+        100.0
       ],
       "reference_ci": [
         68.46,
@@ -442,8 +878,43 @@
         "abs_diff_max": 6.0
       },
       "status": "WARNING",
-      "comparability_notes": "Prespecified clinical case definition: Index SBP >= 140 mmHg OR Index DBP >= 90 mmHg OR currently on antihypertensive medication.",
-      "limitations": "Survey-measured prevalence captures undiagnosed/asymptomatic cases, unlike EHR diagnosis records."
+      "comparability_notes": "Prespecified clinical case definition: Index SBP >= 140 mmHg OR Index DBP >= 90 mmHg OR currently on antihypertensive medication. Denominator restricted strictly to assessable participants (N=235). Unassessed patients (N=340) are classified as UNASSESSABLE under Estimand E to prevent false-negative misclassification.",
+      "limitations": "Clinical index measurements reflect outpatient presentation; community survey measurements capture unselected population."
+    },
+    {
+      "metric_id": "lasi_prev_htn_unassessable_status",
+      "metric_name": "Unassessable / Missing Clinical Blood Pressure Status Rate",
+      "category": "PREVALENCE",
+      "population": "POPULATION_B_OLDER_ADULTS",
+      "standardized": false,
+      "synthetic_n": 575,
+      "reference_n": 0,
+      "synthetic_patient_count": 575,
+      "synthetic_observation_count": 0,
+      "estimand_type": "ESTIMAND_E_UNASSESSABLE_STATUS",
+      "synthetic_effective_n": 575.0,
+      "reference_effective_n": 0.0,
+      "design_effect": null,
+      "min_sample_size_required": 0,
+      "min_effective_sample_size_required": 0.0,
+      "synthetic_estimate": 59.13,
+      "reference_estimate": null,
+      "difference": null,
+      "synthetic_quantiles": null,
+      "reference_quantiles": null,
+      "quantile_differences": null,
+      "ks_statistic": null,
+      "ks_p_value": null,
+      "wasserstein_distance": null,
+      "synthetic_ci": [
+        55.06,
+        63.08
+      ],
+      "reference_ci": null,
+      "acceptance_threshold": {},
+      "status": "UNVERIFIED",
+      "comparability_notes": "Proportion of synthetic older adult cohort with unobserved/missing clinical blood pressure and treatment status in EHR (340 / 575). Missing measurements are not classified as negative.",
+      "limitations": "Clinical EHR missingness cannot be assumed to indicate normotension."
     },
     {
       "metric_id": "lasi_bp_longitudinal_trajectory_treatment_response",
@@ -605,6 +1076,81 @@
       "limitations": "Prevalence agreement does NOT establish correct disease incidence, duration, or progression."
     },
     {
+      "metric_id": "lasi_prev_htn_community_assessment",
+      "metric_name": "Community Health Assessment Hypertension Prevalence (Survey SBP>=140 | DBP>=90 | Rx)",
+      "category": "PREVALENCE",
+      "population": "POPULATION_B_OLDER_ADULTS",
+      "standardized": false,
+      "synthetic_n": 561,
+      "reference_n": 50,
+      "synthetic_patient_count": 561,
+      "synthetic_observation_count": 561,
+      "estimand_type": "ESTIMAND_C_COMMUNITY_ASSESSMENT_PREVALENCE",
+      "synthetic_effective_n": 561.0,
+      "reference_effective_n": 48.94,
+      "design_effect": 1.022,
+      "min_sample_size_required": 20,
+      "min_effective_sample_size_required": 25.0,
+      "synthetic_estimate": 38.68,
+      "reference_estimate": 79.73,
+      "difference": -41.05,
+      "synthetic_quantiles": null,
+      "reference_quantiles": null,
+      "quantile_differences": null,
+      "ks_statistic": null,
+      "ks_p_value": null,
+      "wasserstein_distance": null,
+      "synthetic_ci": [
+        34.74,
+        42.77
+      ],
+      "reference_ci": [
+        68.46,
+        90.99
+      ],
+      "acceptance_threshold": {
+        "abs_diff_max": 6.0
+      },
+      "status": "WARNING",
+      "comparability_notes": "Evaluated from independent community health assessment survey without clinical facility selection bias.",
+      "limitations": "Captures general community population (normotensives and hypertensives) independent of hospital attendance."
+    },
+    {
+      "metric_id": "lasi_prev_htn_clinical_attenders",
+      "metric_name": "Hypertension Prevalence Among Clinical Facility Attenders",
+      "category": "PREVALENCE",
+      "population": "POPULATION_B_OLDER_ADULTS",
+      "standardized": false,
+      "synthetic_n": 485,
+      "reference_n": 50,
+      "synthetic_patient_count": 485,
+      "synthetic_observation_count": 485,
+      "estimand_type": "ESTIMAND_D_CLINICAL_ATTENDERS_PREVALENCE",
+      "synthetic_effective_n": 485.0,
+      "reference_effective_n": 48.94,
+      "design_effect": null,
+      "min_sample_size_required": 20,
+      "min_effective_sample_size_required": 0.0,
+      "synthetic_estimate": 48.45,
+      "reference_estimate": null,
+      "difference": null,
+      "synthetic_quantiles": null,
+      "reference_quantiles": null,
+      "quantile_differences": null,
+      "ks_statistic": null,
+      "ks_p_value": null,
+      "wasserstein_distance": null,
+      "synthetic_ci": [
+        44.04,
+        52.9
+      ],
+      "reference_ci": null,
+      "acceptance_threshold": {},
+      "status": "UNVERIFIED",
+      "comparability_notes": "Hypertension prevalence restricted to older adults who attended >= 1 clinical facility encounter (N=485). Quantifies healthcare-seeking selection bias relative to general population.",
+      "limitations": "Facility attenders exhibit higher chronic disease burden than unselected community members."
+    },
+    {
       "metric_id": "lasi_prev_t2d_older_adult",
       "metric_name": "Type 2 Diabetes Prevalence Among Older Adults (Age >= 45)",
       "category": "PREVALENCE",
@@ -670,6 +1216,10 @@
     "total_paired_observations": 852,
     "missingness_rate_pct": 59.13,
     "implausible_pulse_pressure_count": 0,
+    "total_community_assessments": 582,
+    "community_assessable_older_adults": 561,
+    "clinical_assessable_older_adults": 235,
+    "clinical_unassessable_older_adults": 340,
     "index_selection_rule": "First eligible blood pressure measurement encounter (earliest timestamp)",
     "total_metrics": 6,
     "pass": 0,
@@ -691,11 +1241,11 @@
     "reference_data_pending": 0
   },
   "prevalence_concordance": {
-    "total_metrics": 3,
+    "total_metrics": 6,
     "pass": 0,
-    "warning": 3,
+    "warning": 4,
     "fail": 0,
-    "unverified": 0,
+    "unverified": 2,
     "insufficient_sample_size": 0,
     "not_comparable": 0,
     "reference_data_pending": 0

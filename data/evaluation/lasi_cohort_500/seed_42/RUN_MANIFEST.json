@@ -1,8 +1,8 @@
 {
   "manifest_version": "1.0.0",
-  "run_id": "lasi-eval-seed42-n2200-1792593042",
-  "timestamp": "2026-10-21T20:00:42.911009",
-  "git_commit": "3e3ae1d28286e9106659f68aa053465ded9bb3c2",
+  "run_id": "lasi-eval-seed42-n2200-1792828180",
+  "timestamp": "2026-10-24T13:19:40.481901",
+  "git_commit": "63bbd61f0a82a414c14535d634db1ab42b892ed3",
   "simulation_parameters": {
     "total_cohort_size": 2200,
     "seed": 42,
@@ -11,7 +11,10 @@
     "observation_end": "2025-12-21T00:00:00",
     "profile_path": "/Users/shashi/synapse/synapse-phase2/config/population/india_default_v1.yaml",
     "modules_dir": "/Users/shashi/synapse/synapse-phase2/config/modules",
-    "background_mortality_enabled": true
+    "background_mortality_enabled": true,
+    "bp_protocol": "tri_measurement",
+    "bp_protocol_id": "LASI_WAVE1_TRI_MEASUREMENT",
+    "bp_protocol_version": "1.0.0"
   },
   "demographic_audit": {
     "total_patients": 2200,
@@ -29,15 +32,21 @@
     }
   },
   "performance_telemetry": {
-    "simulation_seconds": 3.198,
-    "export_seconds": 1.154,
-    "total_generation_seconds": 4.352,
+    "simulation_seconds": 3.175,
+    "export_seconds": 1.408,
+    "total_generation_seconds": 4.582,
     "total_actions_emitted": 11726,
-    "exported_file_count": 16,
-    "peak_memory_mb": 77.7
+    "exported_file_count": 18,
+    "peak_memory_mb": 130.84,
+    "bp_protocol_id": "LASI_WAVE1_TRI_MEASUREMENT",
+    "bp_protocol_version": "1.0.0",
+    "community_bp_readings_count": 1746,
+    "hemodynamic_engine_mode": "LEGACY_CONDITIONAL"
   },
   "exported_file_hashes_sha256": {
     "care_plans.csv": "fcc5f580944d14fc23e1e85d23616d7bd2f635928d92822821e07daf3e05ad10",
+    "community_assessments.csv": "e26a5b4d90d296fb300dc430e49b995be20bb34514d91774845262f358460dd4",
+    "community_bp_readings.csv": "a88ff8eaf77d282639b546e1fa6ebd6813fabe54e6d2ad3053a78d9de2de6a4e",
     "conditions.csv": "1bf233e92d36311ee4a6e3e38892dac4e22db1ab21aee645d1eb3c2ecd42d8e1",
     "deaths.csv": "cd3bc7f729c4de0037a8844ee2052c8abf06ec7fc7d04a28374e61153438a5b4",
     "encounters.csv": "0fbbc2e1c070656e1e62263c449e6027721d5d40d970a70eebbf25dda29c718e",
@@ -53,6 +62,60 @@
     "payments.csv": "e425a99e5a69ec15905dd626bde52054bf874bfae7193b47ad676c2885980c12",
     "radiology.csv": "2b71576fac1776a0e00aea80b1fb318952d93fb43db85b6cdedf3491b5bdbf5e",
     "symptoms.csv": "7d464180cc9bbdaaa998af0521fa03a35e8172030b59541936a095a05e18a4a8"
+  },
+  "internal_evaluation": {
+    "overall_status": "PASS",
+    "invariants_passed": true,
+    "total_metrics": 21,
+    "passed_metrics": 16,
+    "warning_metrics": 0,
+    "failed_metrics": 0,
+    "unverified_metrics": 5,
+    "not_applicable_metrics": 0,
+    "dimension_summaries": {
+      "INVARIANTS": {
+        "total": 5,
+        "pass": 5,
+        "warning": 0,
+        "fail": 0,
+        "unverified": 0
+      },
+      "DEMOGRAPHICS": {
+        "total": 3,
+        "pass": 3,
+        "warning": 0,
+        "fail": 0,
+        "unverified": 0
+      },
+      "PREVALENCE": {
+        "total": 4,
+        "pass": 4,
+        "warning": 0,
+        "fail": 0,
+        "unverified": 0
+      },
+      "COMORBIDITY": {
+        "total": 1,
+        "pass": 1,
+        "warning": 0,
+        "fail": 0,
+        "unverified": 0
+      },
+      "LONGITUDINAL": {
+        "total": 5,
+        "pass": 1,
+        "warning": 0,
+        "fail": 0,
+        "unverified": 4
+      },
+      "TREATMENT": {
+        "total": 3,
+        "pass": 2,
+        "warning": 0,
+        "fail": 0,
+        "unverified": 1
+      }
+    }
   },
   "lasi_evaluation": {
     "reference_file": "data/evaluation/fixtures/lasi_wave1_sample_fixture.csv",
@@ -159,15 +222,27 @@
       },
       {
         "metric_id": "lasi_prev_measurement_defined_htn_older_adult",
-        "metric_name": "Measurement-Defined Hypertension Prevalence (Index SBP>=140 | DBP>=90 | Rx)",
+        "metric_name": "Measurement-Defined Hypertension Prevalence Among Assessable Patients (Index SBP>=140 | DBP>=90 | Rx)",
         "population": "POPULATION_B_OLDER_ADULTS",
-        "synthetic_n": 575,
+        "synthetic_n": 235,
         "reference_n": 50,
         "reference_effective_n": 48.94,
-        "synthetic_estimate": 40.87,
+        "synthetic_estimate": 100.0,
         "reference_estimate": 79.73,
-        "difference": -38.86,
+        "difference": 20.27,
         "status": "WARNING"
+      },
+      {
+        "metric_id": "lasi_prev_htn_unassessable_status",
+        "metric_name": "Unassessable / Missing Clinical Blood Pressure Status Rate",
+        "population": "POPULATION_B_OLDER_ADULTS",
+        "synthetic_n": 575,
+        "reference_n": 0,
+        "reference_effective_n": 0.0,
+        "synthetic_estimate": 59.13,
+        "reference_estimate": null,
+        "difference": null,
+        "status": "UNVERIFIED"
       },
       {
         "metric_id": "lasi_bp_longitudinal_trajectory_treatment_response",
@@ -216,6 +291,30 @@
         "reference_estimate": 79.73,
         "difference": -38.86,
         "status": "WARNING"
+      },
+      {
+        "metric_id": "lasi_prev_htn_community_assessment",
+        "metric_name": "Community Health Assessment Hypertension Prevalence (Survey SBP>=140 | DBP>=90 | Rx)",
+        "population": "POPULATION_B_OLDER_ADULTS",
+        "synthetic_n": 561,
+        "reference_n": 50,
+        "reference_effective_n": 48.94,
+        "synthetic_estimate": 38.68,
+        "reference_estimate": 79.73,
+        "difference": -41.05,
+        "status": "WARNING"
+      },
+      {
+        "metric_id": "lasi_prev_htn_clinical_attenders",
+        "metric_name": "Hypertension Prevalence Among Clinical Facility Attenders",
+        "population": "POPULATION_B_OLDER_ADULTS",
+        "synthetic_n": 485,
+        "reference_n": 50,
+        "reference_effective_n": 48.94,
+        "synthetic_estimate": 48.45,
+        "reference_estimate": null,
+        "difference": null,
+        "status": "UNVERIFIED"
       },
       {
         "metric_id": "lasi_prev_t2d_older_adult",

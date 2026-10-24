@@ -13,7 +13,7 @@ import time
 from datetime import datetime, timedelta
 from pathlib import Path
 from typing import Dict, List, Optional, Tuple, Any
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, model_validator
 
 from synapse_simulator.core.ids import reset as reset_ids
 from synapse_simulator.population.loader import load_population_profile
@@ -45,6 +45,20 @@ class ExperimentConfig(BaseModel):
     output_dir: Path = Path("data/experiments/run_default")
     enable_evaluator: bool = True
     enable_background_mortality: bool = True
+    bp_protocol: str = "TRI_MEASUREMENT"
+    bp_protocol_config: Optional[Any] = None
+    hemodynamic_engine_mode: str = "LEGACY_CONDITIONAL"
+    forward_hemodynamic_config: Optional[Any] = None
+
+    @model_validator(mode="after")
+    def validate_hemodynamic_mode(self) -> "ExperimentConfig":
+        from synapse_simulator.datagen.forward_hemodynamics import VALID_HEMODYNAMIC_MODES
+        if self.hemodynamic_engine_mode not in VALID_HEMODYNAMIC_MODES:
+            raise ValueError(
+                f"Invalid hemodynamic_engine_mode '{self.hemodynamic_engine_mode}'. "
+                f"Supported modes are: {sorted(list(VALID_HEMODYNAMIC_MODES))}"
+            )
+        return self
 
 
 def get_git_revision_hash() -> str:
@@ -95,7 +109,23 @@ class ExperimentRunner:
             load_clinical_module(config.modules_dir / "diabetes_t2.yaml"),
             load_clinical_module(config.modules_dir / "urti.yaml"),
         ]
-        runner = ClinicalModuleRunner(modules, base_seed=config.seed)
+        fwd_sim = None
+        if config.hemodynamic_engine_mode == "FORWARD_STATE_SPACE":
+            from synapse_simulator.datagen.forward_hemodynamics import (
+                ForwardHemodynamicSimulator,
+                ForwardHemodynamicConfig,
+            )
+            fwd_cfg = config.forward_hemodynamic_config or ForwardHemodynamicConfig(
+                engine_mode="FORWARD_STATE_SPACE"
+            )
+            fwd_sim = ForwardHemodynamicSimulator(config=fwd_cfg, base_seed=config.seed)
+
+        runner = ClinicalModuleRunner(
+            modules,
+            base_seed=config.seed,
+            hemodynamic_engine_mode=config.hemodynamic_engine_mode,
+            forward_simulator=fwd_sim,
+        )
 
         obs_start = config.observation_start
         obs_end = config.observation_end
@@ -172,6 +202,7 @@ class ExperimentRunner:
                                     "is_baseline": act.payload.get("is_baseline", False),
                                 })
                         elif act.target_entity_table == "pharmacy.prescriptions":
+                            rx_time = act.requested_timestamp.isoformat() if act.requested_timestamp else curr_time.isoformat()
                             sm.set_entity_state("pharmacy.prescriptions", act.target_entity_id, {
                                 "prescription_id": act.target_entity_id,
                                 "patient_id": act.payload["patient_id"],
@@ -180,6 +211,9 @@ class ExperimentRunner:
                                 "dosage": act.payload["dosage"],
                                 "frequency": act.payload["frequency"],
                                 "status": "Dispensed",
+                                "prescribed_time": rx_time,
+                                "start_time": rx_time,
+                                "timestamp": rx_time,
                             })
             curr_time += timestep
 
@@ -190,6 +224,53 @@ class ExperimentRunner:
         out_dir = config.output_dir
         out_dir.mkdir(parents=True, exist_ok=True)
 
+        # Generate independent community health assessment sweep
+        from synapse_simulator.datagen.community_assessment import (
+            CommunityAssessmentGenerator,
+            CommunityAssessmentConfig,
+        )
+        from synapse_simulator.datagen.bp_measurement import (
+            create_lasi_tri_measurement_protocol,
+            create_single_reading_baseline_protocol,
+        )
+
+        if config.bp_protocol_config is not None:
+            bp_cfg = config.bp_protocol_config
+        elif str(config.bp_protocol).upper() in ("SINGLE_READING", "SINGLE_READING_BASELINE", "SINGLE"):
+            bp_cfg = create_single_reading_baseline_protocol()
+        else:
+            bp_cfg = create_lasi_tri_measurement_protocol()
+
+        comm_gen = CommunityAssessmentGenerator(
+            config=CommunityAssessmentConfig(
+                target_min_age=45.0,
+                assessment_date=obs_start + timedelta(days=180),
+                seed=config.seed,
+                bp_protocol_config=bp_cfg,
+                hemodynamic_engine_mode=config.hemodynamic_engine_mode,
+                forward_hemodynamic_config=config.forward_hemodynamic_config,
+            )
+        )
+        assessment_date = obs_start + timedelta(days=180)
+        enc_table = sm._store.get("clinical.encounters", {})
+        rx_store = sm._store.get("pharmacy.prescriptions", {})
+        antihypertensive_keywords = {"amlodipine", "telmisartan", "enalapril", "losartan", "atenolol", "metoprolol"}
+        treated_pids = set()
+        from synapse_simulator.evaluation.medication_status import is_prescription_active_at
+
+        for rx in rx_store.values():
+            enc = enc_table.get(rx.get("encounter_id"))
+            if is_prescription_active_at(rx, assessment_date, encounter=enc, target_drug_keywords=antihypertensive_keywords):
+                treated_pids.add(rx.get("patient_id"))
+
+        community_assessments = comm_gen.generate(
+            patients,
+            active_antihypertensive_pids=treated_pids,
+            prescriptions=rx_store,
+            encounters=enc_table,
+        )
+        comm_bp_readings = comm_gen.get_bp_readings()
+
         exporter = CSVExporter(
             state_manager=sm,
             master_data=MasterDataSnapshot(),
@@ -199,6 +280,8 @@ class ExperimentRunner:
             module_runner=runner,
             metrics={"random_seed": config.seed, "final_simulation_time": obs_end.isoformat()},
             output_dir=out_dir / "phase2",
+            community_assessments=community_assessments,
+            community_bp_readings=comm_bp_readings,
         )
         exported = exporter.export_simplified_dataset(target_dir=out_dir)
         export_duration = time.perf_counter() - t_export_start
@@ -212,6 +295,10 @@ class ExperimentRunner:
             "total_actions_emitted": total_actions,
             "exported_file_count": len(exported),
             "peak_memory_mb": get_memory_usage_mb(),
+            "bp_protocol_id": bp_cfg.protocol_id,
+            "bp_protocol_version": bp_cfg.protocol_version,
+            "community_bp_readings_count": len(comm_bp_readings),
+            "hemodynamic_engine_mode": config.hemodynamic_engine_mode,
         }
 
         return out_dir, telemetry
@@ -250,6 +337,9 @@ class ExperimentRunner:
                 "timestep_days": config.timestep_days,
                 "profile_path": str(config.profile_path),
                 "output_dir": str(out_dir),
+                "bp_protocol": config.bp_protocol,
+                "bp_protocol_id": gen_telemetry.get("bp_protocol_id", "UNKNOWN"),
+                "bp_protocol_version": gen_telemetry.get("bp_protocol_version", "UNKNOWN"),
             },
             "performance_telemetry": {
                 **gen_telemetry,

@@ -30,6 +30,8 @@ class CSVExporter:
         metrics: Optional[Dict[str, Any]] = None,
         output_dir: Optional[Path] = None,
         module_runner: Optional[Any] = None,
+        community_assessments: Optional[List[Any]] = None,
+        community_bp_readings: Optional[List[Any]] = None,
     ):
         self.state_manager = state_manager
         self.master_data = master_data
@@ -40,6 +42,8 @@ class CSVExporter:
         self.metrics = metrics or {}
         self.output_dir = output_dir or Path("./output/phase2")
         self.module_runner = module_runner
+        self.community_assessments = community_assessments or []
+        self.community_bp_readings = community_bp_readings or []
 
         # Subdirectories for CSV outputs
         self.dirs = {
@@ -1144,6 +1148,70 @@ class CSVExporter:
             death_rows
         )
         if p: exported["deaths.csv"] = p
+
+        # 17. community_assessments.csv
+        if self.community_assessments:
+            comm_rows = []
+            for ca in self.community_assessments:
+                ts = ca.timestamp.isoformat() if hasattr(ca.timestamp, "isoformat") else str(ca.timestamp)
+                comm_rows.append([
+                    ca.assessment_id,
+                    ca.patient_id,
+                    ts,
+                    ca.assessment_type,
+                    ca.sbp if ca.sbp is not None else "",
+                    ca.dbp if ca.dbp is not None else "",
+                    ca.pulse_pressure if ca.pulse_pressure is not None else "",
+                    ca.unit,
+                    ca.survey_weight,
+                    ca.status,
+                    ca.provenance,
+                ])
+            p = self._write_csv(
+                s_dir / "community_assessments.csv",
+                ["assessment_id", "patient_id", "timestamp", "assessment_type", "sbp", "dbp", "pulse_pressure", "unit", "survey_weight", "status", "provenance"],
+                comm_rows
+            )
+            if p: exported["community_assessments.csv"] = p
+
+        # 18. community_bp_readings.csv
+        if self.community_bp_readings:
+            bp_rows = []
+            for r in self.community_bp_readings:
+                ts = r.timestamp.isoformat() if hasattr(r.timestamp, "isoformat") else str(r.timestamp)
+                bp_rows.append([
+                    r.assessment_id,
+                    r.patient_id,
+                    r.reading_number,
+                    ts,
+                    r.sbp if r.sbp is not None else "",
+                    r.dbp if r.dbp is not None else "",
+                    r.pulse_pressure if r.pulse_pressure is not None else "",
+                    r.unit,
+                    r.status,
+                    r.protocol_id,
+                    r.protocol_version,
+                    r.provenance,
+                ])
+            p = self._write_csv(
+                s_dir / "community_bp_readings.csv",
+                [
+                    "assessment_id",
+                    "patient_id",
+                    "reading_number",
+                    "timestamp",
+                    "sbp",
+                    "dbp",
+                    "pulse_pressure",
+                    "unit",
+                    "status",
+                    "protocol_id",
+                    "protocol_version",
+                    "provenance",
+                ],
+                bp_rows,
+            )
+            if p: exported["community_bp_readings.csv"] = p
 
         return exported
 

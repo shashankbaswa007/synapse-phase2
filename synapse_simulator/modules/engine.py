@@ -31,9 +31,19 @@ def derive_patient_seed(base_seed: int, patient_id: str) -> int:
 class ClinicalModuleRunner:
     """Manages longitudinal execution of clinical modules across simulated patients."""
 
-    def __init__(self, modules: List[ClinicalModule], base_seed: int = 42):
+    def __init__(
+        self,
+        modules: List[ClinicalModule],
+        base_seed: int = 42,
+        hemodynamic_engine_mode: str = "LEGACY_CONDITIONAL",
+        forward_simulator: Optional[Any] = None,
+    ):
         self.modules: Dict[str, ClinicalModule] = {m.id: m for m in modules}
         self.base_seed = base_seed
+        self.hemodynamic_engine_mode = hemodynamic_engine_mode
+        self.forward_simulator = forward_simulator
+        self.clinical_diagnosis_events: List[Any] = []
+        self.prescription_events: List[Any] = []
 
         # State tracking: patient_id -> {module_id -> state_name}
         self.patient_module_states: Dict[str, Dict[str, str]] = {}
@@ -60,6 +70,8 @@ class ClinicalModuleRunner:
         """Register patient and set all active modules to their initial states,
         disentangling baseline chronic prevalence from subsequent incident disease."""
         pid = patient.patient_id
+        if self.forward_simulator is not None:
+            self.forward_simulator.initialize_patient_baseline(patient)
         self.patient_module_states[pid] = {}
         self.patient_delays[pid] = {}
         self.patient_records[pid] = {
@@ -276,15 +288,57 @@ class ClinicalModuleRunner:
         elif state.type == ClinicalType.OBSERVATION.value:
             code = state.observation_code or "OBS"
             val = state.observation_value
-            if val is None and state.observation_min is not None and state.observation_max is not None:
-                val = round(rng.uniform(state.observation_min, state.observation_max), 1)
-            elif val is None:
-                val = 0.0
+            p_code = state.paired_observation_code
+            p_val = state.paired_observation_value
+
+            enc_id = record.get("current_encounter_id", "")
+
+            # Forward State-Space Mode: Evaluate continuous latent blood pressure
+            if self.forward_simulator is not None and code == "SBP" and p_code == "DBP":
+                rx_list = record.get("prescriptions", [])
+                latent_state = self.forward_simulator.get_latent_state_at(
+                    patient=patient,
+                    target_time=event_time,
+                    prescriptions=rx_list,
+                )
+                from synapse_simulator.datagen.forward_hemodynamics import derive_hemodynamic_seed
+                obs_seed = derive_hemodynamic_seed(self.base_seed, pid, stream_id="forward_clinic_obs")
+                epoch_sec = int(event_time.timestamp()) if hasattr(event_time, "timestamp") else 0
+                obs_rng = random.Random(obs_seed ^ (epoch_sec & 0xFFFFFFFF))
+
+                # Physical clinic reading: resting latent pressure + situational alert (~3.5 mmHg) + measurement error (~2.0 mmHg)
+                alert_sbp = obs_rng.gauss(3.5, 1.8)
+                noise_sbp = obs_rng.gauss(0.0, 2.0)
+                noise_dbp = obs_rng.gauss(0.0, 1.5)
+
+                val = round(latent_state.latent_sbp + alert_sbp + noise_sbp, 1)
+                p_val = round(latent_state.latent_dbp + noise_dbp, 1)
+
+                # Physiological plausibility guard: SBP > DBP and pulse pressure >= 20 mmHg
+                if p_val >= val or (val - p_val) < 20.0:
+                    p_val = round(val - 25.0, 1)
+            else:
+                if val is None and state.observation_min is not None and state.observation_max is not None:
+                    val = round(rng.uniform(state.observation_min, state.observation_max), 1)
+                elif val is None:
+                    val = 0.0
+
+                if p_code:
+                    if p_val is None and state.paired_observation_min is not None and state.paired_observation_max is not None:
+                        p_val = round(rng.uniform(state.paired_observation_min, state.paired_observation_max), 1)
+                    elif p_val is None:
+                        p_val = 0.0
+
+                    # Physiological plausibility guard: For BP pairs, ensure SBP > DBP and pulse pressure >= 20 mmHg
+                    if code == "SBP" and p_code == "DBP":
+                        if p_val >= val:
+                            p_val = round(val - 35.0, 1)
+                        elif (val - p_val) < 20.0:
+                            p_val = round(val - 25.0, 1)
 
             is_abnormal_primary = (code == "SBP" and val >= 140.0)
             record["observations"][code] = val
             obs_id = new_id("obs-", 8)
-            enc_id = record.get("current_encounter_id", "")
             self.longitudinal_observations.append({
                 "observation_id": obs_id,
                 "patient_id": pid,
@@ -298,21 +352,7 @@ class ClinicalModuleRunner:
             })
 
             # Check if paired/component observation is defined (e.g. DBP paired with SBP)
-            if state.paired_observation_code:
-                p_code = state.paired_observation_code
-                p_val = state.paired_observation_value
-                if p_val is None and state.paired_observation_min is not None and state.paired_observation_max is not None:
-                    p_val = round(rng.uniform(state.paired_observation_min, state.paired_observation_max), 1)
-                elif p_val is None:
-                    p_val = 0.0
-
-                # Physiological plausibility guard: For BP pairs, ensure SBP > DBP and pulse pressure >= 20 mmHg
-                if code == "SBP" and p_code == "DBP":
-                    if p_val >= val:
-                        p_val = round(val - 35.0, 1)
-                    elif (val - p_val) < 20.0:
-                        p_val = round(val - 25.0, 1)
-
+            if p_code:
                 is_abnormal_paired = (p_code == "DBP" and p_val >= 90.0)
                 record["observations"][p_code] = p_val
                 p_obs_id = new_id("obs-", 8)
@@ -327,6 +367,59 @@ class ClinicalModuleRunner:
                     "unit": state.paired_observation_unit or state.observation_unit or "",
                     "is_abnormal": is_abnormal_paired,
                 })
+
+            # Forward Clinical Diagnosis Evaluation (Phase 2C):
+            if self.forward_simulator is not None and code == "SBP" and p_code == "DBP":
+                diag_event = self.forward_simulator.evaluate_clinical_diagnosis(
+                    patient=patient,
+                    encounter_id=enc_id,
+                    encounter_time=event_time,
+                    observed_sbp=val,
+                    observed_dbp=p_val,
+                    clinical_history=record,
+                )
+                if diag_event and "I10" not in record["diagnosed_conditions"]:
+                    record["diagnosed_conditions"].append("I10")
+                    if "I10" not in patient.latent_conditions:
+                        patient.latent_conditions["I10"] = {
+                            "code": "I10",
+                            "name": "Essential (primary) hypertension",
+                            "onset_time": event_time,
+                            "recognized": True,
+                            "is_baseline": False,
+                        }
+                    else:
+                        patient.latent_conditions["I10"]["recognized"] = True
+                    patient.latent_conditions["I10"]["diagnosis_time"] = event_time
+                    patient.latent_conditions["I10"]["encounter_id"] = enc_id
+                    patient.latent_conditions["I10"]["criteria_met"] = diag_event.criteria_met
+
+                    self.clinical_diagnosis_events.append(diag_event)
+
+                    diag_req = ActionRequest(
+                        action_id=new_id("act-", 8),
+                        action_type="CONSULTATION_DIAGNOSE",
+                        target_department="clinical",
+                        target_entity_table="clinical.consultations",
+                        target_entity_id=new_id("con-", 8),
+                        scenario_instance_id=f"MODULE-{pid}",
+                        patient_journey_id=f"jny-{pid}",
+                        correlation_id=new_id("cor-", 8),
+                        requested_timestamp=event_time,
+                        payload={
+                            "patient_id": pid,
+                            "encounter_id": enc_id,
+                            "condition_code": "I10",
+                            "condition_name": "Essential (primary) hypertension",
+                            "timestamp": event_time.isoformat(),
+                            "status": "Active",
+                            "is_baseline": patient.latent_conditions["I10"].get("is_baseline", False),
+                            "criteria_met": diag_event.criteria_met,
+                            "observed_sbp": val,
+                            "observed_dbp": p_val,
+                        },
+                    )
+                    out_actions.append(diag_req)
 
         elif state.type == ClinicalType.SYMPTOM.value:
             s_name = state.symptom_name or "General"
@@ -360,6 +453,9 @@ class ClinicalModuleRunner:
 
             # Clinical Recognition (G4): Check if any latent condition is diagnosed during this encounter!
             for l_code, l_info in list(patient.latent_conditions.items()):
+                if l_code == "I10" and self.forward_simulator is not None:
+                    # In forward mode, hypertension diagnosis is evaluated on observations according to clinical criteria
+                    continue
                 if not l_info.get("recognized"):
                     l_info["recognized"] = True
                     l_info["diagnosis_time"] = event_time
@@ -415,6 +511,34 @@ class ClinicalModuleRunner:
                 },
             )
             out_actions.append(req)
+
+            if self.forward_simulator is not None:
+                rx_evt = self.forward_simulator.create_prescription_event(
+                    patient_id=pid,
+                    prescription_id=rx_id,
+                    encounter_id=record.get("current_encounter_id", ""),
+                    drug_code=state.drug_code or "AML-5",
+                    drug_name=state.drug_name or "Amlodipine",
+                    dosage=state.dosage or "Standard",
+                    frequency=state.frequency or "Once Daily",
+                    start_time=event_time,
+                    timestamp=event_time,
+                )
+                self.prescription_events.append(rx_evt)
+                rx_dict = {
+                    "prescription_id": rx_id,
+                    "patient_id": pid,
+                    "encounter_id": record.get("current_encounter_id", ""),
+                    "drug_name": state.drug_name or "Amlodipine",
+                    "dosage": state.dosage or "Standard",
+                    "frequency": state.frequency or "Once Daily",
+                    "status": "Dispensed",
+                    "start_time": event_time.isoformat(),
+                    "prescribed_time": event_time.isoformat(),
+                    "timestamp": event_time.isoformat(),
+                }
+                record.setdefault("prescriptions", []).append(rx_dict)
+                patient.prescriptions.append(rx_dict)
 
         elif state.type == ClinicalType.CARE_PLAN_START.value:
             cp_id = new_id("cp-", 8)

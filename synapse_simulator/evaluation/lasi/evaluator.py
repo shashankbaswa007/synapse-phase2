@@ -88,6 +88,8 @@ class LasiExternalEvaluator:
         self.conditions = self._load_csv("conditions.csv")
         self.medications = self._load_csv("medications.csv")
         self.deaths = self._load_csv("deaths.csv")
+        self.encounters = self._load_csv("encounters.csv")
+        self.community_assessments = self._load_csv("community_assessments.csv")
 
         # Validate mandatory tables
         if not self.patients:
@@ -423,6 +425,32 @@ class LasiExternalEvaluator:
         deff_w = survey_design_effect_weighting(ref_weights)
         has_insufficient_eff_sample = (ref_n_eff < MIN_EFFECTIVE_SAMPLE_SIZE)
 
+        # Assessable cohort: Older adults with a valid paired BP observation OR active qualifying antihypertensive medication
+        antihypertensive_keywords = {
+            "amlodipine", "telmisartan", "enalapril", "losartan",
+            "hydrochlorothiazide", "atenolol", "metoprolol"
+        }
+        rx_older_pids = set()
+        for rx in self.medications:
+            p_id = rx.get("patient_id", "")
+            d_name = (rx.get("drug_name") or rx.get("medicine_id") or "").lower()
+            if any(med in d_name for med in antihypertensive_keywords):
+                rx_older_pids.add(p_id)
+
+        assessable_pids = {r["patient_id"] for r in index_paired_records} | (rx_older_pids & older_adult_pids)
+        n_assessable = len(assessable_pids)
+        n_unassessable = n_older_total - n_assessable
+
+        # Community assessments
+        comm_older = [
+            ca for ca in self.community_assessments
+            if patient_ages.get(ca.get("patient_id", ""), 0.0) >= 45.0
+        ]
+        comm_assessable = [
+            ca for ca in comm_older
+            if ca.get("status") == "COMPLETED" and ca.get("sbp") and ca.get("dbp")
+        ]
+
         # Record comprehensive audit telemetry
         self.blood_pressure_concordance = {
             "total_synthetic_patients": len(self.patients),
@@ -438,6 +466,10 @@ class LasiExternalEvaluator:
             "total_paired_observations": len(paired_encs),
             "missingness_rate_pct": missing_bp_patient_rate,
             "implausible_pulse_pressure_count": implausible_pp_count,
+            "total_community_assessments": len(self.community_assessments),
+            "community_assessable_older_adults": len(comm_assessable),
+            "clinical_assessable_older_adults": n_assessable,
+            "clinical_unassessable_older_adults": n_unassessable,
             "index_selection_rule": "First eligible blood pressure measurement encounter (earliest timestamp)",
         }
 
@@ -765,20 +797,10 @@ class LasiExternalEvaluator:
             ))
 
         # ---------------------------------------------------------------------
-        # ESTIMAND B: Measurement-Defined Hypertension Prevalence
+        # ESTIMAND B: Measurement-Defined Hypertension Prevalence Among Assessable Patients
         # Case Definition: Index SBP >= 140 OR Index DBP >= 90 OR on antihypertensive medication
+        # Denominator: Strictly assessable older adults (valid clinical BP or on qualifying Rx)
         # ---------------------------------------------------------------------
-        antihypertensive_keywords = {
-            "amlodipine", "telmisartan", "enalapril", "losartan",
-            "hydrochlorothiazide", "atenolol", "metoprolol"
-        }
-        rx_older_pids = set()
-        for rx in self.medications:
-            p_id = rx.get("patient_id", "")
-            d_name = (rx.get("drug_name") or rx.get("medicine_id") or "").lower()
-            if any(med in d_name for med in antihypertensive_keywords):
-                rx_older_pids.add(p_id)
-
         m_htn_pids = set()
         for r in index_paired_records:
             pid = r["patient_id"]
@@ -789,8 +811,8 @@ class LasiExternalEvaluator:
                 m_htn_pids.add(pid)
 
         n_m_htn = len(m_htn_pids)
-        syn_m_htn_prev = round(100.0 * n_m_htn / n_older_total, 2) if n_older_total > 0 else 0.0
-        syn_m_htn_ci = wilson_score_interval(n_m_htn, n_older_total)
+        syn_m_htn_prev = round(100.0 * n_m_htn / n_assessable, 2) if n_assessable > 0 else 0.0
+        syn_m_htn_ci = wilson_score_interval(n_m_htn, n_assessable) if n_assessable > 0 else (0.0, 0.0)
 
         ref_m_htn_vals = [
             1 if (r.diagnosed_hypertension is True or (r.sbp_mean is not None and r.sbp_mean >= 140.0) or (r.dbp_mean is not None and r.dbp_mean >= 90.0)) else 0
@@ -800,7 +822,7 @@ class LasiExternalEvaluator:
         ref_m_htn_prev = round(100.0 * ref_m_htn_prop, 2)
         diff_m_htn = round(syn_m_htn_prev - ref_m_htn_prev, 2)
 
-        if n_older_total < MIN_SAMPLE_SIZE_PREVALENCE or len(ref_bp_records) < MIN_SAMPLE_SIZE_PREVALENCE:
+        if n_assessable < MIN_SAMPLE_SIZE_PREVALENCE or len(ref_bp_records) < MIN_SAMPLE_SIZE_PREVALENCE:
             status_m_htn = LasiMetricStatus.INSUFFICIENT_SAMPLE_SIZE
         elif ref_n_eff < MIN_EFFECTIVE_SAMPLE_SIZE:
             status_m_htn = LasiMetricStatus.INSUFFICIENT_EFFECTIVE_SAMPLE_SIZE
@@ -811,16 +833,16 @@ class LasiExternalEvaluator:
 
         results.append(LasiMetricResult(
             metric_id="lasi_prev_measurement_defined_htn_older_adult",
-            metric_name="Measurement-Defined Hypertension Prevalence (Index SBP>=140 | DBP>=90 | Rx)",
+            metric_name="Measurement-Defined Hypertension Prevalence Among Assessable Patients (Index SBP>=140 | DBP>=90 | Rx)",
             category="PREVALENCE",
             population="POPULATION_B_OLDER_ADULTS",
             standardized=False,
-            synthetic_n=n_older_total,
+            synthetic_n=n_assessable,
             reference_n=len(ref_bp_records),
-            synthetic_patient_count=n_older_total,
+            synthetic_patient_count=n_assessable,
             synthetic_observation_count=len(paired_encs),
             estimand_type="ESTIMAND_B_MEASUREMENT_DEFINED_PREVALENCE",
-            synthetic_effective_n=float(n_older_total),
+            synthetic_effective_n=float(n_assessable),
             reference_effective_n=ref_n_eff,
             design_effect=deff_w,
             min_sample_size_required=MIN_SAMPLE_SIZE_PREVALENCE,
@@ -832,8 +854,39 @@ class LasiExternalEvaluator:
             reference_ci=(round(ref_m_htn_ci_tuple[0] * 100, 2), round(ref_m_htn_ci_tuple[1] * 100, 2)),
             acceptance_threshold={"abs_diff_max": 6.0},
             status=status_m_htn,
-            comparability_notes="Prespecified clinical case definition: Index SBP >= 140 mmHg OR Index DBP >= 90 mmHg OR currently on antihypertensive medication.",
-            limitations="Survey-measured prevalence captures undiagnosed/asymptomatic cases, unlike EHR diagnosis records.",
+            comparability_notes=f"Prespecified clinical case definition: Index SBP >= 140 mmHg OR Index DBP >= 90 mmHg OR currently on antihypertensive medication. Denominator restricted strictly to assessable participants (N={n_assessable}). Unassessed patients (N={n_unassessable}) are classified as UNASSESSABLE under Estimand E to prevent false-negative misclassification.",
+            limitations="Clinical index measurements reflect outpatient presentation; community survey measurements capture unselected population.",
+        ))
+
+        # ---------------------------------------------------------------------
+        # ESTIMAND E: Unknown / Unassessable Hypertension Status Rate
+        # Denominator: All older adults (N = 575)
+        # ---------------------------------------------------------------------
+        unassessable_pct = round(100.0 * n_unassessable / n_older_total, 2) if n_older_total > 0 else 0.0
+        unassessable_ci = wilson_score_interval(n_unassessable, n_older_total) if n_older_total > 0 else (0.0, 0.0)
+
+        results.append(LasiMetricResult(
+            metric_id="lasi_prev_htn_unassessable_status",
+            metric_name="Unassessable / Missing Clinical Blood Pressure Status Rate",
+            category="PREVALENCE",
+            population="POPULATION_B_OLDER_ADULTS",
+            standardized=False,
+            synthetic_n=n_older_total,
+            reference_n=0,
+            synthetic_patient_count=n_older_total,
+            synthetic_observation_count=0,
+            estimand_type="ESTIMAND_E_UNASSESSABLE_STATUS",
+            synthetic_effective_n=float(n_older_total),
+            reference_effective_n=0.0,
+            synthetic_estimate=unassessable_pct,
+            reference_estimate=None,
+            difference=None,
+            synthetic_ci=(round(unassessable_ci[0] * 100, 2), round(unassessable_ci[1] * 100, 2)),
+            reference_ci=None,
+            acceptance_threshold={},
+            status=LasiMetricStatus.UNVERIFIED,
+            comparability_notes=f"Proportion of synthetic older adult cohort with unobserved/missing clinical blood pressure and treatment status in EHR ({n_unassessable} / {n_older_total}). Missing measurements are not classified as negative.",
+            limitations="Clinical EHR missingness cannot be assumed to indicate normotension.",
         ))
 
         # ---------------------------------------------------------------------
@@ -1069,6 +1122,137 @@ class LasiExternalEvaluator:
             limitations="Prevalence agreement does NOT establish correct disease incidence, duration, or progression.",
         ))
 
+        # ---------------------------------------------------------------------
+        # ESTIMAND C: Community Health Assessment Hypertension Prevalence
+        # Denominator: Community older adults assessed in community survey sweep
+        # ---------------------------------------------------------------------
+        patient_ages = {p["patient_id"]: float(p.get("age", 0)) for p in self.patients}
+        comm_older = [
+            ca for ca in self.community_assessments
+            if patient_ages.get(ca.get("patient_id", ""), 0.0) >= 45.0
+        ]
+        comm_assessable = [
+            ca for ca in comm_older
+            if ca.get("status") == "COMPLETED" and ca.get("sbp") and ca.get("dbp")
+        ]
+        n_comm_assessable = len(comm_assessable)
+
+        # Point-in-time medication status evaluation
+        from synapse_simulator.evaluation.medication_status import (
+            is_prescription_active_at,
+            parse_timestamp,
+        )
+
+        enc_map = {e["encounter_id"]: e for e in self.encounters if e.get("encounter_id")}
+        patient_meds: Dict[str, List[Dict[str, Any]]] = {}
+        for rx in self.medications:
+            p_id = rx.get("patient_id", "")
+            if p_id:
+                patient_meds.setdefault(p_id, []).append(rx)
+
+        if n_comm_assessable > 0:
+            comm_pos_pids = set()
+            for ca in comm_assessable:
+                pid = ca["patient_id"]
+                ca_time = parse_timestamp(ca.get("timestamp"))
+                is_active_rx = False
+                if ca_time:
+                    p_rxs = patient_meds.get(pid, [])
+                    for rx in p_rxs:
+                        enc = enc_map.get(rx.get("encounter_id"))
+                        if is_prescription_active_at(rx, ca_time, encounter=enc):
+                            is_active_rx = True
+                            break
+
+                try:
+                    s_v = float(ca["sbp"])
+                    d_v = float(ca["dbp"])
+                    if s_v >= 140.0 or d_v >= 90.0 or is_active_rx:
+                        comm_pos_pids.add(pid)
+                except (ValueError, TypeError):
+                    pass
+
+            n_comm_pos = len(comm_pos_pids)
+            comm_prev = round(100.0 * n_comm_pos / n_comm_assessable, 2)
+            comm_ci = wilson_score_interval(n_comm_pos, n_comm_assessable)
+            diff_comm = round(comm_prev - ref_htn_prev, 2)
+
+            if n_comm_assessable < MIN_SAMPLE_SIZE_PREVALENCE or n_ref < MIN_SAMPLE_SIZE_PREVALENCE:
+                status_comm = LasiMetricStatus.INSUFFICIENT_SAMPLE_SIZE
+            elif ref_n_eff < MIN_EFFECTIVE_SAMPLE_SIZE:
+                status_comm = LasiMetricStatus.INSUFFICIENT_EFFECTIVE_SAMPLE_SIZE
+            elif abs(diff_comm) <= 6.0:
+                status_comm = LasiMetricStatus.PASS
+            else:
+                status_comm = LasiMetricStatus.WARNING
+
+            results.append(LasiMetricResult(
+                metric_id="lasi_prev_htn_community_assessment",
+                metric_name="Community Health Assessment Hypertension Prevalence (Survey SBP>=140 | DBP>=90 | Rx)",
+                category="PREVALENCE",
+                population="POPULATION_B_OLDER_ADULTS",
+                standardized=False,
+                synthetic_n=n_comm_assessable,
+                reference_n=n_ref,
+                synthetic_patient_count=n_comm_assessable,
+                synthetic_observation_count=n_comm_assessable,
+                estimand_type="ESTIMAND_C_COMMUNITY_ASSESSMENT_PREVALENCE",
+                synthetic_effective_n=float(n_comm_assessable),
+                reference_effective_n=ref_n_eff,
+                design_effect=deff_w,
+                min_sample_size_required=MIN_SAMPLE_SIZE_PREVALENCE,
+                min_effective_sample_size_required=MIN_EFFECTIVE_SAMPLE_SIZE,
+                synthetic_estimate=comm_prev,
+                reference_estimate=ref_htn_prev,
+                difference=diff_comm,
+                synthetic_ci=(round(comm_ci[0] * 100, 2), round(comm_ci[1] * 100, 2)),
+                reference_ci=(round(ref_htn_ci_tuple[0] * 100, 2), round(ref_htn_ci_tuple[1] * 100, 2)),
+                acceptance_threshold={"abs_diff_max": 6.0},
+                status=status_comm,
+                comparability_notes="Evaluated from independent community health assessment survey without clinical facility selection bias.",
+                limitations="Captures general community population (normotensives and hypertensives) independent of hospital attendance.",
+            ))
+
+        # ---------------------------------------------------------------------
+        # ESTIMAND D: Hypertension Prevalence Among Clinical Facility Attenders
+        # Denominator: Older adults with >= 1 clinical facility encounter
+        # ---------------------------------------------------------------------
+        clinic_older_pids = {
+            e.get("patient_id")
+            for e in self.encounters
+            if patient_ages.get(e.get("patient_id", ""), 0.0) >= 45.0
+        }
+        n_clinic_older = len(clinic_older_pids)
+        if n_clinic_older > 0:
+            clinic_htn_count = len(clinic_older_pids & syn_htn_ids)
+            clinic_htn_prev = round(100.0 * clinic_htn_count / n_clinic_older, 2)
+            clinic_htn_ci = wilson_score_interval(clinic_htn_count, n_clinic_older)
+
+            results.append(LasiMetricResult(
+                metric_id="lasi_prev_htn_clinical_attenders",
+                metric_name="Hypertension Prevalence Among Clinical Facility Attenders",
+                category="PREVALENCE",
+                population="POPULATION_B_OLDER_ADULTS",
+                standardized=False,
+                synthetic_n=n_clinic_older,
+                reference_n=n_ref,
+                synthetic_patient_count=n_clinic_older,
+                synthetic_observation_count=n_clinic_older,
+                estimand_type="ESTIMAND_D_CLINICAL_ATTENDERS_PREVALENCE",
+                synthetic_effective_n=float(n_clinic_older),
+                reference_effective_n=ref_n_eff,
+                min_sample_size_required=MIN_SAMPLE_SIZE_PREVALENCE,
+                synthetic_estimate=clinic_htn_prev,
+                reference_estimate=None,
+                difference=None,
+                synthetic_ci=(round(clinic_htn_ci[0] * 100, 2), round(clinic_htn_ci[1] * 100, 2)),
+                reference_ci=None,
+                acceptance_threshold={},
+                status=LasiMetricStatus.UNVERIFIED,
+                comparability_notes=f"Hypertension prevalence restricted to older adults who attended >= 1 clinical facility encounter (N={n_clinic_older}). Quantifies healthcare-seeking selection bias relative to general population.",
+                limitations="Facility attenders exhibit higher chronic disease burden than unselected community members.",
+            ))
+
         # Baseline Type 2 Diabetes
         syn_t2d_ids = {c["patient_id"] for c in self.conditions if c.get("condition_code") == "E11.9"}
         syn_t2d_count = sum(1 for p in syn_older if p["patient_id"] in syn_t2d_ids)
@@ -1205,12 +1389,17 @@ class LasiEvaluationReportFormatter:
             f"- **Patients with Only SBP or Only DBP:** `SBP Only: {report.blood_pressure_concordance.get('patients_only_sbp', 0)}, DBP Only: {report.blood_pressure_concordance.get('patients_only_dbp', 0)}`",
             f"- **Implausible Pulse Pressure Count (PP < 20 or PP > 110 or SBP <= DBP):** `{report.blood_pressure_concordance.get('implausible_pulse_pressure_count', 0)}`",
             f"- **Unmeasured Rate Across Older Adults:** `{report.blood_pressure_concordance.get('missingness_rate_pct', 0.0)}%`",
+            f"- **Total Independent Community Health Assessments:** `{report.blood_pressure_concordance.get('total_community_assessments', 0)}`",
+            f"- **Community-Assessable Older Adults (Age >= 45):** `{report.blood_pressure_concordance.get('community_assessable_older_adults', 0)}`",
+            f"- **Clinical EHR Assessable Older Adults:** `{report.blood_pressure_concordance.get('clinical_assessable_older_adults', 0)}`",
+            f"- **Clinical EHR Unassessable Older Adults:** `{report.blood_pressure_concordance.get('clinical_unassessable_older_adults', 0)}`",
             "",
             "### Evaluation Estimands Breakdown",
             "- **Estimand A (Cross-Sectional Distribution):** Patient-level index BP (1 per patient) evaluated against LASI survey readings.",
-            "- **Estimand B (Measurement-Defined Prevalence):** Criteria: Index SBP >= 140 OR Index DBP >= 90 OR on antihypertensive Rx.",
-            "- **Estimand C (EHR-Recorded Diagnosis):** Diagnostic ICD-10 `I10` condition records in synthetic EHR.",
-            "- **Estimand D (Longitudinal Trajectory):** Multi-visit trajectory response over time (marked UNVERIFIED for single-wave LASI).",
+            "- **Estimand B (Measurement-Defined Prevalence):** Criteria: Index SBP >= 140 OR Index DBP >= 90 OR on antihypertensive Rx among assessable participants.",
+            "- **Estimand C (Community-Assessment Prevalence):** Independent community health assessment survey capturing normotensive and hypertensive individuals without clinical selection bias.",
+            "- **Estimand D (Clinical Facility Attenders):** Prevalence among older adults who attended >= 1 clinical facility encounter (healthcare-seeking bias).",
+            "- **Estimand E (Unassessable / Missing Status):** Rate of older adults with unobserved clinical BP status (not classified as negative).",
             "",
             "---",
             "",

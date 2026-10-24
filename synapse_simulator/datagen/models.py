@@ -33,6 +33,8 @@ class PatientContext(BaseModel):
     attributes: Dict[str, Any] = Field(default_factory=dict)
     latent_conditions: Dict[str, Any] = Field(default_factory=dict)
     baseline_conditions: Dict[str, Dict[str, Any]] = Field(default_factory=dict)
+    prescriptions: List[Dict[str, Any]] = Field(default_factory=list)
+    clinical_events: List[Dict[str, Any]] = Field(default_factory=list)
 
 
 class StaffProfile(BaseModel):
