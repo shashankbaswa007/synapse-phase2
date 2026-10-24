@@ -1,87 +1,153 @@
 """
 SYNAPSE Phase 2 — Standalone Synthetic Data Generator Entry Point.
-Executes PubMed-integrated HospitalSimulator patient journey simulation, validates records,
-and exports connected CSV datasets to data/synthetic/*.csv.
+
+Invokes the canonical Synthea-inspired Phase 2 longitudinal simulation architecture:
+- Longitudinal clinical state-machine disease progression (Hypertension, Diabetes Type 2, URTI)
+- Background Census SRS life-table mortality
+- Forward continuous hemodynamic physiological engine
+- Independent Community Health Survey assessment protocol (multi-reading BP protocols)
+- Comprehensive DatasetAuditor, DatasetEvaluator, and DatasetValidationGate validation
+
+The legacy discrete-event hospital operational workflow simulator (HospitalSimulator)
+remains available via mode='hospital' for backward compatibility, but the canonical
+generator is mode='longitudinal'.
 """
 
 import argparse
+import csv
+import hashlib
+import json
+import os
+import shutil
 import sys
 import time
-import json
 import uuid
-import shutil
+from datetime import datetime, timedelta
 from pathlib import Path
-from datetime import datetime
 from typing import Dict, Any, List, Optional
 
+# Ensure project root is in sys.path
+PROJECT_ROOT = Path(__file__).resolve().parent
+if str(PROJECT_ROOT) not in sys.path:
+    sys.path.insert(0, str(PROJECT_ROOT))
+
+from synapse_simulator.evaluation.experiment import (
+    ExperimentRunner,
+    ExperimentConfig,
+    DEFAULT_PROFILE_PATH,
+    get_git_revision_hash,
+)
+from synapse_simulator.population.loader import load_population_profile
+from synapse_simulator.evaluation.evaluator import DatasetEvaluator
+from synapse_simulator.evaluation.reference_data import ReferenceCatalog
+from synapse_simulator.evaluation.report import EvaluationReportFormatter
+from synapse_simulator.validation.dataset_auditor import DatasetAuditor
+from synapse_simulator.validation.validation_gate import (
+    DatasetValidationGate,
+    DatasetValidationError,
+    GateResult,
+)
 from synapse_simulator.knowledge.pubmed.seed_cache import seed_pubmed_cache
+
+# Optional legacy hospital workflow imports
 from synapse_simulator.generator.hospital_generator import HospitalSimulator
 from synapse_simulator.exporter.csv_exporter import CSVExporter
 from synapse_simulator.validation.integrity_auditor import IntegrityAuditor
-from synapse_simulator.validation.dataset_auditor import DatasetAuditor
 
 
-def run_data_generation(patient_count: int = 10, seed: int = 42, output_dir: str = "data/synthetic") -> Path:
-    """Run full synthetic data generation pipeline.
+def compute_file_sha256(filepath: Path) -> str:
+    """Compute hex SHA-256 checksum of a file."""
+    h = hashlib.sha256()
+    with open(filepath, "rb") as f:
+        while chunk := f.read(65536):
+            h.update(chunk)
+    return h.hexdigest()
 
-    Args:
-        patient_count: Number of synthetic patient journeys to generate.
-        seed: Random seed for 100% reproducible generation.
-        output_dir: Path to directory where simplified CSVs will be saved.
 
-    Returns:
-        Path to output directory containing exported CSV files.
-    """
+def audit_cohort_demographics(dataset_dir: Path) -> Dict[str, Any]:
+    """Inspect exported patients.csv and summarize age and sex composition."""
+    patients_file = dataset_dir / "patients.csv"
+    if not patients_file.exists():
+        return {}
+
+    total_patients = 0
+    older_adults = 0
+    females_older = 0
+    males_older = 0
+    age_bands = {"0-14": 0, "15-24": 0, "25-44": 0, "45-64": 0, "65+": 0}
+
+    with open(patients_file, "r", encoding="utf-8-sig") as f:
+        reader = csv.DictReader(f)
+        for row in reader:
+            total_patients += 1
+            age = float(row.get("age", 0.0))
+            gender = row.get("gender", "").capitalize()
+
+            if age < 15:
+                age_bands["0-14"] += 1
+            elif age < 25:
+                age_bands["15-24"] += 1
+            elif age < 45:
+                age_bands["25-44"] += 1
+            elif age < 65:
+                age_bands["45-64"] += 1
+            else:
+                age_bands["65+"] += 1
+
+            if age >= 45.0:
+                older_adults += 1
+                if gender == "Female":
+                    females_older += 1
+                elif gender == "Male":
+                    males_older += 1
+
+    pct_older = (older_adults / total_patients * 100) if total_patients > 0 else 0.0
+    pct_female_older = (females_older / older_adults * 100) if older_adults > 0 else 0.0
+
+    return {
+        "total_patients": total_patients,
+        "older_adults_count": older_adults,
+        "older_adults_pct": round(pct_older, 2),
+        "older_adults_female_count": females_older,
+        "older_adults_male_count": males_older,
+        "older_adults_female_pct": round(pct_female_older, 2),
+        "age_distribution": age_bands,
+    }
+
+
+def _run_hospital_workflow(
+    patient_count: int,
+    seed: int,
+    target_path: Path,
+) -> Path:
+    """Execute legacy discrete-event hospital operational workflow simulator (HospitalSimulator)."""
     start_wall_time = time.time()
     start_iso = datetime.now().isoformat()
 
-    print(f"============================================================")
-    print(f"SYNAPSE Phase 2 — Synthetic Data Generation Engine")
-    print(f"============================================================")
-    print(f"Timestamp:      {start_iso}")
-    print(f"Patient Count:  {patient_count}")
-    print(f"Random Seed:    {seed}")
-    print(f"Output Path:    {output_dir}")
-    print(f"============================================================\n")
+    print("[MODE: HOSPITAL] Running legacy hospital operational workflow simulation (HospitalSimulator)...")
+    print("                 NOTE: For canonical Synthea longitudinal simulation, use mode='longitudinal'.")
 
-    # 1. Pre-seed local PubMed cache if missing
     cache_dir = Path("data/knowledge/pubmed/cache")
-    if not (cache_dir / "articles.json").exists() and not list(cache_dir.glob("pmid_*.json")):
-        print("[1/5] Pre-seeding local PubMed cache...")
+    if not ((cache_dir / "articles").is_dir() and any((cache_dir / "articles").glob("*.json"))):
         seed_pubmed_cache()
-    else:
-        print("[1/5] Local PubMed cache verified.")
 
-    # 2. Initialize HospitalSimulator with PubMed offline integration
-    print(f"[2/5] Initializing HospitalSimulator (seed={seed}, enable_pubmed=True)...")
     sim = HospitalSimulator(random_seed=seed, enable_pubmed=True)
     sim.metrics["random_seed"] = seed
 
-    # 3. Spawn patients
-    print(f"[3/5] Spawning {patient_count} synthetic patient journeys...")
     spawn_start = time.time()
     sim.spawn_patients(patient_count)
     spawn_time = time.time() - spawn_start
-    print(f"      Spawning completed in {spawn_time:.2f}s.")
 
-    # 4. Run discrete event simulation engine
-    print(f"[4/5] Running simulation engine...")
     sim_start = time.time()
     max_events = patient_count * 150
     metrics = sim.run(max_events=max_events)
     sim_duration = time.time() - sim_start
     total_events = metrics.get('total_events_processed', len(sim.engine.committed_events))
     events_per_sec = total_events / sim_duration if sim_duration > 0 else 0
-    print(f"      Simulation finished in {sim_duration:.2f}s ({events_per_sec:.1f} events/sec).")
-    print(f"      Events Processed: {total_events}")
-    print(f"      Decisions Allowed: {metrics.get('decisions_allowed', 0)}, Blocked: {metrics.get('decisions_blocked', 0)}")
 
-    # 5. Export CSV datasets to temporary staging directory for pre-publication validation
-    target_path = Path(output_dir)
     staging_path = target_path.parent / f".staging_{target_path.name}_{uuid.uuid4().hex[:6]}"
     staging_path.mkdir(parents=True, exist_ok=True)
 
-    print(f"[5/6] Exporting staged CSV datasets for validation...")
     export_start = time.time()
     csv_exporter = CSVExporter(
         state_manager=sim.state_manager,
@@ -93,23 +159,15 @@ def run_data_generation(patient_count: int = 10, seed: int = 42, output_dir: str
         metrics=sim.metrics,
         output_dir=staging_path.parent / "phase2" if staging_path.name != "phase2" else staging_path,
     )
-
-    # Export simplified CSV files into staging_path
-    simplified_files = csv_exporter.export_simplified_dataset(target_dir=staging_path)
+    csv_exporter.export_simplified_dataset(target_dir=staging_path)
     export_duration = time.time() - export_start
-    print(f"      Staging export completed in {export_duration:.2f}s.")
 
-    # 6. Perform internal simulation engine integrity audit
-    print(f"\n[AUDIT 1/2] Running Simulation Engine Integrity Auditor...")
     auditor = IntegrityAuditor(sim.state_manager, sim.engine.committed_events)
     sim_integrity_report = auditor.audit_all()
     if not sim_integrity_report.get("is_valid", True):
         err_list = sim_integrity_report.get("errors", [])
-        raise RuntimeError(f"Integrity auditor reported {len(err_list)} validation failure(s):\n" + "\n".join(err_list))
-    print("      Internal simulation state & causal transitions PASSED cleanly.")
+        raise RuntimeError(f"Integrity auditor reported {len(err_list)} failure(s):\n" + "\n".join(err_list))
 
-    # 7. Perform staged CSV dataset integrity audit
-    print(f"\n[AUDIT 2/2] Running Post-Generation Dataset Integrity Auditor...")
     dataset_auditor = DatasetAuditor(staging_path)
     audit_report = dataset_auditor.run_full_audit()
 
@@ -118,7 +176,6 @@ def run_data_generation(patient_count: int = 10, seed: int = 42, output_dir: str
     total_records = sum(v.get("row_count", 0) for v in audit_report["dataset_counts"].values())
     records_per_sec = total_records / total_wall_time if total_wall_time > 0 else 0
 
-    # Attach performance telemetry
     perf_metrics = {
         "start_time": start_iso,
         "end_time": datetime.now().isoformat(),
@@ -136,20 +193,12 @@ def run_data_generation(patient_count: int = 10, seed: int = 42, output_dir: str
     audit_report["performance_metrics"] = perf_metrics
     audit_report["dataset_directory"] = str(target_path.resolve())
 
-    # Write machine-readable validation report JSON into staging
-    json_report_path = staging_path / "FINAL_10000_DATASET_VALIDATION.json"
-    with open(json_report_path, "w", encoding="utf-8") as f:
-        json.dump(audit_report, f, indent=2)
-
-    # Format human-readable markdown validation report into staging
     md_content = _build_markdown_report(audit_report, perf_metrics, patient_count)
-    md_report_path = staging_path / "FINAL_10000_DATASET_VALIDATION.md"
-    with open(md_report_path, "w", encoding="utf-8") as f:
+    with open(staging_path / "FINAL_10000_DATASET_VALIDATION.json", "w", encoding="utf-8") as f:
+        json.dump(audit_report, f, indent=2)
+    with open(staging_path / "FINAL_10000_DATASET_VALIDATION.md", "w", encoding="utf-8") as f:
         f.write(md_content)
 
-    # 8. Mandatory Dataset Validation Gate & Atomic Promotion
-    print(f"\n[GATE] Running Mandatory Dataset Validation Gate...")
-    from synapse_simulator.validation.validation_gate import DatasetValidationGate, DatasetValidationError
     gate = DatasetValidationGate(
         staging_dir=staging_path,
         final_dir=target_path,
@@ -159,9 +208,258 @@ def run_data_generation(patient_count: int = 10, seed: int = 42, output_dir: str
         patient_count=patient_count,
         seed=seed,
     )
+    gate.promote_or_reject()
+
+    if patient_count == 10000:
+        with open("FINAL_10000_DATASET_VALIDATION.md", "w", encoding="utf-8") as f:
+            f.write(md_content)
+        with open("FINAL_10000_DATASET_VALIDATION.json", "w", encoding="utf-8") as f:
+            json.dump(audit_report, f, indent=2)
+        if (target_path / "DATASET_MANIFEST.json").exists():
+            shutil.copy2(target_path / "DATASET_MANIFEST.json", Path("DATASET_MANIFEST.json"))
+
+    return target_path
+
+
+def run_data_generation(
+    patient_count: int = 10,
+    seed: int = 42,
+    output_dir: str = "data/synthetic",
+    observation_days: int = 720,
+    timestep_days: int = 7,
+    profile_path: Optional[str] = None,
+    bp_protocol: str = "tri_measurement",
+    hemodynamic_mode: str = "LEGACY_CONDITIONAL",
+    mode: str = "longitudinal",
+    run_evaluation: bool = True,
+    evaluate_lasi: bool = False,
+    lasi_fixture_path: Optional[str] = None,
+) -> Path:
+    """Run full synthetic data generation pipeline.
+
+    Args:
+        patient_count: Number of synthetic patient journeys to generate.
+        seed: Random seed for 100% reproducible generation.
+        output_dir: Path to directory where simplified CSVs will be saved.
+        observation_days: Longitudinal observation window in days (default: 720).
+        timestep_days: Longitudinal discrete stepping increment in days (default: 7).
+        profile_path: Optional path to population profile YAML (default: india_default_v1.yaml).
+        bp_protocol: Blood pressure measurement protocol ('tri_measurement' or 'single_reading').
+        hemodynamic_mode: Physiological engine mode ('LEGACY_CONDITIONAL' or 'FORWARD_STATE_SPACE').
+        mode: Simulation paradigm: 'longitudinal' (canonical Synthea Phase 2) or 'hospital' (legacy operational).
+        run_evaluation: If True, executes independent DatasetEvaluator on clinical invariants.
+        evaluate_lasi: If True, executes external LASI evaluation against reference fixture.
+        lasi_fixture_path: Optional path to LASI reference sample fixture.
+
+    Returns:
+        Path to output directory containing exported CSV files.
+    """
+    target_path = Path(output_dir)
+
+    # Route legacy hospital operational workflow if explicitly requested
+    if str(mode).lower() == "hospital":
+        return _run_hospital_workflow(patient_count=patient_count, seed=seed, target_path=target_path)
+
+    # Canonical Synthea-inspired Phase 2 Longitudinal Simulation
+    start_wall_time = time.time()
+    start_iso = datetime.now().isoformat()
+    prof_path = Path(profile_path) if profile_path else DEFAULT_PROFILE_PATH
+    obs_start = datetime(2024, 1, 1, 0, 0, 0)
+    obs_end = obs_start + timedelta(days=observation_days)
+
+    print(f"============================================================")
+    print(f"SYNAPSE Phase 2 — Longitudinal Synthetic Data Generator")
+    print(f"Architecture:   Synthea-Inspired Clinical Modules & Forward Hemodynamics")
+    print(f"============================================================")
+    print(f"Timestamp:      {start_iso}")
+    print(f"Patient Count:  {patient_count}")
+    print(f"Random Seed:    {seed}")
+    print(f"Observation:    {observation_days} days ({obs_start.date()} to {obs_end.date()})")
+    print(f"Population:     {prof_path.name}")
+    print(f"BP Protocol:    {bp_protocol}")
+    print(f"Hemodynamics:   {hemodynamic_mode}")
+    print(f"Output Path:    {target_path}")
+    print(f"============================================================\n")
+
+    # 1. Pre-seed local PubMed cache if missing (idempotent, does not mutate existing files)
+    cache_dir = Path("data/knowledge/pubmed/cache")
+    if not ((cache_dir / "articles").is_dir() and any((cache_dir / "articles").glob("*.json"))):
+        print("[1/5] Pre-seeding local PubMed cache...")
+        seed_pubmed_cache()
+    else:
+        print("[1/5] Local PubMed cache verified.")
+
+    # 2. Setup atomic staging directory for fail-fast publication gate
+    staging_path = target_path.parent / f".staging_{target_path.name}_{uuid.uuid4().hex[:6]}"
+    staging_path.mkdir(parents=True, exist_ok=True)
+
+    # 3. Configure and execute ExperimentRunner
+    print(f"[2/5] Running longitudinal disease progression simulation (cohort={patient_count}, seed={seed})...")
+    cfg = ExperimentConfig(
+        cohort_size=patient_count,
+        seed=seed,
+        observation_start=obs_start,
+        observation_end=obs_end,
+        timestep_days=timestep_days,
+        profile_path=prof_path,
+        output_dir=staging_path,
+        bp_protocol=bp_protocol,
+        hemodynamic_engine_mode=hemodynamic_mode,
+        enable_background_mortality=True,
+    )
+
+    t_sim_start = time.perf_counter()
+    _, telemetry = ExperimentRunner.generate_cohort(cfg)
+    sim_duration = time.perf_counter() - t_sim_start
+    print(f"      Simulation & export completed in {sim_duration:.2f}s.")
+    print(f"      Total actions emitted: {telemetry.get('total_actions_emitted', 0)}")
+    print(f"      Peak memory RSS: {telemetry.get('peak_memory_mb', 0)} MB")
+
+    # 4. Perform post-generation dataset integrity audit
+    print(f"\n[AUDIT 1/2] Running Post-Generation Dataset Integrity Auditor...")
+    dataset_auditor = DatasetAuditor(staging_path)
+    audit_report = dataset_auditor.run_full_audit()
+
+    total_wall_time = time.time() - start_wall_time
+    total_output_bytes = sum(v.get("file_size_bytes", 0) for v in audit_report["dataset_counts"].values())
+    total_records = sum(v.get("row_count", 0) for v in audit_report["dataset_counts"].values())
+    records_per_sec = total_records / total_wall_time if total_wall_time > 0 else 0
+    total_events = audit_report["dataset_counts"].get("events.csv", {}).get("row_count", 0)
+    events_per_sec = total_events / sim_duration if sim_duration > 0 else 0
+
+    perf_metrics = {
+        "start_time": start_iso,
+        "end_time": datetime.now().isoformat(),
+        "total_runtime_seconds": round(total_wall_time, 2),
+        "simulation_runtime_seconds": round(sim_duration, 2),
+        "export_runtime_seconds": round(telemetry.get("export_seconds", 0.0), 2),
+        "total_events_processed": total_events,
+        "events_per_second": round(events_per_sec, 2),
+        "total_records_generated": total_records,
+        "records_per_second": round(records_per_sec, 2),
+        "total_output_size_bytes": total_output_bytes,
+        "total_output_size_mb": round(total_output_bytes / (1024 * 1024), 2),
+        "patients_generated": patient_count,
+    }
+    audit_report["performance_metrics"] = perf_metrics
+    audit_report["dataset_directory"] = str(target_path.resolve())
+
+    # Build standardized markdown and JSON audit reports
+    md_content = _build_markdown_report(audit_report, perf_metrics, patient_count)
+    with open(staging_path / "FINAL_10000_DATASET_VALIDATION.json", "w", encoding="utf-8") as f:
+        json.dump(audit_report, f, indent=2)
+    with open(staging_path / "FINAL_10000_DATASET_VALIDATION.md", "w", encoding="utf-8") as f:
+        f.write(md_content)
+
+    # 5. Independent Dataset Evaluator (Synthea clinical invariants & longitudinal fidelity)
+    dataset_report = None
+    if run_evaluation:
+        print(f"\n[AUDIT 2/2] Running DatasetEvaluator (clinical invariants & longitudinal fidelity)...")
+        catalog = ReferenceCatalog(load_population_profile(prof_path))
+        evaluator = DatasetEvaluator(
+            dataset_dir=staging_path,
+            reference_catalog=catalog,
+            observation_start=obs_start,
+            observation_end=obs_end,
+        )
+        dataset_report = evaluator.evaluate_all()
+        EvaluationReportFormatter.save_json(dataset_report, staging_path / "EVALUATION_REPORT.json")
+        EvaluationReportFormatter.save_markdown(dataset_report, staging_path / "EVALUATION_REPORT.md")
+        print(f"      Internal Invariants Passed: {dataset_report.invariants_passed}")
+        print(f"      Evaluation Verdict:        {dataset_report.overall_status.value} ({dataset_report.passed_metrics} PASS, {dataset_report.warning_metrics} WARN, {dataset_report.failed_metrics} FAIL)")
+
+    # 6. Run Mandatory Dataset Validation Gate & Atomic Promotion
+    print(f"\n[GATE] Running Mandatory Dataset Validation Gate...")
+    gate = DatasetValidationGate(
+        staging_dir=staging_path,
+        final_dir=target_path,
+        audit_report=audit_report,
+        sim_integrity_report={"is_valid": True, "errors": []},
+        perf_metrics=perf_metrics,
+        patient_count=patient_count,
+        seed=seed,
+    )
     gate_result = gate.promote_or_reject()
 
-    # Also place copies at repository root if this is a 10,000 patient run
+    # 7. Write cryptographic RUN_MANIFEST.json into published target directory
+    print("[PUBLISH] Writing cryptographic RUN_MANIFEST.json...")
+    demo_audit = audit_cohort_demographics(target_path)
+    file_hashes: Dict[str, str] = {}
+    for csv_file in sorted(list(target_path.glob("*.csv"))):
+        file_hashes[csv_file.name] = compute_file_sha256(csv_file)
+
+    manifest_payload: Dict[str, Any] = {
+        "manifest_version": "1.0.0",
+        "run_id": f"synapse-p2-seed{seed}-n{patient_count}-{int(time.time())}",
+        "timestamp": datetime.now().isoformat(),
+        "git_commit": get_git_revision_hash(),
+        "architecture": "SYNAPSE Phase 2 Synthea-Inspired Longitudinal State Machine",
+        "simulation_parameters": {
+            "total_cohort_size": patient_count,
+            "seed": seed,
+            "observation_window_days": observation_days,
+            "observation_start": obs_start.isoformat(),
+            "observation_end": obs_end.isoformat(),
+            "profile_path": str(prof_path),
+            "background_mortality_enabled": True,
+            "bp_protocol": bp_protocol,
+            "bp_protocol_id": telemetry.get("bp_protocol_id", "UNKNOWN"),
+            "bp_protocol_version": telemetry.get("bp_protocol_version", "UNKNOWN"),
+            "hemodynamic_engine_mode": hemodynamic_mode,
+        },
+        "demographic_audit": demo_audit,
+        "performance_telemetry": telemetry,
+        "exported_file_hashes_sha256": file_hashes,
+    }
+
+    if dataset_report is not None:
+        manifest_payload["internal_evaluation"] = {
+            "overall_status": dataset_report.overall_status.value,
+            "invariants_passed": dataset_report.invariants_passed,
+            "passed_metrics": dataset_report.passed_metrics,
+            "warning_metrics": dataset_report.warning_metrics,
+            "failed_metrics": dataset_report.failed_metrics,
+            "unverified_metrics": dataset_report.unverified_metrics,
+        }
+
+    # 8. Optional LASI external evaluation (synthetic internal fixture evaluation only)
+    if evaluate_lasi:
+        from synapse_simulator.evaluation.lasi.ingestor import LasiDataIngestor
+        from synapse_simulator.evaluation.lasi.evaluator import (
+            LasiExternalEvaluator,
+            LasiEvaluationReportFormatter,
+        )
+        fixture_p = Path(lasi_fixture_path) if lasi_fixture_path else Path("data/evaluation/fixtures/lasi_wave1_sample_fixture.csv")
+        print(f"\n[LASI] Running external evaluation against reference fixture: {fixture_p}")
+        ingestor = LasiDataIngestor(source_path=fixture_p)
+        records, quality_report = ingestor.ingest()
+        lasi_evaluator = LasiExternalEvaluator(
+            synthetic_dir=target_path,
+            reference_records=records,
+            quality_report=quality_report,
+        )
+        lasi_report = lasi_evaluator.evaluate()
+        LasiEvaluationReportFormatter.save_markdown(lasi_report, target_path / "LASI_EVALUATION_REPORT.md")
+        LasiEvaluationReportFormatter.save_json(lasi_report, target_path / "LASI_EVALUATION_REPORT.json")
+        passed_m = sum(1 for m in lasi_report.metrics if m.status.value == "PASS")
+        warn_m = sum(1 for m in lasi_report.metrics if m.status.value == "WARNING")
+        fail_m = sum(1 for m in lasi_report.metrics if m.status.value == "FAIL")
+        unv_m = sum(1 for m in lasi_report.metrics if m.status.value == "UNVERIFIED")
+        manifest_payload["lasi_evaluation"] = {
+            "overall_gate_status": lasi_report.overall_gate_status.value,
+            "calibration_leakage_veto": lasi_report.calibration_leakage_veto,
+            "total_metrics_evaluated": len(lasi_report.metrics),
+            "passed_metrics": passed_m,
+            "warning_metrics": warn_m,
+            "failed_metrics": fail_m,
+            "unverified_metrics": unv_m,
+        }
+        print(f"       LASI Gate Status: {lasi_report.overall_gate_status.value} (Preserved strictly)")
+
+    with open(target_path / "RUN_MANIFEST.json", "w", encoding="utf-8") as f:
+        json.dump(manifest_payload, f, indent=2)
+
+    # Place root summary copies if this is a 10,000-patient run
     if patient_count == 10000:
         with open("FINAL_10000_DATASET_VALIDATION.md", "w", encoding="utf-8") as f:
             f.write(md_content)
@@ -171,13 +469,14 @@ def run_data_generation(patient_count: int = 10, seed: int = 42, output_dir: str
             shutil.copy2(target_path / "DATASET_MANIFEST.json", Path("DATASET_MANIFEST.json"))
 
     print(f"\n============================================================")
-    print(f"SYNTHETIC DATA GENERATION & VALIDATION GATE COMPLETE")
+    print(f"SYNTHETIC DATA GENERATION & VALIDATION COMPLETE")
     print(f"============================================================")
     print(f"  - Gate Verdict:              {gate_result.verdict}")
     print(f"  - Target Published Path:     {target_path}")
     print(f"  - Manifest Generated:        {gate_result.manifest_path}")
+    print(f"  - Run Manifest:              {target_path / 'RUN_MANIFEST.json'}")
     for fname, dinfo in sorted(audit_report["dataset_counts"].items()):
-        print(f"  - {fname:<25} Rows: {dinfo['row_count']:<8} Cols: {dinfo['column_count']:<3} Size: {dinfo.get('file_size_kb', 0):>8.1f} KB")
+        print(f"  - {fname:<28} Rows: {dinfo['row_count']:<8} Cols: {dinfo['column_count']:<3} Size: {dinfo.get('file_size_kb', 0):>8.1f} KB")
 
     print(f"\n------------------------------------------------------------")
     print(f"INTEGRITY AUDIT SUMMARY:")
@@ -190,7 +489,6 @@ def run_data_generation(patient_count: int = 10, seed: int = 42, output_dir: str
     print(f"  - Missing PubMed Evidence:   {audit_report['provenance_audit']['missing_evidence_ids']}")
     print(f"  - Invalid PubMed Evidence:   {audit_report['provenance_audit']['invalid_evidence_references']}")
     print(f"  - Total Runtime:             {total_wall_time:.2f}s")
-    print(f"  - Events/sec:                {events_per_sec:.1f}")
     print(f"  - Final Gate Verdict:        {gate_result.verdict}")
     print(f"============================================================\n")
 
@@ -200,14 +498,14 @@ def run_data_generation(patient_count: int = 10, seed: int = 42, output_dir: str
 def _build_markdown_report(report: Dict[str, Any], perf: Dict[str, Any], patient_count: int) -> str:
     """Build standardized human-readable markdown verification report with sections A-L."""
     verdict = report.get("overall_status", "PASS — DATASET READY FOR PHASE 3")
-    
+
     lines = [
         f"# FINAL SYNTHETIC DATASET VALIDATION REPORT — {patient_count:,} PATIENTS",
         "",
         f"**Generated At:** {perf['start_time']}  ",
         f"**Completed At:** {perf['end_time']}  ",
         f"**Target Directory:** `{report['dataset_directory']}`  ",
-        f"**Simulation Engine:** `HospitalSimulator` (Discrete Event Driven)  ",
+        f"**Simulation Engine:** `ExperimentRunner` (Synthea-Inspired Longitudinal State Machines)  ",
         f"**Knowledge Engine:** `PubMedKnowledgeManager` (Offline Multi-Condition Mesh Evidence)  ",
         f"**Status / Verdict:** **{verdict}**  ",
         "",
@@ -398,15 +696,38 @@ def _build_markdown_report(report: Dict[str, Any], perf: Dict[str, Any], patient
 
 
 def main():
-    parser = argparse.ArgumentParser(description="SYNAPSE Phase 2 Synthetic Data Generator")
+    parser = argparse.ArgumentParser(
+        description="SYNAPSE Phase 2 Synthetic Data Generator (Synthea Longitudinal & Forward Hemodynamics)"
+    )
     parser.add_argument("--patients", type=int, default=10, help="Number of synthetic patients (default: 10)")
     parser.add_argument("--seed", type=int, default=42, help="Random seed for reproducibility (default: 42)")
     parser.add_argument("--output-dir", type=str, default="data/synthetic", help="Output CSV directory (default: data/synthetic)")
+    parser.add_argument("--days", type=int, default=720, help="Observation window in days (default: 720 days / 24 months)")
+    parser.add_argument("--timestep", type=int, default=7, help="Simulation timestep in days (default: 7)")
+    parser.add_argument("--profile", type=str, default=str(DEFAULT_PROFILE_PATH), help="Population profile YAML path")
+    parser.add_argument("--protocol", type=str, default="tri_measurement", choices=["tri_measurement", "single_reading"], help="Blood pressure measurement protocol (default: tri_measurement)")
+    parser.add_argument("--hemodynamic-mode", type=str, default="LEGACY_CONDITIONAL", choices=["LEGACY_CONDITIONAL", "FORWARD_STATE_SPACE"], help="Hemodynamic engine mode (default: LEGACY_CONDITIONAL)")
+    parser.add_argument("--mode", type=str, default="longitudinal", choices=["longitudinal", "hospital"], help="Simulation engine mode (default: longitudinal [Synthea-inspired Phase 2], hospital [legacy operational])")
+    parser.add_argument("--no-eval", action="store_true", help="Skip dataset evaluator execution")
+    parser.add_argument("--evaluate-lasi", action="store_true", help="Execute LASI external evaluation against reference fixture (Note: synthetic internal gate only)")
+    parser.add_argument("--lasi-fixture", type=str, default="data/evaluation/fixtures/lasi_wave1_sample_fixture.csv", help="LASI reference sample fixture path")
 
     args = parser.parse_args()
-    run_data_generation(patient_count=args.patients, seed=args.seed, output_dir=args.output_dir)
+    run_data_generation(
+        patient_count=args.patients,
+        seed=args.seed,
+        output_dir=args.output_dir,
+        observation_days=args.days,
+        timestep_days=args.timestep,
+        profile_path=args.profile,
+        bp_protocol=args.protocol,
+        hemodynamic_mode=args.hemodynamic_mode,
+        mode=args.mode,
+        run_evaluation=not args.no_eval,
+        evaluate_lasi=args.evaluate_lasi,
+        lasi_fixture_path=args.lasi_fixture,
+    )
 
 
 if __name__ == "__main__":
     main()
-

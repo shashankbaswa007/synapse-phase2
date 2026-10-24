@@ -246,15 +246,19 @@ QUERY_MAP: Dict[str, List[str]] = {
 }
 
 
-def seed_pubmed_cache(cache_dir: Optional[Path] = None) -> int:
+def seed_pubmed_cache(cache_dir: Optional[Path] = None, force: bool = False) -> int:
     """Pre-seed local PubMed cache with all 17 curated evidence articles."""
     c_dir = cache_dir or Path("data/knowledge/pubmed/cache")
     cache = PubMedCache(cache_dir=c_dir)
     for art in CURATED_ARTICLES:
-        cache.save_article(art)
+        target_file = cache.article_dir / f"{art.pmid}.json"
+        if force or not target_file.exists():
+            cache.save_article(art)
 
     for qid, pmids in QUERY_MAP.items():
-        cache.save_query_pmids(qid, pmids)
+        query_file = cache.query_dir / f"{qid}.json"
+        if force or not query_file.exists():
+            cache.save_query_pmids(qid, pmids)
 
     print(f"Successfully pre-seeded {len(CURATED_ARTICLES)} PubMed articles into local cache!")
     return len(CURATED_ARTICLES)
