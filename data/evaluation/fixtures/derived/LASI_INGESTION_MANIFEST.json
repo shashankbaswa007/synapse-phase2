@@ -1,6 +1,6 @@
 {
   "manifest_id": "lasi-ingest-2026-10-24-f3e3b7a4",
-  "manifest_timestamp": "2026-10-24T16:13:54.432603",
+  "manifest_timestamp": "2026-10-24T18:24:02.247310",
   "pipeline_version": "2.4.0",
   "git_commit": null,
   "data_source_type": "SYNTHETIC_TEST_FIXTURE",

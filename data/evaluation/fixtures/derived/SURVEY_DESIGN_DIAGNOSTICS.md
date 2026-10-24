@@ -1,7 +1,7 @@
 # LASI Survey Design & Missingness Diagnostics Report
 
 **Source Data Label:** `data/evaluation/fixtures/lasi_wave1_sample_fixture.csv`  
-**Audit Timestamp:** `2026-10-24T16:13:54.433420`  
+**Audit Timestamp:** `2026-10-24T18:24:02.248323`  
 **Total Ingested Participants:** 50  
 **Total Survey Strata:** 13  
 **Total Primary Sampling Units (PSUs):** 25  

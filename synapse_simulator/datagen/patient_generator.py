@@ -6,7 +6,7 @@ and scenario requirements override defaults.
 
 import random
 from datetime import datetime, timedelta
-from typing import List, Optional
+from typing import List, Optional, Dict, Any, Tuple
 
 from faker import Faker
 
@@ -50,7 +50,7 @@ class PatientProfileGenerator:
         self,
         scenario_id: str = "",
         force_allergy: Optional[str] = None,
-        force_age_range: Optional[tuple] = None,
+        force_age_range: Optional[Tuple[int, int]] = None,
         observation_start: Optional[datetime] = None,
     ) -> PatientContext:
         """Generate a single patient profile with contextual consistency.
@@ -59,6 +59,7 @@ class PatientProfileGenerator:
             scenario_id: Scenario this patient is assigned to.
             force_allergy: Force a specific allergy (e.g., for SCEN-V1-03).
             force_age_range: Override age range (min, max).
+            observation_start: Simulation observation start timestamp.
         """
         patient_id = new_id("pat-", 8)
 
@@ -118,7 +119,7 @@ class PatientProfileGenerator:
             # ICMR-INDIAB 2023: P(HTN|T2D) = 50.1%, while P(HTN|no T2D) = 28.2% (marginal = 30.7%)
             htn_prev = next((p for p in self.profile.prevalences if p.condition_code == "I10"), None)
             if htn_prev:
-                cond_rate = 50.1 if has_t2d else 28.2 if age >= 20 else 0.0
+                cond_rate = 50.1 if has_t2d else (28.2 if age >= 20 else 0.0)
                 if self.sampler.has_condition_at_baseline("I10", age, gender, conditional_rate=cond_rate):
                     chronic_conditions.append(htn_prev.condition_name)
                     years_with_condition = min(max(1.0, (age - 20) * 0.25), 8.0)
@@ -193,10 +194,9 @@ class PatientProfileGenerator:
         band = self.rng.random()
         if band < 0.15:
             return self.rng.randint(1, 17)
-        elif band < 0.70:
+        if band < 0.70:
             return self.rng.randint(18, 64)
-        else:
-            return self.rng.randint(65, 90)
+        return self.rng.randint(65, 90)
 
     def _generate_allergies(self, force_allergy: Optional[str] = None) -> List[str]:
         """Generate allergies using population prevalence rates."""
